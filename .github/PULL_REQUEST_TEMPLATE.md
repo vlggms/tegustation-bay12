@@ -44,4 +44,7 @@ Examples were changelog entries are optional/not typically required but encourag
 You'll find a README and example file in .\html\changelogs\ for further instructions.
 
 You can also find a template for adding your changelog directly to the PR description here: https://github.com/Baystation12/Baystation12/wiki/Automatic-changelog-generation
+
+As a courtesy, for ported PRs, please include if you have the blessing of the author. While not required, we encourage basic decency in porting others' work. It is also sufficient to note that the author has not expressed displeasure at the idea of their work getting ported.
+Please refrain from porting works of authors that have expressed displeasure in having their work ported, thank you.
 -->
