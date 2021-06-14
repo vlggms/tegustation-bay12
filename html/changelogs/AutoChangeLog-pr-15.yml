@@ -1,4 +1,0 @@
-author: Cupax3
-delete-after: true
-changes:
-  - admin: SQL updated to no longer use "rank" and "level" as names...
