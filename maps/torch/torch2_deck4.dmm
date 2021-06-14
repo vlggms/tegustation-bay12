@@ -12960,6 +12960,10 @@
 /obj/structure/bed/chair/office/light,
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
+"Rc" = (
+/mob/living/simple_animal/hostile/retaliate/gator/steppy,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/fourthdeck/aft)
 "Re" = (
 /obj/machinery/pager/cargo{
 	pixel_y = 26
@@ -38091,7 +38095,7 @@ kT
 Ed
 Hn
 GU
-yC
+Rc
 rz
 ZE
 yD
