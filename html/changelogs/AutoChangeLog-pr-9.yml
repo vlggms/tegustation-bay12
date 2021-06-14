@@ -1,0 +1,5 @@
+author: Ilysen
+delete-after: true
+changes:
+  - maptweak: Reverts the prior medbay changes committed by Huntime due to a few stability
+      errors and general mixed reception.
