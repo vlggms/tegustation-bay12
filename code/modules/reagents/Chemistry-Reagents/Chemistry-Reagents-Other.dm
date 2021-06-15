@@ -295,6 +295,20 @@
 	M.update_icons()
 	M.clean_blood()
 
+/datum/reagent/lube
+	name = "Space Lube"
+	description = "Lubricant is a substance introduced between two moving surfaces to reduce the friction and wear between them.
+	taste_description = "slime"
+	reagent_state = LIQUID
+	color = "#009ca8"
+	value = 0.6
+
+/datum/reagent/lube/touch_turf(var/turf/simulated/T)
+	if(!istype(T))
+		return
+	if(volume >= 20)
+		T.wet_floor(80)
+
 /datum/reagent/oil
 	name = "Oil"
 	description = "A thick greasy industrial lubricant. Commonly found in robotics."
@@ -523,27 +537,27 @@
 /datum/reagent/colored_hair_dye/red
 	name = "Red Hair Dye"
 	color = "#b33636"
-	
+
 /datum/reagent/colored_hair_dye/orange
 	name = "Orange Hair Dye"
 	color = "#b5772f"
-	
+
 /datum/reagent/colored_hair_dye/yellow
 	name = "Yellow Hair Dye"
 	color = "#a6a035"
-		
+
 /datum/reagent/colored_hair_dye/green
 	name = "Green Hair Dye"
 	color = "#61a834"
-	
+
 /datum/reagent/colored_hair_dye/blue
 	name = "Blue Hair Dye"
 	color = "#3470a8"
-	
+
 /datum/reagent/colored_hair_dye/purple
 	name = "Purple Hair Dye"
 	color = "#6d2d91"
-		
+
 /datum/reagent/colored_hair_dye/grey
 	name = "Grey Hair Dye"
 	color = "#696969"
