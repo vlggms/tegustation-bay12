@@ -297,7 +297,7 @@
 
 /datum/reagent/lube
 	name = "Space Lube"
-	description = "Lubricant is a substance introduced between two moving surfaces to reduce the friction and wear between them.
+	description = "Lubricant is a substance introduced between two moving surfaces to reduce the friction and wear between them."
 	taste_description = "slime"
 	reagent_state = LIQUID
 	color = "#009ca8"
