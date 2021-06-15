@@ -31,7 +31,6 @@
 /datum/reagent/crayon_dust/purple
 	name = "Purple crayon dust"
 	color = "#cc0099"
-
 /datum/reagent/crayon_dust/grey //Mime
 	name = "Grey crayon dust"
 	color = "#808080"
@@ -306,7 +305,7 @@
 /datum/reagent/lube/touch_turf(var/turf/simulated/T)
 	if(!istype(T))
 		return
-	if(volume >= 1)
+	if(volume >= 20)
 		T.wet_floor(80)
 
 /datum/reagent/oil
