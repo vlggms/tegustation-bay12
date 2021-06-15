@@ -1,0 +1,8 @@
+author: DeadmonWonderland
+delete-after: true
+changes:
+  - rscadd: Adherents now have the option for Medical Technician and Physician roles.
+  - rscadd: Unathi now have Fleet and Sol Government roles. EC and Fleet ranks are
+      up to LCDR
+  - rscadd: Skrell now have Fleet and Sol Government roles. EC and Fleet ranks are
+      up to LCDR
