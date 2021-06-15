@@ -200,6 +200,9 @@ datum/preferences
 		sanitize_preferences()
 		close_load_dialog(usr)
 
+		if (winget(usr, "preferences_browser", "is-visible") == "true")
+			open_setup_window(usr)
+
 		if (istype(client.mob, /mob/new_player))
 			var/mob/new_player/M = client.mob
 			M.new_player_panel()
