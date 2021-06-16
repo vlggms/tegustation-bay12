@@ -1,7 +1,0 @@
-author: Mucker, Ryan180602, and SierraKomodo
-delete-after: true
-changes:
-  - bugfix: Fix fleet jacket entry in the uniform vendor.
-  - bugfix: Fixed character menu preview icon not updating on character swaps.
-  - bugfix: Service borg consumables should now properly recharge/refill.
-  - tweak: Add robotic stomach sprite (from Azlan) for Stomachs from Prosthetic Fabricators.
