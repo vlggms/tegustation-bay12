@@ -205,6 +205,12 @@
 /obj/item/cell/hyper/empty
 	charge = 0
 
+/obj/item/cell/hyper/adherent
+	name = "crystal-ceramic grid"
+	desc = "A dense, smooth blue polygon the size of a clenched fist. It's etched with symmetrical facets that are filled with a thick, gelatinous material."
+	icon = 'icons/mob/human_races/species/adherent/organs.dmi'
+	icon_state = "cell"
+
 /obj/item/cell/infinite
 	name = "experimental power cell"
 	desc = "This special experimental power cell has both very large capacity, and ability to recharge itself by draining power from contained bluespace pocket."
