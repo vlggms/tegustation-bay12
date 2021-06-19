@@ -1,0 +1,6 @@
+author: MitztheKat
+delete-after: true
+changes:
+  - rscadd: Adds sheep to cargo. stock up 'cuz you'll want their milk for when feta
+      is added!
+  - wip: preparing to fix Milking. Will refer to chicken code or /TG/ code.
