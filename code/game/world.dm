@@ -1,4 +1,4 @@
-/var/server_name = "Baystation 12"
+/var/server_name = "TeguStation"
 /var/game_id = null
 
 GLOBAL_VAR(href_logfile)
