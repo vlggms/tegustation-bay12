@@ -1435,3 +1435,23 @@
 	result = /datum/reagent/drink/tegu/shirley
 	required_reagents = list(/datum/reagent/drink/grenadine = 1, /datum/reagent/drink/juice/orange = 2, /datum/reagent/drink/space_up = 2)
 	result_amount = 5 
+	
+/datum/reagent/drink/milk/goat
+	name = "Goat Milk"
+	description = "An opaque white liquid produced by the mammary glands of goats."
+	taste_description = "milk"
+	color = "#dfdfdf"
+
+	glass_name = "goat milk"
+	glass_desc = "White and nutritious goodness!... god, the trouble the chef went through to get this."
+	protein_amount = 0.75
+
+/datum/reagent/drink/milk/sheep
+	name = "Sheep Milk"
+	description = "An opaque white liquid produced by the mammary glands of sheep."
+	taste_description = "milk"
+	color = "#dfdfdf"
+
+	glass_name = "sheep milk"
+	glass_desc = "White and nutritious goodness!... IS THAT WOOL?"
+	protein_amount = 0.75
