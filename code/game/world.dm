@@ -1,4 +1,4 @@
-/var/server_name = "Baystation 12"
+/var/server_name = "TeguStation"
 /var/game_id = null
 
 GLOBAL_VAR(href_logfile)
@@ -94,6 +94,11 @@ GLOBAL_VAR(href_logfile)
 		to_world_log("Your server's byond version does not meet the recommended requirements for this server. Please update BYOND")
 
 	callHook("startup")
+
+	//TGS
+	TgsNew(new /datum/tgs_event_handler/impl, TGS_SECURITY_TRUSTED)
+	TgsInitializationComplete();
+
 	//Emergency Fix
 	load_mods()
 	//end-emergency fix
@@ -114,6 +119,8 @@ GLOBAL_VAR_INIT(world_topic_last, world.timeofday)
 #define THROTTLE_MAX_BURST 15 SECONDS
 
 /world/Topic(T, addr, master, key)
+	TGS_TOPIC
+
 	to_file(diary, "TOPIC: \"[T]\", from:[addr], master:[master], key:[key][log_end]")
 
 	if (GLOB.world_topic_last > world.timeofday)
@@ -162,7 +169,7 @@ GLOBAL_VAR_INIT(world_topic_last, world.timeofday)
 		s["players"] = 0
 		s["stationtime"] = stationtime2text()
 		s["roundduration"] = roundduration2text()
-		s["map"] = replacetext(GLOB.using_map.full_name, "\improper", "") //Done to remove the non-UTF-8 text macros 
+		s["map"] = replacetext(GLOB.using_map.full_name, "\improper", "") //Done to remove the non-UTF-8 text macros
 
 		var/active = 0
 		var/list/players = list()
@@ -448,6 +455,7 @@ GLOBAL_VAR_INIT(world_topic_last, world.timeofday)
 		sound_to(world, sound(pick('sound/AI/newroundsexy.ogg','sound/misc/apcdestroyed.ogg','sound/misc/bangindonk.ogg')))// random end sounds!! - LastyBatsy
 
 		*/
+	TgsReboot()
 
 	Master.Shutdown()
 

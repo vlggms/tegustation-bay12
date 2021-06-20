@@ -24,12 +24,14 @@ The following conduct may result in a warning being logged against your account:
 		* Repeatedly attempting to compel Developers to block a PR you do not agree with.
 		    * This includes over the course of several PRs.
 * Disobeying development team members' instructions to cease a line of discussion or move discussion elsewhere.
+* Porting features from an author that has expressed displeasure in having their work ported.
 * Any other conduct deemed unhealthy or unhelpful as discussed on a case-by-case basis among the development team.
 
 The following conduct is unacceptable and will result in up to three strikes, depending on severity as determined by the Head Developer:
 * Derogatory, bigoted or prejudiced language based on race, ethnicity, sex, gender, sexuality, religion, disability, nationality or any other identifiable group.
 * Personal or political attacks.
 * Public or private harassment.
+* Porting features or claiming to be the author of work. Plagiarism is not something the TeguStation Maintainers want to support, see or partake in.
 
 
 ## Warnings and Punishments
@@ -70,7 +72,7 @@ Modifications to this code of conduct may be made by any contributor by way of a
 
 
 ## Attribution
-This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4, available at [http://contributor-covenant.org/version/1/4][version]
+This Code of Conduct is mostly adapted from the [Contributor Covenant][homepage], version 1.4, available at [http://contributor-covenant.org/version/1/4][version]
 
 [homepage]: http://contributor-covenant.org
 [version]: http://contributor-covenant.org/version/1/4/
