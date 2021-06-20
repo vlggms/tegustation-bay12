@@ -1,6 +1,0 @@
-author: Ilysen
-delete-after: true
-changes:
-  - spellcheck: Rewrote the in-game Changelog popup to mention TeguStation instead
-      of Baystation 12. Lots of people from the Baystation 12 dev team have been added
-      to the credits as a result.
