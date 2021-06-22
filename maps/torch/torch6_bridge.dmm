@@ -3765,6 +3765,8 @@
 	},
 /obj/item/tank/emergency/oxygen/double,
 /obj/item/tank/emergency/oxygen/double,
+/obj/item/device/suit_cooling_unit,
+/obj/item/device/suit_cooling_unit,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/aux_eva)
 "hj" = (
@@ -6527,12 +6529,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/aux_eva)
 "pR" = (
-/obj/effect/floor_decal/industrial/outline/grey,
-/obj/structure/table/rack{
-	dir = 8
-	},
-/obj/item/device/suit_cooling_unit,
-/obj/item/device/suit_cooling_unit,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/suit_cycler/command,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/aux_eva)
 "pS" = (
