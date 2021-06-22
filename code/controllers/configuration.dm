@@ -199,6 +199,8 @@ var/list/gamemode_cache = list()
 	var/error_silence_time = 6000 // How long a unique error will be silenced for
 	var/error_msg_delay = 50 // How long to wait between messaging admins about occurrences of a unique error
 
+	var/sleep_offline_after_init = FALSE
+
 	var/max_gear_cost = 10 // Used in chargen for accessory loadout limit. 0 disables loadout, negative allows infinite points.
 
 	var/allow_ic_printing = TRUE //Whether players should be allowed to print IC circuits from scripts.
@@ -699,6 +701,9 @@ var/list/gamemode_cache = list()
 					config.max_acts_per_interval = text2num(value)
 				if ("act_interval")
 					config.act_interval = text2num(value) SECONDS
+
+				if ("sleep_offline_after_init")
+					config.sleep_offline_after_init = TRUE
 
 				if ("chat_markup")
 					var/list/line = splittext(value, ";")
