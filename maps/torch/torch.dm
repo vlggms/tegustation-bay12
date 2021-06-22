@@ -172,7 +172,7 @@
 	#include "../away/mininghome/mininghome.dm"
 	#include "../away/scavver/scavver_gantry.dm"
 	#include "../away/verne/verne.dm"
-
+	#include "../away/rawl/rawl.dm"
 
 	#define using_map_DATUM /datum/map/torch
 

@@ -30,6 +30,9 @@
 	attack_verb = list("nibbled")
 	hitsound = null
 
+/obj/item/natural_weapon/bite/medium
+	force = 20
+
 /obj/item/natural_weapon/bite/strong
 	force = 25
 

@@ -292,3 +292,9 @@
 #define INIT_MACHINERY_PROCESS_ALL 0x3
 //--
 
+
+// Helper procs for easy HTML browser button creation.
+#define UIBUTTON(key, label, title) "[title ? title + ": " : ""]<a href='?src=\ref[src];[key]=1'>[label]</a>"
+
+#define UI_FONT_GOOD(X) "<font color='55cc55'>[X]</font>"
+#define UI_FONT_BAD(X) "<font color='cc5555'>[X]</font>"

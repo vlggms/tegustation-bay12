@@ -15234,6 +15234,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/fourthdeck/aft)
+"WQ" = (
+/obj/effect/shuttle_landmark/rawl/torch,
+/turf/space,
+/area/space)
 "WR" = (
 /obj/effect/floor_decal/corner/mauve/half{
 	dir = 1;
@@ -22944,7 +22948,7 @@ aa
 aa
 aa
 aa
-aa
+WQ
 aa
 aa
 aa

@@ -31,7 +31,7 @@ The following conduct is unacceptable and will result in up to three strikes, de
 * Derogatory, bigoted or prejudiced language based on race, ethnicity, sex, gender, sexuality, religion, disability, nationality or any other identifiable group.
 * Personal or political attacks.
 * Public or private harassment.
-* Porting features or claiming to be the author of work. Plagiarism is not something the TeguStation Maintainers want to support, see or partake in.
+* Claiming falsely and maliciously to be the author of works, especially ported features. Plagiarism is not something the TeguStation Maintainers want to support, see or partake in.
 
 
 ## Warnings and Punishments
