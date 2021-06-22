@@ -327,7 +327,7 @@ ALTER TABLE `population`
 -- Indexes for table `ranks`
 --
 ALTER TABLE `ranks`
-  ADD PRIMARY KEY (`Rank`);
+  ADD PRIMARY KEY (`Adminrank`);
 
 --
 -- Indexes for table `whitelist`
