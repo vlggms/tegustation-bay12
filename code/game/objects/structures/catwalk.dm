@@ -124,6 +124,16 @@
 /obj/structure/catwalk/refresh_neighbors()
 	return
 
+/obj/structure/catwalk/Crossed(mob/living/M)
+	. = ..()
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		//Nullchecking -> wearing heels -> 10% chance
+		if(H.shoes && istype(H.shoes, /obj/item/clothing/shoes/heels) && prob(10))
+			H.visible_message(SPAN_WARNING("\The [H] trips over \the [src]!"), SPAN_DANGER("You trip over \the [src]!"))
+			H.Weaken(2)
+			H.adjustBruteLoss(rand(5, 10))
+
 /obj/effect/catwalk_plated
 	name = "plated catwalk spawner"
 	icon = 'icons/obj/catwalks.dmi'
