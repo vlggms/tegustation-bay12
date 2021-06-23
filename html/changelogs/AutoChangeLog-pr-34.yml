@@ -1,4 +1,0 @@
-author: Rock
-delete-after: true
-changes:
-  - rscadd: Command EVA now has a suit cycler for command voidsuits.
