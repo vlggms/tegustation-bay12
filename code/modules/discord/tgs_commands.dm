@@ -11,5 +11,5 @@
 	admin_only = FALSE
 
 /datum/tgs_chat_command/status/Run(datum/tgs_chat_user/sender, params)
-	var/status = "Current Players: [GLOB.clients], Active Players: [GLOB.player_list.len], Gamemode: [SSticker.master_mode]. Station Time: [stationtime2text()]."
+	var/status = "Current Players: [GLOB.clients.len], Active Players: [GLOB.player_list.len], Gamemode: [SSticker.master_mode]. Station Time: [stationtime2text()]."
 	return status
