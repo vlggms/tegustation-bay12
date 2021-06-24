@@ -32,9 +32,9 @@
 
 /obj/item/clothing/head/collectable/paper
 	name = "collectable paper hat"
-	desc = "What looks like an ordinary paper hat, is actually a rare and valuable collector's edition paper hat. Keep away from water, fire and Librarians."
-	icon_state = "paper"
-	item_state = "paper"
+	desc = "The greatest luxury money can buy! Did you really pay for this?"
+	icon_state = "MoneyHat"
+	item_state = "MoneyHat"
 	body_parts_covered = 0
 
 /obj/item/clothing/head/collectable/tophat
