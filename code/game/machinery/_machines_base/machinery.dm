@@ -443,7 +443,7 @@ Class Procs:
 			var/obj/item/fake_thing = type
 			parts += "[num2text(missing[type])] [initial(fake_thing.name)]"
 		to_chat(user, "\The [src] is missing [english_list(parts)], rendering it inoperable.")
-	if (user.skill_check(SKILL_CONSTRUCTION, SKILL_BASIC) || isobserver(user))
+	if (machine_desc && (user.skill_check(SKILL_CONSTRUCTION, SKILL_BASIC) || isobserver(user)))
 		to_chat(user, SPAN_NOTICE(machine_desc))
 
 // This is really pretty crap and should be overridden for specific machines.
