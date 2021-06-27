@@ -1,0 +1,4 @@
+author: SkyCinnamon
+delete-after: true
+changes:
+  - spellcheck: changed capitalization in GAS define
