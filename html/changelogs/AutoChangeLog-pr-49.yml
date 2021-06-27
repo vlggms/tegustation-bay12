@@ -1,0 +1,5 @@
+author: Sky
+delete-after: true
+changes:
+  - rscadd: snake mob
+  - imageadd: snake sprites courtesy of tg
