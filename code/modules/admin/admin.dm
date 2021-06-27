@@ -782,6 +782,22 @@ var/global/floorIsLava = 0
 	SSstatistics.add_field_details("admin_verb","TLOOC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 
+/datum/admins/proc/endnow()
+	set category = "Server"
+	set desc = "round goes bye bye"
+	set name = "End Round"
+
+	var/check = alert("This will immediately end the round. Are you sure about this?", "End Game", "Yes", "No") == "Yes"
+
+	if (!check)
+		return
+
+	if (GAME_STATE > RUNLEVEL_LOBBY)
+		SSticker.forced_end = TRUE
+		log_and_message_admins("has ended the round.")
+	else
+		to_chat(usr,FONT_LARGE(SPAN_WARNING("You cannot end the round before it's begun!")))
+
 /datum/admins/proc/toggledsay()
 	set category = "Server"
 	set desc="Globally Toggles DSAY"
