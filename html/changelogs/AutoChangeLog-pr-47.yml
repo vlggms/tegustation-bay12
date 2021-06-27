@@ -1,0 +1,17 @@
+author: Ilysen
+delete-after: true
+changes:
+  - rscadd: You can now deconstruct nearly-empty or destroyed gas canisters with a
+      welding tool.
+  - rscadd: You can now repair damage to gas canisters with duct tape.
+  - rscadd: Examining a gas canisters now gives a rough idea of how damaged it is.
+  - tweak: Improved the feedback for attacking canisters - it now has a normal attack
+      animation and plays a sound.
+  - tweak: By making canisters rupture at zero health instead of 10, they're technically
+      slightly stronger now!
+  - spellcheck: Updated the codex entry for canisters to reflect new functionalities.
+  - spellcheck: Renamed canisters - now they're `gas canister` instead of `Canister`.
+      Also added a simple examine description.
+  - spellcheck: Helium, Methyl Bromide, and Chlorine canisters now explicitly state
+      what they contain on their label instead of having a chemical formula - this
+      is to bring them in line with other gas canisters.
