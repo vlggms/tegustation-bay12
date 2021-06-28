@@ -90,11 +90,15 @@
 			dat += "[UIBUTTON("cook_mode", "Change Cook Mode", null)] (current: [cook_mode])"
 		dat += "<br><hr>"
 		dat += "<b>Contents[is_processing ? UI_FONT_BAD(" (<i>Cooking!</i>)") : ""]:</b><br>"
-		if (!cooking.len)
+		if (!LAZYLEN(cooking))
 			dat += UI_FONT_BAD("None!")
 		else
+			var/list/item_counts = list()
 			for (var/obj/item/I in cooking)
-				dat += "[lowertext("[I]")]<br>"
+				item_counts[I.name]++
+			for (var/V in item_counts)
+				var/N = item_counts[V]
+				dat += "[N] [V]\s<br>"
 
 	var/datum/browser/popup = new(user, "cooker", name, 350, 300, src)
 	popup.set_content(dat)
@@ -160,8 +164,7 @@
 	user.visible_message("\The [user] puts \the [I] into \the [src].")
 	I.forceMove(src)
 	cooking += I
-	if (winget(user, "cooker", "is-visible") == "true") // Refresh the interface if we have it open
-		interface_interact(user)
+	interface_interact(user)
 
 /obj/machinery/cooker/Process()
 	if (!cooking.len)
