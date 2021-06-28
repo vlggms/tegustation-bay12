@@ -1,0 +1,5 @@
+author: Samuuu3
+delete-after: true
+changes:
+  - rscadd: Adds more chemical injection options for cortical borers
+  - tweak: Changes the name and description of borer thralls to borer hosts
