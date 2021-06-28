@@ -2283,12 +2283,11 @@
 /turf/simulated/floor/wood,
 /area/verne/common/professor)
 "qt" = (
-/obj/structure/table/standard,
-/obj/machinery/microwave,
 /obj/machinery/light_switch{
 	dir = 8;
 	pixel_x = 22
 	},
+/obj/machinery/stove,
 /turf/simulated/floor/tiled/freezer,
 /area/verne/common/kitchen)
 "qu" = (

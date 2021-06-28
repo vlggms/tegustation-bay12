@@ -2309,6 +2309,7 @@
 "eC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/table/marble,
+/obj/machinery/stove/hotplate,
 /turf/simulated/floor/lino,
 /area/map_template/colony/messhall)
 "eD" = (
