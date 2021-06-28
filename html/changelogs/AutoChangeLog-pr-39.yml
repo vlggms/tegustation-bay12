@@ -1,6 +1,0 @@
-author: Ilysen
-delete-after: true
-changes:
-  - rscadd: The chef's cookers (griddle, oven, etc.) have received a UI facelift.
-  - bugfix: Cookers now properly play a ding when they finish cooking - previously
-      the sound played at 0.5% volume.
