@@ -167,6 +167,8 @@
 			return global.Tier4Runes;
 		if("WALLITEMS")
 			return global.WALLITEMS;
+		if("__rust_g")
+			return global.__rust_g;
 		if("_all_globals")
 			return global._all_globals;
 		if("_client_preferences")
@@ -1046,6 +1048,8 @@
 			global.Tier4Runes=newval;
 		if("WALLITEMS")
 			global.WALLITEMS=newval;
+		if("__rust_g")
+			global.__rust_g=newval;
 		if("_all_globals")
 			global._all_globals=newval;
 		if("_client_preferences")
@@ -1841,6 +1845,7 @@
 	"Tier3Runes",
 	"Tier4Runes",
 	"WALLITEMS",
+	"__rust_g",
 	"_all_globals",
 	"_client_preferences",
 	"_client_preferences_by_key",
