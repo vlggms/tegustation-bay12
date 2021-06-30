@@ -433,7 +433,7 @@
 	name = "Fleet support SNCO"
 	min_rank = 7
 
-	utility_extra = list(/obj/item/clothing/under/solgov/utility/fleet/polopants/command,/obj/item/clothing/suit/storage/jacket/solgov/fleet/command)
+	utility_extra = list(/obj/item/clothing/under/solgov/utility/fleet/polopants/command,/obj/item/clothing/suit/storage/jacket/solgov/fleet/command,/obj/item/clothing/head/beret/solgov/fleet/command,/obj/item/clothing/head/ushanka/solgov/fleet,/obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet,/obj/item/clothing/head/soft/solgov/fleet,/obj/item/clothing/gloves/thick/duty/solgov/cmd)
 	service_hat = /obj/item/clothing/head/solgov/dress/fleet
 	service_over = /obj/item/clothing/suit/storage/solgov/service/fleet/snco
 
