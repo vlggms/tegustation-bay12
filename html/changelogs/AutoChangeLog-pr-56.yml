@@ -1,7 +1,0 @@
-author: Ilysen
-delete-after: true
-changes:
-  - tweak: The chat log limit has been doubled. This change may or may not stay depending
-      on if stability issues appear.
-  - tweak: The danger span (most commonly shown for combat) is now properly bolded
-      across all chat modes.
