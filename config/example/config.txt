@@ -381,6 +381,9 @@ RADIATION_LOWER_LIMIT 0.15
 ## Clients will be unable to connect unless their build is equal to or higher than this (a number, e.g. 1000)
 #MINIMUM_BYOND_BUILD 1488
 
+## Uncomment this to make the server pause when no players are online.
+#SLEEP_OFFLINE_AFTER_INIT
+
 ## Uncomment or create lines to add user-accessible chat markup
 ## A chat markup line is in the form regex;replacer. The regular expression should be in the common
 # /matcher/flags format. The replacer is a common regex replacer string, using $n ($1, $2, etc) to
