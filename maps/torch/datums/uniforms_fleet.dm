@@ -3,7 +3,8 @@
 	departments = COM
 
 	utility_under = /obj/item/clothing/under/solgov/utility/fleet/command
-	utility_extra = list(/obj/item/clothing/head/beret/solgov/fleet/command,
+	utility_extra = list(
+				 /obj/item/clothing/head/beret/solgov/fleet/command,
 				 /obj/item/clothing/head/ushanka/solgov/fleet,
 				 /obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet,
 				 /obj/item/clothing/head/soft/solgov/fleet,
@@ -37,7 +38,8 @@
 	departments = ENG
 
 	utility_under = /obj/item/clothing/under/solgov/utility/fleet/engineering
-	utility_extra = list(/obj/item/clothing/head/beret/solgov/fleet/engineering,
+	utility_extra = list(
+				 /obj/item/clothing/head/beret/solgov/fleet/engineering,
 				 /obj/item/clothing/head/ushanka/solgov/fleet,
 				 /obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet,
 				 /obj/item/clothing/head/soft/solgov/fleet,
@@ -68,7 +70,8 @@
 	name = "Fleet engineering CO"
 	min_rank = 11
 
-	utility_extra = list(/obj/item/clothing/head/beret/solgov/fleet/command,
+	utility_extra = list(
+				 /obj/item/clothing/head/beret/solgov/fleet/command,
 				 /obj/item/clothing/head/ushanka/solgov/fleet,
 				 /obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet,
 				 /obj/item/clothing/head/soft/solgov/fleet,
@@ -104,7 +107,8 @@
 	name = "Fleet security"
 	departments = SEC
 
-	utility_extra = list(/obj/item/clothing/head/beret/solgov/fleet/security,
+	utility_extra = list(
+				 /obj/item/clothing/head/beret/solgov/fleet/security,
 				 /obj/item/clothing/head/ushanka/solgov/fleet,
 				 /obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet,
 				 /obj/item/clothing/head/soft/solgov/fleet,
@@ -137,7 +141,8 @@
 	name = "Fleet security CO"
 	min_rank = 11
 
-	utility_extra = list(/obj/item/clothing/head/beret/solgov/fleet/command,
+	utility_extra = list(
+				 /obj/item/clothing/head/beret/solgov/fleet/command,
 				 /obj/item/clothing/head/ushanka/solgov/fleet,
 				 /obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet,
 				 /obj/item/clothing/head/soft/solgov/fleet,
@@ -173,7 +178,8 @@
 	name = "Fleet medical"
 	departments = MED
 
-	utility_extra = list(/obj/item/clothing/head/beret/solgov/fleet/medical,
+	utility_extra = list(
+				 /obj/item/clothing/head/beret/solgov/fleet/medical,
 				 /obj/item/clothing/head/ushanka/solgov/fleet,
 				 /obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet,
 				 /obj/item/clothing/head/soft/solgov/fleet,
@@ -206,7 +212,8 @@
 	name = "Fleet medical CO"
 	min_rank = 11
 
-	utility_extra = list(/obj/item/clothing/head/beret/solgov/fleet/command,
+	utility_extra = list(
+				 /obj/item/clothing/head/beret/solgov/fleet/command,
 				 /obj/item/clothing/head/ushanka/solgov/fleet,
 				 /obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet,
 				 /obj/item/clothing/head/soft/solgov/fleet,
@@ -243,7 +250,8 @@
 	departments = SUP
 
 	utility_under = /obj/item/clothing/under/solgov/utility/fleet/supply
-	utility_extra = list(/obj/item/clothing/head/beret/solgov/fleet/supply,
+	utility_extra = list(
+				 /obj/item/clothing/head/beret/solgov/fleet/supply,
 				 /obj/item/clothing/head/ushanka/solgov/fleet,
 				 /obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet,
 				 /obj/item/clothing/head/soft/solgov/fleet,
@@ -274,7 +282,8 @@
 	name = "Fleet supply CO"
 	min_rank = 11
 
-	utility_extra = list(/obj/item/clothing/head/beret/solgov/fleet/command,
+	utility_extra = list(
+				 /obj/item/clothing/head/beret/solgov/fleet/command,
 				 /obj/item/clothing/head/ushanka/solgov/fleet,
 				 /obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet,
 				 /obj/item/clothing/head/soft/solgov/fleet,
@@ -322,7 +331,8 @@
 	departments = SRV
 
 	utility_under = /obj/item/clothing/under/solgov/utility/fleet/service
-	utility_extra = list(/obj/item/clothing/head/beret/solgov/fleet/service,
+	utility_extra = list(
+				 /obj/item/clothing/head/beret/solgov/fleet/service,
 				 /obj/item/clothing/head/ushanka/solgov/fleet,
 				 /obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet,
 				 /obj/item/clothing/head/soft/solgov/fleet,
@@ -353,7 +363,8 @@
 	name = "Fleet service CO"
 	min_rank = 11
 
-	utility_extra = list(/obj/item/clothing/head/beret/solgov/fleet/command,
+	utility_extra = list(
+				 /obj/item/clothing/head/beret/solgov/fleet/command,
 				 /obj/item/clothing/head/ushanka/solgov/fleet,
 				 /obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet,
 				 /obj/item/clothing/head/soft/solgov/fleet,
@@ -372,7 +383,8 @@
 	departments = EXP
 
 	utility_under = /obj/item/clothing/under/solgov/utility/fleet/exploration
-	utility_extra = list(/obj/item/clothing/head/beret/solgov/fleet/exploration,
+	utility_extra = list(
+				 /obj/item/clothing/head/beret/solgov/fleet/exploration,
 				 /obj/item/clothing/head/ushanka/solgov/fleet,
 				 /obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet,
 				 /obj/item/clothing/under/solgov/utility/fleet/combat/exploration,
@@ -402,7 +414,8 @@
 	name = "Fleet exploration CO"
 	min_rank = 11
 
-	utility_extra = list(/obj/item/clothing/head/beret/solgov/fleet/command,
+	utility_extra = list(
+				 /obj/item/clothing/head/beret/solgov/fleet/command,
 				 /obj/item/clothing/head/ushanka/solgov/fleet,
 				 /obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet,
 				 /obj/item/clothing/head/soft/solgov/fleet,
@@ -433,7 +446,14 @@
 	name = "Fleet support SNCO"
 	min_rank = 7
 
-	utility_extra = list(/obj/item/clothing/under/solgov/utility/fleet/polopants/command,/obj/item/clothing/suit/storage/jacket/solgov/fleet/command,/obj/item/clothing/head/beret/solgov/fleet/command,/obj/item/clothing/head/ushanka/solgov/fleet,/obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet,/obj/item/clothing/head/soft/solgov/fleet,/obj/item/clothing/gloves/thick/duty/solgov/cmd)
+	utility_extra = list(
+				 /obj/item/clothing/under/solgov/utility/fleet/polopants/command,
+				 /obj/item/clothing/suit/storage/jacket/solgov/fleet/command,
+				 /obj/item/clothing/head/beret/solgov/fleet/command,
+				 /obj/item/clothing/head/ushanka/solgov/fleet,
+				 /obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet,
+				 /obj/item/clothing/head/soft/solgov/fleet,
+				 /obj/item/clothing/gloves/thick/duty/solgov/cmd)
 	service_hat = /obj/item/clothing/head/solgov/dress/fleet
 	service_over = /obj/item/clothing/suit/storage/solgov/service/fleet/snco
 
@@ -444,7 +464,12 @@
 	name = "Fleet command support CO"
 	min_rank = 11
 
-	utility_extra = list (/obj/item/clothing/head/beret/solgov/fleet/command, /obj/item/clothing/head/ushanka/solgov/fleet, /obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet, /obj/item/clothing/head/soft/solgov/fleet, /obj/item/clothing/under/solgov/utility/fleet/polopants/command,/obj/item/clothing/suit/storage/jacket/solgov/fleet/command)
+	utility_extra = list (
+				 /obj/item/clothing/head/beret/solgov/fleet/command,
+				 /obj/item/clothing/head/ushanka/solgov/fleet, /obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet,
+				 /obj/item/clothing/head/soft/solgov/fleet,
+				 /obj/item/clothing/under/solgov/utility/fleet/polopants/command,
+				 /obj/item/clothing/suit/storage/jacket/solgov/fleet/command)
 	utility_under = /obj/item/clothing/under/solgov/utility/fleet/command
 
 	service_hat = /obj/item/clothing/head/solgov/dress/fleet/command
@@ -458,7 +483,8 @@
 	name = "Fleet senior command support"
 	min_rank = 15
 
-	utility_extra = list(/obj/item/clothing/head/beret/solgov/fleet/command,
+	utility_extra = list(
+				 /obj/item/clothing/head/beret/solgov/fleet/command,
 				 /obj/item/clothing/head/ushanka/solgov/fleet,
 				 /obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet,
 				 /obj/item/clothing/head/soft/solgov/fleet,
@@ -478,7 +504,8 @@
 	name = "Fleet flag command support"
 	min_rank = 17
 
-	utility_extra = list(/obj/item/clothing/head/beret/solgov/fleet/command,
+	utility_extra = list(
+				 /obj/item/clothing/head/beret/solgov/fleet/command,
 				 /obj/item/clothing/head/ushanka/solgov/fleet,
 				 /obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet,
 				 /obj/item/clothing/head/soft/solgov/fleet)
