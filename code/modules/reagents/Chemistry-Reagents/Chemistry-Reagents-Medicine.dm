@@ -89,6 +89,7 @@
 	color = "#00a000"
 	scannable = 1
 	flags = IGNORE_MOB_SIZE
+	plant_toxin = -2
 	value = 2.1
 	var/remove_generic = 1
 	var/list/remove_toxins = list(
@@ -174,6 +175,8 @@
 	metabolism = REM * 0.5
 	scannable = 1
 	flags = IGNORE_MOB_SIZE
+	plant_toxin = -3
+	plant_health_mod = 3
 	value = 3.9
 
 /datum/reagent/cryoxadone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)

@@ -7,6 +7,7 @@
 	reagent_state = LIQUID
 	color = "#808080"
 	metabolism = REM * 0.2
+	plant_toxin = 1
 	value = DISPENSER_REAGENT_VALUE
 
 /datum/reagent/acetone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -50,6 +51,8 @@
 	color = "#404030"
 	metabolism = REM * 0.5
 	overdose = 5
+	plant_nutrients = 1
+	plant_health_mod = 0.5
 	value = DISPENSER_REAGENT_VALUE
 
 /datum/reagent/ammonia/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -197,6 +200,10 @@
 	color = "#808080"
 	metabolism = REM * 0.2
 	touch_met = 5
+	plant_water = -2
+	plant_toxin = 2.5
+	plant_weedkiller = -4
+	plant_health_mod = -2
 	value = DISPENSER_REAGENT_VALUE
 
 /datum/reagent/hydrazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -260,6 +267,10 @@
 	taste_description = "vinegar"
 	reagent_state = SOLID
 	color = "#832828"
+	plant_water = -0.5
+	plant_nutrients = 0.1
+	plant_weedkiller = -2
+	plant_health_mod = -0.75
 	value = DISPENSER_REAGENT_VALUE
 
 /datum/reagent/potassium
@@ -283,6 +294,10 @@
 	taste_description = "the color blue, and regret"
 	reagent_state = SOLID
 	color = "#c7c7c7"
+	plant_toxin = 2
+	plant_mutagen = 8
+	plant_health_mod = -1.5
+	plant_mut_mod = 0.2
 	value = DISPENSER_REAGENT_VALUE
 	should_admin_log = TRUE
 
@@ -308,6 +323,9 @@
 	var/power = 5
 	var/meltdose = 10 // How much is needed to melt
 	var/max_damage = 40
+	plant_toxin = 1.5
+	plant_weedkiller = -2
+	plant_health_mod = -1
 	value = DISPENSER_REAGENT_VALUE
 	should_admin_log = TRUE
 
@@ -418,6 +436,9 @@
 	reagent_state = SOLID
 	color = "#ffffff"
 	scannable = 1
+	plant_nutrients = 0.1
+	plant_weedkiller = 2
+	plant_pestkiller = 2
 
 	glass_name = "sugar"
 	glass_desc = "The organic compound commonly known as table sugar and sometimes called saccharose. This white, odorless, crystalline powder has a pleasing, sweet taste."

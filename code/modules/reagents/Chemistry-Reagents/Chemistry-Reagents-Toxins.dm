@@ -11,6 +11,7 @@
 	heating_products = list(/datum/reagent/toxin/denatured)
 	heating_point = 100 CELSIUS
 	heating_message = "goes clear."
+	plant_toxin = 2
 	value = 2
 	should_admin_log = TRUE
 
@@ -271,15 +272,19 @@
 	color = "#664330"
 	heating_point = null
 	heating_products = null
+	plant_nutrients = 1
 
 /datum/reagent/toxin/fertilizer/eznutrient
 	name = "EZ Nutrient"
 
 /datum/reagent/toxin/fertilizer/left4zed
 	name = "Left-4-Zed"
+	plant_mutagen = 30
+	plant_mut_mod = 0.2
 
 /datum/reagent/toxin/fertilizer/robustharvest
 	name = "Robust Harvest"
+	plant_yield_mod = 0.2
 
 /datum/reagent/toxin/plantbgone
 	name = "Plant-B-Gone"
@@ -289,6 +294,10 @@
 	color = "#49002e"
 	strength = 4
 	heating_products = list(/datum/reagent/toxin, /datum/reagent/water)
+	plant_toxin = 3
+	plant_weedkiller = -8
+	plant_health_mod = -2
+	plant_mut_mod = 0.2
 
 /datum/reagent/toxin/plantbgone/touch_turf(var/turf/T)
 	if(istype(T, /turf/simulated/wall))
@@ -321,6 +330,9 @@
 	power = 10
 	meltdose = 4
 	max_damage = 60
+	plant_toxin = 3
+	plant_weedkiller = -4
+	plant_health_mod = -2
 
 /datum/reagent/acid/stomach
 	name = "stomach acid"
@@ -356,6 +368,7 @@
 	taste_mult = 0.9
 	reagent_state = LIQUID
 	color = "#13bc5e"
+	plant_mutagen = 15
 	value = 3.1
 
 /datum/reagent/mutagen/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
@@ -681,6 +694,9 @@
 	color = "#ccccff"
 	metabolism = REM
 	overdose = 25
+	plant_toxin = 2
+	plant_health_mod = -1
+	plant_mut_mod = 0.5
 	should_admin_log = TRUE
 
 	// M A X I M U M C H E E S E
@@ -872,6 +888,7 @@
 	strength = 3
 	heating_products = null
 	heating_point = null
+	plant_pestkiller = -2
 
 /datum/reagent/toxin/bromide/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_MANTID)
@@ -896,6 +913,7 @@
 	strength = 5
 	heating_products = null
 	heating_point = null
+	plant_pestkiller = -4
 
 /datum/reagent/toxin/methyl_bromide/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
 	. = (alien != IS_MANTID && alien != IS_NABBER && ..())

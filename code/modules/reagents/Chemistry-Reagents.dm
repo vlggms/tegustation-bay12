@@ -60,6 +60,27 @@
 	var/scent_descriptor = SCENT_DESC_SMELL
 	var/scent_range = 1
 
+	// Data for how this reagent affects plants being grown in hydroponics trays.
+
+	/// How much water does this reagent provide to hydroponics trays?
+	var/plant_water = 0
+	/// How much nutrients does this reagent provide to hydroponics trays?
+	var/plant_nutrients = 0
+	/// How much does this reagent poison plants in hydroponics trays?
+	var/plant_toxin = 0
+	/// How effective is this reagent as a weed killer? Negative values remove weeds, positive values add.
+	var/plant_weedkiller = 0
+	/// How effective is this reagent as a pest killer? Negative values kill pests, positive values lets them thrive.
+	var/plant_pestkiller = 0
+	/// How much does this reagent mutate plants?
+	var/plant_mutagen = 0
+	/// How much does this reagent modify the health of plants?
+	var/plant_health_mod = 0
+	/// How much does this reagent modify the yield of plants?
+	var/plant_yield_mod = 0
+	/// How much does this reagent modify the mutation chance of plants?
+	var/plant_mut_mod = 0
+
 	var/should_admin_log = FALSE
 
 /datum/reagent/New(var/datum/reagents/holder)

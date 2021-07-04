@@ -103,6 +103,13 @@
 	reagent_state = LIQUID
 	color = "#c8a5dc"
 	flags = AFFECTS_DEAD //This can even heal dead people.
+	plant_water = 1
+	plant_nutrients = 1
+	plant_weedkiller = -5
+	plant_pestkiller = -5
+	plant_health_mod = 1
+	plant_yield_mod = 1
+	plant_mut_mod = 1
 
 	glass_name = "liquid gold"
 	glass_desc = "It's magic. We don't have to explain it."
@@ -180,6 +187,9 @@
 	taste_description = "iron"
 	reagent_state = LIQUID
 	color = "#604030"
+	plant_nutrients = 2
+	plant_pestkiller = -2
+	plant_health_mod = 0.1
 	value = 0.9
 
 /datum/reagent/surfactant // Foam precursor
@@ -523,27 +533,27 @@
 /datum/reagent/colored_hair_dye/red
 	name = "Red Hair Dye"
 	color = "#b33636"
-	
+
 /datum/reagent/colored_hair_dye/orange
 	name = "Orange Hair Dye"
 	color = "#b5772f"
-	
+
 /datum/reagent/colored_hair_dye/yellow
 	name = "Yellow Hair Dye"
 	color = "#a6a035"
-		
+
 /datum/reagent/colored_hair_dye/green
 	name = "Green Hair Dye"
 	color = "#61a834"
-	
+
 /datum/reagent/colored_hair_dye/blue
 	name = "Blue Hair Dye"
 	color = "#3470a8"
-	
+
 /datum/reagent/colored_hair_dye/purple
 	name = "Purple Hair Dye"
 	color = "#6d2d91"
-		
+
 /datum/reagent/colored_hair_dye/grey
 	name = "Grey Hair Dye"
 	color = "#696969"

@@ -233,6 +233,8 @@
 	description = "An opaque white liquid produced by the mammary glands of mammals."
 	taste_description = "milk"
 	color = "#dfdfdf"
+	plant_water = 0.9
+	plant_nutrients = 0.1
 
 	glass_name = "milk"
 	glass_desc = "White and nutritious goodness!"
@@ -466,6 +468,9 @@
 	adj_dizzy = -5
 	adj_drowsy = -3
 	adj_temp = -5
+	plant_water = 1
+	plant_nutrients = 0.1
+	plant_health_mod = 0.1
 
 	glass_name = "soda water"
 	glass_desc = "Soda water. Why not make a scotch and soda?"
@@ -1418,7 +1423,7 @@
 	color = "#0e0900"
 	glass_name = "skrianhi tea"
 	glass_desc = "A blend of teas from Moghes, commonly drank by Unathi."
-	
+
 ///// new shit /////
 /datum/reagent/drink/tegu/shirley
 	name = "Shirley Temple"
@@ -1434,8 +1439,8 @@
 	name = "Shirley Temple"
 	result = /datum/reagent/drink/tegu/shirley
 	required_reagents = list(/datum/reagent/drink/grenadine = 1, /datum/reagent/drink/juice/orange = 2, /datum/reagent/drink/space_up = 2)
-	result_amount = 5 
-	
+	result_amount = 5
+
 /datum/reagent/drink/milk/goat
 	name = "Goat Milk"
 	description = "An opaque white liquid produced by the mammary glands of goats."

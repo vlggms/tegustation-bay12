@@ -7,6 +7,9 @@
 	var/nutriment_factor = 10 // Per unit
 	var/hydration_factor = 0 // Per unit
 	var/injectable = 0
+	plant_nutrients = 1
+	plant_health_mod = 0.5
+	plant_yield_mod = 0.1
 	color = "#664330"
 	value = 0.1
 

@@ -61,6 +61,9 @@
 	color = "#ffd300"
 	strength = 50
 	nutriment_factor = 1
+	plant_water = 0.7
+	plant_nutrients = 0.25
+	plant_health_mod = -0.5
 
 	glass_name = "beer"
 	glass_desc = "A freezing container of beer"
