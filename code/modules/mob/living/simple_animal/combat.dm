@@ -41,7 +41,7 @@
 		return FALSE
 
 	var/obj/item/natural_weapon/weapon = get_natural_weapon()
-	weapon.resolve_attackby(A, src)
+	weapon?.resolve_attackby(A, src)
 
 	return TRUE
 
