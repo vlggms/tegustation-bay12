@@ -598,18 +598,12 @@ GLOBAL_VAR_INIT(world_topic_last, world.timeofday)
 		GLOB.log_directory += "[replacetext(time_stamp(), ":", ".")]"
 
 	GLOB.world_qdel_log = file("[GLOB.log_directory]/qdel.log")
+	GLOB.query_debug_log = file("[GLOB.log_directory]/sql.log")
 	to_file(GLOB.world_qdel_log, "\n\nStarting up round ID [game_id]. [time_stamp()]\n---------------------")
 
 #define FAILED_DB_CONNECTION_CUTOFF 5
 var/failed_db_connections = 0
 var/failed_old_db_connections = 0
-
-/hook/startup/proc/connectDB()
-	if(!setup_database_connection())
-		to_world_log("Your server failed to establish a connection with the feedback database.")
-	else
-		to_world_log("Feedback database connection established.")
-	return 1
 
 proc/setup_database_connection()
 
@@ -643,14 +637,6 @@ proc/establish_db_connection()
 		return setup_database_connection()
 	else
 		return 1
-
-
-/hook/startup/proc/connectOldDB()
-	if(!setup_old_database_connection())
-		to_world_log("Your server failed to establish a connection with the SQL database.")
-	else
-		to_world_log("SQL database connection established.")
-	return 1
 
 //These two procs are for the old database, while it's being phased out. See the tgstation.sql file in the SQL folder for more information.
 proc/setup_old_database_connection()

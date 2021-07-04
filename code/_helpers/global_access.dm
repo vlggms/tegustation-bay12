@@ -65,6 +65,8 @@
 			return global.SSculture;
 		if("SScustomitems")
 			return global.SScustomitems;
+		if("SSdbcore")
+			return global.SSdbcore;
 		if("SSdisposals")
 			return global.SSdisposals;
 		if("SSevac")
@@ -940,6 +942,8 @@
 			global.SSculture=newval;
 		if("SScustomitems")
 			global.SScustomitems=newval;
+		if("SSdbcore")
+			global.SSdbcore=newval;
 		if("SSdisposals")
 			global.SSdisposals=newval;
 		if("SSevac")
@@ -1782,6 +1786,7 @@
 	"SScuisine",
 	"SSculture",
 	"SScustomitems",
+	"SSdbcore",
 	"SSdisposals",
 	"SSevac",
 	"SSevent",

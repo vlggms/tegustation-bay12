@@ -18,6 +18,10 @@
 	var/sqltext = dbcon.Quote(t);
 	return copytext(sqltext, 2, length(sqltext));//Quote() adds quotes around input, we already do that
 
+// Adds a prefix to the table parameter, used in SQL to unify all tables under a common prefix, i.e. "tegu__[tablename]"
+/proc/format_table_name(table as text)
+	return "" + table // TODO: Remove hardcoded table prefix, make config entry instead
+
 /*
  * Text sanitization
  */
