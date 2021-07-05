@@ -293,3 +293,46 @@
 	icon_state="bsposter60"
 	name = "John Fleet poster"
 	desc = "A poster produced by the SCGF. It depicts Petty Officer John Fleet, a character used to boost troop morale, standing in front of the SCG flag proudly. Nobody knows if he really existed."
+
+///TeguStation posters
+
+/// Moth poster sprites are created by Azlanon and AyyRobotics
+/decl/poster/tegu_1
+	icon_state ="tposter1"
+	name = "Safety Moth - Poisoning"
+	desc = "This informational poster uses Safety Moth (TM) to ask the viewer not to poison the ship's donuts."
+
+/decl/poster/tegu_2
+	icon_state ="tposter2"
+	name = "Safety Moth - Hardhats"
+	desc = "This informational poster uses Safety Moth(TM) to tell the viewer to wear hardhats at all times. It's like a lamp for your head!"
+
+/decl/poster/tegu_3
+	icon_state ="tposter3"
+	name = "Safety Moth - Smokey?"
+	desc = "Only YOU can prevent phoron fires."
+
+/decl/poster/tegu_4
+	icon_state ="tposter4"
+	name = "Safety Moth - Piping"
+	desc = "This informational poster uses Safety Moth(TM) to advise atmospheric technicians on the efficient usage of pipes. Proper pipe placement prevents poor performance!"
+
+/decl/poster/tegu_5
+	icon_state ="tposter5"
+	name = "Safety Moth - Supermatter"
+	desc = "This informational poster uses Safety Moth(TM) to promote proper safety equipment when working near a supermatter crystal."
+
+/decl/poster/tegu_6
+	icon_state ="tposter6"
+	name = "Safety Moth - Mindbreaker"
+	desc = "This informational poster uses Safety Moth(TM) to tell the viewer to seek CMO approval before making mindbreaker toxin. You shouldn't even be doing this."
+
+/decl/poster/tegu_7
+	icon_state ="tposter7"
+	name = "Safety Moth - Dylovene"
+	desc = "This informational poster uses Safety Moth(TM) to recommend the use of dylovene to prevent liver rot."
+
+/decl/poster/tegu_8
+	icon_state ="tposter8"
+	name = "Merc Moth - Nuclear Operation"
+	desc = "A mercenary-commissioned poster that uses Merc Moth(TM?) to tell the viewer to keep the nuclear authentication disk unsecured. No, we aren't doing that. It's signed by 'AspEv'."
