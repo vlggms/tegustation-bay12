@@ -222,27 +222,62 @@
 /obj/item/paper/attack_ai(var/mob/living/silicon/ai/user)
 	show_content(user)
 
-/obj/item/paper/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
-	if(user.zone_sel.selecting == BP_EYES)
-		user.visible_message("<span class='notice'>You show the paper to [M]. </span>", \
-			"<span class='notice'> [user] holds up a paper and shows it to [M]. </span>")
+/obj/item/paper/attack(mob/living/carbon/M, mob/living/carbon/user)
+	if (user.zone_sel.selecting == BP_EYES)
+		user.visible_message(
+			SPAN_NOTICE("You show \the [src] to \the [M]. "), \
+			SPAN_NOTICE("\The [user] holds up \the [src] and shows it to \the [M].")
+		)
 		M.examinate(src)
 
-	else if(user.zone_sel.selecting == BP_MOUTH) // lipstick wiping
-		if(ishuman(M))
-			var/mob/living/carbon/human/H = M
-			if(H == user)
-				to_chat(user, "<span class='notice'>You wipe off the lipstick with [src].</span>")
+	else if (ishuman(M)) // check human-specific interactions
+		var/mob/living/carbon/human/H = M
+
+		if (user.zone_sel.selecting == BP_MOUTH) // lipstick wiping
+			if (H == user)
+				user.visible_message(
+					SPAN_NOTICE("\The [user] wipes off \his lipstick."),
+					SPAN_NOTICE("You wipe off your lipstick.")
+				)
 				H.lip_style = null
 				H.update_body()
 			else
-				user.visible_message("<span class='warning'>[user] begins to wipe [H]'s lipstick off with \the [src].</span>", \
-								 	 "<span class='notice'>You begin to wipe off [H]'s lipstick.</span>")
-				if(do_after(user, 2 SECONDS, H, do_flags = DO_DEFAULT & ~DO_BOTH_CAN_TURN))
-					user.visible_message("<span class='notice'>[user] wipes [H]'s lipstick off with \the [src].</span>", \
-										 "<span class='notice'>You wipe off [H]'s lipstick.</span>")
+				user.visible_message(
+					SPAN_WARNING("\The [user] begins to wipe \the [H]'s lipstick off with \the [src]."), \
+					SPAN_NOTICE("You begin to wipe off \the [H]'s lipstick.")
+				)
+				if (do_after(user, 2 SECONDS, H, do_flags = DO_DEFAULT & ~DO_BOTH_CAN_TURN))
+					user.visible_message(
+						SPAN_NOTICE("\The [user] wipes \the [H]'s lipstick off with \the [src]."), \
+						SPAN_NOTICE("You wipe off \the [H]'s lipstick.")
+					)
 					H.lip_style = null
 					H.update_body()
+
+		else if (user.zone_sel.selecting == BP_HEAD) // graffiti wiping
+			var/obj/item/organ/external/head/head = H.organs_by_name[BP_HEAD]
+			if (!istype(head) || !head.forehead_graffiti)
+				return
+			if (H == user)
+				user.visible_message(
+					SPAN_NOTICE("\The [user] cleans the graffiti off of \his forehead."),
+					SPAN_NOTICE("You clean off your forehead.")
+				)
+				head.forehead_graffiti = null
+				head.graffiti_style = null
+			else
+				user.visible_message(
+					SPAN_NOTICE("\The [user] starts cleaning \the [H]'s forehead with \the [src]."),
+					SPAN_NOTICE("You start wiping the graffiti off of \the [H]'s forehead.")
+				)
+				if (!do_after(user, 2 SECONDS, H, do_flags = DO_DEFAULT & ~DO_BOTH_CAN_TURN) || !head?.forehead_graffiti)
+					return
+				user.visible_message(
+					SPAN_NOTICE("\The [user] wipes the graffiti off of \the [H]'s forehead."),
+					SPAN_NOTICE("You wipe the graffiti off of \the [H]'s forehead.")
+				)
+				head.forehead_graffiti = null
+				head.graffiti_style = null
 
 /obj/item/paper/proc/addtofield(var/id, var/text, var/links = 0)
 	var/locid = 0
