@@ -37,6 +37,11 @@
 	if (config.log_admin)
 		game_log("ADMIN", text)
 
+/proc/log_mentor(text)
+	GLOB.mentor_log.Add(text)
+	if (config.log_mentor)
+		game_log("MENTOR", text)
+
 /proc/log_debug(text)
 	if (config.log_debug)
 		game_log("DEBUG", text)

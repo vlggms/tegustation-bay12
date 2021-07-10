@@ -584,11 +584,11 @@
 			else if(H.has_organ(BP_L_ARM) || H.has_organ(BP_R_ARM)) //If they only have one arm
 				grabtype = "arm"
 			else //If they have no arms
-				grabtype = "torso"	
+				grabtype = "torso"
 
 			visible_message(SPAN_WARNING("\The [src] leans down and grips \the [H]'s [grabtype]."), SPAN_NOTICE("You lean down and grip \the [H]'s [grabtype]."), exclude_mobs = list(H))
 			if(!H.stat)
-				to_chat(H, SPAN_WARNING("\The [src] leans down and grips your [grabtype]."))	
+				to_chat(H, SPAN_WARNING("\The [src] leans down and grips your [grabtype]."))
 
 		else //Otherwise we're probably just holding their arm to lead them somewhere
 			var/grabtype
@@ -658,7 +658,7 @@
 		if(client.holder || isghost(client.mob))
 			stat("Location:", "([x], [y], [z]) [loc]")
 
-	if(client.holder)
+	if(client.holder && client.holder.rights != R_MENTOR) //Mentors don't deserve the MC panel
 		if(statpanel("MC"))
 			stat("CPU:","[world.cpu]")
 			stat("Instances:","[world.contents.len]")
