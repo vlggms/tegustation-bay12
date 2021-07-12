@@ -1,4 +1,0 @@
-author: Shadowtail117
-delete-after: true
-changes:
-  - admin: Added a config setting for world.sleep_offline.
