@@ -9,6 +9,7 @@ var/list/gamemode_cache = list()
 	var/log_access = 0					// log login/logout
 	var/log_say = 0						// log client say
 	var/log_admin = 0					// log admin actions
+	var/log_mentor = 0                  // log mentor actions
 	var/log_debug = 1					// log debug output
 	var/log_game = 0					// log game events
 	var/log_vote = 0					// log voting
@@ -20,6 +21,7 @@ var/list/gamemode_cache = list()
 	var/log_hrefs = 0					// logs all links clicked in-game. Could be used for debugging and tracking down exploits
 	var/log_runtime = 0					// logs world.log to a file
 	var/log_world_output = 0			// log world.log to game log
+	var/enable_memos = 1				// enables memos
 	var/allow_admin_ooccolor = 0		// Allows admins with relevant permissions to have their own ooc colour
 	var/allow_vote_restart = 0 			// allow votes to restart
 	var/ert_admin_call_only = 0
@@ -297,6 +299,9 @@ var/list/gamemode_cache = list()
 				if ("log_admin")
 					config.log_admin = 1
 
+				if ("log_mentor")
+					config.log_mentor = 1
+
 				if ("log_debug")
 					config.log_debug = text2num(value)
 
@@ -329,6 +334,9 @@ var/list/gamemode_cache = list()
 
 				if ("log_runtime")
 					config.log_runtime = 1
+
+				if ("enable_memos")
+					config.enable_memos = 1
 
 				if ("generate_asteroid")
 					config.generate_map = 1
