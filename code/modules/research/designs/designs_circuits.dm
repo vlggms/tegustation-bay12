@@ -731,6 +731,20 @@
 	build_path = /obj/item/stock_parts/circuitboard/microwave
 	sort_string = "WAAAT"
 
+/datum/design/circuit/stove
+	name = "stove"
+	id = "stove"
+	req_tech = list(TECH_BIO = 2, TECH_ENGINEERING = 2)
+	build_path = /obj/item/stock_parts/circuitboard/stove
+	sort_string = "WAAST"
+
+/datum/design/circuit/hotplate
+	name = "hotplate"
+	id = "hotplate"
+	req_tech = list(TECH_BIO = 2, TECH_ENGINEERING = 2)
+	build_path = /obj/item/stock_parts/circuitboard/hotplate
+	sort_string = "WAASH"
+
 /datum/design/circuit/gibber
 	name = "meat gibber"
 	id = "gibber"
