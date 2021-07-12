@@ -1,0 +1,5 @@
+author: Ilysen
+delete-after: true
+changes:
+  - bugfix: Fixed a runtime caused by certain animals trying to retaliate when having
+      no natural weapon.
