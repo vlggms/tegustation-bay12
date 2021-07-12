@@ -16,7 +16,7 @@
 	base_type = /obj/machinery/vending/assist
 	construct_state = /decl/machine_construction/default/panel_closed
 	uncreated_component_parts = null
-	
+
 	machine_name = "vending machine"
 	machine_desc = "Holds an internal stock of items that can be dispensed on-demand or when a charged ID card is swiped, depending on the brand."
 
@@ -1114,8 +1114,9 @@
 	icon_deny = "dinnerware-deny"
 	base_type = /obj/machinery/vending/dinnerware
 	products = list(
-	/obj/item/reagent_containers/glass/beaker/bowl =2,
+	/obj/item/reagent_containers/glass/beaker/bowl = 2,
 	/obj/item/tray = 8,
+	/obj/item/tray/baking = 3,
 	/obj/item/material/knife/kitchen = 3,
 	/obj/item/material/kitchen/rollingpin = 2,
 	/obj/item/reagent_containers/food/drinks/pitcher = 2,

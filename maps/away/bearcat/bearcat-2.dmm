@@ -2177,6 +2177,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/stove/hotplate,
 /turf/simulated/floor/tiled,
 /area/ship/scrap/crew/kitchen)
 "ek" = (

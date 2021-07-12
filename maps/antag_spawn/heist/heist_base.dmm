@@ -37,6 +37,7 @@
 /area/map_template/syndicate_mothership/raider_base)
 "ai" = (
 /obj/structure/table/standard,
+/obj/machinery/stove/hotplate,
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},

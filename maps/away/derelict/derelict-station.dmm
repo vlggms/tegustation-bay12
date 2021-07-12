@@ -3629,6 +3629,10 @@
 	},
 /turf/simulated/floor,
 /area/constructionsite/teleporter)
+"xJ" = (
+/obj/machinery/stove,
+/turf/simulated/floor/tiled/white/airless,
+/area/constructionsite/hallway/fore)
 "AR" = (
 /obj/structure/grille,
 /obj/structure/wall_frame,
@@ -25118,7 +25122,7 @@ bi
 aW
 bo
 aW
-cG
+xJ
 cw
 dc
 dm

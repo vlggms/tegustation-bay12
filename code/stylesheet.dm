@@ -34,8 +34,8 @@ em						{font-style: normal;font-weight: bold;}
 .pm  .other				{color: #0000ff;}
 
 /* Admin: Channels */
-.mod_channel			{color: #735638;	font-weight: bold;}
-.mod_channel .admin		{color: #b82e00;	font-weight: bold;}
+.mentor_channel			{color: #735638;	font-weight: bold;}
+.mentor_channel .admin	{color: #b82e00;	font-weight: bold;}
 .admin_channel			{color: #9611d4;	font-weight: bold;}
 
 /* Radio: Misc */
@@ -93,6 +93,7 @@ h1.alert, h2.alert		{color: #000080;}
 .rose					{color: #ff5050;}
 .info					{color: #0000cc;}
 .debug					{color: #ff00ff;}
+.mentor                 {color: #e236d8;}
 .notice					{color: #000099;}
 .subtle					{color: #000099; font-size: 75%; font-style: italic;}
 .alium					{color: #00ff00;}
