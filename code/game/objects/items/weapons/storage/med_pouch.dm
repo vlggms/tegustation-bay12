@@ -49,7 +49,7 @@ Single Use Emergency Pouches
 	to_chat(user, "<A href='?src=\ref[src];show_info=1'>Please read instructions before use.</A>")
 
 /obj/item/storage/med_pouch/CanUseTopic()
-	return STATUS_INTERACTIVE
+	return UI_INTERACTIVE
 
 /obj/item/storage/med_pouch/OnTopic(var/user, var/list/href_list)
 	if(href_list["show_info"])

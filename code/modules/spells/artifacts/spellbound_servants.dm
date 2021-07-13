@@ -214,8 +214,8 @@
 
 /obj/effect/cleanable/spellbound/CanUseTopic(var/mob)
 	if(isliving(mob))
-		return STATUS_CLOSE
-	return STATUS_INTERACTIVE
+		return UI_CLOSE
+	return UI_INTERACTIVE
 
 /obj/effect/cleanable/spellbound/OnTopic(var/mob/user, href_list, state)
 	if(href_list["master"])

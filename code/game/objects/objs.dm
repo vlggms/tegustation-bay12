@@ -46,7 +46,7 @@
 		var/list/nearby = viewers(1, src) | usr
 		for(var/mob/M in nearby)
 			if ((M.client && M.machine == src))
-				if(CanUseTopic(M, DefaultTopicState()) > STATUS_CLOSE)
+				if(CanUseTopic(M, DefaultTopicState()) > UI_CLOSE)
 					is_in_use = 1
 					interact(M)
 				else
@@ -60,7 +60,7 @@
 		var/is_in_use = 0
 		for(var/mob/M in nearby)
 			if ((M.client && M.machine == src))
-				if(CanUseTopic(M, DefaultTopicState()) > STATUS_CLOSE)
+				if(CanUseTopic(M, DefaultTopicState()) > UI_CLOSE)
 					is_in_use = 1
 					interact(M)
 				else

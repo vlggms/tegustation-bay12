@@ -30,7 +30,7 @@
 	to_chat(user, "The founding principles of EC are written there: <A href='?src=\ref[src];show_info=1'>Expeditionary Directives</A>")
 
 /obj/structure/sign/ecplaque/CanUseTopic()
-	return STATUS_INTERACTIVE
+	return UI_INTERACTIVE
 
 /obj/structure/sign/ecplaque/OnTopic(href, href_list)
 	if(href_list["show_info"])

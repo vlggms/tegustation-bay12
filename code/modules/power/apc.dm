@@ -816,7 +816,7 @@
 /obj/machinery/power/apc/CanUseTopic(mob/user, datum/topic_state/state)
 	if(user.lying)
 		to_chat(user, "<span class='warning'>You must stand to use [src]!</span>")
-		return STATUS_CLOSE
+		return UI_CLOSE
 	if(istype(user, /mob/living/silicon))
 		var/permit = 0 // Malfunction variable. If AI hacks APC it can control it even without AI control wire.
 		var/mob/living/silicon/ai/AI = user
@@ -828,11 +828,11 @@
 				permit = 1
 
 		if(aidisabled && !permit)
-			return STATUS_CLOSE
+			return UI_CLOSE
 	. = ..()
 	if(user.restrained())
 		to_chat(user, "<span class='warning'>You must have free hands to use [src].</span>")
-		. = min(., STATUS_UPDATE)
+		. = min(., UI_UPDATE)
 
 /obj/machinery/power/apc/Topic(href, href_list)
 	if(..())

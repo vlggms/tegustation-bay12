@@ -455,7 +455,7 @@
 
 // Use to field Topic calls for which usr == src is required, which will first be funneled into here.
 /mob/proc/OnSelfTopic(href_list, topic_status)
-	if (topic_status == STATUS_INTERACTIVE)
+	if (topic_status == UI_INTERACTIVE)
 		if(href_list["mach_close"])
 			var/t1 = text("window=[href_list["mach_close"]]")
 			unset_machine()

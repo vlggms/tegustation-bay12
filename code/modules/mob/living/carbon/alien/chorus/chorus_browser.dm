@@ -38,4 +38,4 @@
 			return
 
 /mob/living/carbon/alien/chorus/self_can_use_topic(var/src_object)
-	return STATUS_INTERACTIVE
+	return UI_INTERACTIVE

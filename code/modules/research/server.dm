@@ -130,7 +130,7 @@
 /obj/machinery/computer/rdservercontrol/CanUseTopic(user)
 	if(!allowed(user) && !emagged)
 		to_chat(user, "<span class='warning'>You do not have the required access level</span>")
-		return STATUS_CLOSE
+		return UI_CLOSE
 	return ..()
 
 /obj/machinery/computer/rdservercontrol/OnTopic(user, href_list, state)

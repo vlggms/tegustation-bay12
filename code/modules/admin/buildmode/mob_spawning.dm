@@ -90,7 +90,7 @@ GLOBAL_LIST_INIT(mob_spawners, list())
 
 /datum/build_mode/mob_mode/CanUseTopic(mob/user)
 	if (!is_admin(user))
-		return STATUS_CLOSE
+		return UI_CLOSE
 	return ..()
 
 /datum/build_mode/mob_mode/Topic(user, href_list)

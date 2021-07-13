@@ -115,7 +115,7 @@ obj/item/device/suit_sensor_jammer/examine(mob/user, distance)
 
 obj/item/device/suit_sensor_jammer/CanUseTopic(user, state)
 	if(!bcell || bcell.charge <= 0)
-		return STATUS_CLOSE
+		return UI_CLOSE
 	return ..()
 
 obj/item/device/suit_sensor_jammer/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1)

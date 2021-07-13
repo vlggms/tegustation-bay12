@@ -51,7 +51,7 @@
 /datum/extension/interactive/ntos/extension_status(var/mob/user)
 	. = ..()
 	if(!on || !host_status())
-		return STATUS_CLOSE
+		return UI_CLOSE
 	//There is no bypassing the update, mwhahaha
 	if(updating)
 		. = min(STATUS_UPDATE, .)

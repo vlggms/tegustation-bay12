@@ -4,7 +4,7 @@
 	icon_screen = "teleport"
 	light_color = "#77fff8"
 	extra_view = 4
-	silicon_restriction = STATUS_UPDATE
+	silicon_restriction = UI_UPDATE
 	machine_name = "sensors console"
 	machine_desc = "Used to activate, monitor, and configure a spaceship's sensors. Higher range means higher temperature; dangerously high temperatures may fry the delicate equipment."
 	var/obj/machinery/shipsensors/sensors

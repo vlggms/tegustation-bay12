@@ -134,7 +134,7 @@
 /obj/machinery/sleeper/CanUseTopic(user)
 	if(user == occupant)
 		to_chat(usr, "<span class='warning'>You can't reach the controls from the inside.</span>")
-		return STATUS_CLOSE
+		return UI_CLOSE
 	. = ..()
 
 /obj/machinery/sleeper/OnTopic(user, href_list)

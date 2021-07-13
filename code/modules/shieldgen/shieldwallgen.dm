@@ -82,13 +82,13 @@
 /obj/machinery/shieldwallgen/CanUseTopic(mob/user)
 	if(!anchored)
 		to_chat(user, "<span class='warning'>The shield generator needs to be firmly secured to the floor first.</span>")
-		return STATUS_CLOSE
+		return UI_CLOSE
 	if(src.locked && !istype(user, /mob/living/silicon))
 		to_chat(user, "<span class='warning'>The controls are locked!</span>")
-		return STATUS_CLOSE
+		return UI_CLOSE
 	if(power != 1)
 		to_chat(user, "<span class='warning'>The shield generator needs to be powered by wire underneath.</span>")
-		return STATUS_CLOSE
+		return UI_CLOSE
 	return ..()
 
 /obj/machinery/shieldwallgen/interface_interact(mob/user)

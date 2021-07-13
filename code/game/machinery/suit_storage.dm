@@ -171,7 +171,7 @@
 	data["superuv"] = issuperUV
 	data["safeties"] = safetieson
 	data["helmet"] = helmet
-	data["suit"] = suit 
+	data["suit"] = suit
 	data["boots"] = boots
 	data["tank"] = tank
 	data["mask"] = mask
@@ -184,7 +184,7 @@
 
 /obj/machinery/suit_storage_unit/CanUseTopic(var/mob/user)
 	if(!user.IsAdvancedToolUser())
-		return STATUS_CLOSE
+		return UI_CLOSE
 	return ..()
 
 /obj/machinery/suit_storage_unit/OnTopic(var/user, var/list/href_list, var/datum/topic_state/state)

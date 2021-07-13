@@ -58,7 +58,7 @@
 
 /datum/build_mode/atmosphere/CanUseTopic(mob/user)
 	if (!is_admin(user))
-		return STATUS_CLOSE
+		return UI_CLOSE
 	return ..()
 
 /datum/build_mode/atmosphere/Topic(user, href_list)
@@ -190,4 +190,3 @@
 			return TRUE
 
 	return FALSE
-

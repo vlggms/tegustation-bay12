@@ -4,4 +4,4 @@ GLOBAL_DATUM_INIT(mech_state, /datum/topic_state/physical/mech, new)
 	if(istype(src_object))
 		if((user in src_object.pilots) || (user == src_object))
 			return ..()
-	return STATUS_CLOSE
+	return UI_CLOSE

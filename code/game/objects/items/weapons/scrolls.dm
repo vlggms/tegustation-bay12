@@ -44,7 +44,7 @@
 	var/area/thearea = input(user, "Area to jump to", "BOOYEA") as null|anything in wizteleportlocs
 	thearea = thearea ? wizteleportlocs[thearea] : thearea
 
-	if (!thearea || CanUseTopic(user) != STATUS_INTERACTIVE)
+	if (!thearea || CanUseTopic(user) != UI_INTERACTIVE)
 		return
 
 	var/datum/effect/effect/system/smoke_spread/smoke = new /datum/effect/effect/system/smoke_spread()

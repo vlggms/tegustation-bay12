@@ -28,7 +28,7 @@
 /obj/machinery/computer/robotics/CanUseTopic(user)
 	if(!allowed(user))
 		to_chat(user, "<span class='warning'>Access Denied</span>")
-		return STATUS_CLOSE
+		return UI_CLOSE
 	return ..()
 
 /obj/machinery/computer/robotics/OnTopic(var/mob/user, href_list)

@@ -172,7 +172,7 @@
 
 /obj/machinery/power/generator/CanUseTopic(mob/user)
 	if(!anchored)
-		return STATUS_CLOSE
+		return UI_CLOSE
 	return ..()
 
 /obj/machinery/power/generator/interface_interact(mob/user)

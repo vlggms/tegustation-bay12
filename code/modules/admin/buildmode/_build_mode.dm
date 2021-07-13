@@ -69,5 +69,5 @@
 
 /datum/build_mode/CanUseTopic(mob/user)
 	if (check_rights(R_BUILDMODE, TRUE, user))
-		return STATUS_INTERACTIVE
+		return UI_INTERACTIVE
 	return ..()

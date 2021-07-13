@@ -277,7 +277,7 @@ GLOBAL_LIST_EMPTY(diversion_junctions)
 /obj/machinery/disposal/CanUseTopic(mob/user, state, href_list)
 	if(user.loc == src)
 		to_chat(user, "<span class='warning'>You cannot reach the controls from inside.</span>")
-		return STATUS_CLOSE
+		return UI_CLOSE
 	if(isAI(user) && href_list && (href_list["handle"] || href_list["eject"]))
 		return min(STATUS_UPDATE, ..())
 	if(mode==-1 && href_list && !href_list["eject"]) // only allow ejecting if mode is -1

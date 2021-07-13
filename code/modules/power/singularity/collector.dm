@@ -71,7 +71,7 @@ var/global/list/rad_collectors = list()
 
 /obj/machinery/power/rad_collector/CanUseTopic(mob/user)
 	if(!anchored)
-		return STATUS_CLOSE
+		return UI_CLOSE
 	return ..()
 
 /obj/machinery/power/rad_collector/interface_interact(mob/user)

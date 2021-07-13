@@ -279,7 +279,7 @@
 
 /obj/machinery/power/shield_generator/CanUseTopic(var/mob/user)
 	if(issilicon(user) && !Adjacent(user) && ai_control_disabled)
-		return STATUS_UPDATE
+		return UI_UPDATE
 	return ..()
 
 /obj/machinery/power/shield_generator/OnTopic(user, href_list, datum/topic_state/state)

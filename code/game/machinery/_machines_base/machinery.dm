@@ -223,25 +223,25 @@ Class Procs:
 
 /obj/machinery/CanUseTopic(var/mob/user)
 	if(stat & BROKEN)
-		return STATUS_CLOSE
+		return UI_CLOSE
 
 	if(!interact_offline && (stat & NOPOWER))
-		return STATUS_CLOSE
+		return UI_CLOSE
 
 	if(user.direct_machine_interface(src))
 		var/mob/living/silicon/silicon = user
 		if (silicon_restriction && ismachinerestricted(silicon))
-			if (silicon_restriction == STATUS_CLOSE)
+			if (silicon_restriction == UI_CLOSE)
 				to_chat(user, SPAN_WARNING("Remote AI systems detected. Firewall protections forbid remote AI access."))
 			return silicon_restriction
 
 		return ..()
 
 	if(stat & NOSCREEN)
-		return STATUS_CLOSE
+		return UI_CLOSE
 
 	if(stat & NOINPUT)
-		return min(..(), STATUS_UPDATE)
+		return min(..(), UI_UPDATE)
 	return ..()
 
 /mob/proc/direct_machine_interface(obj/machinery/machine)
@@ -255,7 +255,7 @@ Class Procs:
 
 /obj/machinery/CanUseTopicPhysical(var/mob/user)
 	if(stat & BROKEN)
-		return STATUS_CLOSE
+		return UI_CLOSE
 
 	return GLOB.physical_state.can_use_topic(nano_host(), user)
 
@@ -280,13 +280,13 @@ Class Procs:
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 /obj/machinery/attack_ai(mob/user)
-	if(CanUseTopic(user, DefaultTopicState()) > STATUS_CLOSE)
+	if(CanUseTopic(user, DefaultTopicState()) > UI_CLOSE)
 		return interface_interact(user)
 
 /obj/machinery/attack_robot(mob/user)
 	if((. = attack_hand(user))) // This will make a physical proximity check, and allow them to deal with components and such.
 		return
-	if(CanUseTopic(user, DefaultTopicState()) > STATUS_CLOSE)
+	if(CanUseTopic(user, DefaultTopicState()) > UI_CLOSE)
 		return interface_interact(user) // This may still work even if the physical checks fail.
 
 // After a recent rework this should mostly be safe.
@@ -321,7 +321,7 @@ Class Procs:
 		return
 	if((. = physical_attack_hand(user)))
 		return
-	if(CanUseTopic(user, DefaultTopicState()) > STATUS_CLOSE)
+	if(CanUseTopic(user, DefaultTopicState()) > UI_CLOSE)
 		return interface_interact(user)
 
 // If you want to have interface interactions handled for you conveniently, use this.

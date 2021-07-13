@@ -90,10 +90,10 @@
 /obj/machinery/keycard_auth/CanUseTopic(var/mob/user, href_list)
 	if(busy)
 		to_chat(user, "This device is busy.")
-		return STATUS_CLOSE
+		return UI_CLOSE
 	if(!user.IsAdvancedToolUser())
 		to_chat(user, FEEDBACK_YOU_LACK_DEXTERITY)
-		return min(..(), STATUS_UPDATE)
+		return min(..(), UI_UPDATE)
 	return ..()
 
 /obj/machinery/keycard_auth/OnTopic(user, href_list)

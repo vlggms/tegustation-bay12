@@ -3,7 +3,7 @@
 	..()
 
 /datum/extension/interactive/multitool/items/clothing/interact(var/obj/item/device/multitool/M, var/mob/user)
-	if(extension_status(user) != STATUS_INTERACTIVE)
+	if(extension_status(user) != UI_INTERACTIVE)
 		return
 	var/obj/item/clothing/under/u = holder
 	if(u.has_sensor == SUIT_NO_SENSORS)

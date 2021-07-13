@@ -214,7 +214,7 @@
 
 /obj/item/device/radio/CanUseTopic()
 	if(!on && !get_cell()) // We need to still be able to use the topic if we use power
-		return STATUS_CLOSE
+		return UI_CLOSE
 	return ..()
 
 /obj/item/device/radio/Topic(href, href_list)

@@ -415,5 +415,5 @@
 /obj/machinery/smartfridge/secure/CanUseTopic(mob/user, datum/topic_state/state, href_list)
 	if(!allowed(user) && !emagged && locked != -1 && href_list && href_list["vend"] && scan_id)
 		to_chat(user, "<span class='warning'>Access denied.</span>")
-		return STATUS_CLOSE
+		return UI_CLOSE
 	return ..()

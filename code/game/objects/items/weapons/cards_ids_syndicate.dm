@@ -87,7 +87,7 @@
 
 /obj/item/card/id/syndicate/CanUseTopic(var/mob/user, var/datum/topic_state/state, var/href_list)
 	if(!(href_list && href_list["look_at_id"]) && (user != registered_user))
-		return STATUS_CLOSE
+		return UI_CLOSE
 	return ..()
 
 /obj/item/card/id/syndicate/Topic(href, href_list, var/datum/topic_state/state)

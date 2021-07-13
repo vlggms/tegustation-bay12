@@ -403,7 +403,7 @@ var/list/ai_verbs_default = list(
 	..()
 
 /mob/living/silicon/ai/OnSelfTopic(href_list, topic_status)
-	if (topic_status == STATUS_INTERACTIVE)
+	if (topic_status == UI_INTERACTIVE)
 		if (href_list["mach_close"]) // Overrides behavior handled in the ..()
 			if (href_list["mach_close"] == "aialerts")
 				viewalerts = TRUE

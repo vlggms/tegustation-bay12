@@ -5,7 +5,7 @@
 	if((. = ..()))
 		return
 	state = state || DefaultTopicState() || GLOB.default_state
-	if(CanUseTopic(usr, state, href_list) == STATUS_INTERACTIVE)
+	if(CanUseTopic(usr, state, href_list) == UI_INTERACTIVE)
 		CouldUseTopic(usr)
 		return OnTopic(usr, href_list, state)
 	CouldNotUseTopic(usr)
@@ -24,10 +24,10 @@
 /mob/living/CanUseObjTopic(var/obj/O, var/datum/topic_state/state)
 	. = ..()
 	if(state.check_access && !O.check_access(src))
-		. = min(., STATUS_UPDATE)
+		. = min(., UI_UPDATE)
 
 /mob/proc/CanUseObjTopic()
-	return STATUS_INTERACTIVE
+	return UI_INTERACTIVE
 
 /atom/proc/CouldUseTopic(var/mob/user)
 	user.AddTopicPrint(src)

@@ -295,7 +295,7 @@
 
 	if(!istype(location))
 		return FALSE
-	
+
 	if(breach_cooldown)
 		return FALSE
 
@@ -610,7 +610,7 @@
 		if(AALARM_SCREEN_SENSORS)
 			var/list/selected
 			var/thresholds[0]
-			
+
 			var/breach_data = list("selected" = breach_pressure)
 			data["breach_data"] = breach_data
 
@@ -639,19 +639,19 @@
 
 /obj/machinery/alarm/CanUseTopic(var/mob/user, var/datum/topic_state/state, var/href_list = list())
 	if(buildstage != 2)
-		return STATUS_CLOSE
+		return UI_CLOSE
 
 	if(aidisabled && isAI(user))
 		to_chat(user, "<span class='warning'>AI control for \the [src] interface has been disabled.</span>")
-		return STATUS_CLOSE
+		return UI_CLOSE
 
-	. = shorted ? STATUS_DISABLED : STATUS_INTERACTIVE
+	. = shorted ? UI_DISABLED : UI_INTERACTIVE
 
-	if(. == STATUS_INTERACTIVE)
+	if(. == UI_INTERACTIVE)
 		var/extra_href = state.href_list(user)
 		// Prevent remote users from altering RCON settings unless they already have access
 		if(href_list["rcon"] && extra_href["remote_connection"] && !extra_href["remote_access"])
-			. = STATUS_UPDATE
+			. = UI_UPDATE
 
 	return min(..(), .)
 
@@ -1107,7 +1107,7 @@ FIRE ALARM
 
 /obj/machinery/firealarm/CanUseTopic(user)
 	if(buildstage != 2)
-		return STATUS_CLOSE
+		return UI_CLOSE
 	return ..()
 
 /obj/machinery/firealarm/OnTopic(user, href_list)

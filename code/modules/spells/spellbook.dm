@@ -155,10 +155,10 @@ var/list/artefact_feedback = list(/obj/structure/closet/wizard/armor = 		"HS",
 
 /obj/item/spellbook/CanUseTopic(var/mob/living/carbon/human/H)
 	if(!istype(H))
-		return STATUS_CLOSE
+		return UI_CLOSE
 
 	if(H.mind && (spellbook.book_flags & LOCKED) && H.mind.special_role == ANTAG_APPRENTICE) //make sure no scrubs get behind the lock
-		return STATUS_CLOSE
+		return UI_CLOSE
 
 	return ..()
 

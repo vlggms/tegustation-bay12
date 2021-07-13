@@ -71,7 +71,7 @@
 /obj/machinery/power/port_gen/CanUseTopic(mob/user)
 	if(!anchored)
 		to_chat(user, "<span class='warning'>The generator needs to be secured first.</span>")
-		return STATUS_CLOSE
+		return UI_CLOSE
 	return ..()
 
 /obj/machinery/power/port_gen/examine(mob/user, distance)
@@ -113,7 +113,7 @@
 /obj/machinery/power/port_gen/pacman
 	name = "\improper P.A.C.M.A.N.-type Portable Generator"
 	desc = "A power generator that runs on solid phoron sheets. Rated for 80 kW max safe output."
-	
+
 	machine_name = "\improper PACMAN-type generator"
 	machine_desc = "A portable generator often used for backup power or running small spacecraft. Runs on solid phoron sheets; rated for 80 kW max safe output."
 

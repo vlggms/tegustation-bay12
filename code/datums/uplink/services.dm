@@ -186,7 +186,7 @@
 	if(!message)
 		return
 
-	if(CanUseTopic(user, GLOB.hands_state) != STATUS_INTERACTIVE)
+	if(CanUseTopic(user, GLOB.hands_state) != UI_INTERACTIVE)
 		return FALSE
 	command_announcement.Announce(message, title, msg_sanitized = 1, zlevels = GetConnectedZlevels(get_z(src)))
 	return TRUE

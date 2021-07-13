@@ -95,7 +95,7 @@ var/global/list/default_pai_software = list()
 		ui.set_auto_update(1)
 
 /mob/living/silicon/pai/OnSelfTopic(href_list, topic_status)
-	if (topic_status == STATUS_INTERACTIVE)
+	if (topic_status == UI_INTERACTIVE)
 		if(href_list["software"])
 			var/soft = href_list["software"]
 			var/datum/pai_software/S = software[soft]

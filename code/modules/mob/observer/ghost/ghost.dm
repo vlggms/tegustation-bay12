@@ -86,7 +86,7 @@ var/global/list/image/ghost_sightless_images = list() //this is a list of images
 	return ..()
 
 /mob/observer/ghost/OnSelfTopic(href_list, topic_status)
-	if (topic_status == STATUS_INTERACTIVE)
+	if (topic_status == UI_INTERACTIVE)
 		if (href_list["track"])
 			if(istype(href_list["track"],/mob))
 				var/mob/target = locate(href_list["track"]) in SSmobs.mob_list

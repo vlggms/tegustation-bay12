@@ -130,7 +130,7 @@ var/const/NO_EMAG_ACT = -50
 /obj/item/card/emag/Initialize()
 	. = ..()
 	set_extension(src,/datum/extension/chameleon/emag)
-	
+
 /obj/item/card/emag/get_antag_info()
 	. = ..()
 	. += "You can use this cryptographic sequencer in order to subvert electronics or forcefully open doors you don't have access to. These actions are irreversible and the card only has a limited number of charges!"
@@ -196,7 +196,7 @@ var/const/NO_EMAG_ACT = -50
 
 /obj/item/card/id/CanUseTopic(var/user)
 	if(user in view(get_turf(src)))
-		return STATUS_INTERACTIVE
+		return UI_INTERACTIVE
 
 /obj/item/card/id/OnTopic(var/mob/user, var/list/href_list)
 	if(href_list["look_at_id"])
@@ -337,7 +337,7 @@ var/const/NO_EMAG_ACT = -50
 				id.military_branch = new_branch
 				id.military_rank = null
 			return
-	
+
 	to_chat(client, SPAN_WARNING("Input, must be an existing branch - [var_value] is invalid"))
 
 /decl/vv_set_handler/id_card_military_rank
@@ -366,7 +366,7 @@ var/const/NO_EMAG_ACT = -50
 		if(new_rank)
 			id.military_rank = new_rank
 			return
-	
+
 	to_chat(client, SPAN_WARNING("Input must be an existing rank belonging to military_branch - [var_value] is invalid"))
 
 /obj/item/card/id/silver

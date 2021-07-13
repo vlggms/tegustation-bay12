@@ -6,7 +6,7 @@ LEGACY_RECORD_STRUCTURE(all_waypoints, waypoint)
 	icon_screen = "helm"
 	light_color = "#7faaff"
 	core_skill = SKILL_PILOT
-	silicon_restriction = STATUS_UPDATE
+	silicon_restriction = UI_UPDATE
 	machine_name = "helm control console"
 	machine_desc = "A navigation system used to control spacecraft big and small, allowing for configuration of heading and autopilot as well as providing navigational data."
 	var/autopilot = 0
@@ -45,7 +45,7 @@ LEGACY_RECORD_STRUCTURE(all_waypoints, waypoint)
 		if (!linked)
 			to_chat(current_operator, SPAN_DANGER("\The [src]'s controls lock up with an error flashing across the screen: Connection to vessel lost!"))
 			set_operator(null, TRUE)
-		if (!Adjacent(current_operator) || CanUseTopic(current_operator) != STATUS_INTERACTIVE || !viewing_overmap(current_operator))
+		if (!Adjacent(current_operator) || CanUseTopic(current_operator) != UI_INTERACTIVE || !viewing_overmap(current_operator))
 			set_operator(null)
 
 	if (autopilot && dx && dy)
@@ -305,7 +305,7 @@ LEGACY_RECORD_STRUCTURE(all_waypoints, waypoint)
 	name = "navigation console"
 	icon_keyboard = "generic_key"
 	icon_screen = "helm"
-	silicon_restriction = STATUS_UPDATE
+	silicon_restriction = UI_UPDATE
 	machine_name = "navigation console"
 	machine_desc = "Used to view a sensor-assisted readout of the current sector and its surrounding areas."
 

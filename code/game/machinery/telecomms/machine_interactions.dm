@@ -53,7 +53,7 @@
 /obj/machinery/telecomms/dismantle()
 	for(var/obj/x in (contents - component_parts))
 		x.dropInto(loc)
-	. = ..()	
+	. = ..()
 
 // This should all be a multitool extension, but outside the scope of current rework.
 /obj/machinery/telecomms/CanUseTopic(mob/user)
@@ -61,7 +61,7 @@
 	if(!issilicon(user))
 		// istype returns false if the value is null
 		if(!istype(user.get_active_hand(), /obj/item/device/multitool))
-			return STATUS_CLOSE
+			return UI_CLOSE
 	return ..()
 
 /obj/machinery/telecomms/interface_interact(var/mob/user)
@@ -135,7 +135,7 @@
 
 	dat += "</font>"
 	temp = ""
-	
+
 	var/datum/browser/popup = new(user, "tcommmachine", "Telecommunications Machine Configuration Panel", 520, 600)
 	popup.set_content(JOINTEXT(dat))
 	popup.open()

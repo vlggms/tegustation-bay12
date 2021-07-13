@@ -48,7 +48,7 @@
 
 /datum/build_mode/build/CanUseTopic(mob/user)
 	if (!is_admin(user))
-		return STATUS_CLOSE
+		return UI_CLOSE
 	return ..()
 
 /datum/build_mode/build/Topic(href, list/href_list)
