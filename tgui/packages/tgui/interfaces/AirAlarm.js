@@ -1,12 +1,10 @@
 import { toFixed } from 'common/math';
-import { decodeHtmlEntities } from 'common/string';
 import { Fragment } from 'inferno';
-import { useBackend, useLocalState } from "tgui/backend";
-import { Box, Button, LabeledList, NumberInput, Section } from "tgui/components";
-import { getGasLabel } from "tgui/constants";
-import { Window } from "tgui/layouts";
-import { InterfaceLockNoticeBox } from 'tgui/interfaces/common/InterfaceLockNoticeBox';
-import { Vent, Scrubber } from 'tgui/interfaces/common/AtmosControls';
+import { useBackend, useLocalState } from '../backend';
+import { Box, Button, LabeledList, Section } from '../components';
+import { Window } from '../layouts';
+import { Scrubber, Vent } from './common/AtmosControls';
+import { InterfaceLockNoticeBox } from './common/InterfaceLockNoticeBox';
 
 export const AirAlarm = (props, context) => {
   const { act, data } = useBackend(context);
@@ -14,8 +12,7 @@ export const AirAlarm = (props, context) => {
   return (
     <Window
       width={440}
-      height={650}
-      resizable>
+      height={650}>
       <Window.Content scrollable>
         <InterfaceLockNoticeBox />
         <AirAlarmStatus />
@@ -29,7 +26,7 @@ export const AirAlarm = (props, context) => {
 
 const AirAlarmStatus = (props, context) => {
   const { data } = useBackend(context);
-  const entries = (data.environment || [])
+  const entries = (data.environment_data || [])
     .filter(entry => entry.value >= 0.01);
   const dangerMap = {
     0: {
@@ -50,7 +47,7 @@ const AirAlarmStatus = (props, context) => {
     <Section title="Air Status">
       <LabeledList>
         {entries.length > 0 && (
-          <Fragment>
+          <>
             {entries.map(entry => {
               const status = dangerMap[entry.danger_level] || dangerMap[0];
               return (
@@ -74,7 +71,7 @@ const AirAlarmStatus = (props, context) => {
                 || data.fire_alarm && 'Fire Alarm'
                 || 'Nominal'}
             </LabeledList.Item>
-          </Fragment>
+          </>
         ) || (
           <LabeledList.Item
             label="Warning"
@@ -147,7 +144,7 @@ const AirAlarmControlHome = (props, context) => {
     atmos_alarm,
   } = data;
   return (
-    <Fragment>
+    <>
       <Button
         icon={atmos_alarm
           ? 'exclamation-triangle'
@@ -185,7 +182,7 @@ const AirAlarmControlHome = (props, context) => {
         icon="chart-bar"
         content="Alarm Thresholds"
         onClick={() => setScreen('thresholds')} />
-    </Fragment>
+    </>
   );
 };
 

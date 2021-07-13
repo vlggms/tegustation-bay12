@@ -1,15 +1,13 @@
-import { Fragment } from 'inferno';
-import { useBackend } from "tgui/backend";
-import { Box, Button, LabeledList, NoticeBox, ProgressBar, Section } from "tgui/components";
-import { Window } from "tgui/layouts";
-import { InterfaceLockNoticeBox } from 'tgui/interfaces/common/InterfaceLockNoticeBox';
+import { useBackend } from '../backend';
+import { Box, Button, LabeledList, NoticeBox, ProgressBar, Section } from '../components';
+import { Window } from '../layouts';
+import { InterfaceLockNoticeBox } from './common/InterfaceLockNoticeBox';
 
 export const Apc = (props, context) => {
   return (
     <Window
       width={450}
-      height={445}
-      resizable>
+      height={445}>
       <Window.Content scrollable>
         <ApcContent />
       </Window.Content>
@@ -86,7 +84,7 @@ const ApcContent = (props, context) => {
     );
   }
   return (
-    <Fragment>
+    <>
       <InterfaceLockNoticeBox />
       <Section title="Power Status">
         <LabeledList>
@@ -113,10 +111,10 @@ const ApcContent = (props, context) => {
             color={chargingStatus.color}
             buttons={(
               <Button
-                icon={data.chargeMode ? 'sync' : 'close'}
+                icon={data.chargeMode ? 'sync' : 'times'}
                 content={data.chargeMode ? 'Auto' : 'Off'}
                 disabled={locked}
-                onClick={() => act('cmode')} />
+                onClick={() => act('charge')} />
             )}>
             [ {chargingStatus.chargingText} ]
           </LabeledList.Item>
@@ -131,23 +129,23 @@ const ApcContent = (props, context) => {
                 key={channel.title}
                 label={channel.title}
                 buttons={(
-                  <Fragment>
+                  <>
                     <Box inline mx={2}
                       color={channel.status >= 2 ? 'good' : 'bad'}>
-                      {channel.status >= 3 ? 'On' : 'Off'}
+                      {channel.status >= 2 ? 'On' : 'Off'}
                     </Box>
                     <Button
                       icon="sync"
                       content="Auto"
                       selected={!locked && (
-                        channel.status === 2 || channel.status === 4
+                        channel.status === 1 || channel.status === 3
                       )}
                       disabled={locked}
                       onClick={() => act('channel', topicParams.auto)} />
                     <Button
                       icon="power-off"
                       content="On"
-                      selected={!locked && channel.status === 3}
+                      selected={!locked && channel.status === 2}
                       disabled={locked}
                       onClick={() => act('channel', topicParams.on)} />
                     <Button
@@ -156,7 +154,7 @@ const ApcContent = (props, context) => {
                       selected={!locked && channel.status === 0}
                       disabled={locked}
                       onClick={() => act('channel', topicParams.off)} />
-                  </Fragment>
+                  </>
                 )}>
                 {channel.powerLoad}
               </LabeledList.Item>
@@ -170,7 +168,7 @@ const ApcContent = (props, context) => {
       <Section
         title="Misc"
         buttons={!!data.siliconUser && (
-          <Fragment>
+          <>
             {!!data.malfStatus && (
               <Button
                 icon={malfStatus.icon}
@@ -182,7 +180,7 @@ const ApcContent = (props, context) => {
               icon="lightbulb-o"
               content="Overload"
               onClick={() => act('overload')} />
-          </Fragment>
+          </>
         )}>
         <LabeledList>
           <LabeledList.Item
@@ -192,10 +190,27 @@ const ApcContent = (props, context) => {
                 icon={data.coverLocked ? 'lock' : 'unlock'}
                 content={data.coverLocked ? 'Engaged' : 'Disengaged'}
                 disabled={locked}
-                onClick={() => act('lock')} />
+                onClick={() => act('cover')} />
+            )} />
+          <LabeledList.Item
+            label="Emergency Lighting"
+            buttons={(
+              <Button
+                icon="lightbulb-o"
+                content={data.emergencyLights ? 'Enabled' : 'Disabled'}
+                disabled={locked}
+                onClick={() => act('emergency_lighting')} />
+            )} />
+          <LabeledList.Item
+            label="Night Shift Lighting"
+            buttons={(
+              <Button
+                icon="lightbulb-o"
+                content={data.nightshiftLights ? 'Enabled' : 'Disabled'}
+                onClick={() => act('toggle_nightshift')} />
             )} />
         </LabeledList>
       </Section>
-    </Fragment>
+    </>
   );
 };

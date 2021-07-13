@@ -143,7 +143,6 @@ export class TextArea extends Component {
     const {
       className,
       fluid,
-      scrollable,
       ...rest
     } = boxProps;
     return (
@@ -151,7 +150,6 @@ export class TextArea extends Component {
         className={classes([
           'TextArea',
           fluid && 'TextArea--fluid',
-          scrollable && 'TextArea--scrollable',
           className,
         ])}
         {...rest}>

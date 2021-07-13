@@ -4,14 +4,6 @@
  * @license MIT
  */
 
-/**
- * Haven changelog
- *   DD/MM/YYYY
- *
- * - 13/04/2021: Migrate modifications to tgui 4.3
- * - 12/09/2020: Support interfaces in subdirs - martinlyra
- */
-
 import { selectBackend } from './backend';
 import { selectDebug } from './debug/selectors';
 import { Window } from './layouts';
@@ -77,8 +69,7 @@ export const getRoutedComponent = store => {
   if (!esModule) {
     return routingError('notFound', name);
   }
-  // Haven modification to support interfaces in subdirs
-  const Component = esModule[name.split('/').slice(-1)[0]];
+  const Component = esModule[name];
   if (!Component) {
     return routingError('missingExport', name);
   }

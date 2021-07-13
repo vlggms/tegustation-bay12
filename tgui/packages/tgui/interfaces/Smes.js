@@ -1,18 +1,17 @@
-import { useBackend } from 'tgui/backend';
-import { AnimatedNumber, Box, Button, Flex, LabeledList, ProgressBar, Section, Slider } from 'tgui/components';
-import { formatPower } from 'tgui/format';
-import { Window } from 'tgui/layouts';
+import { useBackend } from '../backend';
+import { Box, Button, Flex, LabeledList, ProgressBar, Section, Slider } from '../components';
+import { formatPower } from '../format';
+import { Window } from '../layouts';
 
 // Common power multiplier
-const POWER_MUL = 1e6;
+const POWER_MUL = 1e3;
 
-export const PowerSmes = (props, context) => {
+export const Smes = (props, context) => {
   const { act, data } = useBackend(context);
   const {
-    nameTag,
-    storedCapacity,
-    storedCapacityAbs,
-    storedCapacityMax,
+    capacityPercent,
+    capacity,
+    charge,
     inputAttempt,
     inputting,
     inputLevel,
@@ -25,13 +24,13 @@ export const PowerSmes = (props, context) => {
     outputUsed,
   } = data;
   const inputState = (
-    storedCapacity >= 100 && 'good'
+    capacityPercent >= 100 && 'good'
     || inputting && 'average'
     || 'bad'
   );
   const outputState = (
     outputting && 'good'
-    || storedCapacity > 0 && 'average'
+    || charge > 0 && 'average'
     || 'bad'
   );
   return (
@@ -41,7 +40,7 @@ export const PowerSmes = (props, context) => {
       <Window.Content>
         <Section title="Stored Energy">
           <ProgressBar
-            value={storedCapacity * 0.01}
+            value={capacityPercent * 0.01}
             ranges={{
               good: [0.5, Infinity],
               average: [0.15, 0.5],
@@ -56,12 +55,12 @@ export const PowerSmes = (props, context) => {
                 <Button
                   icon={inputAttempt ? 'sync-alt' : 'times'}
                   selected={inputAttempt}
-                  onClick={() => act('try_input')}>
+                  onClick={() => act('tryinput')}>
                   {inputAttempt ? 'Auto' : 'Off'}
                 </Button>
               }>
               <Box color={inputState}>
-                {storedCapacity >= 100 && 'Fully Charged'
+                {capacityPercent >= 100 && 'Fully Charged'
                   || inputting && 'Charging'
                   || 'Not Charging'}
               </Box>
@@ -84,15 +83,15 @@ export const PowerSmes = (props, context) => {
                 </Flex.Item>
                 <Flex.Item grow={1} mx={1}>
                   <Slider
-                    value={inputLevel}
-                    fillValue={inputAvailable}
+                    value={inputLevel / POWER_MUL}
+                    fillValue={inputAvailable / POWER_MUL}
                     minValue={0}
-                    maxValue={inputLevelMax}
-                    step={5000}
+                    maxValue={inputLevelMax / POWER_MUL}
+                    step={5}
                     stepPixelSize={4}
-                    format={value => formatPower(value, 0)}
+                    format={value => formatPower(value * POWER_MUL, 1)}
                     onDrag={(e, value) => act('input', {
-                      target: value,
+                      target: value * POWER_MUL,
                     })} />
                 </Flex.Item>
                 <Flex.Item>
@@ -112,9 +111,7 @@ export const PowerSmes = (props, context) => {
               </Flex>
             </LabeledList.Item>
             <LabeledList.Item label="Available">
-              <AnimatedNumber
-                value={inputAvailable}
-                format={value => formatPower(value)} />
+              {formatPower(inputAvailable)}
             </LabeledList.Item>
           </LabeledList>
         </Section>
@@ -126,14 +123,14 @@ export const PowerSmes = (props, context) => {
                 <Button
                   icon={outputAttempt ? 'power-off' : 'times'}
                   selected={outputAttempt}
-                  onClick={() => act('try_output')}>
+                  onClick={() => act('tryoutput')}>
                   {outputAttempt ? 'On' : 'Off'}
                 </Button>
               }>
               <Box color={outputState}>
                 {outputting
                   ? 'Sending'
-                  : storedCapacity > 0
+                  : charge > 0
                     ? 'Not Sending'
                     : 'No Charge'}
               </Box>
@@ -156,14 +153,14 @@ export const PowerSmes = (props, context) => {
                 </Flex.Item>
                 <Flex.Item grow={1} mx={1}>
                   <Slider
-                    value={outputLevel}
+                    value={outputLevel / POWER_MUL}
                     minValue={0}
-                    maxValue={outputLevelMax}
-                    step={5000}
+                    maxValue={outputLevelMax / POWER_MUL}
+                    step={5}
                     stepPixelSize={4}
-                    format={value => formatPower(value, 0)}
+                    format={value => formatPower(value * POWER_MUL, 1)}
                     onDrag={(e, value) => act('output', {
-                      target: value,
+                      target: value * POWER_MUL,
                     })} />
                 </Flex.Item>
                 <Flex.Item>
@@ -183,9 +180,7 @@ export const PowerSmes = (props, context) => {
               </Flex>
             </LabeledList.Item>
             <LabeledList.Item label="Outputting">
-              <AnimatedNumber
-                value={outputUsed}
-                format={value => formatPower(value)} />
+              {formatPower(outputUsed)}
             </LabeledList.Item>
           </LabeledList>
         </Section>
