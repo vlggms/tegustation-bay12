@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "tgui/*": ["./packages/tgui/*"],
+      "common/*": ["./packages/common/*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "**/node_modules"
+  ]
+}
