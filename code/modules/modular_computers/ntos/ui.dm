@@ -54,7 +54,7 @@
 		return UI_CLOSE
 	//There is no bypassing the update, mwhahaha
 	if(updating)
-		. = min(STATUS_UPDATE, .)
+		. = min(UI_UPDATE, .)
 
 /datum/extension/interactive/ntos/CanUseTopic(mob/user, state)
 	. = holder.CanUseTopic(user, state)
