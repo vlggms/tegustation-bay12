@@ -135,15 +135,15 @@ var/const/NEGATIVE_INFINITY = -1#INF // win: -1.#INF, lin: -inf
 
 #define RANDOM_BLOOD_TYPE pick(4;"O-", 36;"O+", 3;"A-", 28;"A+", 1;"B-", 20;"B+", 1;"AB-", 5;"AB+")
 
-#define CanInteract(user, state) (CanUseTopic(user, state) == STATUS_INTERACTIVE)
+#define CanInteract(user, state) (CanUseTopic(user, state) == UI_INTERACTIVE)
 
-#define CanDefaultInteract(user) (CanUseTopic(user, DefaultTopicState()) == STATUS_INTERACTIVE)
+#define CanDefaultInteract(user) (CanUseTopic(user, DefaultTopicState()) == UI_INTERACTIVE)
 
-#define CanInteractWith(user, target, state) (target.CanUseTopic(user, state) == STATUS_INTERACTIVE)
+#define CanInteractWith(user, target, state) (target.CanUseTopic(user, state) == UI_INTERACTIVE)
 
-#define CanPhysicallyInteract(user) (CanUseTopicPhysical(user) == STATUS_INTERACTIVE)
+#define CanPhysicallyInteract(user) (CanUseTopicPhysical(user) == UI_INTERACTIVE)
 
-#define CanPhysicallyInteractWith(user, target) (target.CanUseTopicPhysical(user) == STATUS_INTERACTIVE)
+#define CanPhysicallyInteractWith(user, target) (target.CanUseTopicPhysical(user) == UI_INTERACTIVE)
 
 #define QDEL_NULL_LIST(x) if(x) { for(var/y in x) { qdel(y) }}; if(x) {x.Cut(); x = null; } // Second x check to handle items that LAZYREMOVE on qdel.
 

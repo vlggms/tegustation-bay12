@@ -216,11 +216,8 @@
 			message_queue = list()
 		message_queue += list(message)
 		return
-	send_output(
-		client,
-		message,
-		is_browser ? "[id]:update" : "[id].browser:update"
-	)
+	var/target = is_browser ? "[id]:update" : "[id].browser:update"
+	send_output(client, message, target)
 
 /**
  * public
@@ -239,11 +236,8 @@
 			message_queue = list()
 		message_queue += list(message)
 		return
-	send_output(
-		client,
-		message,
-		is_browser ? "[id]:update" : "[id].browser:update"
-	)
+	var/target = is_browser ? "[id]:update" : "[id].browser:update"
+	send_output(client, message, target)
 
 /**
  * public
@@ -272,12 +266,9 @@
 /datum/tgui_window/proc/flush_message_queue()
 	if(!client || !message_queue)
 		return
+	var/target = is_browser ? "[id]:update" : "[id].browser:update"
 	for(var/message in message_queue)
-		send_output(
-			client,
-			message,
-			is_browser ? "[id]:update" : "[id].browser:update"
-		)
+		send_output(client, message, target)
 	message_queue = null
 
 /**
