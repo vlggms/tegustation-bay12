@@ -163,6 +163,8 @@
 		if(SS_SLEEPING)
 			state = SS_PAUSING
 
+/// Called after the config has been loaded or reloaded.
+/datum/controller/subsystem/proc/OnConfigLoad()
 
 // Wrapper so things continue to work even in the case of a SS that doesn't call parent.
 /datum/controller/subsystem/proc/DoInitialize(timeofday)

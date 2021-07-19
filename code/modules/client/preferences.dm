@@ -29,6 +29,10 @@ datum/preferences
 	//game-preferences
 	var/lastchangelog = ""				//Saved changlog filesize to detect if there was a change
 
+	//tgui preferences
+	var/tgui_fancy = TRUE
+	var/tgui_lock = FALSE
+
 	// Mob preview
 	var/icon/preview_icon = null
 

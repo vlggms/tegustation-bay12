@@ -308,3 +308,17 @@ var/list/_client_preferences_by_type
 	options = list(GLOB.PREF_SHOW, GLOB.PREF_HIDE)
 	default_value = GLOB.PREF_HIDE
 	flags = R_ADMIN|R_DEBUG
+
+/*******************
+* tgUI Preferences *
+*******************/
+
+/datum/client_preference/tgui_style
+	description ="tgui Style"
+	key = "TGUI_FANCY"
+	options = list(GLOB.PREF_FANCY, GLOB.PREF_PLAIN)
+
+/datum/client_preference/tgui_monitor
+	description ="tgui Monitor"
+	key = "TGUI_MONITOR"
+	options = list(GLOB.PREF_PRIMARY, GLOB.PREF_ALL)

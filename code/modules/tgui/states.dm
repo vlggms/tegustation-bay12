@@ -80,7 +80,7 @@
 
 /mob/living/silicon/ai/shared_ui_interaction(src_object)
 	// Disable UIs if the AI is unpowered.
-	if(lacks_power())
+	if(!has_power())
 		return UI_DISABLED
 	return ..()
 

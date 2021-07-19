@@ -21,6 +21,8 @@ var/list/gamemode_cache = list()
 	var/log_hrefs = 0					// logs all links clicked in-game. Could be used for debugging and tracking down exploits
 	var/log_runtime = 0					// logs world.log to a file
 	var/log_world_output = 0			// log world.log to game log
+	var/log_asset = 0					// log log_asset to game log
+	var/log_tgui = 0					// log log_tgui to game log
 	var/enable_memos = 1				// enables memos
 	var/allow_admin_ooccolor = 0		// Allows admins with relevant permissions to have their own ooc colour
 	var/allow_vote_restart = 0 			// allow votes to restart
@@ -219,6 +221,11 @@ var/list/gamemode_cache = list()
 	var/motd = ""
 	var/event = ""
 
+	var/asset_simple_preload = 0
+	var/asset_cdn_webroot = null
+	var/asset_cdn_url = null
+	var/asset_transport = null
+
 /datum/configuration/New()
 	var/list/L = typesof(/datum/game_mode) - /datum/game_mode
 	for (var/T in L)
@@ -263,6 +270,18 @@ var/list/gamemode_cache = list()
 
 		if(type == "config")
 			switch (name)
+				if ("asset_simple_preload")
+					config.asset_simple_preload = 1
+
+				if ("asset_cdn_webroot")
+					config.asset_cdn_webroot = value
+
+				if ("asset_cdn_url")
+					config.asset_cdn_url = value
+
+				if ("asset_transport")
+					config.asset_transport = value
+
 				if ("resource_urls")
 					config.resource_urls = splittext(value, " ")
 
@@ -334,6 +353,12 @@ var/list/gamemode_cache = list()
 
 				if ("log_runtime")
 					config.log_runtime = 1
+
+				if ("log_asset")
+					config.log_asset = 1
+
+				if ("log_tgui")
+					config.log_tgui = 1
 
 				if ("enable_memos")
 					config.enable_memos = 1

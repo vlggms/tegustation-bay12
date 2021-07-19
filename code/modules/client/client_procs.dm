@@ -188,6 +188,10 @@
 		to_chat(src, "<span class='alert'>[config.event]</span>")
 		to_chat(src, "<br>")
 
+	connection_time = world.time
+	connection_realtime = world.realtime
+	connection_timeofday = world.timeofday
+
 	if(holder)
 		add_admin_verbs()
 		admin_memo_show()
@@ -355,36 +359,15 @@
 
 	. = ..()
 
-//Sends resource files to client cache
-/client/proc/getFiles()
-	for(var/file in args)
-		send_rsc(src, file, null)
-
-//send resources to the client. It's here in its own proc so we can move it around easiliy if need be
+/// Send resources to the client.
+/// Sends both game resources and browser assets.
 /client/proc/send_resources()
-	getFiles(
-		'html/search.js',
-		'html/panels.css',
-		'html/spacemag.css',
-		'html/images/loading.gif',
-		'html/images/ntlogo.png',
-		'html/images/bluentlogo.png',
-		'html/images/sollogo.png',
-		'html/images/terralogo.png',
-		'html/images/talisman.png',
-		'html/images/exologo.png',
-		'html/images/xynlogo.png',
-		'html/images/daislogo.png',
-		'html/images/eclogo.png',
-		'html/images/fleetlogo.png',
-		'html/images/sfplogo.png'
-		)
-	addtimer(CALLBACK(src, .proc/after_send_resources), 1 SECOND)
-
-
-/client/proc/after_send_resources()
-	var/decl/asset_cache/asset_cache = decls_repository.get_decl(/decl/asset_cache)
-	getFilesSlow(src, asset_cache.cache, register_asset = FALSE)
+	spawn (10) //removing this spawn causes all clients to not get verbs.
+		//load info on what assets the client has
+		show_browser(src, 'code/modules/asset_cache/validate_assets.html', "window=asset_cache_browser")
+		//Precache the client with all other assets slowly, so as to not block other browse() calls
+		if (config.asset_simple_preload)
+			addtimer(CALLBACK(SSassets.transport, /datum/asset_transport.proc/send_assets_slow, src, SSassets.transport.preload), 5 SECONDS)
 
 
 mob/proc/MayRespawn()

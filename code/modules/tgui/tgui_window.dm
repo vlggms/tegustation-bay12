@@ -311,7 +311,7 @@
 		if("close")
 			close(can_be_suspended = FALSE)
 		if("openLink")
-			open_link(client, href_list["url"])
+			send_link(client, href_list["url"])
 		if("cacheReloaded")
 			// Reinitialize
 			initialize(inline_assets = inline_assets, fancy = fancy)
