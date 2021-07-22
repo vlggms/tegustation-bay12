@@ -75,6 +75,9 @@
 /obj/structure/largecrate/animal/cat/bones
 	held_type = /mob/living/simple_animal/friendly/cat/fluff/bones
 
+/obj/structure/largecrate/animal/snek
+	held_type = /mob/living/simple_animal/friendly/snek
+
 /obj/structure/largecrate/animal/chick
 	name = "chicken crate"
 	held_count = 5
