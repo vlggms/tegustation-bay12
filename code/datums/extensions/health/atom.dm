@@ -99,7 +99,7 @@
 	var/max_health = get_max_health()
 	if (max_health == 0)
 		return 1.00
-	return round(get_damage_value(damage_type) / max_health, 0.01)
+	return round(get_current_health() / max_health, 0.01)
 
 /**
  * Checks if the atom's health can be restored.
@@ -271,25 +271,26 @@
 		if (0.33 to 0.65)
 			to_chat(user, SPAN_WARNING("It looks moderately damaged."))
 		else
-			to_chat(user, SPAN_DANGER("It looks severely damaged."))
+			to_chat(user, SPAN_DANGER("It looks severely damaged!"))
 
 /mob/examine_damage_state(mob/user)
 	if (!has_health())
 		return
+	var/datum/gender/G = gender_datums[gender]
 	if (!is_alive())
-		to_chat(user, SPAN_DANGER("They look severely hurt and is not moving or responding to anything around them."))
+		to_chat(user, SPAN_DANGER("[G.He] [G.is] severely hurt, and [G.is] not moving or responding to anything around [G.him]."))
 		return
 
 	var/health_percentage = get_damage_percentage()
 	switch (health_percentage)
 		if (1)
-			to_chat(user, SPAN_NOTICE("They appear unhurt."))
+			to_chat(user, SPAN_NOTICE("[G.He] [G.is] unhurt."))
 		if (0.66 to 0.99)
-			to_chat(user, SPAN_WARNING("They look slightly hurt."))
+			to_chat(user, SPAN_WARNING("[G.He] [G.is] slightly hurt."))
 		if (0.33 to 0.65)
-			to_chat(user, SPAN_WARNING("They look moderately hurt."))
+			to_chat(user, SPAN_WARNING("[G.He] [G.is] moderately hurt."))
 		else
-			to_chat(user, SPAN_DANGER("They look severely hurt."))
+			to_chat(user, SPAN_DANGER("[G.He] [G.is] severely hurt!"))
 
 /atom/examine(mob/user, distance, infix, suffix)
 	. = ..()
