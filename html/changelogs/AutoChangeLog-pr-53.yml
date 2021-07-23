@@ -1,0 +1,20 @@
+author: Ilysen
+delete-after: true
+changes:
+  - rscadd: Revamped the way changeling abilities are shown. Instead of existing in
+      a verb tab, they now have buttons like spells. Actual functionality should remain
+      (mostly) unchanged.
+  - tweak: Changeling stasis will now send a message and sound to the user if they're
+      dead and have ghosted, allowing them to know when to return to their body.
+  - tweak: Rewrote the messages for a bunch of changeling abilities.
+  - tweak: Improved the user feedback for some changeling abilities.
+  - tweak: Changeling stasis and other fake death sources are now more convincing.
+      Examine texts, medical scanners, medical HUDs, and other sources are now fooled
+      by fake death, and fake-dead mobs will no longer gasp or make other emotes.
+  - balance: You will now receive a message if you fail to speak while silenced, instead
+      of it failing with no feedback.
+  - balance: Monkeyizing is a little faster.
+  - balance: Medical HUDs will now detect changelings in stasis as being dead, rather
+      than alive.
+  - balance: Because the AI role doesn't currently exist, Digital Camouflage has been
+      made free to purchase and maintain, as it is primary a roleplay ability now.
