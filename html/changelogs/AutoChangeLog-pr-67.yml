@@ -1,7 +1,0 @@
-author: ''
-delete-after: true
-changes:
-  - tweak: diona now have mask , left ear, eye slots
-  - tweak: diona can now wear hard hats
-  - rscadd: diona cant wear hud glasses but can wear eyepatch huds
-  - rscadd: you cannot blindfold a diona
