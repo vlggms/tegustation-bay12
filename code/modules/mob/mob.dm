@@ -584,11 +584,11 @@
 			else if(H.has_organ(BP_L_ARM) || H.has_organ(BP_R_ARM)) //If they only have one arm
 				grabtype = "arm"
 			else //If they have no arms
-				grabtype = "torso"	
+				grabtype = "torso"
 
 			visible_message(SPAN_WARNING("\The [src] leans down and grips \the [H]'s [grabtype]."), SPAN_NOTICE("You lean down and grip \the [H]'s [grabtype]."), exclude_mobs = list(H))
 			if(!H.stat)
-				to_chat(H, SPAN_WARNING("\The [src] leans down and grips your [grabtype]."))	
+				to_chat(H, SPAN_WARNING("\The [src] leans down and grips your [grabtype]."))
 
 		else //Otherwise we're probably just holding their arm to lead them somewhere
 			var/grabtype
@@ -1024,6 +1024,50 @@
 /mob/verb/westfaceperm()
 	set hidden = 1
 	set_face_dir(client.client_dir(WEST))
+
+#define SHIFT_MAX 8
+
+/mob/proc/can_shift()
+	return !(incapacitated() || buckled || grabbed_by.len)
+
+/mob/proc/shift(dir)
+	if(!canface() || !can_shift())
+		return FALSE
+	switch(dir)
+		if (NORTH)
+			if(pixel_y <= SHIFT_MAX)
+				pixel_y++
+		if (EAST)
+			if(pixel_x <= SHIFT_MAX)
+				pixel_x++
+		if (SOUTH)
+			if(pixel_y >= -SHIFT_MAX)
+				pixel_y--
+		if (WEST)
+			if(pixel_x >= -SHIFT_MAX)
+				pixel_x--
+		else
+			CRASH("Invalid argument supplied!")
+	is_shifted = TRUE
+	UPDATE_OO_IF_PRESENT
+
+/mob/verb/shiftnorth()
+	set hidden = TRUE
+	shift(NORTH)
+
+/mob/verb/shiftsouth()
+	set hidden = TRUE
+	shift(SOUTH)
+
+/mob/verb/shiftwest()
+	set hidden = TRUE
+	shift(WEST)
+
+/mob/verb/shifteast()
+	set hidden = TRUE
+	shift(EAST)
+
+#undef SHIFT_MAX
 
 /mob/proc/adjustEarDamage()
 	return
