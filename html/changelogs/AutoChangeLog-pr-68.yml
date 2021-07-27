@@ -1,0 +1,5 @@
+author: Sky
+delete-after: true
+changes:
+  - rscadd: snakes are able to spawn via vermin infestation
+  - rscadd: snakes can be bought via cargo
