@@ -48,13 +48,20 @@
 	cost = 50
 	containertype = /obj/structure/largecrate/animal/corgi
 	containername = "corgi crate"
-	
+
 /decl/hierarchy/supply_pack/livecargo/cat
 	name = "Live - Cat"
 	contains = list()
 	cost = 50
 	containertype = /obj/structure/largecrate/animal/cat
 	containername = "cat crate"
+
+/decl/hierarchy/supply_pack/livecargo/snek
+	name = "Live - Snake"
+	contains = list()
+	cost = 25
+	containertype = /obj/structure/largecrate/animal/snek
+	containername = "snake crate"
 
 //farm animals - useless and annoying, but potentially a good source of food. expensive because they're live animals and their produce is available cheaper
 /decl/hierarchy/supply_pack/livecargo/cow
@@ -70,7 +77,7 @@
 	containertype = /obj/structure/largecrate/animal/goat
 	containername = "goat crate"
 	access = access_hydroponics
-	
+
 /decl/hierarchy/supply_pack/livecargo/sheep
 	name = "Live - Sheep"
 	cost = 60
