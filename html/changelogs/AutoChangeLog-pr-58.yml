@@ -1,0 +1,5 @@
+author: Shadowtail117
+delete-after: true
+changes:
+  - rscadd: You can now shift your location on a tile up to 8 pixels in any direction
+      using control + shift + an arrow key.
