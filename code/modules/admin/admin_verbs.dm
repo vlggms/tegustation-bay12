@@ -299,14 +299,14 @@ var/list/admin_verbs_mod = list(
 )
 var/list/admin_verbs_mentors = list(
 	/client/proc/cmd_mentor_say,
-	/client/verb/mentorpm_mob,
-	/client/verb/mentorpm_panel,
+	/client/proc/mentorpm_mob,
+	/client/proc/mentorpm_panel,
 	/client/proc/mentor_memo,
 )
 
 /client/proc/add_admin_verbs()
 	if(holder)
-		if(holder.rights != R_MENTOR) //If we ONLY have mentor rights then we don't deserve the default perms
+		if(holder.rights && holder.rights != R_MENTOR) //If we ONLY have mentor rights then we don't deserve the default perms
 			verbs += admin_verbs_default
 		if(holder.rights & R_BUILDMODE)		verbs += /client/proc/togglebuildmodeself
 		if(holder.rights & R_ADMIN)			verbs += admin_verbs_admin
@@ -341,6 +341,7 @@ var/list/admin_verbs_mentors = list(
 		admin_verbs_rejuv,
 		admin_verbs_sounds,
 		admin_verbs_spawn,
+		admin_verbs_mentors,
 		debug_verbs
 		)
 
