@@ -1,4 +1,4 @@
-/client/verb/mentorhelp(msg as text)
+/client/proc/mentorhelp(msg as text)
 	set name = "Mentorhelp"
 	set desc = "Request an in-game mentor to help you with one of the game's mechanics."
 	set category = "Staffhelp"
@@ -47,9 +47,9 @@
 	return "<a href='?mentorreply=[ckey]'>[ckey][!C ? "(DC)" : ""]</a>"
 
 /proc/is_mentor(client/C)
-	return check_rights(R_MENTOR, "", C)
+	return check_rights(R_MENTOR, 1, C)
 
-/client/verb/mentorpm_mob(mob/M as mob in SSmobs.mob_list)
+/client/proc/mentorpm_mob(mob/M as mob in SSmobs.mob_list)
 	set name = "Mentor PM Mob"
 	set category = null
 
@@ -60,7 +60,7 @@
 		return
 	mentorpm(M)
 
-/client/verb/mentorpm_panel()
+/client/proc/mentorpm_panel()
 	set name = "Mentor PM"
 	set category = "Staffhelp"
 
