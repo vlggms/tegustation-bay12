@@ -1,5 +1,0 @@
-author: Shadowtail117
-delete-after: true
-changes:
-  - bugfix: Regular players can no longer see a ghost Mentor PM verb that doesn't
-      do anything.
