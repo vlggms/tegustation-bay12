@@ -201,6 +201,8 @@
 			return global.admin_verbs_fun;
 		if("admin_verbs_hideable")
 			return global.admin_verbs_hideable;
+		if("admin_verbs_mentors")
+			return global.admin_verbs_mentors;
 		if("admin_verbs_mod")
 			return global.admin_verbs_mod;
 		if("admin_verbs_paranoid_debug")
@@ -465,8 +467,6 @@
 			return global.gzn_check;
 		if("hadevent")
 			return global.hadevent;
-		if("hivemind_bank")
-			return global.hivemind_bank;
 		if("holder_mob_icon_cache")
 			return global.holder_mob_icon_cache;
 		if("human_icon_cache")
@@ -645,14 +645,8 @@
 			return global.plant_seed_sprites;
 		if("playable_species")
 			return global.playable_species;
-		if("possible_changeling_IDs")
-			return global.possible_changeling_IDs;
 		if("power_alarm")
 			return global.power_alarm;
-		if("powerinstances")
-			return global.powerinstances;
-		if("powers")
-			return global.powers;
 		if("priority_air_alarms")
 			return global.priority_air_alarms;
 		if("priority_announcement")
@@ -1082,6 +1076,8 @@
 			global.admin_verbs_fun=newval;
 		if("admin_verbs_hideable")
 			global.admin_verbs_hideable=newval;
+		if("admin_verbs_mentors")
+			global.admin_verbs_mentors=newval;
 		if("admin_verbs_mod")
 			global.admin_verbs_mod=newval;
 		if("admin_verbs_paranoid_debug")
@@ -1346,8 +1342,6 @@
 			global.gzn_check=newval;
 		if("hadevent")
 			global.hadevent=newval;
-		if("hivemind_bank")
-			global.hivemind_bank=newval;
 		if("holder_mob_icon_cache")
 			global.holder_mob_icon_cache=newval;
 		if("human_icon_cache")
@@ -1526,14 +1520,8 @@
 			global.plant_seed_sprites=newval;
 		if("playable_species")
 			global.playable_species=newval;
-		if("possible_changeling_IDs")
-			global.possible_changeling_IDs=newval;
 		if("power_alarm")
 			global.power_alarm=newval;
-		if("powerinstances")
-			global.powerinstances=newval;
-		if("powers")
-			global.powers=newval;
 		if("priority_air_alarms")
 			global.priority_air_alarms=newval;
 		if("priority_announcement")
@@ -1862,6 +1850,7 @@
 	"admin_verbs_default",
 	"admin_verbs_fun",
 	"admin_verbs_hideable",
+	"admin_verbs_mentors",
 	"admin_verbs_mod",
 	"admin_verbs_paranoid_debug",
 	"admin_verbs_permissions",
@@ -1994,7 +1983,6 @@
 	"global_vars_",
 	"gzn_check",
 	"hadevent",
-	"hivemind_bank",
 	"holder_mob_icon_cache",
 	"human_icon_cache",
 	"id_card_states",
@@ -2084,10 +2072,7 @@
 	"pipe_colors",
 	"plant_seed_sprites",
 	"playable_species",
-	"possible_changeling_IDs",
 	"power_alarm",
-	"powerinstances",
-	"powers",
 	"priority_air_alarms",
 	"priority_announcement",
 	"priv_all_access",

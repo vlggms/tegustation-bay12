@@ -10,6 +10,7 @@
 	darkness_view = -1
 	toggleable = TRUE
 	activation_sound = null
+	species_restricted = list("exclude", SPECIES_DIONA)
 
 /obj/item/clothing/glasses/blindfold/Initialize()
 	. = ..()
@@ -23,7 +24,7 @@
 	if(active)
 		flags_inv &= ~HIDEEYES
 		body_parts_covered &= ~EYES
-	else 
+	else
 		flags_inv |= HIDEEYES
 		body_parts_covered |= EYES
 

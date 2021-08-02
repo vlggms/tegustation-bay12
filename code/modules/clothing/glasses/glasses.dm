@@ -120,6 +120,7 @@
 	vision_flags = SEE_TURFS
 	see_invisible = SEE_INVISIBLE_NOLIGHTING
 	electric = TRUE
+	species_restricted = list("exclude", SPECIES_DIONA)
 
 /obj/item/clothing/glasses/meson/Initialize()
 	. = ..()
@@ -161,6 +162,7 @@
 	see_invisible = SEE_INVISIBLE_NOLIGHTING
 	off_state = "denight"
 	electric = TRUE
+	species_restricted = list("exclude", SPECIES_DIONA)
 
 /obj/item/clothing/glasses/night/Initialize()
 	. = ..()
@@ -177,6 +179,7 @@
 	see_invisible = SEE_INVISIBLE_NOLIGHTING
 	siemens_coefficient = 0.6
 	electric = TRUE
+	species_restricted = list("exclude", SPECIES_DIONA)
 
 /obj/item/clothing/glasses/monocle
 	name = "monocle"

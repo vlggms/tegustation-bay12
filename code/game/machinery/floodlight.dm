@@ -37,11 +37,11 @@
 	if (!. || !use_power)
 		return
 	if (stat & NOPOWER)
-		turn_off(TRUE)
+		turn_off()
 		return
 
 /// Turns on the floodlight, returning TRUE on a success or FALSE otherwise. If loud is defined, it will show a message and play a sound.
-/obj/machinery/floodlight/proc/turn_on(loud)
+/obj/machinery/floodlight/proc/turn_on(loud = TRUE)
 	if (!operable())
 		return
 	set_light(lamp_brightness, lamp_inner_range, lamp_outer_range)
@@ -54,7 +54,7 @@
 	return TRUE
 
 /// Turns off the floodlight. Doesn't return anything. If loud is defined, it will show a message and play a sound.
-/obj/machinery/floodlight/proc/turn_off(loud)
+/obj/machinery/floodlight/proc/turn_off(loud = TRUE)
 	set_light(0, 0)
 	update_use_power(POWER_USE_OFF)
 	update_icon()
@@ -66,9 +66,9 @@
 	if (!CanInteract(user, DefaultTopicState()))
 		return FALSE
 	if (use_power)
-		turn_off(TRUE)
+		turn_off()
 	else
-		if (!turn_on(TRUE))
+		if (!turn_on())
 			to_chat(user, SPAN_WARNING("You try to turn on \the [src], but nothing happens."))
 			playsound(loc, 'sound/effects/flashlight.ogg', 50)
 

@@ -3129,8 +3129,7 @@
 /turf/simulated/floor/tiled,
 /area/casino/casino_kitchen)
 "iG" = (
-/obj/structure/table/marble,
-/obj/item/trash/plate,
+/obj/machinery/stove,
 /turf/simulated/floor/tiled,
 /area/casino/casino_kitchen)
 "iH" = (
