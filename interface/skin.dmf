@@ -229,7 +229,7 @@ macro "borghotkeymode"
 		command = "Admin-PM"
 	elem
 		name = "F8"
-		command = "Invisimin"
+		command = "Asay"
 	elem
 		name = "F12"
 		command = "F12"
@@ -426,7 +426,7 @@ macro "macro"
 		command = "Admin-PM"
 	elem
 		name = "F8"
-		command = "Invisimin"
+		command = "Asay"
 	elem
 		name = "F12"
 		command = "F12"
@@ -674,7 +674,7 @@ macro "hotkeymode"
 		command = "Admin-PM"
 	elem
 		name = "F8"
-		command = "Invisimin"
+		command = "Asay"
 	elem
 		name = "F12"
 		command = "F12"
@@ -871,7 +871,7 @@ macro "borgmacro"
 		command = "Admin-PM"
 	elem
 		name = "F8"
-		command = "Invisimin"
+		command = "Asay"
 	elem
 		name = "F12"
 		command = "F12"
