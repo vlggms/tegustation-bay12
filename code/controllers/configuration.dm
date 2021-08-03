@@ -133,6 +133,7 @@ var/list/gamemode_cache = list()
 
 	var/admin_legacy_system = 0	//Defines whether the server uses the legacy admin system with admins.txt or the SQL system. Config option in config.txt
 	var/ban_legacy_system = 0	//Defines whether the server uses the legacy banning system with the files in /data or the SQL system. Config option in config.txt
+	var/use_job_whitelists = 0 //Do jobs use a whitelist? Config option in config.txt
 	var/use_age_restriction_for_jobs = 0   //Do jobs use account age restrictions?   --requires database
 	var/use_age_restriction_for_antags = 0 //Do antags use account age restrictions? --requires database
 
@@ -271,6 +272,9 @@ var/list/gamemode_cache = list()
 
 				if ("ban_legacy_system")
 					config.ban_legacy_system = 1
+
+				if ("use_job_whitelists")
+					config.use_job_whitelists = 1
 
 				if ("use_age_restriction_for_jobs")
 					config.use_age_restriction_for_jobs = 1

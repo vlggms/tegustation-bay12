@@ -54,6 +54,7 @@
 	var/give_psionic_implant_on_join = TRUE // If psionic, will be implanted for control.
 
 	var/use_species_whitelist // If set, restricts the job to players with the given species whitelist. This does NOT restrict characters joining as the job to the species itself.
+	var/require_whitelist // If set to a string, requires a separate whitelist entry to use the job equal to the given string. Note: If not-null the check happens, so please don't set unless you want the whitelist.
 
 	var/required_language
 
@@ -175,6 +176,14 @@
 	if(C && config.use_age_restriction_for_jobs && isnull(C.holder) && isnum(C.player_age) && isnum(minimal_player_age))
 		return max(0, minimal_player_age - C.player_age)
 	return 0
+
+/datum/job/proc/is_job_whitelisted(client/C)
+	if (C && config.use_job_whitelists && require_whitelist)
+		if (whitelist_lookup(require_whitelist, C.ckey) || !isnull(C.holder))
+			return FALSE
+		return TRUE
+	else
+		return FALSE
 
 /datum/job/proc/apply_fingerprints(var/mob/living/carbon/human/target)
 	if(!istype(target))
