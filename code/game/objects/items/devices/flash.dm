@@ -80,8 +80,8 @@
 				if(flash_strength > 0)
 					M.flash_eyes(FLASH_PROTECTION_MODERATE - safety)
 					M.Stun(flash_strength / 2)
-					M.eye_blurry += flash_strength
-					M.confused += (flash_strength + 2)
+					M.eye_blurry = max(M.eye_blurry, flash_strength)
+					M.confused = max(M.confused, (flash_strength + 2))
 					if(flash_strength > 3)
 						M.drop_l_hand()
 						M.drop_r_hand()
