@@ -1,0 +1,6 @@
+author: Ilysen
+delete-after: true
+changes:
+  - spellcheck: Emergency floodlights now have a description.
+  - spellcheck: Fixed some grammatical mistakes that appeared when examining power
+      cells.
