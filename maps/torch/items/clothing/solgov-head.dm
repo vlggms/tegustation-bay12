@@ -30,6 +30,18 @@
 	desc = "It's a black ballcap bearing the Expeditonary Corps crest. The brim has gold trim."
 	icon_state = "expeditioncomsoft"
 
+/obj/item/clothing/head/soft/solgov/fleet/hijab
+	name = "fleet hijab"
+	desc = "It's a veil which is wrapped to cover the head and chest.  This one is tighter fitting and has a Fleet insignia embroidered into it."
+	icon_state = "hijab_fleet"
+	flags_inv = HIDEEARS|BLOCKHEADHAIR
+
+/obj/item/clothing/head/soft/solgov/fleet/turban
+	name = "fleet turban"
+	desc = "It's a sturdy cloth, worn around the head.  This one is tighter fitting and has a Fleet insignia embroidered into it."
+	icon_state = "turban_fleet"
+	flags_inv = BLOCKHEADHAIR
+
 /obj/item/clothing/head/soft/solgov/fleet
 	name = "fleet cap"
 	desc = "It's a navy blue field cap with the SCG Fleet crest in a silver colour."
