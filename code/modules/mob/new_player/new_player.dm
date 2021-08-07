@@ -170,7 +170,19 @@
 
 		var/datum/species/S = all_species[client.prefs.species]
 		if(!check_species_allowed(S))
-			return 0
+			return FALSE
+
+		var/should_warn = TRUE
+		if(client.prefs.job_high == job.title)
+			should_warn = FALSE
+		else if(job.title in client.prefs.job_medium)
+			should_warn = FALSE
+		else if(job.title in client.prefs.job_low)
+			should_warn = FALSE
+
+		if(should_warn)
+			if(alert(client, "You don't have any preferences set for [job.title]. Are you sure you want to join as it?", "Confirm Job Selection", "Yes", "No") == "No")
+				return FALSE
 
 		AttemptLateSpawn(job, client.prefs.spawnpoint)
 		return
