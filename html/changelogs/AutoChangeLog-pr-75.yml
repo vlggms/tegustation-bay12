@@ -1,5 +1,0 @@
-author: Shadowtail117
-delete-after: true
-changes:
-  - rscadd: You will now be asked to confirm to join as a job for which you don't
-      have any preferences set.
