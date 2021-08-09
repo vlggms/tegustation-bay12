@@ -86,6 +86,19 @@
 		"belt" =         list("loc" = ui_belt,      "name" = "Belt",         "slot" = slot_belt,      "state" = "belt")
 		)
 
+/datum/hud_data/adherent
+	has_internals = FALSE
+	gear = list(
+		"i_clothing" =	list("loc" = ui_iclothing, "name" = "Uniform",      "slot" = slot_w_uniform, "state" = "center", "toggle" = TRUE),
+		"l_ear" =		list("loc" = ui_oclothing, "name" = "Aux Port",     "slot" = slot_l_ear,     "state" = "ears",   "toggle" = TRUE),
+		"head" =		list("loc" = ui_glasses,   "name" = "Hat",          "slot" = slot_head,      "state" = "hair",   "toggle" = TRUE),
+		"back" =		list("loc" = ui_back,      "name" = "Back",         "slot" = slot_back,      "state" = "back"),
+		"id" =			list("loc" = ui_id,        "name" = "ID",           "slot" = slot_wear_id,   "state" = "id"),
+		"storage1" =	list("loc" = ui_storage1,  "name" = "Left Pocket",  "slot" = slot_l_store,   "state" = "pocket"),
+		"storage2" =	list("loc" = ui_storage2,  "name" = "Right Pocket", "slot" = slot_r_store,   "state" = "pocket"),
+		"belt" =		list("loc" = ui_belt,      "name" = "Belt",         "slot" = slot_belt,      "state" = "belt")
+	)
+
 /datum/hud_data/monkey
 	gear = list(
 		"i_clothing" =   list("loc" = ui_iclothing, "name" = "Uniform",      "slot" = slot_w_uniform, "state" = "center", "toggle" = 1),

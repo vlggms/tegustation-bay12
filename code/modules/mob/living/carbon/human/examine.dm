@@ -55,10 +55,6 @@
 			species_name += "[species.name]"
 		msg += ", <b><font color='[species.get_flesh_colour(src)]'>\a [species_name]!</font></b>[(user.can_use_codex() && SScodex.get_codex_entry(get_codex_value())) ?  SPAN_NOTICE(" \[<a href='?src=\ref[SScodex];show_examined_info=\ref[src];show_to=\ref[user]'>?</a>\]") : ""]"
 
-	var/extra_species_text = species.get_additional_examine_text(src)
-	if(extra_species_text)
-		msg += "[extra_species_text]<br>"
-
 	msg += "<br>"
 
 	//uniform
@@ -192,6 +188,10 @@
 		msg += "[T.He] looks a lot younger than you remember.\n"
 	if(became_older)
 		msg += "[T.He] looks a lot older than you remember.\n"
+
+	var/extra_species_text = species.get_additional_examine_text(src)
+	if(extra_species_text)
+		msg += "[extra_species_text]\n"
 
 	var/list/wound_flavor_text = list()
 	var/applying_pressure = ""

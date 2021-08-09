@@ -14,6 +14,7 @@
 	var/overlay_state = null
 	var/list/accessory_icons = list(slot_w_uniform_str = 'icons/mob/onmob/onmob_accessories.dmi', slot_wear_suit_str = 'icons/mob/onmob/onmob_accessories.dmi')
 	sprite_sheets = list(
+		SPECIES_ADHERENT = 'icons/mob/species/adherent/onmob_accessories_adherent.dmi',
 		SPECIES_NABBER = 'icons/mob/species/nabber/onmob_accessories_gas.dmi',
 		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_accessories_unathi.dmi'
 		)
