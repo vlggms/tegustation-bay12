@@ -79,7 +79,7 @@
 		var/list/descriptors = list()
 		if(reagents.has_reagent(/datum/reagent/sugar) || reagents.has_reagent(/datum/reagent/nutriment/cherryjelly) || reagents.has_reagent(/datum/reagent/nutriment/honey) || reagents.has_reagent(/datum/reagent/drink/juice/berry))
 			descriptors |= "sweet"
-		if(reagents.has_reagent(/datum/reagent/dylovene))
+		if(reagents.has_reagent(/datum/reagent/medicine/dylovene))
 			descriptors |= "astringent"
 		if(reagents.has_reagent(/datum/reagent/frostoil))
 			descriptors |= "numbing"
@@ -97,7 +97,7 @@
 			descriptors |= "poisonous"
 		if(reagents.has_reagent(/datum/reagent/psilocybin) || reagents.has_reagent(/datum/reagent/space_drugs))
 			descriptors |= "hallucinogenic"
-		if(reagents.has_reagent(/datum/reagent/bicaridine))
+		if(reagents.has_reagent(/datum/reagent/medicine/bicaridine))
 			descriptors |= "medicinal"
 		if(reagents.has_reagent(/datum/reagent/gold))
 			descriptors |= "shiny"

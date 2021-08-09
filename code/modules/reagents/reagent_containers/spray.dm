@@ -109,7 +109,7 @@
 
 /obj/item/reagent_containers/spray/sterilizine/New()
 	..()
-	reagents.add_reagent(/datum/reagent/sterilizine, volume)
+	reagents.add_reagent(/datum/reagent/medicine/sterilizine, volume)
 
 /obj/item/reagent_containers/spray/hair_remover
 	name = "hair remover"

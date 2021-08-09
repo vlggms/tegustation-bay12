@@ -81,7 +81,7 @@
 	eat_sound = list('sound/items/eatfood.ogg', 'sound/items/drink.ogg')
 	food_reagents = list(
 		/datum/reagent/water = 5,
-		/datum/reagent/tricordrazine = 5
+		/datum/reagent/medicine/tricordrazine = 5
 	)
 
 /obj/item/reagent_containers/food/snacks/mysterysoup
@@ -110,7 +110,7 @@
 		if(3)
 			reagents.add_reagent(/datum/reagent/nutriment, 5)
 			reagents.add_reagent(/datum/reagent/water, 5)
-			reagents.add_reagent(/datum/reagent/tricordrazine, 5)
+			reagents.add_reagent(/datum/reagent/medicine/tricordrazine, 5)
 		if(4)
 			reagents.add_reagent(/datum/reagent/nutriment, 5)
 			reagents.add_reagent(/datum/reagent/water, 10)
@@ -132,7 +132,7 @@
 		if(10)
 			reagents.add_reagent(/datum/reagent/nutriment, 6)
 			reagents.add_reagent(/datum/reagent/drink/juice/tomato, 5)
-			reagents.add_reagent(/datum/reagent/imidazoline, 5)
+			reagents.add_reagent(/datum/reagent/medicine/imidazoline, 5)
 
 /obj/item/reagent_containers/food/snacks/wishsoup
 	name = "wish soup"
@@ -208,7 +208,7 @@
 	food_reagents = list(
 		/datum/reagent/nutriment/protein = 4,
 		/datum/reagent/drink/juice/tomato = 5,
-		/datum/reagent/imidazoline = 5,
+		/datum/reagent/medicine/imidazoline = 5,
 		/datum/reagent/water = 5
 	)
 

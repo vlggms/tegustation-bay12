@@ -12,7 +12,7 @@
 	bitesize = 3
 	food_reagents = list(
 		/datum/reagent/drink/doctor_delight = 8,
-		/datum/reagent/tricordrazine = 8
+		/datum/reagent/medicine/tricordrazine = 8
 	)
 
 

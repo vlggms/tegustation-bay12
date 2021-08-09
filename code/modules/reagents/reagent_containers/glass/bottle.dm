@@ -68,7 +68,7 @@
 
 /obj/item/reagent_containers/glass/bottle/inaprovaline/New()
 	..()
-	reagents.add_reagent(/datum/reagent/inaprovaline, 60)
+	reagents.add_reagent(/datum/reagent/medicine/inaprovaline, 60)
 	update_icon()
 
 /obj/item/reagent_containers/glass/bottle/kelotane
@@ -79,7 +79,7 @@
 
 /obj/item/reagent_containers/glass/bottle/kelotane/New()
 	..()
-	reagents.add_reagent(/datum/reagent/kelotane, 60)
+	reagents.add_reagent(/datum/reagent/medicine/kelotane, 60)
 	update_icon()
 
 /obj/item/reagent_containers/glass/bottle/dexalin
@@ -90,7 +90,7 @@
 
 /obj/item/reagent_containers/glass/bottle/dexalin/New()
 	..()
-	reagents.add_reagent(/datum/reagent/dexalin, 60)
+	reagents.add_reagent(/datum/reagent/medicine/dexalin, 60)
 	update_icon()
 
 /obj/item/reagent_containers/glass/bottle/toxin
@@ -149,7 +149,7 @@
 
 /obj/item/reagent_containers/glass/bottle/antitoxin/New()
 	..()
-	reagents.add_reagent(/datum/reagent/dylovene, 60)
+	reagents.add_reagent(/datum/reagent/medicine/dylovene, 60)
 	update_icon()
 
 

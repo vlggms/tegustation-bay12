@@ -13,7 +13,7 @@
 	bitesize = 2
 	food_reagents = list(
 		/datum/reagent/nutriment/protein = 6,
-		/datum/reagent/alkysine = 6
+		/datum/reagent/medicine/alkysine = 6
 	)
 
 /obj/item/reagent_containers/food/snacks/ghostburger

@@ -476,7 +476,7 @@
 			)
 		banned_chems += subtypesof(/datum/reagent/ethanol)
 		banned_chems += subtypesof(/datum/reagent/zombie)
-		banned_chems += subtypesof(/datum/reagent/tobacco)
+		banned_chems += subtypesof(/datum/reagent/medicine/fluff/tobacco)
 		banned_chems += typesof(/datum/reagent/drink)
 		banned_chems += typesof(/datum/reagent/nutriment)
 		banned_chems += typesof(/datum/reagent/toxin/fertilizer)

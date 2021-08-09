@@ -338,7 +338,7 @@
 	name = "sin-pocket"
 	desc = "The food of choice for the veteran. Do <b>NOT</b> overconsume."
 	filling_color = "#6d6d00"
-	heated_reagents = list(/datum/reagent/drink/doctor_delight = 5, /datum/reagent/hyperzine = 0.75, /datum/reagent/synaptizine = 0.25)
+	heated_reagents = list(/datum/reagent/drink/doctor_delight = 5, /datum/reagent/medicine/stimulant/hyperzine = 0.75, /datum/reagent/medicine/stimulant/synaptizine = 0.25)
 	var/has_been_heated = 0 // Unlike the warm var, this checks if the one-time self-heating operation has been used.
 
 /obj/item/reagent_containers/food/snacks/donkpocket/sinpocket/attack_self(mob/user)
@@ -365,7 +365,7 @@
 	nutriment_desc = list("heartiness" = 1, "dough" = 2)
 	nutriment_amt = 2
 	var/warm = 0
-	var/list/heated_reagents = list(/datum/reagent/tricordrazine = 5)
+	var/list/heated_reagents = list(/datum/reagent/medicine/tricordrazine = 5)
 
 /obj/item/reagent_containers/food/snacks/donkpocket/microwave_act(obj/machinery/microwave/M)
 	heat()
@@ -617,7 +617,7 @@
 	nutriment_desc = list("carrot" = 3, "salt" = 1)
 	nutriment_amt = 3
 	bitesize = 2
-	food_reagents = list(/datum/reagent/imidazoline = 4)
+	food_reagents = list(/datum/reagent/medicine/imidazoline = 4)
 
 /obj/item/reagent_containers/food/snacks/boiledslimecore
 	name = "boiled slime core"

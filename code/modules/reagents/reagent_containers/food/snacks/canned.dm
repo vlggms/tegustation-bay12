@@ -81,8 +81,8 @@
 	nutriment_desc = list("soggy" = 1, "vegetable" = 1)
 	bitesize = 20
 	food_reagents = list(
-		/datum/reagent/adrenaline = 5,
-		/datum/reagent/hyperzine = 5,
+		/datum/reagent/medicine/adrenaline = 5,
+		/datum/reagent/medicine/stimulant/hyperzine = 5,
 		/datum/reagent/iron = 5
 	)
 

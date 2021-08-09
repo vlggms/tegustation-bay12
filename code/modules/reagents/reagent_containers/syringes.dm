@@ -359,7 +359,7 @@
 
 /obj/item/reagent_containers/syringe/inaprovaline/New()
 	..()
-	reagents.add_reagent(/datum/reagent/inaprovaline, 15)
+	reagents.add_reagent(/datum/reagent/medicine/inaprovaline, 15)
 	mode = SYRINGE_INJECT
 	update_icon()
 
@@ -369,7 +369,7 @@
 
 /obj/item/reagent_containers/syringe/antitoxin/New()
 	..()
-	reagents.add_reagent(/datum/reagent/dylovene, 15)
+	reagents.add_reagent(/datum/reagent/medicine/dylovene, 15)
 	mode = SYRINGE_INJECT
 	update_icon()
 
@@ -379,7 +379,7 @@
 
 /obj/item/reagent_containers/syringe/antiviral/New()
 	..()
-	reagents.add_reagent(/datum/reagent/spaceacillin, 15)
+	reagents.add_reagent(/datum/reagent/medicine/spaceacillin, 15)
 	mode = SYRINGE_INJECT
 	update_icon()
 
@@ -409,8 +409,8 @@
 
 /obj/item/reagent_containers/syringe/steroid/New()
 	..()
-	reagents.add_reagent(/datum/reagent/adrenaline, 5)
-	reagents.add_reagent(/datum/reagent/hyperzine, 10)
+	reagents.add_reagent(/datum/reagent/medicine/adrenaline, 5)
+	reagents.add_reagent(/datum/reagent/medicine/stimulant/hyperzine, 10)
 
 
 // TG ports
