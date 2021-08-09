@@ -52,7 +52,7 @@ var/list/airlock_overlays = list()
 
 	var/open_sound_powered = 'sound/machines/airlock_open.ogg'
 	var/open_sound_unpowered = 'sound/machines/airlock_open_force.ogg'
-	var/open_failure_access_denied = 'sound/machines/buzz-two.ogg'
+	var/open_failure_access_denied = 'sound/machines/deniedboop.ogg'
 
 	var/close_sound_powered = 'sound/machines/airlock_close.ogg'
 	var/close_sound_unpowered = 'sound/machines/airlock_close_force.ogg'
@@ -767,9 +767,7 @@ About the new airlock wires panel:
 			set_airlock_overlays(AIRLOCK_DENY)
 			if(density && arePowerSystemsOn())
 				flick("deny", src)
-				if(secured_wires && world.time > next_clicksound)
-					next_clicksound = world.time + CLICKSOUND_INTERVAL
-					playsound(loc, open_failure_access_denied, 50, 0)
+				playsound(loc, open_failure_access_denied, 100, 0)
 			update_icon(AIRLOCK_CLOSED)
 		if("emag")
 			set_airlock_overlays(AIRLOCK_EMAG)
