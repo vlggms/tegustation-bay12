@@ -1,5 +1,0 @@
-author: Cupax3
-delete-after: true
-changes:
-  - admin: Adds a job whitelist system
-  - admin: Makes AI a whitelisted job

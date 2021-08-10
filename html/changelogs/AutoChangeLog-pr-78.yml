@@ -1,8 +1,0 @@
-author: Yvesa , Spookerton
-delete-after: true
-changes:
-  - tweak: Flashes no longer stack their confusion / stun effects infinitely.
-  - bugfix: Groins are now more pain resistant.
-  - balance: Dislocations via disarm intent are significantly less likely to occur
-      with low force weapons initially, chance to dislocate rises as damage is dealt
-      to limbs.
