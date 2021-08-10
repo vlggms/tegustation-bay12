@@ -629,7 +629,7 @@ GLOBAL_LIST_EMPTY(diversion_junctions)
 			if(do_after(user,20, src))
 				if(!src || !W.isOn()) return
 				to_chat(user, "You sliced the floorweld off the disposal outlet.")
-				var/obj/structure/disposalconstruct/machine/outlet/C = new (loc, src)
+				var/obj/structure/disposalconstruct/machine/C = new (loc, src)
 				src.transfer_fingerprints_to(C)
 				C.anchored = TRUE
 				C.set_density(1)
