@@ -155,7 +155,7 @@
 /datum/unarmed_attack/nabber
 	attack_verb = list("mauled", "slashed", "struck", "pierced")
 	attack_noun = list("forelimb")
-	damage = 8
+	damage = 25
 	shredding = TRUE
 	sharp = TRUE
 	edge = TRUE
