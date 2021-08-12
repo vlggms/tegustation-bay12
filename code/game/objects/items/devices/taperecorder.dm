@@ -496,7 +496,7 @@
 		var/index = text2num(href_list["cut_after"])
 		if(index >= timestamp.len)
 			return
-		
+
 		to_chat(user, "<span class='notice'>You remove part of the tape off.</span>")
 		get_loose_tape(user, index)
 		cut(user)
@@ -541,5 +541,5 @@
 	. = ..()
 	if(distance <= 1)
 		to_chat(user, "<span class='notice'>It looks long enough to hold [max_capacity] seconds worth of recording.</span>")
-		if(doctored && user.skill_check(SKILL_FORENSICS, SKILL_PROF))
+		if(doctored && user.skill_check(SKILL_FORENSICS, SKILL_MASTER))
 			to_chat(user, "<span class='notice'>It has been tampered with...</span>")

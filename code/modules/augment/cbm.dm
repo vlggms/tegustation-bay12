@@ -23,7 +23,7 @@
 
 /obj/item/device/compact_bionic_module/examine(mob/user)
 	. = ..()
-	if (isobserver(user) || (user.mind && user.mind.special_role != null) || user.skill_check(SKILL_DEVICES, SKILL_PROF))
+	if (isobserver(user) || (user.mind && user.mind.special_role != null) || user.skill_check(SKILL_DEVICES, SKILL_MASTER))
 		to_chat(user, "This is a compact bionic module - an illicit, one-use augment installer. It can be used even by individuals with no medical knowledge.")
 		to_chat(user, SPAN_DANGER("This device does NOT come with its own painkillers or anesthetic. Installing without painkillers is theoretically possible, but dangerous and very traumatic."))
 	// Label is keyed based on "is it safe from detection?"

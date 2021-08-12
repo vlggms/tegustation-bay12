@@ -136,7 +136,7 @@
 			to_chat(user, "<span class='notice'>\The [src] was bitten [bitecount] time\s!</span>")
 		else
 			to_chat(user, "<span class='notice'>\The [src] was bitten multiple times!</span>")
-	if (cooks_into_type && (user.get_skill_value(SKILL_COOKING) >= SKILL_ADEPT || isobserver(user)))
+	if (cooks_into_type && (user.get_skill_value(SKILL_COOKING) >= SKILL_TRAINED || isobserver(user)))
 		var/obj/item/cooks_into = cooks_into_type
 		to_chat(user, SPAN_NOTICE("You could microwave it to turn it into \a [initial(cooks_into.name)]."))
 
