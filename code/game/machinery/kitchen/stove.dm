@@ -54,7 +54,7 @@
 			dat += "<b>Contents are cooking. Please wait...</b>"
 		else
 			var/cooking_skill = user.get_skill_value(SKILL_COOKING)
-			if (cooking_skill > SKILL_NONE)
+			if (cooking_skill > SKILL_UNTRAINED)
 				user_time_modifier = -(0.1 SECONDS * cooking_skill)
 			else
 				user_time_modifier = 0

@@ -179,7 +179,7 @@
 		dat += "<td><span class='average'>[scan["pulse"]]bpm</span></td></tr>"
 	else
 		dat += "<td>[scan["pulse"]]bpm</td></tr>"
-	if(skill_level >= SKILL_ADEPT)
+	if(skill_level >= SKILL_TRAINED)
 		if((scan["pulse"] >= 140) || (scan["pulse"] == -3))
 			dat+= "<tr><td colspan='2'><span class='bad'>Patient is tachycardic.</span></td></tr>"
 		else if(scan["pulse"] >= 120)
@@ -203,7 +203,7 @@
 
 	dat += "<tr><td><strong>Blood volume:</strong></td><td>[scan["blood_volume"]]u/[scan["blood_volume_max"]]u</td></tr>"
 
-	if(skill_level >= SKILL_ADEPT)
+	if(skill_level >= SKILL_TRAINED)
 		if(ratio <= 0.70)
 			dat += "<tr><td colspan='2'><span class='bad'>Patient is in hypovolemic shock. Transfusion highly recommended.</span></td></tr>"
 
@@ -306,7 +306,7 @@
 		row += "<tr><td>[E["name"]]</td>"
 		if(E["is_stump"])
 			row += "<td><span class='bad'>Missing</span></td>"
-			if(skill_level >= SKILL_ADEPT)
+			if(skill_level >= SKILL_TRAINED)
 				row += "<td><span class='bad'>[english_list(E["scan_results"], nothing_text = "&nbsp;")]</span></td>"
 			else
 				row += "<td>&nbsp;</td>"
@@ -314,7 +314,7 @@
 			row += "<td>"
 			if(E["brute_dam"] + E["burn_dam"] == 0)
 				row += "None</td>"
-			if(skill_level < SKILL_ADEPT)
+			if(skill_level < SKILL_TRAINED)
 				if(E["brute_dam"])
 					row += "<span class='bad'>Damaged</span><br>"
 				if(E["burn_dam"])
@@ -324,7 +324,7 @@
 					row += "<span class='bad'>[capitalize(get_wound_severity(E["brute_ratio"], (E["limb_flags"] & ORGAN_FLAG_HEALS_OVERKILL)))] physical trauma</span><br>"
 				if(E["burn_dam"])
 					row += "<span class='average'>[capitalize(get_wound_severity(E["burn_ratio"], (E["limb_flags"] & ORGAN_FLAG_HEALS_OVERKILL)))] burns</span></td>"
-			if(skill_level >= SKILL_ADEPT)
+			if(skill_level >= SKILL_TRAINED)
 				row += "<td>"
 				row += "<span class='bad'>[english_list(E["scan_results"], nothing_text="&nbsp;")]</span>"
 				row += "</td>"
@@ -367,7 +367,7 @@
 			row += "</td></tr>"
 			subdat += jointext(row, null)
 
-	if(skill_level <= SKILL_ADEPT)
+	if(skill_level <= SKILL_TRAINED)
 		dat += shuffle(subdat)
 	else
 		dat += subdat

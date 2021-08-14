@@ -25,7 +25,7 @@
 		other = owner.internal_organs_by_name[BP_AUGMENT_L_LEG]
 	if(other && istype(other))
 		var/succesful = TRUE
-		if(owner.get_skill_value(SKILL_HAULING) < SKILL_PROF)
+		if(owner.get_skill_value(SKILL_HAULING) < SKILL_MASTER)
 			succesful = FALSE
 			var/datum/skill_buff/augment/muscle/A
 			A = owner.buff_skill(buffs, 0, buffpath)

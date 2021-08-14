@@ -6,14 +6,14 @@
 	sprites = list(
 		"Drone" = "drone-ascent"
 	)
-	// The duplicate clustertools in this list are so that they can set up to 
+	// The duplicate clustertools in this list are so that they can set up to
 	// hack doors, windows etc. without having to constantly cycle through tools.
 	equipment = list(
 		/obj/item/device/flash,
 		/obj/item/gun/energy/particle/small,
 		/obj/item/device/multitool/mantid,
 		/obj/item/clustertool,
-		/obj/item/clustertool, 
+		/obj/item/clustertool,
 		/obj/item/clustertool,
 		/obj/item/soap,
 		/obj/item/mop/advanced,
@@ -57,29 +57,29 @@
 		LANGUAGE_SKRELLIAN        = TRUE,
 		LANGUAGE_NABBER           = TRUE
 	)
-	
+
 	skills = list(
-		SKILL_BUREAUCRACY	= SKILL_ADEPT,
-		SKILL_FINANCE		= SKILL_EXPERT,
-		SKILL_EVA			= SKILL_EXPERT,
+		SKILL_BUREAUCRACY	= SKILL_TRAINED,
+		SKILL_FINANCE		= SKILL_EXPERIENCED,
+		SKILL_EVA			= SKILL_EXPERIENCED,
 		SKILL_MECH			= HAS_PERK,
-		SKILL_PILOT			= SKILL_EXPERT,
-		SKILL_HAULING		= SKILL_EXPERT,
-		SKILL_COMPUTER		= SKILL_EXPERT,
-		SKILL_BOTANY		= SKILL_EXPERT,
-		SKILL_COOKING		= SKILL_EXPERT,
-		SKILL_COMBAT		= SKILL_EXPERT,
-		SKILL_WEAPONS		= SKILL_EXPERT,
-		SKILL_FORENSICS		= SKILL_EXPERT,
-		SKILL_CONSTRUCTION	= SKILL_EXPERT,
-		SKILL_ELECTRICAL	= SKILL_EXPERT,
-		SKILL_ATMOS			= SKILL_EXPERT,
-		SKILL_ENGINES		= SKILL_EXPERT,
-		SKILL_DEVICES		= SKILL_EXPERT,
-		SKILL_SCIENCE		= SKILL_EXPERT,
-		SKILL_MEDICAL		= SKILL_EXPERT,
-		SKILL_ANATOMY		= SKILL_EXPERT,
-		SKILL_CHEMISTRY		= SKILL_EXPERT
+		SKILL_PILOT			= SKILL_EXPERIENCED,
+		SKILL_HAULING		= SKILL_EXPERIENCED,
+		SKILL_COMPUTER		= SKILL_EXPERIENCED,
+		SKILL_BOTANY		= SKILL_EXPERIENCED,
+		SKILL_COOKING		= SKILL_EXPERIENCED,
+		SKILL_COMBAT		= SKILL_EXPERIENCED,
+		SKILL_WEAPONS		= SKILL_EXPERIENCED,
+		SKILL_FORENSICS		= SKILL_EXPERIENCED,
+		SKILL_CONSTRUCTION	= SKILL_EXPERIENCED,
+		SKILL_ELECTRICAL	= SKILL_EXPERIENCED,
+		SKILL_ATMOS			= SKILL_EXPERIENCED,
+		SKILL_ENGINES		= SKILL_EXPERIENCED,
+		SKILL_DEVICES		= SKILL_EXPERIENCED,
+		SKILL_SCIENCE		= SKILL_EXPERIENCED,
+		SKILL_MEDICAL		= SKILL_EXPERIENCED,
+		SKILL_ANATOMY		= SKILL_EXPERIENCED,
+		SKILL_CHEMISTRY		= SKILL_EXPERIENCED
 	)
 
 // Copypasted from repair bot - todo generalize this step.
