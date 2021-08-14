@@ -262,6 +262,7 @@
 				cut_delay = 0
 
 			if(!do_after(user,cut_delay,src))
+				dismantling = FALSE
 				return
 
 			to_chat(user, "<span class='notice'>You remove the outer plating.</span>")
