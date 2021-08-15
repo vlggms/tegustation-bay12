@@ -1,0 +1,4 @@
+author: Ilysen
+delete-after: true
+changes:
+  - bugfix: Walls no longer become un-weldable after a deconstruction attempt is interrupted.
