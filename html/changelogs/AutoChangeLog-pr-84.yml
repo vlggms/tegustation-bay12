@@ -1,0 +1,10 @@
+author: Ilysen
+delete-after: true
+changes:
+  - rscadd: Items in Xenowear now list the names of each species that can equip them.
+  - tweak: Special examine texts for species now appear below their clothing information,
+      instead of being at the top of the message, and are italicized for clarity.
+  - tweak: Adherents now have a uniform layer, which they need to equip an ID and
+      a belt. They also get pockets now, as a result.
+  - tweak: Adherents can now equip the gear harness, and pick it as a loadout item
+      in Xenowear.
