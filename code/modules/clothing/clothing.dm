@@ -810,9 +810,18 @@ BLIND     // can't see anything
 	var/displays_id = 1
 	var/rolled_down = -1 //0 = unrolled, 1 = rolled, -1 = cannot be toggled
 	var/rolled_sleeves = -1 //0 = unrolled, 1 = rolled, -1 = cannot be toggled
+	species_restricted = list(
+		"exclude",
+		SPECIES_ADHERENT,
+		SPECIES_NABBER,
+		SPECIES_MANTID_ALATE,
+		SPECIES_MANTID_GYNE,
+		SPECIES_MONARCH_QUEEN
+	)
 	sprite_sheets = list(
 		SPECIES_VOX = 'icons/mob/species/vox/onmob_under_vox.dmi',
 		SPECIES_VOX_ARMALIS = 'icons/mob/species/vox/onmob_under_vox_armalis.dmi',
+		SPECIES_ADHERENT = 'icons/mob/species/adherent/onmob_under_adherent.dmi',
 		SPECIES_NABBER = 'icons/mob/species/nabber/onmob_under_gas.dmi',
 		SPECIES_MONARCH_QUEEN = 'icons/mob/species/nabber/msq/onmob_under_msq.dmi',
 		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_under_unathi.dmi',
