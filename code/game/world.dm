@@ -103,6 +103,9 @@ GLOBAL_VAR(href_logfile)
 	load_mods()
 	//end-emergency fix
 
+	// Load the list of trusted players
+	load_trusted_players()
+
 	. = ..()
 
 #ifdef UNIT_TEST

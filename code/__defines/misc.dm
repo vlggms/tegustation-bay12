@@ -298,3 +298,6 @@
 
 #define UI_FONT_GOOD(X) "<font color='55cc55'>[X]</font>"
 #define UI_FONT_BAD(X) "<font color='cc5555'>[X]</font>"
+
+// Whereas ckey is in the global list or not
+#define IS_TRUSTED_PLAYER(ckey) (ckey in GLOB.trusted_players)
