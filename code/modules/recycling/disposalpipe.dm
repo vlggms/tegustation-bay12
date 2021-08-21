@@ -49,6 +49,11 @@ obj/structure/disposalpipe/Destroy()
 			expel(H, T, 0)
 	. = ..()
 
+/obj/structure/disposalpipe/examine(mob/user)
+	. = ..()
+	if (health != initial(health))
+		to_chat(user, SPAN_WARNING("\The [src] is leaking pressure."))
+
 /obj/structure/disposalpipe/proc/on_build()
 	update()
 	update_icon()
@@ -224,37 +229,44 @@ obj/structure/disposalpipe/Destroy()
 //weldingtool: unfasten and convert to obj/disposalconstruct
 
 /obj/structure/disposalpipe/attackby(var/obj/item/I, var/mob/user)
-
-	var/turf/T = src.loc
+	var/turf/T = get_turf(src)
 	if(!T.is_plating())
 		return		// prevent interaction with T-scanner revealed pipes
-	src.add_fingerprint(user, 0, I)
-	if(istype(I, /obj/item/weldingtool))
-		var/obj/item/weldingtool/W = I
-		if(W.remove_fuel(0,user))
-			playsound(src.loc, 'sound/items/Welder2.ogg', 100, 1)
-			// check if anything changed over 2 seconds
-			var/turf/uloc = user.loc
-			var/atom/wloc = W.loc
-			to_chat(user, "Slicing the disposal pipe.")
-			sleep(30)
-			if(!W.isOn()) return
-			if(user.loc == uloc && wloc == W.loc)
-				welded()
-			else
-				to_chat(user, "You must stay still while welding the pipe.")
-		else
-			to_chat(user, "You need more welding fuel to cut the pipe.")
+	add_fingerprint(user, 0, I)
+	if (isWelder(I))
+		var/obj/item/weldingtool/WT = I
+		if (!WT.isOn())
+			to_chat(user, SPAN_WARNING("Turn \the [WT] on first."))
 			return
+		else if (WT.remove_fuel(0, user))
+			user.visible_message(
+				SPAN_NOTICE("\The [user] starts cutting \the [src] free."),
+				SPAN_NOTICE("Slicing \the [src]..."),
+				SPAN_ITALIC("You hear the sound of welding.")
+			)
+			playsound(src, 'sound/items/Welder.ogg', 50, TRUE)
+			if (!do_after(user, 3 SECONDS, src))
+				return
+			user.visible_message(
+				SPAN_NOTICE("\The [user] cuts \the [src] free from the floor."),
+				SPAN_NOTICE("You cut \the [src] free from the floor."),
+				SPAN_ITALIC("You hear the sound of welding.")
+			)
+			playsound(src, 'sound/items/Welder2.ogg', 50, TRUE)
+			welded()
+			return
+		else
+			to_chat(user, SPAN_WARNING("You need more fuel to cut \the [src] free."))
+			return
+	. = ..()
 
-	// called when pipe is cut with welder
+/// Called when this pipe is cut free with a welding tool.
 /obj/structure/disposalpipe/proc/welded()
-	var/obj/structure/disposalconstruct/C = new (src.loc, src)
-	src.transfer_fingerprints_to(C)
-	C.set_density(0)
+	var/obj/structure/disposalconstruct/C = new (loc, src)
+	transfer_fingerprints_to(C)
+	C.set_density(FALSE)
 	C.anchored = TRUE
 	C.update()
-
 	qdel(src)
 
 // pipe is deleted
