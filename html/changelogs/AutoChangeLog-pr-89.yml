@@ -1,0 +1,11 @@
+author: Ilysen
+delete-after: true
+changes:
+  - rscadd: You can now examine disposals pipes to see if they're damaged.
+  - rscadd: Disposals pipes now play a quiet scraping sound as they're moved.
+  - rscadd: Modernized some messages and sounds related to disposals construction.
+  - bugfix: Disposals chutes no longer always face south when you construct them.
+  - bugfix: You can properly destroy unused disposal pipes and machines by click-dragging
+      them onto the disposals pipe dispenser.
+  - bugfix: Disposals pipes no longer render underneath their dispenser.
+  - tweak: Modernized some messages and sounds related to disposals construction.
