@@ -1,5 +1,0 @@
-author: Sky, Cuboos
-delete-after: true
-changes:
-  - tweak: High security doors now make a different denied access sound
-  - rscadd: Every door now makes a denied access sound
