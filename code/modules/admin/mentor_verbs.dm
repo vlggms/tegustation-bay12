@@ -1,4 +1,4 @@
-/client/proc/mentorhelp(msg as text)
+/client/verb/mentorhelp(msg as text)
 	set name = "Mentorhelp"
 	set desc = "Request an in-game mentor to help you with one of the game's mechanics."
 	set category = "Staffhelp"
