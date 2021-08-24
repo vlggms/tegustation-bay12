@@ -1,0 +1,5 @@
+author: Ilysen
+delete-after: true
+changes:
+  - admin: Added a button in View Variables to add reagents to an atom with reagents.
+      Includes mobs, beakers, food, and so on.
