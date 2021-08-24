@@ -4594,16 +4594,18 @@
 	c_tag = "Cyborg Upload";
 	dir = 4
 	},
-/obj/machinery/recharger,
+/obj/machinery/computer/upload/ai{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/synth/borg_upload)
 "jC" = (
 /obj/structure/table/standard,
-/obj/random/maintenance/solgov,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
 /obj/machinery/light,
+/obj/machinery/recharger,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/synth/borg_upload)
 "jD" = (

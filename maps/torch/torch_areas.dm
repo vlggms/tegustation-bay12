@@ -1069,6 +1069,26 @@
 	name = "\improper Fourth Deck Security Checkpoint"
 	icon_state = "checkpoint"
 
+// AI
+
+/area/turret_protected/ai_foyer
+	name = "\improper AI Chamber Foyer"
+	icon_state = "ai_foyer"
+	sound_env = SMALL_ENCLOSED
+	req_access = list(access_ai_upload)
+
+/area/turret_protected/ai_outer_chamber
+	name = "\improper Outer AI Chamber"
+	icon_state = "ai_chamber"
+	sound_env = SMALL_ENCLOSED
+	req_access = list(access_ai_upload)
+
+/area/turret_protected/ai
+	name = "\improper AI Chamber"
+	icon_state = "ai_chamber"
+	ambience = list('sound/ambience/ambimalf.ogg')
+	req_access = list(access_ai_upload)
+
 // Medbay
 
 /area/medical/equipstorage
