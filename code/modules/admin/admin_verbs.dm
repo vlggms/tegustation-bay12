@@ -399,13 +399,13 @@ var/list/admin_verbs_mentors = list(
 		if (!ghost)
 			to_chat(src, FONT_COLORED("red", "You are already admin-ghosted."))
 			return
+		log_and_message_admins("has admin ghosted.", usr)
 		ghost.admin_ghosted = 1
 		if(body)
 			body.teleop = ghost
 			if(!body.key)
 				body.key = "@[key]"	//Haaaaaaaack. But the people have spoken. If it breaks; blame adminbus
 		SSstatistics.add_field_details("admin_verb","O") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-
 
 /client/proc/invisimin()
 	set name = "Invisimin"
