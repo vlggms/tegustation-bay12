@@ -93,6 +93,10 @@ GLOBAL_VAR(href_logfile)
 	if(byond_version < RECOMMENDED_VERSION)
 		to_world_log("Your server's byond version does not meet the recommended requirements for this server. Please update BYOND")
 
+	// Database masterinit
+	SSdbcore.CheckSchemaVersion()
+	SSdbcore.SetRoundID()
+
 	callHook("startup")
 
 	//TGS
