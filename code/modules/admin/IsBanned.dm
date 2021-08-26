@@ -47,6 +47,7 @@ world/IsBanned(key,address,computer_id)
 			cidquery = " OR computerid = '[computer_id]' "
 
 		var/datum/db_query/query = SSdbcore.NewQuery("SELECT ckey, ip, computerid, a_ckey, reason, expiration_time, duration, bantime, bantype FROM erro_ban WHERE (ckey = '[ckeytext]' [ipquery] [cidquery]) AND (bantype = 'PERMABAN'  OR (bantype = 'TEMPBAN' AND expiration_time > Now())) AND isnull(unbanned)")
+		// Hello future person doing work on this - yes, this query is never qdel'd but the DB ban system is deprecated until further notice since it's too outdated. -Cupa
 
 		query.Execute()
 

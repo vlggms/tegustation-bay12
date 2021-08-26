@@ -81,6 +81,9 @@ var/jobban_keylist[0]		//to store the keys & ranks
 
 			jobban_keylist.Add("[ckey] - [job]")
 
+		qdel(query)
+		qdel(query1)
+
 /proc/jobban_savebanfile()
 	var/savefile/S=new("data/job_full.ban")
 	to_save(S["keys[0]"], jobban_keylist)

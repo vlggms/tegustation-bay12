@@ -38,6 +38,7 @@ var/list/whitelist = list()
 	var/datum/db_query/query = SSdbcore.NewQuery("SELECT * FROM whitelist")
 	if(!query.Execute())
 		to_world_log(SSdbcore.ErrorMsg())
+		qdel(query)
 		return 0
 	else
 		while(query.NextRow())
@@ -47,6 +48,7 @@ var/list/whitelist = list()
 				A.Add(row["race"])
 			else
 				alien_whitelist[row["ckey"]] = list(row["race"])
+	qdel(query)
 	return 1
 
 /proc/is_species_whitelisted(mob/M, var/species_name)
