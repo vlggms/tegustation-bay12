@@ -22,7 +22,7 @@
 	bitesize = 5
 	eat_sound = 'sound/items/drink.ogg'
 	food_reagents = list(
-		/datum/reagent/slimejelly = 5,
+		/datum/reagent/slime_jelly = 5,
 		/datum/reagent/water = 10
 	)
 
@@ -121,7 +121,7 @@
 			reagents.add_reagent(/datum/reagent/nutriment, 6)
 			reagents.add_reagent(/datum/reagent/blood, 10)
 		if(7)
-			reagents.add_reagent(/datum/reagent/slimejelly, 10)
+			reagents.add_reagent(/datum/reagent/slime_jelly, 10)
 			reagents.add_reagent(/datum/reagent/water, 10)
 		if(8)
 			reagents.add_reagent(/datum/reagent/carbon, 10)

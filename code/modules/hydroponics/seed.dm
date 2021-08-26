@@ -339,7 +339,7 @@
 			health_change += rand(1,3) * HYDRO_SPEED_MULTIPLIER
 
 	for(var/obj/effect/effect/smoke/chem/smoke in range(1, current_turf))
-		if(smoke.reagents.has_reagent(/datum/reagent/toxin/plantbgone))
+		if(smoke.reagents.has_reagent(/datum/reagent/toxin/plant_b_gone))
 			return 100
 
 	// Pressure and temperature are needed as much as water and light.
@@ -468,10 +468,9 @@
 		var/list/banned_chems = list(
 			/datum/reagent/adminordrazine,
 			/datum/reagent/nutriment,
-			/datum/reagent/nanites,
 			/datum/reagent/water/holywater,
-			/datum/reagent/toxin/plantbgone,
-			/datum/reagent/chloralhydrate/beer2,
+			/datum/reagent/toxin/plant_b_gone,
+			/datum/reagent/chloral_hydrate/beer,
 			/datum/reagent/zombie
 			)
 		banned_chems += subtypesof(/datum/reagent/ethanol)

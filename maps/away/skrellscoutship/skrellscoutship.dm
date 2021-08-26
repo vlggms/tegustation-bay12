@@ -153,7 +153,7 @@
 
 /obj/item/reagent_containers/food/condiment/mindbreaker
 	label_text = "Mindbreaker"
-	starting_reagents = list(/datum/reagent/mindbreaker = 50)
+	starting_reagents = list(/datum/reagent/mindbreaker_toxin = 50)
 
 
 /obj/item/reagent_containers/food/condiment/space_drugs

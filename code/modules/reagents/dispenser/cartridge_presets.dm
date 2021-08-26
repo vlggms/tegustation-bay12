@@ -111,6 +111,6 @@
 	spaceacillin	spawn_reagent = /datum/reagent/medicine/spaceacillin
 	ethylredox	spawn_reagent = /datum/reagent/medicine/ethylredoxrazine
 	sleeptox	spawn_reagent = /datum/reagent/soporific
-	chloral		spawn_reagent = /datum/reagent/chloralhydrate
+	chloral		spawn_reagent = /datum/reagent/chloral_hydrate
 	cryoxadone	spawn_reagent = /datum/reagent/medicine/cryogenic/cryoxadone
 	clonexadone	spawn_reagent = /datum/reagent/medicine/cryogenic/clonexadone

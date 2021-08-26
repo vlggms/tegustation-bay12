@@ -205,7 +205,7 @@
 
 		B1.reagents.add_reagent(/datum/reagent/aluminium, 30)
 		B2.reagents.add_reagent(/datum/reagent/foaming_agent, 10)
-		B2.reagents.add_reagent(/datum/reagent/acid/polyacid, 10)
+		B2.reagents.add_reagent(/datum/reagent/acid/polytrinic, 10)
 
 		detonator = new/obj/item/device/assembly_holder/timer_igniter(src)
 
@@ -227,7 +227,7 @@
 		B1.reagents.add_reagent(/datum/reagent/aluminium, 15)
 		B1.reagents.add_reagent(/datum/reagent/fuel,20)
 		B2.reagents.add_reagent(/datum/reagent/toxin/phoron, 15)
-		B2.reagents.add_reagent(/datum/reagent/acid, 15)
+		B2.reagents.add_reagent(/datum/reagent/acid/sulphuric, 15)
 		B1.reagents.add_reagent(/datum/reagent/fuel,20)
 
 		detonator = new/obj/item/device/assembly_holder/timer_igniter(src)
@@ -247,7 +247,7 @@
 		var/obj/item/reagent_containers/glass/beaker/B1 = new(src)
 		var/obj/item/reagent_containers/glass/beaker/B2 = new(src)
 
-		B1.reagents.add_reagent(/datum/reagent/toxin/plantbgone, 25)
+		B1.reagents.add_reagent(/datum/reagent/toxin/plant_b_gone, 25)
 		B1.reagents.add_reagent(/datum/reagent/potassium, 25)
 		B2.reagents.add_reagent(/datum/reagent/phosphorus, 25)
 		B2.reagents.add_reagent(/datum/reagent/sugar, 25)
@@ -323,4 +323,3 @@
 	beakers += B1
 	beakers += B2
 	icon_state = initial(icon_state) +"_locked"
-

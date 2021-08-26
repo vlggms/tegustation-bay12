@@ -24,7 +24,7 @@
 
 /datum/recipe/dionaroast
 	fruit = list("apple" = 1)
-	reagents = list(/datum/reagent/acid/polyacid = 5) //It dissolves the carapace. Still poisonous, though.
+	reagents = list(/datum/reagent/acid/polytrinic = 5) //It dissolves the carapace. Still poisonous, though.
 	items = list(/obj/item/holder/diona)
 	result = /obj/item/reagent_containers/food/snacks/dionaroast
 
@@ -43,7 +43,7 @@
 	result = /obj/item/reagent_containers/food/snacks/donut/jelly
 
 /datum/recipe/jellydonut/slime
-	reagents = list(/datum/reagent/slimejelly = 5, /datum/reagent/sugar = 5)
+	reagents = list(/datum/reagent/slime_jelly = 5, /datum/reagent/sugar = 5)
 	items = list(
 		/obj/item/reagent_containers/food/snacks/doughslice
 	)
@@ -610,7 +610,7 @@
 	result = /obj/item/reagent_containers/food/snacks/stew
 
 /datum/recipe/slimetoast
-	reagents = list(/datum/reagent/slimejelly = 5)
+	reagents = list(/datum/reagent/slime_jelly = 5)
 	items = list(
 		/obj/item/reagent_containers/food/snacks/slice/bread,
 	)
@@ -728,7 +728,7 @@
 	result = /obj/item/reagent_containers/food/snacks/applepie
 
 /datum/recipe/slimeburger
-	reagents = list(/datum/reagent/slimejelly = 5)
+	reagents = list(/datum/reagent/slime_jelly = 5)
 	items = list(
 		/obj/item/reagent_containers/food/snacks/bun
 	)
@@ -757,7 +757,7 @@
 	result = /obj/item/reagent_containers/food/snacks/threebread
 
 /datum/recipe/slimesandwich
-	reagents = list(/datum/reagent/slimejelly = 5)
+	reagents = list(/datum/reagent/slime_jelly = 5)
 	items = list(
 		/obj/item/reagent_containers/food/snacks/slice/bread,
 		/obj/item/reagent_containers/food/snacks/slice/bread,
@@ -777,7 +777,7 @@
 	result = /obj/item/reagent_containers/food/snacks/bloodsoup
 
 /datum/recipe/slimesoup
-	reagents = list(/datum/reagent/water = 10, /datum/reagent/slimejelly = 5)
+	reagents = list(/datum/reagent/water = 10, /datum/reagent/slime_jelly = 5)
 	items = list()
 	result = /obj/item/reagent_containers/food/snacks/slimesoup
 

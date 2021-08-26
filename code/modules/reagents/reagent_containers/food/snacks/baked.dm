@@ -860,7 +860,7 @@
 		/datum/reagent/nutriment/sprinkles,
 		/datum/reagent/toxin/phoron,
 		/datum/reagent/nutriment/coco,
-		/datum/reagent/slimejelly,
+		/datum/reagent/slime_jelly,
 		/datum/reagent/drink/juice/banana,
 		/datum/reagent/drink/juice/berry,
 		/datum/reagent/fuel,
@@ -900,7 +900,7 @@
 	bitesize = 5
 	food_reagents = list(
 		/datum/reagent/nutriment/sprinkles = 3,
-		/datum/reagent/slimejelly = 5
+		/datum/reagent/slime_jelly = 5
 	)
 
 /obj/item/reagent_containers/food/snacks/donut/slimejelly/Initialize()
@@ -946,4 +946,4 @@
 	food_reagents = list(/datum/reagent/nutriment/cherryjelly = 5)
 
 /obj/item/reagent_containers/food/snacks/jelliedtoast/slime
-	food_reagents = list(/datum/reagent/slimejelly = 5)
+	food_reagents = list(/datum/reagent/slime_jelly = 5)

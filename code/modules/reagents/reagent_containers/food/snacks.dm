@@ -624,7 +624,7 @@
 	desc = "A boiled red thing."
 	icon_state = "boiledslimecore"//nonexistant?
 	bitesize = 3
-	food_reagents = list(/datum/reagent/slimejelly = 5)
+	food_reagents = list(/datum/reagent/slime_jelly = 5)
 
 /obj/item/reagent_containers/food/snacks/chawanmushi
 	name = "chawanmushi"
@@ -960,7 +960,7 @@
 				/datum/reagent/fuel,
 				/datum/reagent/toxin/amatoxin,
 				/datum/reagent/toxin/carpotoxin,
-				/datum/reagent/toxin/zombiepowder,
+				/datum/reagent/toxin/zombie_powder,
 				/datum/reagent/cryptobiolin,
 				/datum/reagent/psilocybin)), 5)
 

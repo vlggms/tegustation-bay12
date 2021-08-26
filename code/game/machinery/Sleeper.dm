@@ -18,7 +18,7 @@
 	var/list/available_chemicals = list()
 	var/list/upgrade_chemicals = list("Kelotane" = /datum/reagent/medicine/kelotane)
 	var/list/upgrade2_chemicals = list("Hyronalin" = /datum/reagent/medicine/hyronalin)
-	var/list/antag_chemicals = list("Hair Remover" = /datum/reagent/toxin/hair_remover, "Chloral Hydrate" = /datum/reagent/chloralhydrate)
+	var/list/antag_chemicals = list("Hair Remover" = /datum/reagent/toxin/hair_remover, "Chloral Hydrate" = /datum/reagent/chloral_hydrate)
 	var/obj/item/reagent_containers/glass/beaker = null
 	var/filtering = 0
 	var/pump

@@ -129,7 +129,7 @@
 	seed_name = "nettle"
 	display_name = "nettles"
 	mutants = list("deathnettle")
-	chems = list(/datum/reagent/nutriment = list(1,50), /datum/reagent/acid = list(0,1))
+	chems = list(/datum/reagent/nutriment = list(1,50), /datum/reagent/acid/sulphuric = list(0,1))
 	kitchen_tag = "nettle"
 	kitchen_tag = "nettle"
 
@@ -150,7 +150,7 @@
 	seed_name = "death nettle"
 	display_name = "death nettles"
 	mutants = null
-	chems = list(/datum/reagent/nutriment = list(1,50), /datum/reagent/acid/polyacid = list(0,1))
+	chems = list(/datum/reagent/nutriment = list(1,50), /datum/reagent/acid/polytrinic = list(0,1))
 	kitchen_tag = "deathnettle"
 
 /datum/seed/nettle/death/New()

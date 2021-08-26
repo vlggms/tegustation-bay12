@@ -59,7 +59,7 @@
 	. = ..()
 	if(emag)
 		var/datum/reagents/R = emag.create_reagents(50)
-		R.add_reagent(/datum/reagent/chloralhydrate/beer2, 50)
+		R.add_reagent(/datum/reagent/chloral_hydrate/beer, 50)
 		emag.SetName("Mickey Finn's Special Brew")
 
 /obj/item/robot_module/clerical/butler/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
@@ -68,7 +68,7 @@
 	E.reagents.add_reagent(/datum/reagent/enzyme, 2 * amount)
 	if(emag)
 		var/obj/item/reagent_containers/food/drinks/bottle/small/beer/B = emag
-		B.reagents.add_reagent(/datum/reagent/chloralhydrate/beer2, 2 * amount)
+		B.reagents.add_reagent(/datum/reagent/chloral_hydrate/beer, 2 * amount)
 
 /obj/item/robot_module/clerical/general
 	name = "clerical robot module"

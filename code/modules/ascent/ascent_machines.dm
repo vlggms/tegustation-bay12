@@ -75,7 +75,7 @@ MANTIDIFY(/obj/machinery/door/airlock/external/bolted, "mantid airlock", "door")
 
 /obj/machinery/sleeper/ascent/Initialize(mapload, d, populate_parts)
 	. = ..()
-	base_chemicals["Crystalizing Agent"] = /datum/reagent/crystal
+	base_chemicals["Crystalizing Agent"] = /datum/reagent/crystallizing_agent
 	base_chemicals["Bromide"] = /datum/reagent/toxin/bromide
 
 /obj/machinery/fabricator/ascent

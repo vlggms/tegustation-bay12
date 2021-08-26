@@ -209,7 +209,7 @@
 	icon_state = "injector"
 	charges = list(
 		list("bromide",             "bromide",             /datum/reagent/toxin/bromide, 20),
-		list("crystallizing agent", "crystallizing agent", /datum/reagent/crystal,       20),
+		list("crystallizing agent", "crystallizing agent", /datum/reagent/crystallizing_agent,       20),
 		list("spaceacillin",        "spaceacillin",        /datum/reagent/medicine/spaceacillin,  20),
 		list("tramadol",            "tramadol",            /datum/reagent/medicine/painkiller/tramadol,      20)
 	)

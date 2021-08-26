@@ -137,7 +137,7 @@
 
 /obj/item/reagent_containers/glass/bottle/chloralhydrate/New()
 	..()
-	reagents.add_reagent(/datum/reagent/chloralhydrate, 30)		//Intentionally low since it is so strong. Still enough to knock someone out.
+	reagents.add_reagent(/datum/reagent/chloral_hydrate, 30)		//Intentionally low since it is so strong. Still enough to knock someone out.
 	update_icon()
 
 
@@ -161,7 +161,7 @@
 
 /obj/item/reagent_containers/glass/bottle/mutagen/New()
 	..()
-	reagents.add_reagent(/datum/reagent/mutagen, 60)
+	reagents.add_reagent(/datum/reagent/unstable_mutagen, 60)
 	update_icon()
 
 
@@ -185,7 +185,7 @@
 
 /obj/item/reagent_containers/glass/bottle/eznutrient/New()
 	..()
-	reagents.add_reagent(/datum/reagent/toxin/fertilizer/eznutrient, 60)
+	reagents.add_reagent(/datum/reagent/toxin/fertilizer/ez_nutrient, 60)
 	update_icon()
 
 
@@ -197,7 +197,7 @@
 
 /obj/item/reagent_containers/glass/bottle/left4zed/New()
 	..()
-	reagents.add_reagent(/datum/reagent/toxin/fertilizer/left4zed, 60)
+	reagents.add_reagent(/datum/reagent/toxin/fertilizer/left_4_zed, 60)
 	update_icon()
 
 
@@ -209,7 +209,7 @@
 
 /obj/item/reagent_containers/glass/bottle/robustharvest/New()
 	..()
-	reagents.add_reagent(/datum/reagent/toxin/fertilizer/robustharvest, 60)
+	reagents.add_reagent(/datum/reagent/toxin/fertilizer/robust_harvest, 60)
 	update_icon()
 
 
@@ -233,7 +233,7 @@
 
 /obj/item/reagent_containers/glass/bottle/pacid/New()
 	..()
-	reagents.add_reagent(/datum/reagent/acid/polyacid, 60)
+	reagents.add_reagent(/datum/reagent/acid/polytrinic, 60)
 	update_icon()
 
 

@@ -187,7 +187,7 @@
 	food_reagents = list(/datum/reagent/nutriment/cherryjelly = 5)
 
 /obj/item/reagent_containers/food/snacks/jellyburger/slime
-	food_reagents = list(/datum/reagent/slimejelly = 5)
+	food_reagents = list(/datum/reagent/slime_jelly = 5)
 
 /obj/item/reagent_containers/food/snacks/superbiteburger
 	name = "super bite burger"
@@ -272,4 +272,4 @@
 	food_reagents = list(/datum/reagent/nutriment/cherryjelly = 5)
 
 /obj/item/reagent_containers/food/snacks/jellysandwich/slime
-	food_reagents = list(/datum/reagent/slimejelly = 5)
+	food_reagents = list(/datum/reagent/slime_jelly = 5)
