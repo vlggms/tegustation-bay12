@@ -39,7 +39,7 @@ The answer was five and a half years -ZeroBits
 		if(!dbcon_old.IsConnected())
 			error_message = "Unable to contact External Archive. Please contact your system administrator for assistance."
 		else
-			var/DBQuery/query = dbcon_old.NewQuery("SELECT id, author, title, category FROM library ORDER BY "+sanitizeSQL(sort_by))
+			var/datum/db_query/query = dbcon_old.NewQuery("SELECT id, author, title, category FROM library ORDER BY "+sanitizeSQL(sort_by))
 			query.Execute()
 
 			while(query.NextRow())
@@ -119,7 +119,7 @@ The answer was five and a half years -ZeroBits
 			var/sqlauthor = sanitizeSQL(B.author)
 			var/sqlcontent = sanitizeSQL(B.dat)
 			var/sqlcategory = sanitizeSQL(upload_category)
-			var/DBQuery/query = dbcon_old.NewQuery("INSERT INTO library (author, title, content, category) VALUES ('[sqlauthor]', '[sqltitle]', '[sqlcontent]', '[sqlcategory]')")
+			var/datum/db_query/query = dbcon_old.NewQuery("INSERT INTO library (author, title, content, category) VALUES ('[sqlauthor]', '[sqltitle]', '[sqlcontent]', '[sqlcategory]')")
 			if(!query.Execute())
 				to_chat(usr, query.ErrorMsg())
 				error_message = "Network Error: Unable to upload to the Archive. Contact your system Administrator for assistance."
@@ -177,7 +177,7 @@ The answer was five and a half years -ZeroBits
 		error_message = "Network Error: Connection to the Archive has been severed."
 		return 1
 
-	var/DBQuery/query = dbcon_old.NewQuery("SELECT * FROM library WHERE id=[sqlid]")
+	var/datum/db_query/query = dbcon_old.NewQuery("SELECT * FROM library WHERE id=[sqlid]")
 	query.Execute()
 
 	while(query.NextRow())

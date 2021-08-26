@@ -79,6 +79,9 @@ LOG_ATTACK
 ## log world.log and runtime errors to a file
 # LOG_RUNTIME
 
+## log sql queries
+# LOG_SQL
+
 ## log admin warning messages
 ##LOG_ADMINWARN  ## Also duplicates a bunch of other messages.
 

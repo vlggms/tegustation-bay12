@@ -180,6 +180,12 @@ Checks if a list has the same entries and values as an element of big.
 		return picked
 	return null
 
+// Removes the first element of a list, a la pops the left-most element.
+/proc/popleft(list/L)
+	if(L.len)
+		. = L[1]
+		L.Cut(1,2)
+
 //Returns the next element in parameter list after first appearance of parameter element. If it is the last element of the list or not present in list, returns first element.
 /proc/next_in_list(element, list/L)
 	for(var/i=1, i<L.len, i++)

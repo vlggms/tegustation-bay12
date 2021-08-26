@@ -1119,3 +1119,9 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 	else
 		step(user.pulling, get_dir(user.pulling.loc, A))
 
+// Misc. ported from TG
+
+#define UNTIL(X) while(!(X)) stoplag()
+
+//datum may be null, but it does need to be a typed var
+#define NAMEOF(datum, X) (#X || ##datum.##X)
