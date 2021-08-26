@@ -208,7 +208,7 @@
 		name = "exceptional plump helmet biscuit"
 		desc = "Microwave is taken by a fey mood! It has cooked an exceptional plump helmet biscuit!"
 		reagents.add_reagent(/datum/reagent/nutriment, 3)
-		reagents.add_reagent(/datum/reagent/tricordrazine, 5)
+		reagents.add_reagent(/datum/reagent/medicine/tricordrazine, 5)
 
 /obj/item/reagent_containers/food/snacks/cracker
 	name = "cracker"
@@ -311,7 +311,7 @@
 	if(prob(10))
 		name = "exceptional plump pie"
 		desc = "Microwave is taken by a fey mood! It has cooked an exceptional plump pie!"
-		reagents.add_reagent(/datum/reagent/tricordrazine, 5)
+		reagents.add_reagent(/datum/reagent/medicine/tricordrazine, 5)
 
 /obj/item/reagent_containers/food/snacks/xemeatpie
 	name = "xeno-pie"
@@ -358,7 +358,7 @@
 	nutriment_desc = list("cake" = 10, "sweetness" = 10, "carrot" = 15)
 	nutriment_amt = 25
 	bitesize = 2
-	food_reagents = list(/datum/reagent/imidazoline = 10)
+	food_reagents = list(/datum/reagent/medicine/imidazoline = 10)
 
 /obj/item/reagent_containers/food/snacks/slice/carrotcake
 	name = "carrot cake slice"
@@ -386,7 +386,7 @@
 	bitesize = 2
 	food_reagents = list(
 		/datum/reagent/nutriment/protein = 25,
-		/datum/reagent/alkysine = 10
+		/datum/reagent/medicine/alkysine = 10
 	)
 
 /obj/item/reagent_containers/food/snacks/slice/braincake
@@ -722,7 +722,7 @@
 	food_reagents = list(
 		/datum/reagent/nutriment/protein = 5,
 		/datum/reagent/drink/juice/tomato = 6,
-		/datum/reagent/imidazoline = 12
+		/datum/reagent/medicine/imidazoline = 12
 	)
 
 /obj/item/reagent_containers/food/snacks/slice/vegetablepizza
@@ -864,7 +864,7 @@
 		/datum/reagent/drink/juice/banana,
 		/datum/reagent/drink/juice/berry,
 		/datum/reagent/fuel,
-		/datum/reagent/tricordrazine)), 3)
+		/datum/reagent/medicine/tricordrazine)), 3)
 	if(prob(30))
 		icon_state = "donut2"
 		overlay_state = "box-donut2"

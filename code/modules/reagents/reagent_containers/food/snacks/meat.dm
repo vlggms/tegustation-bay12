@@ -85,7 +85,7 @@
 	bitesize = 3
 	food_reagents = list(
 		/datum/reagent/nutriment/protein = 12,
-		/datum/reagent/hyperzine = 5
+		/datum/reagent/medicine/stimulant/hyperzine = 5
 	)
 
 /obj/item/reagent_containers/food/snacks/spider

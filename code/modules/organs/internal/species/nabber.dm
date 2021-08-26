@@ -133,7 +133,7 @@
 	if(blood_level < BLOOD_VOLUME_SURVIVE && prob(50))
 		return
 
-	var/dexalin_volume_raw = owner.reagents.get_reagent_amount(/datum/reagent/dexalin)
+	var/dexalin_volume_raw = owner.reagents.get_reagent_amount(/datum/reagent/medicine/dexalin)
 	var/acetone_volume_raw = owner.reagents.get_reagent_amount(/datum/reagent/acetone)
 	var/breath_fail_ratio = 1
 	var/obj/item/organ/internal/lungs/insectoid/nabber/totally_not_lungs_I_swear = owner.internal_organs_by_name[BP_TRACH]

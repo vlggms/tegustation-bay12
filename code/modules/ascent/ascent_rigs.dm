@@ -210,8 +210,8 @@
 	charges = list(
 		list("bromide",             "bromide",             /datum/reagent/toxin/bromide, 20),
 		list("crystallizing agent", "crystallizing agent", /datum/reagent/crystal,       20),
-		list("spaceacillin",        "spaceacillin",        /datum/reagent/spaceacillin,  20),
-		list("tramadol",            "tramadol",            /datum/reagent/tramadol,      20)
+		list("spaceacillin",        "spaceacillin",        /datum/reagent/medicine/spaceacillin,  20),
+		list("tramadol",            "tramadol",            /datum/reagent/medicine/painkiller/tramadol,      20)
 	)
 
 /obj/item/rig_module/chem_dispenser/nabber
@@ -222,10 +222,10 @@
 	icon = 'icons/obj/ascent.dmi'
 	icon_state = "injector"
 	charges = list(
-		list("tramadol",            "tramadol",            /datum/reagent/tramadol,     	  20),
-		list("dexalin plus",        "dexalin plus",        /datum/reagent/dexalinp,     	  20),
-		list("inaprovaline",        "inaprovaline",        /datum/reagent/inaprovaline,  	  20),
-		list("spaceacillin",  		"spaceacillin",		   /datum/reagent/spaceacillin,       20),
+		list("tramadol",            "tramadol",            /datum/reagent/medicine/painkiller/tramadol,     	  20),
+		list("dexalin plus",        "dexalin plus",        /datum/reagent/medicine/dexalin_plus,     	  20),
+		list("inaprovaline",        "inaprovaline",        /datum/reagent/medicine/inaprovaline,  	  20),
+		list("spaceacillin",  		"spaceacillin",		   /datum/reagent/medicine/spaceacillin,       20),
 		list("glucose",             "glucose",             /datum/reagent/nutriment/glucose,  20)
 	)
 

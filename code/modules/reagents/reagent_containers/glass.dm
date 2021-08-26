@@ -253,7 +253,7 @@
 /obj/item/reagent_containers/glass/beaker/cryoxadone
 	New()
 		..()
-		reagents.add_reagent(/datum/reagent/cryoxadone, 30)
+		reagents.add_reagent(/datum/reagent/medicine/cryogenic/cryoxadone, 30)
 		update_icon()
 
 /obj/item/reagent_containers/glass/beaker/sulphuric
