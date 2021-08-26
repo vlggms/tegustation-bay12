@@ -1,0 +1,5 @@
+author: Sky
+delete-after: true
+changes:
+  - tweak: Explorers can fly the Charon
+  - tweak: shuttle pilots have maintenance access
