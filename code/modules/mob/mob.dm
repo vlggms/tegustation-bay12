@@ -590,9 +590,12 @@
 			if(!H.stat)
 				to_chat(H, SPAN_WARNING("\The [src] leans down and grips your [grabtype]."))
 
-		else //Otherwise we're probably just holding their arm to lead them somewhere
+		else //Otherwise we're probably just holding their hand/arm to lead them somewhere
 			var/grabtype
-			if(H.has_organ(BP_L_ARM) || H.has_organ(BP_R_ARM)) //If they have at least one arm
+			if((H.has_organ(BP_L_HAND) && src.zone_sel.selecting == BP_L_HAND) || (H.has_organ(BP_R_HAND) && src.zone_sel.selecting == BP_R_HAND))
+			//If they have a hand and we are targeting it
+				grabtype = "hand"
+			else if(H.has_organ(BP_L_ARM) || H.has_organ(BP_R_ARM)) //If they have at least one arm
 				grabtype = "arm"
 			else //If they have no arms
 				grabtype = "shoulder"
