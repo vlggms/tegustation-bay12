@@ -1,5 +1,0 @@
-author: Cupax3, Watermelon914, Jordie0608, Cyberboss, and many more
-delete-after: true
-changes:
-  - admin: Repairs SQL backend connection, allowing playtime lookups.
-  - experiment: Screamtest due to scope needed

@@ -1,8 +1,0 @@
-author: Ilysen
-delete-after: true
-changes:
-  - balance: Antidexafen no longer overdoses, and its painkiller amount has been decreased
-      to 5, from 15. Neither of these are very big at all, so overall impact should
-      be low.
-  - tweak: Lactate renamed to Lactic Acid, to avoid... confusion.
-  - tweak: Gave Imidazoline a proper description.
