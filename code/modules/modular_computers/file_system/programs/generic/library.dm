@@ -49,6 +49,7 @@ The answer was five and a half years -ZeroBits
 				"title" = query.item[3],
 				"category" = query.item[4]
 			)))
+			qdel(query)
 		data["book_list"] = all_entries
 		data["scanner"] = istype(scanner)
 
@@ -123,11 +124,13 @@ The answer was five and a half years -ZeroBits
 			if(!query.Execute())
 				to_chat(usr, query.ErrorMsg())
 				error_message = "Network Error: Unable to upload to the Archive. Contact your system Administrator for assistance."
+				qdel(query)
 				return 1
 			else
 				log_and_message_admins("has uploaded the book titled [B.name], [length(B.dat)] signs")
 				log_game("[usr.name]/[usr.key] has uploaded the book titled [B.name], [length(B.dat)] signs")
 				alert("Upload Complete.")
+			qdel(query)
 			return 1
 
 		return 0
@@ -188,4 +191,5 @@ The answer was five and a half years -ZeroBits
 			"content" = query.item[4]
 			)
 		break
+	qdel(query)
 	return 1

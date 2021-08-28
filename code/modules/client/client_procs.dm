@@ -253,8 +253,11 @@
 	query.Execute()
 
 	if(query.NextRow())
-		return text2num(query.item[1])
+		var/result = text2num(query.item[1])
+		qdel(query)
+		return result
 	else
+		qdel(query)
 		return -1
 
 
@@ -277,6 +280,7 @@
 		sql_id = query.item[1]
 		player_age = text2num(query.item[2])
 		break
+	qdel(query)
 
 	var/datum/db_query/query_ip = SSdbcore.NewQuery("SELECT ckey FROM erro_player WHERE ip = '[address]'")
 	query_ip.Execute()
@@ -284,6 +288,7 @@
 	while(query_ip.NextRow())
 		related_accounts_ip += "[query_ip.item[1]], "
 		break
+	qdel(query_ip)
 
 	var/datum/db_query/query_cid = SSdbcore.NewQuery("SELECT ckey FROM erro_player WHERE computerid = '[computer_id]'")
 	query_cid.Execute()
@@ -291,11 +296,13 @@
 	while(query_cid.NextRow())
 		related_accounts_cid += "[query_cid.item[1]], "
 		break
+	qdel(query_cid)
 
 	var/datum/db_query/query_staffwarn = SSdbcore.NewQuery("SELECT staffwarn FROM erro_player WHERE ckey = '[sql_ckey]' AND !ISNULL(staffwarn)")
 	query_staffwarn.Execute()
 	if(query_staffwarn.NextRow())
 		src.staffwarn = query_staffwarn.item[1]
+	qdel(query_staffwarn)
 
 	//Just the standard check to see if it's actually a number
 	if(sql_id)
@@ -320,15 +327,18 @@
 		//Player already identified previously, we need to just update the 'lastseen', 'ip' and 'computer_id' variables
 		var/datum/db_query/query_update = SSdbcore.NewQuery("UPDATE erro_player SET lastseen = Now(), ip = '[sql_ip]', computerid = '[sql_computerid]', lastadminrank = '[sql_admin_rank]' WHERE id = [sql_id]")
 		query_update.Execute()
+		qdel(query_update)
 	else
 		//New player!! Need to insert all the stuff
 		var/datum/db_query/query_insert = SSdbcore.NewQuery("INSERT INTO erro_player (id, ckey, firstseen, lastseen, ip, computerid, lastadminrank) VALUES (null, '[sql_ckey]', Now(), Now(), '[sql_ip]', '[sql_computerid]', '[sql_admin_rank]')")
 		query_insert.Execute()
+		qdel(query_insert)
 
 	//Logging player access
 	var/serverip = "[world.internet_address]:[world.port]"
 	var/datum/db_query/query_accesslog = SSdbcore.NewQuery("INSERT INTO `erro_connection_log`(`id`,`datetime`,`serverip`,`ckey`,`ip`,`computerid`) VALUES(null,Now(),'[serverip]','[sql_ckey]','[sql_ip]','[sql_computerid]');")
 	query_accesslog.Execute()
+	qdel(query_accesslog)
 
 
 #undef UPLOAD_LIMIT

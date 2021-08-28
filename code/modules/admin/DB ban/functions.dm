@@ -21,10 +21,12 @@ datum/admins/proc/DB_staffwarn_record(var/ckey, var/reason)
 		playerid = query.item[1]
 	if(playerid == -1)
 		to_chat(usr,"<font color='red'>You've attempted to set staffwarn on [ckey], but they haven't been seen yet. Staffwarn can only be set on existing players.</font>")
+		qdel(query)
 		return
 	query = SSdbcore.NewQuery("UPDATE erro_player SET staffwarn='[dbreason]' WHERE id=[playerid]")
 	query.Execute()
 	to_chat(usr,"<span class='notice'>StaffWarn saved to database.</span>")
+	qdel(query)
 
 datum/admins/proc/DB_staffwarn_remove(var/ckey)
 	if(!check_rights((R_ADMIN|R_MOD), 0)) return
@@ -39,8 +41,10 @@ datum/admins/proc/DB_staffwarn_remove(var/ckey)
 	query.Execute()
 	if(query.affected != 1)
 		to_chat(usr,"<span class='error'>StaffWarn unable to be removed from database!</span>")
+		qdel(query)
 		return 0
 	to_chat(usr,"<span class='notice'>StaffWarn removed from database.</span>")
+	qdel(query)
 	return 1
 
 datum/admins/proc/DB_ban_record(var/bantype, var/mob/banned_mob, var/duration = -1, var/reason, var/job = "", var/rounds = 0, var/banckey = null, var/banip = null, var/bancid = null)
@@ -126,6 +130,7 @@ datum/admins/proc/DB_ban_record(var/bantype, var/mob/banned_mob, var/duration = 
 		to_chat(usr, "<span class='notice'>Ban saved to database.</span>")
 		setter = key_name_admin(usr)
 	message_admins("[setter] has added a [bantype_str] for [ckey] [(job)?"([job])":""] [(duration > 0)?"([minutes_to_readable(duration)])":""] with the reason: \"[reason]\" to the ban database.",1)
+	qdel(query_insert)
 	return 1
 
 
@@ -180,19 +185,23 @@ datum/admins/proc/DB_ban_unban(var/ckey, var/bantype, var/job = "")
 
 	if(ban_number == 0)
 		to_chat(usr, "<span class='warning'>Database update failed due to no bans fitting the search criteria. If this is not a legacy ban you should contact the database admin.</span>")
+		qdel(query)
 		return
 
 	if(ban_number > 1)
 		to_chat(usr, "<span class='warning'>Database update failed due to multiple bans fitting the search criteria. Note down the ckey, job and current time and contact the database admin.</span>")
+		qdel(query)
 		return
 
 	if(istext(ban_id))
 		ban_id = text2num(ban_id)
 	if(!isnum(ban_id))
 		to_chat(usr, "<span class='warning'>Database update failed due to a ban ID mismatch. Contact the database admin.</span>")
+		qdel(query)
 		return
 
 	DB_ban_unban_by_id(ban_id)
+	qdel(query)
 
 datum/admins/proc/DB_ban_edit(var/banid = null, var/param = null)
 
@@ -216,8 +225,10 @@ datum/admins/proc/DB_ban_edit(var/banid = null, var/param = null)
 		reason = query.item[3]
 	else
 		to_chat(usr, "Invalid ban id. Contact the database admin")
+		qdel(query)
 		return
 
+	qdel(query)
 	reason = sql_sanitize_text(reason)
 	var/value
 
@@ -233,6 +244,7 @@ datum/admins/proc/DB_ban_edit(var/banid = null, var/param = null)
 			var/datum/db_query/update_query = SSdbcore.NewQuery("UPDATE erro_ban SET reason = '[value]', edits = CONCAT(edits,'- [eckey] changed ban reason from <cite><b>\\\"[reason]\\\"</b></cite> to <cite><b>\\\"[value]\\\"</b></cite><BR>') WHERE id = [banid]")
 			update_query.Execute()
 			message_admins("[key_name_admin(usr)] has edited a ban for [pckey]'s reason from [reason] to [value]",1)
+			qdel(update_query)
 		if("duration")
 			if(!value)
 				value = input("Insert the new duration (in minutes) for [pckey]'s ban", "New Duration", "[duration]", null) as null|num
@@ -243,6 +255,7 @@ datum/admins/proc/DB_ban_edit(var/banid = null, var/param = null)
 			var/datum/db_query/update_query = SSdbcore.NewQuery("UPDATE erro_ban SET duration = [value], edits = CONCAT(edits,'- [eckey] changed ban duration from [duration] to [value]<br>'), expiration_time = DATE_ADD(bantime, INTERVAL [value] MINUTE) WHERE id = [banid]")
 			message_admins("[key_name_admin(usr)] has edited a ban for [pckey]'s duration from [duration] to [value]",1)
 			update_query.Execute()
+			qdel(update_query)
 		if("unban")
 			if(alert("Unban [pckey]?", "Unban?", "Yes", "No") == "Yes")
 				DB_ban_unban_by_id(banid)
@@ -273,6 +286,7 @@ datum/admins/proc/DB_ban_unban_by_id(var/id)
 		pckey = query.item[1]
 		ban_number++;
 
+	qdel(query)
 	if(ban_number == 0)
 		to_chat(usr, "<span class='warning'>Database update failed due to a ban id not being present in the database.</span>")
 		return
@@ -293,6 +307,7 @@ datum/admins/proc/DB_ban_unban_by_id(var/id)
 
 	var/datum/db_query/query_update = SSdbcore.NewQuery(sql_update)
 	query_update.Execute()
+	qdel(query_update)
 
 
 /client/proc/DB_ban_panel()
@@ -522,5 +537,6 @@ datum/admins/proc/DB_ban_unban_by_id(var/id)
 				output += "</tr>"
 
 			output += "</table></div>"
+			qdel(select_query)
 
 	show_browser(usr, output,"window=lookupbans;size=900x700")
