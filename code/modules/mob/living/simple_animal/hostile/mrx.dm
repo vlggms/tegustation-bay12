@@ -1,7 +1,7 @@
 /mob/living/simple_animal/hostile/mrx
 	name = "Mr. X"
 	desc = "He gonna give it to ya"
-	icon = 'icons/mob/simple_animal/mrx.dmi'
+	icon = 'icons/mob/simple_animal/xman.dmi'
 	icon_state = "mrx-living"
 	icon_living = "mrx-living"
 	icon_dead = "mrdead"
