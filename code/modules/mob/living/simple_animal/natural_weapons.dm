@@ -55,6 +55,11 @@
 	attack_verb = list("kicked")
 	force = 5
 
+/obj/item/natural_weapon/opm
+	name = "fists"
+	attack_verb = list("Given it to")
+	force = 1000
+	hitsound = 'sound/weapons/bite.ogg'
 /obj/item/natural_weapon/punch
 	name = "fists"
 	attack_verb = list("punched")

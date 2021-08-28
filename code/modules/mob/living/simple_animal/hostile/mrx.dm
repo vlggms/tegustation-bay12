@@ -5,7 +5,6 @@
 	icon_state = "mrx-living"
 	icon_living = "mrx-living"
 	icon_dead = "mrdead"
-	icon_gib = "bear_gib"
 
 	faction = "anti-erp"
 
@@ -13,16 +12,16 @@
 	health = 500
 
 	movement_cooldown = 0.5 SECONDS
-	natural_weapon = /obj/item/natural_weapon/punch
+	natural_weapon = /obj/item/natural_weapon/opm
 	melee_attack_delay = 0.5 SECOND
-	attacktext = list("GAVE IT TO")
+	attacktext = list("Given it to")
 
 	//Mr X aint affected by atmos.
 	min_gas = null
 	max_gas = null
 	minbodytemp = 0
 
-var/mrx_step_sound = 'sound/mecha/mechstep.ogg'
+var/mrx_step_sound = 'sound/misc/mrxboots.ogg'
 /mob/living/simple_animal/hostile/mrx/Move()
 	. = ..()
 	if(. && !istype(loc, /turf/space))
