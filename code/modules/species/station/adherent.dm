@@ -3,9 +3,9 @@
 	name_plural = "Adherents"
 
 	description = "The Vigil is a relatively loose association of machine-servitors, Adherents, \
-	built by an extinct culture. They are devoted to the memory of their long-dead creators, \
+	built by an extinct culture. They are devoted to the memory of their long-dead Creators, \
 	whose home system and burgeoning stellar empire was scoured to bedrock by a solar flare. \
-	Physically, they are large, floating squidlike machines made of a crystalline composite."
+	Physically, they are large, floating, squidlike machines that made of a crystalline composite."
 	hidden_from_codex = FALSE
 	silent_steps = TRUE
 
