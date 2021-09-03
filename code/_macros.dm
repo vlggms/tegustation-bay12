@@ -193,6 +193,8 @@ var/const/NEGATIVE_INFINITY = -1#INF // win: -1.#INF, lin: -inf
 
 #define SPAN_STYLE(style, X) "<span style=\"[style]\">[X]</span>"
 
+#define SPAN_CLASS(class, X) "<span class=\"[class]\">[X]</span>"
+
 #define FONT_COLORED(color, text) "<font color='[color]'>[text]</font>"
 
 #define FONT_SMALL(X) "<font size='1'>[X]</font>"

@@ -124,6 +124,65 @@
 	if(bound_overlay)
 		bound_overlay.visible_message(message, blind_message, range)
 
+/**
+ * Show a message to all mobs and objects in sight of this one or `causer`
+ * This should be used for messages where two mobs interact - healing, injections, fighting, and so on
+ * message is the message output to anyone who can see, e.g. "[causer] does something to [src]!"
+ * self_message (optional) is what the src mob sees, e.g. "[causer] does something to you!"
+ * causer_message is what the causer mob sees, e.g. "You do something to [src]!"
+ * blind_message (optional) is what blind people will hear, e.g. "You hear something!"
+ * blind_self_message (optional) is what the source mob will hear/feel if blind, e.g. "You feel something done to you!"
+ */
+/mob/proc/interact_message(mob/causer, message, self_message, causer_message, blind_message, blind_self_message, range = world.view, checkghosts = null, mode = VISIBLE_MESSAGE, list/exclude_objs = null, list/exclude_mobs = null)
+	set waitfor = FALSE
+	var/turf/T = get_turf(src)
+	var/list/mobs = list()
+	var/list/objs = list()
+	get_mobs_and_objs_in_view_fast(T, range, mobs, objs, checkghosts)
+	T = get_turf(causer)
+	get_mobs_and_objs_in_view_fast(T, range, mobs, objs, checkghosts) // show the message to atoms that can see either mob
+	mobs = uniquelist(mobs) // clear the inevitable duplicates that'll show up when running the above logic
+	objs = uniquelist(objs)
+
+	for (var/o in objs)
+		var/obj/O = o
+		if (exclude_objs?.len && (O in exclude_objs))
+			exclude_objs -= O
+			continue
+		O.show_message(message, VISIBLE_MESSAGE, blind_message, AUDIBLE_MESSAGE)
+
+	for (var/m in mobs)
+		var/mob/M = m
+		if (exclude_mobs?.len && (M in exclude_mobs))
+			exclude_mobs -= M
+			continue
+
+		var/mob_message = message
+
+		if (isghost(M))
+			if(ghost_skip_message(M))
+				continue
+			mob_message = add_ghost_track(mob_message, M)
+
+		if (self_message && (M == src || causer == src))
+			M.show_message(self_message, VISIBLE_MESSAGE, blind_self_message, AUDIBLE_MESSAGE)
+			continue
+
+		if (M == causer)
+			M.show_message(causer_message, VISIBLE_MESSAGE, blind_message, AUDIBLE_MESSAGE)
+			continue
+
+		if (!M.is_blind() && M.see_invisible >= src.invisibility)
+			M.show_message(mob_message, VISIBLE_MESSAGE, blind_message, AUDIBLE_MESSAGE)
+			continue
+
+		if (blind_message)
+			M.show_message(blind_message, AUDIBLE_MESSAGE)
+			continue
+
+	if (bound_overlay)
+		bound_overlay.visible_message(message, blind_message, range)
+
 // Show a message to all mobs and objects in earshot of this one
 // This would be for audible actions by the src mob
 // message is the message output to anyone who can hear.
