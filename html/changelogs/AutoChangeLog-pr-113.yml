@@ -1,0 +1,5 @@
+author: Mucker, Hubblenaut , Sky
+delete-after: true
+changes:
+  - bugfix: Mobs not trying to break through solid turf when attacking
+  - bugfix: Xenobotany can now grow unlimited seeds
