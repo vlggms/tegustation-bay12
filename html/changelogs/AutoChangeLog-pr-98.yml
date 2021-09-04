@@ -1,6 +1,0 @@
-author: Ilysen
-delete-after: true
-changes:
-  - spellcheck: Flashes now display their use messages in second person for both the
-      mob doing the flashing and the mob being flashed. This is the first step towards
-      properly targeted messages!
