@@ -1,0 +1,7 @@
+author: SierraKomodo, Azlan
+delete-after: true
+changes:
+  - rscadd: 'Teleporter beacons have been completely replaced with machinery-based
+      beacons. These beacons hide under floor tiles when fully installed, and can
+      only be targeted and used by teleporter consoles when powered, anchored, and
+      un-tampered with. See PR #109 on GitHub for detailed changes.'
