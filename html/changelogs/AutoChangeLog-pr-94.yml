@@ -1,9 +1,0 @@
-author: Ilysen
-delete-after: true
-changes:
-  - maptweak: The bluespace river away site has received some map adjustments and
-      modernization.
-  - maptweak: An anomaly scanner (Alden-Saraspova counter) can now be used on some
-      objects and turfs in the bluespace river away site for some fluff text.
-  - bugfix: Welding apart floors in the bluespace river's underground z-level no longer
-      creates space tiles.
