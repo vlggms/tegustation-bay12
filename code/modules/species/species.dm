@@ -412,8 +412,22 @@ The slots that you can use are found in items_clothing.dm and are the inventory 
 		if(FEMALE)
 			t_him = "her"
 
-	H.visible_message("<span class='notice'>[H] hugs [target] to make [t_him] feel better!</span>", \
-					"<span class='notice'>You hug [target] to make [t_him] feel better!</span>")
+	var/zonefound = FALSE //Used as a hacky default statement, since the cases require extra checks to make sure we aren't interacting with a missing limb
+	if(ishuman(target))
+		var/mob/living/carbon/human/U = target
+		switch(H.zone_sel.selecting)
+			if(BP_R_HAND)
+				if(U.has_organ(BP_R_HAND))
+					H.visible_message(SPAN_NOTICE("\The [H] shakes \the [U]'s hand."), SPAN_NOTICE("You shake \the [U]'s hand."))
+					zonefound = TRUE
+			if(BP_L_HAND)
+				if(U.has_organ(BP_L_HAND))
+					H.visible_message(SPAN_NOTICE("\The [H] shakes \the [U]'s hand."), SPAN_NOTICE("You shake \the [U]'s hand."))
+					zonefound = TRUE
+			//here is where tail entwining will go one day
+
+	if(!zonefound) //If they are not human or we don't have the specified body part, default to hugs
+		H.visible_message(SPAN_NOTICE("[H] hugs [target] to make [t_him] feel better!"), SPAN_NOTICE("You hug [target] to make [t_him] feel better!"))
 
 	if(H != target)
 		H.update_personal_goal(/datum/goal/achievement/givehug, TRUE)
