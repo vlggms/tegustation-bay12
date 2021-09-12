@@ -1,7 +1,0 @@
-author: Shadowtail117
-delete-after: true
-changes:
-  - rscadd: You can now pull someone by the hands if you target a hand that they have
-      and pull them.
-  - rscadd: You can now shake someone's hand if you target a hand that they have and
-      click on them with help intent.
