@@ -425,6 +425,8 @@
 			return global.fire_alarm;
 		if("flesh_hud_colours")
 			return global.flesh_hud_colours;
+		if("floating_chat_colors")
+			return global.floating_chat_colors;
 		if("floorIsLava")
 			return global.floorIsLava;
 		if("floor_decals")
@@ -1302,6 +1304,8 @@
 			global.fire_alarm=newval;
 		if("flesh_hud_colours")
 			global.flesh_hud_colours=newval;
+		if("floating_chat_colors")
+			global.floating_chat_colors=newval;
 		if("floorIsLava")
 			global.floorIsLava=newval;
 		if("floor_decals")
@@ -1966,6 +1970,7 @@
 	"finds_as_strings",
 	"fire_alarm",
 	"flesh_hud_colours",
+	"floating_chat_colors",
 	"floorIsLava",
 	"floor_decals",
 	"floor_light_cache",
