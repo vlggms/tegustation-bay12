@@ -9,7 +9,7 @@
 ## Did you test it?
 
 <!--
-Please decribe if you ran local tests to ensure compilation. If that is not the case, please make it abundantly clear so a maintainer knows they need to run local checks.
+Please describe if you ran local tests to ensure compilation. If that is not the case, please make it abundantly clear so a maintainer knows they need to run local checks.
 Note that this can include own balancing/gameplay tests, but does not need to.
 -->
 
