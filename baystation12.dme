@@ -2539,7 +2539,7 @@
 #include "code\modules\overmap\exoplanets\planet_types\barren.dm"
 #include "code\modules\overmap\exoplanets\planet_types\chlorine.dm"
 #include "code\modules\overmap\exoplanets\planet_types\desert.dm"
-#include "code\modules\overmap\exoplanets\planet_types\grass.dm"
+#include "code\modules\overmap\exoplanets\planet_types\lush.dm"
 #include "code\modules\overmap\exoplanets\planet_types\shrouded.dm"
 #include "code\modules\overmap\exoplanets\planet_types\snow.dm"
 #include "code\modules\overmap\exoplanets\planet_types\volcanic.dm"
