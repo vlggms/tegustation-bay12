@@ -1,0 +1,6 @@
+author: Ilysen
+delete-after: true
+changes:
+  - tweak: Reformatted printed exoplanet scan reports.
+  - tweak: Exoplanet scans now show the estimated amount of minerals on the planet
+      (for mining drills).
