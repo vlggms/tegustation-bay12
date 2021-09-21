@@ -1,6 +1,0 @@
-author: Sky, Retlaw
-delete-after: true
-changes:
-  - tweak: New resprites of bluespace, normal and noreaction syringes
-  - tweak: different reagent fillings in order to accommodate the new syringes
-  - tweak: new inject and draw icons for syringes
