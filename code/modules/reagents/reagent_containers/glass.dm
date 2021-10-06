@@ -259,7 +259,7 @@
 /obj/item/reagent_containers/glass/beaker/sulphuric
 	New()
 		..()
-		reagents.add_reagent(/datum/reagent/acid, 60)
+		reagents.add_reagent(/datum/reagent/acid/sulphuric, 60)
 		update_icon()
 
 /obj/item/reagent_containers/glass/bucket

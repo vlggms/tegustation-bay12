@@ -206,7 +206,7 @@
 
 /obj/item/reagent_containers/spray/plantbgone/New()
 	..()
-	reagents.add_reagent(/datum/reagent/toxin/plantbgone, 100)
+	reagents.add_reagent(/datum/reagent/toxin/plant_b_gone, 100)
 
 /obj/item/reagent_containers/spray/plantbgone/afterattack(atom/A as mob|obj, mob/user as mob, proximity)
 	if(!proximity) return

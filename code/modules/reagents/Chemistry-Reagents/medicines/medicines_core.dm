@@ -83,7 +83,7 @@
 	var/remove_generic = TRUE
 	/// Reagents in this list will be removed from the holder's body each time this reagent ticks.
 	var/list/remove_toxins = list(
-		/datum/reagent/toxin/zombiepowder
+		/datum/reagent/toxin/zombie_powder
 	)
 
 /datum/reagent/medicine/dylovene/affect_blood(mob/living/carbon/M, alien, removed)

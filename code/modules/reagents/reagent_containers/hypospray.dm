@@ -221,7 +221,7 @@
 /obj/item/reagent_containers/hypospray/autoinjector/mindbreaker
 	name = "autoinjector"
 	band_color = COLOR_DARK_GRAY
-	starts_with = list(/datum/reagent/mindbreaker = 5)
+	starts_with = list(/datum/reagent/mindbreaker_toxin = 5)
 
 /obj/item/reagent_containers/hypospray/autoinjector/empty
 	name = "autoinjector"

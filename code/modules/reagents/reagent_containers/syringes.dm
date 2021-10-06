@@ -390,7 +390,7 @@
 /obj/item/reagent_containers/syringe/drugs/New()
 	..()
 	reagents.add_reagent(/datum/reagent/space_drugs, 5)
-	reagents.add_reagent(/datum/reagent/mindbreaker, 5)
+	reagents.add_reagent(/datum/reagent/mindbreaker_toxin, 5)
 	reagents.add_reagent(/datum/reagent/cryptobiolin, 5)
 	mode = SYRINGE_INJECT
 	update_icon()
@@ -399,7 +399,7 @@
 
 /obj/item/reagent_containers/syringe/ld50_syringe/choral/New()
 	..()
-	reagents.add_reagent(/datum/reagent/chloralhydrate, 60)
+	reagents.add_reagent(/datum/reagent/chloral_hydrate, 60)
 	mode = SYRINGE_INJECT
 	update_icon()
 

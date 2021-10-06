@@ -1,8 +1,8 @@
 /**
-  * Template reagent used for medicines.
-  * In general, medicines are liquid, metabolize at REM, overdose at REAGENTS_OVERDOSE, can be scanned, and ignore mob size.
-  * As with all chems, these facts vary based on subtype.
-  */
+ * Template reagent used for medicines.
+ * In general, medicines are liquid, metabolize at REM, overdose at REAGENTS_OVERDOSE, can be scanned, and ignore mob size.
+ * As with all chems, these facts vary based on subtype.
+ */
 /datum/reagent/medicine
 	flags = IGNORE_MOB_SIZE
 	metabolism = REM

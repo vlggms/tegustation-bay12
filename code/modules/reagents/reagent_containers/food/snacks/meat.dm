@@ -112,7 +112,7 @@
 	bitesize = 6
 	food_reagents = list(
 		/datum/reagent/nutriment/protein = 6,
-		/datum/reagent/acid/polyacid = 6
+		/datum/reagent/acid/polytrinic = 6
 	)
 
 /obj/item/reagent_containers/food/snacks/sausage
