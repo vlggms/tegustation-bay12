@@ -1,7 +1,0 @@
-author: Ilysen
-delete-after: true
-changes:
-  - spellcheck: The names of several reagents have been capitalized.
-  - spellcheck: Added descriptions to many reagents that lacked them, and rewrote
-      several descriptions that were either barebones or didn't actually explain much
-      about what the reagents did.
