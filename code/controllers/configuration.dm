@@ -215,6 +215,8 @@ var/list/gamemode_cache = list()
 	var/max_acts_per_interval = 140 //Number of actions per interval permitted for spam protection.
 	var/act_interval = 0.1 SECONDS //Interval for spam prevention.
 
+	var/allow_diagonal_movement = FALSE
+
 	var/max_explosion_range = 14
 	var/hub_visible = FALSE
 
@@ -717,6 +719,9 @@ var/list/gamemode_cache = list()
 					config.max_acts_per_interval = text2num(value)
 				if ("act_interval")
 					config.act_interval = text2num(value) SECONDS
+
+				if("allow_diagonal_movement")
+					config.allow_diagonal_movement = TRUE
 
 				if ("sleep_offline_after_init")
 					config.sleep_offline_after_init = TRUE

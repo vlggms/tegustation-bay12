@@ -57,6 +57,8 @@ datum/preferences
 	real_name = random_name(gender,species)
 	b_type = RANDOM_BLOOD_TYPE
 
+	key_bindings = deepCopyList(global.hotkey_keybinding_list_by_key)
+
 	if(client)
 		if(IsGuestKey(client.key))
 			is_guest = TRUE
