@@ -1,0 +1,4 @@
+author: Mucker, Sky
+delete-after: true
+changes:
+  - bugfix: simple mobs cant walk in space
