@@ -1185,15 +1185,15 @@ window "rpane"
 		text = "Changelog"
 		command = "Changelog"
 		group = "rpanemode"
-	elem "Lore"
+	elem "discord"
 		type = BUTTON
 		pos = 208,0
 		size = 60x15
 		anchor1 = none
 		anchor2 = none
 		saved-params = "is-checked"
-		text = "Lore"
-		command = "Lore"
+		text = "Discord"
+		command = "discord"
 		group = "rpanemode"
 	elem "forumb"
 		type = BUTTON

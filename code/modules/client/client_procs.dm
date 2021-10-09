@@ -210,9 +210,9 @@
 		if(config.aggressive_changelog)
 			src.changes()
 
-	if(isnum(player_age) && player_age < 7)
+	if(isnum(player_age) && player_age < 3)
 		src.lore_splash()
-		to_chat(src, "<span class = 'notice'>Greetings, and welcome to the server! A link to the beginner's lore page has been opened, please read through it! This window will stop automatically opening once your account here is greater than 7 days old.</span>")
+		to_chat(src, "<span class = 'notice'>Greetings, and welcome to the server! A link to the beginner's lore page has been opened, please read through it! This window will stop automatically opening once your account here is greater than 3 days old.</span>")
 
 	if(!winexists(src, "asset_cache_browser")) // The client is using a custom skin, tell them.
 		to_chat(src, "<span class='warning'>Unable to access asset cache browser, if you are using a custom skin file, please allow DS to download the updated version, if you are not, then make a bug report. This is not a critical issue but can cause issues with resource downloading, as it is impossible to know when extra resources arrived to you.</span>")
@@ -496,3 +496,9 @@ client/verb/character_setup()
 
 		pct += delta
 		winset(src, "mainwindow.mainvsplit", "splitter=[pct]")
+
+/client/verb/show_lore()
+	set name = "Show Lore"
+	set category = "OOC"
+	set desc = "Show the lore page of server"
+	src.lore_splash()

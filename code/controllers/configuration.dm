@@ -86,6 +86,7 @@ var/list/gamemode_cache = list()
 	var/banappeals
 	var/wikiurl
 	var/forumurl
+	var/discordurl
 	var/githuburl
 	var/issuereporturl
 
@@ -442,6 +443,9 @@ var/list/gamemode_cache = list()
 
 				if ("forumurl")
 					config.forumurl = value
+
+				if ("discordurl")
+					config.discordurl = value
 
 				if ("githuburl")
 					config.githuburl = value
