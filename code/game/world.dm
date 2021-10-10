@@ -544,51 +544,41 @@ GLOBAL_VAR_INIT(world_topic_last, world.timeofday)
 		s += "<b>[config.server_name]</b> &#8212; "
 
 	s += "<b>High RP</b>";
+
+	if(config && config.server_desc)
+		s += "<br>"
+		s += config.server_desc
+
 	s += "<br>"
-
-	var/list/features = list()
-
 	if(SSticker.master_mode)
-		features += SSticker.master_mode
+		s += "Gamemode: [SSticker.master_mode]"
 	else
-		features += "<b>STARTING</b>"
+		s += "<b>ROUND STARTING</b>"
 
 	if (!config.enter_allowed)
-		features += "closed"
+		s += "<br>"
+		s += "Server closed"
 
-	features += config.abandon_allowed ? "respawn" : "no respawn"
-
-	if (config && config.allow_vote_mode)
-		features += "vote"
-
-	var/n = 0
-	for (var/mob/M in GLOB.player_list)
-		if (M.client)
-			n++
-
-	if (n > 1)
-		features += "~[n] players"
-	else if (n > 0)
-		features += "~[n] player"
-
+	s += "<br>"
+	s += config.abandon_allowed ? "Respawn allowed" : "No respawn"
 
 	if (config && config.hostedby)
-		features += "hosted by <b>[config.hostedby]</b>"
-
-	if (features)
-		s += ": [jointext(features, ", ")]"
+		s += "<br>"
+		s += "Hosted by <b>[config.hostedby]</b>"
 
 	// Forum link
-	s += "<br>"
-	s += "<a href=\"https://forum.tegustation.com/index.php\">" //Change this to wherever you want the hub to link to.
-	s += "Forums"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
-	s += "</a>"
+	if(config && config.forumurl)
+		s += "<br>"
+		s += "<a href=\"[config.forumurl]\">"
+		s += "Forums"
+		s += "</a>"
 
 	// Discord link
-	s += "<br>"
-	s += "<a href=\"https://discord.gg/AzmEhtH\">"
-	s += "Discord"
-	s += "</a>"
+	if(config && config.discordurl)
+		s += "<br>"
+		s += "<a href=\"[config.discordurl]\">"
+		s += "Discord"
+		s += "</a>"
 
 	/* does this help? I do not know */
 	if (src.status != s)
