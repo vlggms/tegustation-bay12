@@ -1,5 +1,0 @@
-author: EgorDinamit
-delete-after: true
-changes:
-  - tweak: Multiple progress bars may appear if you are attempting to complete multiple
-      tasks.
