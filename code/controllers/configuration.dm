@@ -2,6 +2,7 @@ var/list/gamemode_cache = list()
 
 /datum/configuration
 	var/server_name = null				// server name (for world name / status)
+	var/server_desc = null				// message to appear on the hub below server name, if set
 	var/server_suffix = 0				// generate numeric suffix based on server port
 	var/game_version = "Baystation12" //for topic status requests
 
@@ -422,6 +423,9 @@ var/list/gamemode_cache = list()
 
 				if ("servername")
 					config.server_name = value
+
+				if ("serverdesc")
+					config.server_desc = value
 
 				if ("serversuffix")
 					config.server_suffix = 1
