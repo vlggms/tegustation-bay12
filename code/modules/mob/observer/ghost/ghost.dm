@@ -281,13 +281,28 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		ghost_to_turf(T)
 	else
 		to_chat(src, "<span class='warning'>Invalid coordinates.</span>")
-/mob/observer/ghost/verb/follow(var/datum/follow_holder/fh in get_follow_targets())
+
+/mob/observer/ghost/verb/follow(var/mob/fh in GLOB.clients)
 	set category = "Ghost"
 	set name = "Follow"
-	set desc = "Follow and haunt a mob."
+	set desc = "Follow a player."
 
-	if(!fh.show_entry()) return
-	start_following(fh.followed_instance)
+	if(!fh)
+		return
+	start_following(fh)
+
+/mob/observer/ghost/verb/jumptomob(var/mob/M in SSmobs.mob_list)
+	set category = "Ghost"
+	set name = "Jump to Mob"
+	set desc = "Jump to any mob."
+
+	if(!M)
+		return
+	var/turf/T = get_turf(M)
+	if(!T)
+		to_chat(src, "<span class='warning'>Cannot jump to this mob!</span>")
+		return
+	ghost_to_turf(T)
 
 /mob/observer/ghost/proc/ghost_to_turf(var/turf/target_turf)
 	if(check_is_holy_turf(target_turf))
