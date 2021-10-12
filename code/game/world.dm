@@ -79,9 +79,6 @@ GLOBAL_VAR(href_logfile)
 	diary = file("data/logs/[date_string].log")
 	to_file(diary, "[log_end]\n[log_end]\nStarting up. (ID: [game_id]) [time2text(world.timeofday, "hh:mm.ss")][log_end]\n---------------------[log_end]")
 
-	if(config && config.server_name != null && config.server_suffix && world.port > 0)
-		config.server_name += " #[(world.port % 1000) / 100]"
-
 	if(config && config.log_runtime)
 		var/runtime_log = file("data/logs/runtime/[date_string]_[time2text(world.timeofday, "hh:mm")]_[game_id].log")
 		to_file(runtime_log, "Game [game_id] starting up at [time2text(world.timeofday, "hh:mm.ss")]")
@@ -541,9 +538,10 @@ GLOBAL_VAR_INIT(world_topic_last, world.timeofday)
 	var/s = ""
 
 	if (config && config.server_name)
-		s += "<b>[config.server_name]</b> &#8212; "
+		s += "<b>[config.server_name]</b>"
 
-	s += "<b>High RP</b>";
+	if (config && config.server_suffix)
+		s += " &#8212; <b>[config.server_suffix]</b>"
 
 	if(config && config.server_desc)
 		s += "<br>"
