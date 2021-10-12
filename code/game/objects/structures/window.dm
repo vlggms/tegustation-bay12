@@ -252,7 +252,7 @@
 				attack_generic(H,25)
 				return
 
-		playsound(src.loc, 'sound/effects/glassknock.ogg', 80, 1)
+		playsound(src.loc, 'sound/effects/glassbash.ogg', 80, 1)
 		user.do_attack_animation(src)
 		user.visible_message("<span class='danger'>\The [user] bangs against \the [src]!</span>",
 							"<span class='danger'>You bang against \the [src]!</span>",
