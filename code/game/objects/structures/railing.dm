@@ -294,7 +294,7 @@
 	. = ..()
 	if(. && get_turf(user) == get_turf(src))
 		var/turf/T = get_step(src, src.dir)
-		if(T.turf_is_crowded(user))
+		if (T.density || T.turf_is_crowded(user))
 			to_chat(user, "<span class='warning'>You can't climb there, the way is blocked.</span>")
 			return 0
 
@@ -306,6 +306,18 @@
 
 	user.jump_layer_shift()
 	addtimer(CALLBACK(user, /mob/living/proc/jump_layer_shift_end), 2)
+
+/obj/structure/railing/slam_into(mob/living/L)
+	var/turf/target_turf = get_turf(src)
+	if (target_turf == get_turf(L))
+		target_turf = get_step(src, dir)
+	if (!target_turf.density && !target_turf.turf_is_crowded(L))
+		L.forceMove(target_turf)
+		L.visible_message(SPAN_WARNING("\The [L] [pick("falls", "flies")] over \the [src]!"))
+		L.Weaken(2)
+		playsound(L, 'sound/effects/grillehit.ogg', 25, 1, FALSE)
+	else
+		..()
 
 /obj/structure/railing/set_color(color)
 	src.color = color ? color : material.icon_colour

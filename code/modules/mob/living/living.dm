@@ -140,11 +140,8 @@ default behaviour is:
 			..()
 			var/saved_dir = AM.dir
 			if (!istype(AM, /atom/movable) || AM.anchored)
-				if(confused && prob(50) && !MOVING_DELIBERATELY(src))
-					Weaken(2)
-					playsound(loc, "punch", 25, 1, -1)
-					visible_message("<span class='warning'>[src] [pick("ran", "slammed")] into \the [AM]!</span>")
-					src.apply_damage(5, BRUTE)
+				if ((confused || (MUTATION_CLUMSY in mutations)) && !weakened && !MOVING_DELIBERATELY(src))
+					AM.slam_into(src)
 				return
 			if (!now_pushing)
 				now_pushing = 1
