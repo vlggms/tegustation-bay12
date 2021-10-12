@@ -189,6 +189,8 @@ var/const/NEGATIVE_INFINITY = -1#INF // win: -1.#INF, lin: -inf
 
 #define SPAN_DEBUG(X) "<span class='debug'>[X]</span>"
 
+#define SPAN_DEADSAY(X) "<span class='deadsay'>[X]</span>"
+
 #define SPAN_MENTOR(X) "<span class='mentor'>[X]</span>"
 
 #define SPAN_STYLE(style, X) "<span style=\"[style]\">[X]</span>"
