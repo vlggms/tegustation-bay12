@@ -282,19 +282,20 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	else
 		to_chat(src, "<span class='warning'>Invalid coordinates.</span>")
 
-/mob/observer/ghost/verb/follow(var/mob/fh in GLOB.clients)
+/mob/observer/ghost/verb/follow(var/mob/fh in GLOB.player_list)
 	set category = "Ghost"
 	set name = "Follow"
-	set desc = "Follow a player."
+	set desc = "Follow a player"
 
 	if(!fh)
+		to_chat(src, "<span class='warning'>No active players found.</span>")
 		return
 	start_following(fh)
 
 /mob/observer/ghost/verb/jumptomob(var/mob/M in SSmobs.mob_list)
 	set category = "Ghost"
 	set name = "Jump to Mob"
-	set desc = "Jump to any mob."
+	set desc = "Jump to any mob"
 
 	if(!M)
 		return
