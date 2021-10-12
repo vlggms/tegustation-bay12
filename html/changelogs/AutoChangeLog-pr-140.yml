@@ -1,0 +1,4 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: Ghost "Follow" verb now only shows mobs with clients(player-controlled).
