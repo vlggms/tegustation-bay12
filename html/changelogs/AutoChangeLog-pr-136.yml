@@ -1,0 +1,5 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: Examining items inside your backpack will not show a message just at what
+      item you are looking.
