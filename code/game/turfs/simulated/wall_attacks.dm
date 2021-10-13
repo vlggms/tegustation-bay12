@@ -414,6 +414,7 @@
 				SPAN_WARNING("You hear the sound of something hitting a wall.")
 			)
 			take_damage(received_damage)
+			user.do_attack_animation(src)
 		else
 			playsound(src, hitsound, 25, 1)
 			user.visible_message(
