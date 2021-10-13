@@ -164,7 +164,7 @@
 		melee = ARMOR_MELEE_RESISTANT
 		)
 
-	ai_holder_type = /datum/ai_holder/simple_animal/royalcrab
+	ai_holder_type = /datum/ai_holder/simple_animal/retaliate/royalcrab
 	say_list = /datum/say_list/royalcrab
 
 /mob/living/simple_animal/hostile/retaliate/beast/charbaby
@@ -218,26 +218,6 @@
 
 	say_list_type = /datum/say_list/shantak/lava
 
-//Mob AI's
-
-// /datum/ai_holder/simple_animal/retaliate/beast/list_targets()
-// 	. = ..()
-
-// 	var/mob/living/simple_animal/hostile/retaliate/beast/B = holder
-// 	var/list/see = ..()
-// 	if(see.len)
-// 		return see
-// 	if(B.prey.len)
-// 		. = list()
-// 		for(var/weakref/W in B.prey)
-// 			var/mob/M = W.resolve()
-// 			if(M)
-// 				. += M
-// 		return
-// 	if(B.hunger > 500) //time to look for some food
-// 		hostile = TRUE
-
-
 /* AI */
 
 /datum/ai_holder/simple_animal/diyaab/post_melee_attack(atom/A)
@@ -258,7 +238,7 @@
 /datum/ai_holder/simple_animal/passive/thinbug
 	speak_chance = 1
 
-/datum/ai_holder/simple_animal/royalcrab
+/datum/ai_holder/simple_animal/retaliate/royalcrab
 	speak_chance = 1
 
 /* Say Lists */
