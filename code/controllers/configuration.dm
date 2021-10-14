@@ -3,7 +3,7 @@ var/list/gamemode_cache = list()
 /datum/configuration
 	var/server_name = null				// server name (for world name / status)
 	var/server_desc = null				// message to appear on the hub below server name, if set
-	var/server_suffix = 0				// generate numeric suffix based on server port
+	var/server_suffix = null			// message to appear right after server's name
 	var/game_version = "Baystation12" //for topic status requests
 
 	var/log_ooc = 0						// log OOC channel
@@ -429,7 +429,7 @@ var/list/gamemode_cache = list()
 					config.server_desc = value
 
 				if ("serversuffix")
-					config.server_suffix = 1
+					config.server_suffix = value
 
 				if ("hostedby")
 					config.hostedby = value
