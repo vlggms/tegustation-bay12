@@ -115,12 +115,16 @@
 			return global.SSnano;
 		if("SSobj")
 			return global.SSobj;
+		if("SSoverlays")
+			return global.SSoverlays;
 		if("SSpersistence")
 			return global.SSpersistence;
 		if("SSplants")
 			return global.SSplants;
 		if("SSprocessing")
 			return global.SSprocessing;
+		if("SSprojectiles")
+			return global.SSprojectiles;
 		if("SSpsi")
 			return global.SSpsi;
 		if("SSradiation")
@@ -994,12 +998,16 @@
 			global.SSnano=newval;
 		if("SSobj")
 			global.SSobj=newval;
+		if("SSoverlays")
+			global.SSoverlays=newval;
 		if("SSpersistence")
 			global.SSpersistence=newval;
 		if("SSplants")
 			global.SSplants=newval;
 		if("SSprocessing")
 			global.SSprocessing=newval;
+		if("SSprojectiles")
+			global.SSprojectiles=newval;
 		if("SSpsi")
 			global.SSpsi=newval;
 		if("SSradiation")
@@ -1815,9 +1823,11 @@
 	"SSmobs",
 	"SSnano",
 	"SSobj",
+	"SSoverlays",
 	"SSpersistence",
 	"SSplants",
 	"SSprocessing",
+	"SSprojectiles",
 	"SSpsi",
 	"SSradiation",
 	"SSrobots",
