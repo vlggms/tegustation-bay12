@@ -1,4 +1,0 @@
-author: EgorDinamit
-delete-after: true
-changes:
-  - rscadd: Projectiles now use pixel-precise movement. Pew-pew.
