@@ -51,6 +51,7 @@ return;\
 // The numbers just define the ordering, they are meaningless otherwise.
 
 #define SS_INIT_EARLY            100
+#define SS_INIT_INPUT            99
 #define SS_INIT_GARBAGE          95
 #define SS_INIT_DBCORE           90
 #define SS_INIT_CHEMISTRY        17
