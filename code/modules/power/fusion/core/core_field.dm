@@ -175,6 +175,7 @@
 	Radiate()
 	if(radiation)
 		SSradiation.radiate(src, round(radiation))
+		radiation -= radiation * 0.1
 	return 1
 
 /obj/effect/fusion_em_field/proc/check_instability()
@@ -336,7 +337,7 @@
 		var/datum/gas_mixture/environment = owned_core.loc.return_air()
 		if(environment && environment.temperature < (T0C+1000)) // Putting an upper bound on it to stop it being used in a TEG.
 			environment.add_thermal_energy(plasma_temperature*20000)
-	radiation = 0
+	//radiation = 0
 
 /obj/effect/fusion_em_field/proc/change_size(var/newsize = 1)
 	var/changed = 0
