@@ -61,8 +61,6 @@
 	animate(bar, pixel_y = dist_to_travel, time = PROGRESSBAR_ANIMATION_TIME, easing = SINE_EASING)
 
 /datum/progressbar/private/Destroy()
-	if(last_progress != max_progress)
-		bar.icon_state = "[bar.icon_state]_fail"
 	for(var/I in actor.progressbars[bar.loc])
 		var/datum/progressbar/private/P = I
 		if(P != src && P.listindex > listindex)
