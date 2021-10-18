@@ -27,7 +27,7 @@
 	mercury		spawn_reagent = /datum/reagent/mercury
 	radium		spawn_reagent = /datum/reagent/radium
 	ethanol		spawn_reagent = /datum/reagent/ethanol
-	sacid		spawn_reagent = /datum/reagent/acid
+	sacid		spawn_reagent = /datum/reagent/acid/sulphuric
 	tungsten	spawn_reagent = /datum/reagent/tungsten
 
 	// Bar, alcoholic
