@@ -263,6 +263,10 @@
 	max_ammo = 40
 	multiple_sprites = 1
 
+/obj/item/ammo_magazine/proto_smg/hp
+	name = "submachine gun magazine (HP)"
+	ammo_type = /obj/item/ammo_casing/flechette/hp
+
 /obj/item/ammo_magazine/gyrojet
 	name = "microrocket magazine"
 	icon_state = "gyrojet"

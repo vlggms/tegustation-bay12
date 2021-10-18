@@ -130,7 +130,7 @@
 	distance_falloff = 4
 
 /obj/item/projectile/bullet/pistol/strong
-	fire_sound = 'sound/weapons/gunshot/gunshot_strong.ogg'
+	fire_sound = 'sound/weapons/gunshot/revolver.ogg'
 	damage = 50
 	penetration_modifier = 0.8
 	distance_falloff = 2.5
@@ -148,12 +148,18 @@
 
 //4mm. Tiny, very low damage, does not embed, but has very high penetration. Only to be used for the experimental SMG.
 /obj/item/projectile/bullet/flechette
-	fire_sound = 'sound/weapons/gunshot/gunshot_4mm.ogg'
+	fire_sound = 'sound/weapons/gunshot/smg.ogg'
 	damage = 23
 	penetrating = 1
 	armor_penetration = 70
 	embed = FALSE
 	distance_falloff = 2
+
+// Higher damage, less AP
+/obj/item/projectile/bullet/flechette/hp
+	fire_sound = 'sound/weapons/gunshot/smg_alt.ogg'
+	damage = 36
+	armor_penetration = 20
 
 /* shotgun projectiles */
 

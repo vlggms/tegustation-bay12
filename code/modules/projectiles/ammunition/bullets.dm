@@ -58,6 +58,9 @@
 	icon_state = "flechette-casing"
 	spent_icon = "flechette-casing-spent"
 
+/obj/item/ammo_casing/flechette/hp
+	projectile_type = /obj/item/projectile/bullet/flechette/hp
+
 /obj/item/ammo_casing/shotgun
 	name = "shotgun slug"
 	desc = "A shotgun slug."
