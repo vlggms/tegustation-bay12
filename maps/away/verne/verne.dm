@@ -74,13 +74,8 @@
 
 /obj/machinery/power/supermatter/randomsample
 	name = "experimental supermatter sample"
-	icon_state = "darkmatter_shard"
-	base_icon_state = "darkmatter_shard"
-
-/obj/machinery/power/supermatter/randomsample
-	name = "experimental supermatter sample"
-	icon_state = "darkmatter_shard"
-	base_icon_state = "darkmatter_shard"
+	icon_state = "supermatter_shard"
+	base_icon_state = "supermatter_shard"
 
 /obj/machinery/power/supermatter/randomsample/Initialize()
 	. = ..()
