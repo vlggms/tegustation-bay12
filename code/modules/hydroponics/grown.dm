@@ -151,7 +151,7 @@
 					return
 
 			M.stop_pulling()
-			to_chat(M, "<span class='notice'>You slipped on the [name]!</span>")
+			to_chat(M, SPAN_NOTICE("You slipped on the [name]!"))
 			playsound(src.loc, 'sound/misc/slip.ogg', 50, 1, -3)
 			M.Stun(8)
 			M.Weaken(5)
@@ -171,7 +171,7 @@
 			var/obj/item/stack/cable_coil/C = W
 			if(C.use(5))
 				//TODO: generalize this.
-				to_chat(user, "<span class='notice'>You add some cable to the [src.name] and slide it inside the battery casing.</span>")
+				to_chat(user, SPAN_NOTICE("You add some cable to the [src.name] and slide it inside the battery casing."))
 				var/obj/item/cell/potato/pocell = new /obj/item/cell/potato(get_turf(user))
 				if(src.loc == user && !(user.l_hand && user.r_hand) && istype(user,/mob/living/carbon/human))
 					user.put_in_hands(pocell)
@@ -181,19 +181,23 @@
 				return
 		else if(W.sharp)
 			if(seed.kitchen_tag == "pumpkin") // Ugggh these checks are awful.
-				user.show_message("<span class='notice'>You carve a face into [src]!</span>", 1)
+				user.show_message(SPAN_NOTICE("You carve a face into [src]!"), 1)
 				new /obj/item/clothing/head/pumpkinhead (user.loc)
 				qdel(src)
 				return
 			else if(seed.chems)
 				if(isHatchet(W))
 					if(!isnull(seed.chems[/datum/reagent/woodpulp]))
-						user.visible_message("<span class='notice'>\The [user] makes planks out of \the [src].</span>")
+						user.visible_message(SPAN_NOTICE("\The [user] makes planks out of \the [src]."))
 						new /obj/item/stack/material/wood(user.loc)
 						qdel(src)
 					else if(!isnull(seed.chems[/datum/reagent/bamboo]))
-						user.visible_message("<span class='notice'>\The [user] makes planks out of \the [src].</span>")
+						user.visible_message(SPAN_NOTICE("\The [user] makes planks out of \the [src]."))
 						new /obj/item/stack/material/wood/bamboo(user.loc)
+						qdel(src)
+					else if(!isnull(seed.chems[/datum/reagent/resinpulp]))
+						user.visible_message(SPAN_NOTICE("\The [user] makes resin slabs out of \the [src]."))
+						new /obj/item/stack/material/wood/vox(user.loc)
 						qdel(src)
 					return
 				else if(!isnull(seed.chems[/datum/reagent/drink/juice/potato]))
@@ -254,7 +258,7 @@
 		return
 
 	if(seed.kitchen_tag == "grass")
-		user.show_message("<span class='notice'>You make a grass tile out of \the [src]!</span>", 1)
+		user.show_message(SPAN_NOTICE("You make a grass tile out of \the [src]!"), 1)
 		var/flesh_colour = seed.get_trait(TRAIT_FLESH_COLOUR)
 		if(!flesh_colour) flesh_colour = seed.get_trait(TRAIT_PRODUCT_COLOUR)
 		for(var/i=0,i<2,i++)
@@ -271,7 +275,7 @@
 		return
 
 	if(seed.get_trait(TRAIT_SPREAD) > 0)
-		to_chat(user, "<span class='notice'>You plant the [src.name].</span>")
+		to_chat(user, SPAN_NOTICE("You plant the [src.name]."))
 		new /obj/machinery/portable_atmospherics/hydroponics/soil/invisible(get_turf(user),src.seed)
 		qdel(src)
 		return
