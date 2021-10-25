@@ -141,6 +141,12 @@
 
 	minimal_access = list()
 
+	lowpop_access = list(
+		access_cargo, access_cargo_bot, access_medical,
+		access_engine, access_engine_equip,
+		access_tech_storage, access_construction
+	)
+
 	software_on_spawn = list(/datum/computer_file/program/comm,
 							 /datum/computer_file/program/aidiag,
 							 /datum/computer_file/program/camera_monitor,
@@ -187,6 +193,12 @@
 	)
 
 	minimal_access = list()
+
+	lowpop_access = list(
+		access_cargo, access_cargo_bot, access_explorer,
+		access_engine, access_engine_equip,
+		access_tech_storage, access_construction
+	)
 
 	software_on_spawn = list(/datum/computer_file/program/comm,
 							 /datum/computer_file/program/suit_sensors,
@@ -246,6 +258,10 @@
 		access_radio_eng
 	)
 
+	lowpop_access = list(
+		access_cargo, access_cargo_bot, access_medical, access_explorer
+	)
+
 	software_on_spawn = list(/datum/computer_file/program/comm,
 							 /datum/computer_file/program/ntnetmonitor,
 							 /datum/computer_file/program/power_monitor,
@@ -298,6 +314,12 @@
 	)
 
 	minimal_access = list()
+
+	lowpop_access = list(
+		access_cargo, access_cargo_bot, access_medical,
+		access_explorer, access_engine, access_engine_equip,
+		access_tech_storage, access_construction
+	)
 
 	software_on_spawn = list(/datum/computer_file/program/comm,
 							 /datum/computer_file/program/digitalwarrant,
@@ -419,6 +441,11 @@
 		access_solgov_crew, access_aquila, access_aquila_helm, access_guppy, access_guppy_helm, access_external_airlocks,
 		access_eva, access_hangar, access_cent_creed, access_explorer, access_expedition_shuttle, access_expedition_shuttle_helm, access_teleporter,
 		access_torch_fax, access_torch_helm, access_radio_comm, access_radio_eng, access_radio_exp, access_radio_serv, access_radio_sci, access_radio_sup
+	)
+
+	lowpop_access = list(
+		access_cargo_bot, access_engine_equip,
+		access_tech_storage, access_construction
 	)
 
 	software_on_spawn = list(/datum/computer_file/program/comm,

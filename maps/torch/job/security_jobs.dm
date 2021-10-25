@@ -133,5 +133,11 @@
 
 	minimal_access = list()
 
+	lowpop_access = list(
+		access_medical, access_explorer,
+		access_engine, access_engine_equip,
+		access_tech_storage, access_construction
+	)
+
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
 							 /datum/computer_file/program/camera_monitor)
