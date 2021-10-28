@@ -155,7 +155,7 @@
 	//Bypassing storage procedures when not using help intent for labeler/forensic tools.
 	if((istype(W, /obj/item/hand_labeler) || istype(W, /obj/item/forensics)) && user.a_intent != I_HELP)
 		return FALSE
-	
+
 	// Don't allow insertion of unsafed compressed matter implants
 	// Since they are sucking something up now, their afterattack will delete the storage
 	if(istype(W, /obj/item/implanter/compressed))
@@ -303,6 +303,10 @@
 			storage_ui.on_hand_attack(user)
 	src.add_fingerprint(user)
 	return
+
+/obj/item/storage/attack_ghost(mob/user)
+	if(user.client)
+		show_to(user)
 
 /obj/item/storage/proc/gather_all(var/turf/T, var/mob/user)
 	var/success = 0
