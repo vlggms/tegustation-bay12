@@ -1,5 +1,0 @@
-author: EgorDinamit
-delete-after: true
-changes:
-  - tweak: Ghosts can click on backpacks/boxes/other storage devices to see their
-      contents.
