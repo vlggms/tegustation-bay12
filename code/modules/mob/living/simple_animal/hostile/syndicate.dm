@@ -86,7 +86,7 @@
 	icon_state = "syndicateranged"
 	icon_living = "syndicateranged"
 	casingtype = /obj/item/ammo_casing/pistol
-	projectilesound = 'sound/weapons/gunshot/gunshot_smg.ogg'
+	projectilesound = 'sound/weapons/gunshot/smg.ogg'
 	projectiletype = /obj/item/projectile/bullet/pistol
 
 	weapon1 = /obj/item/gun/projectile/automatic/merc_smg
