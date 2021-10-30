@@ -1,0 +1,6 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - soundadd: Fire sounds of some guns have been changed.
+  - tweak: Added hollow-point bullet magazines to the prototype SMG. These are admin-spawn
+      only for now.
