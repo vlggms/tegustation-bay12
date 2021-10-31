@@ -161,6 +161,9 @@
 	var/return_damage_min
 	var/return_damage_max
 
+	// List of potential death sounds, if any
+	var/list/death_sounds = list()
+
 /mob/living/simple_animal/Initialize()
 	. = ..()
 	if(LAZYLEN(natural_armor))
@@ -186,6 +189,9 @@
 	density = FALSE
 	adjustBruteLoss(maxHealth) //Make sure dey dead.
 	walk_to(src,0)
+	if(LAZYLEN(death_sounds))
+		playsound(src, pick(death_sounds), 50, TRUE)
+	return ..(gibbed,deathmessage,show_dead_message)
 
 /mob/living/simple_animal/proc/drop_loot()
 	if(!loot_list.len)

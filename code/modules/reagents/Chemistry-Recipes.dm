@@ -174,7 +174,6 @@
 	result = /datum/reagent/medicine/kelotane
 	required_reagents = list(/datum/reagent/silicon = 1, /datum/reagent/carbon = 1)
 	result_amount = 2
-	log_is_important = 1
 
 /datum/chemical_reaction/peridaxon
 	name = "Peridaxon"
@@ -236,6 +235,12 @@
 	result = /datum/reagent/medicine/bicaridine
 	required_reagents = list(/datum/reagent/medicine/inaprovaline = 1, /datum/reagent/carbon = 1)
 	inhibitors = list(/datum/reagent/sugar = 1) // Messes up with inaprovaline
+	result_amount = 2
+
+/datum/chemical_reaction/bicaridine_alt
+	name = "Grauel Decomposition into Bicaridine"
+	result = /datum/reagent/medicine/bicaridine
+	required_reagents = list(/datum/reagent/grauel = 1, /datum/reagent/phosphorus = 1)
 	result_amount = 2
 
 /datum/chemical_reaction/meraline
@@ -3139,3 +3144,15 @@
 	catalysts = list(
 		/datum/reagent/enzyme = 1
 	)
+
+/datum/chemical_reaction/abomination_larva
+	name = "Abominable Larva"
+	result = null
+	required_reagents = list(/datum/reagent/laich = 10, /datum/reagent/acid/sulphuric = 20)
+
+/datum/chemical_reaction/abomination_larva/on_reaction(datum/reagents/holder)
+	. = ..()
+	if(prob(66))
+		new /obj/item/reagent_containers/food/snacks/monkeycube/abominationcube(get_turf(holder.my_atom))
+	else
+		new /obj/item/reagent_containers/food/snacks/monkeycube/abominationcube/friendly(get_turf(holder.my_atom))
