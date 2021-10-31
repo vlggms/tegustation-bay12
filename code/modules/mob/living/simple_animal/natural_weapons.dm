@@ -43,6 +43,11 @@
 	sharp = TRUE
 	edge = TRUE
 
+/obj/item/natural_weapon/claws/zergling
+	force = 6
+	hitsound = 'sound/weapons/slashmiss.ogg'
+	attack_cooldown = 2
+
 /obj/item/natural_weapon/claws/strong
 	force = 25
 

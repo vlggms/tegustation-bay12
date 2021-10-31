@@ -222,3 +222,16 @@
 	damage = 10
 	armor_penetration = 35
 	damage_type = BRUTE
+
+/obj/item/projectile/energy/zerg
+	name = "acid bolt"
+	icon_state = "toxin"
+	damage = 18
+	damage_type = BURN
+	fire_sound = 'sound/weapons/alien_spit.ogg'
+	pass_flags = PASS_FLAG_TABLE
+
+/obj/item/projectile/energy/zerg/attack_mob(var/mob/living/target_mob, var/distance, var/special_miss_modifier=0) // Don't hit other zergs
+	if(target_mob.faction == "zerg")
+		return FALSE
+	..()
