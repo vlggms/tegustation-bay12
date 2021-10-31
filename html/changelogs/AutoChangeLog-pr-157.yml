@@ -1,0 +1,5 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - rscadd: Quick-equip hotkey (E) now can put items inside of a backpack or any other
+      storage item.
