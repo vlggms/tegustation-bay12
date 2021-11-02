@@ -12813,7 +12813,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/bridge/forestarboard)
 "KC" = (
-/obj/structure/flora/pottedplant/bamboo,
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
@@ -12823,6 +12822,10 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
+/obj/structure/dogbed{
+	name = "Atlas's bed"
+	},
+/mob/living/simple_animal/hostile/retaliate/tegu/atlas,
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/heads/cobed)
 "KG" = (

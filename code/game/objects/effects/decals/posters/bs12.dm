@@ -336,3 +336,8 @@
 	icon_state ="tposter8"
 	name = "Merc Moth - Nuclear Operation"
 	desc = "A mercenary-commissioned poster that uses Merc Moth(TM?) to tell the viewer to keep the nuclear authentication disk unsecured. No, we aren't doing that. It's signed by 'AspEv'."
+
+/decl/poster/tegu_9
+	icon_state ="tposter9"
+	name = "Steppy Flag"
+	desc = "A poster making a simple statement: \"Fuck around, Find out.\" There's a tiny Supplytopia logo in the bottom right."
