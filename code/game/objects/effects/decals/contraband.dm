@@ -95,6 +95,9 @@
 /obj/structure/sign/poster/bay_50
 	poster_type = /decl/poster/bay_50
 
+/obj/structure/sign/poster/tegu_9
+	poster_type = /decl/poster/tegu_9
+
 /obj/structure/sign/poster/New(var/newloc, var/placement_dir = null, var/give_poster_type = null)
 	..(newloc)
 
