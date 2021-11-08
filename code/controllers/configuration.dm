@@ -63,6 +63,9 @@ var/list/gamemode_cache = list()
 	var/jobs_have_minimal_access = 0	//determines whether jobs use minimal access or expanded access.
 	var/minimum_player_age = 0
 
+	var/lowpop_access = 0				//should the players get additional access if population is too low?
+	var/lowpop_access_amount = 6		//the amount of players should be below it to grant lowpop access
+
 	var/cult_ghostwriter = 1               //Allows ghosts to write in blood in cult rounds...
 	var/cult_ghostwriter_req_cultists = 10 //...so long as this many cultists are active.
 
@@ -285,6 +288,12 @@ var/list/gamemode_cache = list()
 
 				if ("jobs_have_minimal_access")
 					config.jobs_have_minimal_access = 1
+
+				if("lowpop_access")
+					config.lowpop_access = 1
+
+				if("lowpop_access_amount")
+					config.lowpop_access_amount = text2num(value)
 
 				if ("use_recursive_explosions")
 					use_recursive_explosions = 1
