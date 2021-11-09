@@ -489,12 +489,19 @@
 		var/y = text2num(screen_loc_Y[1]) * 32 + text2num(screen_loc_Y[2]) - 32
 
 		//Calculate the "resolution" of screen based on client's view and world's icon size. This will work if the user can view more tiles than average.
-		var/list/screenview = getviewsize(user.client.view)
+		var/client/target_client // This is used to avoid mech shenanigans
+		if(istype(user, /mob/living/exosuit))
+			var/mob/living/exosuit/exo = user
+			var/mob/living/pilot = exo.pilots[1] // First pilot because idk how it would work with multiple pilots.
+			target_client = pilot.client
+		else
+			target_client = user.client
+		var/list/screenview = getviewsize(target_client.view)
 		var/screenviewX = screenview[1] * world.icon_size
 		var/screenviewY = screenview[2] * world.icon_size
 
-		var/ox = round(screenviewX/2) - user.client.pixel_x //"origin" x
-		var/oy = round(screenviewY/2) - user.client.pixel_y //"origin" y
+		var/ox = round(screenviewX/2) - target_client.pixel_x //"origin" x
+		var/oy = round(screenviewY/2) - target_client.pixel_y //"origin" y
 		Angle = Atan2(y - oy, x - ox)
 	return list(Angle, p_x, p_y)
 
