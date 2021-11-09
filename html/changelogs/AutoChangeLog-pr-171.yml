@@ -1,6 +1,0 @@
-author: EgorDinamit
-delete-after: true
-changes:
-  - rscadd: Players on lowpop will start with more access. Choose command positions
-      for even more access.
-  - admin: Lowpop access is controlled by config values LOWPOP_ACCESS and LOWPOP_ACCESS_AMOUNT.
