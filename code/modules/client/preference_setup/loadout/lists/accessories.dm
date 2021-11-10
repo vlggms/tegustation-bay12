@@ -138,9 +138,9 @@
 	path = /obj/item/clothing/accessory/pronouns
 	flags = GEAR_HAS_TYPE_SELECTION
 
-/datum/gear/accessory/pridepins
-	display_name = "pride pin selection"
-	path = /obj/item/clothing/accessory/pridepins
+/datum/gear/accessory/identitypins
+	display_name = "identity pin selection"
+	path = /obj/item/clothing/accessory/identitypins
 	flags = GEAR_HAS_TYPE_SELECTION
 
 /datum/gear/accessory/neckerchief
