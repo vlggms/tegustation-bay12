@@ -313,9 +313,9 @@
 	)
 
 /datum/mil_branch/terran
-	name = "Independent Navy"
-	name_short = "ICCGN"
-	email_domain = "gilgamesh.navy.mil"
+	name = "Terran Navy"
+	name_short = "TGN"
+	email_domain = "terragov.navy.mil"
 
 	rank_types = list(
 		/datum/mil_rank/terran/e1,
@@ -324,7 +324,6 @@
 		/datum/mil_rank/terran/e6,
 		/datum/mil_rank/terran/e7,
 		/datum/mil_rank/terran/e9,
-		/datum/mil_rank/terran/e9_alt1,
 		/datum/mil_rank/terran/o1,
 		/datum/mil_rank/terran/o2,
 		/datum/mil_rank/terran/o3,
@@ -736,45 +735,39 @@
  */
 
 /datum/mil_rank/terran/e1
-	name = "Sailor Recruit"
-	name_short = "SlrRct"
+	name = "Crewman Recruit"
+	name_short = "CR"
 	accessory = list(/obj/item/clothing/accessory/terran/rank/navy/enlisted)
 	sort_order = 1
 
 /datum/mil_rank/terran/e3
-	name = "Sailor"
-	name_short = "Slr"
+	name = "Crewman"
+	name_short = "C"
 	accessory = list(/obj/item/clothing/accessory/terran/rank/navy/enlisted/e3)
 	sort_order = 3
 
 /datum/mil_rank/terran/e4
-	name = "Bosman"
-	name_short = "Bsn"
+	name = "Petty Officer Second Class"
+	name_short = "POSC"
 	accessory = list(/obj/item/clothing/accessory/terran/rank/navy/enlisted/e4)
 	sort_order = 4
 
 /datum/mil_rank/terran/e6
-	name = "Starszy Bosman"
-	name_short = "SBsn"
+	name = "Petty Officer First Class"
+	name_short = "POFC"
 	accessory = list(/obj/item/clothing/accessory/terran/rank/navy/enlisted/e6)
 	sort_order = 6
 
 /datum/mil_rank/terran/e7
-	name = "Glavny Starshina"
-	name_short = "GStr"
+	name = "Chief Petty Officer"
+	name_short = "CPO"
 	accessory = list(/obj/item/clothing/accessory/terran/rank/navy/enlisted/e7)
 	sort_order = 7
 
 /datum/mil_rank/terran/e9
-	name = "Michman"
-	name_short = "Mch"
+	name = "Senior Chief Petty Officer"
+	name_short = "SCPO"
 	accessory = list(/obj/item/clothing/accessory/terran/rank/navy/enlisted/e9)
-	sort_order = 9
-
-/datum/mil_rank/terran/e9_alt1
-	name = "Michman of the Independent Navy"
-	name_short = "MchNvy"
-	accessory = list(/obj/item/clothing/accessory/terran/rank/navy/enlisted/e9_alt1)
 	sort_order = 9
 
 /datum/mil_rank/terran/o1
@@ -784,56 +777,56 @@
 	sort_order = 11
 
 /datum/mil_rank/terran/o2
-	name = "Leytenant"
-	name_short = "Lyt"
+	name = "Lieutenant"
+	name_short = "LT"
 	accessory = list(/obj/item/clothing/accessory/terran/rank/navy/officer/o2)
 	sort_order = 12
 
 /datum/mil_rank/terran/o3
-	name = "Starshy Leytenant"
-	name_short = "SLyt"
+	name = "Senior Lieutenant"
+	name_short = "SLT"
 	accessory = list(/obj/item/clothing/accessory/terran/rank/navy/officer/o3)
 	sort_order = 13
 
 /datum/mil_rank/terran/o4
-	name = "Corvette-Komandor"
-	name_short = "CvtKdr"
+	name = "Corvette Commander"
+	name_short = "CRVC"
 	accessory = list(/obj/item/clothing/accessory/terran/rank/navy/officer/o4)
 	sort_order = 14
 
 /datum/mil_rank/terran/o5
-	name = "Komandor"
-	name_short = "Kdr"
+	name = "Commander"
+	name_short = "CMD"
 	accessory = list(/obj/item/clothing/accessory/terran/rank/navy/officer/o5)
 	sort_order = 15
 
 /datum/mil_rank/terran/o6
-	name = "Kapitan"
-	name_short = "Kpt"
+	name = "Captain"
+	name_short = "CPT"
 	accessory = list(/obj/item/clothing/accessory/terran/rank/navy/officer/o6)
 	sort_order = 16
 
 /datum/mil_rank/terran/o7
-	name = "Kontradmiral"
-	name_short = "KtrAdm"
+	name = "Rear Admiral"
+	name_short = "RADM"
 	accessory = list(/obj/item/clothing/accessory/terran/rank/navy/flag)
 	sort_order = 17
 
 /datum/mil_rank/terran/o8
-	name = "Wiceadmiral"
-	name_short = "WcAdm"
+	name = "Vice Admiral"
+	name_short = "VADM"
 	accessory = list(/obj/item/clothing/accessory/terran/rank/navy/flag/o8)
 	sort_order = 18
 
 /datum/mil_rank/terran/o9
 	name = "Admiral"
-	name_short = "Adm"
+	name_short = "ADM"
 	accessory = list(/obj/item/clothing/accessory/terran/rank/navy/flag/o9)
 	sort_order = 19
 
 /datum/mil_rank/terran/o10
-	name = "Admiral of the Independent Navy"
-	name_short = "AdmNvy"
+	name = "Master Admiral of Humanity"
+	name_short = "MADM"
 	accessory = list(/obj/item/clothing/accessory/terran/rank/navy/flag/o10)
 	sort_order = 20
 

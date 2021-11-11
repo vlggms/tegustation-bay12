@@ -12,7 +12,7 @@
 
 // Cultural IDs.
 #define FACTION_SOL_CENTRAL    "Sol Central Government"
-#define FACTION_INDIE_CONFED  "Gilgamesh Colonial Confederation"
+#define FACTION_TERRAGOV       "Terran Government"
 #define FACTION_NANOTRASEN     "NanoTrasen"
 #define FACTION_FREETRADE      "Free Trade Union"
 #define FACTION_HEPHAESTUS     "Hephaestus Industries"
@@ -36,6 +36,7 @@
 #define HOME_SYSTEM_TAU_CETI   "Ceti Epsilon"
 #define HOME_SYSTEM_HELIOS	   "Eos"
 #define HOME_SYSTEM_TERRA 	   "Terra"
+#define HOME_SYSTEM_NEW_EARTH  "New Earth"
 #define HOME_SYSTEM_TERSTEN    "Tersten"
 #define HOME_SYSTEM_LORRIMAN   "Lorriman"
 #define HOME_SYSTEM_CINU       "Cinu"
@@ -63,7 +64,7 @@
 #define CULTURE_HUMAN_CETI     "Cetite"
 #define CULTURE_HUMAN_SPACER   "Spacer, Core Systems"
 #define CULTURE_HUMAN_SPAFRO   "Spacer, Frontier Systems"
-#define CULTURE_HUMAN_CONFED   "Terran"
+#define CULTURE_HUMAN_TERRAN   "Terran"
 #define CULTURE_HUMAN_OTHER    "Other, Humanity"
 #define CULTURE_STARLIGHT      "Starlit Realms"
 #define CULTURE_MONKEY         "Monkey Business"
@@ -160,12 +161,12 @@
 #define CULTURE_UNATHI_SALT_SWAMP     "Salt Swamp Clans"
 #define CULTURE_UNATHI_SPACE          "Space-Faring Clans"
 #define CULTURE_UNATHI_TERSTEN        "Tersten Clans"
- 
+
 #define HOME_SYSTEM_MOGHES          "Moghes"
 #define HOME_SYSTEM_OUERE           "Ouere"
 #define HOME_SYSTEM_UNATHI_TERSTEN  "Tersten - Unathi Clans"
 #define HOME_SYSTEM_OFFWORLD        "Off-world"
- 
+
 #define FACTION_UNATHI_HEGEMONY          "Moghes Hegemony"
 #define FACTION_UNATHI_TERSTEN_HEGEMONY  "Tersten Hegemony"
 #define FACTION_UNATHI_SSEN_UUMA         "Ssen-Uuma Convent"
@@ -174,7 +175,7 @@
 #define FACTION_UNATHI_GRESIS            "Gresis Krukzuz"
 #define FACTION_UNATHI_RAH_ZAKEH         "Rah'Zakeh League"
 #define FACTION_UNATHI_KHARZA            "Kharza Fleet"
- 
+
 #define RELIGION_UNATHI_STRATAGEM    "Grand Stratagem"
 #define RELIGION_UNATHI_PRECURSOR    "Precursor"
 #define RELIGION_UNATHI_VINE         "Hand of the Vine"
