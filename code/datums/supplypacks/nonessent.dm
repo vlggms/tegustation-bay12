@@ -278,16 +278,17 @@
 	containername = "aromatherapy crate"
 
 /decl/hierarchy/supply_pack/nonessent/pins
-	name = "Costume - Pride Pin Crate"
+	name = "Costume - Identity Pins Crate"
 	contains = list(
-		/obj/item/clothing/accessory/pridepins = 2,
-		/obj/item/clothing/accessory/pridepins/lesbianpin = 2,
-		/obj/item/clothing/accessory/pridepins/bisexualpin = 2,
-		/obj/item/clothing/accessory/pridepins/gaypin = 2,
-		/obj/item/clothing/accessory/pridepins/pansexualpin = 2,
-		/obj/item/clothing/accessory/pridepins/nonbinarypin = 2,
-		/obj/item/clothing/accessory/pridepins/asexualpin = 2,
-		/obj/item/clothing/accessory/pridepins/intersexpin = 2
+		/obj/item/clothing/accessory/identitypins = 2,
+		/obj/item/clothing/accessory/identitypins/lesbianpin = 2,
+		/obj/item/clothing/accessory/identitypins/bisexualpin = 2,
+		/obj/item/clothing/accessory/identitypins/gaypin = 2,
+		/obj/item/clothing/accessory/identitypins/pansexualpin = 2,
+		/obj/item/clothing/accessory/identitypins/nonbinarypin = 2,
+		/obj/item/clothing/accessory/identitypins/straightpin = 2,
+		/obj/item/clothing/accessory/identitypins/asexualpin = 2,
+		/obj/item/clothing/accessory/identitypins/intersexpin = 2
 	)
 	cost = 20
 	containername = "pin crate"
