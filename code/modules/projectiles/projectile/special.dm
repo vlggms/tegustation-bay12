@@ -40,13 +40,29 @@
 	damage_type = BURN
 	damage_flags = 0
 	nodamage = TRUE
-	var/firing_temperature = 300
+	var/firing_temperature = -40 // Temperature that will be added to the target
 
-	on_hit(var/atom/target, var/blocked = 0)//These two could likely check temp protection on the mob
-		if(istype(target, /mob/living))
-			var/mob/M = target
-			M.bodytemperature = firing_temperature
-		return 1
+/obj/item/projectile/temp/on_hit(var/atom/target, var/blocked = 0)
+	if(istype(target, /mob/living))
+		var/mob/living/M = target
+		var/thermal_protection = 1
+		if(firing_temperature <= 0)
+			thermal_protection = M.get_cold_protection(M.bodytemperature + firing_temperature) // target temp
+		else
+			thermal_protection = M.get_heat_protection(M.bodytemperature + firing_temperature)
+
+		var/temp_damage = round(firing_temperature*(1-thermal_protection), 1)
+		if(thermal_protection < 1)
+			if((M.bodytemperature + temp_damage) > 3) // So you don't go below arbitrary "minimum" temperature
+				M.bodytemperature += temp_damage
+			else
+				M.bodytemperature = 3
+	return 1
+
+/obj/item/projectile/temp/heat
+	name = "heat beam"
+	icon_state = "heat"
+	firing_temperature = 40
 
 /obj/item/projectile/meteor
 	name = "meteor"
