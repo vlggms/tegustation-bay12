@@ -1,8 +1,0 @@
-author: AzlanOnPC, Pawn, Fre3bie, SomeAngryMiner
-delete-after: true
-changes:
-  - imageadd: EVA Hardsuit, Blood-Red Voidsuit, Crimson Hardsuit and Heavy Crimson
-      Hardsuit have received a sprite update.
-  - tweak: Mercenary EOD hardsuit is now spaceproof.
-  - tweak: Vox can now wear mercenary voidsuits and hardsuits, while Skrell and unathi
-      can now wear merc and EVA hardsuits.

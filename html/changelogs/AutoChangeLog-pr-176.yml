@@ -1,6 +1,0 @@
-author: EgorDinamit
-delete-after: true
-changes:
-  - tweak: "Temperature gun now only has 2 modes: heat and freeze. Both adjust the\
-      \ target's temperature by 40 in their respective direction."
-  - tweak: Temperature gun now fires a bit faster and consumes more charge per shot.
