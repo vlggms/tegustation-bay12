@@ -235,8 +235,8 @@ You can set verify to TRUE if you want send() to sleep until the client has the 
 				common[filename] = fcopy_rsc(file_path)
 				register_asset(filename, common[filename])
 
-/datum/asset/nanoui/send(client, uncommon)
-	send_asset_list(client, common, TRUE)
+/datum/asset/nanoui/send(client)
+	send_asset_list(client, common)
 
 /datum/asset/group/goonchat
 	children = list(

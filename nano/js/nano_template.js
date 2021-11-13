@@ -2,7 +2,7 @@
 var NanoTemplate = function () {
 
     var _templateData = {};
-	var _templateSources = {};
+    var _templateSources = {};
 
     var _templates = {};
     var _compiledTemplates = {};
@@ -54,7 +54,6 @@ var NanoTemplate = function () {
         });
     };
 
-
     var compileTemplates = function () {
 
         for (var key in _templates) {
@@ -100,7 +99,7 @@ var NanoTemplate = function () {
 			
 			_helpers[helperName] = helperFunction;
 		},
-		addHelpers: function (helpers) {		
+		addHelpers: function (helpers) {
 			for (var helperName in helpers) {
 				if (!helpers.hasOwnProperty(helperName))
 				{
@@ -113,9 +112,7 @@ var NanoTemplate = function () {
 			if (helpers.hasOwnProperty(helperName))
 			{
 				delete _helpers[helperName];
-			}	
+			}
 		}
     }
 }();
- 
-
