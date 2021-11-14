@@ -11,7 +11,11 @@
 	admin_only = FALSE
 
 /datum/tgs_chat_command/check/Run(datum/tgs_chat_user/sender, params)
-	var/check = "Current Players: [GLOB.clients.len], Active Players: [GLOB.player_list.len]. "
+	var/active_players = GLOB.clients.len
+	for(var/client/C in GLOB.clients)
+		if(C.is_afk())
+			active_players -= 1
+	var/check = "Current Players: [GLOB.clients.len], Active Players: [active_players]. "
 	check += "\nGamemode: [SSticker.master_mode], Round Time: [roundduration2text()]."
 	return check
 
@@ -22,7 +26,11 @@
 	admin_only = TRUE
 
 /datum/tgs_chat_command/status/Run(datum/tgs_chat_user/sender, params)
-	var/status = "Current Players: [GLOB.clients.len], Active Players: [GLOB.player_list.len]."
+	var/active_players = GLOB.clients.len
+	for(var/client/C in GLOB.clients)
+		if(C.is_afk())
+			active_players -= 1
+	var/status = "Current Players: [GLOB.clients.len], Active Players: [active_players]."
 	var/adminwho
 	for(var/client/C in GLOB.admins) // Copy-paste from functions.dm
 		if(!adminwho)
