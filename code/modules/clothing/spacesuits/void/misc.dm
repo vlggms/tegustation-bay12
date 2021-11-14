@@ -143,3 +143,50 @@
 /obj/item/clothing/suit/space/void/dohruk/heavy/New()
 	..()
 	slowdown_per_slot[slot_wear_suit] = 2
+
+// Cybersun
+/obj/item/clothing/head/helmet/space/void/cybersun
+	name = "cybersun voidsuit helmet"
+	desc = "Prototype voidsuit helmet with experimental armor plates that protect against laser and energy weaponry very well, while giving limited protection against anything else."
+	icon_state = "cybersun"
+	item_state = "cybersun"
+	armor = list(
+		melee = ARMOR_MELEE_KNIVES,
+		bullet = ARMOR_BALLISTIC_PISTOL,
+		laser = ARMOR_LASER_RIFLES,
+		energy =  ARMOR_ENERGY_STRONG,
+		bomb = ARMOR_BOMB_PADDED,
+		bio = ARMOR_BIO_SHIELDED,
+		rad = ARMOR_RAD_RESISTANT
+		)
+	siemens_coefficient = 0.3
+	light_overlay = "helmet_light_dual"
+
+/obj/item/clothing/suit/space/void/cybersun
+	name = "cybersun voidsuit"
+	desc = "Prototype voidsuit with experimental armor plates that protect from laser-based weapons very well, while giving limited protection against anything else."
+	icon_state = "cybersun"
+	item_state_slots = list(
+		slot_l_hand_str = "syndie_voidsuit",
+		slot_r_hand_str = "syndie_voidsuit",
+	)
+	w_class = ITEM_SIZE_LARGE
+	armor = list(
+		melee = ARMOR_MELEE_KNIVES,
+		bullet = ARMOR_BALLISTIC_PISTOL,
+		laser = ARMOR_LASER_RIFLES,
+		energy =  ARMOR_ENERGY_STRONG,
+		bomb = ARMOR_BOMB_PADDED,
+		bio = ARMOR_BIO_SHIELDED,
+		rad = ARMOR_RAD_RESISTANT
+		)
+	allowed = list(/obj/item/device/flashlight,/obj/item/tank,/obj/item/device/suit_cooling_unit,/obj/item/gun,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/melee/baton,/obj/item/melee/energy/sword,/obj/item/handcuffs)
+	siemens_coefficient = 0.3
+
+/obj/item/clothing/suit/space/void/cybersun/New()
+	..()
+	slowdown_per_slot[slot_wear_suit] = 1
+
+/obj/item/clothing/suit/space/void/cybersun/prepared
+	helmet = /obj/item/clothing/head/helmet/space/void/cybersun
+	tank = /obj/item/tank/oxygen
