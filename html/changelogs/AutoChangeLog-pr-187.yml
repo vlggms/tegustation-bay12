@@ -1,0 +1,7 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - rscadd: Assault laser rifle is added to the game. Currently unobtainable outside
+      of admin spawns.
+  - imageadd: Added missing inhand icons for "lasersec". Currently used by assault
+      laser rifle.
