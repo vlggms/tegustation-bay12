@@ -1,5 +1,0 @@
-author: EgorDinamit
-delete-after: true
-changes:
-  - tweak: Psionic laser on master level of energistics is no longer stun projectile.
-      Now it's a weak damaging laser.
