@@ -9,6 +9,7 @@
 	thermal_conductivity = OPEN_HEAT_TRANSFER_COEFFICIENT
 	var/static/list/dust_cache
 	permit_ao = FALSE
+	turf_flags = TURF_DISALLOW_BLOB
 
 	z_eventually_space = TRUE
 
