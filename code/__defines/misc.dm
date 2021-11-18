@@ -302,3 +302,8 @@
 
 // Whereas ckey is in the global list or not
 #define IS_TRUSTED_PLAYER(ckey) (ckey in GLOB.trusted_players)
+
+//NOTE: INTENT_HOTKEY_* defines are not actual intents!
+//they are here to support hotkeys
+#define INTENT_HOTKEY_LEFT  "left"
+#define INTENT_HOTKEY_RIGHT "right"

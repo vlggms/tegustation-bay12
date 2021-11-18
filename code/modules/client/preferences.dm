@@ -43,6 +43,10 @@ datum/preferences
 		client = C
 		client_ckey = C.ckey
 		SScharacter_setup.preferences_datums[C.ckey] = src
+
+		// give them default keybinds too
+		key_bindings = deepCopyList(global.hotkey_keybinding_list_by_key)
+
 		if(SScharacter_setup.initialized)
 			setup()
 		else

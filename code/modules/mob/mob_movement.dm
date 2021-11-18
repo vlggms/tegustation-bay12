@@ -165,8 +165,10 @@
 /client/Move(n, direction)
 	if(!user_acted(src))
 		return
+
 	if(!mob)
 		return // Moved here to avoid nullrefs below
+
 	return mob.SelfMove(direction)
 
 // Checks whether this mob is allowed to move in space

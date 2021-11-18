@@ -93,6 +93,8 @@
 			return global.SSicon_update;
 		if("SSinactivity")
 			return global.SSinactivity;
+		if("SSinput")
+			return global.SSinput;
 		if("SSjobs")
 			return global.SSjobs;
 		if("SSkv")
@@ -183,6 +185,10 @@
 			return global._client_preferences_by_key;
 		if("_client_preferences_by_type")
 			return global._client_preferences_by_type;
+		if("_kbMap")
+			return global._kbMap;
+		if("_kbMap_reverse")
+			return global._kbMap_reverse;
 		if("account_hack_attempted")
 			return global.account_hack_attempted;
 		if("additional_antag_types")
@@ -477,6 +483,8 @@
 			return global.hadevent;
 		if("holder_mob_icon_cache")
 			return global.holder_mob_icon_cache;
+		if("hotkey_keybinding_list_by_key")
+			return global.hotkey_keybinding_list_by_key;
 		if("human_icon_cache")
 			return global.human_icon_cache;
 		if("id_card_states")
@@ -497,6 +505,8 @@
 			return global.jobban_keylist;
 		if("jobban_runonce")
 			return global.jobban_runonce;
+		if("keybindings_by_name")
+			return global.keybindings_by_name;
 		if("landmarks_list")
 			return global.landmarks_list;
 		if("language_keys")
@@ -976,6 +986,8 @@
 			global.SSicon_update=newval;
 		if("SSinactivity")
 			global.SSinactivity=newval;
+		if("SSinput")
+			global.SSinput=newval;
 		if("SSjobs")
 			global.SSjobs=newval;
 		if("SSkv")
@@ -1066,6 +1078,10 @@
 			global._client_preferences_by_key=newval;
 		if("_client_preferences_by_type")
 			global._client_preferences_by_type=newval;
+		if("_kbMap")
+			global._kbMap=newval;
+		if("_kbMap_reverse")
+			global._kbMap_reverse=newval;
 		if("account_hack_attempted")
 			global.account_hack_attempted=newval;
 		if("additional_antag_types")
@@ -1360,6 +1376,8 @@
 			global.hadevent=newval;
 		if("holder_mob_icon_cache")
 			global.holder_mob_icon_cache=newval;
+		if("hotkey_keybinding_list_by_key")
+			global.hotkey_keybinding_list_by_key=newval;
 		if("human_icon_cache")
 			global.human_icon_cache=newval;
 		if("id_card_states")
@@ -1380,6 +1398,8 @@
 			global.jobban_keylist=newval;
 		if("jobban_runonce")
 			global.jobban_runonce=newval;
+		if("keybindings_by_name")
+			global.keybindings_by_name=newval;
 		if("landmarks_list")
 			global.landmarks_list=newval;
 		if("language_keys")
@@ -1812,6 +1832,7 @@
 	"SSgraphs_update",
 	"SSicon_update",
 	"SSinactivity",
+	"SSinput",
 	"SSjobs",
 	"SSkv",
 	"SSlighting",
@@ -1857,6 +1878,8 @@
 	"_client_preferences",
 	"_client_preferences_by_key",
 	"_client_preferences_by_type",
+	"_kbMap",
+	"_kbMap_reverse",
 	"account_hack_attempted",
 	"additional_antag_types",
 	"admin_datums",
@@ -2004,6 +2027,7 @@
 	"gzn_check",
 	"hadevent",
 	"holder_mob_icon_cache",
+	"hotkey_keybinding_list_by_key",
 	"human_icon_cache",
 	"id_card_states",
 	"image_repository",
@@ -2014,6 +2038,7 @@
 	"jobMax",
 	"jobban_keylist",
 	"jobban_runonce",
+	"keybindings_by_name",
 	"landmarks_list",
 	"language_keys",
 	"last_chew",

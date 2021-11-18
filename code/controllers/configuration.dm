@@ -120,6 +120,8 @@ var/list/gamemode_cache = list()
 
 	var/use_loyalty_implants = 0
 
+	var/allow_diagonal_movement = FALSE
+
 	var/welder_vision = 1
 	var/generate_map = 0
 	var/no_click_cooldown = 0
@@ -822,6 +824,9 @@ var/list/gamemode_cache = list()
 
 				if("use_loyalty_implants")
 					config.use_loyalty_implants = 1
+
+				if("allow_diagonal_movement")
+					config.allow_diagonal_movement = TRUE
 
 				else
 					log_misc("Unknown setting in configuration: '[name]'")

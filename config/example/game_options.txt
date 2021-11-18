@@ -50,6 +50,9 @@ MAXIMUM_STAMINA_RECOVERY 5
 ## Set this to 0 for perfectly smooth movement gliding, or 1 or more for delayed chess move style movements.
 #GLIDE_SIZE_DELAY 0
 
+## Allow multiple input keys to be pressed for diagonal movement.
+#ALLOW_DIAGONAL_MOVEMENT
+
 ### Miscellaneous ###
 
 ## Config options which, of course, don't fit into previous categories.
