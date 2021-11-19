@@ -105,6 +105,7 @@
 	var/atom/autofiring_at
 	var/mob/autofiring_by
 	var/autofiring_timer
+	var/autofiring_params
 
 /obj/item/gun/Initialize()
 	. = ..()
@@ -121,9 +122,10 @@
 	// autofire timer is automatically cleaned up
 	autofiring_at = null
 	autofiring_by = null
+	autofiring_params = null
 	. = ..()
 
-/obj/item/gun/proc/set_autofire(var/atom/fire_at, var/mob/fire_by)
+/obj/item/gun/proc/set_autofire(var/atom/fire_at, var/mob/fire_by, var/params)
 	. = TRUE
 	if(!istype(fire_at) || !istype(fire_by))
 		. = FALSE
@@ -134,6 +136,7 @@
 	if(.)
 		autofiring_at = fire_at
 		autofiring_by = fire_by
+		autofiring_params = params
 		if(!autofiring_timer)
 			autofiring_timer = addtimer(CALLBACK(src, .proc/handle_autofire), burst_delay, (TIMER_STOPPABLE | TIMER_LOOP | TIMER_UNIQUE | TIMER_OVERRIDE))
 	else
@@ -142,6 +145,7 @@
 /obj/item/gun/proc/clear_autofire()
 	autofiring_at = null
 	autofiring_by = null
+	autofiring_params = null
 	if(autofiring_timer)
 		deltimer(autofiring_timer)
 		autofiring_timer = null
@@ -159,7 +163,7 @@
 		clear_autofire()
 	else if(can_autofire())
 		autofiring_by.set_dir(get_dir(src, autofiring_at))
-		Fire(autofiring_at, autofiring_by, null, (get_dist(autofiring_at, autofiring_by) <= 1), FALSE, FALSE)
+		Fire(autofiring_at, autofiring_by, autofiring_params, (get_dist(autofiring_at, autofiring_by) <= 1), FALSE, FALSE)
 
 /obj/item/gun/update_twohanding()
 	if(one_hand_penalty)
