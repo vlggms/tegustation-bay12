@@ -1,0 +1,5 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: Artifact container now provides a message and sound effect on a successful
+      action.
