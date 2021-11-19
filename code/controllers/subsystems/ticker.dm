@@ -49,7 +49,6 @@ SUBSYSTEM_DEF(ticker)
 			post_game_tick()
 
 /datum/controller/subsystem/ticker/proc/pregame_tick()
-	callHook("roundstart") // As soon as initialization is complete
 	if(start_ASAP)
 		start_now()
 		return

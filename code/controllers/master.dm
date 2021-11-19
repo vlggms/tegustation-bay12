@@ -192,6 +192,7 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	var/msg = "Initializations complete within [time] second\s!"
 	report_progress(msg)
 	log_world(msg)
+	callHook("roundstart") // As soon as initialization is complete
 
 	initializing = FALSE
 
