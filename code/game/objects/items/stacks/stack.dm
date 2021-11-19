@@ -118,7 +118,9 @@
 					t1 += " <A href='?src=\ref[src];make=[i];multiplier=[max_multiplier]'>[max_multiplier*R.res_amount]x</A>"
 
 	t1 += "</TT></body></HTML>"
-	show_browser(user, JOINTEXT(t1), "window=stack")
+	var/datum/browser/popup = new(user, "stack", "Recipes")
+	popup.set_content(JOINTEXT(t1))
+	popup.open()
 	onclose(user, "stack")
 
 /obj/item/stack/proc/produce_recipe(datum/stack_recipe/recipe, var/quantity, mob/user)

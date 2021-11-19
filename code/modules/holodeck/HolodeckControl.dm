@@ -47,7 +47,9 @@
 		dat += "Holodeck is <A href='?src=\ref[src];togglehololock=1'><font color=green>(UNLOCKED)</font></A><BR>"
 	else
 		dat += "Holodeck is <A href='?src=\ref[src];togglehololock=1'><font color=red>(LOCKED)</font></A><BR>"
-		show_browser(user, dat, "window=computer;size=400x500")
+		var/datum/browser/popup = new(user, "computer", "Holodeck Controls", 400, 500)
+		popup.set_content(dat)
+		popup.open()
 		onclose(user, "computer")
 		return
 
@@ -55,13 +57,17 @@
 
 	if(!linkedholodeck)
 		dat += "<span class='danger'>Warning: Unable to locate holodeck.<br></span>"
-		show_browser(user, dat, "window=computer;size=400x500")
+		var/datum/browser/popup = new(user, "computer", "Holodeck Controls", 400, 500)
+		popup.set_content(dat)
+		popup.open()
 		onclose(user, "computer")
 		return
 
 	if(!supported_programs.len)
 		dat += "<span class='danger'>Warning: No supported holo-programs loaded.<br></span>"
-		show_browser(user, dat, "window=computer;size=400x500")
+		var/datum/browser/popup = new(user, "computer", "Holodeck Controls", 400, 500)
+		popup.set_content(dat)
+		popup.open()
 		onclose(user, "computer")
 		return
 
@@ -99,9 +105,10 @@
 		dat += "Gravity is <A href='?src=\ref[src];gravity=1'><font color=green>(ON)</font></A><BR>"
 	else
 		dat += "Gravity is <A href='?src=\ref[src];gravity=1'><font color=blue>(OFF)</font></A><BR>"
-	show_browser(user, dat, "window=computer;size=400x500")
+	var/datum/browser/popup = new(user, "computer", "Holodeck Controls", 400, 500)
+	popup.set_content(dat)
+	popup.open()
 	onclose(user, "computer")
-	return
 
 /obj/machinery/computer/HolodeckControl/Topic(href, href_list)
 	if(..())
