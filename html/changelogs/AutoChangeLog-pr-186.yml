@@ -1,6 +1,0 @@
-author: EgorDinamit
-delete-after: true
-changes:
-  - tweak: Telekinesis powers scale with your psychokinesis level. At paramount -
-      you won't release a grasp on item/mob after throw as well.
-  - tweak: Telekinesis throws are overall less damaging and take more stamina to perform.
