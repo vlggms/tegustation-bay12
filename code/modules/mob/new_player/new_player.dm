@@ -179,6 +179,8 @@
 			should_warn = FALSE
 		else if(job.title in client.prefs.job_low)
 			should_warn = FALSE
+		else if(job.is_restricted(client.prefs))
+			should_warn = FALSE // If it isn't available there will be its own message.
 
 		if(should_warn)
 			if(alert(client, "You don't have any preferences set for [job.title]. Are you sure you want to join as it?", "Confirm Job Selection", "Yes", "No") == "No")
@@ -190,6 +192,10 @@
 	if(!ready && href_list["preference"])
 		if(client)
 			client.prefs.process_link(src, href_list)
+
+	if(href_list["invalid_jobs"])
+		show_invalid_jobs = !show_invalid_jobs
+		LateChoices() // Update the window
 
 	else if(!href_list["late_join"])
 		new_player_panel()
