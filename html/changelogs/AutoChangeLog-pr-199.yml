@@ -1,5 +1,0 @@
-author: EgorDinamit
-delete-after: true
-changes:
-  - tweak: Mobs won't "fly off" the rolling beds and wheelchairs when being pulled
-      or otherwise moved.
