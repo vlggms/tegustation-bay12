@@ -211,6 +211,9 @@
 
 	var/mob/living/carbon/human/H = holder.wearer
 
+	if(get_dist(H, target) > 1)
+		return 0
+
 	if(!charge_selected)
 		to_chat(H, "<span class='danger'>You have not selected a chemical type.</span>")
 		return 0
@@ -237,8 +240,10 @@
 		target_mob = H
 
 	if(target_mob != H)
-		to_chat(H, "<span class='danger'>You inject [target_mob] with [chems_to_use] unit\s of [charge.display_name].</span>")
-	to_chat(target_mob, "<span class='danger'>You feel a rushing in your veins as [chems_to_use] unit\s of [charge.display_name] [chems_to_use == 1 ? "is" : "are"] injected.</span>")
+		to_chat(H, SPAN_NOTICE("You inject [target_mob] with [chems_to_use] unit\s of [charge.display_name]."))
+		target_mob.custom_pain(SPAN_WARNING("You feel a tiny prick!"), 1, TRUE)
+	else
+		target_mob.custom_pain(SPAN_WARNING("You feel a tiny prick as you inject yourself with [chems_to_use] unit\s of [charge.display_name]!"), 1, TRUE)
 	target_mob.reagents.add_reagent(charge.product_type, chems_to_use)
 
 	charge.charges -= chems_to_use
