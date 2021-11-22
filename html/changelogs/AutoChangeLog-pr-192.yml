@@ -1,0 +1,5 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: Blob nodes now play an animation and sound effect on each attack.
+  - tweak: Blob nodes can now attack light sources, but only structures.
