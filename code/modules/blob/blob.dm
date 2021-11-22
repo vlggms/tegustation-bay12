@@ -79,53 +79,54 @@
 	restore_health(regen_rate)
 
 /obj/effect/blob/proc/expand(turf/T)
-	// Process damaging things
+	if (!istype(T) || T.turf_flags & TURF_DISALLOW_BLOB)
+		return
+
 	var/damage = rand(damage_min, damage_max)
+	var/damage_type = pick(BRUTE, BURN)
 
-	// The turf itself
-	if(istype(T, /turf/unsimulated/) || istype(T, /turf/space) || (istype(T, /turf/simulated/mineral) && T.density))
-		return
-	if(istype(T, /turf/simulated/wall))
-		var/turf/simulated/wall/SW = T
-		SW.take_damage(damage)
-		return
+	/* Objects in the turf */
+	// Airlocks
+	for(var/obj/machinery/door/D in T) // There can be several - and some of them can be open, locate() is not suitable
+		if(D.density)
+			attack_object(D, TRUE)
+			return
 
-	// Objects in the turf
+	// Other useless dense objects
 	var/obj/structure/girder/G = locate() in T
 	if(G)
-		G.take_damage(damage)
+		attack_object(G, TRUE)
 		return
 	var/obj/structure/window/W = locate() in T
 	if(W)
-		W.take_damage(damage)
+		attack_object(W, FALSE)
 		return
 	var/obj/structure/grille/GR = locate() in T
 	if(GR)
-		GR.take_damage(damage)
+		attack_object(GR, FALSE)
 		return
-	for(var/obj/machinery/door/D in T) // There can be several - and some of them can be open, locate() is not suitable
-		if (D.density)
-			if (D.is_broken())
-				D.open(TRUE)
-				return
-			D.take_damage(damage)
-			return
 	var/obj/structure/foamedmetal/F = locate() in T
 	if(F)
 		qdel(F)
 		return
 	var/obj/structure/inflatable/I = locate() in T
 	if(I)
-		I.take_damage(damage)
+		attack_object(I, TRUE)
 		return
+	var/obj/machinery/light/Li = locate() in T
+	if(Li)
+		if((Li.lightbulb) || Li.lightbulb.status == 0) // Only attack light if it's operational
+			attack_object(Li, FALSE)
 
 	var/obj/vehicle/V = locate() in T
 	if(V)
 		V.adjust_health(-damage)
+		playsound(loc, 'sound/effects/attackblob.ogg', 50, 1)
 		return
 	var/obj/machinery/camera/CA = locate() in T
 	if(CA && !CA.is_broken())
 		CA.take_damage(30)
+		playsound(loc, 'sound/effects/attackblob.ogg', 50, 1)
 		return
 
 	// Above things, we destroy completely and thus can use locate. Mobs are different.
@@ -133,18 +134,22 @@
 		if(L.stat == DEAD)
 			continue
 		attack_living(L)
+		if((L.stat == CONSCIOUS) && !L.incapacitated())
+			return // Can't spread on tiles with living and moving mobs.
 
-	for (var/atom/A in T)
+	if(istype(T, /turf/simulated/wall/))
+		var/turf/simulated/wall/SW = T
+		playsound(loc, 'sound/effects/attackblob.ogg', 50, 1)
+		do_attack_animation(SW)
+		SW.take_damage(damage)
+		return
+
+	for(var/atom/A in T)
 		// Catch any atoms that use health processing
-		if (A.has_health() && A.is_alive())
-			var/damage_type = pick(BRUTE, BURN)
+		if(A.has_health() && A.is_alive())
 			visible_message(SPAN_DANGER("A tendril flies out from \the [src] and smashes into \the [A]!"))
 			playsound(loc, 'sound/effects/attackblob.ogg', 50, 1)
 			A.damage_health(damage, damage_type)
-			return
-
-		// Finally, block spreading into any tiles with a dense object
-		if (A.density)
 			return
 
 	if(!(locate(/obj/effect/blob/core) in range(T, 2)) && prob(secondary_core_growth_chance))
@@ -170,7 +175,29 @@
 	var/blob_damage = pick(BRUTE, BURN)
 	L.visible_message(SPAN_DANGER("A tendril flies out from \the [src] and smashes into \the [L]!"), SPAN_DANGER("A tendril flies out from \the [src] and smashes into you!"))
 	playsound(loc, 'sound/effects/attackblob.ogg', 50, 1)
+	do_attack_animation(L)
 	L.apply_damage(rand(damage_min, damage_max), blob_damage, used_weapon = "blob tendril")
+
+/obj/effect/blob/proc/attack_object(var/obj/O, var/play_sound = FALSE)
+	if(!O)
+		return
+	var/damage = rand(damage_min, damage_max)
+	if(play_sound)
+		playsound(loc, 'sound/effects/attackblob.ogg', 50, 1)
+	visible_message(SPAN_DANGER("A tendril flies out from \the [src] and smashes into \the [O]!"))
+	do_attack_animation(O)
+	if(istype(O, /obj/structure/))
+		var/obj/structure/S = O
+		S.take_damage(damage)
+	else if(istype(O, /obj/machinery/door/))
+		var/obj/machinery/door/D = O
+		if(D.is_broken())
+			D.Destroy()
+		else
+			D.take_damage(damage)
+	else if(istype(O, /obj/machinery/light/))
+		var/obj/machinery/light/L = O
+		L.broken()
 
 /obj/effect/blob/proc/attempt_attack(var/list/dirs)
 	var/attackDir = pick(dirs)
