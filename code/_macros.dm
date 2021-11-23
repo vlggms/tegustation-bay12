@@ -179,6 +179,8 @@ var/const/NEGATIVE_INFINITY = -1#INF // win: -1.#INF, lin: -inf
 
 #define SPAN_DANGER(X) "<span class='danger'>[X]</span>"
 
+#define SPAN_USERDANGER(X) "<span class='userdanger'>[X]</span>"
+
 #define SPAN_OCCULT(X) "<span class='cult'>[X]</span>"
 
 #define SPAN_MFAUNA(X) "<span class='mfauna'>[X]</span>"
