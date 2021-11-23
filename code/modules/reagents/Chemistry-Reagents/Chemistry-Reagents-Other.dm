@@ -322,6 +322,23 @@
 	for (var/obj/effect/decal/cleanable/blood/B in T)
 		qdel(B)
 
+/datum/reagent/slippery_oil
+	name = "Slippery Motor Oil"
+	description = "An extra slippery motor oil. Designed to reduce friction in moving machinery parts."
+	taste_description = "motor oil"
+	reagent_state = LIQUID
+	color = "#009ca8"
+	value = 0.6
+	should_admin_log = TRUE
+	var/overlay_icon = "lubed_floor"
+	var/slip_strength = 30
+
+/datum/reagent/slippery_oil/touch_turf(turf/simulated/T)
+	if(!istype(T))
+		return
+	if(volume >= 1)
+		T.wet_floor(slip_strength, overlay_state = overlay_icon, dissipate_time = 2 SECONDS)
+
 /datum/reagent/oil
 	name = "Oil"
 	description = "A thick greasy industrial lubricant. Commonly found in robotics."

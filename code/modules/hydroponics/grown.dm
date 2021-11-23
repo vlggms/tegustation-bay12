@@ -101,6 +101,8 @@
 			descriptors |= "medicinal"
 		if(reagents.has_reagent(/datum/reagent/gold))
 			descriptors |= "shiny"
+		if(reagents.has_reagent(/datum/reagent/slippery_oil))
+			descriptors |= "slippery"
 		if(reagents.has_reagent(/datum/reagent/acid/polytrinic) || reagents.has_reagent(/datum/reagent/acid) || reagents.has_reagent(/datum/reagent/acid/hydrochloric))
 			descriptors |= "acidic"
 		if(seed.get_trait(TRAIT_JUICY))

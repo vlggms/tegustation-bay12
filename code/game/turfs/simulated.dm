@@ -16,21 +16,21 @@
 	var/timer_id
 
 // This is not great.
-/turf/simulated/proc/wet_floor(var/wet_val = 1, var/overwrite = FALSE)
+/turf/simulated/proc/wet_floor(wet_val = 1, overwrite = FALSE, overlay_state = "wet_floor", dissipate_time = 8 SECONDS)
 	if(wet_val < wet && !overwrite)
 		return
 
 	if(!wet)
 		wet = wet_val
-		wet_overlay = image('icons/effects/water.dmi',src,"wet_floor")
+		wet_overlay = image('icons/effects/water.dmi',src,overlay_state)
 		overlays += wet_overlay
 
-	timer_id = addtimer(CALLBACK(src,/turf/simulated/proc/unwet_floor),8 SECONDS, TIMER_STOPPABLE|TIMER_UNIQUE|TIMER_NO_HASH_WAIT|TIMER_OVERRIDE)
+	timer_id = addtimer(CALLBACK(src,/turf/simulated/proc/unwet_floor, TRUE, dissipate_time), dissipate_time, TIMER_STOPPABLE|TIMER_UNIQUE|TIMER_NO_HASH_WAIT|TIMER_OVERRIDE)
 
-/turf/simulated/proc/unwet_floor(var/check_very_wet = TRUE)
+/turf/simulated/proc/unwet_floor(check_very_wet = TRUE, dissipate_timer = 8 SECONDS)
 	if(check_very_wet && wet >= 2)
 		wet--
-		timer_id = addtimer(CALLBACK(src,/turf/simulated/proc/unwet_floor), 8 SECONDS, TIMER_STOPPABLE|TIMER_UNIQUE|TIMER_NO_HASH_WAIT|TIMER_OVERRIDE)
+		timer_id = addtimer(CALLBACK(src,/turf/simulated/proc/unwet_floor, check_very_wet, dissipate_timer), dissipate_timer, TIMER_STOPPABLE|TIMER_UNIQUE|TIMER_NO_HASH_WAIT|TIMER_OVERRIDE)
 		return
 
 	wet = 0
@@ -115,13 +115,13 @@
 				return
 
 			var/slip_dist = 1
-			var/slip_stun = 6
+			var/slip_stun = 1
 			var/floor_type = "wet"
 
-			if(2 <= src.wet) // Lube
+			if(wet > 15) // Lube
 				floor_type = "slippery"
 				slip_dist = 4
-				slip_stun = 10
+				slip_stun = 3
 
 			if(M.slip("the [floor_type] floor", slip_stun))
 				for(var/i = 1 to slip_dist)
