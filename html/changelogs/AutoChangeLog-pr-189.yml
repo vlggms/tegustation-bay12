@@ -1,5 +1,0 @@
-author: EgorDinamit
-delete-after: true
-changes:
-  - tweak: Clogged objects(toilets, sinks) now give a better description of how bad
-      the situation really is.

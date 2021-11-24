@@ -1,6 +1,0 @@
-author: Shadowtail117
-delete-after: true
-changes:
-  - bugfix: HCM chemical injectors can no longer inject people over any distance.
-  - tweak: Mobs being injected by an HCM chemical injector are no longer told what
-      they are injected with and in what quantity.
