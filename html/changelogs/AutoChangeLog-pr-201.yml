@@ -1,0 +1,5 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: Late join menu has been updated to show unavailable jobs in a different
+      style, if you chose to see them.
