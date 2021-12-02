@@ -32,22 +32,6 @@
 	to_chat(user, "<span class='notice'>You twist open \the [src], destroying the safety seal!</span>")
 	atom_flags |= ATOM_FLAG_OPEN_CONTAINER
 
-/obj/item/reagent_containers/food/drinks/cans/frozenwaterbottle
-	name = "bottled water"
-	desc = "Pure drinking water, imported from the Martian poles."
-	icon_state = "waterbottle"
-	center_of_mass = "x=15;y=8"
-	matter = list(MATERIAL_PLASTIC = 40)
-
-/obj/item/reagent_containers/food/drinks/cans/frozenwaterbottle/Initialize()
-	. = ..()
-	reagents.add_reagent(/datum/reagent/drink/ice, 30)
-
-/obj/item/reagent_containers/food/drinks/cans/frozenwaterbottle/open(mob/user)
-	playsound(loc,'sound/effects/bonebreak1.ogg', rand(10,50), 1)
-	to_chat(user, "<span class='notice'>You twist open \the [src], destroying the safety seal!</span>")
-	atom_flags |= ATOM_FLAG_OPEN_CONTAINER
-
 /obj/item/reagent_containers/food/drinks/cans/space_mountain_wind
 	name = "space mountain wind"
 	desc = "Blows right through you like a space wind."
