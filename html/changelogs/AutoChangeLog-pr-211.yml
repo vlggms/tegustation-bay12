@@ -1,0 +1,5 @@
+author: Doctor Derp & NiennaB
+delete-after: true
+changes:
+  - imageadd: 'Adds new unbranded sprites. Original author: NiennaB!'
+  - imagedel: Deletes old unbranded sprites.
