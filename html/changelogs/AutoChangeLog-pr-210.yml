@@ -1,9 +1,0 @@
-author: Shadowtail117
-delete-after: true
-changes:
-  - tweak: You can now see if a drink contains ice or is completely ice when examining
-      it while close by.
-  - tweak: Water no longer makes a sound or plays a message when freezing, and ice
-      no longer makes a sound or plays a message when melting.
-  - bugfix: Because of the above, water bottles will no longer invade your ears or
-      your chat when opening/closing freezers containing them.
