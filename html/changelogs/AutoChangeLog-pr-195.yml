@@ -1,0 +1,7 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - rscadd: Unregistered vessels may now appear in the merchant list. Be quick and
+      you may find something extremely powerful!
+  - tweak: Energy weapons trader doesn't sell power cells anymore. Instead, they now
+      have energy pistols and temperature guns in stock.
