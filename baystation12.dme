@@ -447,6 +447,7 @@
 #include "code\datums\trading\ai.dm"
 #include "code\datums\trading\food.dm"
 #include "code\datums\trading\goods.dm"
+#include "code\datums\trading\illegal.dm"
 #include "code\datums\trading\misc.dm"
 #include "code\datums\trading\ship.dm"
 #include "code\datums\trading\trade.dm"
