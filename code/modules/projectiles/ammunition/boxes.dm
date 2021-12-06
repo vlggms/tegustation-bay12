@@ -330,3 +330,13 @@
 	matter = list(MATERIAL_STEEL = 600)
 	max_ammo = 7
 	multiple_sprites = 1
+
+/obj/item/ammo_magazine/t12
+	name = "T12 magazine"
+	icon_state = "t12"
+	mag_type = MAGAZINE
+	caliber = CALIBER_T12
+	matter = list(MATERIAL_STEEL = 2400)
+	ammo_type = /obj/item/ammo_casing/rifle/t12
+	max_ammo = 50
+	multiple_sprites = 1

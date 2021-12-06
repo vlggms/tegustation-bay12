@@ -204,6 +204,11 @@
 	armor_penetration = 35
 	penetration_modifier = 1
 
+/obj/item/projectile/bullet/rifle/t12
+	fire_sound = "gun_t12"
+	damage = 24
+	armor_penetration = 40
+
 /obj/item/projectile/bullet/rifle/shell
 	fire_sound = 'sound/weapons/gunshot/sniper.ogg'
 	damage = 80
