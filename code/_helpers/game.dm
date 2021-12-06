@@ -564,3 +564,6 @@ datum/projectile_data
 		viewX = text2num(viewrangelist[1])
 		viewY = text2num(viewrangelist[2])
 	return list(viewX, viewY)
+
+/proc/has_station_trait(var/trait)
+	return is_path_in_list(trait, SSstation.station_traits)
