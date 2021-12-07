@@ -1,0 +1,4 @@
+author: MuckerMayhem
+delete-after: true
+changes:
+  - bugfix: simple mobs can destroy tables
