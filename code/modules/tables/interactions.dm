@@ -93,6 +93,9 @@
 		break_to_parts()
 		return
 
+	if (istype(W, /obj/item/natural_weapon)) // Steppy's favourite type of table is wood
+		return ..()
+
 	if(can_plate && !material)
 		to_chat(user, "<span class='warning'>There's nothing to put \the [W] on! Try adding plating to \the [src] first.</span>")
 		return
