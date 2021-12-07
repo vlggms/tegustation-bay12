@@ -386,3 +386,31 @@
 	firemodes = list(
 		list(mode_name="semi auto",       burst=1, fire_delay=2,    move_delay=null, one_hand_penalty=8, burst_accuracy=null, dispersion=null)
 		)
+
+/obj/item/gun/projectile/automatic/t12
+	name = "T12 rifle"
+	desc = "An assault rifle produced and used by TerraGov military. Highly lethal and capable of holding up to 50 rounds in its standard magazines."
+	icon = 'icons/obj/guns/t12.dmi'
+	icon_state = "t12"
+	item_state = "t12"
+	w_class = ITEM_SIZE_HUGE
+	force = 14
+	caliber = CALIBER_T12
+	origin_tech = list(TECH_COMBAT = 7, TECH_MATERIAL = 1, TECH_ESOTERIC = 5)
+	slot_flags = SLOT_BACK
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/t12
+	allowed_magazines = /obj/item/ammo_magazine/t12
+	one_hand_penalty = 6
+	accuracy_power = 7
+	accuracy = 2
+	bulk = GUN_BULK_RIFLE
+	wielded_item_state = "t12-wielded"
+	mag_insert_sound = 'sound/weapons/guns/interaction/ltrifle_magin.ogg'
+	mag_remove_sound = 'sound/weapons/guns/interaction/ltrifle_magout.ogg'
+
+	firemodes = list(
+		list(mode_name="semi auto",      burst=1,    fire_delay=null, one_hand_penalty=8,  burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3,    fire_delay=null, burst_delay=1.5,     one_hand_penalty=9,  burst_accuracy=list(0,-1,-1),       dispersion=list(0.0, 0.5, 1.0)),
+		list(mode_name="full auto",      burst=1,    fire_delay=0,    burst_delay=0.4,     one_hand_penalty=7,  burst_accuracy=list(0,-1),          dispersion=list(0.2, 0.4, 0.6), autofire_enabled=1)
+		)

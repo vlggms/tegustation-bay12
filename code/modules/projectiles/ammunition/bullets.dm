@@ -160,6 +160,10 @@
 	projectile_type = /obj/item/projectile/bullet/rifle/military/practice
 	icon_state = "rifle_mil_p"
 
+/obj/item/ammo_casing/rifle/t12
+	caliber = CALIBER_T12
+	projectile_type = /obj/item/projectile/bullet/rifle/t12
+
 /obj/item/ammo_casing/rocket
 	name = "rocket shell"
 	desc = "A high explosive designed to be fired from a launcher."
