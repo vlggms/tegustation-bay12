@@ -69,7 +69,16 @@
 	if (alien != IS_DIONA)
 		M.heal_organ_damage(0, 12 * removed)
 
+/datum/reagent/medicine/meraline
+	name = "Meraline"
+	description = "Meraline is an advanced medicine used for treating severe physical trauma. Works twice as good as bicaridine but lacks its painkilling properties."
+	color = "#e6666c"
+	overdose = REAGENTS_OVERDOSE * 0.5
+	value = 3.9
 
+/datum/reagent/medicine/meralyne/affect_blood(mob/living/carbon/M, alien, removed)
+	if (alien != IS_DIONA)
+		M.heal_organ_damage(12 * removed, 0)
 
 /datum/reagent/medicine/dylovene
 	name = "Dylovene"
