@@ -18,7 +18,7 @@ GLOBAL_LIST_INIT(exo_event_mob_count,list())// a list of all mobs currently spaw
 /datum/event/exo_awakening/setup()
 	announceWhen = rand(15, 45)
 	affecting_z = list()
-	if (prob(25))
+	if ((GLOB.player_list.len > 12) && prob(50))
 		severity = EVENT_LEVEL_MAJOR
 		chosen_mob_list = pick(typesof(/datum/mob_list/major) - /datum/mob_list/major)
 	else
