@@ -1,5 +1,0 @@
-author: EgorDinamit
-delete-after: true
-changes:
-  - tweak: Major severity exoplanet awakening event will no longer happen on lowpop(below
-      12). Moderate severity will still happen.
