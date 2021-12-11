@@ -1024,6 +1024,7 @@
 #include "code\game\objects\items\weapons\circuitboards\machinery\portable_atmospherics.dm"
 #include "code\game\objects\items\weapons\circuitboards\machinery\power.dm"
 #include "code\game\objects\items\weapons\circuitboards\machinery\recharge_station.dm"
+#include "code\game\objects\items\weapons\circuitboards\machinery\recharger.dm"
 #include "code\game\objects\items\weapons\circuitboards\machinery\research.dm"
 #include "code\game\objects\items\weapons\circuitboards\machinery\shieldgen.dm"
 #include "code\game\objects\items\weapons\circuitboards\machinery\telecomms.dm"
