@@ -26,7 +26,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/firstdeck/centralstarboard)
 "aaf" = (
-/obj/machinery/atmospherics/unary/tank/hydrogen,
+/obj/machinery/atmospherics/unary/tank/carbon_dioxide,
 /turf/simulated/floor/reinforced/airless,
 /area/engineering/fuelbay/aux)
 "aag" = (
@@ -90,7 +90,7 @@
 /turf/simulated/floor/reinforced/airless,
 /area/engineering/fuelbay/aux)
 "aan" = (
-/obj/machinery/atmospherics/unary/tank/hydrogen{
+/obj/machinery/atmospherics/unary/tank/carbon_dioxide{
 	dir = 4
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -137,13 +137,13 @@
 /turf/simulated/floor/reinforced/airless,
 /area/engineering/fuelbay/aux)
 "aau" = (
-/obj/machinery/atmospherics/unary/tank/hydrogen{
+/obj/machinery/atmospherics/unary/tank/carbon_dioxide{
 	dir = 8
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/engineering/fuelbay/aux)
 "aav" = (
-/obj/machinery/atmospherics/unary/tank/hydrogen{
+/obj/machinery/atmospherics/unary/tank/carbon_dioxide{
 	dir = 1
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -241,7 +241,7 @@
 /area/engineering/fuelbay/aux)
 "aaI" = (
 /obj/machinery/light/spot,
-/obj/machinery/atmospherics/unary/tank/hydrogen{
+/obj/machinery/atmospherics/unary/tank/carbon_dioxide{
 	dir = 1
 	},
 /turf/simulated/floor/reinforced/airless,
