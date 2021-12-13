@@ -205,6 +205,11 @@
 				var/mob/living/L = usr
 				L.resist()
 
+		if("rest")
+			if(isliving(usr))
+				var/mob/living/L = usr
+				L.lay_down()
+
 		if("Reset Machine")
 			usr.unset_machine()
 		if("internal")
