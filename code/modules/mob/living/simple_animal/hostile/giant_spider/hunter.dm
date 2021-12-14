@@ -38,6 +38,12 @@
 	return ..()
 
 
+/mob/living/simple_animal/hostile/giant_spider/hunter/can_special_attack(atom/A)
+	. = ..()
+	if(.)
+		return check_solid_ground()
+	return FALSE
+
 // The actual leaping attack.
 /mob/living/simple_animal/hostile/giant_spider/hunter/do_special_attack(atom/A)
 	set waitfor = FALSE
