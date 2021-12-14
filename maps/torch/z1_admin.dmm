@@ -156,9 +156,7 @@
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_courtroom)
 "aaW" = (
-/obj/effect/landmark{
-	name = "Holocarp Spawn"
-	},
+/obj/effect/landmark/holofish,
 /turf/simulated/floor/holofloor/reinforced,
 /area/holodeck/source_wildlife)
 "aaX" = (
@@ -1113,9 +1111,7 @@
 	},
 /area/centcom/evac)
 "afj" = (
-/obj/effect/landmark{
-	name = "Holocarp Spawn Random"
-	},
+/obj/effect/landmark/holofish/random,
 /turf/simulated/floor/holofloor/space,
 /area/holodeck/source_space)
 "afk" = (
