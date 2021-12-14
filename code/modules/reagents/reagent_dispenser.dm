@@ -237,6 +237,10 @@
 		if(!istype(Proj ,/obj/item/projectile/beam/lastertag) && !istype(Proj ,/obj/item/projectile/beam/practice) )
 			explode()
 
+/obj/structure/reagent_dispensers/fueltank/ex_act(severity)
+	explode()
+	return
+
 /obj/structure/reagent_dispensers/fueltank/proc/explode()
 	for(var/datum/reagent/R in reagents.reagent_list)
 		R.ex_act(src, 1)
