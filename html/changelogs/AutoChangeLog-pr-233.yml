@@ -1,0 +1,5 @@
+author: Shadowtail117
+delete-after: true
+changes:
+  - tweak: 'New keybind: Toggle Aim Mode. This will swap between snapshot and active
+      aiming modes; default key is N.'
