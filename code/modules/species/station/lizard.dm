@@ -85,7 +85,8 @@
 
 	override_organ_types = list(
 		BP_EYES = /obj/item/organ/internal/eyes/unathi,
-		BP_BRAIN = /obj/item/organ/internal/brain/unathi
+		BP_BRAIN = /obj/item/organ/internal/brain/unathi,
+		BP_HEART = /obj/item/organ/internal/heart/unathi
 	)
 
 	descriptors = list(
