@@ -1,0 +1,5 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: Pointing at an object is a bit more precise now. The arrow sprite itself
+      has also been adjusted and made a bit bigger.
