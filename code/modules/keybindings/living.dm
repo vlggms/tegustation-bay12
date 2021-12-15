@@ -36,3 +36,14 @@
 	var/mob/living/L = user.mob
 	L.drop_item()
 	return TRUE
+
+/datum/keybinding/living/aim_mode
+	hotkey_keys = list("N")
+	name = "toggle_aim_mode"
+	full_name = "Toggle Aim Mode"
+	description = "Toggle between hip fire and aiming."
+
+/datum/keybinding/living/aim_mode/down(client/user)
+	var/mob/living/L = user.mob
+	L.aiming.toggle_active()
+	return TRUE
