@@ -303,6 +303,13 @@
 	build_path = /obj/item/stock_parts/circuitboard/mech_recharger
 	sort_string = "HACAA"
 
+/datum/design/circuit/recharger
+	name = "recharger"
+	id = "recharger"
+	req_tech = list(TECH_DATA = 2, TECH_POWER = 2, TECH_ENGINEERING = 2)
+	build_path = /obj/item/stock_parts/circuitboard/recharger
+	sort_string = "HACAB"
+
 /datum/design/circuit/recharge_station
 	name = "cyborg recharge station"
 	id = "recharge_station"
