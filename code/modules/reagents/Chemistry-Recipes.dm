@@ -238,6 +238,12 @@
 	inhibitors = list(/datum/reagent/sugar = 1) // Messes up with inaprovaline
 	result_amount = 2
 
+/datum/chemical_reaction/meraline
+	name = "Meraline"
+	result = /datum/reagent/medicine/meraline
+	required_reagents = list(/datum/reagent/medicine/inaprovaline = 1, /datum/reagent/medicine/bicaridine = 1, /datum/reagent/iron = 1)
+	result_amount = 3
+
 /datum/chemical_reaction/hyperzine
 	name = "Hyperzine"
 	result = /datum/reagent/medicine/stimulant/hyperzine
