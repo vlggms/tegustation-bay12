@@ -1,0 +1,7 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: To go into cyborg recharge station now you have to mouse-drop yourself
+      OR another mob into it.
+  - tweak: Cyborg recharge station will force its occupant to go out if power goes
+      out. Same happens if you try to enter it without power.
