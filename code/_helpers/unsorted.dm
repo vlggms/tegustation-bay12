@@ -772,7 +772,7 @@ proc/DuplicateObject(obj/original, var/perfectcopy = 0 , var/sameloc = 0)
 
 					for(var/obj/O in T)
 
-						if(!istype(O,/obj) || !O.simulated)
+						if((!istype(O,/obj) || !O.simulated) && !istype(O,/obj/effect/landmark))
 							continue
 
 						objs += O
