@@ -1,0 +1,5 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - rscadd: Meraline reagent is added, a chemical effective at healing brute damage.
+      The recipe is Bicaridine, Invaprovaline, and Iron.
