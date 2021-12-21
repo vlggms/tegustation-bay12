@@ -1,5 +1,0 @@
-author: EgorDinamit
-delete-after: true
-changes:
-  - tweak: Rechargers can now be upgraded with better capacitors to increase the rate
-      at which items are being recharged.
