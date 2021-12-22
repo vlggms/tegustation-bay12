@@ -18652,7 +18652,7 @@
 /turf/simulated/floor/lino,
 /area/crew_quarters/bar)
 "Uh" = (
-/obj/structure/fountain/mundane,
+/obj/random/date_based/christmas/tree/fountain,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
