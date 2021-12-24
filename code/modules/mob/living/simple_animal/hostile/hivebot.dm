@@ -9,6 +9,8 @@
 	maxHealth = 55
 	natural_weapon = /obj/item/natural_weapon/drone_slicer
 	projectiletype = /obj/item/projectile/beam/smalllaser
+	projectile_dispersion = 0.5
+	ranged_attack_delay = 3
 	faction = "hivebot"
 	min_gas = null
 	max_gas = null

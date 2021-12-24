@@ -13,6 +13,9 @@
 		. = ATTACK_SUCCESSFUL //Shoving this in here as a 'best guess' since this proc is about to sleep and return and we won't be able to know the real value
 		handle_attack_delay(A, melee_attack_delay) // This will sleep this proc for a bit, which is why waitfor is false.
 
+	if(stat == DEAD) // In case you died during that attack_delay
+		return
+
 	// Cooldown testing is done at click code (for players) and interface code (for AI).
 	setClickCooldown(get_attack_speed(get_natural_weapon()))
 
@@ -70,6 +73,9 @@
 			try_reload()
 			return FALSE
 
+	if(stat == DEAD) // In case you died during that attack_delay
+		return
+
 	visible_message("<span class='danger'><b>\The [src]</b> fires at \the [A]!</span>")
 	shoot(A)
 	if(casingtype)
@@ -101,7 +107,8 @@
 	// P.accuracy += calculate_accuracy()
 	P.dispersion += calculate_dispersion()
 
-	P.launch(target = A)
+	var/selected_zone = pick(BP_ALL_LIMBS) // Random limb targeting.
+	P.launch(A, selected_zone, src)
 	if(needs_reload)
 		reload_count++
 

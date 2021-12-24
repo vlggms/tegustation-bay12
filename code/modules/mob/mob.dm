@@ -1075,8 +1075,10 @@
 	else
 		return ..()
 
-/mob/proc/set_stat(var/new_stat)
-	. = stat != new_stat
+/mob/proc/set_stat(new_stat)
+	if(new_stat == stat)
+		return
+	. = stat
 	stat = new_stat
 
 /mob/verb/northfaceperm()
