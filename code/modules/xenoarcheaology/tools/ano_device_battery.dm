@@ -83,8 +83,8 @@
 	if(activated)
 		if(inserted_battery && inserted_battery.battery_effect && (inserted_battery.stored_charge > 0) )
 			//make sure the effect is active
-			if(!inserted_battery.battery_effect.activated)
-				inserted_battery.battery_effect.ToggleActivate(1)
+			if(!inserted_battery.battery_effect.toggled)
+				inserted_battery.battery_effect.Activate(null)
 
 			//update the effect loc
 			var/turf/T = get_turf(src)
@@ -99,14 +99,14 @@
 
 			//handle charge
 			if(world.time - last_activation > interval)
-				if(inserted_battery.battery_effect.effect == EFFECT_TOUCH)
+				if(inserted_battery.battery_effect.effect_type == EFFECT_TOUCH)
 					if(interval > 0)
 						//apply the touch effect to the holder
 						if(holder)
 							to_chat(holder, "The [icon2html(src, holder)] [src] held by [holder] shudders in your grasp.")
 						else
 							src.loc.visible_message("The [icon2html(src, viewers(src.loc))] [src] shudders.")
-						inserted_battery.battery_effect.DoEffectTouch(holder)
+						inserted_battery.battery_effect.DoEffect(holder)
 
 						//consume power
 						inserted_battery.use_power(energy_consumed_on_touch)
@@ -114,11 +114,11 @@
 						//consume power equal to time passed
 						inserted_battery.use_power(world.time - last_process)
 
-				else if(inserted_battery.battery_effect.effect == EFFECT_PULSE)
-					inserted_battery.battery_effect.chargelevel = inserted_battery.battery_effect.chargelevelmax
+				else if(inserted_battery.battery_effect.effect_type == EFFECT_PULSE)
+					inserted_battery.battery_effect.pulse_tick = inserted_battery.battery_effect.pulse_period
 
 					//consume power relative to the time the artifact takes to charge and the effect range
-					inserted_battery.use_power(inserted_battery.battery_effect.effectrange * inserted_battery.battery_effect.effectrange * inserted_battery.battery_effect.chargelevelmax)
+					inserted_battery.use_power(inserted_battery.battery_effect.range * inserted_battery.battery_effect.range * inserted_battery.battery_effect.pulse_period)
 
 				else
 					//consume power equal to time passed
@@ -144,8 +144,8 @@
 /obj/item/anodevice/proc/shutdown_emission()
 	if(activated)
 		activated = 0
-		if(inserted_battery.battery_effect.activated)
-			inserted_battery.battery_effect.ToggleActivate(1)
+		if(inserted_battery.battery_effect.toggled)
+			inserted_battery.battery_effect.Activate(null)
 		if(inserted_battery.stored_charge <= 0)
 			inserted_battery.battery_effect = null
 
@@ -171,8 +171,8 @@
 			activated = 1
 			last_process = world.time
 			src.visible_message("<span class='notice'>[icon2html(src, viewers(get_turf(src)))] [src] whirrs.</span>", "<span class='notice'>[icon2html(src, src)] You hear something whirr.</span>")
-			if(!inserted_battery.battery_effect.activated)
-				inserted_battery.battery_effect.ToggleActivate(1)
+			if(!inserted_battery.battery_effect.toggled)
+				inserted_battery.battery_effect.Activate(user)
 			time_end = world.time + duration
 		. = TOPIC_REFRESH
 	else if(href_list["shutdown"])
@@ -207,8 +207,8 @@
 	if (!istype(M))
 		return
 
-	if(activated && inserted_battery.battery_effect.effect == EFFECT_TOUCH && !isnull(inserted_battery))
-		inserted_battery.battery_effect.DoEffectTouch(M)
+	if(activated && inserted_battery.battery_effect.effect_type == EFFECT_TOUCH && !isnull(inserted_battery))
+		inserted_battery.battery_effect.DoEffect(M)
 		inserted_battery.use_power(energy_consumed_on_touch)
 		user.visible_message("<span class='notice'>[user] taps [M] with [src], and it shudders on contact.</span>")
 	else

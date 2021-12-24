@@ -1,22 +1,22 @@
 /datum/artifact_effect/teleport
 	name = "teleport"
-	effect_type = EFFECT_BLUESPACE
+	possible_effect_types = list(EFFECT_TOUCH, EFFECT_PULSE)
+	cooldown_time = 50
 	var/list/teleporting = list() //mobs waiting to be teleported
 
-/datum/artifact_effect/teleport/DoEffectTouch(var/mob/user)
+/datum/artifact_effect/teleport/getDescription()
+	return "Traces of bluespace energy are detected on the surface."
+
+/datum/artifact_effect/teleport/DoEffect(var/mob/user)
 	if (istype(user))
 		try_teleport(user, get_turf(holder))
 
-/datum/artifact_effect/teleport/DoEffectAura()
-	if(holder)
-		var/turf/T = get_turf(holder)
-		for (var/mob/living/M in range(src.effectrange,T))
-			try_teleport(M, T)
-
 /datum/artifact_effect/teleport/DoEffectPulse()
 	if(holder)
+		if(activation_sound)
+			playsound(holder, activation_sound, 100)
 		var/turf/T = get_turf(holder)
-		for (var/mob/living/M in range(src.effectrange, T))
+		for (var/mob/living/M in range(range, T))
 			try_teleport(M, T)
 
 /datum/artifact_effect/teleport/proc/try_teleport(mob/living/M, turf/center)

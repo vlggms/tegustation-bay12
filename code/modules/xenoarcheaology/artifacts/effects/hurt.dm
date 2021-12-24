@@ -1,8 +1,12 @@
 /datum/artifact_effect/hurt
 	name = "hurt"
-	effect_type = EFFECT_ORGANIC
+	possible_effect_types = list(EFFECT_TOUCH, EFFECT_AURA, EFFECT_PULSE)
+	cooldown_time = 50
 
-/datum/artifact_effect/hurt/DoEffectTouch(var/mob/toucher)
+/datum/artifact_effect/hurt/getDescription()
+	return "The artifact emits waves of harmful energy."
+
+/datum/artifact_effect/hurt/DoEffect(var/mob/toucher)
 	if(toucher)
 		var/weakness = GetAnomalySusceptibility(toucher)
 		if(iscarbon(toucher) && prob(weakness * 100))
@@ -21,7 +25,7 @@
 /datum/artifact_effect/hurt/DoEffectAura()
 	if(holder)
 		var/turf/T = get_turf(holder)
-		for (var/mob/living/carbon/C in range(src.effectrange,T))
+		for (var/mob/living/carbon/C in range(range, T))
 			var/weakness = GetAnomalySusceptibility(C)
 			if(prob(weakness * 100))
 				if(prob(10))
@@ -35,8 +39,10 @@
 
 /datum/artifact_effect/hurt/DoEffectPulse()
 	if(holder)
+		if(activation_sound)
+			playsound(holder, activation_sound, 100)
 		var/turf/T = get_turf(holder)
-		for (var/mob/living/carbon/C in range(effectrange, T))
+		for (var/mob/living/carbon/C in range(range, T))
 			var/weakness = GetAnomalySusceptibility(C)
 			if(prob(weakness * 100))
 				to_chat(C, "<span class='danger'>A wave of painful energy strikes you!</span>")
