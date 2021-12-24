@@ -1,7 +1,8 @@
 /datum/artifact_effect/forcefield
 	name = "force field"
+	effect_type = EFFECT_TOUCH
+	cooldown_time = 50
 	var/list/created_field = list()
-	effect_type = EFFECT_PARTICLE
 	var/fieldcolor
 
 /datum/artifact_effect/forcefield/New()

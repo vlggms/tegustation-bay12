@@ -1123,7 +1123,7 @@ var/global/floorIsLava = 0
 	log_and_message_admins("spawned [chosen] at ([usr.x],[usr.y],[usr.z])")
 	SSstatistics.add_field_details("admin_verb","SA") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
-/datum/admins/proc/spawn_artifact(effect in subtypesof(/datum/artifact_effect))
+/datum/admins/proc/spawn_artifact(datum/artifact_effect/effect in subtypesof(/datum/artifact_effect))
 	set category = "Debug"
 	set desc = "(atom path) Spawn an artifact with a specified effect."
 	set name = "Spawn Artifact"
@@ -1132,40 +1132,12 @@ var/global/floorIsLava = 0
 		return
 
 	var/obj/machinery/artifact/A
-	var/datum/artifact_trigger/primary_trigger
-
-	var/datum/artifact_effect/secondary_effect
-	var/datum/artifact_trigger/secondary_trigger
-
-	if (ispath(effect))
-		primary_trigger = input(usr, "Choose a trigger", "Choose a trigger") as null | anything in subtypesof(/datum/artifact_trigger)
-
-		if (!ispath(primary_trigger))
-			return
-
-		var/choice = alert(usr, "Secondary effect?", "Secondary effect", "Yes", "No") == "Yes"
-
-		if (choice)
-			secondary_effect = input(usr, "Choose an effect", "Choose effect") as null | anything in subtypesof(/datum/artifact_effect)
-
-			if (!ispath(secondary_effect))
-				return
-
-			secondary_trigger = input(usr, "Choose a trigger", "Choose a trigger") as null | anything in subtypesof(/datum/artifact_trigger)
-
-			if (!ispath(secondary_trigger))
-				return
-
-
-		A = new(usr.loc)
-		A.my_effect = new effect(A)
-		A.my_effect.trigger = new primary_trigger(A.my_effect)
-
-		if (secondary_effect)
-			A.secondary_effect = new secondary_effect
-			A.secondary_effect.trigger = new secondary_trigger
-		else
-			QDEL_NULL(A.secondary_effect)
+	A = new(usr.loc)
+	A.effect = new effect(A)
+	var/ef_type = input(usr, "Choose effect type", "Choose effect type") as null|anything in A.effect.possible_effect_types
+	var/act_met = input(usr, "Choose a trigger", "Choose a trigger") as null|anything in A.possible_methods
+	A.activation_method = act_met
+	A.effect.effect_type = ef_type
 
 /datum/admins/proc/show_traitor_panel(var/mob/M in SSmobs.mob_list)
 	set category = "Admin"

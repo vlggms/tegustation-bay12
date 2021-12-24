@@ -42,16 +42,7 @@
 #define DIGSITE_TEMPLE 5
 #define DIGSITE_WAR 6
 
-#define EFFECT_TOUCH 0
-#define EFFECT_AURA 1
-#define EFFECT_PULSE 2
+#define EFFECT_TOUCH "effect_touch"
+#define EFFECT_AURA "effect_aura"
+#define EFFECT_PULSE "effect_pulse"
 #define MAX_EFFECT 2
-
-#define EFFECT_UNKNOWN 0
-#define EFFECT_ENERGY 1
-#define EFFECT_PSIONIC 2
-#define EFFECT_ELECTRO 3
-#define EFFECT_PARTICLE 4
-#define EFFECT_ORGANIC 5
-#define EFFECT_BLUESPACE 6
-#define EFFECT_SYNTH 7
