@@ -16,8 +16,8 @@
 	var/mob/living/carbon/human/occupant = null
 	var/list/base_chemicals = list("Inaprovaline" = /datum/reagent/medicine/inaprovaline, "Paracetamol" = /datum/reagent/medicine/painkiller/paracetamol, "Dylovene" = /datum/reagent/medicine/dylovene, "Dexalin" = /datum/reagent/medicine/dexalin)
 	var/list/available_chemicals = list()
-	var/list/upgrade_chemicals = list("Kelotane" = /datum/reagent/medicine/kelotane)
-	var/list/upgrade2_chemicals = list("Hyronalin" = /datum/reagent/medicine/hyronalin)
+	var/list/upgrade_chemicals = list("Imidazoline" = /datum/reagent/medicine/imidazoline, "Alkysine" = /datum/reagent/medicine/alkysine, "Hyronalin" = /datum/reagent/medicine/hyronalin)
+	var/list/upgrade2_chemicals = list("Bicaridine" = /datum/reagent/medicine/bicaridine, "Kelotane" = /datum/reagent/medicine/kelotane)
 	var/list/antag_chemicals = list("Hair Remover" = /datum/reagent/toxin/hair_remover, "Chloral Hydrate" = /datum/reagent/chloral_hydrate)
 	var/obj/item/reagent_containers/glass/beaker = null
 	var/filtering = 0
@@ -50,6 +50,8 @@
 
 /obj/machinery/sleeper/Process()
 	if(stat & (NOPOWER|BROKEN))
+		if(occupant)
+			go_out()
 		return
 
 	if(filtering > 0)
