@@ -1,0 +1,7 @@
+author: EgorDinamit, Kor (/tg/)
+delete-after: true
+changes:
+  - rscadd: Christmas (gift) tree will appear in the place of a fountain on deck 3
+      from December 1st to January 13th.
+  - tweak: Santa's bag can hold fewer items, but now it can contain items of nearly
+      any size and spawns gifts every 30 seconds while worn.
