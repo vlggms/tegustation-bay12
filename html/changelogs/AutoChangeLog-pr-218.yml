@@ -1,8 +1,0 @@
-author: EgorDinamit
-delete-after: true
-changes:
-  - tweak: Bicaridine, Imidazoline, and Alkysine are now available in sleepers on
-      various stages of stock parts upgrade.
-  - tweak: Hyronalin is now available at the first upgrade tier of sleepers. Kelotane
-      has been moved to tier 2.
-  - tweak: If power goes out - occupants will automatically leave sleepers.

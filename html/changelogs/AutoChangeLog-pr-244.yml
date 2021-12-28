@@ -1,5 +1,0 @@
-author: EgorDinamit
-delete-after: true
-changes:
-  - tweak: Containment fields now shock mobs and structures only when they move into
-      them, instead of randomly doing that when in close proximity.
