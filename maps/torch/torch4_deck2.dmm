@@ -4361,14 +4361,24 @@
 	dir = 8
 	},
 /obj/item/aiModule/reset,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/bluegrid,
 /area/synth/borg_upload)
 "iW" = (
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -24
 	},
-/turf/simulated/floor/bluegrid,
+/obj/machinery/flasher{
+	dir = 4;
+	pixel_x = -24;
+	pixel_y = -24
+	},
+/obj/machinery/flasher{
+	dir = 4;
+	pixel_x = -24;
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/synth/borg_upload)
 "iX" = (
 /obj/machinery/status_display,
@@ -4518,20 +4528,6 @@
 /obj/effect/shuttle_landmark/lift/robotics_bottom,
 /turf/simulated/floor/plating,
 /area/assembly/robotics)
-"ju" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/synth/borg_upload)
 "jv" = (
 /obj/structure/lattice,
 /obj/structure/disposaloutlet{
@@ -4585,7 +4581,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/engineering_bay)
 "jB" = (
-/obj/structure/table/standard,
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -22
@@ -4597,7 +4592,8 @@
 /obj/machinery/computer/upload/ai{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/bluegrid,
 /area/synth/borg_upload)
 "jC" = (
 /obj/structure/table/standard,
@@ -4619,7 +4615,7 @@
 	},
 /obj/item/aiModule/purge,
 /obj/item/aiModule/quarantine,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/bluegrid,
 /area/synth/borg_upload)
 "jE" = (
 /obj/structure/window/reinforced{
@@ -4632,7 +4628,7 @@
 	},
 /obj/item/aiModule/robocop,
 /obj/item/aiModule/solgov_aggressive,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/bluegrid,
 /area/synth/borg_upload)
 "jH" = (
 /obj/machinery/door/airlock/hatch{
@@ -5448,7 +5444,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/bluegrid,
+/turf/simulated/floor/tiled/techfloor,
 /area/synth/borg_upload)
 "lx" = (
 /obj/structure/cable/green{
@@ -8741,7 +8737,7 @@
 "tD" = (
 /obj/machinery/computer/upload/robot,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/bluegrid,
 /area/synth/borg_upload)
 "tE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
@@ -11083,7 +11079,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/bluegrid,
+/turf/simulated/floor/tiled/techfloor,
 /area/synth/borg_upload)
 "Aw" = (
 /obj/structure/reagent_dispensers/fueltank,
@@ -14081,6 +14077,11 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/door/airlock/highsecurity{
+	icon_state = "closed";
+	locked = 1;
+	name = "AI Upload Access"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/synth/borg_upload)
 "Ip" = (
@@ -17000,7 +17001,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/bluegrid,
 /area/synth/borg_upload)
 "RO" = (
 /obj/structure/table/rack,
@@ -32738,7 +32739,7 @@ AI
 XA
 Lp
 iT
-ju
+Au
 jE
 Lp
 dX
