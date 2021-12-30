@@ -227,7 +227,7 @@
 
 /obj/machinery/microwave/interact(mob/user as mob) // The microwave Menu
 	user.set_machine(src)
-	var/dat = list()
+	var/dat
 	if(broken > 0)
 		dat += "<TT><b><i>This microwave is very broken. You'll need to fix it before you can use it again.</i></b></TT>"
 	else if(operating)
@@ -268,11 +268,12 @@
 					else
 						dat += "<B>[capitalize(O)]:</B> [N] [items_measures_p[O]]"
 
-		dat += "<HR><BR><A href='?src=\ref[src];action=cook'>Turn on!<BR><A href='?src=\ref[src];action=dispose'>Eject ingredients!"
+		dat += "<HR><A href='?src=\ref[src];action=cook'>Turn on!</a><br><A href='?src=\ref[src];action=dispose'>Eject ingredients!</a>"
 
-	show_browser(user, "<HEAD><TITLE>Microwave Controls</TITLE></HEAD><TT>[jointext(dat,"<br>")]</TT>", "window=microwave")
+	var/datum/browser/popup = new(user, "microwave", "Microwave Controls")
+	popup.set_content(dat)
+	popup.open()
 	onclose(user, "microwave")
-	return
 
 
 

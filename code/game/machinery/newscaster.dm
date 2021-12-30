@@ -464,7 +464,7 @@ var/list/obj/machinery/newscaster/allCasters = list() //Global list that will co
 				dat+="<FONT COLOR='maroon'>Unable to print newspaper. Insufficient paper. Please notify maintenance personnel to refill machine storage.</FONT><BR><BR>"
 				dat+="<A href='?src=\ref[src];setScreen=[0]'>Return</A>"
 			else
-				dat+="I'm sorry to break your immersion. This shit's bugged. Report this bug to Agouri, polyxenitopalidou@gmail.com"
+				dat+="I'm sorry to break your immersion. This shit's bugged. Report this bug on GitHub or Discord."
 
 		var/datum/browser/popup = new(human_or_robot_user, "newscaster_main", "Newscaster", 400, 600)
 		popup.set_content(dat)
@@ -865,10 +865,12 @@ obj/item/newspaper/attack_self(mob/user)
 					dat+="<BR><I>There is a small scribble near the end of this page... It reads: \"[src.scribble]\"</I>"
 				dat+= "<HR><DIV STYLE='float:left;'><A href='?src=\ref[src];prev_page=1'>Previous Page</A></DIV>"
 			else
-				dat+="I'm sorry to break your immersion. This shit's bugged. Report this bug to Agouri, polyxenitopalidou@gmail.com"
+				dat+="I'm sorry to break your immersion. This shit's bugged. Report this bug on GitHub or Discord."
 
 		dat+="<BR><HR><div align='center'>[src.curr_page+1]</div>"
-		show_browser(human_user, dat, "window=newspaper_main;size=300x400")
+		var/datum/browser/popup = new(human_user, "newspaper_main", "Newspaper", 300, 400)
+		popup.set_content(dat)
+		popup.open()
 		onclose(human_user, "newspaper_main")
 	else
 		to_chat(user, "The paper is full of intelligible symbols!")
