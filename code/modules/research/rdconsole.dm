@@ -159,7 +159,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 /obj/machinery/computer/rdconsole/CanUseTopic(var/mob/user, var/datum/topic_state/state, var/href_list)
 	if(href_list && href_list["menu"])
 		var/temp_screen = text2num(href_list["menu"])
-		if(!((temp_screen <= 1.1) || (3 <= temp_screen && 4.9 >= temp_screen) || allowed(user)))
+		if(!((temp_screen <= 1.1) || (3 <= temp_screen && 4.9 >= temp_screen) || !allowed(user)))
 			to_chat(user, "Unauthorized Access.")
 			return STATUS_CLOSE
 	return ..()
@@ -664,7 +664,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 			if(linked_destroy)
 				dat += "<LI>Destructive Analyzer <A href='?src=\ref[src];disconnect=destroy'>(Disconnect)</A>"
 			else
-				if (can_analyze == TRUE) 
+				if (can_analyze == TRUE)
 					dat += "<LI>(No Destructive Analyzer Linked)"
 			if(linked_lathe)
 				dat += "<LI>Protolathe <A href='?src=\ref[src];disconnect=lathe'>(Disconnect)</A>"
@@ -879,7 +879,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 /obj/machinery/computer/rdconsole/core
 	name = "core fabricator console"
 	id = 1
-	
+
 
 #undef CHECK_LATHE
 #undef CHECK_IMPRINTER
