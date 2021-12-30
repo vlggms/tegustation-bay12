@@ -1,0 +1,4 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: A lot of old browsers UIs are replaced with better-looking browser popups.
