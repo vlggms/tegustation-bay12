@@ -1,6 +1,0 @@
-author: EgorDinamit
-delete-after: true
-changes:
-  - tweak: Buttons now provide a message saying "Access denied" if you try to interact
-      with them while lacking proper access level.
-  - tweak: RND Console will properly notify you of your insufficient access.
