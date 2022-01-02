@@ -59,6 +59,7 @@
 				if(!station_trait_iterator.show_in_report)
 					return
 				welcome_text += "[station_trait_iterator.get_report()]<BR>"
+
 		welcome_text += "<hr>"
 
 	post_comm_message("SEV Torch Sensor Readings", welcome_text)
