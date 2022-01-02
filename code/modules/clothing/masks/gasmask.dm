@@ -230,3 +230,26 @@
 	filter_water = TRUE
 	body_parts_covered = FACE
 	w_class = 2
+
+/obj/item/clothing/mask/gas/terran
+	name = "military gas mask"
+	desc = "A close-fitting tactical mask worn by TerraGov military and police services."
+	icon_state = "fullgas_terra"
+	item_state = "fullgas_terra"
+	siemens_coefficient = 0.7
+	armor = list(
+		melee = ARMOR_MELEE_SMALL,
+		bullet = ARMOR_BALLISTIC_SMALL,
+		laser = ARMOR_LASER_MINOR,
+		bio = ARMOR_BIO_STRONG
+		)
+
+/obj/item/clothing/mask/gas/terran/budget
+	name = "gas mask"
+	desc = "A face-covering mask with red lenses that can be connected to an air supply."
+	icon_state = "gas_terra"
+	item_state = "gas_terra"
+	armor = list(
+		melee = ARMOR_MELEE_MINOR,
+		bio = ARMOR_BIO_SMALL
+		)

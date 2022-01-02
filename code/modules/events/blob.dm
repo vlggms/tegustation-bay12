@@ -2,12 +2,17 @@
 	announceWhen	= 12
 
 	var/obj/effect/blob/core/Blob
+	var/list/allowed_areas = list(/area/maintenance)
 
 /datum/event/blob/announce()
 	level_seven_announcement()
 
 /datum/event/blob/start()
-	var/turf/T = pick_subarea_turf(/area/maintenance, list(/proc/is_station_turf, /proc/not_turf_contains_dense_objects))
+	var/list/possible_turfs = list()
+	for(var/area/ar in allowed_areas)
+		var/turf/PT = pick_subarea_turf(ar, list(/proc/is_station_turf, /proc/not_turf_contains_dense_objects))
+		possible_turfs += PT
+	var/turf/T = pick(possible_turfs)
 	if(!T)
 		log_and_message_admins("Blob failed to find a viable turf.")
 		kill()

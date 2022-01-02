@@ -121,21 +121,21 @@
 	desc = "A passport from the southern part of Gaia, under control of the Sol Central Government."
 
 /obj/item/passport/terran
-	name = "\improper ICCG passport"
+	name = "\improper TerraGov passport"
 	icon_state = "passport_terragov"
 	desc = "A passport from the Terran Government."
 
-/obj/item/passport/north_gaia
+/obj/item/passport/terran/north_gaia
 	name = "\improper Northern Gaian passport"
 	icon_state = "passport_terragov2"
 	desc = "A passport from the northern part of Gaia, under control of the Terran Government."
 
-/obj/item/passport/terra
+/obj/item/passport/terran/terra
 	name = "\improper Terran passport"
 	icon_state = "passport_terragov2"
 	desc = "A passport from Terra, within TerraGov space."
 
-/obj/item/passport/new_earth
+/obj/item/passport/terran/new_earth
 	name = "\improper New Earth passport"
 	icon_state = "passport_terragov2"
 	desc = "A passport from New Earth, within TerraGov space."
