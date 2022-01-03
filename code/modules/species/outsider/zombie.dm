@@ -470,7 +470,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 	last_special = world.time + 5 SECONDS
 
 	src.visible_message(SPAN_DANGER("\The [src] hunkers down over \the [target], tearing into their flesh."))
-	playsound(loc, 'sound/effects/bonebreak3.ogg', 20, 1)
+	playsound(loc, 'sound/effects/wounds/bonebreak3.ogg', 20, 1)
 
 	target.adjustHalLoss(50)
 
