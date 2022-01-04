@@ -181,6 +181,9 @@
 #define AI_RESTOREPOWER_CONNECTED 4
 #define AI_RESTOREPOWER_COMPLETED 5
 
+// AI button defines
+#define AI_BUTTON_PROC_BELONGS_TO_CALLER 1
+#define AI_BUTTON_INPUT_REQUIRES_SELECTION 2
 
 // Values represented as Oxyloss. Can be tweaked, but make sure to use integers only.
 #define AI_POWERUSAGE_LOWPOWER 1
