@@ -3,7 +3,8 @@
 #define ceil(x) (-round(-(x)))
 #define CEILING(x, y) ( -round(-(x) / (y)) * (y) )
 #define MULT_BY_RANDOM_COEF(VAR,LO,HI) VAR =  round((VAR * rand(LO * 100, HI * 100))/100, 0.1)
-#define PERCENT(val, max, places) round((val) / (max) * 100, !(places) || 10 ** -(places))
+/// The percentage of value in max, rounded to places: 1 = nearest 0.1 , 0 = nearest 1 , -1 = nearest 10, etc
+#define PERCENT(value, max, places) round((value) / (max) * 100, !(places) || 10 ** -(places))
 
 // min is inclusive, max is exclusive
 /proc/Wrap(val, min, max)

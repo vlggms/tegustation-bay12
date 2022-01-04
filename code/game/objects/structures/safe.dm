@@ -154,7 +154,7 @@ FLOOR SAFES
 			return
 
 
-obj/structure/safe/ex_act(severity)
+/obj/structure/safe/ex_act(severity)
 	return
 
 //FLOOR SAFES

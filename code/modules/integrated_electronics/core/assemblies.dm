@@ -9,6 +9,7 @@
 	icon_state = "setup_small"
 	item_flags = ITEM_FLAG_NO_BLUDGEON
 	matter = list()		// To be filled later
+	health_max = 30
 	var/list/assembly_components = list()
 	var/list/ckeys_allowed_to_scan = list() // Players who built the circuit can scan it as a ghost.
 	var/max_components = IC_MAX_SIZE_BASE
@@ -26,7 +27,6 @@
 	var/static/next_assembly_id = 0
 	var/interact_page = 0
 	var/components_per_page = 5
-	health = 30
 	pass_flags = 0
 	anchored = FALSE
 	var/detail_color = COLOR_ASSEMBLY_BLACK
@@ -55,24 +55,24 @@
 		to_chat(user, "<span class='notice'>The anchoring bolts [anchored ? "are" : "can be"] <b>wrenched</b> in place and the maintenance panel [opened ? "can be" : "is"] <b>screwed</b> in place.</span>")
 	else
 		to_chat(user, "<span class='notice'>The maintenance panel [opened ? "can be" : "is"] <b>screwed</b> in place.</span>")
-	if(health != initial(health))
-		if(health <= initial(health)/2)
-			to_chat(user,"<span class='warning'>It looks pretty beat up.</span>")
-		else
-			to_chat(user, "<span class='warning'>Its got a few dents in it.</span>")
 
 	if((isobserver(user) && ckeys_allowed_to_scan[user.ckey]) || check_rights(R_ADMIN, 0, user))
 		to_chat(user, "You can <a href='?src=\ref[src];ghostscan=1'>scan</a> this circuit.");
 
 
-/obj/item/device/electronic_assembly/proc/take_damage(var/amnt)
-	health = health - amnt
-	if(health <= 0)
+/obj/item/device/electronic_assembly/handle_death_change(new_death_state)
+	. = ..()
+	if(new_death_state)
 		visible_message("<span class='danger'>\The [src] falls to pieces!</span>")
 		qdel(src)
-	else if(health < initial(health)*0.15 && prob(5))
-		visible_message("<span class='danger'>\The [src] starts to break apart!</span>")
 
+/obj/item/device/electronic_assembly/post_health_change(health_mod, damage_type)
+	..()
+	if(get_damage_percentage() >= 75)
+		if(battery && battery.charge > 0)
+			visible_message(SPAN_WARNING("\The [src] sputters and sparks!"))
+		opened = TRUE
+		on_update_icon()
 
 /obj/item/device/electronic_assembly/proc/check_interactivity(mob/user)
 	return (!user.incapacitated() && CanUseTopic(user))
@@ -109,8 +109,9 @@
 		P.make_energy()
 
 	var/power_failure = FALSE
-	if(initial(health)/health < 0.5 && prob(5))
-		visible_message("<span class='warning'>\The [src] shudders and sparks</span>")
+	if(get_damage_percentage() >= 75 && prob(2))
+		if(battery && battery.charge > 0)
+			visible_message("<span class='warning'>\The [src] shudders and sparks</span>")
 		power_failure = TRUE
 	// Now spend it.
 	for(var/I in assembly_components)
@@ -407,13 +408,19 @@
 
 
 /obj/item/device/electronic_assembly/attackby(obj/item/I, mob/living/user)
+	if(user.a_intent == I_HURT)
+		..()
+		return
+
 	if(istype(I, /obj/item/wrench))
 		if(istype(loc, /turf) && (IC_FLAG_ANCHORABLE & circuit_flags))
 			user.visible_message("\The [user] wrenches \the [src]'s anchoring bolts [anchored ? "back" : "into position"].")
 			playsound(get_turf(user), 'sound/items/Ratchet.ogg',50)
 			if(user.do_skilled(5 SECONDS, SKILL_CONSTRUCTION, src))
 				anchored = !anchored
-	else if(istype(I, /obj/item/integrated_circuit))
+		return
+
+	if(istype(I, /obj/item/integrated_circuit))
 		if(!user.canUnEquip(I))
 			return FALSE
 		if(try_add_component(I, user))
@@ -422,7 +429,8 @@
 			for(var/obj/item/integrated_circuit/input/S in assembly_components)
 				S.attackby_react(I,user,user.a_intent)
 			return ..()
-	else if(istype(I, /obj/item/device/multitool) || istype(I, /obj/item/device/integrated_electronics/wirer) || istype(I, /obj/item/device/integrated_electronics/debugger))
+
+	if(istype(I, /obj/item/device/multitool) || istype(I, /obj/item/device/integrated_electronics/wirer) || istype(I, /obj/item/device/integrated_electronics/debugger))
 		if(opened)
 			interact(user)
 			return TRUE
@@ -431,7 +439,8 @@
 			for(var/obj/item/integrated_circuit/input/S in assembly_components)
 				S.attackby_react(I,user,user.a_intent)
 			return ..()
-	else if(istype(I, /obj/item/cell))
+
+	if(istype(I, /obj/item/cell))
 		if(!opened)
 			to_chat(user, "<span class='warning'>[src]'s hatch is closed, so you can't access \the [src]'s power supplier.</span>")
 			for(var/obj/item/integrated_circuit/input/S in assembly_components)
@@ -451,11 +460,14 @@
 			to_chat(user, "<span class='notice'>You slot \the [cell] inside \the [src]'s power supplier.</span>")
 			return TRUE
 		return FALSE
-	else if(istype(I, /obj/item/device/integrated_electronics/detailer))
+
+	if(istype(I, /obj/item/device/integrated_electronics/detailer))
 		var/obj/item/device/integrated_electronics/detailer/D = I
 		detail_color = D.detail_color
 		update_icon()
-	else if(istype(I, /obj/item/screwdriver))
+		return
+
+	if(istype(I, /obj/item/screwdriver))
 		var/hatch_locked = FALSE
 		for(var/obj/item/integrated_circuit/manipulation/hatchlock/H in assembly_components)
 			// If there's more than one hatch lock, only one needs to be enabled for the assembly to be locked
@@ -471,35 +483,32 @@
 		opened = !opened
 		to_chat(user, "<span class='notice'>You [opened ? "open" : "close"] the maintenance hatch of [src].</span>")
 		update_icon()
-	else if(isCoil(I))
+		return
+
+	if(isCoil(I))
 		var/obj/item/stack/cable_coil/C = I
-		if(health != initial(health) && do_after(user, 10, src) && C.use(1))
+		if(health_damaged() && do_after(user, 10, src) && C.use(1))
 			user.visible_message("\The [user] patches up \the [src]")
-			health = min(initial(health), health + 5)
-	else
-		if(user.a_intent == I_HURT) // Kill it
-			to_chat(user, "<span class='danger'>\The [user] hits \the [src] with \the [I]</span>")
-			take_damage(I.force)
-		else
-			for(var/obj/item/integrated_circuit/input/S in assembly_components)
-				S.attackby_react(I,user,user.a_intent)
+			restore_health(5)
+		return
+
+	for(var/obj/item/integrated_circuit/input/S in assembly_components)
+		S.attackby_react(I,user,user.a_intent)
+	..()
 
 /obj/item/device/electronic_assembly/attack_self(mob/user)
 	interact(user)
 
-/obj/item/device/electronic_assembly/bullet_act(var/obj/item/projectile/P)
-	take_damage(P.damage)
-
 /obj/item/device/electronic_assembly/attack_generic(mob/user, damage)
-	take_damage(damage)
 	user.visible_message(SPAN_WARNING("\The [user] smashes \the [src]!"), SPAN_WARNING("You smash \the [src]!"))
 	attack_animation(user)
+	damage_health(damage)
 
 /obj/item/device/electronic_assembly/emp_act(severity)
-	. = ..()
 	for(var/I in src)
 		var/atom/movable/AM = I
 		AM.emp_act(severity)
+	. = ..()
 
 // Returns true if power was successfully drawn.
 /obj/item/device/electronic_assembly/proc/draw_power(amount)
@@ -568,7 +577,7 @@
 	w_class = ITEM_SIZE_NORMAL
 	max_components = IC_MAX_SIZE_BASE * 2
 	max_complexity = IC_COMPLEXITY_BASE * 2
-	health = 20
+	health_max = 45
 
 /obj/item/device/electronic_assembly/medium/default
 	name = "type-a electronic mechanism"
@@ -611,7 +620,7 @@
 	w_class = ITEM_SIZE_LARGE
 	max_components = IC_MAX_SIZE_BASE * 4
 	max_complexity = IC_COMPLEXITY_BASE * 4
-	health = 30
+	health_max = 60
 
 /obj/item/device/electronic_assembly/large/default
 	name = "type-a electronic machine"
@@ -650,7 +659,7 @@
 	max_complexity = IC_COMPLEXITY_BASE * 3
 	allowed_circuit_action_flags = IC_ACTION_MOVEMENT | IC_ACTION_COMBAT | IC_ACTION_LONG_RANGE
 	circuit_flags = 0
-	health = 50
+	health_max = 60
 
 /obj/item/device/electronic_assembly/drone/can_move()
 	return TRUE
@@ -662,16 +671,19 @@
 	name = "type-b electronic drone"
 	icon_state = "setup_drone_arms"
 	desc = "It's a case, for building mobile electronics with. This one is armed and dangerous."
+	health_max = 70
 
 /obj/item/device/electronic_assembly/drone/secbot
 	name = "type-c electronic drone"
 	icon_state = "setup_drone_secbot"
 	desc = "It's a case, for building mobile electronics with. This one resembles a Securitron."
+	health_max = 70
 
 /obj/item/device/electronic_assembly/drone/medbot
 	name = "type-d electronic drone"
 	icon_state = "setup_drone_medbot"
 	desc = "It's a case, for building mobile electronics with. This one resembles a Medibot."
+	health_max = 50
 
 /obj/item/device/electronic_assembly/drone/genbot
 	name = "type-e electronic drone"
@@ -682,6 +694,7 @@
 	name = "type-f electronic drone"
 	icon_state = "setup_drone_android"
 	desc = "It's a case, for building mobile electronics with. This one has a hominoid design."
+	health_max = 100
 
 /obj/item/device/electronic_assembly/wallmount
 	name = "wall-mounted electronic assembly"
@@ -690,7 +703,7 @@
 	w_class = ITEM_SIZE_NORMAL
 	max_components = IC_MAX_SIZE_BASE * 2
 	max_complexity = IC_COMPLEXITY_BASE * 2
-	health = 10
+	health_max = 40
 
 /obj/item/device/electronic_assembly/wallmount/afterattack(var/atom/a, var/mob/user, var/proximity)
 	if(proximity && istype(a ,/turf) && a.density)
@@ -703,6 +716,7 @@
 	w_class = ITEM_SIZE_LARGE
 	max_components = IC_MAX_SIZE_BASE * 4
 	max_complexity = IC_COMPLEXITY_BASE * 4
+	health_max = 80
 
 /obj/item/device/electronic_assembly/wallmount/light
 	name = "light wall-mounted electronic assembly"

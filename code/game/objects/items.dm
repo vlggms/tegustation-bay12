@@ -7,7 +7,6 @@
 	var/image/blood_overlay = null //this saves our blood splatter overlay, which will be processed not to go over the edges of the sprite
 	var/randpixel = 6
 	var/r_speed = 1.0
-	var/health = null
 	var/burn_point = null
 	var/burning = null
 	var/hitsound = "swing_hit"
@@ -118,6 +117,7 @@
 
 /obj/item/device
 	icon = 'icons/obj/device.dmi'
+	health_resistances = DAMAGE_RESIST_ELECTRICAL
 
 //Checks if the item is being held by a mob, and if so, updates the held icons
 /obj/item/proc/update_twohanding()
@@ -154,6 +154,7 @@
 	return FALSE
 
 /obj/item/ex_act(severity)
+	..()
 	switch(severity)
 		if(1)
 			qdel(src)

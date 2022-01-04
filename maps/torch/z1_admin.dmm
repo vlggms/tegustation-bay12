@@ -2904,8 +2904,7 @@
 /area/centcom/living)
 "avB" = (
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/structure/showcase{
 	desc = "A self-contained autopilot that controls supply drones.";
@@ -8407,8 +8406,7 @@
 	},
 /obj/structure/curtain/open/shower,
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/merchant_station)
@@ -9472,8 +9470,7 @@
 	},
 /obj/machinery/door/window/brigdoor/southright,
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/merchant/home)
@@ -9717,8 +9714,7 @@
 "aTg" = (
 /obj/structure/table/reinforced,
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/item/paper_bin{
 	pixel_x = 1;
@@ -9733,8 +9729,7 @@
 	},
 /obj/structure/table/reinforced,
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/merchant/home)

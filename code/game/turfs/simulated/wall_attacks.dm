@@ -1,5 +1,5 @@
 //Interactions
-/turf/simulated/wall/proc/toggle_open(var/mob/user)
+/turf/simulated/wall/proc/toggle_open(mob/user)
 
 	if(can_open == WALL_OPENING)
 		return
@@ -47,7 +47,7 @@
 		SSair.mark_for_update(turf)
 
 
-/turf/simulated/wall/proc/update_thermal(var/turf/simulated/source)
+/turf/simulated/wall/proc/update_thermal(turf/simulated/source)
 	if(istype(source))
 		if(density && opacity)
 			source.thermal_conductivity = WALL_HEAT_TRANSFER_COEFFICIENT
@@ -56,24 +56,22 @@
 
 
 
-/turf/simulated/wall/proc/fail_smash(var/mob/user)
+/turf/simulated/wall/proc/fail_smash(mob/user)
 	to_chat(user, "<span class='danger'>You smash against \the [src]!</span>")
-	take_damage(rand(25,75))
+	damage_health(rand(25, 75), BRUTE)
 
-/turf/simulated/wall/proc/success_smash(var/mob/user)
+/turf/simulated/wall/proc/success_smash(mob/user)
 	to_chat(user, "<span class='danger'>You smash through \the [src]!</span>")
 	user.do_attack_animation(src)
-	spawn(1)
-		dismantle_wall(1)
+	kill_health()
 
-/turf/simulated/wall/proc/try_touch(var/mob/user, var/rotting)
-
+/turf/simulated/wall/proc/try_touch(mob/user, rotting)
 	if(rotting)
 		if(reinf_material)
 			to_chat(user, "<span class='danger'>\The [reinf_material.display_name] feels porous and crumbly.</span>")
 		else
 			to_chat(user, "<span class='danger'>\The [material.display_name] crumbles under your touch!</span>")
-			dismantle_wall(TRUE)
+			kill_health()
 			return 1
 
 	if(!can_open)
@@ -84,8 +82,7 @@
 	return 0
 
 
-/turf/simulated/wall/attack_hand(var/mob/user)
-
+/turf/simulated/wall/attack_hand(mob/user)
 	radiate()
 	add_fingerprint(user)
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
@@ -110,12 +107,12 @@
 					return
 				if(rotting && !reinf_material)
 					M.visible_message(SPAN_DANGER("[M.name] punches \the [src] and it crumbles!"), SPAN_DANGER("You punch \the [src] and it crumbles!"))
-					dismantle_wall(TRUE)
+					kill_health()
 					playsound(src, pick(GLOB.punch_sound), 20)
 				if (MUTATION_FERAL in user.mutations)
 					M.visible_message(SPAN_DANGER("[M.name] slams into \the [src]!"), SPAN_DANGER("You slam into \the [src]!"))
 					playsound(src, pick(GLOB.punch_sound), 45)
-					take_damage(5)
+					damage_health(5, BRUTE)
 					user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN*2) //Additional cooldown
 					attack_animation(user)
 				else
@@ -126,7 +123,7 @@
 	else
 		try_touch(user, rotting)
 
-/turf/simulated/wall/attack_generic(var/mob/user, var/damage, var/attack_message, var/wallbreaker)
+/turf/simulated/wall/attack_generic(mob/user, damage, attack_message, wallbreaker)
 
 	radiate()
 	if(!istype(user))
@@ -148,8 +145,7 @@
 		return success_smash(user)
 	return fail_smash(user)
 
-/turf/simulated/wall/attackby(var/obj/item/W, var/mob/user)
-
+/turf/simulated/wall/attackby(obj/item/W, mob/user)
 	var/area/A = get_area(src)
 	if (!A.can_modify_area())
 		to_chat(user, SPAN_NOTICE("\The [src] deflects all attempts to interact with it!"))
@@ -165,7 +161,8 @@
 		return
 
 	//get the user's location
-	if(!istype(user.loc, /turf))	return	//can't do this stuff whilst inside objects and such
+	if(!istype(user.loc, /turf))
+		return //can't do this stuff whilst inside objects and such
 
 	if(W)
 		radiate()
@@ -183,7 +180,7 @@
 				return
 		else if(!is_sharp(W) && W.force >= 10 || W.force >= 20)
 			to_chat(user, "<span class='notice'>\The [src] crumbles away under the force of your [W.name].</span>")
-			src.dismantle_wall(1)
+			kill_health()
 			return
 
 	//THERMITE related stuff. Calls src.thermitemelt() which handles melting simulated walls and the relevant effects
@@ -211,6 +208,7 @@
 
 	var/turf/T = user.loc	//get user's location for delay checks
 
+	var/damage = get_damage_value()
 	if(damage && istype(W, /obj/item/weldingtool))
 
 		var/obj/item/weldingtool/WT = W
@@ -220,7 +218,7 @@
 			playsound(src, 'sound/items/Welder.ogg', 100, 1)
 			if(do_after(user, max(5, damage / 5), src) && WT && WT.isOn())
 				to_chat(user, "<span class='notice'>You finish repairing the damage to [src].</span>")
-				take_damage(-damage)
+				restore_health(damage)
 		return
 
 	// Basic dismantling.
@@ -266,7 +264,7 @@
 				return
 
 			to_chat(user, "<span class='notice'>You remove the outer plating.</span>")
-			dismantle_wall()
+			kill_health()
 			user.visible_message("<span class='warning'>\The [src] was torn open by [user]!</span>")
 			return
 
@@ -395,31 +393,24 @@
 		F.try_build(src)
 		return
 
-	else if(!istype(W,/obj/item/rcd) && !istype(W, /obj/item/reagent_containers))
+	else if(!istype(W,/obj/item/rcd) && !istype(W, /obj/item/reagent_containers) && user.a_intent != I_HELP)
 		if(!W.force)
 			return attack_hand(user)
 
-		var/received_damage = W.force
-		if (W.damtype == BRUTE && brute_armor)
-			received_damage /= brute_armor
-		else if (W.damtype == BURN && burn_armor)
-			received_damage /= burn_armor
-		received_damage = round(received_damage)
-
-		if (W.force > force_damage_threshhold && received_damage > 0)
-			playsound(src, hitsound, 50, 1)
-			user.visible_message(
-				SPAN_DANGER("\The [user] attacks \the [src] with \the [W]!"),
-				SPAN_WARNING("You attack \the [src] with \the [W]!"),
-				SPAN_WARNING("You hear the sound of something hitting a wall.")
-			)
-			take_damage(received_damage)
-			user.do_attack_animation(src)
-		else
+		if (!can_damage_health(W.force, W.damtype))
 			playsound(src, hitsound, 25, 1)
 			user.visible_message(
 				SPAN_WARNING("\The [user] attacks \the [src] with \the [W], but it bounces off!"),
 				SPAN_WARNING("You attack \the [src] with \the [W], but it bounces off! You need something stronger."),
 				SPAN_WARNING("You hear the sound of something hitting a wall.")
 			)
+			return
+		playsound(src, hitsound, 50, 1)
+		user.visible_message(
+			SPAN_DANGER("\The [user] attacks \the [src] with \the [W]!"),
+			SPAN_WARNING("You attack \the [src] with \the [W]!"),
+			SPAN_WARNING("You hear the sound of something hitting a wall.")
+		)
+		damage_health(W.force, W.damtype)
+		user.do_attack_animation(src)
 		return
