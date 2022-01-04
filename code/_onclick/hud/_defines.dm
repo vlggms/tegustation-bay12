@@ -126,6 +126,11 @@
 #define ui_spell_master "EAST-1:16,NORTH-1:16"
 #define ui_genetic_master "EAST-1:16,NORTH-3:16"
 
+// Ghost
+#define ui_ghost_orbit "SOUTH:6,CENTER-1"
+#define ui_ghost_reenter_corpse "SOUTH:6,CENTER"
+#define ui_ghost_teleport "SOUTH:6,CENTER+1"
+
 //pai
 #define ui_pai_software "NORTH,WEST:6"
 #define ui_pai_subsystems "NORTH,WEST+1:6"
