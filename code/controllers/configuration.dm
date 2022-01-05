@@ -53,6 +53,7 @@ var/list/gamemode_cache = list()
 	var/list/votable_modes = list()		// votable modes
 	var/list/probabilities = list()		// relative probability of each mode
 	var/secret_hide_possibilities = FALSE // Whether or not secret modes show list of possible round types
+	var/secret_disabled = FALSE // Whether or not secret - a hidden random pick from available modes - can be voted for
 	var/allow_random_events = 0			// enables random events mid-round when set to 1
 	var/hostedby = null
 	var/respawn_delay = 30 //An observer must wait this many minutes before being able to return to the main menu
@@ -241,7 +242,6 @@ var/list/gamemode_cache = list()
 				src.probabilities[M.config_tag] = M.probability
 				if (M.votable)
 					src.votable_modes += M.config_tag
-	src.votable_modes += "secret"
 
 /datum/configuration/proc/load(filename, type = "config") //the type can also be game_options, in which case it uses a different switch. not making it separate to not copypaste code - Urist
 	var/list/Lines = file2list(filename)
@@ -562,6 +562,9 @@ var/list/gamemode_cache = list()
 
 				if("secret_hide_possibilities")
 					secret_hide_possibilities = TRUE
+
+				if ("secret_disabled")
+					secret_disabled = TRUE
 
 				if("usealienwhitelist")
 					usealienwhitelist = 1
@@ -906,9 +909,10 @@ var/list/gamemode_cache = list()
 			return M
 
 /datum/configuration/proc/get_runnable_modes()
+	var/list/lobby_players = SSticker.lobby_players()
 	var/list/runnable_modes = list()
 	for(var/game_mode in gamemode_cache)
 		var/datum/game_mode/M = gamemode_cache[game_mode]
-		if(M && !M.startRequirements() && !isnull(config.probabilities[M.config_tag]) && config.probabilities[M.config_tag] > 0)
+		if(M && !M.check_startable(lobby_players) && !isnull(config.probabilities[M.config_tag]) && config.probabilities[M.config_tag] > 0)
 			runnable_modes[M.config_tag] = config.probabilities[M.config_tag]
 	return runnable_modes
