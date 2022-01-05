@@ -1,5 +1,0 @@
-author: EgorDinamit
-delete-after: true
-changes:
-  - rscadd: Each new shift may have different station(ship) traits. Read command report
-      at round-start to see what you got.
