@@ -13,6 +13,13 @@ Please describe if you ran local tests to ensure compilation. If that is not the
 Note that this can include own balancing/gameplay tests, but does not need to.
 -->
 
+## Authorship
+
+<!--
+Please note down any individuals or otherwise inspirations/sources you have for this code if it is ported or adapted.
+We recommend using the git blame.
+-->
+
 ## Changelog
 
 :cl:
