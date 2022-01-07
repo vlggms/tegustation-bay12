@@ -31,7 +31,6 @@
 		/datum/species/vox     = list(
 			/datum/mil_branch/expeditionary_corps,
 			/datum/mil_branch/fleet,
-			/datum/mil_branch/civilian,
 			/datum/mil_branch/solgov,
 			/datum/mil_branch/skrell_fleet
 		)
@@ -44,7 +43,7 @@
 		/datum/species/unathi       = list(/datum/mil_branch/civilian, /datum/mil_branch/expeditionary_corps, /datum/mil_branch/solgov, /datum/mil_branch/fleet),
 		/datum/species/unathi/yeosa = list(/datum/mil_branch/civilian, /datum/mil_branch/expeditionary_corps, /datum/mil_branch/solgov, /datum/mil_branch/fleet),
 		/datum/species/adherent     = list(/datum/mil_branch/civilian),
-		/datum/species/vox          = list(/datum/mil_branch/alien)
+		/datum/species/vox          = list(/datum/mil_branch/alien, /datum/mil_branch/civilian)
 	)
 
 	species_to_rank_blacklist = list(
@@ -147,6 +146,9 @@
 		/datum/species/vox = list(
 			/datum/mil_branch/alien = list(
 				/datum/mil_rank/alien
+			),
+			/datum/mil_branch/civilian = list(
+				/datum/mil_rank/civ/contractor
 			)
 		)
 	)

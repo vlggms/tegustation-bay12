@@ -123,11 +123,12 @@
 
 /datum/species/vox/equip_survival_gear(var/mob/living/carbon/human/H)
 	H.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/vox(H), slot_wear_mask)
+	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
 
-	if(istype(H.get_equipped_item(slot_back), /obj/item/storage/backpack))
-		H.equip_to_slot_or_del(new /obj/item/tank/nitrogen(H), slot_r_hand)
+	if(istype(H.get_equipped_item(slot_back), /obj/item/storage/backpack)) // This is mostly for station Vox
+		H.equip_to_slot_or_del(new /obj/item/tank/emergency/nitrogen/double(H), slot_belt)
 		H.equip_to_slot_or_del(new /obj/item/storage/box/vox(H.back), slot_in_backpack)
-		H.set_internals(H.r_hand)
+		H.set_internals(H.belt)
 	else
 		H.equip_to_slot_or_del(new /obj/item/tank/nitrogen(H), slot_back)
 		H.equip_to_slot_or_del(new /obj/item/storage/box/vox(H), slot_r_hand)

@@ -62,7 +62,7 @@ Civilian
 	outfit_type = /decl/hierarchy/outfit/job/torch/merchant
 	allowed_branches = list(
 		/datum/mil_branch/civilian,
-		/datum/mil_branch/alien
+		/datum/mil_branch/alien = /decl/hierarchy/outfit/job/torch/merchant/vox
 	)
 	allowed_ranks = list(
 		/datum/mil_rank/civ/civ,
