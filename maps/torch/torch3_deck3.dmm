@@ -19975,6 +19975,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/table/rack{
+	dir = 8
+	},
+/obj/item/tank/emergency/nitrogen/double,
+/obj/item/tank/emergency/nitrogen/double,
+/obj/item/tank/emergency/nitrogen/double,
+/obj/item/tank/emergency/nitrogen/double,
+/obj/item/clothing/shoes/magboots/vox,
+/obj/item/clothing/shoes/magboots/vox,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/hardstorage)
 "XD" = (
