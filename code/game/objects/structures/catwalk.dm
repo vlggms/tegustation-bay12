@@ -9,7 +9,7 @@
 	footstep_type = /decl/footsteps/catwalk
 	obj_flags = OBJ_FLAG_NOFALL
 	var/hatch_open = FALSE
-	var/obj/item/stack/tile/mono/plated_tile
+	var/decl/flooring/tiling/plated_tile
 
 /obj/structure/catwalk/Initialize()
 	. = ..()
@@ -17,6 +17,7 @@
 	update_connections(1)
 	update_icon()
 
+	return INITIALIZE_HINT_LATELOAD
 
 /obj/structure/catwalk/Destroy()
 	redraw_nearby_catwalks()
@@ -44,13 +45,19 @@
 		I.color = plated_tile.color
 		overlays += I
 
+/obj/structure/catwalk/proc/create_dismantled_products(var/turf/T)
+	new /obj/item/stack/material/rods(T, 2)
+	if(plated_tile)
+		var/plate_path = plated_tile.build_type
+		new plate_path(T)
+
 /obj/structure/catwalk/ex_act(severity)
 	switch(severity)
 		if(1)
-			new /obj/item/stack/material/rods(src.loc)
+			create_dismantled_products(get_turf(src))
 			qdel(src)
 		if(2)
-			new /obj/item/stack/material/rods(src.loc)
+			create_dismantled_products(get_turf(src))
 			qdel(src)
 
 /obj/structure/catwalk/attack_hand(mob/user)

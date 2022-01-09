@@ -68,7 +68,7 @@
 			bound_height = 32
 			bound_width = 64
 
-/mob/living/simple_animal/friendly/juvenile_space_whale/Allow_Spacemove()
+/mob/living/simple_animal/friendly/juvenile_space_whale/Process_Spacemove()
 	return TRUE
 
 /datum/say_list/juvenile_space_whale

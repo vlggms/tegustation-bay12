@@ -109,7 +109,7 @@
 				var/obj/item/stack/material/rods/R = C
 				if (R.use(2))
 					playsound(src, 'sound/weapons/Genhit.ogg', 50, 1)
-					new /obj/structure/catwalk(src)
+					new /obj/structure/catwalk(src, R.material.type)
 				return
 			var/obj/item/stack/S = C
 			var/decl/flooring/use_flooring
