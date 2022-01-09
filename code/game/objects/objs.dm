@@ -187,4 +187,4 @@
 	return TRUE
 
 /obj/get_mass()
-	return min(2^(w_class-1), 100)
+	return min(2**(w_class-1), 100)
