@@ -1,0 +1,7 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: Vox species can now work on SEV Torch. Their positions are heavily limited
+      to contractor ranks only. They can also be a merchant now.
+  - tweak: Added 2 Vox clothes options to loadouts.
+  - tweak: Vox spawn with sandals on now.
