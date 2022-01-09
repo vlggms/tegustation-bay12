@@ -70,7 +70,7 @@
 	var/attack_sound = null				// Sound to play when I attack
 	var/attack_armor_pen = 0			// How much armor pen this attack has.
 
-	var/melee_attack_delay = 4			// If set, the mob will do a windup animation and can miss if the target moves out of the way.
+	var/melee_attack_delay = 2			// If set, the mob will do a windup animation and can miss if the target moves out of the way.
 	var/ranged_attack_delay = null
 	var/special_attack_delay = null
 
@@ -190,12 +190,12 @@
 		stat(null, "Health: [round((health / maxHealth) * 100)]%")
 
 /mob/living/simple_animal/death(gibbed, deathmessage = "dies!", show_dead_message)
+	. = ..(gibbed,deathmessage,show_dead_message)
 	icon_state = icon_dead
 	update_icon()
 	density = FALSE
 	adjustBruteLoss(maxHealth) //Make sure dey dead.
 	walk_to(src,0)
-	return ..(gibbed,deathmessage,show_dead_message)
 
 /mob/living/simple_animal/ex_act(severity)
 	if(!blinded)
@@ -229,6 +229,11 @@
 /mob/living/simple_animal/adjustOxyLoss(damage)
 	..()
 	updatehealth()
+
+/mob/living/simple_animal/updatehealth()
+	..()
+	if(stat != DEAD && health <= 0)
+		death()
 
 /mob/living/simple_animal/say(var/message)
 	var/verb = "says"
