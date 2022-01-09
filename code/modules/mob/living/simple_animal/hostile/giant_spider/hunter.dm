@@ -41,7 +41,7 @@
 /mob/living/simple_animal/hostile/giant_spider/hunter/can_special_attack(atom/A)
 	. = ..()
 	if(.)
-		return check_solid_ground()
+		return has_gravity()
 	return FALSE
 
 // The actual leaping attack.

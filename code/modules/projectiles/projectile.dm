@@ -55,6 +55,7 @@
 	var/eyeblur = 0
 	var/drowsy = 0
 	var/agony = 0
+	var/space_knockback = 0	//whether or not it will knock things back in space
 	var/embed = FALSE // whether or not the projectile can embed itself in the mob
 	var/penetration_modifier = 0.2 //How much internal damage this projectile can deal, as a multiplier.
 
@@ -129,6 +130,16 @@
 		var/turf/T = get_turf(A)
 		if(T)
 			T.hotspot_expose(700, 5)
+	if(space_knockback && ismovable(A))
+		var/atom/movable/AM = A
+		if(!AM.anchored && !AM.has_gravity())
+			if(ismob(AM))
+				var/mob/M = AM
+				if(M.check_space_footing())
+					return
+			var/old_dir = AM.dir
+			step(AM,get_dir(firer,AM))
+			AM.set_dir(old_dir)
 
 //Checks if the projectile is eligible for embedding. Not that it necessarily will.
 /obj/item/projectile/can_embed()
@@ -676,3 +687,6 @@
 
 /obj/item/projectile/proc/update_effect(var/obj/effect/projectile/effect)
 	return
+
+/obj/item/projectile/Process_Spacemove()
+	return TRUE	//Bullets don't drift in space

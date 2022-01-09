@@ -7,6 +7,7 @@
 	damage_flags = DAM_BULLET | DAM_SHARP
 	embed = TRUE
 	penetration_modifier = 1.0
+	space_knockback = 1
 	var/mob_passthrough_check = 0
 
 	muzzle_type = /obj/effect/projectile/muzzle/bullet

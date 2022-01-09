@@ -141,6 +141,8 @@
 			return global.SSshuttle;
 		if("SSskybox")
 			return global.SSskybox;
+		if("SSspacedrift")
+			return global.SSspacedrift;
 		if("SSstation")
 			return global.SSstation;
 		if("SSstatistics")
@@ -1024,6 +1026,8 @@
 			global.SSshuttle=newval;
 		if("SSskybox")
 			global.SSskybox=newval;
+		if("SSspacedrift")
+			global.SSspacedrift=newval;
 		if("SSstation")
 			global.SSstation=newval;
 		if("SSstatistics")
@@ -1836,6 +1840,7 @@
 	"SSrobots",
 	"SSshuttle",
 	"SSskybox",
+	"SSspacedrift",
 	"SSstation",
 	"SSstatistics",
 	"SSsun",

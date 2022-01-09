@@ -32,5 +32,5 @@
 
 /// Plays a random sound from `move_sounds` at volume `move_volume`, centered at the turf of `atom_holder`.
 /datum/extension/play_sound_on_moved/proc/DoMoveSound(atom/movable/inst, old_loc, new_loc)
-	if(always_play || (has_gravity(inst) && !isspace(new_loc) && !istype(new_loc, /turf/simulated/floor/carpet)))
+	if(always_play || (inst.has_gravity() && !isspace(new_loc) && !istype(new_loc, /turf/simulated/floor/carpet)))
 		playsound(inst, pick(move_sounds), move_volume, TRUE)

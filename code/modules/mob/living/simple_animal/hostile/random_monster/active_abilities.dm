@@ -54,7 +54,7 @@
 /datum/random_ability/active/leap/CanUse(mob/living/user)
 	. = ..()
 	if(.)
-		return user.check_solid_ground()
+		return user.has_gravity()
 	return FALSE
 
 /datum/random_ability/active/spit
