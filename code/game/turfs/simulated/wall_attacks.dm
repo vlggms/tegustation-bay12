@@ -396,9 +396,10 @@
 		return
 
 	else if(!istype(W,/obj/item/rcd) && !istype(W, /obj/item/reagent_containers))
+		if(user.a_intent == I_HELP)
+			return
 		if(!W.force)
 			return attack_hand(user)
-
 		var/received_damage = W.force
 		if (W.damtype == BRUTE && brute_armor)
 			received_damage /= brute_armor

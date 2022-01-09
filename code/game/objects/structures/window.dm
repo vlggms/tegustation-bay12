@@ -438,6 +438,8 @@
 	return TRUE
 
 /obj/structure/window/proc/hit(damage, mob/user, atom/weapon = null)
+	if(user.a_intent == I_HELP)
+		return
 	if (damage > force_damage_threshhold)
 		var/weapon_text = weapon ? " with \the [weapon]" : null
 		user.visible_message(
