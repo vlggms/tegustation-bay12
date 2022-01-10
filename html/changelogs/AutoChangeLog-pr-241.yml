@@ -1,5 +1,0 @@
-author: EgorDinamit
-delete-after: true
-changes:
-  - rscadd: Ghosts following an object/mob will now orbit it.
-  - rscadd: Ghosts will now float. Yay.

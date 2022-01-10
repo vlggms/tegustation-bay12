@@ -1,8 +1,0 @@
-author: EgorDinamit
-delete-after: true
-changes:
-  - tweak: Simple mobs no longer take ~2 seconds between the death message and actual
-      death.
-  - tweak: Simple mobs will now properly die when fighting each other without a living
-      player in sight.
-  - tweak: Ranged hivebots now have a fire delay and an increased projectile dispersion.
