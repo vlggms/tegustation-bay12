@@ -1,0 +1,5 @@
+author: Shadowtail117
+delete-after: true
+changes:
+  - tweak: The "Crew Transfer Factor" that determines the weight of transfer votes
+      has been renamed to a more eponymous "Transfer Vote Multiplier".
