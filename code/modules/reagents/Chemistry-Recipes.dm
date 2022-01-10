@@ -2728,7 +2728,7 @@
 
 /datum/chemical_reaction/mumbaksting
 	name = "Mumbak Sting"
-	result = /datum/reagent/drink/alien/mumbaksting
+	result = /datum/reagent/ethanol/alien/mumbaksting
 	required_reagents = list(/datum/reagent/drink/alien/unathijuice = 2, /datum/reagent/toxin = 1)
 	result_amount = 3
 	mix_message = "The toxins mix with the juice to create a dark red substance."

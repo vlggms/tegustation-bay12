@@ -1394,11 +1394,12 @@
 	glass_name = "kzkzaa"
 	glass_desc = "A glass of Kzkzaa, fish extract, commonly drank on Moghes."
 
-/datum/reagent/drink/alien/mumbaksting
+/datum/reagent/ethanol/alien/mumbaksting
 	name = "Mumbak Sting"
 	description = "A drink made from the venom of the Yuum."
 	taste_description = "harsh and stinging sweetness"
 	color = "#550000"
+	strength = 10
 	glass_name = "Mumbak sting"
 	glass_desc = "A drink made from the venom of the Yuum."
 
@@ -1407,7 +1408,7 @@
 	description = "Wine made from various fruits from the swamps of Moghes."
 	taste_description = "swampy fruit"
 	color = "#6b596b"
-	strength = 10
+	strength = 15
 	glass_name = "wasgaelhi"
 	glass_desc = "Wine made from various fruits from the swamps of Moghes."
 
