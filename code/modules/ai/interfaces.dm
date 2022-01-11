@@ -87,7 +87,7 @@
 		if (safety && !newloc.is_safe_to_enter(src))
 			return MOVEMENT_FAILED
 
-	if (!Allow_Spacemove())
+	if (!Process_Spacemove())
 		return MOVEMENT_FAILED
 
 	// Move()ing to another tile successfully returns 32 because BYOND. Would rather deal with TRUE/FALSE-esque terms.
