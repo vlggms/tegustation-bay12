@@ -202,6 +202,16 @@
 			You can see that the scanner immediately acts up, with its readings fluctuating crazily, but you don't understand what any of it means. \
 			You can at least make an educated guess that, whatever it is, you should give it a wide berth."))
 		return
+	user.visible_message(
+		SPAN_WARNING("\The [user] reaches out to \the [src] with \the [W]..."),
+		SPAN_WARNING("You reach out towards \the [src] with \the [W]...")
+	)
+	if (!do_after(user, 2 SECONDS))
+		user.visible_message(
+			SPAN_WARNING("\The [user] pulls \the [W] away from \the [src]."),
+			SPAN_WARNING("You draw \the [W] away from \the [src].")
+		)
+		return
 	user.drop_from_inventory(W)
 	chomp_chomp_yummy_explorers(W)
 
@@ -214,7 +224,7 @@
 		SPAN_WARNING("\The [user] reaches out..."),
 		SPAN_WARNING("You reach out towards \the [src]...")
 	)
-	if (!do_after(user, 5 SECONDS))
+	if (!do_after(user, 2 SECONDS))
 		user.visible_message(
 			SPAN_WARNING("\The [user] pulls \himself back."),
 			SPAN_WARNING("You draw away from \the [src].")
@@ -260,13 +270,23 @@
 /turf/unsimulated/floor/bluespace_river/proc/chomp_chomp_yummy_explorers(atom/movable/M)
 	if (!can_erase(M))
 		return
+	playsound(src, 'sound/magic/blind.ogg', 50)
 	if (isliving(M))
 		var/mob/living/L = M
+		L.adjustFireLoss(50)
+		L.Stun(1)
+		L.flash_eyes()
+		if((L.getFireLoss() + L.getBruteLoss()) < (L.maxHealth*0.6) && L.stat != DEAD)
+			L.visible_message(
+				SPAN_DANGER("\The [L] makes contact with \the [src] and for a moment a strange flame can be seen enveloping them."),
+				SPAN_DANGER("You [L.loc == src ? "fall into" : "touch"] \the [src]. A moment later, you notice several new burns on your body."),
+				)
+			return
 		L.visible_message(
-			SPAN_DANGER("\The [L] makes contact with \the [src]... and then goes completely still."),
+			SPAN_DANGER("\The [L] makes contact with \the [src] and goes completely still."),
 			SPAN_DANGER(FONT_LARGE("You [L.loc == src ? "fall into" : "touch"] \the [src]. Instantly, you feel a tingling, starting inside of you, and then spreading out. \
 			As your mind and body are completely erased from existence, you realize: you never were the real one, were you?")),
-		)
+			)
 
 		// Create an afterimage of the mob that slowly fades off
 		// The actual mob is instantly deleted - this is just for effect
@@ -278,6 +298,7 @@
 		T.overlays = M.overlays.Copy()
 		T.layer = MOB_LAYER
 		T.set_dir(M.dir)
+		T.transform = M.transform
 
 		T.anchored = TRUE
 		T.name = M.name
