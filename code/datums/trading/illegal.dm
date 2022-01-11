@@ -2,10 +2,7 @@
 	name = "Unknown"
 	origin = "Unregistered Vessel"
 	typical_duration = 10
-
-/datum/trader/ship/illegal/get_item_value(var/trading_num)
-	. = ..()
-	. *= 1.5
+	margin = 2
 
 /datum/trader/ship/illegal/gunshop
 	speech = list(TRADER_HAIL_GENERIC    = "Welcome, have a look at our armaments, just be quick.",
@@ -38,7 +35,7 @@
 
 				TRADER_TRADE_COMPLETE    = "Great choice!",
 				TRADER_NO_BLACKLISTED   = "Nuh-uh, don't need any.",
-				TRADER_NO_GOODS    = "Payment is accepted in thalers only.",
+				TRADER_NO_GOODS    = "Payment is accepted in CURRENCY only.",
 				TRADER_NOT_ENOUGH  = "Don't have enough money? Get some elsewhere.",
 				TRADER_HOW_MUCH          = "I'll get you that for VALUE CURRENCY.",
 
