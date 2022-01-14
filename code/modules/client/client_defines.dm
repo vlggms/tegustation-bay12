@@ -75,3 +75,6 @@
 	var/datum/chatOutput/chatOutput
 
 	var/fullscreen = FALSE
+
+	///Needs to implement InterceptClickOn(user,params,atom) proc
+	var/datum/click_intercept = null

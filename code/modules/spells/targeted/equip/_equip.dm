@@ -1,17 +1,16 @@
 //You can set duration to 0 to have the items last forever
 
-/spell/targeted/equip_item
+/datum/spell/targeted/equip_item
 	name = "equipment spell"
 	cast_sound = 'sound/magic/summonitems_generic.ogg'
 
 	var/list/equipped_summons = list() //assoc list of text ids and paths to spawn
 
-	var/list/summoned_items = list() //list of items we summoned and will dispose when the spell runs out
-
 	var/delete_old = 1 //if the item previously in the slot is deleted - otherwise, it's dropped
 
-/spell/targeted/equip_item/cast(list/targets, mob/user = usr)
+/datum/spell/targeted/equip_item/cast(list/targets, mob/user = usr)
 	..()
+	var/list/summoned_items = list()
 	for(var/mob/living/L in targets)
 		for(var/slot_id in equipped_summons)
 			var/to_create = equipped_summons[slot_id]
@@ -34,9 +33,8 @@
 				summoned_items += new_item //we store it in a list to remove later
 
 	if(duration)
-		spawn(duration)
-			for(var/obj/item/to_remove in summoned_items)
-				qdel(to_remove)
+		for(var/obj/item/to_remove in summoned_items)
+			QDEL_IN(to_remove, duration)
 
-/spell/targeted/equip_item/proc/summon_item(var/newtype)
+/datum/spell/targeted/equip_item/proc/summon_item(var/newtype)
 	return new newtype

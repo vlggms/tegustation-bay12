@@ -820,6 +820,9 @@ default behaviour is:
 		for(var/a in auras)
 			remove_aura(a)
 
+	if(ranged_ability)
+		ranged_ability.remove_ranged_ability(src)
+
 	qdel(selected_image)
 	return ..()
 

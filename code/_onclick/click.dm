@@ -55,6 +55,9 @@
 
 	next_click = world.time + 1
 
+	if(check_click_intercept(params,A))
+		return
+
 	var/list/modifiers = params2list(params)
 	if(modifiers["shift"] && modifiers["ctrl"])
 		CtrlShiftClickOn(A)
@@ -322,6 +325,7 @@
 	Misc helpers
 
 	Laser Eyes: as the name implies, handles this since nothing else does currently
+	check_click_intercept: Handles aimed spells.
 	face_atom: turns the mob towards what you clicked on
 */
 /mob/proc/LaserEyes(atom/A)
@@ -336,6 +340,7 @@
 	LE.icon_state = "eyelasers"
 	playsound(usr.loc, 'sound/weapons/taser2.ogg', 75, 1)
 	LE.launch(A)
+
 /mob/living/carbon/human/LaserEyes()
 	if(nutrition>0)
 		..()
@@ -343,6 +348,19 @@
 		handle_regular_hud_updates()
 	else
 		to_chat(src, SPAN_WARNING("You're out of energy! You need food!"))
+
+/mob/proc/check_click_intercept(params, A)
+	//Client level intercept
+	if(client?.click_intercept)
+		if(call(client.click_intercept, "InterceptClickOn")(src, params, A))
+			return TRUE
+
+	//Mob level intercept
+	if(click_intercept)
+		if(call(click_intercept, "InterceptClickOn")(src, params, A))
+			return TRUE
+
+	return FALSE
 
 // Simple helper to face what you clicked on, in case it should be needed in more than one place
 /mob/proc/face_atom(var/atom/A)
