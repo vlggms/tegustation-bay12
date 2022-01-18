@@ -1896,12 +1896,10 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/structure/window/reinforced{
-	dir = 2;
-	health = 1e+007
+	dir = 2
 	},
 /obj/structure/window/reinforced{
 	dir = 8
@@ -2089,8 +2087,7 @@
 	name = "CE's Equipment Storage"
 	},
 /obj/structure/window/reinforced{
-	dir = 2;
-	health = 1e+007
+	dir = 2
 	},
 /obj/item/aiModule/solgov,
 /obj/item/aiModule/reset,
@@ -3411,8 +3408,7 @@
 "fX" = (
 /obj/structure/shuttle/engine/heater,
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
 	dir = 1;
@@ -5307,8 +5303,7 @@
 "lp" = (
 /obj/structure/shuttle/engine/heater,
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 6;
@@ -7193,12 +7188,10 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/structure/window/reinforced{
-	dir = 2;
-	health = 1e+007
+	dir = 2
 	},
 /obj/structure/window/reinforced{
 	dir = 8
@@ -8588,8 +8581,7 @@
 "tL" = (
 /obj/structure/shuttle/engine/heater,
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
 	dir = 1;
@@ -11996,12 +11988,10 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/structure/window/reinforced{
-	dir = 2;
-	health = 1e+007
+	dir = 2
 	},
 /obj/structure/window/reinforced{
 	dir = 4
@@ -13556,8 +13546,7 @@
 "IL" = (
 /obj/structure/shuttle/engine/heater,
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
 	dir = 1;
@@ -14238,8 +14227,7 @@
 "LQ" = (
 /obj/structure/shuttle/engine/heater,
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/fuel,
 /turf/simulated/floor/airless,
@@ -16497,15 +16485,13 @@
 /area/hallway/primary/bridge/aft)
 "Uh" = (
 /obj/structure/window/reinforced{
-	dir = 2;
-	health = 1e+007
+	dir = 2
 	},
 /obj/structure/table/rack{
 	dir = 8
 	},
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/structure/window/reinforced{
 	dir = 4
@@ -16634,8 +16620,7 @@
 "UW" = (
 /obj/structure/shuttle/engine/heater,
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 10;
@@ -17195,12 +17180,10 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/structure/window/reinforced{
-	dir = 2;
-	health = 1e+007
+	dir = 2
 	},
 /obj/structure/window/reinforced{
 	dir = 8

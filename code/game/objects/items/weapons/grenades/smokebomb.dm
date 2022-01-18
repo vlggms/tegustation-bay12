@@ -22,8 +22,7 @@
 	START_PROCESSING(SSobj, src)
 	for(var/obj/effect/blob/B in view(8,src))
 		var/damage = round(30/(get_dist(B,src)+1))
-		B.damage_health(damage)
-		B.update_icon()
+		B.damage_health(damage, DAMAGE_BURN)
 	QDEL_IN(src, 8 SECONDS)
 
 /obj/item/grenade/smokebomb/Process()

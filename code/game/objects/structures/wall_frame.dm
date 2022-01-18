@@ -12,8 +12,8 @@
 	density = TRUE
 	throwpass = 1
 	layer = TABLE_LAYER
+	health_max = 100
 
-	var/health = 100
 	var/paint_color
 	var/stripe_color
 	rad_resistance_modifier = 0.5
@@ -28,7 +28,7 @@
 	if(!materialtype)
 		materialtype = DEFAULT_WALL_MATERIAL
 	material = SSmaterials.get_material_by_name(materialtype)
-	health = material.integrity
+	set_max_health(material.integrity)
 
 	update_connections(1)
 	update_icon()
@@ -44,21 +44,15 @@
 /obj/structure/wall_frame/examine(mob/user)
 	. = ..()
 
-	if(health == material.integrity)
-		to_chat(user, "<span class='notice'>It seems to be in fine condition.</span>")
-	else
-		var/dam = health / material.integrity
-		if(dam <= 0.3)
-			to_chat(user, "<span class='notice'>It's got a few dents and scratches.</span>")
-		else if(dam <= 0.7)
-			to_chat(user, "<span class='warning'>A few pieces of panelling have fallen off.</span>")
-		else
-			to_chat(user, "<span class='danger'>It's nearly falling to pieces.</span>")
 	if(paint_color)
 		to_chat(user, "<span class='notice'>It has a smooth coat of paint applied.</span>")
 
-/obj/structure/wall_frame/attackby(var/obj/item/W, var/mob/user)
+/obj/structure/wall_frame/attackby(obj/item/W, mob/user)
 	src.add_fingerprint(user)
+
+	if(user.a_intent == I_HURT)
+		..()
+		return
 
 	//grille placing
 	if(istype(W, /obj/item/stack/material/rods))
@@ -70,11 +64,12 @@
 		return
 
 	//window placing
-	else if(istype(W,/obj/item/stack/material))
+	if(istype(W,/obj/item/stack/material))
 		var/obj/item/stack/material/ST = W
 		if(ST.material.opacity > 0.7)
 			return 0
 		place_window(user, loc, SOUTHWEST, ST)
+		return
 
 	if(isWrench(W))
 		for(var/obj/structure/S in loc)
@@ -89,8 +84,9 @@
 		if(do_after(user, 40,src))
 			to_chat(user, "<span class='notice'>You dissasembled the low wall!</span>")
 			dismantle()
+		return
 
-	else if(istype(W, /obj/item/gun/energy/plasmacutter))
+	if(istype(W, /obj/item/gun/energy/plasmacutter))
 		var/obj/item/gun/energy/plasmacutter/cutter = W
 		if(!cutter.slice(user))
 			return
@@ -99,7 +95,8 @@
 		if(do_after(user, 20,src))
 			to_chat(user, "<span class='warning'>You have sliced through the low wall!</span>")
 			dismantle()
-	return ..()
+		return
+	..()
 
 /obj/structure/wall_frame/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
 	if(air_group || (height==0)) return 1
@@ -148,13 +145,7 @@
 			paint_color = adjust_brightness(paint_color, bleach_factor)
 		update_icon()
 
-/obj/structure/wall_frame/bullet_act(var/obj/item/projectile/Proj)
-	var/proj_damage = Proj.get_structure_damage()
-	var/damage = min(proj_damage, 100)
-	take_damage(damage)
-	return
-
-/obj/structure/wall_frame/hitby(AM as mob|obj, var/datum/thrownthing/TT)
+/obj/structure/wall_frame/hitby(AM as mob|obj, datum/thrownthing/TT)
 	..()
 	var/tforce = 0
 	if(ismob(AM)) // All mobs have a multiplier and a size according to mob_defines.dm
@@ -163,13 +154,12 @@
 	else
 		var/obj/O = AM
 		tforce = O.throwforce * (TT.speed/THROWFORCE_SPEED_DIVISOR)
-	if (tforce < 15)
+	if(tforce < 15)
 		return
-	take_damage(tforce)
+	damage_health(tforce, BRUTE)
 
-/obj/structure/wall_frame/take_damage(damage)
-	health -= damage
-	if(health <= 0)
+/obj/structure/wall_frame/handle_death_change(new_death_state)
+	if(new_death_state)
 		dismantle()
 
 /obj/structure/wall_frame/proc/dismantle()
