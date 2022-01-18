@@ -574,7 +574,7 @@
 		melting_point += 0.25*reinf_material.melting_point
 	if(exposed_temperature > melting_point)
 		damage_health(damage_per_fire_tick, DAMAGE_FIRE)
-	..()
+	// Don't call parent proc
 
 /obj/structure/window/basic
 	icon_state = "window"
