@@ -260,7 +260,7 @@ Sells devices, odds and ends, and medical stuff
 				TRADER_HAIL_DENY      = "ORIGIN no longer wants to speak to you.",
 
 				TRADER_TRADE_COMPLETE = "I hope you enjoy your new robot!",
-				TRADER_NO_BLACKLISTED= "I work with robots, sir. Not that.",
+				TRADER_NO_BLACKLISTED = "I work with robots, sir. Not that.",
 				TRADER_NO_GOODS = "You gotta buy the robots, sir. I don't do trades.",
 				TRADER_NOT_ENOUGH = "You're coming up short on cash.",
 				TRADER_HOW_MUCH       = "My fine selection of robots will cost you VALUE!",

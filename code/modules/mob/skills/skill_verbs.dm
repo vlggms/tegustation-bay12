@@ -151,7 +151,7 @@ The Appraise verb. Used on objects to estimate their value.
 		return
 	return 1
 
-/mob/proc/appraise(obj/item as obj in get_equipped_items(1))
+/mob/proc/appraise(atom/movable/item in view(1, src.client))
 	set category = "IC"
 	set name = "Appraise"
 	set src = usr
@@ -174,7 +174,7 @@ The Appraise verb. Used on objects to estimate their value.
 			var/high = low + level
 			if(!low && multiple >= 2)
 				low = 10 ** (multiple - 1) //Adjusts the lowball estimate away from 0 if the item has a high upper estimate.
-			message = "You appraise the item to be worth between [low] and [high] [GLOB.using_map.local_currency_name]."
+			message = "You appraise \the [item] to be worth between [low] and [high] [GLOB.using_map.local_currency_name]."
 	to_chat(src, message)
 
 /proc/get_appraise_level(skill)

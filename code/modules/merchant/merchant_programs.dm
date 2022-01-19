@@ -88,17 +88,37 @@
 /datum/computer_file/program/merchant/proc/offer_item(var/datum/trader/T, var/num, skill)
 	if(pad)
 		var/list/targets = pad.get_targets()
+		if(!targets.len)
+			last_comms = "PAD IS EMPTY: MOVE GOODS ONTO THE PAD BEFORE PROCEEDING"
+			return
 		for(var/target in targets)
-			if(!computer_emagged && istype(target,/mob/living/carbon/human))
-				last_comms = "SAFETY LOCK ENABLED: SENTIENT MATTER UNTRANSMITTABLE"
-				return
-		get_response(T.offer_items_for_trade(targets,num, get_turf(pad), skill))
+			if(istype(target, /mob/living/carbon/human))
+				var/mob/living/carbon/human/human_trafficking = target
+				if(!computer.emagged())
+					last_comms = "SAFETY LOCK ENABLED: SENTIENT MATTER UNTRANSMITTABLE"
+					return
+				if(!human_trafficking.handcuffed) // To avoid accidents and generally unwanted behavior
+					last_comms = "TARGET IS NOT SECURED: APPLY RESTRAINTS BEFORE TRANSMITTING"
+					return
+		get_response(T.offer_items_for_trade(targets, num, get_turf(pad), skill))
 	else
 		last_comms = "PAD NOT CONNECTED"
 
 /datum/computer_file/program/merchant/proc/sell_items(var/datum/trader/T, skill)
 	if(pad)
 		var/list/targets = pad.get_targets()
+		if(!targets.len)
+			last_comms = "PAD IS EMPTY: MOVE GOODS ONTO THE PAD BEFORE PROCEEDING"
+			return
+		for(var/target in targets)
+			if(istype(target, /mob/living/carbon/human))
+				var/mob/living/carbon/human/human_trafficking = target
+				if(!computer.emagged())
+					last_comms = "SAFETY LOCK ENABLED: SENTIENT MATTER UNTRANSMITTABLE"
+					return
+				if(!human_trafficking.handcuffed)
+					last_comms = "TARGET IS NOT SECURED: APPLY RESTRAINTS BEFORE TRANSMITTING"
+					return
 		get_response(T.sell_items(targets, skill))
 	else
 		last_comms = "PAD NOT CONNECTED"

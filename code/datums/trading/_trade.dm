@@ -1,44 +1,45 @@
 /datum/trader
-	var/name = "unsuspicious trader"                            //The name of the trader in question
-	var/origin = "some place"                                   //The place that they are trading from
-	var/list/possible_origins                                   //Possible names of the trader origin
-	var/disposition = 0                                         //The current disposition of them to us.
-	var/trade_flags = TRADER_MONEY                              //Flags
-	var/name_language                                                //If this is set to a language name this will generate a name from the language
-	var/icon/portrait                                           //The icon that shows up in the menu @TODO
+	var/name = "unsuspicious trader"	///The name of the trader in question
+	var/origin = "some place"			///The place that they are trading from
+	var/list/possible_origins			///Possible names of the trader origin
+	var/disposition = 0					///The current disposition of them to us.
+	var/trade_flags = TRADER_MONEY		///Flags
+	var/name_language					///If this is set to a language name this will generate a name from the language
+	var/portrait = "default"			///Currently unused.
 
-	var/list/wanted_items = list()                              //What items they enjoy trading for. Structure is (type = known/unknown)
-	var/list/possible_wanted_items                              //List of all possible wanted items. Structure is (type = mode)
-	var/list/possible_trading_items                             //List of all possible trading items. Structure is (type = mode)
-	var/list/trading_items = list()                             //What items they are currently trading away.
-	var/list/blacklisted_trade_items = list(/mob/living/carbon/human)
-	                                                            //Things they will automatically refuse
+	var/list/wanted_items = list()		///What items they enjoy trading for. Structure is (type = known/unknown)
+	var/list/possible_wanted_items		///List of all possible wanted items. Structure is (type = mode)
+	var/list/possible_trading_items		///List of all possible trading items. Structure is (type = mode)
+	var/list/trading_items = list()		///What items they are currently trading away.
+	var/list/blacklisted_trade_items = list(/mob/living/carbon/human) ///Things they will automatically refuse
 
-	var/list/speech = list()                                    //The list of all their replies and messages. Structure is (id = talk)
+	var/list/speech = list()			///The list of all their replies and messages. Structure is (id = talk)
+
 	/*SPEECH IDS:
-	hail_generic		When merchants hail a person
-	hail_[race]			Race specific hails
-	hail_deny			When merchant denies a hail
+	TRADER_HAIL_GENERIC				When merchants hail a person
+	TRADER_HAIL_START[race]			Race specific hails
+	TRADER_HAIL_DENY				When merchant denies a hail
 
-	insult_good			When the player insults a merchant while they are on good disposition
-	insult_bad			When a player insults a merchatn when they are not on good disposition
-	complement_accept	When the merchant accepts a complement
-	complement_deny		When the merchant refuses a complement
+	TRADER_INSULT_GOOD				When the player insults a merchant while they are on good disposition
+	TRADER_INSULT_BAD				When a player insults a merchant when they are not on good disposition
 
-	how_much			When a merchant tells the player how much something is.
-	trade_complete		When a trade is made
+	TRADER_COMPLEMENT_SUCCESS		When the merchant accepts a complement
+	TRADER_COMPLEMENT_FAILURE		When the merchant refuses a complement
 
-	what_want			What the person says when they are asked if they want something
+	TRADER_HOW_MUCH					When a merchant tells the player how much something is.
+	TRADER_TRADE_COMPLETE			When a trade is made
 
+	TRADER_WHAT_WANT				What the person says when they are asked if they want something
 	*/
-	var/want_multiplier = 2                                     //How much wanted items are multiplied by when traded for
-	var/margin = 1.2											//Multiplier to price when selling to player
-	var/price_rng = 10                                          //Percentage max variance in sell prices.
-	var/insult_drop = 5                                         //How far disposition drops on insult
-	var/compliment_increase = 5                                 //How far compliments increase disposition
-	var/refuse_comms = 0                                        //Whether they refuse further communication
 
-	var/mob_transfer_message = "You are transported to ORIGIN." //What message gets sent to mobs that get sold.
+	var/want_multiplier = 2		///How much wanted items are multiplied by when traded for
+	var/margin = 1.2			///Multiplier to price when selling to player
+	var/price_rng = 10			///Percentage max variance in sell prices.
+	var/insult_drop = 5			///How far disposition drops on insult
+	var/compliment_increase = 5	///How far compliments increase disposition
+	var/refuse_comms = 0		///Whether they refuse further communication
+
+	var/mob_transfer_message = "You are transported to ORIGIN." ///What message gets sent to mobs that get sold.
 
 /datum/trader/New()
 	..()
@@ -169,14 +170,13 @@
 	for(var/item in offers)
 		var/atom/movable/offer = item
 		var/is_wanted = 0
-		if((trade_flags & TRADER_WANTED_ONLY) && is_type_in_list(offer,wanted_items))
-			is_wanted = 2
-		if((trade_flags & TRADER_WANTED_ALL) && is_type_in_list(offer,possible_wanted_items))
-			is_wanted = 1
-		if(blacklisted_trade_items && blacklisted_trade_items.len && is_type_in_list(offer,blacklisted_trade_items))
+		if(blacklisted_trade_items && blacklisted_trade_items.len && is_type_in_list(offer, blacklisted_trade_items))
 			return make_response(TRADER_NO_BLACKLISTED, "I refuse to take one of those items.", 0, FALSE)
-
-		if(istype(offer,/obj/item/spacecash))
+		else if((trade_flags & TRADER_WANTED_ONLY) && is_type_in_list(offer,wanted_items))
+			is_wanted = 2
+		else if((trade_flags & TRADER_WANTED_ALL) && is_type_in_list(offer,possible_wanted_items))
+			is_wanted = 1
+		else if(istype(offer,/obj/item/spacecash))
 			if(!(trade_flags & TRADER_MONEY))
 				return make_response(TRADER_NO_MONEY, "I don't take money.", 0, FALSE)
 		else
@@ -245,7 +245,8 @@
 	var/type = trading_items[num]
 
 	var/atom/movable/M = new type(location)
-	playsound(location, 'sound/effects/teleport.ogg', 50, 1)
+	playsound(location, 'sound/effects/teleport.ogg', 75, 1)
+	sparks(3, 1, location)
 
 	disposition += rand(compliment_increase,compliment_increase*3) //Traders like it when you trade with them
 
@@ -265,8 +266,11 @@
 	var/datum/trade_response/tr = make_response(TRADER_WHAT_WANT, "Hm, I want", 0, TRUE)
 	var/list/want_english = list()
 	for(var/type in wanted_items)
-		var/atom/a = type
-		want_english += initial(a.name)
+		var/atom/A = type
+		var/atom_name = A.trade_name()
+		if(atom_name in want_english)
+			continue // To avoid "Hm, I want a monkey, monkey, monkey, monkey, monkey..."
+		want_english += atom_name
 	tr.text += " [english_list(want_english)]"
 	return tr
 
@@ -279,7 +283,9 @@
 	var/wanted
 	var/total = 0
 	for(var/offer in offers)
-		if((trade_flags & TRADER_WANTED_ONLY) && is_type_in_list(offer,wanted_items))
+		if(blacklisted_trade_items && blacklisted_trade_items.len && is_type_in_list(offer, blacklisted_trade_items))
+			return make_response(TRADER_NO_BLACKLISTED, "I refuse to take one of those items.", 0, FALSE)
+		else if((trade_flags & TRADER_WANTED_ONLY) && is_type_in_list(offer,wanted_items))
 			wanted = 1
 		else if((trade_flags & TRADER_WANTED_ALL) && is_type_in_list(offer,possible_wanted_items))
 			wanted = 0
@@ -287,7 +293,8 @@
 			return make_response(TRADER_FOUND_UNWANTED, "I don't want one of those items", 0, FALSE)
 		total += get_buy_price(offer, wanted, skill)
 
-	playsound(get_turf(offers[1]), 'sound/effects/teleport.ogg', 50, 1)
+	playsound(get_turf(offers[1]), 'sound/effects/teleport.ogg', 75, 1)
+	sparks(3, 1, get_turf(offers[1]))
 	for(var/offer in offers)
 		qdel(offer)
 	return make_response(TRADER_TRADE_COMPLETE, "Thanks for the goods!", total, TRUE)
