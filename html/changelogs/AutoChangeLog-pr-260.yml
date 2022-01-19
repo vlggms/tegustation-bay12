@@ -1,5 +1,0 @@
-author: EgorDinamit, SierraKomodo (BayStation 12)
-delete-after: true
-changes:
-  - tweak: Standardized health for structures, turfs, and items. In short - less shitcode.
-  - tweak: Closets can now be broken open with any item that has more than 20 force(damage).

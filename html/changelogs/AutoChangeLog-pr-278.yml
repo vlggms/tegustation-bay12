@@ -1,5 +1,0 @@
-author: EgorDinamit
-delete-after: true
-changes:
-  - tweak: Players will now spawn in a random cryopod, instead of always spawning
-      from one in the corner. Sleep time on start isn't random anymore.

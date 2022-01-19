@@ -1,5 +1,0 @@
-author: EgorDinamit
-delete-after: true
-changes:
-  - tweak: Traitor gamemode can start with 0 players and 0 antagonists on round-start.
-  - tweak: Revolution gamemode no requires at least 10 players to start.

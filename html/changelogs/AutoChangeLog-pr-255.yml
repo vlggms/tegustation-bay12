@@ -1,4 +1,0 @@
-author: EgorDinamit
-delete-after: true
-changes:
-  - tweak: Using AI law modules in hand now shows their stored lawset.
