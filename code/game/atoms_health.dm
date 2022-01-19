@@ -159,11 +159,11 @@
  * - `skip_death_state_change` will skip calling `handle_death_change()` when applicable. Used for when the originally calling proc needs handle it in a unique way.
  * - `severity` should be a passthrough of `severity` from `ex_act()` and `emp_act()` for `DAMAGE_EXPLODE` and `DAMAGE_EMP` types respectively.
  */
-/atom/proc/damage_health(damage, damage_type = null, skip_death_state_change = FALSE, severity)
+/atom/proc/damage_health(damage, damage_type = null, skip_death_state_change = FALSE, severity, forced = FALSE)
 	SHOULD_CALL_PARENT(TRUE)
 	if(!health_max)
 		return
-	if (!can_damage_health(damage, damage_type))
+	if (!forced && !can_damage_health(damage, damage_type))
 		return FALSE
 
 	// Apply resistance/weakness modifiers
