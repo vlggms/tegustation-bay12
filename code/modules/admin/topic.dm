@@ -1691,45 +1691,40 @@
 			obj_dir = 2
 		var/obj_name = sanitize(href_list["object_name"])
 		var/where = href_list["object_where"]
-		if (!( where in list("onfloor","inhand","inmarked") ))
+		if(!(where in list("onfloor", "inhand", "inmarked")))
 			where = "onfloor"
 
-		if( where == "inhand" )
-			to_chat(usr, "Support for inhand not available yet. Will spawn on floor.")
-			where = "onfloor"
-
-		if ( where == "inhand" )	//Can only give when human or monkey
-			if ( !( ishuman(usr) || issmall(usr) ) )
+		if(where == "inhand")	//Can only give when human or monkey
+			if(!(ishuman(usr) || issmall(usr)))
 				to_chat(usr, "Can only spawn in hand when you're a human or a monkey.")
 				where = "onfloor"
-			else if ( usr.get_active_hand() )
-				to_chat(usr, "Your active hand is full. Spawning on floor.")
-				where = "onfloor"
 
-		if ( where == "inmarked" )
+		if(where == "inmarked")
 			var/marked_datum = marked_datum()
-			if ( !marked_datum )
+			if(!marked_datum)
 				to_chat(usr, "You don't have any object marked. Abandoning spawn.")
 				return
 			else
-				if ( !istype(marked_datum,/atom) )
+				if(!istype(marked_datum, /atom))
 					to_chat(usr, "The object you have marked cannot be used as a target. Target must be of type /atom. Abandoning spawn.")
 					return
 
 		var/atom/target //Where the object will be spawned
-		switch ( where )
-			if ( "onfloor" )
+		switch(where)
+			if("onfloor")
 				switch (href_list["offset_type"])
-					if ("absolute")
+					if("absolute")
 						target = locate(0 + X,0 + Y,0 + Z)
-					if ("relative")
+					if("relative")
 						target = locate(loc.x + X,loc.y + Y,loc.z + Z)
-			if ( "inmarked" )
+			if("inmarked")
 				target = marked_datum()
+			if("inhand")
+				target = usr.loc
 
 		if(target)
-			for (var/path in paths)
-				for (var/i = 0; i < number; i++)
+			for(var/path in paths)
+				for(var/i = 0; i < number; i++)
 					if(path in typesof(/turf))
 						var/turf/O = target
 						var/turf/N = O.ChangeTurf(path)
@@ -1742,9 +1737,12 @@
 							O.set_dir(obj_dir)
 							if(obj_name)
 								O.SetName(obj_name)
-								if(istype(O,/mob))
+								if(istype(O, /mob))
 									var/mob/M = O
 									M.real_name = obj_name
+							if(istype(O, /obj/item) && where == "inhand")
+								var/obj/item/W = O
+								usr.put_in_any_hand_if_possible(W)
 
 		log_and_message_admins("created [number] [english_list(paths)]")
 		return

@@ -359,12 +359,6 @@
 			return global.config;
 		if("contamination_overlay")
 			return global.contamination_overlay;
-		if("create_mob_html")
-			return global.create_mob_html;
-		if("create_object_html")
-			return global.create_object_html;
-		if("create_turf_html")
-			return global.create_turf_html;
 		if("created")
 			return global.created;
 		if("crew_repository")
@@ -1256,12 +1250,6 @@
 			global.config=newval;
 		if("contamination_overlay")
 			global.contamination_overlay=newval;
-		if("create_mob_html")
-			global.create_mob_html=newval;
-		if("create_object_html")
-			global.create_object_html=newval;
-		if("create_turf_html")
-			global.create_turf_html=newval;
 		if("created")
 			global.created=newval;
 		if("crew_repository")
@@ -1973,9 +1961,6 @@
 	"common_tools",
 	"config",
 	"contamination_overlay",
-	"create_mob_html",
-	"create_object_html",
-	"create_turf_html",
 	"created",
 	"crew_repository",
 	"csrfz_check",
