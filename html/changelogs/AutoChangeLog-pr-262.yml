@@ -1,5 +1,0 @@
-author: EgorDinamit
-delete-after: true
-changes:
-  - admin: Create object/mob/turf panel has been replaced with /tg/station's version,
-      inhand spawn variant now works for items.
