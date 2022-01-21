@@ -2,6 +2,10 @@
 	var/moving           = FALSE
 
 /mob/proc/SelfMove(var/direction)
+	if(direction == UP || direction == DOWN)
+		if(buckled)
+			to_chat(src, SPAN_WARNING("You can't do that while buckled down!"))
+			return
 	if(DoMove(direction, src) & MOVEMENT_HANDLED)
 		return TRUE // Doesn't necessarily mean the mob physically moved
 
