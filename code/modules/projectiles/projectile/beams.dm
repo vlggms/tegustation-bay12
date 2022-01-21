@@ -264,7 +264,7 @@
 	name = "particle lance"
 	icon_state = "particle"
 	damage = 35
-	armor_penetration = 50
+	armor_penetration = 40
 	muzzle_type = /obj/effect/projectile/muzzle/particle
 	tracer_type = /obj/effect/projectile/tracer/particle
 	impact_type = /obj/effect/projectile/impact/particle
