@@ -16253,6 +16253,10 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/item/clothing/mask/plunger{
+	pixel_x = -8;
+	pixel_y = 16
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/medical/washroom)
 "cZd" = (

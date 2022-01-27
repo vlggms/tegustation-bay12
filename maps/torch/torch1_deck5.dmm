@@ -87,6 +87,16 @@
 /obj/effect/paint/silver,
 /turf/simulated/wall/ocp_wall,
 /area/shuttle/petrov/toxins)
+"ak" = (
+/obj/structure/table/rack,
+/obj/random/maintenance/solgov,
+/obj/random/maintenance/solgov,
+/obj/random/maintenance/solgov,
+/obj/random/maintenance/solgov,
+/obj/random/maintenance/solgov,
+/obj/random/maintenance/solgov,
+/turf/simulated/floor/plating,
+/area/shuttle/petrov/isolation)
 "al" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable{
@@ -446,11 +456,11 @@
 /turf/simulated/wall/r_wall/hull,
 /area/maintenance/fifthdeck/aftstarboard)
 "aU" = (
-/obj/machinery/artifact_scanpad,
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/newscaster{
-	pixel_y = 32
+/obj/machinery/artifact_analyser{
+	pixel_y = 8
 	},
+/obj/structure/table/standard,
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/petrov/analysis)
 "aV" = (
@@ -9886,6 +9896,7 @@
 	},
 /obj/item/folder/nt,
 /obj/item/pen,
+/obj/item/flame/lighter/random,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/analysis)
 "vp" = (
@@ -10543,6 +10554,11 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/analysis)
 "xY" = (
@@ -10714,10 +10730,21 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/hallwaya)
 "yy" = (
-/obj/structure/table/standard,
-/obj/item/crowbar,
-/obj/item/flame/lighter/random,
-/obj/item/storage/box/evidence,
+/obj/structure/table/rack,
+/obj/machinery/door/window/northright{
+	name = "secure testing equipment"
+	},
+/obj/item/storage/box/ammo/blanks,
+/obj/item/melee/baton/loaded,
+/obj/item/gun/projectile/shotgun/pump/exploration,
+/obj/item/gun/energy/laser/practice,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/analysis)
 "yz" = (
@@ -10861,6 +10888,17 @@
 /obj/effect/paint/silver,
 /turf/simulated/floor/plating,
 /area/shuttle/petrov/equipment)
+"yS" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/cable/cyan{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/white,
+/area/shuttle/petrov/analysis)
 "yU" = (
 /obj/machinery/atmospherics/unary/heater,
 /obj/machinery/light{
@@ -11147,9 +11185,6 @@
 	pixel_x = -24;
 	pixel_y = 0
 	},
-/obj/machinery/light{
-	dir = 8
-	},
 /obj/structure/cable/cyan{
 	d2 = 2;
 	dir = 1;
@@ -11317,8 +11352,8 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/exploration_shuttle/cargo)
 "AK" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/artifact_analyser,
+/obj/machinery/artifact_harvester,
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/petrov/analysis)
 "AL" = (
@@ -13029,11 +13064,11 @@
 /turf/simulated/floor/lino,
 /area/shuttle/petrov/rd)
 "Hc" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/power/emitter,
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/anomaly_container,
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/petrov/analysis)
 "Hf" = (
@@ -13062,6 +13097,11 @@
 /area/maintenance/fifthdeck/aftstarboard)
 "Hl" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/analysis)
 "Hm" = (
@@ -13347,6 +13387,14 @@
 /turf/simulated/floor/plating,
 /area/vacant/bar)
 "Ib" = (
+/obj/machinery/power/emitter/anchored{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/cable/cyan{
+	d2 = 2;
+	icon_state = "0-2"
+	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/petrov/analysis)
 "Ic" = (
@@ -13384,7 +13432,8 @@
 /turf/simulated/floor/plating,
 /area/maintenance/fifthdeck/aftstarboard)
 "Ij" = (
-/obj/machinery/artifact_harvester,
+/obj/machinery/artifact_scanpad,
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/petrov/analysis)
 "Ik" = (
@@ -13401,6 +13450,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/eva)
+"Im" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/shuttle/petrov/analysis)
 "In" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -13913,6 +13968,17 @@
 /obj/effect/paint/silver,
 /turf/simulated/floor/plating,
 /area/shuttle/petrov/rd)
+"Ke" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/shuttle/petrov/analysis)
 "Kh" = (
 /obj/structure/table/standard,
 /obj/item/folder/nt,
@@ -14345,9 +14411,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/petrov/security)
 "LE" = (
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 1
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4;
 	level = 2
@@ -14761,6 +14824,10 @@
 "Nf" = (
 /obj/structure/table/standard,
 /obj/item/storage/toolbox/mechanical,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8;
+	icon_state = "warning"
+	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/petrov/analysis)
 "Ng" = (
@@ -15956,12 +16023,6 @@
 /area/shuttle/petrov/phoron)
 "RE" = (
 /obj/machinery/suit_storage_unit/science,
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/machinery/newscaster{
-	pixel_y = 32
-	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/petrov/eva)
 "RG" = (
@@ -16003,9 +16064,6 @@
 /turf/simulated/floor/reinforced,
 /area/shuttle/petrov/cell2)
 "RZ" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
 /obj/structure/table/standard,
 /obj/item/anobattery{
 	pixel_x = -6;
@@ -16116,6 +16174,11 @@
 /area/hallway/primary/fifthdeck/aft)
 "Ss" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/analysis)
 "Su" = (
@@ -16512,6 +16575,8 @@
 	pixel_y = 15
 	},
 /obj/item/melee/baton/loaded,
+/obj/item/storage/box/evidence,
+/obj/item/crowbar,
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/petrov/analysis)
 "TL" = (
@@ -16691,9 +16756,12 @@
 /turf/simulated/wall/titanium,
 /area/shuttle/petrov/cell3)
 "Uy" = (
+/obj/machinery/newscaster{
+	pixel_x = -32;
+	pixel_y = 32
+	},
 /obj/effect/floor_decal/industrial/warning{
-	dir = 8;
-	icon_state = "warning"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/analysis)
@@ -16707,10 +16775,7 @@
 /turf/simulated/floor/lino,
 /area/shuttle/petrov/rd)
 "UC" = (
-/obj/structure/table/rack,
-/obj/random/maintenance/solgov,
-/obj/random/maintenance/solgov,
-/obj/random/maintenance/solgov,
+/obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating,
 /area/shuttle/petrov/isolation)
 "UE" = (
@@ -17051,6 +17116,7 @@
 	pixel_x = -2;
 	pixel_y = -2
 	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/eva)
 "VP" = (
@@ -17081,6 +17147,9 @@
 /obj/item/device/scanner/xenobio,
 /obj/item/storage/excavation,
 /obj/item/device/measuring_tape,
+/obj/machinery/newscaster{
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/eva)
 "VV" = (
@@ -45319,8 +45388,8 @@ bb
 bb
 aU
 Uy
-Uy
-Uy
+ZY
+ZY
 LE
 ZY
 Mt
@@ -45520,7 +45589,7 @@ aa
 Pe
 ZJ
 Ij
-ZY
+yS
 Hl
 Ss
 xX
@@ -45722,7 +45791,7 @@ aa
 Pe
 ZJ
 Ib
-ZY
+Ke
 ZY
 yy
 tR
@@ -45924,7 +45993,7 @@ aa
 Pe
 ZJ
 Nf
-ZY
+Im
 DZ
 vo
 Fo
@@ -48769,7 +48838,7 @@ Wl
 wE
 Wl
 UC
-UC
+ak
 fF
 fF
 aa

@@ -5985,6 +5985,9 @@
 	dir = 1;
 	icon_state = "bordercolorhalf"
 	},
+/obj/machinery/light/spot{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/observation)
 "lX" = (
@@ -6005,6 +6008,9 @@
 	},
 /obj/machinery/light/spot{
 	dir = 1
+	},
+/obj/machinery/camera/network/third_deck{
+	c_tag = "Observation Starboard"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/observation)
@@ -7080,9 +7086,6 @@
 "oJ" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/light/spot{
-	dir = 4
-	},
 /turf/simulated/floor/grass,
 /area/crew_quarters/observation)
 "oL" = (
@@ -9741,16 +9744,15 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/thruster/d3starboard)
 "vD" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/structure/closet/crate/hydroponics/beekeeping,
+/obj/effect/floor_decal/corner/green/half{
+	dir = 1;
+	icon_state = "bordercolorhalf"
 	},
 /obj/machinery/light/spot{
-	dir = 4
+	dir = 1
 	},
-/turf/simulated/floor/grass,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/observation)
 "vF" = (
 /obj/structure/cable/green{
@@ -10863,6 +10865,7 @@
 /obj/effect/floor_decal/corner/green/half,
 /obj/structure/table/standard,
 /obj/item/storage/box/cups,
+/obj/machinery/light/spot,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/observation)
 "yL" = (
@@ -15570,6 +15573,7 @@
 "KZ" = (
 /obj/effect/floor_decal/corner/green/half,
 /obj/structure/closet/athletic_mixed,
+/obj/machinery/light/spot,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/observation)
 "La" = (
@@ -17162,7 +17166,10 @@
 "PH" = (
 /obj/effect/floor_decal/corner/green/half,
 /obj/structure/flora/pottedplant/minitree,
-/obj/machinery/light/spot,
+/obj/machinery/camera/network/third_deck{
+	c_tag = "Observation Port";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/observation)
 "PI" = (
@@ -30416,7 +30423,7 @@ OM
 jz
 kw
 Ww
-ma
+vD
 Yr
 ZZ
 nJ
@@ -30829,7 +30836,7 @@ qC
 rP
 tj
 uv
-vD
+ZX
 ZX
 ZX
 zB
