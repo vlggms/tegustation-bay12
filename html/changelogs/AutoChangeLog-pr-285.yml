@@ -1,0 +1,10 @@
+author: Doctor-Derp
+delete-after: true
+changes:
+  - maptweak: Rearranges the Petrov analysis lab. Adds more equipment to suit new
+      anomaly research. Fixes Emitter wiring.
+  - maptweak: Adds a water tank to the rear Petrov maintenance compartment.
+  - maptweak: Adds cameras to the Observation room.
+  - maptweak: Pushes R-UST canister tanks into the wall for more space.
+  - maptweak: Adds a turret, turret control panel, and signage to cyborg/AI upload.
+  - maptweak: Adds a plunger to medbay decontamination toilets! :)
