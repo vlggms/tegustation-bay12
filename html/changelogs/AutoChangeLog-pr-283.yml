@@ -1,0 +1,5 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: Ascent lance had its armor penetration slightly reduced.
+  - tweak: Dexalin removed from the pool of chemicals available in Ascent sleepers.
