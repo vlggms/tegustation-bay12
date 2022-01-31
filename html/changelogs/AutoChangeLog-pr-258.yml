@@ -1,0 +1,8 @@
+author: EgorDinamit, Ryll/Shaps(/tg/) for sounds.
+delete-after: true
+changes:
+  - tweak: Field disperser now plays sound that ignores pressure. That means you will
+      hear it regardless of it being in space.
+  - tweak: Limb dismemberment now plays a sound.
+  - tweak: Bashing against a window is now louder.
+  - soundadd: Added sounds from /tg/ for limb dismemberment.
