@@ -257,13 +257,6 @@
 
 /// Returns whether or not this blue river turf can consume an item.
 /turf/unsimulated/floor/bluespace_river/proc/can_erase(atom/A)
-	if (ismovable(A))
-		var/atom/movable/AM = A
-		if (AM.throwing) // wait 'til objects and mobs finish flying through the air
-			if (AM.throwing.target_turf == src)
-				return TRUE
-			else
-				return FALSE
 	return !QDELETED(A) && A.simulated && !isobserver(A) && !istype(A, /obj/item/projectile) && has_gravity(A)
 
 /// Deletes the provided atom from existence forever with a spooky message. Mobs will leave behind an afterimage that slowly fades away.
