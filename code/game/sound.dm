@@ -1,4 +1,4 @@
-/proc/playsound(atom/source, soundin, vol as num, vary, extrarange as num, falloff, is_global, frequency, is_ambiance = 0,  ignore_walls = TRUE)
+/proc/playsound(atom/source, soundin, vol as num, vary, extrarange as num, falloff, is_global, frequency, is_ambiance = 0, ignore_walls = TRUE, ignore_pressure = FALSE)
 
 	soundin = get_sfx(soundin) // same sound for everyone
 
@@ -25,11 +25,11 @@
 			var/turf/T = get_turf(M)
 
 			if(T && T.z == turf_source.z && (!is_ambiance || M.get_preference_value(/datum/client_preference/play_ambiance) == GLOB.PREF_YES))
-				M.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, is_global, extrarange)
+				M.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, is_global, extrarange, ignore_pressure)
 
 var/const/FALLOFF_SOUNDS = 0.5
 
-/mob/proc/playsound_local(var/turf/turf_source, soundin, vol as num, vary, frequency, falloff, is_global, extrarange)
+/mob/proc/playsound_local(var/turf/turf_source, soundin, vol as num, vary, frequency, falloff, is_global, extrarange, ignore_pressure)
 	if(!src.client || ear_deaf > 0)
 		return
 	var/sound/S = soundin
@@ -61,16 +61,16 @@ var/const/FALLOFF_SOUNDS = 0.5
 		var/datum/gas_mixture/hearer_env = T.return_air()
 		var/datum/gas_mixture/source_env = turf_source.return_air()
 
-		if (hearer_env && source_env)
-			var/pressure = min(hearer_env.return_pressure(), source_env.return_pressure())
+		if(!ignore_pressure)
+			if (hearer_env && source_env)
+				var/pressure = min(hearer_env.return_pressure(), source_env.return_pressure())
+				if (pressure < ONE_ATMOSPHERE)
+					pressure_factor = max((pressure - SOUND_MINIMUM_PRESSURE)/(ONE_ATMOSPHERE - SOUND_MINIMUM_PRESSURE), 0)
+			else //in space
+				pressure_factor = 0
 
-			if (pressure < ONE_ATMOSPHERE)
-				pressure_factor = max((pressure - SOUND_MINIMUM_PRESSURE)/(ONE_ATMOSPHERE - SOUND_MINIMUM_PRESSURE), 0)
-		else //in space
-			pressure_factor = 0
-
-		if (distance <= 1)
-			pressure_factor = max(pressure_factor, 0.15)	//hearing through contact
+			if (distance <= 1)
+				pressure_factor = max(pressure_factor, 0.15)	//hearing through contact
 
 		S.volume *= pressure_factor
 
@@ -136,6 +136,8 @@ var/const/FALLOFF_SOUNDS = 0.5
 			if ("hiss") soundin = pick(GLOB.hiss_sound)
 			if ("pageturn") soundin = pick(GLOB.page_sound)
 			if ("fracture") soundin = pick(GLOB.fracture_sound)
+			if ("crack") soundin = pick(GLOB.crack_sound)
+			if ("sizzle") soundin = pick(GLOB.sizzle_sound)
 			if ("light_bic") soundin = pick(GLOB.lighter_sound)
 			if ("keyboard") soundin = pick(GLOB.keyboard_sound)
 			if ("keystroke") soundin = pick(GLOB.keystroke_sound)

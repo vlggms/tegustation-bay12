@@ -57,10 +57,21 @@ GLOBAL_LIST_INIT(page_sound,\
 
 GLOBAL_LIST_INIT(fracture_sound,\
 	list(\
-		'sound/effects/bonebreak1.ogg',\
-		'sound/effects/bonebreak2.ogg',\
-		'sound/effects/bonebreak3.ogg',\
-		'sound/effects/bonebreak4.ogg'))
+		'sound/effects/wounds/bonebreak1.ogg',\
+		'sound/effects/wounds/bonebreak2.ogg',\
+		'sound/effects/wounds/bonebreak3.ogg',\
+		'sound/effects/wounds/bonebreak4.ogg'))
+
+GLOBAL_LIST_INIT(crack_sound,\
+	list(\
+		'sound/effects/wounds/crack1.ogg',\
+		'sound/effects/wounds/crack2.ogg',\
+		'sound/effects/wounds/crack3.ogg'))
+
+GLOBAL_LIST_INIT(sizzle_sound,\
+	list(\
+		'sound/effects/wounds/sizzle1.ogg',\
+		'sound/effects/wounds/sizzle2.ogg'))
 
 GLOBAL_LIST_INIT(lighter_sound,\
 	list(\

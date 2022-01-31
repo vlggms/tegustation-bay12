@@ -232,13 +232,13 @@
 				attack_generic(H,25)
 				return
 
-		playsound(src.loc, 'sound/effects/glassbash.ogg', 80, 1)
+		playsound(src.loc, 'sound/effects/glassbash.ogg', 125, 1) // So as it turns out, glassbash sound is quieter than glassknock
 		user.do_attack_animation(src)
 		user.visible_message("<span class='danger'>\The [user] bangs against \the [src]!</span>",
 							"<span class='danger'>You bang against \the [src]!</span>",
 							"You hear a banging sound.")
 	else
-		playsound(src.loc, 'sound/effects/glassknock.ogg', 80, 1)
+		playsound(src.loc, 'sound/effects/glassknock.ogg', 50, 1)
 		user.visible_message("[user.name] knocks on the [src.name].",
 							"You knock on the [src.name].",
 							"You hear a knocking sound.")
