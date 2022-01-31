@@ -45,6 +45,7 @@
 				var/datum/unarmed_attack/attack = M.get_unarmed_attack(src)
 				dealt_damage = attack.damage <= dealt_damage ? dealt_damage : attack.damage
 				harm_verb = pick(attack.attack_verb)
+				playsound(loc, attack.attack_sound, 25, 1, -1)
 				if(attack.sharp || attack.edge)
 					adjustBleedTicks(dealt_damage)
 
