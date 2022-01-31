@@ -25,10 +25,10 @@
 		list(mode_name="lethal", projectile_type = /obj/item/projectile/beam/particle)
 		)
 	var/global/list/species_can_use = list(
-		SPECIES_MANTID_ALATE, 
-		SPECIES_MANTID_GYNE, 
-		SPECIES_NABBER, 
-		SPECIES_MONARCH_QUEEN, 
+		SPECIES_MANTID_ALATE,
+		SPECIES_MANTID_GYNE,
+		SPECIES_NABBER,
+		SPECIES_MONARCH_QUEEN,
 		SPECIES_MONARCH_WORKER
 	)
 	var/charge_state = "pr"
@@ -42,7 +42,7 @@
 			return TRUE
 		if(!istype(user) || !(user.species.get_bodytype(user) in species_can_use))
 			return FALSE
-	
+
 /obj/item/gun/energy/particle/small
 	name = "particle projector"
 	desc = "A smaller variant on the Ascent particle lance, usually carried by drones and alates."
@@ -102,10 +102,10 @@
 	one_hand_penalty = 6
 	var/charge_per_shot = 10
 	var/global/list/species_can_use = list(
-		SPECIES_MANTID_ALATE, 
-		SPECIES_MANTID_GYNE, 
-		SPECIES_NABBER, 
-		SPECIES_MONARCH_QUEEN, 
+		SPECIES_MANTID_ALATE,
+		SPECIES_MANTID_GYNE,
+		SPECIES_NABBER,
+		SPECIES_MONARCH_QUEEN,
 		SPECIES_MONARCH_WORKER
 	)
 

@@ -72,11 +72,13 @@ MANTIDIFY(/obj/machinery/door/airlock/external/bolted, "mantid airlock", "door")
 	icon = 'icons/obj/ascent_sleepers.dmi'
 	base_type = /obj/machinery/sleeper
 	construct_state = /decl/machine_construction/default/no_deconstruct
-
-/obj/machinery/sleeper/ascent/Initialize(mapload, d, populate_parts)
-	. = ..()
-	base_chemicals["Crystalizing Agent"] = /datum/reagent/crystallizing_agent
-	base_chemicals["Bromide"] = /datum/reagent/toxin/bromide
+	base_chemicals = list(
+					"Inaprovaline" = /datum/reagent/medicine/inaprovaline,
+					"Paracetamol" = /datum/reagent/medicine/painkiller/paracetamol,
+					"Dylovene" = /datum/reagent/medicine/dylovene,
+					"Bromide" = /datum/reagent/toxin/bromide,
+					"Crystalizing Agent" = /datum/reagent/crystallizing_agent
+					)
 
 /obj/machinery/fabricator/ascent
 	name = "\improper Ascent nanofabricator"
