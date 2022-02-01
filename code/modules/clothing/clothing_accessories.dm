@@ -52,8 +52,11 @@
 		return
 	return ..()
 
-/obj/item/clothing/MouseDrop(var/obj/over_object)
-	if (!over_object || !(ishuman(usr) || issmall(usr)))
+/obj/item/clothing/MouseDrop(obj/over_object)
+	if(!(ishuman(usr) || issmall(usr)))
+		return
+
+	if(!over_object || over_object == src)
 		return
 
 	//makes sure that the clothing is equipped so that we can't drag it into our hand from miles away.
@@ -87,7 +90,7 @@
 			to_chat(user, "<span class='notice'>It smells clean!</span>")
 		if(SMELL_STINKY)
 			to_chat(user, "<span class='bad'>It's quite stinky!</span>")
-	
+
 
 /obj/item/clothing/proc/update_accessory_slowdown()
 	slowdown_accessory = 0
