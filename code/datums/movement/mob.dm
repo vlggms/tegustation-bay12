@@ -252,6 +252,9 @@
 	var/extra_delay = HandleGrabs(direction, old_turf)
 	mob.ExtraMoveCooldown(extra_delay)
 
+	var/moved_to = get_dir(old_turf, get_turf(mob))
+	mob.set_dir(moved_to)
+
 	for (var/obj/item/grab/G in mob)
 		if (G.assailant_reverse_facing())
 			mob.set_dir(GLOB.reverse_dir[direction])
