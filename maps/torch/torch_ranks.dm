@@ -288,12 +288,14 @@
 	rank_types = list(
 		/datum/mil_rank/civ/civ,
 		/datum/mil_rank/civ/contractor,
+		/datum/mil_rank/civ/foundationadvisor,
 		/datum/mil_rank/civ/synthetic
 	)
 
 	spawn_rank_types = list(
 		/datum/mil_rank/civ/civ,
 		/datum/mil_rank/civ/contractor,
+		/datum/mil_rank/civ/foundationadvisor,
 		/datum/mil_rank/civ/synthetic
 	)
 
@@ -708,6 +710,10 @@
 
 /datum/mil_rank/civ/contractor
 	name = "Contractor"
+
+/datum/mil_rank/civ/foundationadvisor
+	name = "Foundation Advisor"
+	name_short = "FADV"
 
 /datum/mil_rank/civ/synthetic
 	name = "Synthetic"

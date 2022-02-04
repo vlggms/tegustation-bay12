@@ -463,6 +463,13 @@
 	desc = "Merchant"
 	access_type = ACCESS_TYPE_NONE
 
+/var/const/access_psiadvisor = "ACCESS_PSIADVISOR"
+/datum/access/psiadvisor
+	id = access_psiadvisor
+	desc = "Foundation Advisor"
+	region = ACCESS_REGION_COMMAND
+	access_type = ACCESS_TYPE_NONE
+
 // Ascent access.
 /var/const/access_ascent = "ACCESS_ASCENT"
 /datum/access/ascent

@@ -17,7 +17,7 @@
 	use_description = "Click on or otherwise activate an empty hand while on harm intent to manifest a psychokinetic cutting blade. The power the blade will vary based on your mastery of the faculty."
 	admin_log = FALSE
 
-/decl/psionic_power/psychokinesis/psiblade/invoke(var/mob/living/user, var/mob/living/target)
+/decl/psionic_power/psychokinesis/psiblade/invoke(mob/living/user, mob/living/target)
 	if((target && user != target) || user.a_intent != I_HURT)
 		return FALSE
 	. = ..()
@@ -36,11 +36,11 @@
 	name =            "Tinker"
 	cost =            5
 	cooldown =        10
-	min_rank =        PSI_RANK_MASTER
+	min_rank =        PSI_RANK_OPERANT
 	use_description = "Click on or otherwise activate an empty hand while on help intent to manifest a psychokinetic tool. Use it in-hand to switch between tool types."
 	admin_log = FALSE
 
-/decl/psionic_power/psychokinesis/tinker/invoke(var/mob/living/user, var/mob/living/target)
+/decl/psionic_power/psychokinesis/tinker/invoke(mob/living/user, mob/living/target)
 	if((target && user != target) || user.a_intent != I_HELP)
 		return FALSE
 	. = ..()
@@ -50,7 +50,7 @@
 /decl/psionic_power/psychokinesis/telekinesis
 	name =            "Telekinesis"
 	cost =            5
-	cooldown =        10
+	cooldown =        30
 	use_ranged =      TRUE
 	use_manifest =    FALSE
 	min_rank =        PSI_RANK_GRANDMASTER
@@ -61,7 +61,7 @@
 		/obj/machinery/door
 	)
 
-/decl/psionic_power/psychokinesis/telekinesis/invoke(var/mob/living/user, var/mob/living/target)
+/decl/psionic_power/psychokinesis/telekinesis/invoke(mob/living/user, mob/living/target)
 	if(user.a_intent != I_GRAB)
 		return FALSE
 	. = ..()

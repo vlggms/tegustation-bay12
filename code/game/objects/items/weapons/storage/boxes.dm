@@ -293,6 +293,16 @@
 					/obj/item/implanter = 1,
 					/obj/item/implantpad = 1)
 
+/obj/item/storage/box/psiimp
+	name = "boxed psi dampeners kit"
+	desc = "Box of stuff used to implant psionic monitoring software."
+	icon_state = "implant"
+	item_state = "syringe_kit"
+	startswith = list(
+				/obj/item/implanter/psi = 1,
+				/obj/item/implantcase/psi_control = 6,
+				)
+
 /obj/item/storage/box/rxglasses
 	name = "box of prescription glasses"
 	desc = "This box contains nerd glasses."

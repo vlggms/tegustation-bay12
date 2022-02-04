@@ -407,6 +407,46 @@
 /datum/job/sea/get_description_blurb()
 	return "You are the Senior Enlisted Advisor. You are the highest enlisted person on the ship. You are directly subordinate to the CO. You advise them on enlisted concerns and provide expertise and advice to officers. You are responsible for ensuring discipline and good conduct among enlisted, as well as notifying officers of any issues and \"advising\" them on mistakes they make. You also handle various duties on behalf of the CO and XO. You are an experienced enlisted person, very likely equal only in experience to the CO and XO. You know the regulations better than anyone."
 
+/datum/job/psiadvisor
+	title = "Foundation Advisor"
+	department = "Support"
+	department_flag = SPT
+	selection_color = "#2f2f7f"
+	total_positions = 1
+	spawn_positions = 1
+	economic_power = 10
+	minimum_character_age = list(SPECIES_HUMAN = 28)
+	ideal_character_age = 34
+	minimal_player_age = 7
+	supervisors = "the Foundation and the Commanding Officer"
+	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/psiadvisor
+	allowed_branches = list(/datum/mil_branch/civilian)
+	allowed_ranks = list(/datum/mil_rank/civ/foundationadvisor)
+	min_skill = list(
+		SKILL_BUREAUCRACY = SKILL_EXPERIENCED,
+		SKILL_FINANCE = SKILL_TRAINED,
+		SKILL_MEDICAL = SKILL_BASIC
+	)
+	max_skill = list(
+		SKILL_COMBAT  = SKILL_TRAINED,
+		SKILL_WEAPONS = SKILL_TRAINED
+	)
+	skill_points = 20
+	access = list(access_psiadvisor, access_security, access_medical, access_engine, access_maint_tunnels, access_external_airlocks,
+				access_eva, access_bridge, access_cargo, access_RC_announce, access_solgov_crew, access_hangar)
+	minimal_access = list()
+	software_on_spawn = list(
+		/datum/computer_file/program/comm,
+		/datum/computer_file/program/records
+	)
+
+/datum/job/psiadvisor/equip(mob/living/carbon/human/H)
+	psi_faculties = list("[PSI_REDACTION]" = PSI_RANK_OPERANT, "[PSI_COERCION]" = PSI_RANK_OPERANT, "[PSI_PSYCHOKINESIS]" = PSI_RANK_OPERANT, "[PSI_ENERGISTICS]" = PSI_RANK_OPERANT)
+	return ..()
+
+/datum/job/psiadvisor/get_description_blurb()
+	return "You are the Foundation Advisor. You are psionically awakened, and you are the first and only exposure most of the crew will have to the mentally gifted. Your main responsibility is advising the Commanding Officer on psionic matters, and helping freshly awakened psions discover and control their abilities, and overseeing them, or suppress it if they wish to do so. You must report any violent psions to the appropriate personnel including the Foundation to take care of them. Avoid direct confrontation with them as much as possible."
+
 /datum/job/bridgeofficer
 	title = "Bridge Officer"
 	department = "Support"
