@@ -1279,6 +1279,10 @@ About the new airlock wires panel:
 
 	for(var/turf/turf in locs)
 		for(var/atom/movable/AM in turf)
+			if(istype(AM, /obj/))
+				var/obj/O = AM
+				if(O.hides_under_flooring()) // Don't damage pipes, cables, and so on.
+					continue
 			if(AM.airlock_crush(door_crush_damage))
 				take_damage(door_crush_damage)
 				use_power_oneoff(door_crush_damage * 100)		// Uses bunch extra power for crushing the target.
