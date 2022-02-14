@@ -183,15 +183,15 @@
 
 	else if(isWrench(O))
 		user.visible_message( \
-			"<span class='notice'>\The [user] begins [anchored ? "securing" : "unsecuring"] the microwave.</span>", \
-			"<span class='notice'>You attempt to [anchored ? "secure" : "unsecure"] the microwave.</span>"
+			"<span class='notice'>\The [user] begins [anchored ? "unsecuring" : "securing"] the microwave.</span>", \
+			"<span class='notice'>You attempt to [anchored ? "unsecure" : "secure"] the microwave.</span>"
 			)
 		if (do_after(user,20, src))
-			anchored = !anchored
 			user.visible_message( \
-			"<span class='notice'>\The [user] [anchored ? "secures" : "unsecures"] the microwave.</span>", \
-			"<span class='notice'>You [anchored ? "secure" : "unsecure"] the microwave.</span>"
+			"<span class='notice'>\The [user] [anchored ? "unsecures" : "secures"] the microwave.</span>", \
+			"<span class='notice'>You [anchored ? "unsecure" : "secure"] the microwave.</span>"
 			)
+			anchored = !anchored
 
 	else
 		to_chat(user, "<span class='warning'>You have no idea what you can cook with this [O].</span>")
