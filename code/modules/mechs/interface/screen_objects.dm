@@ -304,7 +304,7 @@
 			playsound(owner.loc,'sound/effects/scanbeep.ogg',30,0)
 			for(var/obj/item/mech_component/MC in list(owner.arms, owner.legs, owner.body, owner.head))
 				if(MC)
-					MC.return_diagnostics(usr)	
+					MC.return_diagnostics(usr)
 
 //Controls if cameras set the vision flags
 /obj/screen/exosuit/toggle/camera
