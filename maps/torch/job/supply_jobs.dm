@@ -38,6 +38,11 @@
 
 	minimal_access = list()
 
+	lowpop_access = list(
+		access_engine, access_construction,
+		access_tox, access_research
+	)
+
 	software_on_spawn = list(/datum/computer_file/program/supply,
 							 /datum/computer_file/program/deck_management,
 							 /datum/computer_file/program/reports)
@@ -77,6 +82,11 @@
 	)
 
 	minimal_access = list()
+
+	lowpop_access = list(
+		access_construction,
+		access_tox, access_research
+	)
 
 	software_on_spawn = list(/datum/computer_file/program/supply,
 							 /datum/computer_file/program/deck_management,

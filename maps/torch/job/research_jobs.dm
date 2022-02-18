@@ -29,6 +29,11 @@
 		access_petrov_maint, access_torch_fax, access_radio_sci, access_radio_exp
 	)
 
+	lowpop_access = list(
+		access_medical, access_chemistry,
+		access_cargo, access_cargo_bot,
+	)
+
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
 	                    SKILL_COMPUTER    = SKILL_BASIC,
 	                    SKILL_FINANCE     = SKILL_BASIC,
@@ -88,6 +93,11 @@
 		access_petrov_maint, access_radio_sci, access_radio_exp
 	)
 
+	lowpop_access = list(
+		access_medical, access_chemistry,
+		access_cargo, access_cargo_bot,
+	)
+
 	minimal_access = list()
 	skill_points = 20
 	possible_goals = list(/datum/goal/achievement/notslimefodder)
@@ -133,4 +143,9 @@
 		access_petrov_analysis, access_petrov_phoron, access_petrov_toxins, access_petrov_chemistry,
 		access_radio_sci, access_radio_exp
 	)
+
+	lowpop_access = list(
+		access_medical
+	)
+
 	possible_goals = list(/datum/goal/achievement/notslimefodder)

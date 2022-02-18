@@ -40,6 +40,11 @@
 		access_tcomsat, access_solgov_crew, access_seneng, access_hangar, access_network, access_radio_eng
 	)
 
+	lowpop_access = list(
+		access_tox, access_research,
+		access_expedition_shuttle, access_guppy
+	)
+
 	software_on_spawn = list(/datum/computer_file/program/power_monitor,
 							 /datum/computer_file/program/supermatter_monitor,
 							 /datum/computer_file/program/alarm_monitor,
@@ -101,6 +106,11 @@
 
 	minimal_access = list()
 
+	lowpop_access = list(
+		access_tox, access_research,
+		access_expedition_shuttle, access_guppy
+	)
+
 	software_on_spawn = list(/datum/computer_file/program/power_monitor,
 							 /datum/computer_file/program/supermatter_monitor,
 							 /datum/computer_file/program/alarm_monitor,
@@ -153,6 +163,10 @@
 		access_engine_equip, access_maint_tunnels, access_external_airlocks, access_emergency_storage,
 		access_eva, access_tech_storage, access_janitor, access_construction,
 		access_solgov_crew, access_hangar, access_radio_eng
+	)
+
+	lowpop_access = list(
+		access_tox, access_research
 	)
 
 	software_on_spawn = list(/datum/computer_file/program/power_monitor,
@@ -213,6 +227,12 @@
 	)
 
 	minimal_access = list()
+
+	lowpop_access = list(
+		access_engine_equip, access_tech_storage, access_maint_tunnels,
+		access_tox, access_research,
+		access_medical
+	)
 
 /datum/job/roboticist/get_description_blurb()
 	return "You are the Roboticist. You are responsible for repairing, upgrading and handling ship synthetics (like robots). You are also responsible for the production of exosuits(mechs) and bots for various departments. You answer to the Chief Engineer."

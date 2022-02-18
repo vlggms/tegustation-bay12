@@ -41,6 +41,10 @@
 		access_medical_equip, access_solgov_crew, access_senmed, access_radio_med
 	)
 
+	lowpop_access = list(
+		access_tox, access_research
+	)
+
 	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
 							 /datum/computer_file/program/camera_monitor)
 
@@ -82,6 +86,10 @@
 		access_medical, access_morgue, access_virology, access_maint_tunnels, access_emergency_storage,
 		access_crematorium, access_chemistry, access_surgery,
 		access_medical_equip, access_solgov_crew, access_senmed, access_radio_med
+	)
+
+	lowpop_access = list(
+		access_tox, access_research
 	)
 
 	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
@@ -126,6 +134,10 @@
 		access_external_airlocks, access_emergency_storage,
 		access_eva, access_surgery, access_medical_equip,
 		access_solgov_crew, access_hangar, access_radio_med
+	)
+
+	lowpop_access = list(
+		access_tox, access_research
 	)
 
 	minimal_access = list()
@@ -212,6 +224,10 @@
 		access_medical, access_maint_tunnels, access_emergency_storage,
 		access_medical_equip, access_solgov_crew, access_chemistry,
 	 	access_virology, access_morgue, access_crematorium, access_radio_med
+	)
+
+	lowpop_access = list(
+		access_tox, access_research
 	)
 
 	minimal_access = list()
