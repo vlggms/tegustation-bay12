@@ -66,7 +66,7 @@ proc/get_mech_images(var/list/components = list(), var/overlay_layer = FLOAT_LAY
 			draw_pilot.plane = FLOAT_PLANE
 			if(body && i <= LAZYLEN(body.pilot_positions))
 				var/list/offset_values = body.pilot_positions[i]
-				var/list/directional_offset_values = offset_values["[dir]"]
+				var/list/directional_offset_values = offset_values["[FIRST_DIR(dir)]"]
 				draw_pilot.pixel_x = pilot.default_pixel_x + directional_offset_values["x"]
 				draw_pilot.pixel_y = pilot.default_pixel_y + directional_offset_values["y"]
 				draw_pilot.pixel_z = 0
