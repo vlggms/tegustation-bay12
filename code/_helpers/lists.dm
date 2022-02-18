@@ -752,12 +752,12 @@ proc/dd_sortedTextList(list/incoming)
  */
 /proc/file_to_list(path)
 	if(fexists(path))
-		var/list/lines = world.file2list(path)
-		var/list/output
+		var/list/lines = file2list(path)
+		var/list/output = list()
 		for(var/line in lines)
 			if(!length(line))
 				continue
-			if(findtextEx(line, "#", 1, 2))
+			if(copytext(line, 1, 2) == "#")
 				continue
 			output += line
 		return output
