@@ -1,5 +1,0 @@
-author: EgorDinamit, PowerfulBacon
-delete-after: true
-changes:
-  - rscadd: Added chat badges. Those appear next to the user's name in OOC chat if
-      they possess an admin rank or a status of "trusted player".
