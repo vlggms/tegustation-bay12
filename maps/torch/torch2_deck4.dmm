@@ -1294,8 +1294,7 @@
 /turf/simulated/floor/carpet/blue2,
 /area/command/captainmess)
 "en" = (
-/obj/machinery/conveyor{
-	dir = 8;
+/obj/machinery/conveyor/west{
 	id = "packageSort1"
 	},
 /turf/simulated/floor/plating,
@@ -7463,11 +7462,10 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/primary/fourthdeck/aft)
 "yG" = (
-/obj/machinery/conveyor{
-	dir = 8;
+/obj/random/junk,
+/obj/machinery/conveyor/west{
 	id = "packageSort1"
 	},
-/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/quartermaster/sorting)
 "yH" = (
@@ -7538,14 +7536,13 @@
 /turf/simulated/floor/tiled/dark,
 /area/eva)
 "zl" = (
-/obj/machinery/conveyor{
-	dir = 8;
-	id = "packageSort1"
-	},
 /obj/random/junk,
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -22
+	},
+/obj/machinery/conveyor/west{
+	id = "packageSort1"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/sorting)
@@ -12082,11 +12079,10 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/fourthdeck/starboard)
 "Ox" = (
-/obj/machinery/conveyor{
-	dir = 8;
+/obj/structure/plasticflaps,
+/obj/machinery/conveyor/west{
 	id = "packageSort1"
 	},
-/obj/structure/plasticflaps,
 /turf/simulated/floor/plating,
 /area/quartermaster/sorting)
 "Oy" = (
@@ -15183,12 +15179,11 @@
 /turf/simulated/floor/shuttle_ceiling/torch/air,
 /area/quartermaster/hangar/top)
 "WJ" = (
-/obj/machinery/conveyor{
-	dir = 8;
-	id = "packageSort1"
-	},
 /obj/random/junk,
 /obj/machinery/light/spot,
+/obj/machinery/conveyor/west{
+	id = "packageSort1"
+	},
 /turf/simulated/floor/plating,
 /area/quartermaster/sorting)
 "WK" = (

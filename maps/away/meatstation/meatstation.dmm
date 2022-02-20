@@ -9370,7 +9370,6 @@
 /area/meatstation/hydroponics)
 "vU" = (
 /obj/machinery/conveyor_switch/oneway{
-	convdir = -1;
 	id = "trashconveyor"
 	},
 /obj/effect/floor_decal/corner/b_green/border,
