@@ -106,6 +106,15 @@ var/const/NEGATIVE_INFINITY = -1#INF // win: -1.#INF, lin: -inf
 	var/mob/living/carbon/C = A
 	return C.species?.name == B
 
+/proc/isspecies_inlist(A, L = list())
+	if(!iscarbon(A))
+		return FALSE
+	var/mob/living/carbon/C = A
+	for(var/S in L)
+		if(C.species?.name == S)
+			return TRUE
+	return FALSE
+
 #define sequential_id(key) uniqueness_repository.Generate(/datum/uniqueness_generator/id_sequential, key)
 
 #define random_id(key,min_id,max_id) uniqueness_repository.Generate(/datum/uniqueness_generator/id_random, key, min_id, max_id)

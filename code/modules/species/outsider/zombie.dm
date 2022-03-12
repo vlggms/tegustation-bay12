@@ -5,7 +5,12 @@
 #define LANGUAGE_ZOMBIE "Zombie"
 #define ANTAG_ZOMBIE "Zombie"
 
+#define SPECIES_ZOMBIE_FAST "Fast Zombie"
+#define SPECIES_ZOMBIE_JUGGERNAUT "Juggernaut"
+
 //// Zombie Globals
+
+GLOBAL_LIST_INIT(zombie_types, list(SPECIES_ZOMBIE, SPECIES_ZOMBIE_FAST, SPECIES_ZOMBIE_JUGGERNAUT))
 
 GLOBAL_LIST_INIT(zombie_messages, list(
 	"stage1" = list(
@@ -153,7 +158,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 /datum/species/zombie/proc/handle_death_infection(mob/living/carbon/human/H)
 	var/list/victims = hearers(rand(1, 2), H)
 	for(var/mob/living/carbon/human/M in victims)
-		if (H == M || isspecies(M, SPECIES_ZOMBIE))
+		if (H == M || (isspecies_inlist(M, GLOB.zombie_types)))
 			continue
 		if (!(M.species.name in GLOB.zombie_species) || isspecies(M,SPECIES_DIONA) || M.isSynthetic())
 			continue
@@ -195,7 +200,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 /datum/species/zombie/proc/handle_action(mob/living/carbon/human/H)
 	var/dist = 128
 	for(var/mob/living/M in hearers(H, 15))
-		if ((ishuman(M) || istype(M, /mob/living/exosuit)) && !isspecies(M, SPECIES_ZOMBIE) && !isspecies(M, SPECIES_DIONA)) //Don't attack fellow zombies, or diona
+		if ((ishuman(M) || istype(M, /mob/living/exosuit)) && !isspecies_inlist(M, GLOB.zombie_types) && !isspecies(M, SPECIES_DIONA)) //Don't attack fellow zombies, or diona
 			if (istype(M, /mob/living/exosuit))
 				var/mob/living/exosuit/MC = M
 				if (!LAZYLEN(MC.pilots))
@@ -209,7 +214,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 
 	H.setClickCooldown(DEFAULT_ATTACK_COOLDOWN*2)
 	if (target)
-		if (isspecies(target, SPECIES_ZOMBIE))
+		if (isspecies_inlist(target, GLOB.zombie_types))
 			target = null
 			return
 
@@ -274,7 +279,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 	. = ..()
 	if (!.)
 		return FALSE
-	if (isspecies(target, SPECIES_ZOMBIE))
+	if (isspecies_inlist(target, GLOB.zombie_types))
 		to_chat(usr, SPAN_WARNING("They don't look very appetizing!"))
 		return FALSE
 	return TRUE
@@ -382,7 +387,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 	if (QDELETED(src))
 		return
 
-	if (isspecies(src, SPECIES_ZOMBIE)) //Check again otherwise Consume can run this twice at once
+	if (isspecies_inlist(src, GLOB.zombie_types)) //Check again otherwise Consume can run this twice at once
 		return
 
 	rejuvenate()
@@ -435,7 +440,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 	var/list/victims = list()
 	for (var/mob/living/carbon/human/L in get_turf(src))
 		if (L != src && (L.lying || L.stat == DEAD))
-			if (isspecies(L, SPECIES_ZOMBIE))
+			if (isspecies_inlist(L, GLOB.zombie_types))
 				to_chat(src, SPAN_WARNING("\The [L] isn't fresh anymore!"))
 				continue
 			if (!(L.species.name in GLOB.zombie_species) || isspecies(L, SPECIES_DIONA) || L.isSynthetic())
@@ -489,7 +494,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 		to_chat(target,SPAN_DANGER("\The [src] scrapes your flesh from your bones!"))
 		to_chat(src,SPAN_DANGER("You feed hungrily off \the [target]'s flesh."))
 
-		if (isspecies(target, SPECIES_ZOMBIE)) //Just in case they turn whilst being eaten
+		if (isspecies_inlist(target, GLOB.zombie_types)) //Just in case they turn whilst being eaten
 			return
 
 		target.apply_damage(rand(50, 60), BRUTE, BP_CHEST)
@@ -572,7 +577,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 	burn_mod = 5
 
 /mob/living/carbon/human/zombie/fast
-	transform_to = "Fast Zombie"
+	transform_to = SPECIES_ZOMBIE_FAST
 	zombo_outfits = list(
 		/decl/hierarchy/outfit/job/assistant,
 		/decl/hierarchy/outfit/job/service/gardener,
@@ -602,7 +607,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 		playsound(H.loc, 'sound/hallucinations/growl3.ogg', 15, 1)
 
 /mob/living/carbon/human/zombie/juggernaut
-	transform_to = "Juggernaut"
+	transform_to = SPECIES_ZOMBIE_JUGGERNAUT
 	zombo_outfits = list(
 		/decl/hierarchy/outfit/job/security/officer,
 		/decl/hierarchy/outfit/nanotrasen/officer
@@ -622,4 +627,4 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 /datum/unarmed_attack/bite/sharp/zombie/juggernaut/apply_effects(mob/living/carbon/human/user, mob/living/carbon/human/target, attack_damage, zone)
 	..()
 	var/atom/target_turf = get_edge_target_turf(target, get_dir(user, get_step_away(target, user)))
-	target.throw_at(target_turf, 3, 3)
+	target.throw_at(target_turf, 2, 3)
