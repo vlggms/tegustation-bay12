@@ -75,7 +75,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 	cold_level_3 = -1
 	hidden_from_codex = TRUE
 	has_fine_manipulation = FALSE
-	unarmed_types = list(/datum/unarmed_attack/bite/sharp/zombie)
+	unarmed_types = list(/datum/unarmed_attack/zombie)
 	move_intents = list(/decl/move_intent/creep)
 	var/heal_rate = 1 // Regen.
 	var/mob/living/carbon/human/target = null
@@ -122,6 +122,8 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 
 	if (H.wear_id)
 		H.unEquip(H.wear_id)
+	if (H.wear_mask)
+		H.unEquip(H.wear_mask)
 	..()
 
 /datum/species/zombie/proc/handle_zombie_sounds(mob/living/carbon/human/H)
@@ -271,11 +273,15 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 	hidden_from_codex = TRUE
 
 
-/datum/unarmed_attack/bite/sharp/zombie
-	attack_verb = list("slashed", "sunk their teeth into", "bit", "mauled")
+/datum/unarmed_attack/zombie
+	attack_name = "claw"
+	attack_verb = list("slashed", "clawed", "mauled")
+	attack_sound = 'sound/weapons/bite.ogg'
+	eye_attack_text = "fingers"
+	eye_attack_text_victim = "digits"
 	damage = 8
 
-/datum/unarmed_attack/bite/sharp/zombie/is_usable(mob/living/carbon/human/user, mob/living/carbon/human/target, zone)
+/datum/unarmed_attack/zombie/is_usable(mob/living/carbon/human/user, mob/living/carbon/human/target, zone)
 	. = ..()
 	if (!.)
 		return FALSE
@@ -284,7 +290,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 		return FALSE
 	return TRUE
 
-/datum/unarmed_attack/bite/sharp/zombie/apply_effects(mob/living/carbon/human/user, mob/living/carbon/human/target, attack_damage, zone)
+/datum/unarmed_attack/apply_effects(mob/living/carbon/human/user, mob/living/carbon/human/target, attack_damage, zone)
 	..()
 	admin_attack_log(user, target, "Bit their victim.", "Was bitten.", "bit")
 	if (!(target.species.name in GLOB.zombie_species) || isspecies(target, SPECIES_DIONA) || target.isSynthetic()) //No need to check infection for FBPs
@@ -563,7 +569,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 
 /mob/living/carbon/human/zombie/syndi
 	zombo_outfits = list(
-		/decl/hierarchy/outfit/syndicate_command,
+		/decl/hierarchy/outfit/mercenary,
 		/decl/hierarchy/outfit/mercenary/syndicate,
 		/decl/hierarchy/outfit/mercenary/syndicate/commando
 	)
@@ -596,7 +602,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 	weaken_mod = 0
 	paralysis_mod = 0
 	mob_size = MOB_LARGE
-	unarmed_types = list(/datum/unarmed_attack/bite/sharp/zombie/juggernaut)
+	unarmed_types = list(/datum/unarmed_attack/zombie/juggernaut)
 
 /datum/species/zombie/juggernaut/handle_zombie_sounds(mob/living/carbon/human/H)
 	if (prob(7))
@@ -619,12 +625,13 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 		/decl/hierarchy/outfit/job/security/officer/armored/riot
 	)
 
-/datum/unarmed_attack/bite/sharp/zombie/juggernaut
+/datum/unarmed_attack/zombie/juggernaut
+	attack_name = "punch"
 	attack_verb = list("smashed", "devastated", "pummeled")
-	damage = 20
 	attack_sound = 'sound/weapons/heavysmash.ogg'
+	damage = 20
 
-/datum/unarmed_attack/bite/sharp/zombie/juggernaut/apply_effects(mob/living/carbon/human/user, mob/living/carbon/human/target, attack_damage, zone)
+/datum/unarmed_attack/zombie/juggernaut/apply_effects(mob/living/carbon/human/user, mob/living/carbon/human/target, attack_damage, zone)
 	..()
 	var/atom/target_turf = get_edge_target_turf(target, get_dir(user, get_step_away(target, user)))
 	target.throw_at(target_turf, 2, 3)
