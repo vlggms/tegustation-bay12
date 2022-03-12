@@ -105,6 +105,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 	H.move_intent = new /decl/move_intent/creep
 	H.default_run_intent = H.move_intent
 	H.default_walk_intent = H.move_intent
+	H.set_next_usable_move_intent()
 
 	H.set_sight(H.sight | SEE_MOBS | SEE_OBJS | SEE_TURFS) //X-Ray vis
 	H.set_see_in_dark(8)
