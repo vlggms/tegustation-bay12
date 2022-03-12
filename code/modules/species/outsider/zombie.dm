@@ -54,7 +54,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 /datum/species/zombie
 	name = "Zombie"
 	name_plural = "Zombies"
-	slowdown = 7
+	slowdown = 9
 	blood_color = "#700f0f"
 	death_message = "writhes and twitches before falling motionless."
 	species_flags = SPECIES_FLAG_NO_PAIN | SPECIES_FLAG_NO_SCAN
@@ -117,7 +117,6 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 	H.resting = 0
 	H.weakened = 0
 
-	H.move_intent.move_delay = slowdown
 	H.stat = CONSCIOUS
 
 	if (H.wear_id)
@@ -229,7 +228,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 					obstacle.attack_generic(H, 10, "smashes")
 					break
 
-			walk_to(H, target.loc, 1, H.move_intent.move_delay * 1.25)
+			walk_to(H, target.loc, 1, H.movement_delay())
 
 		else
 			if (!target.lying) //Subdue meals
@@ -241,7 +240,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 				target.attack_hand(H)
 
 			else //Eat said meals
-				walk_to(H, target.loc, 0, H.move_intent.move_delay * 2.5) //Move over them
+				walk_to(H, target.loc, 0, H.movement_delay() * 1.5) //Move over them
 				if (H.Adjacent(target)) //Check we're still next to them
 					H.consume()
 
@@ -595,7 +594,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 /datum/species/zombie/juggernaut
 	name = "Juggernaut"
 	name_plural = "Juggernauts"
-	slowdown = 14
+	slowdown = 15
 	brute_mod = 0.2
 	burn_mod = 0.8
 	stun_mod = 0
