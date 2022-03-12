@@ -53,3 +53,14 @@
 	r_pocket = /obj/item/handcuffs
 	id_types = list(/obj/item/card/id/security)
 	pda_type = /obj/item/modular_computer/pda/security
+
+/decl/hierarchy/outfit/job/security/officer/armored
+	name = OUTFIT_JOB_NAME("Security Officer - Armored")
+	suit = /obj/item/clothing/suit/armor/vest/old/security
+	head = /obj/item/clothing/head/helmet
+
+/decl/hierarchy/outfit/job/security/officer/armored/riot
+	name = OUTFIT_JOB_NAME("Security Officer - Riot Gear")
+	suit = /obj/item/clothing/suit/armor/riot
+	head = /obj/item/clothing/head/helmet/riot
+	mask = /obj/item/clothing/mask/gas
