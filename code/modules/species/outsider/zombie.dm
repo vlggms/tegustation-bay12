@@ -59,12 +59,12 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 	death_message = "writhes and twitches before falling motionless."
 	species_flags = SPECIES_FLAG_NO_PAIN | SPECIES_FLAG_NO_SCAN
 	spawn_flags = SPECIES_IS_RESTRICTED
-	brute_mod = 1
-	burn_mod = 2.5 //Vulnerable to fire
+	brute_mod = 1.5
+	burn_mod = 3.5 //Vulnerable to fire
 	oxy_mod = 0
-	stun_mod = 0.1
-	weaken_mod = 0.1
-	paralysis_mod = 0.2
+	stun_mod = 0.2
+	weaken_mod = 0.2
+	paralysis_mod = 0.4
 	show_ssd = null //No SSD message so NPC logic can take over
 	show_coma = null
 	warning_low_pressure = 0
@@ -105,7 +105,6 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 	H.move_intent = new /decl/move_intent/creep
 	H.default_run_intent = H.move_intent
 	H.default_walk_intent = H.move_intent
-	H.set_next_usable_move_intent()
 
 	H.set_sight(H.sight | SEE_MOBS | SEE_OBJS | SEE_TURFS) //X-Ray vis
 	H.set_see_in_dark(8)
@@ -118,6 +117,8 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 	H.resting = 0
 	H.weakened = 0
 
+	H.move_intent.move_delay = 6
+	H.set_next_usable_move_intent()
 	H.stat = CONSCIOUS
 
 	if (H.wear_id)
@@ -154,6 +155,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 /datum/species/zombie/handle_death(mob/living/carbon/human/H)
 	H.stat = DEAD //Gotta confirm death for some odd reason
 	playsound(H, 'sound/hallucinations/wail.ogg', 30, 1)
+	H.visible_message(SPAN_DANGER("\The [H] stops moving as green gaseous goo leaks from their body!")
 	handle_death_infection(H)
 	return TRUE
 
@@ -171,10 +173,8 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 
 		var/vuln = 1 - M.get_blocked_ratio(null, TOX, damage_flags = DAM_BIO) //Are they protected by hazmat clothing?
 		if (vuln > 0.10 && prob(10))
-			M.reagents.add_reagent(/datum/reagent/zombie, 0.5) //Infect 'em
-
-	if (H && H.stat != CONSCIOUS)
-		addtimer(CALLBACK(src, .proc/handle_death_infection, H), 1 SECOND)
+			M.reagents.add_reagent(/datum/reagent/zombie, 2*vuln) //Infect 'em
+			to_chat(M, SPAN_WARNING("You feel sick..."))
 
 /datum/species/zombie/handle_npc(mob/living/carbon/human/H)
 	H.resting = FALSE
@@ -197,7 +197,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 		H.resist()
 		return
 
-	addtimer(CALLBACK(src, .proc/handle_action, H), rand(10, 20))
+	addtimer(CALLBACK(src, .proc/handle_action, H), 15)
 
 /datum/species/zombie/proc/handle_action(mob/living/carbon/human/H)
 	var/dist = 128
@@ -578,9 +578,9 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 /datum/species/zombie/fast
 	name = "Fast Zombie"
 	name_plural = "Fast Zombies"
-	slowdown = 3
-	brute_mod = 2.5
-	burn_mod = 5
+	slowdown = 2
+	brute_mod = 3
+	burn_mod = 7
 
 /mob/living/carbon/human/zombie/fast
 	transform_to = SPECIES_ZOMBIE_FAST
@@ -596,11 +596,11 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 	name = "Juggernaut"
 	name_plural = "Juggernauts"
 	slowdown = 15
-	brute_mod = 0.2
-	burn_mod = 0.8
-	stun_mod = 0
-	weaken_mod = 0
-	paralysis_mod = 0
+	brute_mod = 0.7
+	burn_mod = 1.8
+	stun_mod = 0.1
+	weaken_mod = 0.1
+	paralysis_mod = 0.2
 	mob_size = MOB_LARGE
 	unarmed_types = list(/datum/unarmed_attack/zombie/juggernaut)
 
@@ -615,8 +615,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 /mob/living/carbon/human/zombie/juggernaut
 	transform_to = SPECIES_ZOMBIE_JUGGERNAUT
 	zombo_outfits = list(
-		/decl/hierarchy/outfit/job/security/officer,
-		/decl/hierarchy/outfit/nanotrasen/officer
+		/decl/hierarchy/outfit/job/security/officer
 	)
 
 /mob/living/carbon/human/zombie/juggernaut/armored
