@@ -29,7 +29,6 @@
 #define SS_PRIORITY_AI             15  // Mob AI
 #define SS_PRIORITY_ORBIT          10  // Orbit management.
 #define SS_PRIORITY_VOTE           10  // Vote management.
-#define SS_PRIORITY_INACTIVITY     10  // Idle kicking.
 #define SS_PRIORITY_SUPPLY         10  // Supply point accumulation.
 #define SS_PRIORITY_TRADE          10  // Adds/removes traders.
 #define SS_PRIORITY_GHOST_IMAGES   10  // Updates ghost client images.
@@ -50,6 +49,7 @@
 #define SS_PRIORITY_CHAR_SETUP    25   // Writes player preferences to savefiles.
 #define SS_PRIORITY_DBCORE        23   // Handles database
 #define SS_PRIORITY_GARBAGE       20   // Garbage collection.
+#define SS_PRIORITY_INACTIVITY    10   // Idle kicking.
 #define SS_PRIORITY_KV            10   // \ref based arbitrary storage.
 
 // Subsystem fire priority, from lowest to highest priority
