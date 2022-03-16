@@ -1,0 +1,12 @@
+author: Roland410
+delete-after: true
+changes:
+  - rscadd: Foundation Advisor role has been added, their job is to oversee psionic
+      phenomena.
+  - rscadd: Added a chemical reagent "Jerraman". Its main purpose is to activate psionic
+      latencies. Foundation Advisor starts with 10 vial(4u each) of it in their office.
+      Be careful not to overdose!
+  - rscdel: Counselor/Mentalist no longer has psionic powers, and the Mentalist alt-title
+      was removed as such.
+  - tweak: All crewmembers now have a low chance to start with random psionic latencies.
+  - tweak: Antagonist psionic amplifier now can grant you 2 faculties instead of 1.
