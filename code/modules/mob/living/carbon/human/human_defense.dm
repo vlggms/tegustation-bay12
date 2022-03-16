@@ -171,7 +171,7 @@ meteor_act
 	visible_message(SPAN_DANGER("\The [src] has been [I.attack_verb.len? pick(I.attack_verb) : "attacked"] in the [affecting.name][weapon_mention] by \the [user]!"))
 	return standard_weapon_hit_effects(I, user, effective_force, hit_zone)
 
-/mob/living/carbon/human/standard_weapon_hit_effects(obj/item/I, mob/living/user, var/effective_force, var/hit_zone)
+/mob/living/carbon/human/standard_weapon_hit_effects(obj/item/I, mob/living/user, effective_force, hit_zone)
 	var/obj/item/organ/external/affecting = get_organ(hit_zone)
 	if(!affecting)
 		return 0
@@ -192,24 +192,24 @@ meteor_act
 	else if(!..())
 		return 0
 
-	var/unimpeded_force = (1 - blocked) * effective_force
+	var/unimpeded_force = (1 - blocked) * effective_force * I.stun_prob
 	if(effective_force > 10 || effective_force >= 5 && prob(33))
 		forcesay(GLOB.hit_appends)	//forcesay checks stat already
 		radio_interrupt_cooldown = world.time + (RADIO_INTERRUPT_DEFAULT * 0.8) //getting beat on can briefly prevent radio use
-	if((I.damtype == BRUTE || I.damtype == PAIN) && prob(25 + (unimpeded_force * 2)))
+	if((I.damtype == BRUTE || I.damtype == PAIN) && prob(15 + (unimpeded_force * 2)))
 		if(!stat)
 			if(headcheck(hit_zone))
 				//Harder to score a stun but if you do it lasts a bit longer
 				if(prob(unimpeded_force))
-					apply_effect(20, PARALYZE, 100 * blocked)
-					if(lying)
+					if(!lying)
 						visible_message("<span class='danger'>[src] [species.knockout_message]</span>")
+					apply_effect(3, PARALYZE, 100 * blocked)
 			else
 				//Easier to score a stun but lasts less time
 				if(prob(unimpeded_force + 5))
-					apply_effect(3, WEAKEN, 100 * blocked)
-					if(lying)
+					if(!lying)
 						visible_message("<span class='danger'>[src] has been knocked down!</span>")
+					apply_effect(1.5, WEAKEN, 100 * blocked)
 
 		//Apply blood
 		attack_bloody(I, user, effective_force, hit_zone)
