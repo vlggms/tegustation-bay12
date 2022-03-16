@@ -248,15 +248,25 @@
 	reagents.add_reagent(/datum/reagent/three_eye, 10)
 	color = reagents.get_color()
 
+/obj/item/reagent_containers/pill/jerraman
+	name = "golden pill"
+	desc = "The golden surface of this pill seems to shimmer."
+	icon_state = "pill12"
+
+/obj/item/reagent_containers/pill/jerraman/Initialize()
+	. = ..()
+	reagents.add_reagent(/datum/reagent/jerraman, 4)
+	color = reagents.get_color()
+
 /obj/item/reagent_containers/pill/spaceacillin
 	name = "Spaceacillin (10u)"
 	desc = "Contains antiviral agents."
 	icon_state = "pill3"
+
 /obj/item/reagent_containers/pill/spaceacillin/New()
 	..()
 	reagents.add_reagent(/datum/reagent/medicine/spaceacillin, 10)
 	color = reagents.get_color()
-
 
 /obj/item/reagent_containers/pill/diet
 	name = "diet pill"

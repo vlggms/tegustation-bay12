@@ -690,6 +690,12 @@
 	name = "\improper Command - SEA's Office"
 	req_access = list(access_senadv)
 
+//Foundation Advisor
+/area/crew_quarters/heads/office/psiadvisor
+	name = "\improper Foundation Advisor Office"
+	icon_state = "heads"
+	req_access = list(access_psiadvisor)
+
 // Engineering
 
 /area/engineering/shieldbay

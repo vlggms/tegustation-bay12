@@ -150,7 +150,6 @@
 		/obj/item/clothing/under/rank/psych,
 		/obj/item/clothing/under/rank/psych/turtleneck,
 		/obj/item/clothing/suit/storage/toggle/labcoat,
-		/obj/item/clothing/suit/storage/toggle/labcoat/foundation,
 		/obj/item/clothing/shoes/white,
 		/obj/item/storage/pill_bottle/citalopram,
 		/obj/item/storage/pill_bottle/methylphenidate,

@@ -2,6 +2,7 @@
 	name = "telekinetic grip"
 	maintain_cost = 1
 	icon_state = "telekinesis"
+	silent_drop = TRUE
 	var/atom/movable/focus
 
 /obj/item/psychic_power/telekinesis/Destroy()
@@ -88,7 +89,7 @@
 				I.afterattack(target,user,1) // for splashing with beakers
 		else
 			if(!focus.anchored)
-				focus.throw_at(target, min(user_rank, 10), min(user_rank*2, 20), owner)
+				focus.throw_at(target, min(user_rank, 10), min(round(user_rank*0.8), 8), owner)
 			sleep(1)
 			sparkle()
 		if(user_rank < PSI_RANK_PARAMOUNT) // Memes

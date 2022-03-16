@@ -230,10 +230,7 @@
 	supervisors = "the Chief Medical Officer"
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/medical/counselor
 	alt_titles = list(
-		"Psychiatrist",
-		"Psionic Counselor" = /decl/hierarchy/outfit/job/torch/crew/medical/counselor/mentalist,
-		"Mentalist" = /decl/hierarchy/outfit/job/torch/crew/medical/counselor/mentalist
-
+		"Psychiatrist"
 	)
 
 	allowed_branches = list(
@@ -262,15 +259,6 @@
 		/datum/computer_file/program/suit_sensors,
 		/datum/computer_file/program/camera_monitor
 	)
-	give_psionic_implant_on_join = FALSE
-
-/datum/job/psychiatrist/equip(var/mob/living/carbon/human/H)
-	if(H.mind?.role_alt_title == "Psionic Counselor")
-		psi_faculties = list("[PSI_REDACTION]" = PSI_RANK_OPERANT)
-	if(H.mind?.role_alt_title == "Mentalist")
-		psi_faculties = list("[PSI_COERCION]" = PSI_RANK_OPERANT)
-	return ..()
-
 
 /datum/job/psychiatrist/get_description_blurb()
-		return "You are the Counselor. Your main responsibility is the mental health and wellbeing of the crew. You are subordinate to the Chief Medical Officer."
+	return "You are the Counselor. Your main responsibility is the mental health and wellbeing of the crew. You are subordinate to the Chief Medical Officer."
