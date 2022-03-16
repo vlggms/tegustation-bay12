@@ -258,7 +258,6 @@
 /area/space)
 "aw" = (
 /obj/machinery/conveyor_switch/oneway{
-	convdir = -1;
 	id = "garbage";
 	name = "disposal conveyor"
 	},
@@ -315,14 +314,13 @@
 /turf/simulated/floor/airless,
 /area/solar/auxstarboard)
 "aB" = (
-/obj/machinery/conveyor{
-	dir = 2;
-	id = "garbage"
-	},
 /obj/random/junk,
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
+	},
+/obj/machinery/conveyor/north{
+	id = "garbage2"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
@@ -664,13 +662,13 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/vacant/prototype/control)
 "bm" = (
-/obj/machinery/conveyor{
-	dir = 9;
-	id = "garbage2"
-	},
 /obj/structure/plasticflaps,
 /obj/random/junk,
 /obj/item/handcuffs/cable,
+/obj/machinery/conveyor/north{
+	dir = 6;
+	id = "garbage2"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
 "bn" = (
@@ -1680,13 +1678,12 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/locker_room)
 "da" = (
-/obj/machinery/conveyor{
-	dir = 2;
-	id = "garbage"
-	},
 /obj/machinery/light/small{
 	dir = 4;
 	pixel_y = 0
+	},
+/obj/machinery/conveyor/north{
+	id = "garbage2"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
@@ -10306,10 +10303,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/seconddeck/foreport)
 "yj" = (
-/obj/machinery/conveyor{
-	dir = 2;
-	id = "garbage2"
-	},
 /obj/random/junk,
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -10317,6 +10310,9 @@
 	id_tag = "RubbishOuter";
 	name = "Disposal Maintenance";
 	opacity = 1
+	},
+/obj/machinery/conveyor/north{
+	id = "garbage2"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
@@ -13551,7 +13547,6 @@
 /area/maintenance/seconddeck/aftport)
 "GI" = (
 /obj/machinery/conveyor_switch/oneway{
-	convdir = -1;
 	id = "garbage2";
 	name = "disposal conveyor"
 	},
@@ -13876,9 +13871,8 @@
 /turf/simulated/floor/plating,
 /area/maintenance/seconddeck/aftstarboard)
 "HE" = (
-/obj/machinery/conveyor{
-	dir = 2;
-	id = "garbage"
+/obj/machinery/conveyor/north{
+	id = "garbage2"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
