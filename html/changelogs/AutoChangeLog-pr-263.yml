@@ -1,6 +1,0 @@
-author: EgorDinamit
-delete-after: true
-changes:
-  - tweak: Simple mobs can no longer randomly stun you in melee. Rejoice.
-  - balance: 'Random weapon stuns are now much shorter: From 20 seconds to 3 seconds
-      and from 3 to 1.5.'

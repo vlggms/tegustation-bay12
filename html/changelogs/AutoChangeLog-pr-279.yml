@@ -1,6 +1,0 @@
-author: EgorDinamit
-delete-after: true
-changes:
-  - tweak: Dufflebags now have much less slowdown when worn.
-  - tweak: Mercenary void suits now have slightly less slowdown when worn.
-  - tweak: Combat belts(those can be found in ERT base) now have 0 slowdown.

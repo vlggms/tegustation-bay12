@@ -1,6 +1,0 @@
-author: ACCount12
-delete-after: true
-changes:
-  - imageadd: Added new conveyor sprites, from CEV Eris.
-  - tweak: Improved conveyor code, which allows people to use wrench on them to change
-      direction and multitool on the switch to make it one-way.

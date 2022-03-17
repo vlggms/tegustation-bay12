@@ -1,7 +1,0 @@
-author: Spookerton
-delete-after: true
-changes:
-  - admin: MC tab doesn't lag the hell out of users anymore.
-  - bugfix: Sound player datum doesn't runtime randomly anymore.
-  - tweak: Subsystems were overall updated/improved/refactored to operate faster and
-      be less of a burden on the server.
