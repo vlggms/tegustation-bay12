@@ -1,4 +1,0 @@
-author: EgorDinamit
-delete-after: true
-changes:
-  - tweak: Health HUD will no longer show "100" icon when you are at full health.
