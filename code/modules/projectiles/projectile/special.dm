@@ -67,12 +67,16 @@
 /obj/item/projectile/meteor
 	name = "meteor"
 	icon = 'icons/obj/meteor.dmi'
-	icon_state = "smallf"
+	icon_state = "small"
 	damage = 0
 	damage_type = BRUTE
 	nodamage = TRUE
 
-/obj/item/projectile/meteor/Bump(var/atom/A, forced=0)
+/obj/item/projectile/meteor/Initialize()
+	. = ..()
+	SpinAnimation()
+
+/obj/item/projectile/meteor/Bump(atom/A, forced=0)
 	if(!istype(A))
 		return
 	if(A == firer)
@@ -94,30 +98,30 @@
 	damage_type = TOX
 	nodamage = TRUE
 
-	on_hit(var/atom/target, var/blocked = 0)
-		var/mob/living/M = target
-		if(ishuman(target))
-			var/mob/living/carbon/human/H = M
-			if((H.species.species_flags & SPECIES_FLAG_IS_PLANT) && (H.nutrition < 500))
-				if(prob(15))
-					H.apply_damage((rand(30,80)),IRRADIATE, damage_flags = DAM_DISPERSED)
-					H.Weaken(5)
-					for (var/mob/V in viewers(src))
-						V.show_message("<span class='warning'>[M] writhes in pain as \his vacuoles boil.</span>", 3, "<span class='warning'>You hear the crunching of leaves.</span>", 2)
-				if(prob(35))
-					if(prob(80))
-						randmutb(M)
-						domutcheck(M,null)
-					else
-						randmutg(M)
-						domutcheck(M,null)
+/obj/item/projectile/energy/floramut/on_hit(var/atom/target, var/blocked = 0)
+	var/mob/living/M = target
+	if(ishuman(target))
+		var/mob/living/carbon/human/H = M
+		if((H.species.species_flags & SPECIES_FLAG_IS_PLANT) && (H.nutrition < 500))
+			if(prob(15))
+				H.apply_damage((rand(30,80)),IRRADIATE, damage_flags = DAM_DISPERSED)
+				H.Weaken(5)
+				for (var/mob/V in viewers(src))
+					V.show_message("<span class='warning'>[M] writhes in pain as \his vacuoles boil.</span>", 3, "<span class='warning'>You hear the crunching of leaves.</span>", 2)
+			if(prob(35))
+				if(prob(80))
+					randmutb(M)
+					domutcheck(M,null)
 				else
-					M.adjustFireLoss(rand(5,15))
-					M.show_message("<span class='danger'>The radiation beam singes you!</span>")
-		else if(istype(target, /mob/living/carbon/))
-			M.show_message("<span class='notice'>The radiation beam dissipates harmlessly through your body.</span>")
-		else
-			return 1
+					randmutg(M)
+					domutcheck(M,null)
+			else
+				M.adjustFireLoss(rand(5,15))
+				M.show_message("<span class='danger'>The radiation beam singes you!</span>")
+	else if(istype(target, /mob/living/carbon/))
+		M.show_message("<span class='notice'>The radiation beam dissipates harmlessly through your body.</span>")
+	else
+		return 1
 
 /obj/item/projectile/energy/floramut/gene
 	name = "gamma somatoray"

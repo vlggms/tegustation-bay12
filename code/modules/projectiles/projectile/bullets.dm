@@ -121,17 +121,17 @@
 
 /obj/item/projectile/bullet/pistol
 	fire_sound = 'sound/weapons/gunshot/gunshot_pistol.ogg'
-	damage = 45
+	damage = 40
 	distance_falloff = 3
 
 /obj/item/projectile/bullet/pistol/holdout
-	damage = 40
+	damage = 35
 	penetration_modifier = 1.2
 	distance_falloff = 4
 
 /obj/item/projectile/bullet/pistol/strong
 	fire_sound = 'sound/weapons/gunshot/revolver.ogg'
-	damage = 50
+	damage = 45
 	penetration_modifier = 0.8
 	distance_falloff = 2.5
 	armor_penetration = 15
@@ -149,7 +149,7 @@
 //4mm. Tiny, very low damage, does not embed, but has very high penetration. Only to be used for the experimental SMG.
 /obj/item/projectile/bullet/flechette
 	fire_sound = 'sound/weapons/gunshot/smg.ogg'
-	damage = 23
+	damage = 20
 	penetrating = 1
 	armor_penetration = 70
 	embed = FALSE
@@ -166,12 +166,12 @@
 /obj/item/projectile/bullet/shotgun
 	name = "slug"
 	fire_sound = 'sound/weapons/gunshot/shotgun.ogg'
-	damage = 65
+	damage = 60
 	armor_penetration = 10
 
 /obj/item/projectile/bullet/shotgun/beanbag		//because beanbags are not bullets
 	name = "beanbag"
-	damage = 25
+	damage = 20
 	damage_flags = 0
 	agony = 60
 	embed = FALSE
@@ -192,7 +192,7 @@
 
 /obj/item/projectile/bullet/rifle
 	fire_sound = 'sound/weapons/gunshot/gunshot3.ogg'
-	damage = 45
+	damage = 40
 	armor_penetration = 25
 	penetration_modifier = 1.5
 	penetrating = 1
@@ -200,14 +200,14 @@
 
 /obj/item/projectile/bullet/rifle/military
 	fire_sound = 'sound/weapons/gunshot/gunshot2.ogg'
-	damage = 40
+	damage = 35
 	armor_penetration = 35
 	penetration_modifier = 1
 
 /obj/item/projectile/bullet/rifle/t12
 	fire_sound = "gun_t12"
-	damage = 24
-	armor_penetration = 40
+	damage = 14
+	armor_penetration = 85
 
 /obj/item/projectile/bullet/rifle/shell
 	fire_sound = 'sound/weapons/gunshot/sniper.ogg'
