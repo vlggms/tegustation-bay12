@@ -1,0 +1,7 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - balance: Chances to miss a limb are heavily reduced. Keep in mind that targeting
+      the chest has the least chance to miss an attack, targeting the head has the
+      highest.
+  - tweak: High gun skills improve your chances to hit a target with a projectile.
