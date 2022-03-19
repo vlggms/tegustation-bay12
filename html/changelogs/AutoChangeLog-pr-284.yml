@@ -1,0 +1,6 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: More guns received full-auto fire mode.
+  - tweak: Assault rifles and machine gun had their magazine capacity increased.
+  - tweak: Pistol and rifle bullets deal slightly less damage.
