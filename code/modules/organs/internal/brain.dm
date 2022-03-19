@@ -209,9 +209,9 @@
 		var/damage_secondary = damage * 0.20
 		owner.flash_eyes()
 		owner.eye_blurry += damage_secondary
-		owner.confused += damage_secondary * 2
-		owner.Paralyse(damage_secondary)
-		owner.Weaken(round(damage, 1))
+		owner.confused += damage_secondary
+		if(damage >= 25)
+			owner.Weaken(round(damage_secondary*0.5, 1))
 		if(prob(30))
 			addtimer(CALLBACK(src, .proc/brain_damage_callback, damage), rand(6, 20) SECONDS, TIMER_UNIQUE)
 
