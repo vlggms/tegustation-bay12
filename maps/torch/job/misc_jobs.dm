@@ -48,6 +48,10 @@ Civilian
 		/datum/mil_rank/civ/contractor
 	)
 
+	lowpop_access = list(
+		access_maint_tunnels
+	)
+
 /datum/job/merchant
 	title = "Merchant"
 	department = "Civilian"

@@ -147,3 +147,7 @@
 		access_maint_tunnels, access_emergency_storage,
 		access_solgov_crew, access_radio_serv
 	)
+
+	lowpop_access = list(
+		access_tech_storage, access_construction
+	)
