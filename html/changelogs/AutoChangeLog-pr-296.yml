@@ -1,0 +1,4 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: Most jobs will have more access on lowpop(less than 10 players) rounds.
