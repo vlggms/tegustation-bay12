@@ -2285,7 +2285,7 @@
 	pixel_x = -25;
 	pixel_y = 0
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "hs" = (
 /obj/structure/bed/chair/shuttle{
@@ -7585,7 +7585,7 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "zp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -8417,7 +8417,7 @@
 	icon_state = "spline_fancy"
 	},
 /obj/structure/bed/chair/comfy/brown,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "CK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -8952,19 +8952,19 @@
 "ER" = (
 /obj/item/storage/pill_bottle/dice_nerd,
 /obj/structure/table/woodentable,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "ES" = (
 /obj/structure/bed/chair/comfy/brown{
 	dir = 8
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "ET" = (
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "EW" = (
 /obj/machinery/light/small{
@@ -8974,12 +8974,12 @@
 	c_tag = "Fourth Deck - Lounge Aft";
 	name = "security camera"
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "EY" = (
 /obj/item/paper_bin,
 /obj/structure/table/woodentable,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "EZ" = (
 /obj/structure/bed/chair/comfy/brown{
@@ -8990,7 +8990,7 @@
 	pixel_x = 22
 	},
 /obj/random_multi/single_item/runtime,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "Fb" = (
 /obj/effect/landmark{
@@ -9238,11 +9238,11 @@
 /obj/structure/bed/chair/comfy/brown{
 	dir = 1
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "FD" = (
 /obj/machinery/hologram/holopad,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "FI" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -9448,7 +9448,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "Gq" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -10285,7 +10285,7 @@
 	dir = 1;
 	icon_state = "spline_fancy"
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "Js" = (
 /obj/structure/catwalk,
@@ -10360,7 +10360,7 @@
 "JG" = (
 /obj/structure/table/woodentable,
 /obj/item/storage/box/donut,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "JI" = (
 /obj/structure/cable/green{
@@ -11688,7 +11688,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "Np" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -11787,7 +11787,7 @@
 	pixel_x = -26;
 	pixel_y = -24
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "Nx" = (
 /obj/machinery/door/firedoor,
@@ -11828,7 +11828,7 @@
 "NC" = (
 /obj/structure/table/woodentable,
 /obj/item/device/flashlight/lamp/green,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "NG" = (
 /obj/machinery/computer/modular/preset/civilian,
@@ -12285,7 +12285,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "Pf" = (
 /obj/machinery/door/firedoor,
@@ -12465,7 +12465,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "PE" = (
 /obj/structure/cable/green{
@@ -12525,7 +12525,7 @@
 /area/crew_quarters/laundry)
 "PK" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "PM" = (
 /turf/simulated/wall/r_wall/hull,
@@ -12990,7 +12990,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "Rg" = (
 /obj/structure/railing/mapped{
@@ -14208,7 +14208,7 @@
 /turf/simulated/floor/plating,
 /area/hallway/primary/fourthdeck/aft)
 "TY" = (
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "Ub" = (
 /turf/simulated/wall/prepainted,
@@ -14269,7 +14269,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "Ul" = (
 /obj/machinery/light{
@@ -14969,7 +14969,7 @@
 /obj/structure/bed/chair/comfy/brown{
 	dir = 4
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "Wi" = (
 /obj/structure/sign/warning/moving_parts,
@@ -15145,7 +15145,7 @@
 	dir = 4;
 	pixel_x = -22
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "WF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -15443,7 +15443,7 @@
 	c_tag = "Fourth Deck - Lounge Fore";
 	name = "security camera"
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "Xv" = (
 /obj/effect/floor_decal/corner/brown{
@@ -15743,7 +15743,7 @@
 "XZ" = (
 /obj/item/device/flashlight/lamp/green,
 /obj/structure/table/woodentable,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "Ya" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -15935,7 +15935,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "YE" = (
 /obj/machinery/firealarm{
@@ -16198,7 +16198,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "Zl" = (
 /obj/structure/disposalpipe/segment{
@@ -16272,7 +16272,7 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "Zq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -16281,7 +16281,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "Zr" = (
 /obj/machinery/atmospherics/portables_connector{
@@ -16538,7 +16538,7 @@
 /area/hallway/primary/fourthdeck/aft)
 "ZV" = (
 /obj/item/stool/bar/padded,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/lounge)
 "ZW" = (
 /obj/structure/reagent_dispensers/watertank,

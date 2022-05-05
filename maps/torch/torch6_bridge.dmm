@@ -235,7 +235,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/heads/office/xo)
 "aC" = (
 /obj/machinery/door/firedoor,
@@ -894,7 +894,7 @@
 	dir = 4;
 	icon_state = "spline_plain"
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/heads/office/xo)
 "bO" = (
 /turf/simulated/floor/wood/walnut,
@@ -1177,7 +1177,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway/starboard)
 "co" = (
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/heads/office/xo)
 "cp" = (
 /obj/structure/table/woodentable/walnut,
@@ -1189,7 +1189,7 @@
 	pixel_x = 8;
 	pixel_y = -3
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/heads/office/xo)
 "cq" = (
 /obj/effect/floor_decal/spline/plain/beige{
@@ -1200,7 +1200,7 @@
 	dir = 8;
 	icon_state = "comfychair_preview"
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/heads/office/xo)
 "cr" = (
 /obj/structure/disposalpipe/segment{
@@ -2125,7 +2125,7 @@
 	dir = 4;
 	pixel_x = 21
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/heads/office/xo)
 "dJ" = (
 /obj/effect/floor_decal/corner/blue{
@@ -3110,7 +3110,7 @@
 	name = "XO Request Console";
 	pixel_y = 30
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/heads/office/xo)
 "fA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -7091,7 +7091,7 @@
 	dir = 4;
 	icon_state = "comfychair_preview"
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/heads/office/xo)
 "qb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -8008,7 +8008,7 @@
 	dir = 4;
 	pixel_x = -21
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/heads/office/xo)
 "sl" = (
 /obj/structure/flora/pottedplant/shoot,
@@ -8019,7 +8019,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/heads/office/xo)
 "sm" = (
 /obj/machinery/shipsensors,
@@ -8152,7 +8152,7 @@
 /obj/item/book/manual/solgov_law,
 /obj/item/book/manual/sol_sop,
 /obj/item/book/manual/military_law,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/heads/office/xo)
 "sF" = (
 /obj/structure/cable/green{
@@ -10811,7 +10811,7 @@
 "za" = (
 /obj/structure/closet/secure_closet/XO,
 /obj/random/drinkbottle,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/heads/office/xo)
 "zb" = (
 /obj/effect/shuttle_landmark/merc/deck1{
@@ -11410,7 +11410,7 @@
 	dir = 8;
 	icon_state = "tube1"
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/heads/office/xo)
 "Bv" = (
 /obj/structure/cable/green{
@@ -16867,7 +16867,7 @@
 	},
 /obj/structure/table/woodentable/walnut,
 /obj/item/sticky_pad/random,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/heads/office/xo)
 "VL" = (
 /obj/effect/floor_decal/corner/red/half,
@@ -17845,7 +17845,7 @@
 	pixel_x = 0;
 	pixel_y = 24
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/crew_quarters/heads/office/xo)
 "Zt" = (
 /obj/effect/floor_decal/corner/red{
