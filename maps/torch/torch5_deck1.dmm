@@ -4208,12 +4208,12 @@
 /turf/simulated/floor/wood/walnut,
 /area/medical/counselor/therapy)
 "ahn" = (
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/medical/counselor/therapy)
 "aho" = (
 /obj/structure/table/woodentable/walnut,
 /obj/random/clipboard,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/medical/counselor/therapy)
 "ahp" = (
 /obj/structure/table/woodentable/walnut,
@@ -4222,7 +4222,7 @@
 /obj/machinery/alarm{
 	pixel_y = 24
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/medical/counselor/therapy)
 "ahq" = (
 /obj/effect/floor_decal/corner/paleblue{
@@ -4382,7 +4382,7 @@
 /area/crew_quarters/safe_room/firstdeck)
 "ahH" = (
 /obj/structure/bed/chair/armchair/brown,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/medical/counselor/therapy)
 "ahI" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -4408,7 +4408,7 @@
 /obj/structure/noticeboard{
 	pixel_x = 32
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/medical/counselor/therapy)
 "ahK" = (
 /obj/effect/floor_decal/corner/blue/three_quarters{
@@ -4765,7 +4765,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/medical/counselor/therapy)
 "aii" = (
 /obj/structure/closet/secure_closet/counselor,
@@ -4848,11 +4848,11 @@
 	dir = 1;
 	pixel_y = -26
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/medical/counselor/therapy)
 "air" = (
 /obj/structure/bed/psych,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/medical/counselor/therapy)
 "ais" = (
 /obj/machinery/door/airlock/maintenance,

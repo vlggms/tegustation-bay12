@@ -6147,20 +6147,20 @@
 	dir = 8;
 	icon_state = "tube1"
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/miningstation/recroom)
 "oo" = (
 /obj/effect/landmark/corpse/miningstation/deadmineroverallsf,
 /obj/effect/decal/cleanable/blood/splatter,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/miningstation/recroom)
 "op" = (
 /obj/structure/bed/chair/comfy/brown,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/miningstation/recroom)
 "oq" = (
 /obj/random/trash,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/miningstation/recroom)
 "or" = (
 /obj/structure/cable{
@@ -6169,14 +6169,14 @@
 	icon_state = "1-2"
 	},
 /obj/effect/gibspawner/human,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/miningstation/recroom)
 "os" = (
 /obj/machinery/light{
 	dir = 4;
 	icon_state = "tube1"
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/miningstation/recroom)
 "ot" = (
 /obj/structure/closet/wardrobe/engineering_yellow,
@@ -6395,23 +6395,23 @@
 	dir = 1;
 	pixel_y = -24
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/miningstation/recroom)
 "oP" = (
 /obj/structure/bed/chair/comfy/brown{
 	dir = 4
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/miningstation/recroom)
 "oQ" = (
 /obj/structure/table/woodentable/maple,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/miningstation/recroom)
 "oR" = (
 /obj/structure/bed/chair/comfy/brown{
 	dir = 8
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/miningstation/recroom)
 "oS" = (
 /obj/random/trash,
@@ -6420,7 +6420,7 @@
 	pixel_y = -28
 	},
 /obj/structure/cable,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/miningstation/recroom)
 "oT" = (
 /obj/structure/bed/chair/comfy/brown{
@@ -6431,7 +6431,7 @@
 	pixel_x = 25;
 	req_access = list(list("ACCESS_ENGINE_EQUIP","ACCESS_ATMOS"))
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/miningstation/recroom)
 "oU" = (
 /obj/structure/closet/toolcloset,
@@ -7612,7 +7612,7 @@
 "ru" = (
 /obj/structure/table/woodentable/maple,
 /obj/item/paper_bin,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/miningstation/recroom)
 "rw" = (
 /obj/random/tech_supply,
@@ -8225,7 +8225,7 @@
 /area/miningstation/hangar)
 "Jq" = (
 /mob/living/simple_animal/hostile/meat/horror,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/miningstation/recroom)
 "Jr" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{

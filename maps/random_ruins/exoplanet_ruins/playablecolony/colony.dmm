@@ -181,7 +181,7 @@
 /obj/structure/closet/shipping_wall{
 	pixel_y = -28
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/map_template/colony/command)
 "aD" = (
 /obj/structure/flora/pottedplant/unusual{
@@ -446,7 +446,7 @@
 	dir = 8;
 	icon_state = "bulb1"
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/map_template/colony/command)
 "bh" = (
 /turf/simulated/wall/r_wall,
@@ -1271,7 +1271,7 @@
 	dir = 8;
 	icon_state = "bulb1"
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/map_template/colony/dorms)
 "cH" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
@@ -1288,7 +1288,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/map_template/colony/dorms)
 "cJ" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
@@ -1546,7 +1546,7 @@
 /obj/item/device/radio/map_preset/playablecolony,
 /obj/structure/closet/cabinet,
 /obj/item/device/radio/headset/map_preset/playablecolony,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/map_template/colony/dorms)
 "dk" = (
 /obj/machinery/gibber,
@@ -1703,7 +1703,7 @@
 /obj/effect/submap_landmark/spawnpoint/colonist_spawn,
 /obj/structure/bed/padded,
 /obj/item/bedsheet/hos,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/map_template/colony/dorms)
 "dC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -2586,7 +2586,7 @@
 	pixel_y = 34
 	},
 /obj/item/device/radio/headset/map_preset/playablecolony,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/map_template/colony/dorms)
 "eY" = (
 /obj/machinery/sleeper{
@@ -3072,7 +3072,7 @@
 /obj/item/device/radio/map_preset/playablecolony,
 /obj/structure/closet/cabinet,
 /obj/item/device/radio/headset/map_preset/playablecolony,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/brown,
 /area/map_template/colony/dorms)
 "fN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
