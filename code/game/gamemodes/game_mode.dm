@@ -150,42 +150,17 @@ var/global/list/additional_antag_types = list()
 		else
 			message_admins("[antag_summary]")
 
-// startRequirements()
-// Checks to see if the game can be setup and ran with the current number of players or whatnot.
-// Returns 0 if the mode can start and a message explaining the reason why it can't otherwise.
-/datum/game_mode/proc/startRequirements()
-	var/playerC = 0
-	for(var/mob/new_player/player in GLOB.player_list)
-		if((player.client)&&(player.ready))
-			playerC++
+/// Run prior to a mode vote to determine if the mode should be included. Falsy if yes, otherwise a status message.
+/datum/game_mode/proc/check_votable(list/lobby_players)
+	if(lobby_players.len < required_players)
+		return "Not enough players are in the lobby. [lobby_players.len] of the required [required_players]."
 
-	if(playerC < required_players)
-		return "Not enough players, [src.required_players] players needed."
 
-	var/enemy_count = 0
-	var/list/all_antag_types = GLOB.all_antag_types_
-	if(antag_tags && antag_tags.len)
-		for(var/antag_tag in antag_tags)
-			var/datum/antagonist/antag = all_antag_types[antag_tag]
-			if(!antag)
-				continue
-			var/list/potential = list()
-			if(antag_templates && antag_templates.len)
-				if(antag.flags & ANTAG_OVERRIDE_JOB)
-					potential = antag.pending_antagonists
-				else
-					potential = antag.candidates
-			else
-				potential = antag.get_potential_candidates(src)
-			if(islist(potential))
-				if(require_all_templates && potential.len < antag.initial_spawn_req)
-					return "Not enough antagonists ([antag.role_text]), [antag.initial_spawn_req] required and [potential.len] available."
-				enemy_count += potential.len
-				if(enemy_count >= required_enemies)
-					return 0
-		return "Not enough antagonists, [required_enemies] required and [enemy_count] available."
-	else
-		return 0
+/// Check to see if the currently selected mode can be started. Falsy if yes, otherwise a status message.
+/datum/game_mode/proc/check_startable(list/lobby_players)
+	var/list/ready_players = SSticker.ready_players(lobby_players)
+	if(ready_players.len < required_players)
+		return "Not enough players. [ready_players.len] ready of the required [required_players]."
 
 /datum/game_mode/proc/refresh_event_modifiers()
 	if(event_delay_mod_moderate || event_delay_mod_major)
