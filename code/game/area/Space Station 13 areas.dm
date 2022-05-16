@@ -178,11 +178,13 @@ area/space/atmosalert()
 	name = "Supply Shuttle"
 	icon_state = "shuttle3"
 	req_access = list(access_cargo)
+	area_flags = AREA_FLAG_HIDE_FROM_HOLOMAP
 
 /area/syndicate_elite_squad
 	name = "\improper Elite Mercenary Squad"
 	icon_state = "syndie-elite"
 	req_access = list(access_syndicate)
+	area_flags = AREA_FLAG_HIDE_FROM_HOLOMAP
 
 ////////////
 //SHUTTLES//

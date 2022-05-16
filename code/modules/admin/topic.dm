@@ -1555,7 +1555,6 @@
 		return
 
 	else if(href_list["FaxReply"])
-		var/mob/sender = locate(href_list["FaxReply"])
 		var/obj/machinery/photocopier/faxmachine/fax = locate(href_list["originfax"])
 		var/replyorigin = href_list["replyorigin"]
 
@@ -1565,9 +1564,8 @@
 
 		P.admindatum = src
 		P.origin = replyorigin
-		P.destination = fax
-		P.sender = sender
-
+		P.department = fax.department
+		P.destinations = get_fax_machines_by_department(fax.department)
 		P.adminbrowse()
 
 	else if(href_list["jumpto"])

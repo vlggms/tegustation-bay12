@@ -177,6 +177,9 @@ The megabot
 		switch_mode(ATTACK_MODE_LASER)
 
 /mob/living/simple_animal/hostile/hivebot/mega/emp_act(severity)
+	if(status_flags & GODMODE)
+		return
+
 	. = ..()
 	if(severity >= 1)
 		deactivate()

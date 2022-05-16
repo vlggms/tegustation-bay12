@@ -1,4 +1,6 @@
 /mob/living/exosuit/ex_act(severity)
+	if(status_flags & GODMODE)
+		return
 	var/b_loss = 0
 	var/f_loss = 0
 	switch (severity)
@@ -43,7 +45,7 @@
 					return AR
 
 	return def_zone //Careful with effects, mechs shouldn't be stunned
-	
+
 /mob/living/exosuit/hitby(atom/movable/AM, var/datum/thrownthing/TT)
 	if(LAZYLEN(pilots) && (!hatch_closed || !prob(body.pilot_coverage)))
 		var/mob/living/pilot = pick(pilots)
@@ -51,6 +53,8 @@
 	. = ..()
 
 /mob/living/exosuit/bullet_act(obj/item/projectile/P, def_zone, used_weapon)
+	if(status_flags & GODMODE)
+		return PROJECTILE_FORCE_MISS
 	switch(def_zone)
 		if(BP_HEAD , BP_CHEST, BP_MOUTH, BP_EYES)
 			if(LAZYLEN(pilots) && (!hatch_closed || !prob(body.pilot_coverage)))
@@ -149,7 +153,7 @@
 	if(!hatch_closed || (body.pilot_coverage < 100)) //Open, environment is the source
 		return .
 	var/list/after_armor = modify_damage_by_armor(null, ., IRRADIATE, DAM_DISPERSED, src, 0, TRUE)
-	return after_armor[1]	
+	return after_armor[1]
 
 /mob/living/exosuit/getFireLoss()
 	var/total = 0
@@ -165,7 +169,9 @@
 			total += MC.brute_damage
 	return total
 
-/mob/living/exosuit/emp_act(var/severity)
+/mob/living/exosuit/emp_act(severity)
+	if(status_flags & GODMODE)
+		return
 
 	var/ratio = get_blocked_ratio(null, BURN, null, (4-severity) * 20)
 
@@ -185,6 +191,6 @@
 			for(var/thing in pilots)
 				var/mob/pilot = thing
 				pilot.emp_act(severity)
-				
+
 /mob/living/exosuit/get_bullet_impact_effect_type(def_zone)
 	return BULLET_IMPACT_METAL

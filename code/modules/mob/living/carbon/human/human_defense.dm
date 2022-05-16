@@ -8,6 +8,8 @@ meteor_act
 */
 
 /mob/living/carbon/human/bullet_act(var/obj/item/projectile/P, var/def_zone)
+	if(status_flags & GODMODE)
+		return PROJECTILE_FORCE_MISS
 
 	def_zone = check_zone(def_zone)
 	if(!has_organ(def_zone))
@@ -474,7 +476,53 @@ meteor_act
 	return perm
 
 /mob/living/carbon/human/lava_act(datum/gas_mixture/air, temperature, pressure)
+	if(status_flags & GODMODE)
+		return
+
 	var/was_burned = FireBurn(0.4 * vsc.fire_firelevel_multiplier, temperature, pressure)
 	if (was_burned)
 		fire_act(air, temperature)
 	return FALSE
+
+
+/mob/living/carbon/human/ex_act(severity)
+	if(status_flags & GODMODE)
+		return
+
+	if(!blinded)
+		flash_eyes()
+
+	var/b_loss = null
+	var/f_loss = null
+	switch (severity)
+		if (1.0)
+			b_loss = 400
+			f_loss = 100
+			var/atom/target = get_edge_target_turf(src, get_dir(src, get_step_away(src, src)))
+			throw_at(target, 200, 4)
+		if (2.0)
+			b_loss = 60
+			f_loss = 60
+
+			if (get_sound_volume_multiplier() >= 0.2)
+				ear_damage += 30
+				ear_deaf += 120
+			if (prob(70))
+				Paralyse(10)
+
+		if(3.0)
+			b_loss = 30
+			if (get_sound_volume_multiplier() >= 0.2)
+				ear_damage += 15
+				ear_deaf += 60
+			if (prob(50))
+				Paralyse(10)
+
+	// focus most of the blast on one organ
+	apply_damage(0.7 * b_loss, BRUTE, null, DAM_EXPLODE, used_weapon = "Explosive blast")
+	apply_damage(0.7 * f_loss, BURN, null, DAM_EXPLODE, used_weapon = "Explosive blast")
+
+	// distribute the remaining 30% on all limbs equally (including the one already dealt damage)
+	apply_damage(0.3 * b_loss, BRUTE, null, DAM_EXPLODE | DAM_DISPERSED, used_weapon = "Explosive blast")
+	apply_damage(0.3 * f_loss, BURN, null, DAM_EXPLODE | DAM_DISPERSED, used_weapon = "Explosive blast")
+

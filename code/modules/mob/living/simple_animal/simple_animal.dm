@@ -197,23 +197,6 @@
 	adjustBruteLoss(maxHealth) //Make sure dey dead.
 	walk_to(src,0)
 
-/mob/living/simple_animal/ex_act(severity)
-	if(!blinded)
-		flash_eyes()
-
-	var/damage
-	switch (severity)
-		if (1)
-			damage = 500
-
-		if (2)
-			damage = 120
-
-		if(3)
-			damage = 30
-
-	apply_damage(damage, BRUTE, damage_flags = DAM_EXPLODE)
-
 /mob/living/simple_animal/adjustBruteLoss(damage)
 	..()
 	updatehealth()
