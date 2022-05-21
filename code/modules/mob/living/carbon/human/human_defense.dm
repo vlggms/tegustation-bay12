@@ -507,16 +507,16 @@ meteor_act
 			if (get_sound_volume_multiplier() >= 0.2)
 				ear_damage += 30
 				ear_deaf += 120
-			if (prob(70))
-				Paralyse(10)
+			if (prob(50))
+				Paralyse(6)
 
 		if(3.0)
 			b_loss = 30
 			if (get_sound_volume_multiplier() >= 0.2)
 				ear_damage += 15
 				ear_deaf += 60
-			if (prob(50))
-				Paralyse(10)
+			if (prob(20))
+				Paralyse(2)
 
 	// focus most of the blast on one organ
 	apply_damage(0.7 * b_loss, BRUTE, null, DAM_EXPLODE, used_weapon = "Explosive blast")
@@ -525,4 +525,3 @@ meteor_act
 	// distribute the remaining 30% on all limbs equally (including the one already dealt damage)
 	apply_damage(0.3 * b_loss, BRUTE, null, DAM_EXPLODE | DAM_DISPERSED, used_weapon = "Explosive blast")
 	apply_damage(0.3 * f_loss, BURN, null, DAM_EXPLODE | DAM_DISPERSED, used_weapon = "Explosive blast")
-

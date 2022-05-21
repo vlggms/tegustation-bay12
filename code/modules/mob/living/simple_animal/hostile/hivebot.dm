@@ -21,12 +21,21 @@
 		)
 	bleed_colour = SYNTH_BLOOD_COLOUR
 
+	loot_list = list(
+		/obj/item/stack/material/rods = 4,
+	)
+
 	meat_type =     null
 	meat_amount =   0
 	bone_material = null
 	bone_amount =   0
 	skin_material = null
 	skin_amount =   0
+
+	needs_reload = TRUE
+	reload_max = 5
+	reload_time = 2 SECONDS
+	reload_sound = 'sound/effects/scanbeep.ogg'
 
 /mob/living/simple_animal/hostile/hivebot/range
 	desc = "A junky looking robot with four spiky legs. It's equipped with some kind of small-bore gun."
@@ -36,6 +45,8 @@
 /mob/living/simple_animal/hostile/hivebot/rapid
 	ranged = 1
 	rapid = 1
+	ranged_attack_delay = null
+	reload_max = 10
 
 /mob/living/simple_animal/hostile/hivebot/strong
 	desc = "A junky looking robot with four spiky legs - this one has thick armour plating."
@@ -68,11 +79,12 @@ Teleporter beacon, and its subtypes
 	maxHealth = 200
 	status_flags = 0
 	anchored = TRUE
+	reload_max = 1
 
 	var/bot_type = /mob/living/simple_animal/hostile/hivebot
-	var/bot_amt = 10
-	var/spawn_delay = 100
-	var/spawn_time = 0
+	var/bot_amt = 5
+	var/spawn_delay = 5 SECONDS
+	var/activated = FALSE
 
 	ai_holder_type = /datum/ai_holder/simple_animal/hivebot/tele
 
@@ -83,9 +95,11 @@ Teleporter beacon, and its subtypes
 	smoke.start()
 	visible_message("<span class='danger'>\The [src] warps in!</span>")
 	playsound(src.loc, 'sound/effects/EMPulse.ogg', 25, 1)
-	set_AI_busy(TRUE)
 
 /mob/living/simple_animal/hostile/hivebot/tele/proc/warpbots()
+	var/datum/effect/effect/system/smoke_spread/smoke = new /datum/effect/effect/system/smoke_spread()
+	smoke.set_up(5, 0, src.loc)
+	smoke.start()
 	while(bot_amt > 0 && bot_type)
 		bot_amt--
 		var/mob/M = new bot_type(get_turf(src))
@@ -98,16 +112,12 @@ Teleporter beacon, and its subtypes
 	. = ..()
 
 	var/mob/living/simple_animal/hostile/hivebot/tele/T = holder
-	if(..() && !T.spawn_time)
-		T.spawn_time = world.time + T.spawn_delay
-		T.visible_message("<span class='danger'>\The [src] turns on!</span>")
-		T.icon_state = "def_radar"
+	if(..() && !T.activated)
+		T.visible_message("<span class='danger'>\The [T] sends a signal!</span>")
+		playsound(T.loc, 'sound/effects/caution.ogg', 50, 1)
+		T.activated = TRUE
+		addtimer(CALLBACK(T, /mob/living/simple_animal/hostile/hivebot/tele/proc/warpbots), T.spawn_delay)
 	return null
-
-/mob/living/simple_animal/hostile/hivebot/tele/Life()
-	. = ..()
-	if(. && spawn_time && spawn_time <= world.time)
-		warpbots()
 
 /mob/living/simple_animal/hostile/hivebot/tele/strong
 	bot_type = /mob/living/simple_animal/hostile/hivebot/strong
@@ -117,13 +127,6 @@ Teleporter beacon, and its subtypes
 
 /mob/living/simple_animal/hostile/hivebot/tele/rapid
 	bot_type = /mob/living/simple_animal/hostile/hivebot/rapid
-
-/*
-Special projectiles
-*/
-/obj/item/projectile/beam/megabot
-	damage = 45
-	distance_falloff = 0.5
 
 /*
 The megabot
@@ -138,29 +141,54 @@ The megabot
 	icon_state = "megabot"
 	icon_living = "megabot"
 	icon_dead = "megabot_dead"
-	health = 440
-	maxHealth = 440
+	health = 500
+	maxHealth = 500
 	natural_weapon = /obj/item/natural_weapon/circular_saw
-	speed = 0
+	speed = 2
 	natural_armor = list(
 		melee = ARMOR_MELEE_RESISTANT,
 		bullet = ARMOR_BALLISTIC_PISTOL
 		)
 	can_escape = TRUE
 	armor_type = /datum/extension/armor/toggle
-	ability_cooldown = 3 MINUTES
+	ability_cooldown = 2 MINUTES
 
 	pixel_x = -32
 	default_pixel_x = -32
 
+	loot_list = list(
+		/obj/item/stack/material/iron = 50,
+		/obj/item/stack/material/uranium = 15,
+		/obj/item/stack/material/diamond = 10,
+	)
+
+	special_attack_min_range = 3
+	special_attack_max_range = 12
+	special_attack_cooldown = 30 SECONDS
+
+	ranged_attack_delay = null
+	needs_reload = FALSE
+
+	movement_cooldown = 6
+	movement_sound = 'sound/mecha/mechstep.ogg'
+	movement_shake_radius = 7
+
+	natural_armor = list(
+		melee = ARMOR_MELEE_RESISTANT,
+		bomb = ARMOR_BOMB_SHIELDED
+		)
+
 	var/attack_mode = ATTACK_MODE_MELEE
 	var/num_shots
 	var/deactivated
+	var/obj/item/projectile/gigabeam_type = /obj/item/projectile/beam/gigabeam
 
 /obj/item/natural_weapon/circular_saw
 	name = "giant circular saw"
 	attack_verb = list("sawed", "ripped")
-	force = 15
+	hitsound = 'sound/weapons/circsawhit.ogg'
+	force = 30
+	armor_penetration = 30
 	sharp = TRUE
 	edge = TRUE
 
@@ -168,13 +196,10 @@ The megabot
 	. = ..()
 	switch_mode(ATTACK_MODE_LASER)
 
-/mob/living/simple_animal/hostile/hivebot/mega/Life()
-	. = ..()
-	if(!.)
-		return
-
-	if(time_last_used_ability < world.time)
-		switch_mode(ATTACK_MODE_LASER)
+/mob/living/simple_animal/hostile/hivebot/mega/get_attack_speed(obj/item/W)
+	if(attack_mode == ATTACK_MODE_LASER) // For faster fire rate
+		return DEFAULT_QUICK_COOLDOWN
+	return ..(W)
 
 /mob/living/simple_animal/hostile/hivebot/mega/emp_act(severity)
 	if(status_flags & GODMODE)
@@ -184,12 +209,40 @@ The megabot
 	if(severity >= 1)
 		deactivate()
 
+/mob/living/simple_animal/hostile/hivebot/mega/drop_loot()
+	if(prob(25)) // Rare loot!
+		loot_list += /obj/item/gun/energy/lasercannon
+	..()
+
+/mob/living/simple_animal/hostile/hivebot/mega/do_special_attack(atom/A)
+	..()
+	set_AI_busy(TRUE)
+	var/turf/T = get_turf(A)
+	visible_message(SPAN_MFAUNA("\The [src] raises a giant laser cannon, aiming it at \the [A]!"))
+	playsound(src, 'sound/weapons/marauder.ogg', 50, 1)
+	face_atom(A)
+	var/obj/effect/temp_visual/decoy/D = new /obj/effect/temp_visual/decoy(loc, dir, src)
+	animate(D, alpha = 0, color = "#ff0000", transform = matrix()*2, time = 5)
+	addtimer(CALLBACK(src, .proc/fire_gigabeam, T), 3 SECONDS)
+
+/mob/living/simple_animal/hostile/hivebot/mega/proc/fire_gigabeam(turf/T)
+	playsound(src, 'sound/weapons/lasercannonfire.ogg', 150, 1, 4)
+	var/obj/item/projectile/P = new gigabeam_type(src.loc)
+	if(istype(P))
+		var/selected_zone = pick(BP_ALL_LIMBS)
+		P.launch(T, selected_zone, src)
+	set_AI_busy(FALSE)
+	return TRUE
+
 /mob/living/simple_animal/hostile/hivebot/mega/on_update_icon()
 	if(stat != DEAD)
 		if(deactivated)
 			icon_state = "megabot_standby"
 			icon_living = "megabot_standby"
 			return
+
+		icon_state = "megabot"
+		icon_living = "megabot"
 
 		overlays.Cut()
 		overlays += image(icon, "active_indicator")
@@ -199,7 +252,7 @@ The megabot
 			if(ATTACK_MODE_LASER)
 				overlays += image(icon, "laser")
 
-/mob/living/simple_animal/hostile/hivebot/mega/proc/switch_mode(var/new_mode)
+/mob/living/simple_animal/hostile/hivebot/mega/proc/switch_mode(new_mode)
 	if(!new_mode || new_mode == attack_mode)
 		return
 
@@ -211,15 +264,16 @@ The megabot
 			projectiletype = null
 			num_shots = 0
 			visible_message(SPAN_MFAUNA("\The [src]'s circular saw spins up!"))
-			deactivate()
+			playsound(src, 'sound/mecha/mechdrill.ogg', 50, 1)
 		if(ATTACK_MODE_LASER)
 			attack_mode = ATTACK_MODE_LASER
 			ranged = TRUE
 			projectilesound = 'sound/weapons/Laser.ogg'
-			projectiletype = /obj/item/projectile/beam/megabot
-			num_shots = 12
+			projectiletype = /obj/item/projectile/beam/smalllaser
+			num_shots = 20
 			fire_desc = "fires a laser"
-			visible_message(SPAN_MFAUNA("\The [src]'s laser cannon whines!"))
+			visible_message(SPAN_MFAUNA("\The [src] raises secondary laser cannon!"))
+			playsound(src, 'sound/mecha/hydraulic.ogg', 50, 1)
 
 	update_icon()
 
@@ -227,10 +281,11 @@ The megabot
 	set_AI_busy(TRUE)
 	deactivated = TRUE
 	visible_message(SPAN_MFAUNA("\The [src] clicks loudly as its lights fade and its motors grind to a halt!"))
-	update_icon()
 	var/datum/extension/armor/toggle/armor = get_extension(src, /datum/extension/armor)
 	if(armor)
 		armor.toggle(FALSE)
+	playsound(src, 'sound/mecha/lowpower.ogg', 75, 1)
+	update_icon()
 	addtimer(CALLBACK(src, .proc/reactivate), 4 SECONDS)
 
 /mob/living/simple_animal/hostile/hivebot/mega/proc/reactivate()
@@ -240,12 +295,17 @@ The megabot
 	var/datum/extension/armor/toggle/armor = get_extension(src, /datum/extension/armor)
 	if(armor)
 		armor.toggle(TRUE)
+	playsound(src, 'sound/mecha/powerup.ogg', 75, 1)
 	update_icon()
 
 /mob/living/simple_animal/hostile/hivebot/mega/shoot_target(target_mob)
 	if(num_shots <= 0)
 		if(attack_mode == ATTACK_MODE_LASER)
-			switch_mode(ATTACK_MODE_MELEE)
+			if(prob(50))
+				switch_mode(ATTACK_MODE_MELEE)
+				addtimer(CALLBACK(src, .proc/switch_mode, ATTACK_MODE_LASER), 10 SECONDS)
+			else
+				deactivate()
 		return
 	..()
 
