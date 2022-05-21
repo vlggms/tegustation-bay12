@@ -240,7 +240,7 @@
 	//Check our layers
 	if(owner && (owner.hardpoints[HARDPOINT_HEAD] == src))
 		mech_layer = MECH_INTERMEDIATE_LAYER
-	else mech_layer = initial(mech_layer)	
+	else mech_layer = initial(mech_layer)
 
 #define CATAPULT_SINGLE 1
 #define CATAPULT_AREA   2
@@ -483,8 +483,10 @@
 		SPAN_WARNING("\The [owner] starts to drill \the [target]."),
 		blind_message = SPAN_WARNING("You hear a large motor whirring.")
 	)
+
 	if (!do_after(owner, delay, target, DO_DEFAULT & ~DO_USER_CAN_TURN))
 		return
+
 	if (src != owner.selected_system)
 		to_chat(user, SPAN_WARNING("You must keep \the [src] selected to use it."))
 		return
@@ -607,11 +609,11 @@
 	if (istype(C))
 		if (C.checked_use(movement_power * CELLRATE))
 			return TRUE
-		else 
+		else
 			deactivate()
 
 	return FALSE
-				
+
 /obj/item/mech_equipment/ionjets/attack_self(mob/user)
 	. = ..()
 	if (!.)
@@ -619,7 +621,7 @@
 
 	if (active)
 		deactivate()
-	else 
+	else
 		activate()
 
 /obj/item/mech_equipment/ionjets/CtrlClick(mob/user)
@@ -635,7 +637,7 @@
 	ion_trail.start()
 	active = TRUE
 	update_icon()
-	
+
 /obj/item/mech_equipment/ionjets/deactivate()
 	. = ..()
 	passive_power_use = 0 KILOWATTS
@@ -718,7 +720,7 @@
 	if(owner)
 		camera.c_tag = "[owner.name] camera feed"
 		invalidateCameraCache()
-	
+
 /obj/item/mech_equipment/camera/uninstalled()
 	. = ..()
 	camera.c_tag = "null"
@@ -740,7 +742,7 @@
 
 /obj/item/mech_equipment/camera/attackby(obj/item/W, mob/user)
 	. = ..()
-	
+
 	if(isScrewdriver(W))
 		var/list/all_networks = list()
 		for(var/network in GLOB.using_map.station_networks)

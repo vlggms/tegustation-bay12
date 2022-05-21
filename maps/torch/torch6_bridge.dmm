@@ -1867,7 +1867,7 @@
 	dir = 4;
 	icon_state = "tube1"
 	},
-/obj/machinery/photocopier/faxmachine/torch{
+/obj/machinery/photocopier/faxmachine{
 	department = "Torch - Bridge"
 	},
 /obj/machinery/button/alternate/door{
@@ -4152,7 +4152,7 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/office/ce)
 "ik" = (
-/obj/machinery/photocopier/faxmachine/torch{
+/obj/machinery/photocopier/faxmachine{
 	department = "Torch - Corporate Liasion"
 	},
 /obj/structure/table/woodentable_reinforced/walnut,
@@ -5824,7 +5824,7 @@
 	dir = 8;
 	pixel_x = 20
 	},
-/obj/machinery/photocopier/faxmachine/torch{
+/obj/machinery/photocopier/faxmachine{
 	department = "Torch - Chief of Security"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
@@ -9896,7 +9896,7 @@
 /area/crew_quarters/heads/office/cos)
 "wD" = (
 /obj/structure/table/woodentable/walnut,
-/obj/machinery/photocopier/faxmachine/torch{
+/obj/machinery/photocopier/faxmachine{
 	department = "Torch - SolGov Representative"
 	},
 /obj/item/device/radio/intercom{
@@ -12497,7 +12497,7 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/bridge)
 "FG" = (
-/obj/machinery/photocopier/faxmachine/torch{
+/obj/machinery/photocopier/faxmachine{
 	department = "Torch - Executive Officer"
 	},
 /obj/structure/noticeboard{
@@ -13475,7 +13475,7 @@
 /obj/structure/table/standard{
 	name = "plastic table frame"
 	},
-/obj/machinery/photocopier/faxmachine/torch{
+/obj/machinery/photocopier/faxmachine{
 	department = "Torch - Senior Enlisted Advisor"
 	},
 /obj/effect/floor_decal/corner/blue/mono,
@@ -13951,7 +13951,7 @@
 "KP" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/structure/table/glass,
-/obj/machinery/photocopier/faxmachine/torch{
+/obj/machinery/photocopier/faxmachine{
 	department = "Torch - Chief Medical Officer"
 	},
 /obj/item/stamp/cmo,
@@ -14519,7 +14519,7 @@
 	pixel_x = -6;
 	pixel_y = 24
 	},
-/obj/machinery/photocopier/faxmachine/torch{
+/obj/machinery/photocopier/faxmachine{
 	department = "Torch - Commanding Officer"
 	},
 /obj/machinery/button/windowtint{
@@ -17016,7 +17016,7 @@
 /area/security/bridgecheck)
 "Wi" = (
 /obj/structure/table/glass,
-/obj/machinery/photocopier/faxmachine/torch{
+/obj/machinery/photocopier/faxmachine{
 	department = "Torch - Chief Science Officer"
 	},
 /obj/machinery/newscaster{
@@ -17865,7 +17865,7 @@
 	pixel_y = 0
 	},
 /obj/effect/floor_decal/corner/yellow/mono,
-/obj/machinery/photocopier/faxmachine/torch{
+/obj/machinery/photocopier/faxmachine{
 	department = "Torch - Chief Engineer"
 	},
 /turf/simulated/floor/tiled/monotile,

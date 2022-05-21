@@ -16678,14 +16678,12 @@
 /area/hydroponics/storage)
 "Og" = (
 /obj/structure/table/standard,
-/obj/item/paper_bin{
-	pixel_x = -3;
-	pixel_y = 7
-	},
-/obj/item/pen/green,
 /obj/item/device/radio/intercom{
 	dir = 4;
 	pixel_x = -21
+	},
+/obj/machinery/photocopier/faxmachine{
+	department = "Torch - Computer Lab"
 	},
 /turf/simulated/floor/lino,
 /area/crew_quarters/office)

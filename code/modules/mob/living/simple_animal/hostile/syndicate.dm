@@ -60,14 +60,11 @@
 		to_chat(usr, "<span class='warning'>This weapon is ineffective, it does no damage.</span>")
 		visible_message("<span class='warning'>\The [user] gently taps \the [src] with \the [O].</span>")
 
-
 /mob/living/simple_animal/hostile/syndicate/melee/bullet_act(var/obj/item/projectile/Proj)
-	if(!Proj)	return
-	if(prob(65))
-		src.health -= Proj.damage
-	else
+	if(prob(35))
 		visible_message("<span class='danger'>\The [src] blocks \the [Proj] with its shield!</span>")
-	return 0
+		return PROJECTILE_FORCE_MISS
+	return ..()
 
 
 /mob/living/simple_animal/hostile/syndicate/melee/space

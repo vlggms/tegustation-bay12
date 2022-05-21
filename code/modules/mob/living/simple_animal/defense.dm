@@ -1,4 +1,7 @@
 /mob/living/simple_animal/bullet_act(var/obj/item/projectile/Proj)
+	if(status_flags & GODMODE)
+		return PROJECTILE_FORCE_MISS
+
 	if(!Proj || Proj.nodamage)
 		return
 
@@ -23,6 +26,26 @@
 		ai_holder.react_to_attack(Proj.firer)
 
 	return FALSE
+
+/mob/living/simple_animal/ex_act(severity)
+	if(status_flags & GODMODE)
+		return
+
+	if(!blinded)
+		flash_eyes()
+
+	var/damage
+	switch (severity)
+		if (1)
+			damage = 500
+
+		if (2)
+			damage = 120
+
+		if(3)
+			damage = 30
+
+	apply_damage(damage, BRUTE, damage_flags = DAM_EXPLODE)
 
 /mob/living/simple_animal/attack_hand(mob/living/carbon/human/M as mob)
 	..()

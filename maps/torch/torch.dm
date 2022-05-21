@@ -110,7 +110,6 @@
 	#include "language/human/misc/spacer.dm"
 
 	#include "machinery/apc_shuttle.dm"
-	#include "machinery/faxmachine.dm"
 	#include "machinery/keycard authentication.dm"
 	#include "machinery/suit_storage.dm"
 

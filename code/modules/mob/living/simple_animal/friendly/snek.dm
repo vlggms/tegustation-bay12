@@ -1,5 +1,5 @@
 /mob/living/simple_animal/friendly/snek
-	name = "snake"
+	name = "snek"
 	desc = "Cute snake that needs a little boop."
 	icon_state = "snek"
 	icon_living = "snek_dead"

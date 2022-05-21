@@ -6,7 +6,7 @@
 
 /decl/psionic_power/psychokinesis
 	faculty = PSI_PSYCHOKINESIS
-	use_manifest = TRUE
+	use_manifest = FALSE
 	use_sound = null
 
 /decl/psionic_power/psychokinesis/psiblade
@@ -15,6 +15,7 @@
 	cooldown =        30
 	min_rank =        PSI_RANK_OPERANT
 	use_description = "Click on or otherwise activate an empty hand while on harm intent to manifest a psychokinetic cutting blade. The power the blade will vary based on your mastery of the faculty."
+	use_manifest = TRUE
 	admin_log = FALSE
 
 /decl/psionic_power/psychokinesis/psiblade/invoke(mob/living/user, mob/living/target)
@@ -38,6 +39,7 @@
 	cooldown =        10
 	min_rank =        PSI_RANK_OPERANT
 	use_description = "Click on or otherwise activate an empty hand while on help intent to manifest a psychokinetic tool. Use it in-hand to switch between tool types."
+	use_manifest = TRUE
 	admin_log = FALSE
 
 /decl/psionic_power/psychokinesis/tinker/invoke(mob/living/user, mob/living/target)

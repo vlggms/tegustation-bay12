@@ -165,7 +165,6 @@
 	if(istype(PC))
 		PC.targets -= target
 
-
 	engaging = FALSE
 	last_shot = world.time
 	var/obj/effect/meteor/M = target.resolve()
@@ -218,8 +217,13 @@
 
 		if(!(M.z in GetConnectedZlevels(z)))
 			continue
+
 		if(get_dist(M, src) > kill_range)
 			continue
+
+		if(!can_see(src, M, kill_range))
+			continue
+
 		if(!emagged && space_los(M))
 			var/weakref/target = weakref(M)
 			PC.targets +=target

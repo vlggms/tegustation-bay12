@@ -8,6 +8,7 @@
 	health_max = 100
 	health_min_damage = 20 // No easy loot, nuh-uh
 	damage_hitsound = 'sound/weapons/smash.ogg'
+	material = MATERIAL_STEEL
 
 	var/welded = 0
 	var/large = 1
@@ -39,6 +40,8 @@
 			icon = app.icon
 			color = null
 			queue_icon_update()
+
+	material = SSmaterials.get_material_by_name(material)
 
 	return INITIALIZE_HINT_LATELOAD
 
@@ -323,7 +326,7 @@
 	playsound(loc, damage_hitsound, 35, 1) // Just a sound
 
 /obj/structure/closet/proc/slice_into_parts(obj/W, mob/user)
-	new /obj/item/stack/material/steel(src.loc, 2)
+	material.place_sheet(src.loc, 2)
 	user.visible_message(SPAN_NOTICE("\The [src] has been cut apart by [user] with \the [W]."), \
 						 SPAN_NOTICE("You have cut \the [src] apart with \the [W]."), \
 						 SPAN_NOTICE("You hear welding."))
