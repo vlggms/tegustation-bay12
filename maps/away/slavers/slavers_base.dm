@@ -143,7 +143,7 @@
 	response_help = "pushes"
 	response_disarm = "shoves"
 	response_harm = "hits"
-	speed = 4
+	movement_cooldown = 4
 	maxHealth = 100
 	health = 100
 	natural_weapon = /obj/item/natural_weapon/punch
