@@ -1,0 +1,8 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - rscadd: Slippery motor oil is now available to emagged janitor cyborgs.
+  - tweak: Water/Lube stun durations are heavily nerfed so you won't spend 10 seconds
+      lying on the floor.
+  - tweak: The wet floor overlays don't become invisible every once in a while now,
+      making it easier to spot a wet/lubed floor.
