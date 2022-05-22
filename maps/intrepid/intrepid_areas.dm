@@ -11,51 +11,48 @@
 	)
 
 //Intrepid Maintaince
+/area/intrepid/misc/maint
+	icon_state = "hallF"
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	area_flags = AREA_FLAG_RAD_SHIELDED
+
 /area/intrepid/misc/maint/internalportside
 	name = "\improper Portside Internal Maintenance Tunnel"
-	icon_state = "hallF"
-	area_flags = AREA_FLAG_RAD_SHIELDED
 
 /area/intrepid/misc/maint/internalstarboard
 	name = "\improper Starboard Internal Maintenance Tunnel"
-	icon_state = "hallF"
-	area_flags = AREA_FLAG_RAD_SHIELDED
 
 /area/intrepid/misc/maint/portside
 	name = "\improper Portside Maintenance Tunnel"
-	icon_state = "hallF"
-	area_flags = AREA_FLAG_RAD_SHIELDED
 
 /area/intrepid/misc/maint/starboard
 	name = "\improper Starboard Maintenance Tunnel"
-	icon_state = "hallF"
-	area_flags = AREA_FLAG_RAD_SHIELDED
 
 /area/intrepid/misc/maint/aft
 	name = "\improper Aft Maintenance Tunnel"
-	icon_state = "hallF"
-	area_flags = AREA_FLAG_RAD_SHIELDED
 
 /area/intrepid/misc/maint/upper
 	name = "\improper Upper Maintenance Tunnel"
-	icon_state = "hallF"
-	area_flags = AREA_FLAG_RAD_SHIELDED
 
 
 //Intrepid Hallways
+/area/intrepid/misc/hallway
+	icon_state = "hallF"
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
+
 /area/intrepid/misc/hallway/portside
 	name = "\improper Portside Hallway"
-	icon_state = "hallF"
 
 /area/intrepid/misc/hallway/starboard
 	name = "\improper Starboard Hallway"
-	icon_state = "hallF"
 
 /area/intrepid/misc/hallway/center
 	name = "\improper Center Hallway"
-	icon_state = "hallF"
 
 //Intrepid Medical
+/area/intrepid/department/medical
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+
 /area/intrepid/department/medical/treatment
 	name = "\improper Medical Treatment Center"
 	icon_state = "exam_room"
@@ -90,6 +87,7 @@
 //Intrepid Research (SRV Stardust)
 /area/shuttle/research
 	req_access = list(access_stardust)
+	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/shuttle/research/cockpit
 	name = "\improper SRV Stardust Cockpit"
@@ -129,6 +127,9 @@
 	icon_state = "stardust_hallway"
 
 //Intrepid Command
+/area/intrepid/department/command
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
+
 /area/intrepid/department/command/computerlab
 	name = "\improper Command Computer Lab"
 	icon_state = "conference"
@@ -185,21 +186,25 @@
 	icon_state = "heads_rd"
 	name = "\improper Command - CSO's Office"
 	req_access = list(access_rd)
+	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/intrepid/department/command/commandquarters/cmo
 	icon_state = "heads_cmo"
 	name = "\improper Command - CMO's Office"
 	req_access = list(access_cmo)
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
 /area/intrepid/department/command/commandquarters/ce
 	icon_state = "heads_ce"
 	name = "\improper Engineering - CE's Office"
 	req_access = list(access_ce)
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/intrepid/department/command/commandquarters/cos
 	icon_state = "heads_hos"
 	name = "\improper Command - CoS' Office"
 	req_access = list(access_hos)
+	holomap_color = HOLOMAP_AREACOLOR_SECURITY
 
 /area/intrepid/department/command/commandquarters/tgs
 	icon_state = "heads_sr"
@@ -215,6 +220,9 @@
 	name = "improper Teleporter Room"
 
 // Engineering
+/area/intrepid/department/engineering
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
 /area/intrepid/department/engineering/solarcontrol
 	name = "\improper Solar Plating Control"
 	icon_state = "solarcontrol"
@@ -279,6 +287,9 @@
 	icon_state = "primarystorage"
 
 //Exploration
+/area/intrepid/department/exploration
+	holomap_color = HOLOMAP_AREACOLOR_EXPLORATION
+
 /area/intrepid/department/exploration/hangar
 	name = "\improper Hangar"
 	icon_state = "hangar"
@@ -289,6 +300,9 @@
 	icon_state = "intrepid_storage"
 
 //Cargo
+/area/intrepid/department/cargo
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
+
 /area/intrepid/department/cargo/cargobay
 	name = "\improper Cargo Bay"
 	icon_state = "cargobay"
@@ -299,6 +313,9 @@
 	icon_state = "warehouse"
 
 //Civillian
+/area/intrepid/department/civillian
+	holomap_color = HOLOMAP_AREACOLOR_CREW
+
 /area/intrepid/department/civillian/dockbay
 	name = "\improper Docking Bay"
 	icon_state = "dockbay"
@@ -346,6 +363,7 @@
 	icon_state = "shuttlered"
 	base_turf = /turf/simulated/floor/plating
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
+	holomap_color = HOLOMAP_AREACOLOR_EXPLORATION
 
 /area/shuttle/pandora/cockpit
 	name = "\improper Pandora - Cockpit"
@@ -492,6 +510,9 @@
 	sound_env = SMALL_ENCLOSED
 
 /* Crew */
+/area/crew_quarters/sleep
+	holomap_color = HOLOMAP_AREACOLOR_CREW
+
 /area/crew_quarters/sleep/bunk
 	name = "\improper Bunk Room"
 	icon_state = "Sleep"
@@ -504,6 +525,9 @@
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
 
 /* Security */
+/area/intrepid/department/security
+	holomap_color = HOLOMAP_AREACOLOR_SECURITY
+
 /area/intrepid/department/security/armory
 	name = "\improper Security - Armory"
 	icon_state = "Warden"
@@ -546,11 +570,13 @@
 	icon_state = "tcomsatcham"
 	ambience = list('sound/ambience/ambisin2.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/ambigen10.ogg')
 	req_access = list(access_tcomsat)
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/eva
 	name = "\improper EVA Storage"
 	icon_state = "eva"
 	req_access = list(access_eva)
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
 /*** CentCom ***/
 // Actors Guild
