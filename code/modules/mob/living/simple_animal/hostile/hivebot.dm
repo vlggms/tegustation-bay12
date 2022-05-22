@@ -85,6 +85,7 @@ Teleporter beacon, and its subtypes
 	var/spawn_delay = 5 SECONDS
 	var/activated = FALSE
 
+	melee_attack_delay = 0
 	natural_weapon = null
 	projectiletype = null
 
@@ -98,6 +99,15 @@ Teleporter beacon, and its subtypes
 	visible_message("<span class='danger'>\The [src] warps in!</span>")
 	playsound(src.loc, 'sound/effects/EMPulse.ogg', 25, 1)
 
+/mob/living/simple_animal/hostile/hivebot/tele/proc/trigger()
+	if(!activated)
+		visible_message("<span class='danger'>\The [src] sends a signal!</span>")
+		activated = TRUE
+		icon_state = "def_radar"
+		playsound(src.loc, 'sound/effects/caution.ogg', 50, 1)
+		addtimer(CALLBACK(src, .proc/warpbots), spawn_delay)
+	return
+
 /mob/living/simple_animal/hostile/hivebot/tele/proc/warpbots()
 	var/datum/effect/effect/system/smoke_spread/smoke = new /datum/effect/effect/system/smoke_spread()
 	smoke.set_up(5, 0, src.loc)
@@ -110,15 +120,15 @@ Teleporter beacon, and its subtypes
 	qdel(src)
 	return
 
-/datum/ai_holder/simple_animal/hivebot/tele/on_engagement(atom/A)
+/mob/living/simple_animal/hostile/hivebot/tele/updatehealth()
+	..()
+	if((stat != DEAD) && prob(10)) // So attacking it with fast firing weapons has more chance to trigger it
+		trigger()
+
+/datum/ai_holder/simple_animal/hivebot/tele/on_engagement(atom/A) // Walking into melee range
 	. = ..()
 	var/mob/living/simple_animal/hostile/hivebot/tele/T = holder
-	if(!T.activated)
-		T.visible_message("<span class='danger'>\The [T] sends a signal!</span>")
-		T.activated = TRUE
-		T.icon_state = "def_radar"
-		playsound(T.loc, 'sound/effects/caution.ogg', 50, 1)
-		addtimer(CALLBACK(T, /mob/living/simple_animal/hostile/hivebot/tele/proc/warpbots), T.spawn_delay)
+	T.trigger()
 	return
 
 /mob/living/simple_animal/hostile/hivebot/tele/strong
