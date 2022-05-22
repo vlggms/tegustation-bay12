@@ -79,12 +79,14 @@ Teleporter beacon, and its subtypes
 	maxHealth = 200
 	status_flags = 0
 	anchored = TRUE
-	reload_max = 1
 
 	var/bot_type = /mob/living/simple_animal/hostile/hivebot
 	var/bot_amt = 5
 	var/spawn_delay = 5 SECONDS
 	var/activated = FALSE
+
+	natural_weapon = null
+	projectiletype = null
 
 	ai_holder_type = /datum/ai_holder/simple_animal/hivebot/tele
 
@@ -108,16 +110,16 @@ Teleporter beacon, and its subtypes
 	qdel(src)
 	return
 
-/datum/ai_holder/simple_animal/hivebot/tele/find_target(list/possible_targets, has_targets_list)
+/datum/ai_holder/simple_animal/hivebot/tele/on_engagement(atom/A)
 	. = ..()
-
 	var/mob/living/simple_animal/hostile/hivebot/tele/T = holder
-	if(..() && !T.activated)
+	if(!T.activated)
 		T.visible_message("<span class='danger'>\The [T] sends a signal!</span>")
-		playsound(T.loc, 'sound/effects/caution.ogg', 50, 1)
 		T.activated = TRUE
+		T.icon_state = "def_radar"
+		playsound(T.loc, 'sound/effects/caution.ogg', 50, 1)
 		addtimer(CALLBACK(T, /mob/living/simple_animal/hostile/hivebot/tele/proc/warpbots), T.spawn_delay)
-	return null
+	return
 
 /mob/living/simple_animal/hostile/hivebot/tele/strong
 	bot_type = /mob/living/simple_animal/hostile/hivebot/strong
