@@ -89,7 +89,7 @@
 /datum/random_ability/active/spit/venom
 	name = "venom spit"
 	added_name = "venomous alien"
-	spit_type/obj/item/projectile/venom
+	spit_type = /obj/item/projectile/venom
 
 /datum/random_ability/active/spit/venom/New()
 	..()
