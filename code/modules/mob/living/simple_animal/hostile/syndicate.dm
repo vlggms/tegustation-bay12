@@ -9,7 +9,7 @@
 	response_help = "pokes"
 	response_disarm = "shoves"
 	response_harm = "hits"
-	speed = 4
+	movement_cooldown = 4
 	maxHealth = 100
 	health = 100
 	harm_intent_damage = 5
@@ -75,7 +75,6 @@
 	icon_living = "syndicatemeleespace"
 	name = "Syndicate Commando"
 	corpse = /obj/effect/landmark/corpse/syndicate
-	speed = 0
 
 /mob/living/simple_animal/hostile/syndicate/ranged
 	ranged = 1
@@ -96,7 +95,6 @@
 	max_gas = null
 	minbodytemp = 0
 	corpse = /obj/effect/landmark/corpse/syndicate/commando
-	speed = 0
 
 /mob/living/simple_animal/hostile/viscerator
 	name = "viscerator"

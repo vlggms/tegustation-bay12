@@ -9,7 +9,7 @@
 	icon_gib = "vagrant"
 	maxHealth = 60
 	health = 20
-	speed = 5
+	movement_cooldown = 4
 	turns_per_move = 4
 	move_to_delay = 4
 	response_help = "pets the"

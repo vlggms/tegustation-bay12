@@ -82,7 +82,7 @@
 	var/obj/item/card/id/myid// An ID card if they have one to give them access to stuff.
 
 	//Movement things.
-	var/movement_cooldown = 5			// Lower is faster.
+	var/movement_cooldown = 4			// Lower is faster.
 	var/movement_sound = null			// If set, will play this sound when it moves on its own will.
 	var/turn_sound = null				// If set, plays the sound when the mob's dir changes in most cases.
 	var/movement_shake_radius = 0		// If set, moving will shake the camera of all living mobs within this radius slightly.
@@ -93,7 +93,6 @@
 	var/list/max_gas = list(GAS_PHORON = 1, GAS_CO2 = 5)
 
 	var/unsuitable_atmos_damage = 2	//This damage is taken when atmos doesn't fit all the requirements above
-	var/speed = 0 //LETS SEE IF I CAN SET SPEEDS FOR SIMPLE MOBS WITHOUT DESTROYING EVERYTHING. Higher speed is slower, negative speed is faster
 
 	//LETTING SIMPLE ANIMALS ATTACK? WHAT COULD GO WRONG. Defaults to zero so Ian can still be cuddly
 	var/obj/item/natural_weapon/natural_weapon
@@ -172,17 +171,6 @@
 		QDEL_NULL(natural_weapon)
 
 	. = ..()
-
-/mob/living/simple_animal/movement_delay()
-	var/tally = ..() //Incase I need to add stuff other than "speed" later
-
-	tally += speed
-	if(purge)//Purged creatures will move more slowly. The more time before their purge stops, the slower they'll move.
-		if(tally <= 0)
-			tally = 1
-		tally *= purge
-
-	return tally
 
 /mob/living/simple_animal/Stat()
 	. = ..()
@@ -347,9 +335,6 @@
 		if(. <= 0)
 			. = 1
 		. *= purge
-
-	if(a_intent == "walk")
-		. *= 1.5
 
 	 . += ..()
 

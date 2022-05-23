@@ -12,7 +12,7 @@
 	maxHealth = 100
 	health = 100
 
-	movement_cooldown = 5
+	movement_cooldown = 4
 
 	special_attack_min_range = 0
 	special_attack_max_range = 14
@@ -64,7 +64,7 @@
 /mob/living/simple_animal/hostile/random_monster/proc/InitStats()
 	for(var/datum/random_ability/ra in abilities)
 		maxHealth += ra.health_mod
-		speed += ra.speed_mod
+		movement_cooldown += ra.speed_mod
 
 /* Using abilities */
 /mob/living/simple_animal/hostile/random_monster/do_special_attack(atom/A)

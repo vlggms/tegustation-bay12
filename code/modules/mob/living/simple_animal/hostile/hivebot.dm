@@ -15,7 +15,7 @@
 	min_gas = null
 	max_gas = null
 	minbodytemp = 0
-	speed = 4
+	movement_cooldown = 4
 	natural_armor = list(
 		melee = ARMOR_MELEE_KNIVES
 		)
@@ -40,7 +40,7 @@
 /mob/living/simple_animal/hostile/hivebot/range
 	desc = "A junky looking robot with four spiky legs. It's equipped with some kind of small-bore gun."
 	ranged = 1
-	speed = 7
+	movement_cooldown = 5
 
 /mob/living/simple_animal/hostile/hivebot/rapid
 	ranged = 1
@@ -156,7 +156,7 @@ The megabot
 	health = 500
 	maxHealth = 500
 	natural_weapon = /obj/item/natural_weapon/circular_saw
-	speed = 2
+	movement_cooldown = 6
 	natural_armor = list(
 		melee = ARMOR_MELEE_RESISTANT,
 		bullet = ARMOR_BALLISTIC_PISTOL
@@ -181,7 +181,6 @@ The megabot
 	ranged_attack_delay = null
 	needs_reload = FALSE
 
-	movement_cooldown = 6
 	movement_sound = 'sound/mecha/mechstep.ogg'
 	movement_shake_radius = 7
 
