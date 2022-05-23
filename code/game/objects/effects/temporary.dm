@@ -71,7 +71,8 @@
 	desc = "It's a decoy!"
 	duration = 15
 
-/obj/effect/temp_visual/decoy/Initialize(mapload, setdir, atom/mimiced_atom)
+/obj/effect/temp_visual/decoy/Initialize(mapload, setdir, atom/mimiced_atom, modified_duration = 15)
+	duration = modified_duration
 	. = ..()
 	alpha = initial(alpha)
 	if(mimiced_atom)

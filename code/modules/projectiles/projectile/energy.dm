@@ -197,8 +197,8 @@
 /obj/item/projectile/energy/plasmastun/weak
 	name = "plasma spit"
 	armor_penetration = 0
-	life_span = 8
-	agony = 20
+	life_span = 10
+	agony = 5
 	min_dizziness_amt = 5
 	med_dizziness_amt = 15
 	max_dizziness_amt = 20

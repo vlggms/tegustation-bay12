@@ -20,7 +20,13 @@
 
 	natural_weapon = /obj/item/natural_weapon/bite/spider
 
+	/// The abilities mob can't roll for
+	var/list/banned_abilities = list(/datum/random_ability/active, /datum/random_ability/death)
+	/// What abilities the mob MUST spawn with
+	var/list/musthave_abilities = list()
+	/// What abilities it can choose from. If it's empty - it will generate a list
 	var/list/potential_abilities = list()
+	/// Currently available abilities
 	var/list/abilities = list()
 	/// How much abilities we can roll for
 	var/abilities_amount = 2
@@ -34,7 +40,10 @@
 
 /mob/living/simple_animal/hostile/random_monster/proc/InitAbilities()
 	if(!LAZYLEN(potential_abilities))
-		potential_abilities = subtypesof(/datum/random_ability)
+		potential_abilities = (subtypesof(/datum/random_ability) - banned_abilities - musthave_abilities)
+	for(var/mhra in musthave_abilities)
+		var/datum/random_ability/choice = mhra
+		abilities += new choice
 	for(var/i=1 to abilities_amount)
 		if(!LAZYLEN(potential_abilities))
 			break
@@ -61,9 +70,31 @@
 /mob/living/simple_animal/hostile/random_monster/do_special_attack(atom/A)
 	. = ..()
 	var/list/possible_abilities = list()
-	for(var/datum/random_ability/ra in abilities)
-		if(ra.CanUse(src))
-			possible_abilities += ra
+	for(var/datum/random_ability/active/ara in abilities)
+		if(ara.CanUse(src))
+			possible_abilities += ara
 	if(LAZYLEN(possible_abilities))
-		var/datum/random_ability/abil = pick(possible_abilities)
+		var/datum/random_ability/active/abil = pick(possible_abilities)
 		abil.perform(src, A)
+
+/* Death */
+/mob/living/simple_animal/hostile/random_monster/death(gibbed, deathmessage = "dies!", show_dead_message)
+	. = ..()
+	if(!.) // Mob was already dead; I.e. it got gibbed while dead
+		return
+	for(var/datum/random_ability/death/dra in abilities)
+		if(dra.CanUse(src, gibbed))
+			dra.perform(src, null)
+
+/* Destroy */
+// Here we clean up the abilities list
+/mob/living/simple_animal/hostile/random_monster/Destroy()
+	for(var/datum/D in abilities)
+		qdel(D)
+	return ..()
+
+
+// *** Preset types ***//
+// Mitosis
+/mob/living/simple_animal/hostile/random_monster/mitosis
+	musthave_abilities = list(/datum/random_ability/death/mitosis)
