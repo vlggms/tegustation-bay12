@@ -85,20 +85,20 @@
 #define NO_BUTTON		0x200	//spell won't show up in the HUD with this
 
 //invocation
-#define SpI_SHOUT	"shout"
-#define SpI_WHISPER	"whisper"
-#define SpI_EMOTE	"emote"
-#define SpI_NONE	"none"
+#define INVOKE_SHOUT	"shout"
+#define INVOKE_WHISPER	"whisper"
+#define INVOKE_EMOTE	"emote"
+#define INVOKE_NONE		"none"
 
 //upgrading
-#define Sp_SPEED	"speed"
-#define Sp_POWER	"power"
-#define Sp_TOTAL	"total"
+#define UPGRADE_SPEED	"speed"
+#define UPGRADE_POWER	"power"
+#define UPGRADE_TOTAL	"total"
 
 //casting costs
-#define Sp_RECHARGE	"recharge"
-#define Sp_CHARGES	"charges"
-#define Sp_HOLDVAR	"holdervar"
+#define SPELL_RECHARGE	"recharge"
+#define SPELL_CHARGES	"charges"
+#define SPELL_HOLDVAR	"holdervar"
 
 //Voting-related
 #define VOTE_PROCESS_ABORT    1
