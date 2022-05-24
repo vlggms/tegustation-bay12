@@ -88,6 +88,12 @@
 /decl/emote/audible/clap
 	key = "clap"
 	emote_message_3p = "USER claps."
+	emote_sound = list(
+		'sound/misc/clap1.ogg',
+		'sound/misc/clap2.ogg',
+		'sound/misc/clap3.ogg',
+		'sound/misc/clap4.ogg'
+	)
 
 /decl/emote/audible/chuckle
 	key = "chuckle"
@@ -110,6 +116,18 @@
 	key = "laugh"
 	emote_message_3p_target = "USER laughs at TARGET."
 	emote_message_3p = "USER laughs."
+	emote_sound = list(
+		FEMALE = list('sound/voice/human/womanlaugh.ogg'),
+		MALE = list('sound/voice/human/manlaugh1.ogg', 'sound/voice/human/manlaugh2.ogg')
+	)
+
+/decl/emote/audible/laugh/do_sound(atom/user)
+	if(!ishuman(user))
+		return
+	var/mob/living/carbon/human/H = user
+	if(H.species.name != SPECIES_HUMAN) // TODO: Add species-specific laugh sounds
+		return
+	return ..()
 
 /decl/emote/audible/mumble
 	key = "mumble"
