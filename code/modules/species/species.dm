@@ -62,6 +62,7 @@
 	var/thirst_factor = DEFAULT_THIRST_FACTOR // Multiplier for thirst.
 	var/taste_sensitivity = TASTE_NORMAL      // How sensitive the species is to minute tastes.
 	var/silent_steps
+	var/list/special_footstep_sounds = list()
 
 	var/min_age = 17
 	var/max_age = 70
