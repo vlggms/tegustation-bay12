@@ -395,7 +395,7 @@
 /obj/machinery/igniter{
 	id_tag = "portsparker"
 	},
-/turf/simulated/floor/reinforced/oxygen,
+/turf/simulated/floor/reinforced/phoron/fuel,
 /area/intrepid/department/engineering/portthruster)
 "axh" = (
 /obj/structure/handrail{
@@ -638,9 +638,7 @@
 /turf/simulated/floor,
 /area/space)
 "aMg" = (
-/obj/effect/floor_decal/corner/red{
-	dir = 10
-	},
+/obj/effect/floor_decal/corner/red/border,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/exploration/hangar)
 "aMW" = (
@@ -715,7 +713,12 @@
 	icon_state = "railing0-1"
 	},
 /obj/machinery/conveyor{
-	dir = 5
+	dir = 5;
+	id = "ore"
+	},
+/obj/machinery/computer/mining{
+	pixel_x = -32;
+	density = 0
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/misc/maint/aft)
@@ -1180,11 +1183,11 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/xenobiolab)
 "bhz" = (
-/obj/effect/paint/expeditionary,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5
 	},
+/obj/effect/paint/sun,
 /turf/simulated/wall/r_titanium,
 /area/shuttle/pandora/lifesupport)
 "biN" = (
@@ -1695,11 +1698,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/space)
 "bGo" = (
-/obj/effect/paint/expeditionary,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9;
 	icon_state = "intact"
 	},
+/obj/effect/paint/sun,
 /turf/simulated/wall/r_titanium,
 /area/shuttle/pandora/electrical)
 "bGT" = (
@@ -2183,6 +2186,10 @@
 	dir = 1;
 	pixel_y = -35
 	},
+/obj/machinery/rotating_alarm/security_alarm{
+	dir = 1;
+	pixel_y = -13
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/starboard)
 "cdT" = (
@@ -2202,7 +2209,7 @@
 "ceF" = (
 /obj/machinery/computer/ship/helm{
 	icon_state = "computer";
-	req_access = list("access_expedition_shuttle_helm")
+	req_access = list("ACCESS_EXPLO_HELM")
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/pandora/cockpit)
@@ -2933,18 +2940,12 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
 "cML" = (
-/obj/structure/cable{
-	icon_state = "1-2"
+/obj/machinery/rotating_alarm/security_alarm{
+	dir = 4;
+	pixel_x = -14
 	},
-/obj/machinery/computer/mining{
-	density = 0;
-	pixel_x = 32
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor,
-/area/intrepid/misc/maint/aft)
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/misc/hallway/center)
 "cMX" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
 	dir = 1;
@@ -3126,9 +3127,16 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/space)
+"cXn" = (
+/obj/machinery/hologram/holopad{
+	caller_id = "Intrepid Meeting Room"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/department/command/meetingroom)
 "cXU" = (
 /obj/machinery/conveyor{
-	dir = 1
+	dir = 1;
+	id = "ore"
 	},
 /obj/structure/railing/mapped{
 	dir = 4;
@@ -3136,6 +3144,10 @@
 	},
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/machinery/computer/mining{
+	pixel_x = -32;
+	density = 0
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/misc/maint/aft)
@@ -3230,7 +3242,6 @@
 	frequency = 1331;
 	id_tag = "pandora_shuttle";
 	pixel_y = -25;
-	req_access = list("access_expedition_shuttle");
 	tag_airpump = "pandora_shuttle_pump";
 	tag_chamber_sensor = "pandora_shuttle_sensor";
 	tag_exterior_door = "pandora_shuttle_outer";
@@ -3983,6 +3994,14 @@
 /obj/effect/floor_decal/corner/paleblue,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/portside)
+"dJe" = (
+/obj/machinery/flasher/portable,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/rotating_alarm/security_alarm{
+	pixel_y = 13
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/intrepid/department/security/armory)
 "dKh" = (
 /obj/structure/cable/green{
 	icon_state = "9-10"
@@ -4837,6 +4856,9 @@
 	dir = 1
 	},
 /obj/random_multi/single_item/boombox,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/pandora/lifesupport)
 "epR" = (
@@ -4878,7 +4900,7 @@
 	id_tag = "stardust_shuttle_dock_airlock";
 	pixel_x = -24;
 	pixel_y = 0;
-	req_access = list("access_stardust");
+	req_access = list("ACCESS_INTREPID_STARDUST");
 	tag_exterior_door = "stardust_outer_shuttle_airlock";
 	tag_exterior_sensor = null;
 	tag_interior_door = "stardust_shuttle_airlock"
@@ -6388,6 +6410,10 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/rotating_alarm/security_alarm{
+	dir = 8;
+	pixel_x = 14
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/command/bridge)
 "fPf" = (
@@ -6589,10 +6615,10 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
 "fWJ" = (
-/obj/effect/paint/expeditionary,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 8
 	},
+/obj/effect/paint/sun,
 /turf/simulated/wall/r_titanium,
 /area/shuttle/pandora/lifesupport)
 "fXh" = (
@@ -6646,6 +6672,8 @@
 	c_tag = "AI Chamber - Core Foyer";
 	network = list("Command")
 	},
+/obj/machinery/porta_turret,
+/obj/effect/floor_decal/industrial/hatch/red,
 /turf/simulated/floor/tiled/dark/airless,
 /area/intrepid/department/command/AI/AIFoyer)
 "gbm" = (
@@ -6732,6 +6760,9 @@
 	},
 /obj/item/ammo_magazine/pistol/double/rubber{
 	name = "rubber doublestack pistol magazine"
+	},
+/obj/machinery/rotating_alarm/security_alarm{
+	pixel_y = 13
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/security/armory_tactical)
@@ -6824,6 +6855,7 @@
 /obj/item/stack/material/plastic/fifty,
 /obj/item/stack/material/ocp/fifty,
 /obj/item/stack/material/plasteel/fifty,
+/obj/item/stack/material/phoron/ten,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/monitoring)
 "goJ" = (
@@ -6995,7 +7027,8 @@
 /area/intrepid/misc/maint/aft)
 "gxN" = (
 /obj/machinery/conveyor{
-	dir = 8
+	dir = 8;
+	id = "ore"
 	},
 /obj/structure/railing/mapped{
 	dir = 1;
@@ -7026,7 +7059,7 @@
 	frequency = 1331;
 	id_tag = "stardust_outer_shuttle_airlock";
 	name = "Stardust Dock Access";
-	req_access = list("access_stardust")
+	req_access = list("ACCESS_INTREPID_STARDUST")
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/intrepid/department/medical/treatment)
@@ -7105,9 +7138,7 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/hallway)
 "gED" = (
-/obj/effect/floor_decal/corner/white{
-	dir = 10
-	},
+/obj/effect/floor_decal/corner/white/border,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/exploration/hangar)
 "gEI" = (
@@ -7116,6 +7147,9 @@
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/civillian/galley)
 "gFn" = (
+/obj/machinery/hologram/holopad{
+	caller_id = "Intrepid Medical Reception"
+	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/misc/hallway/portside)
 "gFC" = (
@@ -7157,7 +7191,7 @@
 /turf/simulated/wall/r_titanium,
 /area/shuttle/research/maint)
 "gHe" = (
-/obj/effect/paint/expeditionary,
+/obj/effect/paint/sun,
 /turf/simulated/wall/r_titanium,
 /area/shuttle/pandora/cockpit)
 "gHo" = (
@@ -7578,7 +7612,7 @@
 	frequency = 1331;
 	id_tag = "stardust_outer_shuttle_airlock";
 	name = "Stardust Dock Access";
-	req_access = list("access_stardust")
+	req_access = list("ACCESS_INTREPID_STARDUST")
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/intrepid/misc/hallway/portside)
@@ -7917,8 +7951,8 @@
 /turf/simulated/floor/wood/walnut,
 /area/intrepid/department/medical/therapy)
 "huo" = (
-/obj/effect/paint/expeditionary,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/paint/sun,
 /turf/simulated/wall/r_titanium,
 /area/shuttle/pandora/electrical)
 "huA" = (
@@ -8480,6 +8514,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
+/obj/machinery/hologram/holopad/longrange{
+	caller_id = "Pandora Cockpit"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/pandora/cockpit)
 "iaM" = (
@@ -8540,10 +8577,24 @@
 /obj/effect/landmark/start{
 	name = "AI"
 	},
+/obj/item/device/radio/intercom{
+	dir = 1;
+	pixel_y = -28
+	},
 /obj/machinery/turretid/stun{
-	dir = 8;
-	pixel_x = 36;
-	pixel_y = 5
+	pixel_y = 24
+	},
+/obj/machinery/button/blast_door{
+	id_tag = "aichamber";
+	name = "AI Core Shielding button";
+	pixel_y = 35;
+	pixel_x = -6
+	},
+/obj/machinery/button/blast_door{
+	id_tag = "aifoyer";
+	name = "AI Foyer Window Shielding button";
+	pixel_y = 35;
+	pixel_x = 6
 	},
 /turf/simulated/floor/greengrid/airless,
 /area/intrepid/department/command/AI/AICore)
@@ -9055,6 +9106,10 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 8;
 	icon_state = "corner_white"
+	},
+/obj/machinery/rotating_alarm/security_alarm{
+	dir = 4;
+	pixel_x = -14
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/portside)
@@ -10410,6 +10465,9 @@
 /obj/item/airlock_brace,
 /obj/item/airlock_brace,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/rotating_alarm/security_alarm{
+	pixel_y = 13
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/security/armory)
 "jNN" = (
@@ -10602,7 +10660,7 @@
 	frequency = 1331;
 	id_tag = "stardust_outer_shuttle_airlock";
 	name = "Stardust Dock Access";
-	req_access = list("access_stardust")
+	req_access = list("ACCESS_INTREPID_STARDUST")
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/intrepid/misc/hallway/portside)
@@ -10765,12 +10823,9 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/hallway)
 "khN" = (
-/obj/machinery/door/blast/regular/open{
-	icon_state = "pdoor0";
-	id_tag = "aichamber"
-	},
-/obj/effect/wingrille_spawn/reinforced/full,
-/turf/simulated/floor,
+/obj/machinery/porta_turret,
+/obj/effect/floor_decal/industrial/hatch/red,
+/turf/simulated/floor/tiled/dark/airless,
 /area/intrepid/department/command/AI/AICore)
 "kis" = (
 /obj/effect/floor_decal/industrial/warning/corner,
@@ -10878,9 +10933,15 @@
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/civillian/mess)
 "knA" = (
-/obj/machinery/porta_turret,
-/turf/simulated/wall/r_wall/prepainted,
-/area/intrepid/department/command/AI/AIFoyer)
+/obj/effect/floor_decal/corner/brown{
+	dir = 8
+	},
+/obj/machinery/rotating_alarm/security_alarm{
+	dir = 1;
+	pixel_y = -13
+	},
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/misc/hallway/starboard)
 "knX" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -11176,7 +11237,7 @@
 	frequency = 1331;
 	id_tag = "stardust_shuttle_airlock";
 	name = "Stardust External Access";
-	req_access = list("access_stardust")
+	req_access = list("ACCESS_INTREPID_STARDUST")
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/research/hallway)
@@ -11282,7 +11343,7 @@
 	dir = 6;
 	icon_state = "intact"
 	},
-/turf/simulated/floor/reinforced/oxygen,
+/turf/simulated/floor/reinforced/phoron/fuel,
 /area/intrepid/department/engineering/portthruster)
 "kLs" = (
 /obj/machinery/door/airlock/highsecurity/bolted,
@@ -11592,8 +11653,7 @@
 	frequency = 1331;
 	icon_state = "closed";
 	id_tag = "pandora_shuttle_inner";
-	name = "Pandora External Access";
-	req_access = list("access_expedition_shuttle_helm")
+	name = "Pandora External Access"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/pandora/cargo)
@@ -12649,6 +12709,10 @@
 /obj/effect/floor_decal/corner/green{
 	dir = 1
 	},
+/obj/machinery/rotating_alarm/security_alarm{
+	dir = 4;
+	pixel_x = -14
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/starboard)
 "mdz" = (
@@ -12806,7 +12870,7 @@
 /obj/machinery/igniter{
 	id_tag = "starboardsparker"
 	},
-/turf/simulated/floor/reinforced/oxygen,
+/turf/simulated/floor/reinforced/phoron/fuel,
 /area/intrepid/department/engineering/starboardthruster)
 "mio" = (
 /obj/machinery/optable,
@@ -13042,10 +13106,10 @@
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/misc/maint/starboard)
 "msO" = (
-/obj/effect/paint/expeditionary,
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	dir = 4
 	},
+/obj/effect/paint/sun,
 /turf/simulated/wall/r_titanium,
 /area/shuttle/pandora/electrical)
 "msQ" = (
@@ -13814,8 +13878,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/cos)
 "mWK" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
 /obj/machinery/porta_turret,
-/turf/simulated/wall/r_wall/prepainted,
+/obj/effect/floor_decal/industrial/hatch/red,
+/turf/simulated/floor/tiled/dark/airless,
 /area/intrepid/department/command/AI/AICore)
 "mWQ" = (
 /obj/structure/cable{
@@ -14578,7 +14646,8 @@
 /area/space)
 "nHp" = (
 /obj/structure/closet/secure_closet/guncabinet{
-	name = "ammunition cabinet"
+	name = "ammunition cabinet";
+	req_access = list("ACCESS_INTREPID_SQUAD_LEADER")
 	},
 /obj/item/ammo_magazine/t12,
 /obj/item/ammo_magazine/t12,
@@ -14744,7 +14813,7 @@
 	frequency = 1331;
 	id_tag = "stardust_shuttle_airlock";
 	name = "Stardust External Access";
-	req_access = list("access_stardust")
+	req_access = list("ACCESS_INTREPID_STARDUST")
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/research/hallway)
@@ -14985,6 +15054,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/equipment)
+"ocs" = (
+/obj/effect/floor_decal/corner/grey/border,
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/department/exploration/hangar)
 "odx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -15005,6 +15078,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/machinery/rotating_alarm/security_alarm{
+	pixel_y = 13
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/portside)
 "oeq" = (
@@ -15052,20 +15128,9 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
 "ofH" = (
-/obj/machinery/button/blast_door{
-	id_tag = "aifoyer";
-	name = "AI Foyer Window Shielding button";
-	pixel_y = 22
-	},
-/obj/machinery/button/blast_door{
-	id_tag = "aichamber";
-	name = "AI Core Shielding button";
-	pixel_y = 31
-	},
-/turf/simulated/floor/tiled/dark/monotile{
-	initial_gas = null
-	},
-/area/intrepid/department/command/AI/AICore)
+/obj/machinery/computer/ship/sensors,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/pandora/cockpit)
 "ofQ" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/corner/research/border{
@@ -15218,21 +15283,17 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/command/meetingroom)
 "omV" = (
-/obj/structure/cable{
-	icon_state = "1-2"
+/obj/effect/floor_decal/corner/orange{
+	dir = 4
 	},
-/obj/machinery/computer/mining{
-	density = 0;
-	pixel_x = 32
+/obj/machinery/rotating_alarm/security_alarm{
+	pixel_y = 13
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor,
-/area/intrepid/misc/maint/aft)
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/misc/hallway/portside)
 "ong" = (
-/obj/effect/paint/expeditionary,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/paint/sun,
 /turf/simulated/wall/r_titanium,
 /area/shuttle/pandora/lifesupport)
 "onp" = (
@@ -15323,6 +15384,16 @@
 "orz" = (
 /turf/simulated/wall/prepainted,
 /area/intrepid/department/civillian/bar)
+"orF" = (
+/obj/effect/floor_decal/corner/green{
+	dir = 8
+	},
+/obj/machinery/rotating_alarm/security_alarm{
+	dir = 1;
+	pixel_y = -13
+	},
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/misc/hallway/starboard)
 "osS" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -15349,8 +15420,7 @@
 	master_tag = "pandora_shuttle";
 	name = "interior access button";
 	pixel_x = -24;
-	pixel_y = -24;
-	req_access = list("access_expedition_shuttle")
+	pixel_y = -24
 	},
 /obj/machinery/airlock_sensor{
 	frequency = 1331;
@@ -15803,6 +15873,14 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark/airless,
 /area/intrepid/department/command/AI/AIFoyer)
+"oOU" = (
+/obj/effect/floor_decal/corner/purple,
+/obj/machinery/rotating_alarm/security_alarm{
+	dir = 1;
+	pixel_y = -13
+	},
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/misc/hallway/portside)
 "oPj" = (
 /turf/simulated/floor/carpet/blue3,
 /area/intrepid/department/command/commandquarters/cmo)
@@ -16194,6 +16272,8 @@
 	c_tag = "AI Chamber - Core Aft";
 	network = list("Command")
 	},
+/obj/machinery/porta_turret,
+/obj/effect/floor_decal/industrial/hatch/red,
 /turf/simulated/floor/tiled/dark/airless,
 /area/intrepid/department/command/AI/AICore)
 "pcQ" = (
@@ -16248,15 +16328,13 @@
 	frequency = 1331;
 	icon_state = "closed";
 	id_tag = "pandora_shuttle_outer";
-	name = "Pandora External Access";
-	req_access = list("access_expedition_shuttle_helm")
+	name = "Pandora External Access"
 	},
 /obj/machinery/access_button/airlock_exterior{
 	frequency = 1331;
 	master_tag = "pandora_shuttle";
 	pixel_x = 24;
-	pixel_y = -9;
-	req_access = list("access_expedition_shuttle")
+	pixel_y = -9
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/pandora/cargo)
@@ -16666,10 +16744,10 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/starboard)
 "pCb" = (
-/obj/effect/paint/expeditionary,
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	dir = 4
 	},
+/obj/effect/paint/sun,
 /turf/simulated/wall/r_titanium,
 /area/shuttle/pandora/lifesupport)
 "pCf" = (
@@ -16924,6 +17002,10 @@
 /obj/machinery/light/small{
 	dir = 4;
 	icon_state = "bulb1"
+	},
+/obj/machinery/camera/network/engineering{
+	dir = 8;
+	c_tag = "Engineering - Solar Plating Control"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/solarcontrol)
@@ -17713,6 +17795,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/civillian/hydroponics)
+"qsT" = (
+/obj/machinery/rotating_alarm/security_alarm{
+	dir = 1;
+	pixel_y = -13
+	},
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/misc/hallway/center)
 "qtf" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -17859,6 +17948,12 @@
 /obj/structure/catwalk,
 /turf/space,
 /area/space)
+"qBZ" = (
+/obj/effect/floor_decal/corner/grey/bordercorner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/department/exploration/hangar)
 "qCv" = (
 /obj/effect/floor_decal/corner/blue/diagonal,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -17922,6 +18017,10 @@
 	id_tag = "bridgewindow";
 	name = "Bridge Window blast door button";
 	pixel_x = 25
+	},
+/obj/machinery/rotating_alarm/security_alarm{
+	dir = 8;
+	pixel_x = 14
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/command/bridge)
@@ -18007,6 +18106,7 @@
 	c_tag = "Hangar - Portside Hangar";
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/red/bordercorner,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/exploration/hangar)
 "qHx" = (
@@ -19230,7 +19330,7 @@
 /obj/machinery/igniter{
 	id_tag = "starboardsparker"
 	},
-/turf/simulated/floor/reinforced/oxygen,
+/turf/simulated/floor/reinforced/phoron/fuel,
 /area/intrepid/department/engineering/starboardthruster)
 "rOx" = (
 /obj/machinery/computer/rdconsole/core{
@@ -19362,6 +19462,10 @@
 /obj/machinery/camera/network/security{
 	dir = 4;
 	c_tag = "Security - Monitoring"
+	},
+/obj/machinery/rotating_alarm/security_alarm{
+	dir = 4;
+	pixel_x = -14
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/security/bo)
@@ -19631,7 +19735,7 @@
 	frequency = 1331;
 	id_tag = "stardust_shuttle_airlock";
 	name = "Stardust External Access";
-	req_access = list("access_stardust")
+	req_access = list("ACCESS_INTREPID_STARDUST")
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/research/hallway)
@@ -21398,10 +21502,10 @@
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/civillian/galley)
 "tHW" = (
-/obj/effect/paint/expeditionary,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 8
 	},
+/obj/effect/paint/sun,
 /turf/simulated/wall/r_titanium,
 /area/shuttle/pandora/electrical)
 "tIB" = (
@@ -21444,6 +21548,9 @@
 /obj/item/clothing/head/helmet/ballistic,
 /obj/item/clothing/head/helmet/ballistic,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/rotating_alarm/security_alarm{
+	pixel_y = 13
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/security/armory_tactical)
 "tJp" = (
@@ -21932,6 +22039,11 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/monitoring)
+"uih" = (
+/obj/machinery/porta_turret,
+/obj/effect/floor_decal/industrial/hatch/red,
+/turf/simulated/floor/tiled/dark/airless,
+/area/intrepid/department/command/AI/AIFoyer)
 "uiP" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/machinery/light{
@@ -22504,6 +22616,10 @@
 	},
 /obj/machinery/atmospherics/valve/shutoff/scrubbers{
 	dir = 4
+	},
+/obj/machinery/rotating_alarm/security_alarm{
+	dir = 1;
+	pixel_y = -13
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/starboard)
@@ -23988,7 +24104,7 @@
 	frequency = 1331;
 	id_tag = "stardust_outer_shuttle_airlock";
 	name = "Stardust Dock Access";
-	req_access = list("access_stardust")
+	req_access = list("ACCESS_INTREPID_STARDUST")
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/intrepid/department/medical/treatment)
@@ -24137,7 +24253,7 @@
 /area/intrepid/misc/maint/starboard)
 "wla" = (
 /obj/machinery/atmospherics/unary/tank/air{
-	dir = 4
+	dir = 8
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/alarm{
@@ -24955,6 +25071,9 @@
 /obj/structure/sign/warning/pods/east{
 	pixel_y = 27
 	},
+/obj/machinery/rotating_alarm/security_alarm{
+	pixel_y = 13
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/portside)
 "wUA" = (
@@ -25418,6 +25537,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
+/obj/machinery/conveyor_switch/oneway{
+	id = "ore"
+	},
 /turf/simulated/floor/tiled,
 /area/intrepid/misc/maint/aft)
 "xnK" = (
@@ -25566,6 +25688,12 @@
 /obj/structure/closet/secure_closet/engineering_chief_intrepid,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/ce)
+"xtN" = (
+/obj/machinery/rotating_alarm/security_alarm{
+	pixel_y = 13
+	},
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/misc/hallway/center)
 "xtU" = (
 /obj/machinery/door/window/brigdoor/northleft{
 	req_access = list("ACCESS_TERRAGOV_CREW")
@@ -41724,7 +41852,7 @@ wVK
 wVK
 aSz
 oWx
-yjx
+orF
 oTl
 lmL
 qrP
@@ -42167,7 +42295,7 @@ hUt
 fcZ
 mtz
 cDm
-sOD
+oOU
 cao
 wMr
 vso
@@ -45157,7 +45285,7 @@ wvd
 bvp
 eQx
 lAv
-qmI
+knA
 oTl
 foJ
 ycS
@@ -48397,7 +48525,7 @@ jic
 sBz
 dnj
 dnj
-dnj
+cML
 xwe
 dLV
 stl
@@ -48419,7 +48547,7 @@ jic
 jRD
 dLV
 sBz
-dnj
+cML
 wjY
 dnj
 xwe
@@ -49413,17 +49541,17 @@ gzs
 dNR
 jUy
 qPD
-dnj
+qsT
 vfa
 mQH
 xaI
 rTV
-rTV
+cXn
 rTV
 ihe
 eyU
 vfa
-dnj
+xtN
 exo
 lJg
 dju
@@ -51457,7 +51585,7 @@ fXh
 iNC
 tYb
 cao
-iDb
+omV
 dlG
 fzM
 bxO
@@ -52853,7 +52981,7 @@ fjG
 bcp
 gaA
 bSo
-bcp
+uih
 cmE
 jbq
 rwt
@@ -52866,10 +52994,10 @@ exn
 gdY
 uYZ
 naW
-cML
+pEa
 pEa
 phn
-omV
+phn
 oGM
 qlf
 fNQ
@@ -53052,11 +53180,11 @@ abm
 rhZ
 rwt
 lQp
-knA
+rwt
 piK
 bcp
 qkQ
-knA
+rwt
 lQp
 rwt
 jRI
@@ -53660,7 +53788,7 @@ cJQ
 vxW
 aHc
 did
-aHc
+khN
 did
 aHc
 vxW
@@ -54063,9 +54191,9 @@ tKm
 bWl
 vxW
 aHc
-khN
+tKm
 ibt
-khN
+tKm
 aHc
 vxW
 bAD
@@ -54262,15 +54390,15 @@ riz
 pOt
 xUD
 tKm
+tKm
 mWK
-rGG
 qma
 tKm
 bWI
 tKm
-ofH
-rGG
+did
 mWK
+tKm
 tKm
 cjS
 kpt
@@ -54467,9 +54595,9 @@ tKm
 bWl
 vxW
 aHc
-khN
+tKm
 uqS
-khN
+tKm
 aHc
 vxW
 bAD
@@ -54688,7 +54816,7 @@ fdc
 bct
 tvB
 wfs
-ptD
+ofH
 iuy
 tHW
 wla
@@ -54700,7 +54828,7 @@ scv
 eCl
 ikQ
 pcQ
-dHD
+ocs
 smK
 vNT
 vCl
@@ -54850,7 +54978,7 @@ nkV
 buz
 buz
 tIB
-rIT
+dJe
 wcM
 eZZ
 eXY
@@ -54902,7 +55030,7 @@ jFs
 xNC
 vaq
 pcQ
-dHD
+qBZ
 fdc
 fdc
 wmr
@@ -55074,7 +55202,7 @@ tKm
 uaG
 sTb
 wQk
-mWK
+tKm
 llw
 llw
 llw
