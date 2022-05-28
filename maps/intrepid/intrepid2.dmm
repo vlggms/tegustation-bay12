@@ -2487,6 +2487,10 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/machinery/rotating_alarm/security_alarm{
+	dir = 1;
+	pixel_y = -13
+	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "sf" = (
@@ -3221,6 +3225,10 @@
 	dir = 4;
 	icon_state = "intact"
 	},
+/obj/machinery/camera/network/engineering{
+	c_tag = "Engineering - Atmospherics Portside";
+	dir = 1
+	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/atmos)
 "xJ" = (
@@ -3463,6 +3471,9 @@
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4;
 	icon_state = "intact"
+	},
+/obj/machinery/camera/network/engineering{
+	c_tag = "Engineering - Atmospherics Starboard"
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/atmos)
@@ -3747,6 +3758,9 @@
 /obj/machinery/camera/network/second_deck{
 	c_tag = "Second Deck - Amidships"
 	},
+/obj/machinery/rotating_alarm/security_alarm{
+	pixel_y = 13
+	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "Dr" = (
@@ -3871,6 +3885,9 @@
 "EL" = (
 /obj/machinery/portable_atmospherics/canister/empty,
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/machinery/rotating_alarm/security_alarm{
+	pixel_y = 13
+	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "EP" = (
@@ -5529,14 +5546,6 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
-"TF" = (
-/obj/machinery/camera/network/command{
-	c_tag = "Command - Obstruction Field Disperser";
-	dir = 4;
-	pixel_y = 19
-	},
-/turf/space,
-/area/space)
 "TN" = (
 /obj/machinery/conveyor{
 	dir = 8;
@@ -26539,7 +26548,7 @@ UU
 UU
 UU
 UU
-TF
+UU
 UU
 UU
 UU
@@ -33210,7 +33219,7 @@ UU
 UU
 UU
 UU
-UW
+UU
 UU
 UU
 UU
@@ -33412,7 +33421,7 @@ UU
 UU
 UU
 UU
-UW
+UU
 UU
 UU
 UU

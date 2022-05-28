@@ -16,7 +16,7 @@
 /var/const/access_expedition_shuttle_helm = "ACCESS_EXPLO_HELM" //77
 /datum/access/exploration_shuttle_helm
 	id = access_expedition_shuttle_helm
-	desc = "Charon Helm"
+	desc = "Pandora Helm"
 	region = ACCESS_REGION_GENERAL
 
 /var/const/access_aquila = "ACCESS_INTREPID_AQUILA" //78
