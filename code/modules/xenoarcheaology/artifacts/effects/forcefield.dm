@@ -36,13 +36,13 @@
 /datum/artifact_effect/forcefield/process()
 	..()
 	for(var/obj/effect/energy_field/E in created_field)
-		if(E.strength < 1)
-			E.Strengthen(0.1)
+		if(E.strength < 20)
+			E.Strengthen(0.5)
 
 /datum/artifact_effect/forcefield/proc/SpawnFields()
 	if(created_field.len)
 		DeleteFields()
-	else if(holder)
+	if(holder)
 		var/turf/start_turf = get_turf(holder)
 		var/list/field_zone = list()
 		if(!istype(start_turf))
@@ -51,7 +51,7 @@
 		for(var/turf/T in field_zone)
 			var/obj/effect/energy_field/E = new(T)
 			created_field += E
-			E.strength = 1
+			E.strength = 15
 			E.set_density(1)
 			E.anchored = TRUE
 			E.color = field_color
