@@ -22,6 +22,10 @@
 	update_nearby_tiles()
 	. = ..()
 
+/obj/effect/energy_field/attackby(obj/item/O, mob/user)
+	Stress(O.force / 10)
+	return ..()
+
 /obj/effect/energy_field/ex_act(var/severity)
 	Stress(0.5 + severity)
 

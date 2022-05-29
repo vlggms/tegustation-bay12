@@ -7,6 +7,7 @@
 #define ACTIVATE_BOMB "bomb"
 #define ACTIVATE_MOB_BUMP "bumping"
 #define ACTIVATE_WATER "water"
+#define ACTIVATE_CHEMICAL "chemical"
 
 /obj/machinery/artifact
 	name = "alien artifact"
@@ -19,11 +20,15 @@
 	var/datum/artifact_effect/effect = null
 	var/cooldown
 	var/activation_method
-	var/list/possible_methods = list(ACTIVATE_TOUCH, ACTIVATE_SPEECH, ACTIVATE_TEMPERATURE, ACTIVATE_ATTACK, ACTIVATE_BULLET,
-								ACTIVATE_LASER, ACTIVATE_BOMB, ACTIVATE_MOB_BUMP, ACTIVATE_WATER)
+	var/list/possible_methods = list(
+								ACTIVATE_TOUCH, ACTIVATE_SPEECH, ACTIVATE_TEMPERATURE, ACTIVATE_ATTACK, ACTIVATE_BULLET,
+								ACTIVATE_LASER, ACTIVATE_BOMB, ACTIVATE_MOB_BUMP, ACTIVATE_WATER, ACTIVATE_CHEMICAL
+								)
 	var/attack_activation_force = 10 // Minimum force to activate if method is attack
 	var/temperature_activation_required = 0 // Temperature required to activate if method is temperature
 	var/temperature_activation_direction = FALSE // If false - must be below, if true - above.
+	var/list/chemical_activation_reagents = list() // What reagents can activate it, if method is chemical
+	var/chemical_activation_name = null // The group name of reagents needed for chemical activation
 	var/stasis = 0
 	var/being_used
 
@@ -47,6 +52,31 @@
 						temperature_activation_required = rand(250, 2000)
 			if(ACTIVATE_ATTACK)
 				attack_activation_force = rand(8, 20)
+			if(ACTIVATE_CHEMICAL)
+				chemical_activation_name = pick("water", "acid", "volatile", "toxin")
+				switch(chemical_activation_name)
+					if("water")
+						chemical_activation_reagents = list(
+							/datum/reagent/water,
+							/datum/reagent/water/boiling,
+							/datum/reagent/drink/ice)
+					if("acid")
+						chemical_activation_reagents = list(
+							/datum/reagent/acid/sulphuric,
+							/datum/reagent/acid/polytrinic,
+							/datum/reagent/diethylamine)
+					if("volatile")
+						chemical_activation_reagents = list(
+							/datum/reagent/toxin/phoron,
+							/datum/reagent/thermite,
+							/datum/reagent/fuel)
+					if("toxin")
+						chemical_activation_reagents = list(
+							/datum/reagent/toxin,
+							/datum/reagent/toxin/cyanide,
+							/datum/reagent/toxin/amatoxin,
+							/datum/reagent/toxin/venom,
+							/datum/reagent/toxin/chlorine)
 
 	if(!icon_state)
 		icon_num = rand(0, 13)
@@ -135,6 +165,11 @@
 		Activation(user, ACTIVATE_ATTACK)
 		if(effect.toggled && effect.effect_type == EFFECT_TOUCH)
 			DoEffect(user)
+	if(istype(W, /obj/item/reagent_containers))
+		for(var/reagent in chemical_activation_reagents)
+			if(W.reagents.remove_reagent(reagent, 5))
+				Activation(user, ACTIVATE_CHEMICAL)
+				break
 
 /obj/machinery/artifact/Bumped(M)
 	. = ..()

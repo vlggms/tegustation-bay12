@@ -1,40 +1,42 @@
 /datum/artifact_effect/robohurt
 	name = "robotic harm"
+	possible_effect_types = list(EFFECT_TOUCH, EFFECT_AURA, EFFECT_PULSE)
+	cooldown_time = 50
 	var/last_message
 
-/datum/artifact_effect/robohurt/New()
-	..()
-	effect_type = pick(EFFECT_ELECTRO, EFFECT_PARTICLE)
+/datum/artifact_effect/robohurt/getDescription()
+	return "The artifact serves as a house to harmful nanites swarm."
 
-/datum/artifact_effect/robohurt/DoEffectTouch(var/mob/user)
-	if(user)
-		if (istype(user, /mob/living/silicon/robot))
-			var/mob/living/silicon/robot/R = user
-			to_chat(R, "<span class='danger'>Your systems report severe damage has been inflicted!</span>")
-			R.adjustBruteLoss(rand(10,50))
-			R.adjustFireLoss(rand(10,50))
-			return 1
+/datum/artifact_effect/robohurt/DoEffect(mob/user)
+	if(user && istype(user, /mob/living/silicon/robot))
+		var/mob/living/silicon/robot/R = user
+		to_chat(R, "<span class='danger'>Your systems report severe damage has been inflicted!</span>")
+		R.adjustBruteLoss(rand(20,50))
+		R.adjustFireLoss(rand(20,50))
+		return 1
 
 /datum/artifact_effect/robohurt/DoEffectAura()
 	if(holder)
 		var/turf/T = get_turf(holder)
-		for (var/mob/living/silicon/robot/M in range(src.effectrange,T))
-			if(world.time - last_message > 200)
-				to_chat(M, "<span class='danger'>SYSTEM ALERT: Harmful energy field detected!</span>")
-				last_message = world.time
-			M.adjustBruteLoss(1)
-			M.adjustFireLoss(1)
-			M.updatehealth()
+		for(var/mob/living/silicon/robot/R in range(range, T))
+			if(world.time - last_message > 5 SECONDS)
+				to_chat(R, "<span class='danger'>SYSTEM ALERT: Harmful energy field detected!</span>")
+			R.adjustBruteLoss(1)
+			R.adjustFireLoss(1)
+			R.updatehealth()
+		if(world.time - last_message > 5 SECONDS)
+			last_message = world.time
 		return 1
 
 /datum/artifact_effect/robohurt/DoEffectPulse()
 	if(holder)
 		var/turf/T = get_turf(holder)
-		for (var/mob/living/silicon/robot/M in range(src.effectrange,T))
-			if(world.time - last_message > 200)
-				to_chat(M, "<span class='danger'>SYSTEM ALERT: Structural damage inflicted by energy pulse!</span>")
-				last_message = world.time
-			M.adjustBruteLoss(10)
-			M.adjustFireLoss(10)
-			M.updatehealth()
+		for(var/mob/living/silicon/robot/R in range(range, T))
+			if(world.time - last_message > 5 SECONDS)
+				to_chat(R, "<span class='danger'>SYSTEM ALERT: Harmful energy field detected!</span>")
+			R.adjustBruteLoss(10)
+			R.adjustFireLoss(10)
+			R.updatehealth()
+		if(world.time - last_message > 5 SECONDS)
+			last_message = world.time
 		return 1

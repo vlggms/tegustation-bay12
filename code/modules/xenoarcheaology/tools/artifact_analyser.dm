@@ -160,15 +160,17 @@
 					if(ACTIVATE_ATTACK)
 						out += "physical contact with an item of [(A.attack_activation_force > 14) ? "heavy" : "medium"] force."
 					if(ACTIVATE_BULLET)
-						out += "contact with a physical projectile."
+						out += "contact with a ballistic projectile."
 					if(ACTIVATE_LASER)
-						out += "coherent with a laser projectile."
+						out += "contact with a laser projectile."
 					if(ACTIVATE_BOMB)
 						out += "contact with an explosive wave."
 					if(ACTIVATE_MOB_BUMP)
-						out += "contact with a living being."
+						out += "physical contact by a push."
 					if(ACTIVATE_WATER)
 						out += "submerging into a body of water."
+					if(ACTIVATE_CHEMICAL)
+						out += "application of [A.chemical_activation_name] reagents."
 				out += "<br>"
 
 			if(A.effect)
