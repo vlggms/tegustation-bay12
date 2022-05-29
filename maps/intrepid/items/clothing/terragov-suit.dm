@@ -423,8 +423,8 @@
 		bio = ARMOR_BIO_SHIELDED,
 		rad = ARMOR_RAD_RESISTANT
 		)
-	allowed = list(/obj/item/device/flashlight,/obj/item/tank,/obj/item/device/suit_cooling_unit,/obj/item/stack/flag,/obj/item/device/scanner/health,/obj/item/device/gps,/obj/item/pinpointer/radio,/obj/item/material/hatchet/machete,/obj/item/shovel)
+	allowed = list(/obj/item/device/flashlight,/obj/item/tank,/obj/item/gun,/obj/item/device/suit_cooling_unit,/obj/item/stack/flag,/obj/item/device/scanner/health,/obj/item/device/gps,/obj/item/pinpointer/radio,/obj/item/material/hatchet/machete,/obj/item/shovel)
 
-/obj/item/clothing/suit/space/void/marine
+/obj/item/clothing/suit/space/void/marine/prepared
 	helmet = /obj/item/clothing/head/helmet/space/void/marine
 	boots = /obj/item/clothing/shoes/magboots
