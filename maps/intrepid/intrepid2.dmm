@@ -324,6 +324,7 @@
 /obj/structure/handrail{
 	dir = 4
 	},
+/obj/structure/plushie/carp,
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/civillian/dockbay)
 "ce" = (
@@ -422,12 +423,13 @@
 	id_tag = "ofd_port_airlock_controller";
 	tag_exterior_sensor = "ofd_port_exterior_sensor"
 	},
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	id_tag = "ofd_port_airlock_pump"
-	},
 /obj/machinery/airlock_sensor{
 	id_tag = "ofd_port_sensor";
 	pixel_x = 24
+	},
+/obj/effect/floor_decal/industrial/warning/fulltile,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "ofd_port_airlock_pump"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
@@ -490,7 +492,9 @@
 	id_tag = "ofd_starboard_sensor";
 	pixel_x = 24
 	},
-/obj/machinery/atmospherics/unary/vent_pump/on{
+/obj/effect/floor_decal/industrial/warning/fulltile,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	dir = 1;
 	id_tag = "ofd_starboard_airlock_pump"
 	},
 /turf/simulated/floor,
@@ -855,6 +859,9 @@
 "fV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 6
+	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "fX" = (
@@ -877,10 +884,11 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/external/glass/bolted{
-	id_tag = "ofd_port_interior_door";
+	id_tag = "ofd_starboard_interior_door";
 	name = "OFD Exterior Access";
 	frequency = 1379
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "gi" = (
@@ -1343,7 +1351,6 @@
 /area/intrepid/department/engineering/atmos)
 "iW" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/external/glass/bolted,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/door/airlock/external/glass/bolted{
 	id_tag = "ofd_port_interior_door";
@@ -1436,12 +1443,14 @@
 /area/intrepid/department/command/obstructionfielddisperser)
 "ki" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
 /obj/structure/cable/orange{
 	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
@@ -1625,9 +1634,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
-	},
 /obj/structure/cable/green{
 	icon_state = "2-5"
 	},
@@ -1635,6 +1641,10 @@
 	master_tag = "ofd_starboard_airlock_controller";
 	pixel_x = 22;
 	pixel_y = -22
+	},
+/obj/machinery/atmospherics/valve/open,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
@@ -1781,7 +1791,7 @@
 	name = "OFD Interior Access";
 	frequency = 1379
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/airless,
 /area/intrepid/department/command/obstructionfielddisperser)
 "mp" = (
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
@@ -2929,6 +2939,7 @@
 /area/space)
 "vN" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel,
+/obj/machinery/meter,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "vQ" = (
@@ -3835,6 +3846,7 @@
 /area/space)
 "Ef" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
+/obj/machinery/meter,
 /turf/simulated/floor,
 /area/intrepid/department/engineering/atmos)
 "Eh" = (
@@ -3964,12 +3976,12 @@
 /turf/simulated/floor/reinforced/airless,
 /area/intrepid/department/command/obstructionfielddisperser)
 "FN" = (
-/obj/machinery/power/apc/high{
-	dir = 1;
-	pixel_y = 14
-	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
+	},
+/obj/machinery/power/apc/critical{
+	pixel_y = 14;
+	dir = 1
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/tcommsat)
@@ -4009,8 +4021,8 @@
 /turf/simulated/floor/bluegrid,
 /area/tcommsat)
 "Ga" = (
-/obj/machinery/atmospherics/valve/shutoff/fuel{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/visible/universal{
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/atmos)
@@ -4242,6 +4254,12 @@
 /obj/structure/catwalk,
 /obj/structure/cable/orange{
 	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/cap/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/cap/hidden/supply{
+	dir = 1
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
@@ -4476,7 +4494,9 @@
 "Ke" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/shuttle_landmark/lift/starboard_top,
-/obj/machinery/computer/shuttle_control/lift/starboard,
+/obj/machinery/computer/shuttle_control/lift/starboard{
+	use_power = 0
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/turbolift/starboard)
 "Kq" = (
@@ -5004,11 +5024,11 @@
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/department/engineering/engine_room)
 "OD" = (
-/obj/machinery/atmospherics/pipe/simple/visible/universal{
-	dir = 4
-	},
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/valve/shutoff/fuel{
+	dir = 8
 	},
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/department/engineering/atmos)
@@ -5067,6 +5087,10 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "5-10"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9;
+	icon_state = "intact"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
@@ -5142,6 +5166,10 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/meter,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "PS" = (
@@ -5611,7 +5639,7 @@
 	name = "OFD Interior Access";
 	frequency = 1379
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/airless,
 /area/intrepid/department/command/obstructionfielddisperser)
 "Un" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
@@ -5916,6 +5944,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/machinery/meter,
 /turf/simulated/floor,
 /area/intrepid/department/engineering/atmos)
 "WN" = (
@@ -27416,7 +27445,7 @@ oB
 sB
 lJ
 PP
-lJ
+OI
 Pl
 EJ
 oB
