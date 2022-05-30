@@ -7,10 +7,14 @@
 	ideal_character_age = 50
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/command/CO
 	allowed_branches = list(
-		/datum/mil_branch/exploration_division
+		/datum/mil_branch/fleet,
+		/datum/mil_branch/marine_corps
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/ed/o6
+		/datum/mil_rank/fleet/o6,
+		/datum/mil_rank/fleet/o7,
+		/datum/mil_rank/mc/o6,
+		/datum/mil_rank/mc/o7
 	)
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
 	                    SKILL_SCIENCE     = SKILL_TRAINED,
@@ -44,13 +48,12 @@
 	ideal_character_age = 45
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/command/XO
 	allowed_branches = list(
-		/datum/mil_branch/exploration_division,
+		/datum/mil_branch/marine_corps,
 		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/intrepid/crew/command/XO/fleet
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/ed/o5,
-		/datum/mil_rank/fleet/o4,
-		/datum/mil_rank/fleet/o5
+		/datum/mil_rank/mc/o4,
+		/datum/mil_rank/fleet/o4
 	)
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_TRAINED,
 	                    SKILL_COMPUTER    = SKILL_BASIC,
@@ -268,11 +271,11 @@
 	ideal_character_age = 35
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/command/cos
 	allowed_branches = list(
-		/datum/mil_branch/exploration_division,
+		/datum/mil_branch/marine_corps,
 		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/intrepid/crew/command/cos/fleet
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/ed/o3,
+		/datum/mil_rank/mc/o2,
 		/datum/mil_rank/fleet/o2,
 		/datum/mil_rank/fleet/o3
 	)

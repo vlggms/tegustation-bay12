@@ -160,7 +160,9 @@
 		/datum/mil_rank/fleet/o2,
 		/datum/mil_rank/fleet/o3,
 		/datum/mil_rank/fleet/o4,
-		/datum/mil_rank/fleet/o5
+		/datum/mil_rank/fleet/o5,
+		/datum/mil_rank/fleet/o6,
+		/datum/mil_rank/fleet/o7
 	)
 
 	assistant_job = /datum/job/crew
@@ -249,6 +251,7 @@
 	)
 
 	spawn_rank_types = list(
+		/datum/mil_rank/mc/e1,
 		/datum/mil_rank/mc/e2,
 		/datum/mil_rank/mc/e3,
 		/datum/mil_rank/mc/e4,
@@ -262,7 +265,8 @@
 		/datum/mil_rank/mc/o3,
 		/datum/mil_rank/mc/o4,
 		/datum/mil_rank/mc/o5,
-		/datum/mil_rank/mc/o6
+		/datum/mil_rank/mc/o6,
+		/datum/mil_rank/mc/o7
 	)
 
 	assistant_job = /datum/job/crew
@@ -668,7 +672,7 @@
  *  ============
  */
 /datum/mil_rank/mc/e1
-	name = "Private" // Gotta change it because apparently, job code checks for rank name in all places, not the type
+	name = "Private"
 	name_short = "PVT"
 	accessory = list()
 	sort_order = 1

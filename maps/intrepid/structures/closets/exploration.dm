@@ -4,22 +4,22 @@
 
 /decl/closet_appearance/secure_closet/intrepid/exploration
 	extra_decals = list(
-		"stripe_vertical_mid_full" = COLOR_PURPLE,
-		"exped" = COLOR_PURPLE
+		"stripe_vertical_mid_full" = COLOR_RED_ORANGE,
+		"exped" = COLOR_RED_ORANGE
 	)
 
 /decl/closet_appearance/secure_closet/intrepid/exploration/pilot
 	extra_decals = list(
-		"stripe_vertical_left_full" = COLOR_PURPLE,
-		"stripe_vertical_right_full" = COLOR_PURPLE,
-		"exped" = COLOR_PURPLE
+		"stripe_vertical_left_full" = COLOR_RED_ORANGE,
+		"stripe_vertical_right_full" = COLOR_RED_ORANGE,
+		"exped" = COLOR_RED_ORANGE
 	)
 
 /decl/closet_appearance/secure_closet/intrepid/exploration/squad_leader
 	extra_decals = list(
-		"stripe_vertical_left_full" = COLOR_PURPLE,
+		"stripe_vertical_left_full" = COLOR_RED_ORANGE,
 		"stripe_vertical_mid_full" = COLOR_CLOSET_GOLD,
-		"stripe_vertical_right_full" = COLOR_PURPLE,
+		"stripe_vertical_right_full" = COLOR_RED_ORANGE,
 		"exped" = COLOR_CLOSET_GOLD
 	)
 
@@ -38,6 +38,7 @@
 		/obj/item/material/hatchet/machete/deluxe,
 		/obj/item/storage/belt/holster/machete,
 		/obj/item/device/spaceflare,
+		/obj/item/clothing/mask/gas/terran,
 		/obj/item/clothing/accessory/storage/webbing_large,
 		/obj/item/device/taperecorder,
 		/obj/item/device/scanner/gas,
@@ -64,8 +65,10 @@
 		/obj/item/device/radio,
 		/obj/item/device/gps,
 		/obj/item/taperoll/research,
+		/obj/item/material/hatchet/machete,
 		/obj/item/storage/belt/holster/machete,
 		/obj/item/device/spaceflare,
+		/obj/item/clothing/mask/gas/terran,
 		/obj/item/clothing/accessory/storage/webbing_large,
 		/obj/item/device/scanner/gas,
 		/obj/item/device/radio/headset/exploration,
