@@ -19,3 +19,22 @@ decl/hierarchy/outfit/job/intrepid/crew/exploration/New()
 	id_types = list(/obj/item/card/id/intrepid/crew/marine)
 	pda_type = /obj/item/modular_computer/pda/explorer
 	l_ear = /obj/item/device/radio/headset/exploration
+
+/decl/hierarchy/outfit/job/intrepid/crew/exploration/marine/medic
+	name = OUTFIT_JOB_NAME("Combat Medic") // Note to self: Move all that stuff to specialized lockers later
+	gloves = /obj/item/clothing/gloves/latex
+	belt = /obj/item/storage/belt/medical
+	backpack_contents = list(
+						/obj/item/storage/firstaid/combat = 1,
+						/obj/item/storage/firstaid/regular = 1,
+						/obj/item/device/scanner/health = 1,
+						)
+
+/decl/hierarchy/outfit/job/intrepid/crew/exploration/marine/engineer
+	name = OUTFIT_JOB_NAME("Combat Engineer")
+	gloves = /obj/item/clothing/gloves/insulated
+	belt = /obj/item/storage/belt/utility/full
+	backpack_contents = list(
+						/obj/item/device/multitool = 1,
+						/obj/item/clothing/glasses/welding/superior = 1,
+						)
