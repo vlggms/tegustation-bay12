@@ -80,7 +80,9 @@
 /obj/structure/sign/warning/nosmoking_burned{
 	pixel_y = 32
 	},
-/obj/machinery/conveyor/northwest/ccw,
+/obj/machinery/conveyor/northwest/ccw{
+	id = "ofd"
+	},
 /turf/simulated/floor,
 /area/intrepid/department/command/obstructionfielddisperser)
 "aU" = (
@@ -303,7 +305,9 @@
 /obj/structure/sign/warning/nosmoking_burned{
 	pixel_y = -32
 	},
-/obj/machinery/conveyor/southwest,
+/obj/machinery/conveyor/southwest{
+	id = "ofd"
+	},
 /turf/simulated/floor,
 /area/intrepid/department/command/obstructionfielddisperser)
 "bP" = (
@@ -2212,7 +2216,9 @@
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room)
 "pD" = (
-/obj/machinery/conveyor/north,
+/obj/machinery/conveyor/north{
+	id = "ofd"
+	},
 /turf/simulated/floor,
 /area/intrepid/department/command/obstructionfielddisperser)
 "pF" = (
@@ -3775,7 +3781,9 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "Dr" = (
-/obj/machinery/conveyor/northwest,
+/obj/machinery/conveyor/northwest{
+	id = "ofd"
+	},
 /turf/simulated/floor,
 /area/intrepid/department/command/obstructionfielddisperser)
 "Dz" = (
@@ -4601,7 +4609,9 @@
 /turf/simulated/floor/reinforced/airless,
 /area/space)
 "Ln" = (
-/obj/machinery/conveyor/southwest/ccw,
+/obj/machinery/conveyor/southwest/ccw{
+	id = "ofd"
+	},
 /turf/simulated/floor,
 /area/intrepid/department/command/obstructionfielddisperser)
 "Lo" = (
