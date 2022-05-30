@@ -7,7 +7,7 @@
 	cost = 60
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "military rifle ammunition crate"
-	access = access_intrepid_marine
+	access = access_marine
 
 /decl/hierarchy/supply_pack/marine/frags
 	name = "Weapons - Frag grenades (x3)"
@@ -15,7 +15,7 @@
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "explosive weaponry crate"
-	access = access_intrepid_marine
+	access = access_marine
 
 /decl/hierarchy/supply_pack/marine/frags
 	name = "Weapons - Frag bombs (x3)"
@@ -23,4 +23,4 @@
 	cost = 60
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "explosive weaponry crate"
-	access = access_intrepid_marine
+	access = access_marine
