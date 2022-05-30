@@ -354,8 +354,8 @@
 /obj/item/gun/energy/laser/secure,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/camera/motion{
-	dir = 4;
 	c_tag = "Security - Heavy Armoury";
+	dir = 4;
 	network = list("Security")
 	},
 /turf/simulated/floor/tiled/dark/monotile,
@@ -642,8 +642,8 @@
 	id_tag = "ai_pump"
 	},
 /obj/machinery/camera/motion{
-	dir = 1;
 	c_tag = "AI Chamber - Foyer Airlock";
+	dir = 1;
 	network = list("Command")
 	},
 /turf/simulated/floor/tiled/dark,
@@ -753,8 +753,8 @@
 	id = "ore"
 	},
 /obj/machinery/computer/mining{
-	pixel_x = -32;
-	density = 0
+	density = 0;
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/misc/maint/aft)
@@ -1724,8 +1724,8 @@
 /obj/structure/table/standard,
 /obj/item/reagent_containers/food/drinks/glass2/coffeecup/metal,
 /obj/machinery/camera/network/exploration{
-	dir = 8;
-	c_tag = "Exploration - Marine Locker Room"
+	c_tag = "Exploration - Marine Locker Room";
+	dir = 8
 	},
 /turf/simulated/floor/carpet/orange,
 /area/intrepid/department/exploration/storage)
@@ -1781,8 +1781,8 @@
 "bIN" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible/fuel,
 /obj/machinery/camera/network/engineering{
-	dir = 8;
-	c_tag = "Engineering - Portside Thruster"
+	c_tag = "Engineering - Portside Thruster";
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/portthruster)
@@ -3204,8 +3204,8 @@
 	dir = 8
 	},
 /obj/machinery/computer/mining{
-	pixel_x = -32;
-	density = 0
+	density = 0;
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/misc/maint/aft)
@@ -3570,8 +3570,8 @@
 /obj/item/ammo_magazine/smg_top,
 /obj/item/ammo_magazine/smg_top,
 /obj/structure/closet/secure_closet/wall{
-	pixel_x = -32;
 	name = "Lethal Ammunition";
+	pixel_x = -32;
 	req_access = list("ACCESS_INTREPID_ARMORY")
 	},
 /turf/simulated/floor/tiled/dark,
@@ -4160,9 +4160,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/item/paper/sticky{
+	info = "1379, airlock pump, not external air";
 	pixel_x = -18;
-	pixel_y = 10;
-	info = "1379, airlock pump, not external air"
+	pixel_y = 10
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/internalportside)
@@ -4400,8 +4400,8 @@
 /obj/item/device/flashlight/flare,
 /obj/item/device/flashlight/flare,
 /obj/structure/closet/walllocker{
-	pixel_x = 32;
-	name = "Emergency Supplies"
+	name = "Emergency Supplies";
+	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo)
@@ -6763,8 +6763,8 @@
 	pixel_x = -25
 	},
 /obj/machinery/camera/motion{
-	dir = 4;
 	c_tag = "AI Chamber - Core Foyer";
+	dir = 4;
 	network = list("Command")
 	},
 /obj/machinery/porta_turret,
@@ -7157,6 +7157,7 @@
 /area/intrepid/department/command/commandquarters/co)
 "gAL" = (
 /obj/machinery/door/airlock/external{
+	autoset_access = 0;
 	frequency = 1331;
 	id_tag = "stardust_outer_shuttle_airlock";
 	name = "Stardust Dock Access";
@@ -7255,8 +7256,8 @@
 /area/intrepid/department/civillian/galley)
 "gFi" = (
 /obj/structure/closet/walllocker{
-	pixel_y = 32;
-	name = "Artifact Equipment"
+	name = "Artifact Equipment";
+	pixel_y = 32
 	},
 /obj/item/anobattery,
 /obj/item/anobattery,
@@ -7746,6 +7747,7 @@
 /area/intrepid/department/exploration/hangar)
 "hcZ" = (
 /obj/machinery/door/airlock/external{
+	autoset_access = 0;
 	frequency = 1331;
 	id_tag = "stardust_outer_shuttle_airlock";
 	name = "Stardust Dock Access";
@@ -7931,8 +7933,8 @@
 /obj/item/device/flashlight/flare,
 /obj/item/device/flashlight/flare,
 /obj/structure/closet/walllocker{
-	pixel_x = -32;
-	name = "Emergency Supplies"
+	name = "Emergency Supplies";
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo)
@@ -8732,14 +8734,14 @@
 /obj/machinery/button/blast_door{
 	id_tag = "aichamber";
 	name = "AI Core Shielding button";
-	pixel_y = 35;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 35
 	},
 /obj/machinery/button/blast_door{
 	id_tag = "aifoyer";
 	name = "AI Foyer Window Shielding button";
-	pixel_y = 35;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = 35
 	},
 /obj/machinery/power/apc/critical{
 	dir = 4;
@@ -9525,8 +9527,8 @@
 "iMW" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible/fuel,
 /obj/machinery/camera/network/engineering{
-	dir = 8;
-	c_tag = "Engineering - Starboard Thruster"
+	c_tag = "Engineering - Starboard Thruster";
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/starboardthruster)
@@ -10064,15 +10066,14 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/secure_closet/marine,
 /obj/item/storage/belt/holster/security/tactical,
-/obj/item/clothing/mask/gas/terran,
 /obj/item/grenade/frag,
-/obj/item/ammo_magazine/t12,
-/obj/item/ammo_magazine/t12,
-/obj/item/ammo_magazine/t12,
-/obj/item/gun/projectile/automatic/t12,
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/gun/projectile/automatic/bullpup_rifle,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/exploration/storage)
 "jpc" = (
@@ -10813,6 +10814,7 @@
 "jZM" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/external{
+	autoset_access = 0;
 	frequency = 1331;
 	id_tag = "stardust_outer_shuttle_airlock";
 	name = "Stardust Dock Access";
@@ -11396,6 +11398,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external{
+	autoset_access = 0;
 	frequency = 1331;
 	id_tag = "stardust_shuttle_airlock";
 	name = "Stardust External Access";
@@ -11889,8 +11892,8 @@
 	dir = 9
 	},
 /obj/structure/sign/science_2{
-	pixel_x = -32;
-	name = "\improper Anomaly Laboratory"
+	name = "\improper Anomaly Laboratory";
+	pixel_x = -32
 	},
 /obj/structure/anomaly_container,
 /turf/simulated/floor/tiled/white,
@@ -12741,8 +12744,8 @@
 	dir = 8
 	},
 /obj/structure/reagent_dispensers/acid{
-	pixel_y = 32;
-	density = 0
+	density = 0;
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/anomalyresearch)
@@ -13153,8 +13156,8 @@
 	dir = 5
 	},
 /obj/structure/closet/walllocker{
-	pixel_y = -32;
-	pixel_x = -32
+	pixel_x = -32;
+	pixel_y = -32
 	},
 /obj/item/reagent_containers/glass/beaker/large,
 /obj/item/stack/nanopaste,
@@ -14871,13 +14874,16 @@
 	name = "ammunition cabinet";
 	req_access = list("ACCESS_INTREPID_SQUAD_LEADER")
 	},
-/obj/item/ammo_magazine/t12,
-/obj/item/ammo_magazine/t12,
-/obj/item/ammo_magazine/t12,
-/obj/item/ammo_magazine/t12,
-/obj/item/ammo_magazine/t12,
-/obj/item/ammo_magazine/t12,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/exploration/storage)
 "nHJ" = (
@@ -15035,6 +15041,7 @@
 "nPm" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/external{
+	autoset_access = 0;
 	frequency = 1331;
 	id_tag = "stardust_shuttle_airlock";
 	name = "Stardust External Access";
@@ -16499,8 +16506,8 @@
 	icon_state = "2-8"
 	},
 /obj/machinery/camera/motion{
-	dir = 8;
 	c_tag = "AI Chamber - Core Aft";
+	dir = 8;
 	network = list("Command")
 	},
 /obj/machinery/porta_turret,
@@ -16803,8 +16810,8 @@
 	icon_state = "railing0-1"
 	},
 /obj/machinery/camera/network/exploration{
-	dir = 1;
-	c_tag = "Exploration - Ore Refinery"
+	c_tag = "Exploration - Ore Refinery";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/intrepid/misc/maint/aft)
@@ -17172,8 +17179,8 @@
 /obj/structure/table/standard,
 /obj/item/device/integrated_circuit_printer,
 /obj/machinery/camera/network/engineering{
-	dir = 8;
-	c_tag = "Engineering - Mechatronic Bay"
+	c_tag = "Engineering - Mechatronic Bay";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/assembly/chargebay)
@@ -17249,8 +17256,8 @@
 	icon_state = "bulb1"
 	},
 /obj/machinery/camera/network/engineering{
-	dir = 8;
-	c_tag = "Engineering - Solar Plating Control"
+	c_tag = "Engineering - Solar Plating Control";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/solarcontrol)
@@ -19538,8 +19545,8 @@
 "rLn" = (
 /obj/machinery/r_n_d/circuit_imprinter,
 /obj/machinery/camera/network/engineering{
-	dir = 8;
-	c_tag = "Engineering - Robotics"
+	c_tag = "Engineering - Robotics";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/engineering/assembly/robotics)
@@ -19726,8 +19733,8 @@
 	icon_state = "pipe-c"
 	},
 /obj/machinery/camera/network/security{
-	dir = 4;
-	c_tag = "Security - Monitoring"
+	c_tag = "Security - Monitoring";
+	dir = 4
 	},
 /obj/machinery/rotating_alarm/security_alarm{
 	dir = 4;
@@ -20011,6 +20018,7 @@
 /area/intrepid/misc/hallway/portside)
 "sky" = (
 /obj/machinery/door/airlock/external{
+	autoset_access = 0;
 	frequency = 1331;
 	id_tag = "stardust_shuttle_airlock";
 	name = "Stardust External Access";
@@ -20415,9 +20423,9 @@
 	icon_state = "2-8"
 	},
 /obj/structure/railing/mapped{
+	density = 0;
 	dir = 4;
-	icon_state = "mcorneroverlay1";
-	density = 0
+	icon_state = "mcorneroverlay1"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
@@ -21012,12 +21020,11 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/secure_closet/marine,
 /obj/item/storage/belt/holster/security/tactical,
-/obj/item/clothing/mask/gas/terran,
 /obj/item/grenade/frag,
-/obj/item/ammo_magazine/t12,
-/obj/item/ammo_magazine/t12,
-/obj/item/ammo_magazine/t12,
-/obj/item/gun/projectile/automatic/t12,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/gun/projectile/automatic/bullpup_rifle,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/exploration/storage)
 "sWR" = (
@@ -22616,9 +22623,9 @@
 	icon_state = "2-8"
 	},
 /obj/structure/railing/mapped{
+	density = 0;
 	dir = 1;
-	icon_state = "mcorneroverlay1";
-	density = 0
+	icon_state = "mcorneroverlay1"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
@@ -23835,13 +23842,12 @@
 "vzY" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/storage/belt/holster/security/tactical,
-/obj/item/clothing/mask/gas/terran,
 /obj/item/grenade/frag,
-/obj/item/ammo_magazine/t12,
-/obj/item/ammo_magazine/t12,
-/obj/item/ammo_magazine/t12,
-/obj/item/gun/projectile/automatic/t12,
 /obj/structure/closet/secure_closet/squad_leader,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/gun/projectile/automatic/bullpup_rifle,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/exploration/storage)
 "vAd" = (
@@ -24443,6 +24449,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external{
+	autoset_access = 0;
 	frequency = 1331;
 	id_tag = "stardust_outer_shuttle_airlock";
 	name = "Stardust Dock Access";
