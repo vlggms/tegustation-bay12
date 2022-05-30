@@ -75,6 +75,8 @@
 	#include "structures/closets/supply.dm"
 	#include "structures/closets/exploration.dm"
 
+	#include "supplypacks/marine.dm"
+
 	#include "intrepid1.dmm"
 	#include "intrepid2.dmm"
 	#include "z1_admin.dmm"
