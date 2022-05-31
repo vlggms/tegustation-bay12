@@ -7,6 +7,11 @@
 	var/artifact_id = ""
 	var/effect_type
 	var/list/possible_effect_types = list()
+	/// What activation methods artifact can have to roll for this effect
+	var/list/acceptable_methods = list(
+								ACTIVATE_TOUCH, ACTIVATE_SPEECH, ACTIVATE_TEMPERATURE, ACTIVATE_ATTACK, ACTIVATE_BULLET,
+								ACTIVATE_LASER, ACTIVATE_BOMB, ACTIVATE_MOB_BUMP, ACTIVATE_WATER, ACTIVATE_CHEMICAL
+								)
 	var/activation_sound = 'sound/effects/psi/power_used.ogg'
 	var/cooldown_time = 10
 	var/toggled = FALSE
@@ -53,7 +58,7 @@
 		addtimer(CALLBACK(src, /datum/artifact_effect/proc/toggle_off), on_time)
 		if(activation_sound && holder)
 			playsound(holder, activation_sound, 100)
-		if(user && istype(user, /mob))
+		if(user && istype(user, /mob) && effect_type == EFFECT_TOUCH)
 			var/mob/M = user
 			DoEffect(M)
 	toggled = !toggled

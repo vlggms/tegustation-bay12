@@ -34,12 +34,6 @@
 
 /obj/machinery/artifact/Initialize()
 	. = ..()
-	if(!effect)
-		var/chosen_type = pick(subtypesof(/datum/artifact_effect))
-		effect = new chosen_type(src)
-	else
-		effect = new effect(src)
-
 	if(!activation_method)
 		activation_method = pick(possible_methods)
 		switch(activation_method)
@@ -78,6 +72,10 @@
 							/datum/reagent/toxin/venom,
 							/datum/reagent/toxin/chlorine)
 
+	InitAppearance()
+	InitEffects()
+
+/obj/machinery/artifact/proc/InitAppearance()
 	if(!icon_state)
 		icon_num = rand(0, 13)
 		icon_state = "ano[icon_num]0"
@@ -99,6 +97,16 @@
 				name = "sealed alien pod"
 				desc = "A strange alien device."
 
+/obj/machinery/artifact/proc/InitEffects()
+	if(!effect)
+		var/chosen_type = pick(subtypesof(/datum/artifact_effect))
+		effect = new chosen_type(src)
+	else
+		effect = new effect(src)
+	if(!(activation_method in effect.acceptable_methods))
+		activation_method = pick(effect.acceptable_methods)
+	return TRUE
+
 /obj/machinery/artifact/Destroy()
 	QDEL_NULL(effect)
 	. = ..()
@@ -109,14 +117,18 @@
 		to_chat(user, "\The [src] is currently kept in a state of stasis.")
 
 /obj/machinery/artifact/proc/Activation(user, method)
+	if(method != activation_method)
+		return FALSE
 	if(cooldown > world.time)
 		return TRUE // For explosive act
 	if(stasis)
 		return TRUE
-	if(method != activation_method)
-		return FALSE
-	cooldown = world.time + effect.cooldown_time
+	if(!user) // For bomb/water activation methods with singular effects
+		var/potential_mob = pick(mobs_in_view(7, src))
+		if(potential_mob)
+			user = potential_mob
 	if(!effect.toggled)
+		cooldown = world.time + effect.cooldown_time
 		effect.Activate(user)
 
 /obj/machinery/artifact/proc/DoEffect(user)
@@ -199,7 +211,7 @@
 /obj/machinery/artifact/Move()
 	..()
 	effect.UpdateMove()
-	if(pulledby && prob(10)) // Pulling it is safer than directly touching
+	if(pulledby && (activation_method == ACTIVATE_TOUCH) && prob(10)) // Pulling it is safer than directly touching
 		visible_message("[pulledby] accidentally touches \the [src] while pulling it.")
 		Activation(pulledby, ACTIVATE_TOUCH)
 

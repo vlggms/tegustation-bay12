@@ -3186,6 +3186,7 @@
 #include "code\modules\xenoarcheaology\artifacts\effects\radiate.dm"
 #include "code\modules\xenoarcheaology\artifacts\effects\roboheal.dm"
 #include "code\modules\xenoarcheaology\artifacts\effects\robohurt.dm"
+#include "code\modules\xenoarcheaology\artifacts\effects\skill_buff.dm"
 #include "code\modules\xenoarcheaology\artifacts\effects\sleepy.dm"
 #include "code\modules\xenoarcheaology\artifacts\effects\stun.dm"
 #include "code\modules\xenoarcheaology\artifacts\effects\teleport.dm"
