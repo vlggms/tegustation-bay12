@@ -17,7 +17,7 @@
 	containername = "explosive weaponry crate"
 	access = access_marine
 
-/decl/hierarchy/supply_pack/marine/frags
+/decl/hierarchy/supply_pack/marine/frag_bombs
 	name = "Weapons - Frag bombs (x3)"
 	contains = list(/obj/item/grenade/frag/high_yield = 3)
 	cost = 60
