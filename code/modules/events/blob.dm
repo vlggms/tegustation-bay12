@@ -9,10 +9,16 @@
 
 /datum/event/blob/start()
 	var/list/possible_turfs = list()
+	if(!allowed_areas.len)
+		log_and_message_admins("Blob has no allowed areas.")
+		kill()
+		return
 	for(var/area/ar in allowed_areas)
-		var/turf/PT = pick_subarea_turf(ar, list(/proc/is_station_turf, /proc/not_turf_contains_dense_objects))
+		var/turf/PT = get_subarea_turfs(ar, list(/proc/is_station_turf, /proc/not_turf_contains_dense_objects))
 		possible_turfs += PT
-	var/turf/T = pick(possible_turfs)
+	var/turf/T = null
+	if(possible_turfs.len)
+		T = pick(possible_turfs)
 	if(!T)
 		log_and_message_admins("Blob failed to find a viable turf.")
 		kill()
