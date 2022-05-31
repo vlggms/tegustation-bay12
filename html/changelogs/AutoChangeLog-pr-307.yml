@@ -1,0 +1,6 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: Events have slightly different chances to run. "Nothing" has significantly
+      lower chance.
+  - tweak: You can reboot APCs without unlocking them first.
