@@ -2,9 +2,10 @@
 
 /datum/event/spacevine
 	announceWhen	= 60
+	var/area/chosen_area = /area/hallway
 
 /datum/event/spacevine/start()
-	spacevine_infestation()
+	spacevine_infestation(area_type = chosen_area)
 	spacevines_spawned = 1
 
 /datum/event/spacevine/announce()
