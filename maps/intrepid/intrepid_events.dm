@@ -63,7 +63,7 @@
 
 // Blob
 /datum/event/blob
-	allowed_areas = list(/area/intrepid/misc/maint)
+	allowed_areas = list(/area/intrepid/misc/maint, /area/intrepid/department/civillian/janitor)
 
 #undef ASSIGNMENT_ENGINEER
 #undef ASSIGNMENT_SUPPLY
