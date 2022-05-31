@@ -65,6 +65,10 @@
 /datum/event/blob
 	allowed_areas = list(/area/intrepid/misc/maint, /area/intrepid/department/civillian/janitor)
 
+// Vines
+/datum/event/spacevine
+	chosen_area = /area/intrepid/misc/hallway
+
 #undef ASSIGNMENT_ENGINEER
 #undef ASSIGNMENT_SUPPLY
 #undef ASSIGNMENT_SECURITY
