@@ -6,7 +6,7 @@
 	spawn_positions = 1
 	supervisors = "the Commanding Officer"
 	selection_color = COLOR_RED_ORANGE
-	minimal_player_age = 1
+	minimal_player_age = 7
 	economic_power = 10
 	minimum_character_age = list(SPECIES_HUMAN = 30)
 	ideal_character_age = 40
@@ -15,19 +15,21 @@
 		/datum/mil_branch/marine_corps
 	)
 	allowed_ranks = list(
+		/datum/mil_rank/mc/e6,
 		/datum/mil_rank/mc/e7
 	)
 	min_skill = list(	SKILL_BUREAUCRACY	= SKILL_BASIC,
 						SKILL_EVA			= SKILL_TRAINED,
 						SKILL_SCIENCE		= SKILL_TRAINED,
 						SKILL_PILOT			= SKILL_BASIC,
+						SKILL_COMBAT		= SKILL_TRAINED,
 						SKILL_WEAPONS		= SKILL_TRAINED)
 
-	max_skill = list(	SKILL_PILOT		= SKILL_MAX,
-						SKILL_SCIENCE	= SKILL_MAX,
-						SKILL_COMBAT	= SKILL_EXPERIENCED,
+	max_skill = list(	SKILL_PILOT		= SKILL_MASTER,
+						SKILL_SCIENCE	= SKILL_MASTER,
+						SKILL_COMBAT	= SKILL_MASTER,
 						SKILL_WEAPONS	= SKILL_MASTER)
-	skill_points = 26
+	skill_points = 28
 
 	access = list(
 		access_squad_leader, access_marine, access_eva, access_maint_tunnels, access_bridge, access_emergency_storage,
@@ -108,7 +110,7 @@
 						SKILL_ELECTRICAL	= SKILL_EXPERIENCED,
 						SKILL_COMBAT		= SKILL_EXPERIENCED,
 						SKILL_WEAPONS		= SKILL_EXPERIENCED)
-	skill_points = 22
+	skill_points = 20
 
 	access = list(
 		access_marine, access_maint_tunnels, access_eva, access_emergency_storage,

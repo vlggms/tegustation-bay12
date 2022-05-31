@@ -11,9 +11,7 @@
 		/datum/mil_branch/marine_corps
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/fleet/o6,
 		/datum/mil_rank/fleet/o7,
-		/datum/mil_rank/mc/o6,
 		/datum/mil_rank/mc/o7
 	)
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
