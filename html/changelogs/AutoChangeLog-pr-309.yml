@@ -1,5 +1,0 @@
-author: EgorDinamit
-delete-after: true
-changes:
-  - tweak: Human inventory UI(when you drag&drop) now uses browser popup. It looks
-      better, yes.
