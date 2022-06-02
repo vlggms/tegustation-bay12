@@ -509,6 +509,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/effect/overmap/visitable/ship/landable/exploration_shuttle,
+/obj/machinery/tele_beacon{
+	identifier = "Pandora"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/pandora/cockpit)
 "aBm" = (
@@ -1646,6 +1649,8 @@
 /obj/effect/floor_decal/corner/white/border{
 	dir = 5
 	},
+/obj/item/book/manual/nuclear,
+/obj/item/disk/nuclear,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/co)
 "byB" = (
@@ -2932,7 +2937,7 @@
 	dir = 8;
 	pixel_x = 23
 	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/exploration/storage)
 "cJQ" = (
 /obj/machinery/computer/modular,
@@ -5054,7 +5059,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/effect/floor_decal/corner/orange/bordercorner{
+/obj/effect/floor_decal/corner/yellow/bordercorner{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -5599,15 +5604,15 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/portside)
 "eVR" = (
-/obj/effect/floor_decal/corner/orange/border{
-	dir = 8
-	},
 /obj/machinery/vending/wallmed1{
 	pixel_y = 32
 	},
 /obj/structure/sign/poster/tegu_random{
 	pixel_x = -32;
 	pixel_y = 32
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/exploration/storage)
@@ -6659,7 +6664,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/tele_beacon{
-	identifier = "Stardust Main Hallway"
+	identifier = "Pandora"
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/hallway)
@@ -6882,6 +6887,11 @@
 /obj/machinery/cryopod/robot,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/engineering/assembly/robotics)
+"ggX" = (
+/obj/structure/girder,
+/obj/effect/decal/cleanable/cobweb,
+/turf/simulated/floor,
+/area/intrepid/misc/maint/starboard)
 "ghH" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 8
@@ -8396,7 +8406,8 @@
 /obj/item/stack/medical/splint,
 /obj/item/stack/medical/ointment,
 /obj/item/stack/medical/bruise_pack,
-/obj/item/storage/firstaid,
+/obj/structure/reagent_dispensers/water_cooler,
+/obj/item/storage/firstaid/regular,
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/civillian/mess)
 "hLU" = (
@@ -8854,6 +8865,12 @@
 /obj/effect/wingrille_spawn/reinforced/full,
 /turf/simulated/floor,
 /area/shuttle/research/cockpit)
+"ige" = (
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/intrepid/department/exploration/storage)
 "igg" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
@@ -8969,6 +8986,12 @@
 /obj/effect/wingrille_spawn/reinforced/full,
 /turf/simulated/floor,
 /area/intrepid/department/command/AI/AICore)
+"inr" = (
+/obj/effect/floor_decal/corner/yellow/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/intrepid/department/exploration/storage)
 "inG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -10063,18 +10086,25 @@
 /turf/simulated/floor,
 /area/intrepid/department/medical/operatingroom)
 "joC" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/secure_closet/marine,
+/obj/effect/floor_decal/corner/paleblue/mono,
+/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/storage/belt/holster/security/tactical,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
 /obj/item/grenade/frag,
+/obj/item/gun/projectile/automatic/bullpup_rifle,
+/obj/item/clothing/suit/space/void/marine/prepared,
+/obj/item/storage/firstaid/combat{
+	pixel_y = 7
+	},
+/obj/item/storage/firstaid/adv,
+/obj/item/bodybag/cryobag,
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/ammo_magazine/mil_rifle,
-/obj/item/ammo_magazine/mil_rifle,
-/obj/item/ammo_magazine/mil_rifle,
-/obj/item/gun/projectile/automatic/bullpup_rifle,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/exploration/storage)
 "jpc" = (
 /obj/effect/floor_decal/corner/research/border,
@@ -12061,6 +12091,10 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
+"lnZ" = (
+/obj/structure/closet/crate/plastic,
+/turf/simulated/floor,
+/area/intrepid/misc/maint/starboard)
 "lop" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -13291,7 +13325,7 @@
 "msg" = (
 /obj/effect/floor_decal/spline/fancy/black,
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/effect/floor_decal/corner/orange/border{
+/obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -14884,7 +14918,7 @@
 /obj/item/ammo_magazine/mil_rifle,
 /obj/item/ammo_magazine/mil_rifle,
 /obj/item/ammo_magazine/mil_rifle,
-/turf/simulated/floor/tiled/techmaint,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/exploration/storage)
 "nHJ" = (
 /obj/structure/bed/chair{
@@ -15135,7 +15169,7 @@
 /area/intrepid/department/medical/equipment)
 "nUM" = (
 /obj/effect/floor_decal/spline/fancy/black,
-/obj/effect/floor_decal/corner/orange/border{
+/obj/effect/floor_decal/corner/yellow/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -15633,6 +15667,22 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/portside)
+"ota" = (
+/obj/structure/closet/secure_closet/marine,
+/obj/item/storage/belt/holster/security/tactical,
+/obj/item/grenade/frag,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/gun/projectile/automatic/bullpup_rifle,
+/obj/item/clothing/suit/space/void/marine/prepared,
+/obj/effect/floor_decal/corner/orange/mono,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/monotile,
+/area/intrepid/department/exploration/storage)
 "oui" = (
 /obj/machinery/photocopier/faxmachine,
 /obj/structure/table/woodentable/walnut,
@@ -16742,6 +16792,19 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/security/wing)
+"pnz" = (
+/obj/structure/closet/secure_closet/marine,
+/obj/item/storage/belt/holster/security/tactical,
+/obj/item/grenade/frag,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/gun/projectile/automatic/bullpup_rifle,
+/obj/item/clothing/suit/space/void/marine/prepared,
+/obj/effect/floor_decal/corner/orange/mono,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/monotile,
+/area/intrepid/department/exploration/storage)
 "ppP" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -18113,6 +18176,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/exploration/hangar)
+"qwX" = (
+/obj/machinery/vending/assist{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/starboard)
 "qxc" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -19809,9 +19878,20 @@
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/equipment)
 "saA" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/suit_storage_unit/marine,
-/turf/simulated/floor/tiled/techfloor/grid,
+/obj/structure/table/rack,
+/obj/item/clothing/head/helmet/tactical,
+/obj/item/clothing/head/helmet/tactical,
+/obj/item/clothing/head/helmet/tactical,
+/obj/item/clothing/suit/armor/pcarrier/tan/tactical,
+/obj/item/clothing/suit/armor/pcarrier/tan/tactical,
+/obj/item/clothing/suit/armor/pcarrier/tan/tactical,
+/obj/item/clothing/accessory/armguards/tan,
+/obj/item/clothing/accessory/armguards/tan,
+/obj/item/clothing/accessory/armguards/tan,
+/obj/item/clothing/accessory/legguards/tan,
+/obj/item/clothing/accessory/legguards/tan,
+/obj/item/clothing/accessory/legguards/tan,
+/turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/exploration/storage)
 "saZ" = (
 /obj/structure/cable/orange{
@@ -21017,15 +21097,20 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/portside)
 "sWB" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/secure_closet/marine,
+/obj/effect/floor_decal/corner/yellow/mono,
+/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/storage/belt/holster/security/tactical,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
 /obj/item/grenade/frag,
-/obj/item/ammo_magazine/mil_rifle,
-/obj/item/ammo_magazine/mil_rifle,
-/obj/item/ammo_magazine/mil_rifle,
 /obj/item/gun/projectile/automatic/bullpup_rifle,
-/turf/simulated/floor/tiled/techfloor/grid,
+/obj/item/clothing/suit/space/void/marine/prepared,
+/obj/item/storage/belt/utility/full,
+/obj/item/gun/energy/plasmacutter,
+/obj/item/storage/briefcase/inflatable,
+/turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/exploration/storage)
 "sWR" = (
 /obj/structure/cable/orange{
@@ -23805,6 +23890,10 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/carpet/orange,
 /area/intrepid/department/command/commandquarters/ce)
+"vxR" = (
+/obj/structure/grille,
+/turf/simulated/floor,
+/area/intrepid/misc/maint/starboard)
 "vxW" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -23840,7 +23929,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/exploration/hangar)
 "vzY" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/storage/belt/holster/security/tactical,
 /obj/item/grenade/frag,
 /obj/structure/closet/secure_closet/squad_leader,
@@ -23848,7 +23936,10 @@
 /obj/item/ammo_magazine/mil_rifle,
 /obj/item/ammo_magazine/mil_rifle,
 /obj/item/gun/projectile/automatic/bullpup_rifle,
-/turf/simulated/floor/tiled/techfloor/grid,
+/obj/item/clothing/suit/space/void/marine/prepared,
+/obj/effect/floor_decal/corner/blue/mono,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/exploration/storage)
 "vAd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -39160,7 +39251,7 @@ eGJ
 msM
 cpl
 cpl
-rsa
+btm
 rsa
 rsa
 sdr
@@ -39362,7 +39453,7 @@ msM
 cpl
 cpl
 cpl
-rsa
+nYj
 sdr
 rnI
 vSq
@@ -39562,8 +39653,8 @@ cjD
 raF
 msM
 cpl
-btm
-rsa
+ggX
+qwX
 rsa
 eIn
 rGb
@@ -39764,7 +39855,7 @@ cjD
 raF
 msM
 cpl
-nYj
+rsa
 rsa
 rsa
 eIn
@@ -39966,8 +40057,8 @@ cjD
 raF
 msM
 cpl
-rsa
-rsa
+lnZ
+lnZ
 rsa
 eIn
 jDL
@@ -40168,8 +40259,8 @@ cjD
 raF
 msM
 cpl
-rsa
-rsa
+vxR
+vxR
 rsa
 jUq
 sIG
@@ -53137,8 +53228,8 @@ rwt
 oWt
 rwt
 jRI
-saA
-saA
+pnz
+ota
 saA
 sWB
 nUM
@@ -53341,8 +53432,8 @@ rwt
 jRI
 eVR
 xXc
-xXc
-xXc
+ige
+inr
 exn
 gdY
 uYZ
