@@ -2,13 +2,16 @@
 	default_assistant_title = "Passenger"
 
 	species_to_job_whitelist = list(
-		/datum/species/adherent = list(/datum/job/ai, /datum/job/cyborg),
-		/datum/species/nabber = list(/datum/job/ai, /datum/job/cyborg),
+		/datum/species/nabber = list(
+			/datum/job/ai, /datum/job/cyborg, /datum/job/janitor,
+			/datum/job/roboticist, /datum/job/cargo_tech,
+			),
 		/datum/species/vox = list(
 			/datum/job/ai, /datum/job/cyborg,
 			/datum/job/merchant, /datum/job/janitor,
 			/datum/job/chef, /datum/job/bartender,
 			/datum/job/engineer, /datum/job/roboticist,
+			/datum/job/mining,
 			),
 		/datum/species/human/mule = list(/datum/job/ai, /datum/job/cyborg)
 	)
@@ -26,6 +29,7 @@
 		/datum/species/skrell = list(HUMAN_ONLY_JOBS),
 		/datum/species/machine = list(HUMAN_ONLY_JOBS),
 		/datum/species/diona = list(HUMAN_ONLY_JOBS),
+		/datum/species/adherent = list(HUMAN_ONLY_JOBS),
 	)
 
 #undef HUMAN_ONLY_JOBS
