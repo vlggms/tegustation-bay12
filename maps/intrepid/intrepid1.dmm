@@ -5058,10 +5058,10 @@
 /obj/effect/floor_decal/spline/fancy/black/corner{
 	dir = 8
 	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/effect/floor_decal/corner/yellow/bordercorner{
 	dir = 1
 	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/exploration/storage)
 "exo" = (
@@ -10086,21 +10086,12 @@
 /turf/simulated/floor,
 /area/intrepid/department/medical/operatingroom)
 "joC" = (
-/obj/structure/closet/secure_closet/marine,
 /obj/effect/floor_decal/corner/paleblue/mono,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/secure_closet/combat_medic,
 /obj/item/storage/belt/holster/security/tactical,
-/obj/item/ammo_magazine/mil_rifle,
-/obj/item/ammo_magazine/mil_rifle,
-/obj/item/ammo_magazine/mil_rifle,
 /obj/item/grenade/frag,
-/obj/item/gun/projectile/automatic/bullpup_rifle,
 /obj/item/clothing/suit/space/void/marine/prepared,
-/obj/item/storage/firstaid/combat{
-	pixel_y = 7
-	},
-/obj/item/storage/firstaid/adv,
-/obj/item/bodybag/cryobag,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -13324,10 +13315,10 @@
 /area/intrepid/department/cargo/cargobay)
 "msg" = (
 /obj/effect/floor_decal/spline/fancy/black,
-/obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
 	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/exploration/storage)
 "msh" = (
@@ -15668,19 +15659,12 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/portside)
 "ota" = (
+/obj/effect/floor_decal/corner/orange/mono,
 /obj/structure/closet/secure_closet/marine,
+/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/storage/belt/holster/security/tactical,
 /obj/item/grenade/frag,
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/item/ammo_magazine/mil_rifle,
-/obj/item/ammo_magazine/mil_rifle,
-/obj/item/ammo_magazine/mil_rifle,
-/obj/item/gun/projectile/automatic/bullpup_rifle,
 /obj/item/clothing/suit/space/void/marine/prepared,
-/obj/effect/floor_decal/corner/orange/mono,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/exploration/storage)
 "oui" = (
@@ -16793,16 +16777,15 @@
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/security/wing)
 "pnz" = (
+/obj/effect/floor_decal/corner/orange/mono,
 /obj/structure/closet/secure_closet/marine,
+/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/storage/belt/holster/security/tactical,
 /obj/item/grenade/frag,
-/obj/item/ammo_magazine/mil_rifle,
-/obj/item/ammo_magazine/mil_rifle,
-/obj/item/ammo_magazine/mil_rifle,
-/obj/item/gun/projectile/automatic/bullpup_rifle,
 /obj/item/clothing/suit/space/void/marine/prepared,
-/obj/effect/floor_decal/corner/orange/mono,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/exploration/storage)
 "ppP" = (
@@ -18721,7 +18704,7 @@
 /obj/structure/cable/green{
 	icon_state = "0-6"
 	},
-/obj/effect/floor_decal/corner/blue/border{
+/obj/effect/floor_decal/corner/red/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -21097,19 +21080,12 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/portside)
 "sWB" = (
-/obj/structure/closet/secure_closet/marine,
 /obj/effect/floor_decal/corner/yellow/mono,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/secure_closet/combat_engi,
 /obj/item/storage/belt/holster/security/tactical,
-/obj/item/ammo_magazine/mil_rifle,
-/obj/item/ammo_magazine/mil_rifle,
-/obj/item/ammo_magazine/mil_rifle,
 /obj/item/grenade/frag,
-/obj/item/gun/projectile/automatic/bullpup_rifle,
 /obj/item/clothing/suit/space/void/marine/prepared,
-/obj/item/storage/belt/utility/full,
-/obj/item/gun/energy/plasmacutter,
-/obj/item/storage/briefcase/inflatable,
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/exploration/storage)
 "sWR" = (
@@ -23929,16 +23905,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/exploration/hangar)
 "vzY" = (
+/obj/effect/floor_decal/corner/red/mono,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/secure_closet/squad_leader,
 /obj/item/storage/belt/holster/security/tactical,
 /obj/item/grenade/frag,
-/obj/structure/closet/secure_closet/squad_leader,
-/obj/item/ammo_magazine/mil_rifle,
-/obj/item/ammo_magazine/mil_rifle,
-/obj/item/ammo_magazine/mil_rifle,
-/obj/item/gun/projectile/automatic/bullpup_rifle,
 /obj/item/clothing/suit/space/void/marine/prepared,
-/obj/effect/floor_decal/corner/blue/mono,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/exploration/storage)
 "vAd" = (

@@ -110,7 +110,19 @@
 	desc = "Pilot"
 	region = ACCESS_REGION_GENERAL
 
-/var/const/access_commissary = "ACCESS_INTREPID_SHOP" //96
+/var/const/access_combat_medic = "ACCESS_INTREPID_COMBAT_MEDIC" //96
+/datum/access/combat_medic
+	id = access_combat_medic
+	desc = "Combat Medic"
+	region = ACCESS_REGION_GENERAL
+
+/var/const/access_combat_engineer = "ACCESS_INTREPID_COMBAT_ENGINEER" //97
+/datum/access/combat_engineer
+	id = access_combat_engineer
+	desc = "Combat Engineer"
+	region = ACCESS_REGION_GENERAL
+
+/var/const/access_commissary = "ACCESS_INTREPID_SHOP" //98
 /datum/access/commissary
 	id = access_commissary
 	desc = "Commissary"

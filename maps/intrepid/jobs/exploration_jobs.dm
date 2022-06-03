@@ -55,7 +55,7 @@
 	selection_color = COLOR_RED_ORANGE
 	minimum_character_age = list(SPECIES_HUMAN = 22)
 	ideal_character_age = 24
-	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/exploration/marine/medic
+	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/exploration/marine
 	allowed_branches = list(
 		/datum/mil_branch/marine_corps
 	)
@@ -77,7 +77,7 @@
 	access = list(
 		access_marine, access_maint_tunnels, access_eva, access_emergency_storage,
 		access_guppy_helm, access_terragov_crew, access_expedition_shuttle, access_expedition_shuttle_helm, access_guppy, access_hangar,
-		access_stardust, access_research, access_radio_exp
+		access_stardust, access_research, access_radio_exp, access_combat_medic
 	)
 
 /datum/job/marine_medic/get_description_blurb()
@@ -93,7 +93,7 @@
 	selection_color = COLOR_RED_ORANGE
 	minimum_character_age = list(SPECIES_HUMAN = 22)
 	ideal_character_age = 24
-	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/exploration/marine/engineer
+	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/exploration/marine
 	allowed_branches = list(
 		/datum/mil_branch/marine_corps
 	)
@@ -115,7 +115,7 @@
 	access = list(
 		access_marine, access_maint_tunnels, access_eva, access_emergency_storage,
 		access_guppy_helm, access_terragov_crew, access_expedition_shuttle, access_expedition_shuttle_helm, access_guppy, access_hangar,
-		access_stardust, access_research, access_radio_exp
+		access_stardust, access_research, access_radio_exp, access_combat_engineer
 	)
 
 /datum/job/marine_engineer/get_description_blurb()
