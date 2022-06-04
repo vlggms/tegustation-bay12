@@ -11,6 +11,8 @@
 	var/health_mod = 0
 	/// Added/Removed speed
 	var/speed_mod = 0
+	/// Overlay related to this ability
+	var/overlay_type = null
 
 /datum/random_ability/proc/perform(mob/living/user, atom/target)
 	current_cooldown = world.time + cooldown_time

@@ -1,12 +1,12 @@
 // A random hostile mob that will receive equally random abiltiies(from a list)
 /mob/living/simple_animal/hostile/random_monster
 	name = "random monster" // Generated on Initialize
-	desc = "Woah, a monster! So random..." // Same here
+	desc = "A rare kind of monster. So rare, that you, in fact, don't even know what it really does."
 
-	icon = 'icons/mob/simple_animal/spider.dmi'
-	icon_state = "green"
-	icon_living = "green"
-	icon_dead = "green_dead"
+	icon = 'icons/mob/simple_animal/random_monster.dmi'
+	icon_state = "spider"
+	icon_living = "spider"
+	icon_dead = "spider_dead"
 
 	faction = "hostile"
 	maxHealth = 100
@@ -21,7 +21,7 @@
 	natural_weapon = /obj/item/natural_weapon/bite/spider
 
 	/// The abilities mob can't roll for
-	var/list/banned_abilities = list(/datum/random_ability/active, /datum/random_ability/death)
+	var/list/banned_abilities = list(/datum/random_ability/active, /datum/random_ability/death, /datum/random_ability/death/mitosis/repeat)
 	/// What abilities the mob MUST spawn with
 	var/list/musthave_abilities = list()
 	/// What abilities it can choose from. If it's empty - it will generate a list
@@ -30,6 +30,8 @@
 	var/list/abilities = list()
 	/// How much abilities we can roll for
 	var/abilities_amount = 2
+	/// What overlays will be drawn on the mob
+	var/list/overlay_types = list()
 
 /* Initializations */
 /mob/living/simple_animal/hostile/random_monster/Initialize()
@@ -37,6 +39,7 @@
 	InitAbilities()
 	InitName()
 	InitStats()
+	InitAppearance()
 
 /mob/living/simple_animal/hostile/random_monster/proc/InitAbilities()
 	if(!LAZYLEN(potential_abilities))
@@ -59,12 +62,26 @@
 	if(!LAZYLEN(name_list))
 		name_list += "alien monster"
 	name = pick(name_list)
-	desc = "A rare kind of monster. So rare, that you, in fact, don't even know what it really does."
 
 /mob/living/simple_animal/hostile/random_monster/proc/InitStats()
+	var/list/possible_weapons = list(/obj/item/natural_weapon/bite, /obj/item/natural_weapon/claws)
+	natural_weapon = pick(possible_weapons)
 	for(var/datum/random_ability/ra in abilities)
 		maxHealth += ra.health_mod
 		movement_cooldown += ra.speed_mod
+
+/mob/living/simple_animal/hostile/random_monster/proc/InitAppearance()
+	for(var/datum/random_ability/ra in abilities)
+		if((ra.overlay_type == null) || (ra.overlay_type in overlay_types))
+			continue
+		overlay_types += ra.overlay_type
+	update_icon()
+
+/mob/living/simple_animal/hostile/random_monster/on_update_icon()
+	overlays.Cut()
+	if(stat != DEAD)
+		for(var/ov in overlay_types)
+			overlays += image(icon, ov)
 
 /* Using abilities */
 /mob/living/simple_animal/hostile/random_monster/do_special_attack(atom/A)
@@ -97,4 +114,12 @@
 // *** Preset types ***//
 // Mitosis
 /mob/living/simple_animal/hostile/random_monster/mitosis
+	abilities_amount = 1
 	musthave_abilities = list(/datum/random_ability/death/mitosis)
+
+/mob/living/simple_animal/hostile/random_monster/mitosis/repeat
+	musthave_abilities = list(/datum/random_ability/death/mitosis/repeat)
+
+// Everything
+/mob/living/simple_animal/hostile/random_monster/everything
+	abilities_amount = 10

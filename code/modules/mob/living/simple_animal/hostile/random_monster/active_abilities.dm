@@ -7,6 +7,7 @@
 	name = "leap"
 	added_name = "jumping alien"
 	cooldown_time = 5 SECONDS
+	overlay_type = "leap"
 	var/leap_delay = 5
 	var/leap_range = 5
 	var/leap_sound = 'sound/weapons/spiderlunge.ogg'
@@ -61,6 +62,7 @@
 	added_name = "spitting alien"
 	speed_mod = 1 // Slightly slower
 	cooldown_time = 6 SECONDS
+	overlay_type = "spit"
 	var/spit_amount = 3
 	var/spit_delay = 2
 	var/spit_sound = 'sound/effects/splat.ogg'
@@ -90,6 +92,7 @@
 	name = "venom spit"
 	added_name = "venomous alien"
 	spit_type = /obj/item/projectile/venom
+	overlay_type = "spit_venom"
 
 /datum/random_ability/active/spit/venom/New()
 	..()
@@ -99,6 +102,8 @@
 	name = "teleport"
 	added_name = "unstable alien"
 	cooldown_time = 5 SECONDS
+	health_mod = -10
+	overlay_type = "teleport"
 
 /datum/random_ability/active/teleport/New()
 	..()
@@ -119,6 +124,8 @@
 /datum/random_ability/active/teleport/rapid
 	name = "rapid teleport"
 	added_name = "hyper-unstable alien"
+	health_mod = -20
+	overlay_type = "hyper_teleport"
 	var/teleport_amount = 5
 	var/teleport_delay = 6
 

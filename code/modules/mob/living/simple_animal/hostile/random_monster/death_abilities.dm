@@ -16,6 +16,8 @@
 /datum/random_ability/death/explosion
 	name = "death explosion"
 	added_name = "volatile alien"
+	health_mod = -20 // Kamikaze!
+	overlay_type = "explosive"
 	/// Delay before the explosion
 	var/explosion_delay = 15
 	/// What sound is played on death, before explosion
@@ -27,11 +29,14 @@
 
 /datum/random_ability/death/explosion/New()
 	..()
-	explosion_delay = rand(10, 50) // Let there be chaos
+	explosion_delay = rand(10, 30)
+	if(prob(5)) // RARE
+		explosion_delay += rand(5, 25)
 	explosion_devastation_range = round(explosion_delay / 22)
 	explosion_heavy_range = round(explosion_delay / 14)
 	explosion_light_range = round(explosion_delay / 8)
 	explosion_flash_range = rand(-1, explosion_light_range)
+	health_mod *= 1 + (explosion_delay*0.1) // Bigger explosion makes you easier to kill
 
 /datum/random_ability/death/explosion/perform(mob/living/user, atom/target)
 	..()
@@ -51,6 +56,8 @@
 /datum/random_ability/death/mitosis
 	name = "mitosis"
 	added_name = "double alien" // Idk
+	speed_mod = 1 // Slow
+	overlay_type = "mitosis"
 	/// How many mobs it will spawn
 	var/mitosis_amount = 2
 	/// What type of mob it spawns
@@ -80,3 +87,7 @@
 			target_turf = CircularRandomTurfAround(T, RAND_F(1, 2))
 			mitosee.throw_at(target_turf, 2, 3)
 	user.gib()
+
+// This subtype will spawn mitosis monsters on death
+/datum/random_ability/death/mitosis/repeat
+	mitosis_type = /mob/living/simple_animal/hostile/random_monster/mitosis/repeat
