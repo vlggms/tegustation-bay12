@@ -37,6 +37,11 @@
 	reload_time = 2 SECONDS
 	reload_sound = 'sound/effects/scanbeep.ogg'
 
+/mob/living/simple_animal/hostile/hivebot/drop_loot()
+	if(prob(25))
+		loot_list += /obj/item/cell/standard
+	..()
+
 /mob/living/simple_animal/hostile/hivebot/range
 	desc = "A junky looking robot with four spiky legs. It's equipped with some kind of small-bore gun."
 	ranged = 1
