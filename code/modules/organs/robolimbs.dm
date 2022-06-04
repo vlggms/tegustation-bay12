@@ -207,7 +207,7 @@ var/datum/robolimb/basic_robolimb
 	can_eat = 1
 	skintone = 1
 	unavailable_at_fab = 1
-	allowed_bodytypes = list(SPECIES_IPC)
+	restricted_to = list(SPECIES_IPC)
 
 /datum/robolimb/shellguard
 	company = "Shellguard"
