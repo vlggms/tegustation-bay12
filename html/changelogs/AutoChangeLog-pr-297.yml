@@ -1,0 +1,5 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - rscadd: Added radial menus from /tg/station. Currently used when choosing cyborg
+      module icon and organ manipulation surgeries.
