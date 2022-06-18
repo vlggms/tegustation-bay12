@@ -1,0 +1,13714 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/turf/space,
+/area/space)
+"am" = (
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/computerlab)
+"at" = (
+/obj/structure/table/standard,
+/obj/item/material/shard,
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/observation_a)
+"av" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/reinforced,
+/area/translocated_gateway/gateway)
+"aw" = (
+/turf/simulated/wall/r_titanium,
+/area/translocated_gateway/gateway)
+"ay" = (
+/obj/structure/bed/chair/office{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/machinery/power/apc/derelict{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/translocated_gateway/observation_a)
+"az" = (
+/obj/structure/girder,
+/turf/simulated/floor/asteroid,
+/area/space)
+"aA" = (
+/obj/machinery/r_n_d/server{
+	name = "Fried Data Server";
+	machine_desc = "A powerful piece of hardware used as the hub of a research matrix, containing every byte of data gleaned from an experiment. This looks like it won't work anymore."
+	},
+/turf/simulated/floor/reinforced,
+/area/translocated_gateway/gateway)
+"aB" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc/derelict{
+	pixel_y = -24
+	},
+/turf/simulated/floor/reinforced,
+/area/translocated_gateway/gateway)
+"aD" = (
+/turf/simulated/floor/reinforced,
+/area/translocated_gateway/gateway)
+"aF" = (
+/obj/effect/decal/cleanable/blood{
+	icon_state = "mfloor6"
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/observation_a)
+"aH" = (
+/turf/simulated/floor/plating{
+	icon_state = "dmg4"
+	},
+/area/space)
+"aI" = (
+/turf/simulated/floor/plating{
+	icon_state = "dmg2"
+	},
+/area/space)
+"aL" = (
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/observation_a)
+"aM" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/observation_a)
+"aN" = (
+/obj/machinery/gateway{
+	dir = 5
+	},
+/turf/simulated/floor/reinforced,
+/area/translocated_gateway/gateway)
+"aP" = (
+/obj/effect/decal/cleanable/blood{
+	icon_state = "dir_splatter_2";
+	dir = 4
+	},
+/turf/simulated/wall/titanium,
+/area/translocated_gateway/preproom)
+"aQ" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/translocated_gateway/preproom)
+"aT" = (
+/obj/machinery/gateway{
+	dir = 4
+	},
+/turf/simulated/floor/plating{
+	icon_state = "dmg1"
+	},
+/area/translocated_gateway/gateway)
+"aV" = (
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/computerlab)
+"bc" = (
+/obj/machinery/gateway{
+	dir = 6
+	},
+/obj/item/gun/energy/pulse_rifle/pistol,
+/turf/simulated/floor/plating{
+	icon_state = "dmg1"
+	},
+/area/translocated_gateway/gateway)
+"bf" = (
+/obj/effect/decal/cleanable/blood/drip,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/monotile,
+/area/translocated_gateway/observation_a)
+"bh" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8;
+	icon_state = "warning"
+	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -25
+	},
+/turf/simulated/floor/reinforced,
+/area/translocated_gateway/gateway)
+"bm" = (
+/obj/machinery/door/airlock/research{
+	name = "Control Room A"
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/translocated_gateway/observation_a)
+"bn" = (
+/obj/machinery/computer/power_monitor,
+/obj/structure/cable{
+	icon_state = "0-10"
+	},
+/obj/structure/cable{
+	icon_state = "8-10"
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/translocated_gateway/hallway)
+"bq" = (
+/turf/simulated/wall/titanium,
+/area/space)
+"bt" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plating{
+	icon_state = "dmg2"
+	},
+/area/space)
+"bw" = (
+/obj/effect/decal/cleanable/blood/drip,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"by" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor/reinforced,
+/area/translocated_gateway/gateway)
+"bz" = (
+/obj/structure/flora/pottedplant/minitree{
+	pixel_y = 15;
+	pixel_x = 4
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "6-8"
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"bC" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/industrial/warning/fulltile,
+/obj/machinery/door/airlock/vault{
+	name = "Gateway Chamber"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/monotile,
+/area/translocated_gateway/gateway)
+"bF" = (
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"bG" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"bJ" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"bV" = (
+/obj/structure/cable/yellow{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/power/apc/derelict{
+	dir = 4;
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/translocated_gateway/observation_b)
+"bW" = (
+/obj/effect/landmark/corpse/scientist,
+/obj/effect/decal/cleanable/blood{
+	icon_state = "gibdown1"
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/obj/structure/sign/warning/high_voltage{
+	dir = 1;
+	pixel_y = -32
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"bZ" = (
+/obj/machinery/door/airlock/engineering{
+	name = "Custodial Closet"
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/translocated_gateway/janitorroom)
+"ca" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"cd" = (
+/turf/simulated/wall/titanium,
+/area/translocated_gateway/canteen)
+"cf" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/space)
+"ci" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1;
+	icon_state = "warning"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/translocated_gateway/hallway)
+"ck" = (
+/mob/living/simple_animal/hostile/faithless/strong{
+	name = "Apparition";
+	desc = "A being which appears to be composed of a cloud of dirty black smoke. It's eyes seem to peirce right through you.."
+	},
+/turf/simulated/floor/plating,
+/area/translocated_gateway/storage)
+"co" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/monotile,
+/area/translocated_gateway/observation_b)
+"cp" = (
+/obj/structure/cable/yellow{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/power/smes/buildable/preset,
+/turf/simulated/floor/plating,
+/area/translocated_gateway/engiroom)
+"ct" = (
+/obj/structure/railing/mapped,
+/obj/structure/closet/crate,
+/obj/item/stack/material/phoron/fifty,
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "5-9"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/translocated_gateway/hallway)
+"cv" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "9-10"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/translocated_gateway/hallway)
+"cw" = (
+/obj/structure/railing/mapped,
+/obj/structure/cable{
+	icon_state = "5-8"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/translocated_gateway/hallway)
+"cH" = (
+/turf/simulated/floor/plating,
+/area/space)
+"cJ" = (
+/obj/machinery/power/port_gen/pacman,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	icon_state = "alarm0";
+	pixel_x = 24
+	},
+/turf/simulated/floor/plating,
+/area/translocated_gateway/engiroom)
+"cL" = (
+/obj/item/mop,
+/obj/structure/mopbucket,
+/obj/machinery/alarm{
+	dir = 8;
+	icon_state = "alarm0";
+	pixel_x = 24
+	},
+/turf/simulated/floor/plating,
+/area/translocated_gateway/janitorroom)
+"cN" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "6-10"
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-5"
+	},
+/turf/simulated/floor/plating,
+/area/translocated_gateway/hallway)
+"cQ" = (
+/obj/structure/window/reinforced/tinted/frosted,
+/obj/structure/table/standard,
+/obj/item/towel,
+/obj/item/towel{
+	pixel_y = 5
+	},
+/obj/item/towel{
+	pixel_y = 10
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/bathroom)
+"cW" = (
+/obj/machinery/power/terminal,
+/obj/structure/cable,
+/turf/simulated/floor/plating,
+/area/translocated_gateway/engiroom)
+"cX" = (
+/obj/structure/table/woodentable/walnut,
+/obj/item/material/ashtray{
+	pixel_y = 11;
+	pixel_x = -12
+	},
+/turf/simulated/floor/carpet/brown,
+/area/translocated_gateway/canteen)
+"dc" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-10"
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "6-10"
+	},
+/obj/structure/sign/warning/secure_area{
+	pixel_y = 25
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/translocated_gateway/hallway)
+"dd" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/structure/closet/crate/bin,
+/obj/item/storage/bag/trash,
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"de" = (
+/obj/structure/cable{
+	icon_state = "0-5"
+	},
+/obj/machinery/power/smes/buildable/preset,
+/turf/simulated/floor/plating,
+/area/translocated_gateway/hallway)
+"df" = (
+/obj/structure/cable,
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/translocated_gateway/hallway)
+"dg" = (
+/obj/structure/catwalk,
+/obj/structure/cable{
+	icon_state = "4-9"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/plating,
+/area/translocated_gateway/hallway)
+"dh" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "0-1"
+	},
+/obj/machinery/power/apc/derelict{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/clinic)
+"dj" = (
+/obj/machinery/power/port_gen/pacman,
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/translocated_gateway/hallway)
+"dr" = (
+/obj/structure/bed/chair/office{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/computerlab)
+"dt" = (
+/obj/machinery/constructable_frame/machine_frame,
+/obj/item/stack/cable_coil,
+/obj/item/stock_parts/circuitboard/broken,
+/obj/item/stock_parts/keyboard,
+/obj/item/stock_parts/manipulator/pico,
+/obj/structure/sign/noidle{
+	pixel_y = 27
+	},
+/turf/simulated/floor/reinforced,
+/area/translocated_gateway/gateway)
+"du" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/computerlab)
+"dx" = (
+/obj/item/stock_parts/scanning_module/phasic,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/reinforced,
+/area/translocated_gateway/gateway)
+"dy" = (
+/obj/machinery/door/airlock/command{
+	name = "Gateway Access West"
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "6-9"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"dA" = (
+/obj/machinery/door/airlock/command{
+	name = "Gateway Access East"
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "5-10"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"dB" = (
+/obj/item/stack/cable_coil{
+	icon_state = "coil1";
+	amount = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plating{
+	icon_state = "dmg4"
+	},
+/area/translocated_gateway/gateway)
+"dC" = (
+/obj/item/clothing/under/casual_pants/baggy/blackjeans,
+/obj/item/clothing/shoes/black,
+/obj/structure/closet{
+	desc = "It's a basic storage unit. This one has a tag which reads 'Sandra'."
+	},
+/turf/simulated/floor/wood/walnut,
+/area/translocated_gateway/quarterseast)
+"dH" = (
+/obj/item/paper/crumpled,
+/obj/structure/table/woodentable/walnut,
+/turf/simulated/floor/wood/walnut,
+/area/translocated_gateway/quarterseast)
+"dO" = (
+/obj/structure/table/standard,
+/obj/machinery/button/blast_door{
+	dir = 4;
+	id_tag = "gatewaychamberblastdoors";
+	name = "Observation Window Blast Door button"
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/observation_b)
+"dT" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"dU" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"ej" = (
+/obj/machinery/jukebox/old,
+/turf/simulated/floor/carpet/brown,
+/area/translocated_gateway/canteen)
+"eo" = (
+/obj/machinery/door/blast/regular{
+	id_tag = "transgatewaylockdown"
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/translocated_gateway/hallway)
+"eq" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"eu" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/observation_b)
+"eK" = (
+/obj/structure/table/woodentable/walnut,
+/obj/item/clothing/head/welding,
+/turf/simulated/floor/carpet/brown,
+/area/translocated_gateway/canteen)
+"eO" = (
+/obj/structure/railing/mapped,
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/clinic)
+"eP" = (
+/obj/structure/table/woodentable/walnut,
+/turf/simulated/floor/carpet/brown,
+/area/translocated_gateway/canteen)
+"eQ" = (
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/steel_grid,
+/area/translocated_gateway/preproom)
+"eT" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/reinforced,
+/area/translocated_gateway/gateway)
+"eX" = (
+/obj/structure/cable{
+	icon_state = "5-8"
+	},
+/obj/structure/sign/warning/high_voltage{
+	dir = 1;
+	pixel_y = -32
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "9-10"
+	},
+/turf/simulated/floor/plating,
+/area/translocated_gateway/hallway)
+"fx" = (
+/obj/machinery/gateway,
+/obj/item/stack/cable_coil{
+	icon_state = "coil1";
+	amount = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/artifact,
+/turf/simulated/floor/plating{
+	icon_state = "dmg1"
+	},
+/area/translocated_gateway/gateway)
+"fz" = (
+/mob/living/simple_animal/hostile/mimic/sleeping{
+	dir = 8;
+	name = "IV bag freezer"
+	},
+/obj/effect/decal/cleanable/blood{
+	icon_state = "gib5"
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	icon_state = "alarm0";
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/clinic)
+"fA" = (
+/obj/item/clothing/shoes/jackboots,
+/obj/effect/decal/cleanable/blood{
+	icon_state = "gib2"
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/steel_grid,
+/area/translocated_gateway/preproom)
+"fB" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"fN" = (
+/obj/item/stack/cable_coil{
+	icon_state = "coil1";
+	amount = 1
+	},
+/turf/simulated/floor/plating{
+	icon_state = "dmg1"
+	},
+/area/space)
+"fQ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/computerlab)
+"gb" = (
+/obj/machinery/gateway{
+	dir = 8
+	},
+/turf/simulated/floor/plating{
+	icon_state = "dmg1"
+	},
+/area/translocated_gateway/gateway)
+"gg" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock{
+	name = "Staff Restroom"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/bathroom)
+"gi" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/sign/bluecross_2{
+	pixel_y = 32
+	},
+/obj/structure/sign/directions/infirmary{
+	pixel_y = 42
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"gk" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/translocated_gateway/preproom)
+"gu" = (
+/obj/item/weldingtool/electric,
+/turf/simulated/floor/carpet/brown,
+/area/translocated_gateway/canteen)
+"gz" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"gF" = (
+/obj/machinery/constructable_frame/computerframe,
+/turf/simulated/floor/reinforced,
+/area/translocated_gateway/gateway)
+"gH" = (
+/obj/structure/grille/broken,
+/obj/item/stack/material/rods{
+	amount = 3
+	},
+/obj/item/material/shard,
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	icon_state = "pdoor0";
+	id_tag = "gatewaychamberblastdoors"
+	},
+/turf/simulated/floor/plating,
+/area/translocated_gateway/observation_a)
+"gJ" = (
+/obj/machinery/door/airlock/civilian{
+	name = "Frontiersmen Quarters"
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/translocated_gateway/quarterswest)
+"gN" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/translocated_gateway/engiroom)
+"gO" = (
+/obj/machinery/washing_machine,
+/obj/machinery/alarm{
+	pixel_y = 19
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/bathroom)
+"gX" = (
+/turf/simulated/wall/titanium,
+/area/translocated_gateway/quarterseast)
+"gY" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/obj/structure/cable/yellow{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "6-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/power/apc/derelict{
+	dir = 1;
+	pixel_y = 18
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/translocated_gateway/hallway)
+"hj" = (
+/obj/structure/sign/warning/server_room{
+	pixel_y = 25
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/computerlab)
+"hB" = (
+/turf/simulated/wall/titanium,
+/area/translocated_gateway/observation_b)
+"hD" = (
+/obj/structure/closet,
+/turf/simulated/floor/plating,
+/area/translocated_gateway/janitorroom)
+"hW" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"hX" = (
+/obj/structure/bed/chair/office{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/observation_b)
+"ib" = (
+/turf/simulated/floor/plating{
+	icon_state = "dmg1"
+	},
+/area/space)
+"ie" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/observation_a)
+"ig" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/translocated_gateway/preproom)
+"io" = (
+/obj/effect/wingrille_spawn/reinforced/full,
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	icon_state = "pdoor0";
+	id_tag = "gatewaychamberblastdoors"
+	},
+/turf/simulated/floor/plating,
+/area/translocated_gateway/observation_a)
+"is" = (
+/obj/structure/largecrate,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/structure/cable/yellow{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/power/apc/derelict{
+	dir = 1;
+	pixel_y = 18
+	},
+/turf/simulated/floor/plating,
+/area/translocated_gateway/storage)
+"iy" = (
+/obj/structure/cable/yellow{
+	d2 = 8;
+	icon_state = "0-4"
+	},
+/obj/item/stool/stone,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/machinery/power/apc/derelict{
+	dir = 1;
+	pixel_y = 18
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/bathroom)
+"iB" = (
+/obj/structure/bed,
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/clinic)
+"iE" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"iN" = (
+/obj/item/paper_bin,
+/obj/structure/table/woodentable/walnut,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/wood/walnut,
+/area/translocated_gateway/quarterswest)
+"iX" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	icon_state = "alarm0";
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"iY" = (
+/obj/structure/bed/chair/office{
+	dir = 8
+	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -25
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/observation_a)
+"iZ" = (
+/obj/structure/lattice,
+/turf/space,
+/area/space)
+"jb" = (
+/obj/machinery/gateway{
+	dir = 10
+	},
+/turf/simulated/floor/plating{
+	icon_state = "dmg1"
+	},
+/area/translocated_gateway/gateway)
+"jc" = (
+/obj/structure/hygiene/toilet{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/bathroom)
+"jd" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/plating{
+	icon_state = "dmg1"
+	},
+/area/translocated_gateway/gateway)
+"jp" = (
+/obj/machinery/microwave,
+/obj/structure/table/woodentable/walnut,
+/turf/simulated/floor/carpet/brown,
+/area/translocated_gateway/canteen)
+"jw" = (
+/obj/structure/flora/pottedplant/flower{
+	pixel_y = 14;
+	pixel_x = -5
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-10"
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"jA" = (
+/obj/structure/railing/mapped,
+/obj/structure/cable{
+	icon_state = "4-9"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/translocated_gateway/hallway)
+"jB" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"jG" = (
+/obj/machinery/gateway{
+	dir = 9
+	},
+/turf/simulated/floor/reinforced,
+/area/translocated_gateway/gateway)
+"jM" = (
+/obj/structure/bed,
+/obj/item/bedsheet,
+/obj/machinery/alarm{
+	pixel_y = 19
+	},
+/obj/machinery/power/apc/derelict,
+/turf/simulated/floor/carpet/red,
+/area/translocated_gateway/quarterswest)
+"jS" = (
+/obj/effect/decal/cleanable/blood{
+	icon_state = "tracks";
+	dir = 8
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"kp" = (
+/obj/structure/grille,
+/obj/item/stack/material/rods,
+/obj/item/stack/material/rods{
+	pixel_x = 6
+	},
+/obj/item/material/shard,
+/obj/item/material/shard,
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	icon_state = "pdoor0";
+	id_tag = "gatewaychamberblastdoors"
+	},
+/turf/simulated/floor/plating,
+/area/translocated_gateway/observation_a)
+"kM" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/wood/walnut,
+/area/translocated_gateway/quarterswest)
+"kN" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/turf/simulated/floor/reinforced,
+/area/translocated_gateway/gateway)
+"kS" = (
+/mob/living/simple_animal/hostile/creature,
+/turf/simulated/floor/reinforced,
+/area/translocated_gateway/gateway)
+"kZ" = (
+/obj/structure/bed/chair/office{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/computerlab)
+"lk" = (
+/obj/machinery/power/breakerbox,
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/translocated_gateway/hallway)
+"lr" = (
+/obj/machinery/gateway{
+	dir = 1
+	},
+/turf/simulated/floor/plating{
+	icon_state = "dmg1"
+	},
+/area/translocated_gateway/gateway)
+"lu" = (
+/obj/effect/decal/cleanable/blood/drip,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"lv" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"lI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/clinic)
+"lN" = (
+/obj/machinery/gateway/centerstation,
+/obj/item/stack/cable_coil{
+	icon_state = "coil1";
+	amount = 1
+	},
+/turf/simulated/floor/plating{
+	icon_state = "dmg1"
+	},
+/area/translocated_gateway/gateway)
+"lQ" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"lV" = (
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "6-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/plating,
+/area/translocated_gateway/hallway)
+"mc" = (
+/obj/machinery/recharge_station,
+/obj/effect/decal/cleanable/blood/oil{
+	icon_state = "gib2";
+	dryname = "dried oil stain";
+	name = "oil"
+	},
+/obj/machinery/alarm{
+	pixel_y = 19
+	},
+/turf/simulated/floor/carpet/red,
+/area/translocated_gateway/quarterseast)
+"mf" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/clinic)
+"mg" = (
+/turf/simulated/wall/titanium,
+/area/translocated_gateway/bathroom)
+"mi" = (
+/obj/structure/table/standard,
+/obj/item/modular_computer/laptop/preset/custom_loadout/advanced,
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/observation_b)
+"mm" = (
+/turf/simulated/wall/titanium,
+/area/translocated_gateway/computerlab)
+"mp" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/translocated_gateway/observation_a)
+"mw" = (
+/obj/structure/table/rack,
+/turf/simulated/floor/tiled/steel_grid,
+/area/translocated_gateway/preproom)
+"mK" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/wood/walnut,
+/area/translocated_gateway/quarterseast)
+"mS" = (
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/observation_a)
+"nc" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/computerlab)
+"ni" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"np" = (
+/obj/machinery/door/airlock/civilian{
+	name = "Frontiersmen Quarters"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/translocated_gateway/quarterswest)
+"nu" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/plating,
+/area/translocated_gateway/janitorroom)
+"nU" = (
+/obj/structure/largecrate,
+/obj/item/gun/energy/gun,
+/obj/item/gun/energy/gun,
+/obj/item/gun/energy/gun,
+/obj/item/gun/energy/gun,
+/turf/simulated/floor/plating,
+/area/translocated_gateway/storage)
+"nV" = (
+/obj/structure/hygiene/shower{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/bathroom)
+"nX" = (
+/obj/structure/table/woodentable/walnut,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor/wood/walnut,
+/area/translocated_gateway/quarterseast)
+"nZ" = (
+/turf/simulated/wall/titanium,
+/area/translocated_gateway/observation_a)
+"oa" = (
+/obj/structure/bed/chair/office{
+	dir = 8
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/carpet/red,
+/area/translocated_gateway/quarterseast)
+"od" = (
+/obj/structure/table/standard,
+/obj/item/storage/laundry_basket,
+/turf/simulated/floor/plating,
+/area/translocated_gateway/storage)
+"oi" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"op" = (
+/obj/effect/decal/cleanable/blood/drip,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/clinic)
+"oq" = (
+/obj/machinery/papershredder,
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/computerlab)
+"or" = (
+/obj/structure/closet/crate/bin,
+/obj/item/storage/bag/trash,
+/turf/simulated/floor/tiled/monotile,
+/area/translocated_gateway/observation_b)
+"oy" = (
+/obj/machinery/door/airlock/glass,
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/translocated_gateway/hallway)
+"oC" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/machinery/light/small,
+/turf/simulated/floor/plating,
+/area/translocated_gateway/engiroom)
+"oI" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"oJ" = (
+/obj/structure/largecrate,
+/obj/item/stock_parts/scanning_module/adv,
+/obj/item/stock_parts/scanning_module/adv,
+/obj/item/stock_parts/micro_laser/high,
+/obj/item/stock_parts/micro_laser/high,
+/obj/item/stock_parts/matter_bin/adv,
+/obj/item/stock_parts/matter_bin/adv,
+/obj/item/stock_parts/manipulator/nano,
+/obj/item/stock_parts/manipulator/nano,
+/turf/simulated/floor/plating,
+/area/translocated_gateway/storage)
+"oL" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "0-1"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/power/apc/derelict{
+	dir = 4;
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/computerlab)
+"oR" = (
+/obj/machinery/light_construct{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/space)
+"pl" = (
+/obj/effect/decal/cleanable/blood{
+	icon_state = "tracks";
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"po" = (
+/obj/structure/table/rack,
+/turf/simulated/floor/plating,
+/area/translocated_gateway/storage)
+"pp" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/clinic)
+"pG" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/plating,
+/area/translocated_gateway/janitorroom)
+"pJ" = (
+/obj/structure/table/standard,
+/obj/machinery/button/blast_door{
+	dir = 8;
+	id_tag = "transgatewaylockdown";
+	name = "Facility Lockdown button"
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/observation_a)
+"pL" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/glass,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/translocated_gateway/hallway)
+"pP" = (
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/observation_b)
+"pQ" = (
+/turf/simulated/floor/tiled/steel_grid,
+/area/translocated_gateway/preproom)
+"pW" = (
+/obj/structure/bed/chair/office,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/turf/simulated/floor/carpet/red,
+/area/translocated_gateway/quarterseast)
+"qD" = (
+/obj/structure/table/woodentable/walnut,
+/obj/item/stack/medical/bruise_pack,
+/turf/simulated/floor/carpet/brown,
+/area/translocated_gateway/canteen)
+"qF" = (
+/obj/structure/bed/chair/armchair/brown{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/brown,
+/area/translocated_gateway/canteen)
+"qN" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"qQ" = (
+/turf/simulated/wall/titanium,
+/area/translocated_gateway/janitorroom)
+"qT" = (
+/obj/machinery/computer/modular/preset/aislot/research{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/computerlab)
+"rb" = (
+/turf/simulated/wall/r_titanium,
+/area/translocated_gateway/observation_b)
+"rg" = (
+/obj/structure/table/woodentable/walnut,
+/obj/item/trash/tomato,
+/turf/simulated/floor/carpet/brown,
+/area/translocated_gateway/canteen)
+"rh" = (
+/obj/structure/table/woodentable/walnut,
+/obj/item/trash/plate,
+/obj/item/material/kitchen/utensil/fork/plastic,
+/turf/simulated/floor/carpet/brown,
+/area/translocated_gateway/canteen)
+"ri" = (
+/obj/item/modular_computer/laptop/preset/custom_loadout/cheap,
+/obj/structure/table/woodentable/walnut,
+/turf/simulated/floor/wood/walnut,
+/area/translocated_gateway/quarterswest)
+"ro" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/clinic)
+"rq" = (
+/obj/item/stack/cable_coil{
+	icon_state = "coil1";
+	amount = 1
+	},
+/turf/space,
+/area/space)
+"rK" = (
+/obj/structure/bed/chair/armchair/brown,
+/turf/simulated/floor/carpet/brown,
+/area/translocated_gateway/canteen)
+"rL" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"rO" = (
+/turf/simulated/floor/plating{
+	icon_state = "dmg1"
+	},
+/area/translocated_gateway/gateway)
+"rV" = (
+/mob/living/simple_animal/hostile/creature,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"sa" = (
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/bathroom)
+"sb" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/translocated_gateway/observation_b)
+"sc" = (
+/obj/effect/decal/cleanable/blood/gibs/robot/limb{
+	icon_state = "gibleg"
+	},
+/obj/structure/cable/yellow{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/power/apc/derelict{
+	dir = 1;
+	pixel_y = 18
+	},
+/mob/living/simple_animal/hostile/faithless{
+	name = "Apparition";
+	desc = "A being which appears to be composed of a cloud of dirty black smoke. It's eyes seem to peirce right through you.."
+	},
+/turf/simulated/floor/carpet/red,
+/area/translocated_gateway/quarterseast)
+"sf" = (
+/turf/simulated/floor/plating,
+/area/translocated_gateway/hallway)
+"sg" = (
+/obj/structure/flora/pottedplant/floorleaf{
+	pixel_y = 8
+	},
+/obj/structure/railing/mapped,
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/obj/structure/railing/mapped{
+	dir = 4
+	},
+/obj/structure/railing/mapped{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/computerlab)
+"sk" = (
+/obj/structure/lattice,
+/obj/item/stack/cable_coil{
+	icon_state = "coil1";
+	amount = 1
+	},
+/turf/space,
+/area/space)
+"sq" = (
+/turf/simulated/floor/plating{
+	icon_state = "dmg2"
+	},
+/area/translocated_gateway/gateway)
+"sI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"sY" = (
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"tu" = (
+/obj/structure/flora/pottedplant/deskleaf{
+	pixel_x = -5
+	},
+/obj/structure/table/woodentable/walnut,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor/wood/walnut,
+/area/translocated_gateway/quarterswest)
+"tx" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/translocated_gateway/bathroom)
+"tY" = (
+/obj/structure/cable{
+	icon_state = "4-10"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/light/small/red{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/translocated_gateway/hallway)
+"ua" = (
+/turf/simulated/floor/plating,
+/area/translocated_gateway/janitorroom)
+"ub" = (
+/obj/machinery/door/airlock/research{
+	name = "Control Room B"
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/translocated_gateway/observation_b)
+"uk" = (
+/obj/structure/table/rack,
+/obj/item/clothing/under/dress/dress_purple,
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/bathroom)
+"uo" = (
+/obj/machinery/door/airlock/civilian{
+	name = "Frontiersmen Quarters"
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/translocated_gateway/quarterseast)
+"uw" = (
+/turf/simulated/wall/titanium,
+/area/translocated_gateway/hallway)
+"uy" = (
+/mob/living/simple_animal/hostile/creature,
+/turf/simulated/floor/plating{
+	icon_state = "dmg4"
+	},
+/area/translocated_gateway/gateway)
+"uD" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"va" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"vg" = (
+/obj/structure/closet/secure_closet/medical1,
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/clinic)
+"vu" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"vZ" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"wa" = (
+/turf/simulated/wall/titanium,
+/area/translocated_gateway/preproom)
+"wb" = (
+/obj/effect/decal/cleanable/blood{
+	icon_state = "mgibbl2"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/observation_a)
+"wg" = (
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/observation_b)
+"wj" = (
+/obj/structure/table/rack,
+/obj/item/clothing/under/tactical,
+/obj/item/clothing/under/tactical,
+/obj/item/clothing/shoes/jackboots,
+/obj/item/clothing/shoes/jackboots,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/translocated_gateway/storage)
+"wk" = (
+/obj/effect/wallframe_spawn/no_grille,
+/turf/simulated/floor/plating,
+/area/translocated_gateway/clinic)
+"wu" = (
+/obj/effect/shuttle_landmark/nav_transgateway/nav2,
+/turf/space,
+/area/space)
+"ww" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "2-5"
+	},
+/obj/machinery/door/airlock/command{
+	name = "Frontiersmen Preperation"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/translocated_gateway/preproom)
+"wH" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"xb" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/sign/bluecross_2{
+	pixel_y = 32
+	},
+/obj/structure/sign/directions/infirmary{
+	pixel_y = 42
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"xo" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/translocated_gateway/storage)
+"xF" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/industrial/warning,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"xU" = (
+/obj/machinery/door/blast/regular{
+	id_tag = "transgatewaylockdown"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/monotile,
+/area/translocated_gateway/hallway)
+"xV" = (
+/obj/structure/closet{
+	desc = "It's a basic storage unit. This one has a tag which reads 'Mark'."
+	},
+/turf/simulated/floor/wood/walnut,
+/area/translocated_gateway/quarterswest)
+"ya" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"yb" = (
+/obj/machinery/vending/wallmed1{
+	dir = 4;
+	pixel_x = -24
+	},
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/clinic)
+"yr" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/monotile,
+/area/translocated_gateway/observation_b)
+"yx" = (
+/turf/simulated/wall/titanium,
+/area/translocated_gateway/quarterswest)
+"yz" = (
+/mob/living/simple_animal/hostile/creature,
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"yI" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"yJ" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/airless,
+/area/space)
+"yM" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood/drip,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/wood/walnut,
+/area/translocated_gateway/canteen)
+"yS" = (
+/obj/structure/table/standard,
+/obj/machinery/alarm{
+	dir = 8;
+	icon_state = "alarm0";
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/computerlab)
+"za" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"zb" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/plating,
+/area/translocated_gateway/janitorroom)
+"ze" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/reinforced,
+/area/translocated_gateway/gateway)
+"zw" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"zz" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"zI" = (
+/obj/structure/sign/warning/secure_area{
+	dir = 4;
+	pixel_x = -32
+	},
+/turf/simulated/floor/plating{
+	icon_state = "dmg1"
+	},
+/area/space)
+"zO" = (
+/turf/simulated/floor/plating,
+/area/translocated_gateway/storage)
+"zY" = (
+/obj/item/integrated_circuit/manipulation/bluespace_rift,
+/obj/machinery/constructable_frame/machine_frame,
+/obj/item/stock_parts/console_screen,
+/obj/item/stock_parts/keyboard,
+/obj/item/stock_parts/circuitboard{
+	origin_tech = list("programming" = 2, "bluespace" = 7)
+	},
+/turf/simulated/floor/reinforced,
+/area/translocated_gateway/gateway)
+"zZ" = (
+/obj/item/clothing/under/tactical,
+/turf/simulated/floor/tiled/steel_grid,
+/area/translocated_gateway/preproom)
+"Ak" = (
+/obj/machinery/computer/modular/preset/aislot/research{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/computerlab)
+"AK" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/mob/living/simple_animal/hostile/creature,
+/turf/simulated/floor/tiled/monotile,
+/area/translocated_gateway/observation_a)
+"AY" = (
+/obj/structure/window/reinforced/tinted/frosted,
+/obj/structure/table/standard,
+/obj/item/storage/box/detergent,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/bathroom)
+"Bh" = (
+/obj/structure/iv_drip,
+/obj/structure/railing/mapped,
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/clinic)
+"Bi" = (
+/obj/structure/cable{
+	icon_state = "6-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/light/small/red{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/translocated_gateway/hallway)
+"Bo" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/translocated_gateway/preproom)
+"Bz" = (
+/obj/structure/table/woodentable/walnut,
+/turf/simulated/floor/wood/walnut,
+/area/translocated_gateway/quarterseast)
+"BM" = (
+/obj/effect/wallframe_spawn/no_grille,
+/turf/simulated/floor/plating,
+/area/translocated_gateway/computerlab)
+"BX" = (
+/turf/simulated/mineral/random,
+/area/space)
+"Cb" = (
+/obj/item/trash/proteinbar,
+/turf/simulated/floor/carpet/brown,
+/area/translocated_gateway/canteen)
+"Cc" = (
+/obj/structure/closet,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/fire,
+/obj/item/storage/firstaid/o2,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/toxin,
+/obj/item/storage/firstaid/trauma,
+/turf/simulated/floor/plating,
+/area/translocated_gateway/storage)
+"Ce" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/observation_b)
+"Cm" = (
+/obj/machinery/r_n_d/server{
+	name = "Fried Data Server";
+	machine_desc = "A powerful piece of hardware used as the hub of a research matrix, containing every byte of data gleaned from an experiment. This looks like it won't work anymore."
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/computerlab)
+"Cn" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/computerlab)
+"Cq" = (
+/turf/simulated/floor/asteroid,
+/area/space)
+"CB" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/command{
+	name = "Frontiersmen Preperation"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/translocated_gateway/preproom)
+"CG" = (
+/obj/effect/landmark/corpse/engineer,
+/turf/simulated/floor/carpet/brown,
+/area/translocated_gateway/canteen)
+"CK" = (
+/obj/machinery/light/spot,
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/clinic)
+"CU" = (
+/obj/structure/table/standard,
+/obj/item/paper_bin,
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/observation_b)
+"CW" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/red,
+/area/translocated_gateway/quarterseast)
+"Db" = (
+/obj/structure/table/standard,
+/obj/item/storage/toolbox/mechanical,
+/turf/simulated/floor/plating,
+/area/translocated_gateway/janitorroom)
+"Dk" = (
+/obj/effect/decal/cleanable/blood/oil{
+	icon_state = "dir_splatter_2";
+	dir = 6;
+	name = "oil";
+	dryname = "dried oil stain"
+	},
+/turf/simulated/wall/titanium,
+/area/translocated_gateway/quarterseast)
+"Du" = (
+/obj/structure/railing/mapped,
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "5-9"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/translocated_gateway/hallway)
+"DC" = (
+/obj/structure/table/woodentable/walnut,
+/obj/item/reagent_containers/food/drinks/milk,
+/turf/simulated/floor/carpet/brown,
+/area/translocated_gateway/canteen)
+"DL" = (
+/obj/structure/bed/chair/office{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/ash,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/carpet/red,
+/area/translocated_gateway/quarterswest)
+"DY" = (
+/obj/machinery/door/airlock/civilian{
+	name = "Canteen";
+	welded = 1
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/wood/walnut,
+/area/translocated_gateway/canteen)
+"Ef" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"Ek" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"Ez" = (
+/obj/structure/closet{
+	desc = "It's a basic storage unit. This one has a tag which reads 'Stone'."
+	},
+/obj/item/storage/lunchbox/cat/filled,
+/turf/simulated/floor/wood/walnut,
+/area/translocated_gateway/quarterswest)
+"EJ" = (
+/obj/effect/landmark/corpse/engineer,
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/clinic)
+"Fc" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/white,
+/area/translocated_gateway/bathroom)
+"Fe" = (
+/obj/item/stack/cable_coil/yellow{
+	icon_state = "coil1";
+	amount = 1
+	},
+/turf/simulated/floor/asteroid,
+/area/space)
+"Fr" = (
+/turf/simulated/wall/titanium,
+/area/translocated_gateway/clinic)
+"Fy" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/plating{
+	icon_state = "dmg4"
+	},
+/area/translocated_gateway/gateway)
+"FB" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/yellow{
+	d2 = 8;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating,
+/area/translocated_gateway/storage)
+"FU" = (
+/obj/item/stool/padded,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/brown,
+/area/translocated_gateway/canteen)
+"Gt" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"GJ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/translocated_gateway/preproom)
+"GN" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/turf/simulated/floor/carpet/red,
+/area/translocated_gateway/quarterswest)
+"GR" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"GS" = (
+/obj/structure/table/standard,
+/obj/item/storage/toolbox/electrical{
+	pixel_y = 9
+	},
+/obj/item/storage/toolbox/mechanical,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/translocated_gateway/storage)
+"GT" = (
+/obj/structure/bed/chair/office,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/carpet/red,
+/area/translocated_gateway/quarterswest)
+"GV" = (
+/obj/machinery/door/airlock/glass,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/translocated_gateway/hallway)
+"GW" = (
+/obj/structure/bed,
+/obj/item/bedsheet,
+/obj/machinery/alarm{
+	pixel_y = 19
+	},
+/turf/simulated/floor/carpet/red,
+/area/translocated_gateway/quarterseast)
+"Hd" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/blood/drip,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/translocated_gateway/preproom)
+"Hq" = (
+/obj/structure/table/woodentable/walnut,
+/obj/item/lipstick/random,
+/turf/simulated/floor/carpet/brown,
+/area/translocated_gateway/canteen)
+"Hs" = (
+/obj/machinery/door/airlock/glass/medical{
+	name = "Clinic"
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/translocated_gateway/clinic)
+"Ht" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/blood/drip,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/translocated_gateway/preproom)
+"Hw" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"HI" = (
+/obj/machinery/body_scanconsole{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/clinic)
+"HW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"IB" = (
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/clinic)
+"IH" = (
+/obj/machinery/computer/modular/preset/aislot/research{
+	dir = 4
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/computerlab)
+"II" = (
+/obj/item/pen,
+/obj/structure/table/woodentable/walnut,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor/wood/walnut,
+/area/translocated_gateway/quarterseast)
+"Ja" = (
+/obj/structure/cable/yellow{
+	d2 = 8;
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc/derelict{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/plating,
+/area/translocated_gateway/engiroom)
+"Jq" = (
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"Ju" = (
+/obj/effect/decal/cleanable/blood{
+	icon_state = "tracks";
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"JO" = (
+/obj/machinery/door/airlock/research{
+	name = "Computer Lab"
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/translocated_gateway/computerlab)
+"Kb" = (
+/obj/item/modular_computer/laptop/preset/custom_loadout/advanced,
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/observation_a)
+"Ke" = (
+/obj/item/stock_parts/manipulator/pico,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/reinforced,
+/area/translocated_gateway/gateway)
+"Kz" = (
+/obj/item/stool/padded,
+/turf/simulated/floor/carpet/brown,
+/area/translocated_gateway/canteen)
+"KJ" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/clinic)
+"KW" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"Lb" = (
+/obj/effect/wingrille_spawn/reinforced/full,
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	icon_state = "pdoor0";
+	id_tag = "gatewaychamberblastdoors"
+	},
+/turf/simulated/floor/plating,
+/area/translocated_gateway/observation_b)
+"Lc" = (
+/obj/item/material/shard,
+/turf/simulated/floor/reinforced,
+/area/translocated_gateway/gateway)
+"Lm" = (
+/turf/simulated/floor/carpet/brown,
+/area/translocated_gateway/canteen)
+"Lx" = (
+/turf/simulated/floor/plating{
+	icon_state = "dmg4"
+	},
+/area/translocated_gateway/gateway)
+"LH" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/command{
+	name = "Gateway Research Wing Access"
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/translocated_gateway/hallway)
+"LP" = (
+/obj/effect/wallframe_spawn/no_grille,
+/obj/structure/curtain/black,
+/turf/simulated/floor/plating,
+/area/translocated_gateway/canteen)
+"LW" = (
+/obj/structure/bed/chair/armchair/brown{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -25
+	},
+/turf/simulated/floor/carpet/brown,
+/area/translocated_gateway/canteen)
+"Ml" = (
+/obj/machinery/photocopier,
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/computerlab)
+"Mn" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"Mt" = (
+/obj/machinery/door/blast/shutters{
+	id_tag = "translocatedmaints"
+	},
+/obj/effect/floor_decal/industrial/warning/fulltile,
+/obj/structure/cable{
+	icon_state = "1-6"
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/translocated_gateway/engiroom)
+"MC" = (
+/turf/simulated/wall/titanium,
+/area/translocated_gateway/storage)
+"MH" = (
+/mob/living/simple_animal/hostile/creature,
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"Nd" = (
+/obj/item/stack/cable_coil/yellow{
+	icon_state = "coil1";
+	amount = 1
+	},
+/turf/space,
+/area/space)
+"Nf" = (
+/obj/item/stack/cable_coil/yellow{
+	icon_state = "coil1";
+	amount = 1
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"Ng" = (
+/obj/structure/hygiene/sink{
+	dir = 4;
+	pixel_x = 10
+	},
+/obj/item/storage/mirror{
+	pixel_y = 25
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/bathroom)
+"Nh" = (
+/obj/structure/table/standard,
+/obj/machinery/button/blast_door{
+	dir = 8;
+	id_tag = "gatewaychamberblastdoors";
+	name = "Observation Window Blast Door button"
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/observation_a)
+"Ni" = (
+/obj/effect/decal/cleanable/blood/oil{
+	icon_state = "gib6";
+	name = "oil";
+	dryname = "dried oil stain"
+	},
+/obj/effect/decal/cleanable/blood/gibs/robot/limb{
+	icon_state = "gib4"
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/red,
+/area/translocated_gateway/quarterseast)
+"Nn" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/red,
+/area/translocated_gateway/quarterswest)
+"Np" = (
+/obj/structure/girder,
+/turf/simulated/floor/plating,
+/area/space)
+"Nx" = (
+/obj/machinery/door/airlock/glass,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/translocated_gateway/hallway)
+"NC" = (
+/turf/simulated/floor/plating,
+/area/translocated_gateway/engiroom)
+"NG" = (
+/obj/structure/table/rack,
+/obj/item/clothing/gloves/thick,
+/turf/simulated/floor/tiled/steel_grid,
+/area/translocated_gateway/preproom)
+"NO" = (
+/turf/simulated/wall/r_titanium,
+/area/translocated_gateway/observation_a)
+"NS" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/translocated_gateway/preproom)
+"Oe" = (
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/clinic)
+"Of" = (
+/obj/structure/table/rack,
+/obj/item/clothing/suit/space/void/excavation/prepared,
+/obj/item/clothing/under/tactical,
+/obj/item/clothing/shoes/jackboots,
+/obj/item/clothing/gloves/thick,
+/obj/item/material/knife/combat,
+/obj/structure/cable/yellow{
+	d2 = 8;
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc/derelict{
+	dir = 1;
+	pixel_y = 18
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/translocated_gateway/preproom)
+"Oj" = (
+/obj/structure/cable/yellow{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/power/apc/derelict{
+	dir = 1;
+	pixel_y = 18
+	},
+/turf/simulated/floor/carpet/red,
+/area/translocated_gateway/quarterswest)
+"OA" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/wood/walnut,
+/area/translocated_gateway/canteen)
+"OE" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"OR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"OS" = (
+/obj/structure/window/reinforced/tinted/frosted,
+/obj/structure/table/standard,
+/obj/random/soap,
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/bathroom)
+"Pg" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/plating{
+	icon_state = "dmg4"
+	},
+/area/translocated_gateway/gateway)
+"Pv" = (
+/obj/machinery/door/airlock/glass,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/translocated_gateway/hallway)
+"Px" = (
+/obj/machinery/bodyscanner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/clinic)
+"Pz" = (
+/obj/effect/shuttle_landmark/nav_transgateway/nav1,
+/turf/space,
+/area/space)
+"PE" = (
+/mob/living/simple_animal/hostile/faithless{
+	name = "Apparition";
+	desc = "A being which appears to be composed of a cloud of dirty black smoke. It's eyes seem to peirce right through you.."
+	},
+/turf/simulated/floor/plating,
+/area/translocated_gateway/engiroom)
+"PL" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/plating{
+	icon_state = "dmg4"
+	},
+/area/translocated_gateway/gateway)
+"PN" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"PT" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/clinic)
+"PW" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/bathroom)
+"Qn" = (
+/obj/machinery/sleeper{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/clinic)
+"Qs" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"QK" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"QN" = (
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"QP" = (
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -25
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/observation_b)
+"QT" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "4-9"
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating,
+/area/translocated_gateway/engiroom)
+"Rb" = (
+/obj/item/reagent_containers/glass/bucket,
+/obj/structure/cable/yellow{
+	d2 = 8;
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc/derelict{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/plating,
+/area/translocated_gateway/janitorroom)
+"Rl" = (
+/obj/item/device/suit_cooling_unit,
+/obj/structure/closet{
+	desc = "It's a basic storage unit. This one has a tag which reads 'S.D.O.S.'."
+	},
+/obj/item/clothing/under/color/grey,
+/obj/item/clothing/shoes/black,
+/obj/item/modular_computer/laptop/preset/custom_loadout/cheap,
+/turf/simulated/floor/wood/walnut,
+/area/translocated_gateway/quarterseast)
+"Rn" = (
+/obj/machinery/door/airlock/civilian{
+	name = "Frontiersmen Quarters"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/translocated_gateway/quarterseast)
+"RA" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"RI" = (
+/obj/structure/closet,
+/turf/simulated/floor/plating,
+/area/translocated_gateway/storage)
+"RN" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"RT" = (
+/obj/item/trash/tray,
+/obj/item/reagent_containers/food/drinks/milk,
+/obj/structure/hygiene/sink{
+	pixel_y = 24;
+	pixel_x = -32
+	},
+/turf/simulated/floor/carpet/brown,
+/area/translocated_gateway/canteen)
+"RW" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/space)
+"Sb" = (
+/obj/structure/table/standard,
+/obj/item/storage/box/lights/bulbs,
+/obj/item/storage/box/lights/tubes{
+	pixel_y = 10;
+	pixel_x = -1
+	},
+/obj/random/soap,
+/turf/simulated/floor/plating,
+/area/translocated_gateway/janitorroom)
+"Sz" = (
+/obj/machinery/cell_charger,
+/obj/structure/table/woodentable/walnut,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/wood/walnut,
+/area/translocated_gateway/quarterseast)
+"SJ" = (
+/obj/structure/bed/chair/office{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/computerlab)
+"Te" = (
+/obj/structure/sign/science_2{
+	pixel_x = -32
+	},
+/turf/simulated/floor/plating{
+	icon_state = "dmg2"
+	},
+/area/space)
+"Tk" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"Ty" = (
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/mob/living/simple_animal/hostile/faithless,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"TK" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"Ub" = (
+/obj/effect/decal/cleanable/blood{
+	icon_state = "tracks"
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"Ud" = (
+/obj/structure/table/woodentable/walnut,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor/wood/walnut,
+/area/translocated_gateway/quarterswest)
+"UH" = (
+/obj/item/beartrap{
+	deployed = 1;
+	icon_state = "beartrap1"
+	},
+/obj/effect/decal/cleanable/blood{
+	icon_state = "mfloor5"
+	},
+/obj/machinery/door/airlock/maintenance{
+	name = "Storage Access"
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/translocated_gateway/storage)
+"Vd" = (
+/obj/structure/table/woodentable/walnut{
+	flipped = 1;
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood/drip,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/wood/walnut,
+/area/translocated_gateway/canteen)
+"Vo" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/creature,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/translocated_gateway/preproom)
+"Vp" = (
+/obj/structure/bed/chair/armchair/brown{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/brown,
+/area/translocated_gateway/canteen)
+"Vz" = (
+/obj/structure/closet/crate/freezer,
+/turf/simulated/floor/carpet/brown,
+/area/translocated_gateway/canteen)
+"VG" = (
+/obj/structure/table/rack,
+/obj/machinery/alarm{
+	pixel_y = 19
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/translocated_gateway/preproom)
+"VO" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"VQ" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/computerlab)
+"VR" = (
+/obj/item/material/ashtray,
+/obj/item/trash/cigbutt,
+/obj/structure/table/woodentable/walnut,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/wood/walnut,
+/area/translocated_gateway/quarterswest)
+"VS" = (
+/obj/machinery/button/blast_door{
+	dir = 1;
+	pixel_y = -23;
+	id_tag = "translocatedmaints";
+	name = "Maintenance Compartment"
+	},
+/obj/effect/floor_decal/industrial/warning/corner,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"VT" = (
+/obj/item/modular_computer/laptop/preset/custom_loadout/cheap,
+/obj/structure/table/woodentable/walnut,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/wood/walnut,
+/area/translocated_gateway/quarterseast)
+"VX" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/wood/walnut,
+/area/translocated_gateway/quarterseast)
+"We" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/steel_grid,
+/area/translocated_gateway/preproom)
+"Wj" = (
+/mob/living/simple_animal/hostile/creature,
+/obj/machinery/light,
+/turf/simulated/floor/reinforced,
+/area/translocated_gateway/gateway)
+"Ww" = (
+/obj/machinery/door/blast/shutters{
+	id_tag = "translocatedmaints"
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/industrial/warning/fulltile,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/translocated_gateway/engiroom)
+"WA" = (
+/mob/living/simple_animal/hostile/creature,
+/obj/machinery/light,
+/turf/simulated/floor/plating{
+	icon_state = "dmg2"
+	},
+/area/translocated_gateway/gateway)
+"WW" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"WX" = (
+/obj/structure/bed,
+/obj/item/bedsheet,
+/obj/machinery/alarm{
+	pixel_y = 19
+	},
+/turf/simulated/floor/carpet/red,
+/area/translocated_gateway/quarterswest)
+"Xp" = (
+/obj/structure/table/woodentable/walnut,
+/turf/simulated/floor/wood/walnut,
+/area/translocated_gateway/quarterswest)
+"Xr" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "0-1"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/power/apc/derelict{
+	pixel_y = -24
+	},
+/turf/simulated/floor/wood/walnut,
+/area/translocated_gateway/canteen)
+"Xt" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"Xy" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/wood/walnut,
+/area/translocated_gateway/quarterswest)
+"XY" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"Yh" = (
+/turf/simulated/wall/titanium,
+/area/translocated_gateway/engiroom)
+"Yi" = (
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/translocated_gateway/hallway)
+"Yo" = (
+/obj/effect/shuttle_landmark/nav_transgateway/nav3,
+/turf/space,
+/area/space)
+"YK" = (
+/obj/structure/table/standard,
+/obj/machinery/button/blast_door{
+	dir = 4;
+	id_tag = "transgatewaylockdown";
+	name = "Facility Lockdown button"
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/translocated_gateway/observation_b)
+"YM" = (
+/obj/machinery/door/blast/regular{
+	id_tag = "transgatewaylockdown"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/monotile,
+/area/translocated_gateway/hallway)
+"YX" = (
+/obj/structure/closet/crate/bin,
+/obj/item/storage/bag/trash,
+/turf/simulated/floor/tiled/monotile,
+/area/translocated_gateway/observation_a)
+"Zl" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/carpet/red,
+/area/translocated_gateway/quarterseast)
+"ZO" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/translocated_gateway/bathroom)
+
+(1,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(2,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(3,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(4,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(5,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(6,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(7,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(8,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(9,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(10,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(11,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(12,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(13,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(14,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(15,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+aa
+aa
+aa
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(16,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(17,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(18,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(19,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(20,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(21,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(22,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(23,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(24,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(25,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(26,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Pz
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(27,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(28,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(29,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(30,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(31,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(32,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(33,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(34,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+Nd
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(35,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+uw
+uw
+uw
+uw
+uw
+bq
+BX
+BX
+Cq
+az
+az
+uw
+uw
+uw
+uw
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(36,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+uw
+bF
+PN
+Pv
+eo
+RW
+BX
+BX
+Nf
+cH
+Fe
+Pv
+Xt
+ya
+cd
+cd
+cd
+cd
+cd
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(37,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+uw
+RA
+OR
+GV
+xU
+cf
+bt
+oR
+aI
+BX
+BX
+GV
+Gt
+fB
+cd
+cd
+Vz
+Vz
+cd
+cd
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(38,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Cq
+BX
+BX
+BX
+BX
+BX
+uw
+RA
+VS
+Yh
+Yh
+Yh
+Yh
+Yh
+yx
+yx
+yx
+yx
+qN
+zz
+LP
+jp
+RT
+Cb
+rg
+cd
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(39,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Cq
+Cq
+BX
+BX
+BX
+BX
+BX
+uw
+RA
+eq
+Mt
+Ja
+NC
+PE
+Yh
+iN
+ri
+tu
+yx
+HW
+RA
+LP
+DC
+Lm
+rh
+eP
+cd
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(40,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Cq
+nZ
+nZ
+nZ
+nZ
+nZ
+nZ
+nZ
+sY
+xF
+Ww
+QT
+gN
+oC
+Yh
+Oj
+GT
+kM
+gJ
+iE
+yz
+LP
+ej
+gu
+Kz
+FU
+cd
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(41,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+nZ
+YX
+ay
+AK
+mp
+bf
+bm
+bw
+bW
+Yh
+cJ
+cW
+cp
+Yh
+jM
+Nn
+Ez
+yx
+rV
+QN
+DY
+Vd
+yM
+OA
+Xr
+cd
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(42,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+nZ
+aF
+ie
+aL
+wb
+iY
+nZ
+RA
+Hw
+Yh
+Yh
+Yh
+Yh
+Yh
+yx
+yx
+yx
+yx
+HW
+MH
+LP
+rK
+eK
+qD
+LW
+cd
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(43,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+nZ
+Kb
+aM
+Nh
+aL
+aL
+nZ
+zw
+rL
+qQ
+Rb
+Sb
+Db
+qQ
+VR
+Xp
+Ud
+yx
+HW
+RA
+LP
+rK
+eP
+cX
+qF
+cd
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(44,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Cq
+Cq
+Cq
+aa
+aa
+BX
+nZ
+mS
+at
+pJ
+mS
+mS
+nZ
+lQ
+ca
+bZ
+pG
+ua
+nu
+qQ
+GN
+DL
+Xy
+np
+ni
+RA
+LP
+Lm
+Vp
+Vp
+CG
+cd
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(45,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Cq
+BX
+BX
+BX
+Cq
+aa
+BX
+NO
+NO
+kp
+gH
+io
+NO
+NO
+bz
+Hw
+qQ
+cL
+zb
+hD
+qQ
+WX
+Nn
+xV
+yx
+Ek
+wH
+cd
+cd
+Hq
+eP
+cd
+cd
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(46,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Cq
+BX
+BX
+BX
+BX
+Cq
+aw
+aw
+Ke
+Lc
+aD
+aD
+by
+aw
+aw
+dy
+uw
+uw
+uw
+wa
+wa
+wa
+wa
+wa
+wa
+wa
+pL
+uw
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Cq
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(47,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Cq
+BX
+BX
+BX
+BX
+Cq
+aw
+aA
+sq
+kS
+rO
+aD
+ze
+Wj
+aw
+Bi
+ct
+dj
+de
+wa
+mw
+pQ
+Bo
+pQ
+eQ
+wa
+vu
+Jq
+wk
+HI
+yb
+dh
+IB
+Oe
+Oe
+Fr
+Cq
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(48,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Cq
+BX
+BX
+Cq
+aa
+aw
+dt
+rO
+jG
+gb
+jb
+jd
+aB
+aw
+dc
+jA
+cN
+df
+wa
+Of
+We
+GJ
+pQ
+eQ
+wa
+xb
+jB
+wk
+Px
+PT
+Qn
+mf
+IB
+Oe
+Fr
+Cq
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(49,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Cq
+Cq
+aa
+aa
+aw
+dx
+kN
+lr
+lN
+fx
+dB
+eT
+bC
+ci
+cv
+lV
+dg
+ww
+NS
+Ht
+Vo
+aQ
+Hd
+CB
+VO
+lu
+Hs
+ro
+KJ
+lI
+op
+IB
+CK
+Fr
+Cq
+Cq
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(50,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aw
+zY
+Fy
+aN
+aT
+bc
+sq
+bh
+aw
+gY
+cw
+lk
+eX
+wa
+VG
+zZ
+ig
+We
+eQ
+wa
+gi
+Ef
+wk
+IB
+eO
+IB
+eO
+pp
+EJ
+Fr
+BX
+BX
+Cq
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(51,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aw
+gF
+sq
+uy
+Lx
+aD
+av
+WA
+aw
+tY
+Du
+bn
+sf
+wa
+NG
+fA
+gk
+pQ
+eQ
+wa
+vu
+Jq
+wk
+iB
+Bh
+iB
+Bh
+fz
+vg
+Fr
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(52,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aw
+aw
+PL
+rO
+rO
+aD
+Pg
+aw
+aw
+dA
+uw
+uw
+uw
+wa
+wa
+aP
+wa
+wa
+wa
+wa
+oy
+uw
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(53,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+rb
+rb
+Lb
+Lb
+Lb
+rb
+rb
+jw
+Qs
+mm
+Cm
+qT
+sg
+mm
+VT
+dH
+II
+gX
+dd
+KW
+mg
+mg
+gO
+uk
+mg
+mg
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(54,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+hB
+CU
+mi
+YK
+mi
+wg
+hB
+yI
+oi
+BM
+aV
+SJ
+oq
+mm
+pW
+Zl
+mK
+Rn
+QK
+RA
+mg
+iy
+sa
+PW
+AY
+mg
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(55,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+hB
+pP
+pP
+dO
+hX
+pP
+hB
+zw
+va
+BM
+fQ
+nc
+Ml
+mm
+GW
+CW
+dC
+gX
+TK
+oI
+gg
+ZO
+Fc
+tx
+cQ
+mg
+BX
+BX
+BX
+BX
+BX
+Cq
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(56,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+wu
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+hB
+hX
+eu
+pP
+Ce
+QP
+hB
+RA
+Hw
+BM
+du
+am
+IH
+mm
+gX
+gX
+gX
+gX
+pl
+RA
+mg
+Ng
+jc
+nV
+OS
+mg
+BX
+BX
+BX
+BX
+Cq
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(57,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+hB
+or
+bV
+yr
+sb
+co
+ub
+bJ
+Mn
+BM
+Cn
+VQ
+dr
+mm
+Sz
+Bz
+nX
+gX
+GR
+RA
+MC
+MC
+MC
+MC
+MC
+MC
+BX
+Cq
+Cq
+Cq
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(58,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+hB
+hB
+hB
+hB
+hB
+hB
+hB
+Yi
+Qs
+mm
+hj
+aV
+kZ
+mm
+sc
+oa
+VX
+uo
+jS
+lv
+MC
+wj
+po
+od
+GS
+MC
+Cq
+Cq
+Cq
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(59,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Cq
+BX
+BX
+BX
+BX
+BX
+uw
+XY
+vZ
+JO
+oL
+yS
+Ak
+mm
+mc
+Ni
+Rl
+gX
+Ju
+Ub
+UH
+FB
+xo
+zO
+ck
+MC
+Cq
+Cq
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(60,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Cq
+BX
+BX
+BX
+BX
+BX
+uw
+RA
+Qs
+mm
+mm
+mm
+mm
+mm
+gX
+Dk
+gX
+gX
+Tk
+zz
+MC
+is
+zO
+oJ
+nU
+MC
+Cq
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(61,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Cq
+Cq
+BX
+BX
+BX
+uw
+RA
+hW
+Nx
+YM
+bG
+dU
+Ty
+RN
+sI
+xU
+GV
+WW
+fB
+MC
+MC
+RI
+Cc
+MC
+MC
+Cq
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(62,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Cq
+BX
+BX
+uw
+OE
+PN
+Pv
+eo
+PN
+za
+dT
+iX
+PN
+eo
+Pv
+PN
+uD
+MC
+MC
+MC
+MC
+MC
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(63,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Cq
+Cq
+uw
+uw
+uw
+uw
+uw
+uw
+uw
+LH
+uw
+uw
+uw
+uw
+uw
+uw
+uw
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(64,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Cq
+BX
+BX
+BX
+BX
+bq
+Te
+gz
+zI
+bq
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(65,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Cq
+Cq
+Cq
+Cq
+bq
+aI
+fN
+aH
+bq
+BX
+BX
+Cq
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(66,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Cq
+Np
+yJ
+ib
+ib
+bq
+BX
+Cq
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(67,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Cq
+iZ
+cH
+iZ
+bq
+Cq
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(68,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+rq
+cH
+aa
+sk
+cH
+Cq
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(69,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+iZ
+iZ
+iZ
+Cq
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(70,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+iZ
+aa
+iZ
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(71,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+iZ
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(72,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+iZ
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(73,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+iZ
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(74,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(75,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(76,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+aa
+aa
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(77,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(78,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(79,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(80,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(81,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+Yo
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(82,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(83,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(84,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(85,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(86,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(87,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(88,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(89,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(90,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(91,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(92,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(93,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+BX
+BX
+BX
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(94,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(95,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(96,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(97,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(98,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(99,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(100,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
