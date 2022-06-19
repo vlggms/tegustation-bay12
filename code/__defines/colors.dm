@@ -23,6 +23,7 @@
 #define COLOR_PINK             "#ff00ff"
 #define COLOR_PALE_PINK        "#bf89ba"
 #define COLOR_ORANGE           "#ff9900"
+#define COLOR_RED_ORANGE       "#ff3300"
 #define COLOR_YELLOW           "#ffff00"
 #define COLOR_YELLOW_GRAY      "#c9a344"
 #define COLOR_PALE_YELLOW      "#c1bb7a"
