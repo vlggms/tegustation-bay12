@@ -75,9 +75,9 @@
 	skill_points = 22
 
 	access = list(
-		access_marine, access_maint_tunnels, access_eva, access_emergency_storage,
+		access_marine, access_combat_medic, access_maint_tunnels, access_eva, access_emergency_storage,
 		access_guppy_helm, access_terragov_crew, access_expedition_shuttle, access_expedition_shuttle_helm, access_guppy, access_hangar,
-		access_stardust, access_research, access_radio_exp, access_combat_medic
+		access_stardust, access_research, access_radio_exp
 	)
 
 /datum/job/marine_medic/get_description_blurb()
@@ -113,9 +113,9 @@
 	skill_points = 20
 
 	access = list(
-		access_marine, access_maint_tunnels, access_eva, access_emergency_storage,
+		access_marine, access_combat_engineer, access_maint_tunnels, access_eva, access_emergency_storage,
 		access_guppy_helm, access_terragov_crew, access_expedition_shuttle, access_expedition_shuttle_helm, access_guppy, access_hangar,
-		access_stardust, access_research, access_radio_exp, access_combat_engineer
+		access_stardust, access_research, access_radio_exp
 	)
 
 /datum/job/marine_engineer/get_description_blurb()

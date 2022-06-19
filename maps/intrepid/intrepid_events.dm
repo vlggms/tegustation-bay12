@@ -63,7 +63,7 @@
 
 // Blob
 /datum/event/blob
-	allowed_areas = list(/area/intrepid/misc/maint, /area/intrepid/department/civillian/janitor)
+	allowed_areas = list(/area/intrepid/misc/maint, /area/intrepid/department/civillian)
 
 // Vines
 /datum/event/spacevine

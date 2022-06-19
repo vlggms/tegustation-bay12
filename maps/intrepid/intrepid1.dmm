@@ -239,9 +239,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
-/obj/machinery/hologram/holopad{
-	caller_id = "Intrepid Supply Hangar"
-	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
 /area/intrepid/department/cargo/cargobay)
 "aoi" = (
@@ -2575,7 +2573,7 @@
 	name = "Heavy Armoury Access button";
 	pixel_x = -26;
 	pixel_y = 24;
-	req_access = list("access_armory")
+	req_access = list("ACCESS_ARMORY")
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -3191,9 +3189,7 @@
 /turf/simulated/floor/tiled/white,
 /area/space)
 "cXn" = (
-/obj/machinery/hologram/holopad{
-	caller_id = "Intrepid Meeting Room"
-	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/meetingroom)
 "cXU" = (
@@ -4661,9 +4657,7 @@
 	icon_state = "1-8"
 	},
 /obj/structure/disposalpipe/segment,
-/obj/machinery/hologram/holopad{
-	caller_id = "Intrepid Engineering Monitoring Room"
-	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/monitoring)
 "egq" = (
@@ -6578,8 +6572,8 @@
 	},
 /obj/item/device/radio/intercom{
 	dir = 8;
-	pixel_y = 32;
-	pixel_x = 22
+	pixel_x = 22;
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo)
@@ -6971,9 +6965,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/monitoring)
 "glP" = (
-/obj/machinery/hologram/holopad{
-	caller_id = "Intrepid Security Locker Room"
-	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/security/locker)
 "gmC" = (
@@ -7107,8 +7099,8 @@
 /obj/machinery/light/small/red,
 /obj/machinery/camera/motion{
 	c_tag = "Nuclear Cylinder - Hatch Portside";
-	network = list("Command");
-	dir = 8
+	dir = 8;
+	network = list("Command")
 	},
 /turf/simulated/floor/reinforced,
 /area/intrepid/misc/maint/aft)
@@ -7335,9 +7327,7 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/anomalyresearch)
 "gFn" = (
-/obj/machinery/hologram/holopad{
-	caller_id = "Intrepid Medical Reception"
-	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/white,
 /area/intrepid/misc/hallway/portside)
 "gFC" = (
@@ -8729,9 +8719,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
-/obj/machinery/hologram/holopad/longrange{
-	caller_id = "Pandora Cockpit"
-	},
+/obj/machinery/hologram/holopad/longrange,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/pandora/cockpit)
 "iaM" = (
@@ -9907,8 +9895,8 @@
 /area/intrepid/misc/maint/aft)
 "iZc" = (
 /obj/machinery/door/airlock/glass/security{
-	name = "Permenant Holding";
-	id_tag = "permcell"
+	id_tag = "permcell";
+	name = "Permenant Holding"
 	},
 /obj/machinery/door/firedoor{
 	dir = 4
@@ -11221,9 +11209,7 @@
 /obj/effect/floor_decal/terralogo{
 	dir = 1
 	},
-/obj/machinery/hologram/holopad/longrange{
-	caller_id = "TGLV Intrepid Bridge"
-	},
+/obj/machinery/hologram/holopad/longrange,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/bridge)
 "kpt" = (
@@ -11268,9 +11254,7 @@
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
-/obj/machinery/hologram/holopad{
-	caller_id = "Intrepid Mess Hall"
-	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/civillian/mess)
 "ksN" = (
@@ -11578,8 +11562,8 @@
 /area/shuttle/research/hallway)
 "kKf" = (
 /obj/machinery/door/airlock/glass/security{
-	name = "Cell Two";
-	id_tag = "celltwobolt"
+	id_tag = "celltwobolt";
+	name = "Cell Two"
 	},
 /obj/machinery/door/firedoor{
 	dir = 4
@@ -12078,8 +12062,8 @@
 /area/intrepid/department/cargo/cargostorage)
 "llv" = (
 /obj/machinery/door/airlock/glass/security{
-	name = "Cell One";
-	id_tag = "cellonebolt"
+	id_tag = "cellonebolt";
+	name = "Cell One"
 	},
 /obj/machinery/door/firedoor{
 	dir = 4
@@ -13952,8 +13936,8 @@
 	},
 /obj/item/device/radio/intercom{
 	dir = 4;
-	pixel_y = 32;
-	pixel_x = -22
+	pixel_x = -22;
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo)
@@ -16565,6 +16549,9 @@
 "oZh" = (
 /obj/machinery/cryopod/robot,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/landmark{
+	name = "JoinLateCyborg"
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/misc/maint/aft)
 "oZE" = (
@@ -16987,9 +16974,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/hologram/holopad{
-	caller_id = "Security Office"
-	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/security/bo)
 "pxh" = (
@@ -18638,8 +18623,8 @@
 	},
 /obj/machinery/camera/motion{
 	c_tag = "Nuclear Cylinder - Hatch Portside Fore";
-	network = list("Command");
-	dir = 1
+	dir = 1;
+	network = list("Command")
 	},
 /turf/simulated/floor/reinforced,
 /area/intrepid/misc/maint/portside)
@@ -19232,6 +19217,9 @@
 /obj/machinery/cryopod/robot,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/spline/fancy/black,
+/obj/effect/landmark{
+	name = "JoinLateCyborg"
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/misc/maint/aft)
 "ror" = (
@@ -21725,9 +21713,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
-/obj/machinery/hologram/holopad{
-	caller_id = "Intrepid Forensics Laboratory"
-	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/security/detectives_office)
 "tsd" = (
@@ -23408,17 +23394,17 @@
 	},
 /obj/machinery/button/alternate/door/bolts{
 	dir = 8;
-	pixel_y = 6;
-	pixel_x = 25;
+	id_tag = "psicell";
 	name = "Psi Cell Bolt button";
-	id_tag = "psicell"
+	pixel_x = 25;
+	pixel_y = 6
 	},
 /obj/machinery/button/alternate/door/bolts{
 	dir = 8;
-	pixel_y = -7;
-	pixel_x = 25;
+	id_tag = "permcell";
 	name = "Permenant Holding Cell Bolt button";
-	id_tag = "permcell"
+	pixel_x = 25;
+	pixel_y = -7
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/prison)
@@ -24578,9 +24564,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/hologram/holopad/longrange{
-	caller_id = "Stardust Cockpit"
-	},
+/obj/machinery/hologram/holopad/longrange,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/hallway)
 "vTr" = (
@@ -25110,9 +25094,7 @@
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/operatingroom)
 "wyJ" = (
-/obj/machinery/hologram/holopad{
-	caller_id = "Intrepid Engineering Locker Room"
-	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/lockerroom)
 "wzI" = (
@@ -26244,17 +26226,17 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/button/alternate/door/bolts{
 	dir = 4;
-	pixel_y = -7;
-	pixel_x = -25;
+	id_tag = "cellonebolt";
 	name = "Cell One Bolt button";
-	id_tag = "cellonebolt"
+	pixel_x = -25;
+	pixel_y = -7
 	},
 /obj/machinery/button/alternate/door/bolts{
 	dir = 4;
-	pixel_y = 6;
-	pixel_x = -25;
 	id_tag = "celltwobolt";
-	name = "Cell Two Bolt button"
+	name = "Cell Two Bolt button";
+	pixel_x = -25;
+	pixel_y = 6
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/prison)
@@ -26751,8 +26733,8 @@
 /area/intrepid/department/engineering/monitoring)
 "xXS" = (
 /obj/machinery/door/airlock/glass/security{
-	name = "Psi Holding";
-	id_tag = "psicell"
+	id_tag = "psicell";
+	name = "Psi Holding"
 	},
 /obj/machinery/door/firedoor{
 	dir = 4
@@ -53955,7 +53937,7 @@ cjD
 cjD
 cjD
 cjD
-pdC
+cjD
 cjD
 cjD
 cjD
@@ -54157,7 +54139,7 @@ cjD
 cjD
 cjD
 cjD
-pdC
+cjD
 cjD
 cjD
 cjD
