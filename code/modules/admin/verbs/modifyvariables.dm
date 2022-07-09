@@ -95,8 +95,25 @@
 		if("num")
 			var_value = input("Enter new number:","Num") as num
 
+		if("atom typepath")
+			var_value = pick_closest_path(FALSE)
+
+		if("datum typepath")
+			var_value = pick_closest_path(FALSE, get_fancy_list_of_datum_types())
+
 		if("type")
-			var_value = input("Enter type:","Type") in typesof(/obj,/mob,/area,/turf)
+			var/type = null
+			var/error = ""
+			do
+				type = input("Enter type:[error]", "Type", type) as null|text
+				if(!type)
+					break
+				type = text2path(type)
+				error = "\nType not found, Please try again"
+			while(!type)
+			if(!type)
+				var_value = null
+			var_value = type
 
 		if("reference")
 			var_value = input("Select reference:","Reference") as mob|obj|turf|area in world
@@ -292,12 +309,36 @@
 			else
 				L[list_find(L, variable)] = new_var
 
-		if("type")
-			new_var = input("Enter type:","Type") in typesof(/obj,/mob,/area,/turf)
+		if("atom typepath")
+			new_var = pick_closest_path(FALSE)
 			if(assoc)
-				L[assoc_key] = new_var
+				L[assoc_key] = type
 			else
-				L[list_find(L, variable)] = new_var
+				L[list_find(L, variable)] = type
+
+		if("datum typepath")
+			new_var = pick_closest_path(FALSE, get_fancy_list_of_datum_types())
+			if(assoc)
+				L[assoc_key] = type
+			else
+				L[list_find(L, variable)] = type
+
+		if("type")
+			var/type = new_var
+			var/error = ""
+			do
+				type = input("Enter type:[error]", "Type", type) as null|text
+				if(!type)
+					break
+				type = text2path(type)
+				error = "\nType not found, Please try again"
+			while(!type)
+			if(!type)
+				return
+			if(assoc)
+				L[assoc_key] = type
+			else
+				L[list_find(L, variable)] = type
 
 		if("reference")
 			new_var = input("Select reference:","Reference") as mob|obj|turf|area in world
@@ -534,6 +575,30 @@
 				var/var_new =  input("Enter new number:","Num",O.get_variable_value(variable)) as null|num
 				if(var_new==null) return
 				var_value = var_new
+
+		if("atom typepath")
+			var/var_new = pick_closest_path(FALSE)
+			if(var_new==null) return
+			var_value = var_new
+
+		if("datum typepath")
+			var/var_new = pick_closest_path(FALSE, get_fancy_list_of_datum_types())
+			if(var_new==null) return
+			var_value = var_new
+
+		if("type")
+			var/type = null
+			var/error = ""
+			do
+				type = input("Enter type:[error]", "Type", type) as null|text
+				if(!type)
+					break
+				type = text2path(type)
+				error = "\nType not found, Please try again"
+			while(!type)
+			if(!type)
+				var_value = null
+			var_value = type
 
 		if("type")
 			var/var_new = input("Enter type:","Type",O.get_variable_value(variable)) as null|anything in typesof(/obj,/mob,/area,/turf)
