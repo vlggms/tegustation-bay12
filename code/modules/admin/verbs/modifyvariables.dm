@@ -24,8 +24,25 @@
 		if("num")
 			var_value = input("Enter new number:","Num") as null|num
 
+		if("atom typepath")
+			var_value = pick_closest_path(FALSE)
+
+		if("datum typepath")
+			var_value = pick_closest_path(FALSE, get_fancy_list_of_datum_types())
+
 		if("type")
-			var_value = input("Enter type:","Type") as null|anything in typesof(/obj,/mob,/area,/turf)
+			var/type = null
+			var/error = ""
+			do
+				type = input("Enter type:[error]", "Type", type) as null|text
+				if(!type)
+					break
+				type = text2path(type)
+				error = "\nType not found, Please try again"
+			while(!type)
+			if(!type)
+				var_value = null
+			var_value = type
 
 		if("reference")
 			var_value = input("Select reference:","Reference") as null|mob|obj|turf|area in world
@@ -45,7 +62,8 @@
 		if("color")
 			var_value = input("Select new color:","Color") as null|color
 
-	if(!var_value) return
+	if(!var_value)
+		return
 
 	return var_value
 
