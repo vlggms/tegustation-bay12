@@ -166,7 +166,7 @@ obj/item/organ/internal/take_general_damage(var/amount, var/silent = FALSE)
 /obj/item/organ/internal/proc/handle_regeneration()
 	if(!damage || BP_IS_ROBOTIC(src) || !owner || owner.chem_effects[CE_TOXIN] || owner.is_asystole())
 		return
-	if(damage < 0.1*max_damage)
+	if(damage < 0.4*max_damage)
 		heal_damage(0.1)
 
 /obj/item/organ/internal/proc/surgical_fix(mob/user)

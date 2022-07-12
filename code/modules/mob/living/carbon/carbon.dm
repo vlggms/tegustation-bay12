@@ -131,9 +131,9 @@
 		if(21 to 25)
 			Weaken(2)
 		if(26 to 30)
-			Weaken(5)
+			Weaken(3)
 		if(31 to INFINITY)
-			Weaken(10) //This should work for now, more is really silly and makes you lay there forever
+			Weaken(5)
 
 	make_jittery(min(shock_damage*5, 200))
 

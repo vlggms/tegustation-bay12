@@ -13,8 +13,8 @@
 	var/times_used = 0 //Number of times it's been used.
 	var/broken = 0     //Is the flash burnt out?
 	var/last_used = 0 //last world.time it was used.
-	var/str_min = 2 //how weak the effect CAN be
-	var/str_max = 7 //how powerful the effect COULD be
+	var/str_min = 3 //how weak the effect CAN be
+	var/str_max = 6 //how powerful the effect COULD be
 
 /obj/item/device/flash/proc/clown_check(var/mob/user)
 	if(user && (MUTATION_CLUMSY in user.mutations) && prob(50))
@@ -79,14 +79,14 @@
 						flash_strength = (flash_strength / 2)
 				if(flash_strength > 0)
 					M.flash_eyes(FLASH_PROTECTION_MODERATE - safety)
-					M.Stun(flash_strength / 2)
+					M.Stun(flash_strength * 0.5)
 					M.eye_blurry = max(M.eye_blurry, flash_strength)
-					M.confused = max(M.confused, (flash_strength + 2))
+					M.confused = max(M.confused, flash_strength)
 					if(flash_strength > 3)
 						M.drop_l_hand()
 						M.drop_r_hand()
 					if(flash_strength > 5)
-						M.Weaken(2)
+						M.Weaken(flash_strength * 0.5)
 			else
 				flashfail = 1
 
@@ -94,9 +94,9 @@
 		var/mob/living/simple_animal/SA = M
 		var/safety = SA.eyecheck()
 		if(safety < FLASH_PROTECTION_MAJOR)
-			SA.Weaken(2)
+			SA.Weaken(flash_strength * 0.5)
 			if(safety < FLASH_PROTECTION_MODERATE)
-				SA.Stun(flash_strength - 2)
+				SA.Stun(flash_strength * 0.5)
 				SA.flash_eyes(2)
 				SA.eye_blurry += flash_strength
 				SA.confused += flash_strength

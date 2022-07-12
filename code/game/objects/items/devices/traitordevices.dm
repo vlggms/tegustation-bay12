@@ -36,13 +36,13 @@ effective or pretty fucking useless.
 		return
 
 	var/list/stun_victims = list()
-	for(var/mob/living/carbon/human/M in orange(10, user))
+	for(var/mob/living/carbon/human/M in orange(8, user))
 		stun_victims += M
 		spawn()
 			if(prob(50))
-				M.Weaken(rand(10,20))
+				M.Weaken(rand(5,10))
 				if(prob(25))
-					M.Stun(rand(5,10))
+					M.Stun(rand(4,8))
 				to_chat(M, "<span class='danger'>You feel a tremendous, paralyzing wave flood your mind.</span>")
 			else
 				to_chat(M, "<span class='danger'>You feel a sudden, electric jolt travel through your head.</span>")
