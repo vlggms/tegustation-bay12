@@ -6,7 +6,7 @@
 	var/obj/item/assembly/shock_kit/part = null
 	var/last_time = 1.0
 	buckle_movable = FALSE
-	
+
 /obj/structure/bed/chair/e_chair/New()
 	..()
 	overlays += image('icons/obj/objects.dmi', src, "echair_over", MOB_LAYER + 1, dir)
@@ -64,11 +64,9 @@
 	s.set_up(12, 1, src)
 	s.start()
 	if(buckled_mob)
-		buckled_mob.burn_skin(85)
 		to_chat(buckled_mob, "<span class='danger'>You feel a deep shock course through your body!</span>")
-		sleep(1)
-		buckled_mob.burn_skin(85)
-		buckled_mob.Stun(600)
+		buckled_mob.burn_skin(150)
+		buckled_mob.Stun(15)
 	visible_message("<span class='danger'>The electric chair went off!</span>", "<span class='danger'>You hear a deep sharp shock!</span>")
 
 	A.power_light = light

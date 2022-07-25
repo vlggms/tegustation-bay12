@@ -34,9 +34,9 @@
 		M.silent += 15
 	else if(iscarbon(M))
 		var/mob/living/carbon/C = M
-		C.silent += 15
-		C.Weaken(20)
-		C.Stun(20)
+		C.silent += 10
+		C.Weaken(10)
+		C.Stun(10)
 	admin_attack_log(user, M, "Used a stun talisman.", "Was victim of a stun talisman.", "used a stun talisman on")
 	user.unEquip(src)
 	qdel(src)

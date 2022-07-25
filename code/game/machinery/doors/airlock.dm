@@ -455,7 +455,7 @@ About the new airlock wires panel:
 			if(istype(C) && C.hallucination_power > 25)
 				to_chat(user, "<span class='danger'>You feel a powerful shock course through your body!</span>")
 				user.adjustHalLoss(20)
-				user.Stun(5)
+				user.Weaken(5)
 				return
 	..(user)
 
