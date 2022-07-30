@@ -1,11 +1,11 @@
 /datum/artifact_effect/hellportal
 	name = "hellportal"
-	effect_type = EFFECT_BLUESPACE
+	effect_type = EFFECT_PULSE
 	var/convert_count //how many turfs are converted to lava each activation
 	var/active_portals_max //how many portals can be spawned at each interval
 	var/maximum_mob_count
 	var/target_temp = 500
-	var/activation_sound = 'sound/effects/ghost.ogg'
+	activation_sound = 'sound/effects/ghost.ogg'
 	var/mob_spawn_sounds = list(
 		'sound/magic/mutate.ogg',
 		'sound/effects/squelch1.ogg',
@@ -30,15 +30,15 @@
 	var/list/portals = list()
 	var/list/mobs = list()
 
+/datum/artifact_effect/hellportal/getDescription()
+	return "Unknown energy sources are detected on the surface of the artifact."
+
 /datum/artifact_effect/hellportal/New()
 	..()
-	effect = EFFECT_PULSE
 	convert_count = rand(1, 5)
 	active_portals_max = rand(2, 4)
 	maximum_mob_count = rand(5, 20)
-	damage = rand(20, 50)
-	if (chargelevelmax > 30)
-		chargelevelmax = rand(10, 30)
+	damage = rand(20, 40)
 
 /datum/artifact_effect/hellportal/Destroy()
 	for (var/mob/M in mobs)
@@ -63,7 +63,7 @@
 
 /datum/artifact_effect/hellportal/proc/convert_turfs()
 	for (var/i = 0 to convert_count)
-		var/turf/T = pick(trange(effectrange, get_turf(holder)))
+		var/turf/T = pick(trange(range, get_turf(holder)))
 		var/turf/simulated/floor/F
 
 		if (T.is_wall())
@@ -87,7 +87,7 @@
 			if (length(portals) >= active_portals_max)
 				return
 
-			var/turf/T = pick(pick_turf_in_range(get_turf(holder), effectrange, list(/proc/not_turf_contains_dense_objects, /proc/is_not_space_turf, /proc/is_not_holy_turf, /proc/is_not_open_space)))
+			var/turf/T = pick(pick_turf_in_range(get_turf(holder), range, list(/proc/not_turf_contains_dense_objects, /proc/is_not_space_turf, /proc/is_not_holy_turf, /proc/is_not_open_space)))
 
 			if (!T)
 				return
@@ -100,7 +100,7 @@
 			GLOB.destroyed_event.register(gate, src, /datum/artifact_effect/hellportal/proc/reduce_portal_count)
 
 /datum/artifact_effect/hellportal/proc/hurt_players()
-	for (var/mob/living/carbon/human/H in range(src.effectrange,get_turf(holder)))
+	for (var/mob/living/carbon/human/H in range(range,get_turf(holder)))
 		var/weakness = GetAnomalySusceptibility(H)
 		H.apply_damage(damage * weakness, BRUTE, damage_flags = DAM_DISPERSED)
 		H.apply_damage(damage * weakness, BURN, damage_flags = DAM_DISPERSED)
