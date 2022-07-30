@@ -50,6 +50,11 @@
 /datum/ai_holder/simple_animal/ranged/careful
 	conserve_ammo = TRUE
 
+// Avoids shooting alies and does all other funny stuff
+/datum/ai_holder/simple_animal/ranged/zerg
+	firing_lanes = TRUE
+	cooperative = TRUE
+
 /datum/ai_holder/simple_animal/ranged/pointblank
 	pointblank = TRUE
 
@@ -124,7 +129,12 @@
 		holder.IMove(get_step(holder, pick(GLOB.alldirs)))
 		holder.face_atom(A)
 
-
+// Zergling AI
+/datum/ai_holder/simple_animal/melee/evasive/zerg
+	cooperative = TRUE
+	destructive = TRUE
+	wander = TRUE
+	mauling = TRUE
 
 // This AI hits something, then runs away for awhile.
 // It will (almost) always flee if they are uncloaked, AND their target is not stunned.
