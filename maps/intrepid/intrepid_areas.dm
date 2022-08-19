@@ -349,6 +349,10 @@
 	icon_state = "janitor"
 	req_access = list(access_janitor)
 
+/area/intrepid/department/civillian/computerlab
+	name = "\improper Computer Lab"
+	icon_state = "crew_quarters"
+
 /area/intrepid/department/civillian/adherent
 	name = "\improper Adherent Maintenence"
 	icon_state = "robotics"

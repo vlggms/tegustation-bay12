@@ -1945,9 +1945,6 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/item/airlock_brace{
 	req_access = list("access_heads_vault")
 	},
@@ -2414,7 +2411,7 @@
 	name = "Saftey Glass"
 	},
 /obj/structure/sign/warning/detailed{
-	desc = "By operating the device below, you are confirming that what ever it is you are doing this for, is worth the lives of the entire crew aboard, those in cryostasis, and the loss of a valuable vessel." ;
+	desc = "By operating the device below, you are confirming that what ever it is you are doing this for, is worth the lives of the entire crew aboard, those in cryostasis, and the loss of a valuable vessel.";
 	dir = 8;
 	pixel_x = 37
 	},
@@ -5962,6 +5959,13 @@
 /obj/structure/sign/warning/detailed{
 	dir = 8;
 	pixel_x = 37
+	},
+/obj/machinery/button/alternate/door/bolts{
+	id_tag = "guns";
+	name = "Vault Access button";
+	pixel_x = 24;
+	pixel_y = 24;
+	req_access = list("ACCESS_HOS")
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/maint/upper)
