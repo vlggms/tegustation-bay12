@@ -399,6 +399,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "ct" = (
@@ -865,6 +868,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-4"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
@@ -1638,9 +1644,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/obj/structure/cable/green{
-	icon_state = "2-5"
-	},
 /obj/machinery/access_button/airlock_interior{
 	master_tag = "ofd_starboard_airlock_controller";
 	pixel_x = 22;
@@ -1649,6 +1652,9 @@
 /obj/machinery/atmospherics/valve/open,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
@@ -1722,14 +1728,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/structure/cable/orange{
-	icon_state = "4-9"
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-4"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
@@ -2422,14 +2428,9 @@
 /area/tcommsat)
 "rr" = (
 /obj/machinery/power/breakerbox/activated,
+/obj/structure/cable/green,
 /obj/structure/cable/orange{
 	icon_state = "0-8"
-	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
@@ -3730,10 +3731,10 @@
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/department/engineering/atmos)
 "CU" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/structure/table/standard,
+/obj/structure/cable/orange{
+	icon_state = "2-8"
+	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "CV" = (
@@ -3897,6 +3898,12 @@
 	c_tag = "Second Deck - Starboard Bow";
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "EL" = (
@@ -3946,6 +3953,13 @@
 	},
 /turf/simulated/wall/r_wall/hull,
 /area/tcommsat)
+"Fl" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/universal,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper)
 "Ft" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -5089,15 +5103,15 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "Pl" = (
-/obj/structure/cable/orange{
-	icon_state = "6-9"
-	},
-/obj/structure/cable/green{
-	icon_state = "5-10"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9;
 	icon_state = "intact"
+	},
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
@@ -5177,6 +5191,9 @@
 	dir = 10
 	},
 /obj/machinery/meter,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "PS" = (
@@ -5201,12 +5218,6 @@
 /turf/simulated/floor/tiled/monotile,
 /area/tcommsat)
 "Qq" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/structure/cable/green{
-	icon_state = "1-10"
-	},
 /obj/structure/table/standard,
 /obj/item/stack/cable_coil,
 /obj/item/device/multitool,
@@ -6155,10 +6166,8 @@
 /turf/simulated/floor/reinforced/airless,
 /area/space)
 "Yl" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/orange{
-	icon_state = "1-6"
+/obj/structure/cable/green{
+	icon_state = "2-4"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
@@ -27257,7 +27266,7 @@ oB
 gy
 LG
 ki
-Yl
+LG
 fV
 ll
 fZ
@@ -27457,9 +27466,9 @@ HV
 wG
 oB
 sB
-lJ
+Yl
 PP
-OI
+Fl
 Pl
 EJ
 oB
