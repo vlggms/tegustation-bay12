@@ -297,9 +297,9 @@ obj/item/organ/external/take_general_damage(var/amount, var/silent = FALSE)
 		else if(agony_amount > 0.5 * max_damage)
 			owner.visible_message("<span class='warning'>[owner] reels in pain!</span>")
 			if(agony_amount > max_damage)
-				owner.Weaken(4)
+				owner.Weaken(2)
 			else
-				owner.Stun(4)
+				owner.Stun(1)
 				owner.drop_l_hand()
 				owner.drop_r_hand()
 			return 1

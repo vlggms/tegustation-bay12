@@ -8,7 +8,7 @@
 	var/range = 2 //this is roughly the size of brig cell
 	var/disable = 0
 	var/last_flash = 0 //Don't want it getting spammed like regular flashes
-	var/strength = 10 //How weakened targets are when flashed.
+	var/strength = 5 //How weakened targets are when flashed.
 	var/base_state = "mflash"
 	anchored = TRUE
 	idle_power_usage = 2
@@ -89,9 +89,8 @@
 /obj/machinery/flasher/proc/do_flash(var/mob/living/victim, var/flash_time)
 	victim.flash_eyes()
 	victim.eye_blurry += flash_time
-	victim.confused += (flash_time + 2)
-	victim.Stun(flash_time / 2)
-	victim.Weaken(3)
+	victim.confused += flash_time * 0.75
+	victim.Weaken(flash_time * 0.5)
 
 /obj/machinery/flasher/emp_act(severity)
 	if(stat & (BROKEN|NOPOWER))
@@ -118,7 +117,7 @@
 		var/mob/living/carbon/M = AM
 		if(!MOVING_DELIBERATELY(M))
 			flash()
-	
+
 	if(isanimal(AM))
 		flash()
 
