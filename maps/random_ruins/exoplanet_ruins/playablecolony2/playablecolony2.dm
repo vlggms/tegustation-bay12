@@ -9,7 +9,7 @@
 	player_cost = 4
 	template_flags = TEMPLATE_FLAG_CLEAR_CONTENTS | TEMPLATE_FLAG_NO_RUINS | TEMPLATE_FLAG_NO_RADS
 	ruin_tags = RUIN_HUMAN|RUIN_HABITAT
-	ban_ruins = list(/datum/map_template/ruin/exoplanet/playablecolony)
+	ban_ruins = list(/datum/map_template/ruin/exoplanet/playablecolony, /datum/map_template/ruin/exoplanet/rebel_colony)
 	apc_test_exempt_areas = list(
 		/area/map_template/colony2/external = NO_SCRUBBER|NO_VENT
 	)
