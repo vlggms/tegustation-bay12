@@ -12,6 +12,22 @@ decl/hierarchy/outfit/job/intrepid/crew/exploration/New()
 	pda_type = /obj/item/modular_computer/pda/explorer
 	l_ear = /obj/item/device/radio/headset/squad_leader
 
+/decl/hierarchy/outfit/job/intrepid/crew/exploration/combat_medic
+	name = OUTFIT_JOB_NAME("Combat Medic")
+	uniform = /obj/item/clothing/under/terragov/utility/exploration
+	shoes = /obj/item/clothing/shoes/dutyboots
+	id_types = list(/obj/item/card/id/intrepid/crew/combat_medic)
+	pda_type = /obj/item/modular_computer/pda/explorer
+	l_ear = /obj/item/device/radio/headset/exploration
+
+/decl/hierarchy/outfit/job/intrepid/crew/exploration/combat_engineer
+	name = OUTFIT_JOB_NAME("Combat Engineer")
+	uniform = /obj/item/clothing/under/terragov/utility/exploration
+	shoes = /obj/item/clothing/shoes/dutyboots
+	id_types = list(/obj/item/card/id/intrepid/crew/combat_engineer)
+	pda_type = /obj/item/modular_computer/pda/explorer
+	l_ear = /obj/item/device/radio/headset/exploration
+
 /decl/hierarchy/outfit/job/intrepid/crew/exploration/marine
 	name = OUTFIT_JOB_NAME("Marine")
 	uniform = /obj/item/clothing/under/terragov/utility/exploration

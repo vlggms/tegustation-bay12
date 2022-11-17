@@ -201,6 +201,16 @@
 	detail_color = COLOR_RED
 	extra_details = list("onegoldstripe")
 
+/obj/item/card/id/intrepid/crew/combat_medic
+	job_access_type = /datum/job/marine_medic
+	detail_color = COLOR_RED
+	extra_details = list("onebluestripe")
+
+/obj/item/card/id/intrepid/crew/combat_engineer
+	job_access_type = /datum/job/marine_engineer
+	detail_color = COLOR_RED
+	extra_details = list("oneorangestripe")
+
 /obj/item/card/id/intrepid/crew/marine
 	job_access_type = /datum/job/marine
 	detail_color = COLOR_RED
