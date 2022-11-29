@@ -1029,8 +1029,7 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/computer/fusion/gyrotron{
 	icon_state = "computer";
-	initial_id_tag = "aux_fusion_plant";
-	req_access = list("ACCESS_ENGINE_EQUIP")
+	initial_id_tag = "aux_fusion_plant"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/engineering/engine_room/aux)
@@ -2634,8 +2633,7 @@
 /obj/machinery/computer/fusion/fuel_control{
 	dir = 1;
 	icon_state = "computer";
-	initial_id_tag = "aux_fusion_plant";
-	req_access = list("ACCESS_ENGINE_EQUIP")
+	initial_id_tag = "aux_fusion_plant"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/engine_room/aux)
@@ -3447,8 +3445,7 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/computer/fusion/core_control{
 	icon_state = "computer";
-	initial_id_tag = "aux_fusion_plant";
-	req_access = list("ACCESS_ENGINE_EQUIP")
+	initial_id_tag = "aux_fusion_plant"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/engineering/engine_room/aux)
@@ -4873,7 +4870,8 @@
 /obj/machinery/power/emitter/gyrotron/anchored{
 	dir = 1;
 	id_tag = null;
-	initial_id_tag = "rustcore"
+	initial_id_tag = "rustcore";
+	req_access = list()
 	},
 /obj/structure/cable/orange{
 	icon_state = "0-2"
