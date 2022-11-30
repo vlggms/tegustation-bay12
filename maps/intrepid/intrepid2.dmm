@@ -627,8 +627,7 @@
 /area/intrepid/department/engineering/engine_room)
 "ec" = (
 /obj/machinery/atmospherics/pipe/simple/visible/blue,
-/obj/structure/window/phoronreinforced/full,
-/obj/structure/grille,
+/obj/effect/wallframe_spawn/reinforced_phoron,
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room)
 "ei" = (
@@ -1473,6 +1472,12 @@
 /obj/machinery/camera/network/engineering{
 	c_tag = "Engineering - Telecommunications Monitoring"
 	},
+/obj/machinery/access_button/airlock_exterior{
+	frequency = 1331;
+	master_tag = "tcomms";
+	pixel_y = 22;
+	pixel_x = 24
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/tcommsat)
 "ko" = (
@@ -1761,8 +1766,8 @@
 /turf/simulated/floor/tiled/monotile,
 /area/tcommsat)
 "lV" = (
-/obj/structure/window/phoronreinforced/full,
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
+/obj/effect/wingrille_spawn/reinforced_phoron/full,
 /turf/simulated/floor,
 /area/intrepid/department/engineering/atmos)
 "mf" = (
@@ -2068,8 +2073,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/structure/window/phoronreinforced/full,
-/obj/structure/grille,
+/obj/effect/wallframe_spawn/reinforced_phoron,
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room)
 "oB" = (
@@ -2170,7 +2174,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/tcommsat)
 "pb" = (
-/obj/structure/window/phoronreinforced/full,
+/obj/effect/wingrille_spawn/reinforced_phoron/full,
 /turf/simulated/floor,
 /area/intrepid/department/engineering/atmos)
 "pi" = (
@@ -2678,11 +2682,6 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
-"tH" = (
-/obj/structure/window/phoronreinforced/full,
-/obj/machinery/atmospherics/pipe/simple/visible/red,
-/turf/simulated/floor,
-/area/intrepid/department/engineering/atmos)
 "tP" = (
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
 /turf/simulated/wall/r_wall/prepainted,
@@ -2776,8 +2775,8 @@
 /turf/simulated/floor/tiled/monotile,
 /area/tcommsat)
 "ut" = (
-/obj/structure/window/phoronreinforced/full,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
+/obj/effect/wingrille_spawn/reinforced_phoron/full,
 /turf/simulated/floor,
 /area/intrepid/department/engineering/atmos)
 "ux" = (
@@ -2845,6 +2844,12 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/machinery/access_button/airlock_interior{
+	pixel_x = -25;
+	pixel_y = 23;
+	frequency = 1331;
+	master_tag = "tcomms"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/tcommsat)
@@ -3390,8 +3395,7 @@
 /turf/simulated/floor,
 /area/intrepid/department/civillian/dockbay)
 "zo" = (
-/obj/structure/window/phoronreinforced/full,
-/obj/structure/grille,
+/obj/effect/wallframe_spawn/reinforced_phoron,
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room)
 "zp" = (
@@ -3773,6 +3777,9 @@
 /obj/machinery/rotating_alarm/security_alarm{
 	pixel_y = 13
 	},
+/obj/structure/sign/deck/second{
+	pixel_y = 32
+	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "Dr" = (
@@ -4082,8 +4089,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/structure/window/phoronreinforced/full,
-/obj/structure/grille,
+/obj/effect/wallframe_spawn/reinforced_phoron,
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room)
 "Gn" = (
@@ -4193,11 +4199,11 @@
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room)
 "GZ" = (
-/obj/structure/window/phoronreinforced/full,
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4;
 	icon_state = "intact"
 	},
+/obj/effect/wingrille_spawn/reinforced_phoron/full,
 /turf/simulated/floor,
 /area/intrepid/department/engineering/atmos)
 "Ha" = (
@@ -4208,7 +4214,7 @@
 	dir = 1
 	},
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
-	id_tag = "tcomm_chamberlock";
+	id_tag = "tcomms_chamberlock";
 	pixel_y = 19;
 	tag_exterior_door = "tcomm_outer";
 	tag_interior_door = "tcomm_inner"
@@ -5756,7 +5762,7 @@
 /area/intrepid/misc/maint/upper)
 "Vk" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
-/obj/structure/window/phoronreinforced/full,
+/obj/effect/wingrille_spawn/reinforced_phoron/full,
 /turf/simulated/floor,
 /area/intrepid/department/engineering/atmos)
 "Vn" = (
@@ -33126,7 +33132,7 @@ zR
 DQ
 iO
 nl
-tH
+Vk
 wu
 yW
 Kd
@@ -33732,7 +33738,7 @@ zR
 DQ
 lg
 pr
-tH
+Vk
 Ac
 DV
 Nk
@@ -34348,7 +34354,7 @@ RR
 RR
 yW
 GD
-tH
+Vk
 XK
 hZ
 DQ
