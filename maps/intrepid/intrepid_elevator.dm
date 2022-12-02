@@ -1,22 +1,3 @@
-//Lift Control Interface objects. (Lift computer)
-/obj/machinery/computer/shuttle_control/lift/port
-	name = "portside lift controls"
-	shuttle_tag = "Port Lift"
-	ui_template = "shuttle_control_console_lift.tmpl"
-	icon_state = "tiny"
-	icon_keyboard = "tiny_keyboard"
-	icon_screen = "lift"
-	density = FALSE
-
-/obj/machinery/computer/shuttle_control/lift/starboard
-	name = "starboardside lift controls"
-	shuttle_tag = "Starboard Lift"
-	ui_template = "shuttle_control_console_lift.tmpl"
-	icon_state = "tiny"
-	icon_keyboard = "tiny_keyboard"
-	icon_screen = "lift"
-	density = FALSE
-
 //Data for those lifts. (The actual shuttle data)
 /datum/shuttle/autodock/ferry/port
 	name = "Port Lift"
@@ -39,6 +20,26 @@
 	sound_landing = 'sound/effects/lift_heavy_stop.ogg'
 	ceiling_type = null
 	knockdown = 0
+
+//Lift Control Interface objects. (Lift computer)
+/obj/machinery/computer/shuttle_control/lift/port
+	name = "portside lift controls"
+	shuttle_tag = "Port Lift"
+	ui_template = "shuttle_control_console_lift.tmpl"
+	icon_state = "tiny"
+	icon_keyboard = "tiny_keyboard"
+	icon_screen = "lift"
+	density = FALSE
+
+/obj/machinery/computer/shuttle_control/lift/starboard
+	name = "starboardside lift controls"
+	shuttle_tag = "Starboard Lift"
+	ui_template = "shuttle_control_console_lift.tmpl"
+	icon_state = "tiny"
+	icon_keyboard = "tiny_keyboard"
+	icon_screen = "lift"
+	density = FALSE
+
 
 //Landmarks for those lifts. (So they know where to go)
 /obj/effect/shuttle_landmark/lift/port_top

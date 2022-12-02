@@ -711,6 +711,8 @@
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 5
 	},
+/obj/structure/table/steel,
+/obj/item/device/scanner/gas,
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room)
 "eO" = (
@@ -768,7 +770,7 @@
 "ff" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable/orange{
-	icon_state = "1-8"
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/engine_room/aux)
@@ -990,6 +992,9 @@
 	sensor_name = "RUST Chamber";
 	sensor_tag = "rustsensor"
 	},
+/obj/structure/cable/orange{
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/engine_room/aux)
 "gt" = (
@@ -1064,6 +1069,10 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room)
+"gX" = (
+/obj/machinery/pipedispenser,
+/turf/simulated/floor,
+/area/intrepid/department/engineering/atmos)
 "gZ" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
@@ -1488,6 +1497,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "jR" = (
@@ -1753,6 +1763,12 @@
 	name = "Waste Tank Blast Door button";
 	pixel_y = -26
 	},
+/obj/structure/table/steel,
+/obj/item/clamp,
+/obj/item/clamp,
+/obj/item/clamp,
+/obj/item/clamp,
+/obj/item/scrubpack/standard,
 /turf/simulated/floor,
 /area/intrepid/department/engineering/atmos)
 "lx" = (
@@ -1789,6 +1805,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "lM" = (
@@ -1822,6 +1839,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/tcommsat)
+"lT" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/power/terminal,
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/engineering/engine_room/aux)
 "lU" = (
 /obj/machinery/computer/telecomms/monitor{
 	dir = 4
@@ -2234,7 +2259,6 @@
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
-/obj/item/caution/cone,
 /turf/simulated/floor/tiled/steel_grid,
 /area/tcommsat)
 "pb" = (
@@ -2420,6 +2444,12 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/monotile,
 /area/eva)
+"qQ" = (
+/obj/machinery/atmospherics/unary/tank/oxygen{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/intrepid/department/engineering/engine_room)
 "qW" = (
 /obj/effect/floor_decal/corner/lightgrey/half{
 	dir = 1
@@ -2565,6 +2595,11 @@
 /area/tcommsat)
 "rS" = (
 /obj/structure/window/phoronreinforced,
+/obj/structure/table/steel,
+/obj/item/clamp,
+/obj/item/clamp,
+/obj/item/clamp,
+/obj/item/clamp,
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room)
 "rX" = (
@@ -2590,6 +2625,7 @@
 	dir = 1;
 	pixel_y = -13
 	},
+/obj/machinery/portable_atmospherics/powered/scrubber,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "sa" = (
@@ -3131,12 +3167,9 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "wp" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/structure/cable{
-	icon_state = "2-5"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/intrepid/department/engineering/engine_room/aux)
+/obj/machinery/pipedispenser/disposal,
+/turf/simulated/floor,
+/area/intrepid/department/engineering/atmos)
 "wq" = (
 /obj/machinery/door/blast/shutters{
 	id_tag = "eva";
@@ -3853,6 +3886,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/tcommsat)
+"Cp" = (
+/obj/structure/table/steel,
+/obj/item/rpd,
+/obj/item/device/scanner/gas,
+/turf/simulated/floor,
+/area/intrepid/department/engineering/atmos)
 "Ct" = (
 /obj/machinery/door/airlock/external/bolted_open{
 	icon_state = "open";
@@ -3989,15 +4028,9 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/eva)
 "DM" = (
-/obj/structure/catwalk,
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	icon_state = "1-10"
-	},
+/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary,
 /turf/simulated/floor,
-/area/intrepid/department/engineering/engine_room/aux)
+/area/intrepid/department/engineering/engine_room)
 "DP" = (
 /obj/machinery/atmospherics/omni/mixer{
 	active_power_usage = 7500;
@@ -4373,6 +4406,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/machinery/portable_atmospherics/powered/scrubber,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "GV" = (
@@ -4474,9 +4508,10 @@
 /area/intrepid/department/engineering/atmos)
 "Hy" = (
 /obj/effect/floor_decal/industrial/warning,
-/obj/machinery/power/terminal,
-/obj/structure/cable/orange{
-	icon_state = "0-4"
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/engine_room/aux)
@@ -4530,6 +4565,9 @@
 /obj/structure/catwalk,
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/machinery/power/sensor{
+	name_tag = "R-UST Production Grid"
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room/aux)
@@ -4932,7 +4970,6 @@
 /turf/simulated/floor/reinforced/airless,
 /area/space)
 "Mb" = (
-/obj/item/caution/cone,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -5228,9 +5265,11 @@
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/misc/maint/upper)
 "Od" = (
-/obj/machinery/power/smes/buildable/preset/torch/engine_main,
-/obj/structure/cable{
-	icon_state = "0-8"
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/machinery/computer/power_monitor{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/engine_room/aux)
@@ -5892,12 +5931,8 @@
 	dir = 4;
 	icon_state = "intact"
 	},
-/obj/machinery/atmospherics/unary/outlet_injector{
-	dir = 1;
-	frequency = 1441;
-	icon_state = "map_injector";
-	id = "combustioninjector";
-	use_power = 1
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/intrepid/department/engineering/engine_room)
@@ -5979,10 +6014,16 @@
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/department/civillian/dockbay)
 "UK" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/closet/crate/radiation_gear,
-/obj/structure/cable{
-	icon_state = "1-4"
+/obj/machinery/power/smes/buildable/preset/torch/engine_main{
+	RCon_tag = "R-UST to Substations";
+	_fully_charged = 0;
+	_input_maxed = 0;
+	_input_on = 0;
+	_output_maxed = 0;
+	_output_on = 0
+	},
+/obj/structure/cable/orange{
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/engine_room/aux)
@@ -6036,7 +6077,6 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
-/obj/item/caution/cone,
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room/aux)
 "Vi" = (
@@ -6663,6 +6703,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
 	dir = 9
 	},
+/obj/machinery/pipedispenser,
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room)
 "ZC" = (
@@ -28405,7 +28446,7 @@ JK
 oW
 rA
 Mb
-wp
+lT
 UK
 LY
 fC
@@ -28429,10 +28470,10 @@ gS
 NO
 NO
 Xg
-Eh
+DM
 NO
 NO
-NO
+qQ
 ZT
 ih
 uJ
@@ -28606,7 +28647,7 @@ Gx
 mX
 Gj
 Io
-DM
+Zj
 Hy
 Od
 LY
@@ -33266,7 +33307,7 @@ YV
 pi
 UV
 Ga
-yW
+Cp
 lt
 DQ
 DQ
@@ -34272,9 +34313,9 @@ tP
 Rx
 Em
 Nk
-yW
+wp
 eO
-yW
+gX
 tb
 yW
 xy

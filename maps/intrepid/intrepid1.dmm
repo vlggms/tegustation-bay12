@@ -728,6 +728,14 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/starboard)
+"aOe" = (
+/obj/structure/table/standard,
+/obj/item/rcd,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/turf/simulated/floor/carpet/orange,
+/area/intrepid/department/command/commandquarters/ce)
 "aOl" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -7043,6 +7051,14 @@
 "geN" = (
 /obj/structure/closet/secure_closet/atmos_personal,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/tank/scrubber,
+/obj/item/clamp,
+/obj/item/clamp,
+/obj/item/clamp,
+/obj/item/clamp,
+/obj/item/rpd,
+/obj/item/scrubpack/standard,
+/obj/item/device/scanner/gas,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/engineering/lockerroom)
 "gfn" = (
@@ -9439,6 +9455,11 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/starboard)
+"ixX" = (
+/obj/structure/table/standard,
+/obj/item/portable_destructive_analyzer,
+/turf/simulated/floor/carpet/purple,
+/area/intrepid/department/command/commandquarters/rd)
 "iyn" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -19789,6 +19810,12 @@
 /obj/structure/sign/poster/tegu_random{
 	pixel_y = -32
 	},
+/obj/item/caution/cone,
+/obj/item/caution/cone,
+/obj/item/caution/cone,
+/obj/item/caution/cone,
+/obj/item/caution/cone,
+/obj/item/caution/cone,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/lockerroom)
 "rpp" = (
@@ -26975,6 +27002,8 @@
 	c_tag = "Command - Chief Engineer's Office";
 	dir = 1
 	},
+/obj/item/rpd,
+/obj/item/device/scanner/gas,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/ce)
 "xtN" = (
@@ -51457,7 +51486,7 @@ iOW
 loG
 ioZ
 dTq
-mXM
+ixX
 sgy
 xDg
 fTO
@@ -52265,7 +52294,7 @@ aUa
 wLc
 fXh
 aWn
-vxJ
+aOe
 qEU
 kdc
 iNC
