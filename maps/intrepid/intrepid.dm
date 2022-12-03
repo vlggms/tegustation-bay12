@@ -13,6 +13,7 @@
 	#include "intrepid_shuttles.dm"
 	#include "intrepid_unit_testing.dm"
 
+	#include "datums/cultures_serpentid.dm"
 	#include "datums/uniforms.dm"
 	//#include "datums/uniforms_exploration.dm"
 	//#include "datums/uniforms_fleet.dm"

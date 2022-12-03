@@ -3,8 +3,10 @@
 
 	species_to_job_whitelist = list(
 		/datum/species/nabber = list(
-			/datum/job/ai, /datum/job/cyborg, /datum/job/janitor,
-			/datum/job/roboticist, /datum/job/cargo_tech,
+			/datum/job/ai, /datum/job/cyborg,
+			/datum/job/janitor,
+			/datum/job/crew, /datum/job/chef,
+			/datum/job/chemist, /datum/job/roboticist, /datum/job/cargo_tech,
 			),
 		/datum/species/vox = list(
 			/datum/job/ai, /datum/job/cyborg,

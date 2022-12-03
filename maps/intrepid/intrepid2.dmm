@@ -366,7 +366,7 @@
 /obj/machinery/atmospherics/valve/digital{
 	dir = 4;
 	identifier = "Atmospherics to Loop Valve";
-	id = "atmosinject";
+	id_tag = "atmosinject";
 	name = "Atmospherics to Loop Valve"
 	},
 /obj/structure/cable{
@@ -2014,7 +2014,6 @@
 	},
 /obj/machinery/air_sensor/engine{
 	identifier = "Supermatter Core Sensor";
-	id = "supermatter_sensor";
 	id_tag = "supermatter_sensor"
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -3864,7 +3863,7 @@
 	dir = 4;
 	name = "Core Chamber Bypass Valve";
 	identifier = "Core Chamber Bypass Valve";
-	id = "corebypass"
+	id_tag = "corebypass"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/intrepid/department/engineering/engine_room)
@@ -3936,9 +3935,8 @@
 "zq" = (
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos{
 	dir = 1;
-	id = "sm_output";
-	identifier = "Supermatter Core Output";
-	id_tag = "supermatter_output"
+	id_tag = "sm_output";
+	identifier = "Supermatter Core Output"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/intrepid/department/engineering/engine_room)
@@ -4493,9 +4491,8 @@
 "EI" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	id = "sm_input";
-	identifier = "Supermatter Core Input";
-	id_tag = "supermatter_input"
+	id_tag = "sm_input";
+	identifier = "Supermatter Core Input"
 	},
 /obj/machinery/camera/network/engine{
 	dir = 1;
@@ -6093,7 +6090,7 @@
 /obj/machinery/atmospherics/valve/digital{
 	dir = 4;
 	identifier = "Space Loop Bypass Valve";
-	id = "spaceloopbypass";
+	id_tag = "spaceloopbypass";
 	name = "Space Loop Bypass Valve"
 	},
 /turf/simulated/floor,
@@ -7183,21 +7180,21 @@
 /obj/machinery/button/toggle/valve{
 	dir = 1;
 	name = "Space Loop Bypass Valve button";
-	id = "spaceloopbypass";
+	id_tag = "spaceloopbypass";
 	pixel_y = 6;
 	pixel_x = 5
 	},
 /obj/machinery/button/toggle/valve{
 	dir = 1;
 	name = "Core Chamber Bypass Valve button";
-	id = "corebypass";
+	id_tag = "corebypass";
 	pixel_y = 6;
 	pixel_x = -5
 	},
 /obj/machinery/button/toggle/valve{
 	dir = 1;
 	name = "Atmospherics to Loop Valve button";
-	id = "atmosinject";
+	id_tag = "atmosinject";
 	pixel_y = -1;
 	pixel_x = -5
 	},
