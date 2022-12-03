@@ -109,7 +109,7 @@
 	name = "Christmas Tree"
 
 /obj/random/date_based/christmas/tree/spawn_choices()
-	return list(/obj/structure/flora/tree/pine/xmas/presents)
+	return list(/obj/structure/flora/tree/pine/xmas/presents/anything)
 
 /obj/random/date_based/christmas/tree/fountain
 	name = "Christmas Tree (Fountain Replacement)"
