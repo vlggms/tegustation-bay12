@@ -708,6 +708,12 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/eva)
+"em" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 6
+	},
+/turf/simulated/wall/r_wall/prepainted,
+/area/intrepid/department/engineering/engine_room)
 "er" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
@@ -900,7 +906,6 @@
 /obj/machinery/door/blast/regular{
 	id_tag = "tegflush"
 	},
-/obj/structure/grille,
 /turf/simulated/floor/reinforced/airless,
 /area/intrepid/department/engineering/engine_room)
 "fz" = (
@@ -1156,8 +1161,8 @@
 "gS" = (
 /obj/machinery/atmospherics/omni/filter{
 	name = "phoron filter";
-	tag_north = 2;
-	tag_south = 1;
+	tag_north = 1;
+	tag_south = 2;
 	tag_east = 6
 	},
 /turf/simulated/floor,
@@ -1213,6 +1218,16 @@
 	icon_state = "railing0-1"
 	},
 /turf/space,
+/area/space)
+"hv" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/outlet_injector{
+	dir = 1;
+	icon_state = "map_injector"
+	},
+/turf/simulated/floor/reinforced/airless,
 /area/space)
 "hx" = (
 /obj/structure/railing/mapped{
@@ -1606,9 +1621,6 @@
 /turf/simulated/floor/bluegrid,
 /area/tcommsat)
 "jA" = (
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/machinery/portable_atmospherics/canister/hydrogen/engine_setup,
 /obj/machinery/button/blast_door{
 	dir = 8;
@@ -1787,7 +1799,6 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/structure/grille,
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
 	dir = 4
 	},
@@ -2088,9 +2099,9 @@
 /area/intrepid/department/engineering/engine_room)
 "mu" = (
 /obj/machinery/atmospherics/omni/filter{
-	tag_east = 2;
+	tag_east = 1;
 	tag_north = 6;
-	tag_west = 1
+	tag_west = 2
 	},
 /turf/simulated/floor/tiled,
 /area/intrepid/department/engineering/engine_room)
@@ -2604,9 +2615,9 @@
 /area/intrepid/department/command/commandquarters/psiadvisor)
 "qs" = (
 /obj/machinery/atmospherics/omni/filter{
-	tag_north = 2;
+	tag_north = 1;
 	tag_east = 5;
-	tag_south = 1;
+	tag_south = 2;
 	name = "carbon dioxide filter"
 	},
 /turf/simulated/floor,
@@ -3087,6 +3098,10 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
+"tF" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red,
+/turf/simulated/wall/r_wall/prepainted,
+/area/intrepid/department/engineering/engine_room)
 "tP" = (
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
 /turf/simulated/wall/r_wall/prepainted,
@@ -3531,9 +3546,9 @@
 "wu" = (
 /obj/machinery/atmospherics/omni/filter{
 	name = "nitrogen filter";
-	tag_east = 2;
+	tag_east = 1;
 	tag_north = 4;
-	tag_west = 1
+	tag_west = 2
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/atmos)
@@ -3721,8 +3736,8 @@
 /area/intrepid/department/command/commandquarters/psiadvisor)
 "xv" = (
 /obj/machinery/atmospherics/omni/filter{
-	tag_east = 1;
-	tag_west = 2;
+	tag_east = 2;
+	tag_west = 1;
 	tag_south = 8;
 	name = "hydrogen filter"
 	},
@@ -3933,10 +3948,10 @@
 /turf/simulated/floor/reinforced/airless,
 /area/intrepid/department/command/obstructionfielddisperser)
 "zq" = (
-/obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos{
+/obj/machinery/atmospherics/unary/vent_pump/siphon{
 	dir = 1;
-	id_tag = "sm_output";
-	identifier = "Supermatter Core Output"
+	id_tag = "supermatter_output";
+	identifier = "Supermatter Core Input"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/intrepid/department/engineering/engine_room)
@@ -4053,9 +4068,9 @@
 "Ac" = (
 /obj/machinery/atmospherics/omni/filter{
 	name = "oxygen filter";
-	tag_east = 2;
+	tag_east = 1;
 	tag_north = 3;
-	tag_west = 1
+	tag_west = 2
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/atmos)
@@ -4107,9 +4122,9 @@
 	icon_state = "2-5"
 	},
 /obj/machinery/atmospherics/omni/filter{
-	tag_east = 2;
+	tag_east = 1;
 	tag_north = 6;
-	tag_west = 1
+	tag_west = 2
 	},
 /turf/simulated/floor/tiled,
 /area/intrepid/department/engineering/engine_room)
@@ -4489,14 +4504,16 @@
 /turf/simulated/floor/bluegrid,
 /area/tcommsat)
 "EI" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 1;
-	id_tag = "sm_input";
-	identifier = "Supermatter Core Input"
-	},
 /obj/machinery/camera/network/engine{
 	dir = 1;
 	c_tag = "Supermatter - Core"
+	},
+/obj/machinery/atmospherics/unary/outlet_injector{
+	dir = 1;
+	icon_state = "map_injector";
+	id = "waste_in";
+	use_power = 1;
+	id_tag = "supermatter_input"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/intrepid/department/engineering/engine_room)
@@ -4767,8 +4784,8 @@
 /area/intrepid/department/command/commandquarters/psiadvisor)
 "GD" = (
 /obj/machinery/atmospherics/omni/filter{
-	tag_north = 2;
-	tag_south = 1;
+	tag_north = 1;
+	tag_south = 2;
 	tag_east = 7;
 	name = "n20 filter"
 	},
@@ -4842,7 +4859,7 @@
 	dir = 1
 	},
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
-	id_tag = "tcomms_chamberlock";
+	id_tag = "tcomm";
 	pixel_y = 19;
 	tag_exterior_door = "tcomm_outer";
 	tag_interior_door = "tcomm_inner"
@@ -4976,6 +4993,9 @@
 	},
 /obj/machinery/power/sensor{
 	name_tag = "R-UST Production Grid"
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room/aux)
@@ -5125,6 +5145,14 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/space)
+"JU" = (
+/obj/machinery/portable_atmospherics/canister/phoron,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/intrepid/department/engineering/engine_room)
 "JV" = (
 /obj/structure/closet/firecloset,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -5824,6 +5852,13 @@
 	},
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/department/engineering/atmos)
+"Oz" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/red,
+/turf/simulated/wall/r_wall/hull,
+/area/intrepid/department/engineering/engine_room)
 "OC" = (
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/department/engineering/engine_room)
@@ -5863,7 +5898,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/fuel,
 /obj/machinery/ship_map{
-	pixel_y = -32
+	dir = 1
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
@@ -28861,13 +28896,13 @@ ZT
 ZT
 ZT
 ZT
-ZT
-ZT
-ZT
-ZT
-ZT
-ih
-Yi
+em
+tF
+tF
+tF
+tF
+Oz
+hv
 Yi
 Yi
 Yi
@@ -29059,7 +29094,7 @@ mI
 iX
 pJ
 eb
-eb
+JU
 eb
 sG
 Xg
