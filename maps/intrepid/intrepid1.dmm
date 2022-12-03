@@ -728,14 +728,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/starboard)
-"aOe" = (
-/obj/structure/table/standard,
-/obj/item/rcd,
-/obj/item/rcd_ammo/large,
-/obj/item/rcd_ammo/large,
-/obj/item/rcd_ammo/large,
-/turf/simulated/floor/carpet/orange,
-/area/intrepid/department/command/commandquarters/ce)
 "aOl" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -2710,7 +2702,7 @@
 /area/intrepid/department/security/bo)
 "cxh" = (
 /obj/machinery/door/airlock/external/glass/bolted{
-	frequency = 1449;
+	frequency = 1379;
 	id_tag = "fore_starboard_outer";
 	name = "Fore Starboard Airlock"
 	},
@@ -2857,6 +2849,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/glass/medical,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/blast/shutters/open{
+	dir = 2;
+	icon_state = "shutter0";
+	id_tag = "medshutter"
+	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/intrepid/misc/hallway/portside)
 "cEW" = (
@@ -2932,7 +2929,7 @@
 /area/intrepid/department/engineering/assembly/chargebay)
 "cIW" = (
 /obj/machinery/door/airlock/external/glass/bolted{
-	frequency = 1449;
+	frequency = 1379;
 	id_tag = "fore_starboard_inner";
 	name = "Fore Starboard Airlock"
 	},
@@ -4652,7 +4649,6 @@
 /area/intrepid/misc/maint/aft)
 "edE" = (
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	frequency = 1449;
 	id_tag = "fore_starboard_airlock";
 	pixel_y = 18;
 	req_access = list("ACCESS_MAINT");
@@ -4662,7 +4658,6 @@
 	tag_interior_door = "fore_starboard_inner"
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1449;
 	id_tag = "fore_starboard_sensor";
 	pixel_y = -24
 	},
@@ -6541,6 +6536,11 @@
 /obj/item/device/radio/intercom{
 	dir = 1;
 	pixel_y = -30
+	},
+/obj/machinery/button/blast_door{
+	dir = 1;
+	id_tag = "medshutter";
+	name = "Medical Lockdown Shutters button"
 	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/treatment)
@@ -9200,6 +9200,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
+/obj/machinery/ship_map{
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/starboard)
 "ikk" = (
@@ -9455,11 +9458,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/starboard)
-"ixX" = (
-/obj/structure/table/standard,
-/obj/item/portable_destructive_analyzer,
-/turf/simulated/floor/carpet/purple,
-/area/intrepid/department/command/commandquarters/rd)
 "iyn" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -10994,6 +10992,15 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 8;
 	icon_state = "corner_white"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/misc/hallway/portside)
+"jPZ" = (
+/obj/effect/floor_decal/corner/purple{
+	dir = 8
+	},
+/obj/machinery/ship_map{
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/portside)
@@ -16236,6 +16243,11 @@
 /obj/structure/table/woodentable/walnut,
 /turf/simulated/floor/wood/walnut,
 /area/intrepid/department/medical/therapy)
+"ouD" = (
+/obj/structure/table/standard,
+/obj/item/portable_destructive_analyzer,
+/turf/simulated/floor/carpet/purple,
+/area/intrepid/department/command/commandquarters/rd)
 "ouN" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -16920,6 +16932,15 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
+"oWb" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 4
+	},
+/obj/machinery/ship_map{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/misc/hallway/starboard)
 "oWt" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -17652,6 +17673,9 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/machinery/ship_map{
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/center)
 "pEa" = (
@@ -17954,6 +17978,16 @@
 /obj/machinery/shipsensors,
 /turf/simulated/floor/reinforced/airless,
 /area/intrepid/department/command/bridge)
+"pNw" = (
+/obj/machinery/door/firedoor,
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/blast/shutters/open{
+	dir = 2;
+	icon_state = "shutter0";
+	id_tag = "medshutter"
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/hallway/portside)
 "pNA" = (
 /obj/machinery/fabricator/micro{
 	pixel_x = 4
@@ -19996,6 +20030,14 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/starboardthruster)
+"rAm" = (
+/obj/structure/table/standard,
+/obj/item/rcd,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/turf/simulated/floor/carpet/orange,
+/area/intrepid/department/command/commandquarters/ce)
 "rAy" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -21562,6 +21604,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/paleblue,
+/obj/machinery/ship_map{
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/portside)
 "sLe" = (
@@ -26563,6 +26608,16 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/portside)
+"xer" = (
+/obj/machinery/door/firedoor,
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/blast/shutters/open{
+	dir = 2;
+	icon_state = "shutter0";
+	id_tag = "medshutter"
+	},
+/turf/simulated/floor,
+/area/intrepid/department/medical/treatment)
 "xeu" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -45838,7 +45893,7 @@ ksQ
 cao
 dfp
 euw
-nAw
+jPZ
 cao
 uNk
 uNk
@@ -47210,7 +47265,7 @@ meJ
 mKr
 bNQ
 gdv
-oyf
+oWb
 lhe
 qmI
 oTl
@@ -49274,7 +49329,7 @@ hYi
 wug
 dlG
 ghH
-fuA
+xer
 tkY
 fdr
 sLJ
@@ -49476,7 +49531,7 @@ ffY
 wug
 dlG
 ghH
-fuA
+xer
 oEv
 kcq
 fKz
@@ -49678,7 +49733,7 @@ cao
 vXS
 dlG
 ghH
-fuA
+xer
 ies
 puc
 fAN
@@ -50486,7 +50541,7 @@ cao
 wTM
 dlG
 dJc
-skk
+pNw
 iba
 xWN
 qbY
@@ -50688,7 +50743,7 @@ xbP
 szt
 sbZ
 dJc
-skk
+pNw
 fDx
 oJO
 inQ
@@ -50890,7 +50945,7 @@ eSI
 bkN
 lTm
 dJc
-skk
+pNw
 oDD
 hqZ
 fLd
@@ -51486,7 +51541,7 @@ iOW
 loG
 ioZ
 dTq
-ixX
+ouD
 sgy
 xDg
 fTO
@@ -52294,7 +52349,7 @@ aUa
 wLc
 fXh
 aWn
-aOe
+rAm
 qEU
 kdc
 iNC
