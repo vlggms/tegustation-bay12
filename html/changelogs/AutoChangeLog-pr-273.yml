@@ -1,0 +1,5 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: Walking/Touching blueriver will no longer instantly kill you. Instead,
+      you will be heavily damaged if you are healthy. If not - the old effect occurs.
