@@ -1,0 +1,5 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - admin: Added "Bombard Z-level" verb. It does exactly that - throws explosions
+      all over a specific z-level.
