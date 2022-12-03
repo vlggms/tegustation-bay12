@@ -1,0 +1,9 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - rscadd: Added random monsters, mobs with randomized abilities and statistics.
+      Be careful around them!
+  - tweak: Mega hivebot now has an ability to shoot a concentrated beam that explodes
+      on impact.
+  - tweak: All hivebots now have to reload every 5 shots. Use it as a window of opportunity
+      to attack ranged ones!
