@@ -731,7 +731,7 @@
 		"totalCharging" = round(lastused_charging),
 		"coverLocked" = coverlocked,
 		"failTime" = failure_timer * 2,
-		"siliconUser" = istype(user, /mob/living/silicon),
+		"siliconUser" = (istype(user, /mob/living/silicon) || (isghost(user) && is_admin(user))),
 		"powerChannels" = list(
 			list(
 				"title" = "Equipment",
@@ -845,7 +845,7 @@
 		update()
 		return 0
 
-	if(!istype(usr, /mob/living/silicon) && (locked && !emagged))
+	if(!istype(usr, /mob/living/silicon) && (locked && !emagged) && !(isghost(usr) && is_admin(usr)))
 		// Shouldn't happen, this is here to prevent href exploits
 		to_chat(usr, "You must unlock the panel to use this!")
 		return 1
@@ -889,7 +889,7 @@
 				locked = !locked
 				update_icon()
 
-	return 0
+	return STATUS_UPDATE
 
 /obj/machinery/power/apc/proc/force_update_channels()
 	autoflag = -1 // This clears state, forcing a full recalculation

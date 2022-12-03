@@ -813,3 +813,65 @@ Ccomp's first proc.
 		to_chat(usr, "Random events disabled")
 		message_admins("Admin [key_name_admin(usr)] has disabled random events.", 1)
 	SSstatistics.add_field_details("admin_verb","TRE") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/client/proc/bombard_zlevel()
+	set category = "Fun"
+	set name = "Bombard Z-Level"
+	set desc = "Bombard a z-level with randomly placed explosions."
+	set waitfor = FALSE
+
+	if(!check_rights(R_FUN))
+		return
+
+	var/zlevel = input("What z-level?", "Z-Level", get_z(usr)) as num|null
+	if(!isnum(zlevel))
+		return
+
+	var/connected = alert("Bomb connected z-levels?", "Connected Zs", "Yes", "No", "Cancel")
+	if(connected == "Cancel")
+		return
+	connected = connected == "Yes" ? TRUE : FALSE
+
+	var/delay = input("How much delay between explosions? (In seconds)", "Delay") as num|null
+	if(!delay || delay < 0)
+		return
+
+	var/booms = input("How many explosions to create?", "Number of Booms") as num|null
+	if(!booms || booms < 1 || booms > 2000) // I know someone will try to input 99999999 explosions
+		return
+
+	var/devastation_range = input("How big is the devastation range of the explosions?", "Devastation Range") as num|null
+	if(!devastation_range)
+		return
+
+	var/heavy_range = input("How big is the heavy-impact range of the explosions?", "Heavy-Impact Range") as num|null
+	if(!heavy_range)
+		return
+
+	var/light_range = input("How big is the light-impact range of the explosions?", "Light-Impact Range") as num|null
+	if(!light_range)
+		return
+
+	var/random_range = alert("Randomize the impact ranges for each explosion?", "Random Range", "Yes", "No", "Cancel")
+	if(random_range == "Cancel")
+		return
+	random_range = random_range == "Yes" ? TRUE : FALSE
+
+	log_admin("[key_name(src)] has bombed Z-level #[zlevel][connected ? " and connected levels" : ""] with [booms] bombs ([devastation_range], [heavy_range], [light_range]).")
+	message_admins("[key_name(src)] has bombed Z-level #[zlevel][connected ? " and connected levels" : ""] with [booms] bombs ([devastation_range], [heavy_range], [light_range]).")
+
+	while(booms > 0)
+		if(random_range)
+			devastation_range += rand(-1, 1)
+			heavy_range += rand(-2,2)
+			light_range += rand(-4,4)
+
+		var/turf/T
+		if(connected)
+			T = pick_area_turf_in_connected_z_levels(list(/proc/is_not_space_area), z_level = zlevel)
+		else
+			T = pick_area_turf_in_single_z_level(list(/proc/is_not_space_area), z_level = zlevel)
+
+		explosion(T, devastation_range, heavy_range, light_range, adminlog = FALSE)
+		booms -= 1
+		sleep(delay SECONDS)
