@@ -1,0 +1,6 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: Sensors Console will now store the scan, rather than printing it out immediately.
+  - tweak: Contacts on the sensors console are colored now(i.e. volcanic planet text
+      will appear red).
