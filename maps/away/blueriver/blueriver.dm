@@ -43,7 +43,7 @@
 	icon_living = "hive_executioner_move"
 	icon_dead = "hive_executioner_dead"
 	move_to_delay = 5
-	speed = -1
+	movement_cooldown = 4
 	health = 280
 	maxHealth = 280
 	can_escape = TRUE
@@ -94,7 +94,7 @@
 	flick("hive_executioner_movemode", src)
 	sleep(rand(transformation_delay_min, transformation_delay_max))
 	anchored = FALSE
-	speed = -1
+	movement_cooldown = 3
 	move_to_delay = 8
 	. = FALSE
 
@@ -107,7 +107,7 @@
 	flick("hive_executioner_attackmode", src)
 	sleep(rand(transformation_delay_min, transformation_delay_max))
 	anchored = TRUE
-	speed = 0
+	movement_cooldown = 4
 	attack_mode = TRUE
 	walk(src, 0)
 

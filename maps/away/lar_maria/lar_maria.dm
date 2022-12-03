@@ -33,7 +33,7 @@
 	response_help = "pokes"
 	response_disarm = "shoves"
 	response_harm = "hits"
-	speed = 8
+	movement_cooldown = 4
 	can_escape = TRUE
 	natural_weapon = /obj/item/natural_weapon/punch
 	var/obj/effect/landmark/corpse/lar_maria/corpse = null

@@ -26,7 +26,7 @@
 	icon_gib = "shark_dead"
 	turns_per_move = 5
 	meat_type = /obj/item/reagent_containers/food/snacks/sharkmeat
-	speed = 2
+	movement_cooldown = 4
 	maxHealth = 100
 	health = 100
 	harm_intent_damage = 5
