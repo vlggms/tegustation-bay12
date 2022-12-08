@@ -1,0 +1,6 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - maptweak: OBS submap void suits storage had its access requirement fixed.
+  - maptweak: OBS submap has some trash and dirt thrown around the ship.
+  - maptweak: OBS submap mass-driver slugs replaced with OFD charges.
