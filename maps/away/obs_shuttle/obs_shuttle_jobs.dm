@@ -11,6 +11,12 @@
 	blacklisted_species = null
 	is_semi_antagonist = TRUE
 
+	branch = /datum/mil_branch/civilian
+	rank = /datum/mil_rank/civ/civ
+	allowed_branches = list(/datum/mil_branch/civilian)
+	allowed_ranks = list(/datum/mil_rank/civ/civ)
+
+	no_skill_buffs = TRUE
 	min_skill = list(
 		SKILL_HAULING = SKILL_BASIC,
 		SKILL_COMBAT = SKILL_BASIC,
@@ -40,6 +46,7 @@
 		SKILL_ANATOMY = SKILL_TRAINED,
 		SKILL_CHEMISTRY = SKILL_BASIC
 	)
+	skill_points = 20
 
 /datum/job/submap/obs/pilot
 	title = "OBS Pilot"
@@ -121,7 +128,7 @@
 		SKILL_ANATOMY = SKILL_EXPERIENCED,
 		SKILL_CHEMISTRY = SKILL_EXPERIENCED
 	)
-	skill_points = 26
+	skill_points = 22
 
 // Access
 /var/const/access_obs_shuttle = "ACCESS_OBS_SHUTTLE"
@@ -142,10 +149,10 @@
 /decl/hierarchy/outfit/job/obs/member
 	name = ("OBS - Job - Crew")
 	id_types = list(/obj/item/card/id/obs_shuttle)
-	hierarchy_type = /decl/hierarchy/outfit/job/obs
 	uniform = /obj/item/clothing/under/syndicate/terragov
 	shoes = /obj/item/clothing/shoes/dutyboots
-	backpack_contents = list(/obj/item/clothing/accessory/armband/obs = 1)
+	r_pocket = /obj/item/device/radio
+	l_pocket = /obj/item/crowbar/prybar
 
 /decl/hierarchy/outfit/job/obs/member/pilot
 	name = ("OBS - Job - Pilot")
