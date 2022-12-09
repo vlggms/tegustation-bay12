@@ -104,3 +104,16 @@
 	name = "Docking Bay"
 	landmark_tag = "nav_merchant_out"
 	//docking_controller = "merchant_shuttle_station_dock"
+
+// Other
+/obj/effect/shuttle_landmark/merc/deck1
+	name = "North of First Deck"
+	landmark_tag = "nav_merc_deck1"
+
+/obj/effect/shuttle_landmark/merc/deck2
+	name = "North of Second deck"
+	landmark_tag = "nav_merc_deck2"
+
+/obj/effect/shuttle_landmark/obs_shuttle/deck1
+	name = "Northeast of First deck"
+	landmark_tag = "nav_obs_deck1"

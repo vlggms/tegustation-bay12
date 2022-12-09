@@ -365,8 +365,8 @@
 /obj/effect/catwalk_plated,
 /obj/machinery/atmospherics/valve/digital{
 	dir = 4;
-	identifier = "Atmospherics to Loop Valve";
 	id_tag = "atmosinject";
+	identifier = "Atmospherics to Loop Valve";
 	name = "Atmospherics to Loop Valve"
 	},
 /obj/structure/cable{
@@ -472,14 +472,14 @@
 "cv" = (
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	dir = 4;
+	id_tag = "ofd_port_airlock_controller";
 	pixel_x = -20;
 	tag_airpump = "ofd_port_airlock_pump";
 	tag_chamber_sensor = "ofd_port_sensor";
 	tag_exterior_door = "ofd_port_exterior_door";
+	tag_exterior_sensor = "ofd_port_exterior_sensor";
 	tag_interior_door = "ofd_port_interior_door";
-	tag_interior_sensor = "ofd_port_interior_sensor";
-	id_tag = "ofd_port_airlock_controller";
-	tag_exterior_sensor = "ofd_port_exterior_sensor"
+	tag_interior_sensor = "ofd_port_interior_sensor"
 	},
 /obj/machinery/airlock_sensor{
 	id_tag = "ofd_port_sensor";
@@ -1034,9 +1034,9 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/external/glass/bolted{
+	frequency = 1379;
 	id_tag = "ofd_starboard_interior_door";
-	name = "OFD Exterior Access";
-	frequency = 1379
+	name = "OFD Exterior Access"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor,
@@ -1161,9 +1161,9 @@
 "gS" = (
 /obj/machinery/atmospherics/omni/filter{
 	name = "phoron filter";
+	tag_east = 6;
 	tag_north = 1;
-	tag_south = 2;
-	tag_east = 6
+	tag_south = 2
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/atmos)
@@ -1307,9 +1307,9 @@
 	pixel_y = 22
 	},
 /obj/machinery/airlock_sensor/airlock_interior{
-	pixel_y = 22;
+	id_tag = "ofd_port_interior_sensor";
 	pixel_x = 1;
-	id_tag = "ofd_port_interior_sensor"
+	pixel_y = 22
 	},
 /obj/machinery/camera/network/second_deck{
 	c_tag = "Second Deck - Portside Bow"
@@ -1498,8 +1498,8 @@
 /area/intrepid/misc/maint/upper)
 "is" = (
 /obj/structure/railing/mapped/no_density{
-	icon_state = "_mcorneroverlay1";
-	dir = 8
+	dir = 8;
+	icon_state = "_mcorneroverlay1"
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
@@ -1563,9 +1563,9 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/door/airlock/external/glass/bolted{
+	frequency = 1379;
 	id_tag = "ofd_port_interior_door";
-	name = "OFD Exterior Access";
-	frequency = 1379
+	name = "OFD Exterior Access"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
@@ -1624,9 +1624,9 @@
 /obj/machinery/portable_atmospherics/canister/hydrogen/engine_setup,
 /obj/machinery/button/blast_door{
 	dir = 8;
-	pixel_x = 26;
 	id_tag = "tankaccess";
-	name = "Tank Access Shutters button"
+	name = "Tank Access Shutters button";
+	pixel_x = 26
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/industrial/radiation/corner{
@@ -1701,8 +1701,8 @@
 /obj/machinery/access_button/airlock_exterior{
 	frequency = 1331;
 	master_tag = "tcomms";
-	pixel_y = 22;
-	pixel_x = 24
+	pixel_x = 24;
+	pixel_y = 22
 	},
 /obj/machinery/firealarm{
 	pixel_y = 15
@@ -1841,31 +1841,31 @@
 	},
 /obj/machinery/button/blast_door{
 	dir = 4;
-	pixel_y = -11;
+	id_tag = "tegflush";
 	name = "CORE VENT BLAST DOOR button";
 	pixel_x = -4;
-	id_tag = "tegflush"
+	pixel_y = -11
 	},
 /obj/structure/table/steel_reinforced,
 /obj/machinery/button/blast_door{
 	dir = 4;
-	pixel_y = -11;
+	id_tag = "corewindow";
 	name = "Core Window Blast Doors button";
 	pixel_x = 5;
-	id_tag = "corewindow"
+	pixel_y = -11
 	},
 /obj/machinery/button/blast_door{
 	dir = 4;
+	id_tag = "observationwindow";
 	name = "Observation Blast Doors button";
-	pixel_x = 5;
-	id_tag = "observationwindow"
+	pixel_x = 5
 	},
 /obj/effect/floor_decal/industrial/radiation/corner{
 	dir = 1
 	},
 /obj/machinery/camera/network/engine{
-	dir = 4;
-	c_tag = "Supermatter - Observation"
+	c_tag = "Supermatter - Observation";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/engineering/engine_room)
@@ -1877,8 +1877,8 @@
 /obj/effect/wingrille_spawn/reinforced_phoron/full,
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
 /obj/machinery/door/blast/regular{
-	name = "Core Window Blast Doors";
-	id_tag = "corewindow"
+	id_tag = "corewindow";
+	name = "Core Window Blast Doors"
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room)
@@ -2024,8 +2024,8 @@
 	id_tag = "enginecore"
 	},
 /obj/machinery/air_sensor/engine{
-	identifier = "Supermatter Core Sensor";
-	id_tag = "supermatter_sensor"
+	id_tag = "supermatter_sensor";
+	identifier = "Supermatter Core Sensor"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/intrepid/department/engineering/engine_room)
@@ -2081,9 +2081,9 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/external/glass/bolted{
+	frequency = 1379;
 	id_tag = "ofd_starboard_exterior_door";
-	name = "OFD Interior Access";
-	frequency = 1379
+	name = "OFD Interior Access"
 	},
 /turf/simulated/floor/airless,
 /area/intrepid/department/command/obstructionfielddisperser)
@@ -2118,9 +2118,9 @@
 "mD" = (
 /obj/effect/wingrille_spawn/reinforced_phoron/full,
 /obj/machinery/door/blast/regular{
-	name = "Observation Blast Doors";
+	dir = 4;
 	id_tag = "observationwindow";
-	dir = 4
+	name = "Observation Blast Doors"
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room)
@@ -2315,8 +2315,8 @@
 	dir = 8;
 	input_tag = "supermatter_input";
 	output_tag = "supermatter_output";
-	sensor_tag = "supermatter_sensor";
-	sensor_name = "Supermatter Core Sensor"
+	sensor_name = "Supermatter Core Sensor";
+	sensor_tag = "supermatter_sensor"
 	},
 /mob/living/simple_animal/hostile/retaliate/parrot/Poly{
 	dir = 8
@@ -2596,8 +2596,8 @@
 /obj/structure/railing/mapped,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/camera/emp_proof{
-	dir = 8;
 	c_tag = "R-UST - Engine Room Stern";
+	dir = 8;
 	network = list("Engine")
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -2615,10 +2615,10 @@
 /area/intrepid/department/command/commandquarters/psiadvisor)
 "qs" = (
 /obj/machinery/atmospherics/omni/filter{
-	tag_north = 1;
+	name = "carbon dioxide filter";
 	tag_east = 5;
-	tag_south = 2;
-	name = "carbon dioxide filter"
+	tag_north = 1;
+	tag_south = 2
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/atmos)
@@ -2683,8 +2683,8 @@
 	pixel_y = -34
 	},
 /obj/machinery/camera/network/command{
-	dir = 1;
-	c_tag = "Command - EVA Storage"
+	c_tag = "Command - EVA Storage";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/eva)
@@ -2796,8 +2796,8 @@
 /obj/structure/railing/mapped,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/camera/emp_proof{
-	dir = 4;
 	c_tag = "R-UST - Engine Room Fore";
+	dir = 4;
 	network = list("Engine")
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -3193,9 +3193,9 @@
 	icon_state = "4-8"
 	},
 /obj/structure/sign/directions{
+	dir = 4;
 	name = "\improper Dock Airlock";
-	pixel_y = -8;
-	dir = 4
+	pixel_y = -8
 	},
 /turf/simulated/wall/r_wall/hull,
 /area/tcommsat)
@@ -3317,10 +3317,10 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/access_button/airlock_interior{
-	pixel_x = -25;
-	pixel_y = 23;
 	frequency = 1331;
-	master_tag = "tcomms"
+	master_tag = "tcomms";
+	pixel_x = -25;
+	pixel_y = 23
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/tcommsat)
@@ -3334,8 +3334,8 @@
 "uN" = (
 /obj/effect/wingrille_spawn/reinforced_phoron/full,
 /obj/machinery/door/blast/regular{
-	name = "Observation Blast Doors";
-	id_tag = "observationwindow"
+	id_tag = "observationwindow";
+	name = "Observation Blast Doors"
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room)
@@ -3385,8 +3385,8 @@
 /area/space)
 "vs" = (
 /obj/structure/sign/directions{
-	name = "\improper Dock Airlock";
-	dir = 4
+	dir = 4;
+	name = "\improper Dock Airlock"
 	},
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/department/engineering/engine_room/aux)
@@ -3569,8 +3569,8 @@
 /area/intrepid/misc/maint/upper)
 "wH" = (
 /obj/machinery/camera/network/engine{
-	dir = 4;
-	c_tag = "Supermatter - Engine Room Fore"
+	c_tag = "Supermatter - Engine Room Fore";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/engineering/engine_room)
@@ -3736,10 +3736,10 @@
 /area/intrepid/department/command/commandquarters/psiadvisor)
 "xv" = (
 /obj/machinery/atmospherics/omni/filter{
+	name = "hydrogen filter";
 	tag_east = 2;
-	tag_west = 1;
 	tag_south = 8;
-	name = "hydrogen filter"
+	tag_west = 1
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/atmos)
@@ -3876,9 +3876,9 @@
 	},
 /obj/machinery/atmospherics/tvalve/digital/bypass{
 	dir = 4;
-	name = "Core Chamber Bypass Valve";
+	id_tag = "corebypass";
 	identifier = "Core Chamber Bypass Valve";
-	id_tag = "corebypass"
+	name = "Core Chamber Bypass Valve"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/intrepid/department/engineering/engine_room)
@@ -3891,8 +3891,8 @@
 "yS" = (
 /obj/structure/flora/pottedplant/floorleaf,
 /obj/machinery/camera/network/security{
-	dir = 4;
-	c_tag = "Security - Dock Security Booth"
+	c_tag = "Security - Dock Security Booth";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/civillian/dockbay)
@@ -4026,8 +4026,8 @@
 	icon_state = "2-4"
 	},
 /obj/structure/sign/directions{
-	name = "\improper Dock Airlock";
-	dir = 4
+	dir = 4;
+	name = "\improper Dock Airlock"
 	},
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/misc/maint/upper)
@@ -4096,9 +4096,9 @@
 	icon_state = "1-4"
 	},
 /obj/structure/sign/directions{
+	dir = 4;
 	name = "\improper Dock Airlock";
-	pixel_y = -8;
-	dir = 4
+	pixel_y = -8
 	},
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/department/engineering/engine_room)
@@ -4352,9 +4352,9 @@
 /area/intrepid/misc/maint/upper)
 "CX" = (
 /obj/machinery/button/blast_door{
-	pixel_y = 4;
 	id_tag = "rusteject";
-	name = "R-UST Chamber Vent button"
+	name = "R-UST Chamber Vent button";
+	pixel_y = 4
 	},
 /turf/simulated/wall/ocp_wall,
 /area/intrepid/department/engineering/engine_room/aux)
@@ -4505,15 +4505,15 @@
 /area/tcommsat)
 "EI" = (
 /obj/machinery/camera/network/engine{
-	dir = 1;
-	c_tag = "Supermatter - Core"
+	c_tag = "Supermatter - Core";
+	dir = 1
 	},
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 1;
 	icon_state = "map_injector";
 	id = "waste_in";
-	use_power = 1;
-	id_tag = "supermatter_input"
+	id_tag = "supermatter_input";
+	use_power = 1
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/intrepid/department/engineering/engine_room)
@@ -4641,8 +4641,8 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc/critical{
-	pixel_y = 14;
-	dir = 1
+	dir = 1;
+	pixel_y = 14
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/tcommsat)
@@ -4784,10 +4784,10 @@
 /area/intrepid/department/command/commandquarters/psiadvisor)
 "GD" = (
 /obj/machinery/atmospherics/omni/filter{
-	tag_north = 1;
-	tag_south = 2;
+	name = "n20 filter";
 	tag_east = 7;
-	name = "n20 filter"
+	tag_north = 1;
+	tag_south = 2
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/atmos)
@@ -4912,9 +4912,9 @@
 "Hr" = (
 /obj/effect/wingrille_spawn/reinforced_phoron/full,
 /obj/machinery/door/blast/regular{
-	name = "Core Window Blast Doors";
+	dir = 4;
 	id_tag = "corewindow";
-	dir = 4
+	name = "Core Window Blast Doors"
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room)
@@ -5645,8 +5645,8 @@
 "Nd" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/structure/railing/mapped/no_density{
-	icon_state = "_mcorneroverlay1";
-	dir = 8
+	dir = 8;
+	icon_state = "_mcorneroverlay1"
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
@@ -5778,9 +5778,9 @@
 	name = "\improper Dock Airlock"
 	},
 /obj/structure/sign/directions{
+	dir = 4;
 	name = "\improper Dock Airlock";
-	pixel_y = -8;
-	dir = 4
+	pixel_y = -8
 	},
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/misc/maint/upper)
@@ -5927,8 +5927,8 @@
 	dir = 8
 	},
 /obj/structure/railing/mapped/no_density{
-	icon_state = "_mcorneroverlay1";
-	dir = 8
+	dir = 8;
+	icon_state = "_mcorneroverlay1"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/space)
@@ -6124,8 +6124,8 @@
 	},
 /obj/machinery/atmospherics/valve/digital{
 	dir = 4;
-	identifier = "Space Loop Bypass Valve";
 	id_tag = "spaceloopbypass";
+	identifier = "Space Loop Bypass Valve";
 	name = "Space Loop Bypass Valve"
 	},
 /turf/simulated/floor,
@@ -6267,8 +6267,8 @@
 "RG" = (
 /obj/effect/wingrille_spawn/reinforced_phoron/full,
 /obj/machinery/door/blast/regular{
-	name = "Core Window Blast Doors";
-	id_tag = "corewindow"
+	id_tag = "corewindow";
+	name = "Core Window Blast Doors"
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room)
@@ -6360,8 +6360,8 @@
 "SA" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/machinery/camera/network/engine{
-	dir = 8;
-	c_tag = "Supermatter - Engine Room Aft"
+	c_tag = "Supermatter - Engine Room Aft";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/engineering/engine_room)
@@ -6395,9 +6395,9 @@
 /area/tcommsat)
 "SP" = (
 /obj/structure/sign/directions{
+	dir = 8;
 	name = "\improper Dock Airlock";
-	pixel_y = -25;
-	dir = 8
+	pixel_y = -25
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/space)
@@ -6551,9 +6551,9 @@
 "Uh" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/external/glass/bolted{
+	frequency = 1379;
 	id_tag = "ofd_port_exterior_door";
-	name = "OFD Interior Access";
-	frequency = 1379
+	name = "OFD Interior Access"
 	},
 /turf/simulated/floor/airless,
 /area/intrepid/department/command/obstructionfielddisperser)
@@ -6592,8 +6592,8 @@
 /area/intrepid/department/engineering/engine_room)
 "UJ" = (
 /obj/structure/sign/directions{
-	name = "\improper Dock Airlock";
-	dir = 4
+	dir = 4;
+	name = "\improper Dock Airlock"
 	},
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/department/civillian/dockbay)
@@ -6703,8 +6703,8 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/security{
-	dir = 4;
-	c_tag = "Security - Dock Locker Room"
+	c_tag = "Security - Dock Locker Room";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbay)
@@ -7011,8 +7011,8 @@
 /area/intrepid/department/engineering/engine_room)
 "Xx" = (
 /obj/machinery/camera/motion{
-	dir = 1;
 	c_tag = "Engineering - Telecommunications Chamber";
+	dir = 1;
 	network = list("Engineering")
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -7070,8 +7070,8 @@
 	pixel_y = -26
 	},
 /obj/machinery/camera/motion{
-	dir = 8;
 	c_tag = "Command - Self Destruct Terminal";
+	dir = 8;
 	network = list("Command")
 	},
 /turf/simulated/floor/reinforced,
@@ -7165,6 +7165,10 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/bluegrid,
 /area/tcommsat)
+"YM" = (
+/obj/effect/shuttle_landmark/merc/deck2,
+/turf/space,
+/area/space)
 "YP" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
@@ -7214,33 +7218,33 @@
 "Za" = (
 /obj/machinery/button/toggle/valve{
 	dir = 1;
-	name = "Space Loop Bypass Valve button";
 	id_tag = "spaceloopbypass";
-	pixel_y = 6;
-	pixel_x = 5
+	name = "Space Loop Bypass Valve button";
+	pixel_x = 5;
+	pixel_y = 6
 	},
 /obj/machinery/button/toggle/valve{
 	dir = 1;
-	name = "Core Chamber Bypass Valve button";
 	id_tag = "corebypass";
-	pixel_y = 6;
-	pixel_x = -5
+	name = "Core Chamber Bypass Valve button";
+	pixel_x = -5;
+	pixel_y = 6
 	},
 /obj/machinery/button/toggle/valve{
 	dir = 1;
-	name = "Atmospherics to Loop Valve button";
 	id_tag = "atmosinject";
-	pixel_y = -1;
-	pixel_x = -5
+	name = "Atmospherics to Loop Valve button";
+	pixel_x = -5;
+	pixel_y = -1
 	},
 /obj/structure/table/steel_reinforced,
 /obj/machinery/button/mass_driver{
 	desc = "A switch used to remotely eject the engine core into space. The vent must be opened to eject the core, otherwise it will explode while still in the ship, causing monumental damage. Only press if core is about to explode.";
+	dir = 1;
 	id_tag = "enginecore";
 	name = "CORE EJECT button";
 	pixel_x = 5;
-	pixel_y = -1;
-	dir = 1
+	pixel_y = -1
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/engineering/engine_room)
@@ -7319,9 +7323,9 @@
 	pixel_y = -22
 	},
 /obj/machinery/airlock_sensor/airlock_exterior{
-	pixel_y = -22;
+	id_tag = "ofd_port_exterior_sensor";
 	pixel_x = 2;
-	id_tag = "ofd_port_exterior_sensor"
+	pixel_y = -22
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/intrepid/department/command/obstructionfielddisperser)
@@ -24157,7 +24161,7 @@ UU
 UU
 UU
 UU
-UU
+YM
 UU
 UU
 UU

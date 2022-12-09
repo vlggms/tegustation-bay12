@@ -7,11 +7,19 @@
 	base = TRUE
 
 	initial_restricted_waypoints = list(
-		"Pandora" = list("nav_hangar_pandora")
+		"Pandora" = list("nav_hangar_pandora"),
+		"Cyclopes" = list("nav_merc_dock"),
+		"Independent Light Corvette" = list("nav_obs_deck1"),
 	)
 
 	initial_generic_waypoints = list(
+		// Top deck
+		"nav_merc_deck2",
+		"nav_ert_deck2",
 
+		// Bottom deck
+		"nav_merc_deck1",
+		"nav_ert_deck1",
 	)
 
 /obj/effect/overmap/visitable/ship/intrepid/Initialize()

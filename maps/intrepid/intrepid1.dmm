@@ -1763,8 +1763,8 @@
 /obj/machinery/button/blast_door{
 	id_tag = "pandora_entry";
 	name = "Pandora Cockpit Entry Hatch button";
-	req_access = list("ACCESS_INTREPID_HANGAR");
-	pixel_y = -10
+	pixel_y = -10;
+	req_access = list("ACCESS_INTREPID_HANGAR")
 	},
 /turf/simulated/wall/r_titanium,
 /area/shuttle/pandora/cockpit)
@@ -3607,11 +3607,11 @@
 /obj/item/ammo_magazine/smg_top,
 /obj/item/ammo_magazine/smg_top,
 /obj/structure/closet/secure_closet/wall{
+	anchored = 1;
+	density = 0;
 	name = "Lethal Ammunition";
 	pixel_x = -32;
-	req_access = list("ACCESS_ARMORY");
-	anchored = 1;
-	density = 0
+	req_access = list("ACCESS_ARMORY")
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/security/bo)
@@ -6887,10 +6887,10 @@
 "fWJ" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/button/blast_door{
+	dir = 4;
 	id_tag = "pandorashutter";
 	name = "Pandora Viewport Shutter button";
-	pixel_x = -25;
-	dir = 4
+	pixel_x = -25
 	},
 /obj/machinery/sleeper{
 	dir = 4
@@ -7077,10 +7077,10 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/cryopod/robot,
 /obj/machinery/access_button/airlock_interior{
-	pixel_x = -25;
-	pixel_y = 23;
 	frequency = 1331;
-	master_tag = "tcomms"
+	master_tag = "tcomms";
+	pixel_x = -25;
+	pixel_y = 23
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/engineering/assembly/robotics)
@@ -8276,9 +8276,9 @@
 "hph" = (
 /obj/machinery/button/blast_door{
 	dir = 4;
-	pixel_x = -23;
 	id_tag = "pandoracargo";
-	name = "Pandora Cargo Blast Door button"
+	name = "Pandora Cargo Blast Door button";
+	pixel_x = -23
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/pandora/cargo)
@@ -8583,8 +8583,8 @@
 	icon_state = "0-4"
 	},
 /obj/structure/closet/secure_closet/pilot{
-	pixel_y = -32;
-	anchored = 1
+	anchored = 1;
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/pandora/cockpit)
@@ -8634,10 +8634,10 @@
 	icon_state = "2-4"
 	},
 /obj/machinery/access_button/airlock_interior{
-	pixel_x = -25;
-	pixel_y = -23;
 	frequency = 1331;
-	master_tag = "pandora_shuttle"
+	master_tag = "pandora_shuttle";
+	pixel_x = -25;
+	pixel_y = -23
 	},
 /obj/machinery/light{
 	dir = 8
@@ -12966,8 +12966,8 @@
 	pixel_y = 25
 	},
 /obj/structure/sign/directions/engineering{
-	pixel_y = 32;
-	dir = 4
+	dir = 4;
+	pixel_y = 32
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
@@ -14880,8 +14880,8 @@
 /obj/machinery/atmospherics/pipe/simple/visible/fuel,
 /obj/structure/disposalpipe/segment,
 /obj/structure/sign/directions/engineering{
-	pixel_x = 32;
-	dir = 1
+	dir = 1;
+	pixel_x = 32
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/drone_fabrication)
@@ -15151,14 +15151,14 @@
 /obj/machinery/access_button/airlock_exterior{
 	frequency = 1331;
 	master_tag = "pandora_shuttle";
-	pixel_y = 22;
-	pixel_x = 24
+	pixel_x = 24;
+	pixel_y = 22
 	},
 /obj/machinery/airlock_sensor{
-	pixel_x = 39;
-	pixel_y = 22;
+	frequency = 1331;
 	id_tag = "pandora_shuttle_sensor_outer";
-	frequency = 1331
+	pixel_x = 39;
+	pixel_y = 22
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
 	dir = 4;
@@ -18883,6 +18883,10 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/internalportside)
+"qxe" = (
+/obj/effect/shuttle_landmark/obs_shuttle/deck1,
+/turf/space,
+/area/space)
 "qxC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -19086,9 +19090,9 @@
 	dir = 1
 	},
 /mob/living/simple_animal/familiar/pet/cat{
-	name = "Miranda";
+	desc = "A pitch black cat, a pet for the current Supply Chief!";
 	dir = 8;
-	desc = "A pitch black cat, a pet for the current Supply Chief!"
+	name = "Miranda"
 	},
 /obj/structure/dogbed{
 	name = "catbed"
@@ -26163,8 +26167,8 @@
 	dir = 4
 	},
 /obj/structure/sign/directions/engineering{
-	pixel_y = 32;
-	dir = 4
+	dir = 4;
+	pixel_y = 32
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
@@ -60793,7 +60797,7 @@ cjD
 cjD
 cjD
 cjD
-cjD
+qxe
 cjD
 cjD
 cjD
