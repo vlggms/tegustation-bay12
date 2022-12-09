@@ -13,7 +13,7 @@
 		log_and_message_admins("Blob has no allowed areas.")
 		kill()
 		return
-	for(var/area/ar in allowed_areas)
+	for(var/ar in allowed_areas)
 		var/turf/PT = get_subarea_turfs(ar, list(/proc/is_station_turf, /proc/not_turf_contains_dense_objects))
 		possible_turfs += PT
 	var/turf/T = null
