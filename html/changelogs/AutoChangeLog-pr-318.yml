@@ -1,0 +1,5 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - rscadd: Added cloak accessories.
+  - tweak: Armbands can now be attached to armor/suits.
