@@ -1,0 +1,8 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - rscadd: Added high-explosive and orbital bombardment OFD charge types. Currently
+      admin-only.
+  - tweak: Cooldown of the Obstruction Field Disperser now depends on range and strength
+      settings.
+  - tweak: OFD charges will explode and get destroyed when hit by devastating explosion.
