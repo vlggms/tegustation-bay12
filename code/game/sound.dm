@@ -115,6 +115,21 @@ var/const/FALLOFF_SOUNDS = 0.5
 
 	sound_to(src, S)
 
+/proc/sound_to_playing_players(soundin, volume = 100, vary = FALSE, frequency = 0, falloff, is_global = FALSE, ignore_pressure = FALSE)
+	for(var/m in GLOB.player_list)
+		if(ismob(m) && !isnewplayer(m))
+			var/mob/M = m
+			M.playsound_local(get_turf(M), soundin, volume, vary, frequency, falloff, is_global, ignore_pressure)
+
+/proc/sound_to_playing_players_on_level(soundin, volume = 100, vary = FALSE, frequency = 0, falloff, is_global = FALSE, ignore_pressure = FALSE, zlevel)
+	for(var/m in GLOB.player_list)
+		if(ismob(m) && !isnewplayer(m))
+			var/mob/M = m
+			if(!islist(zlevel))
+				zlevel = list(zlevel)
+			if((M.loc.z in zlevel) && M.client)
+				M.playsound_local(get_turf(M), soundin, volume, vary, frequency, falloff, is_global, ignore_pressure)
+
 /client/proc/playtitlemusic()
 	if (get_preference_value(/datum/client_preference/play_lobby_music) == GLOB.PREF_YES)
 		sound_to(src, GLOB.using_map.lobby_track.get_sound())

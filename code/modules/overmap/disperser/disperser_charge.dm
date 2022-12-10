@@ -6,6 +6,13 @@
 	var/chargetype
 	var/chargedesc
 
+/obj/structure/ship_munition/disperser_charge/ex_act(severity)
+	if(severity == 1)
+		var/turf/target = get_turf(src)
+		QDEL_NULL(src)
+		explosion(target, 1, 2, 3)
+	return
+
 /obj/structure/ship_munition/disperser_charge/proc/fire(turf/target, strength, range)
 	CRASH("OFD charge firing logic not set!")
 
@@ -25,7 +32,6 @@
 	name = "bluespace fire"
 	color = COLOR_BLUE
 	pressure = 1500
-
 
 /obj/structure/ship_munition/disperser_charge/emp
 	name = "EM2-QUASAR charge"
@@ -59,6 +65,33 @@
 	desc = "A charge to power the obstruction field disperser with. It looks impossibly round and shiny. This charge is designed to explode on impact."
 	chargetype = OVERMAP_WEAKNESS_EXPLOSIVE
 	chargedesc = "INDARRA"
+	var/devastation_modifier = 0.1
+	var/heavy_modifier = 0.15
+	var/light_modifier = 0.5
 
 /obj/structure/ship_munition/disperser_charge/explosive/fire(turf/target, strength, range)
-	explosion(target,max(1,strength * range / 10),strength * range / 7.5,strength * range / 5)
+	explosion(target, strength * range * devastation_modifier, strength * range * heavy_modifier, strength * range * light_modifier)
+
+/obj/structure/ship_munition/disperser_charge/explosive/high
+	name = "XP5-ANNIR charge"
+	color = "#a85255"
+	chargedesc = "ANNIR"
+	devastation_modifier = 0.25
+	heavy_modifier = 0.5
+	light_modifier = 1
+
+/obj/structure/ship_munition/disperser_charge/orbital_bombardment
+	name = "OB6-TERRA charge"
+	desc = "A charge to power the obstruction field disperser with. It looks impossibly round and shiny. This charge is designed to bombard the target with large amount of tiny explosions. \
+			It is usually used by Terran navy as a tool for orbital bombardment."
+	icon_state = "ob_ammo"
+	chargetype = OVERMAP_WEAKNESS_EXPLOSIVE
+	chargedesc = "TERRA"
+	var/fire_at_connected_levels = FALSE
+
+/obj/structure/ship_munition/disperser_charge/orbital_bombardment/fire(turf/target, strength, range)
+	var/sound_z = target.z
+	if(fire_at_connected_levels)
+		sound_z = GetConnectedZlevels(sound_z)
+	sound_to_playing_players_on_level('sound/effects/orbital_bombardment.ogg', 50, ignore_pressure = TRUE, zlevel = sound_z)
+	addtimer(CALLBACK(GLOBAL_PROC, .proc/bombard_z, 50, 0.3, max(0,strength * range / 20), strength * range / 15, strength * range / 5, fire_at_connected_levels, target.z), 10 SECONDS)
