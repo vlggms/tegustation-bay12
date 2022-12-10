@@ -94,4 +94,4 @@
 	if(fire_at_connected_levels)
 		sound_z = GetConnectedZlevels(sound_z)
 	sound_to_playing_players_on_level('sound/effects/orbital_bombardment.ogg', 50, ignore_pressure = TRUE, zlevel = sound_z)
-	addtimer(CALLBACK(GLOBAL_PROC, .proc/bombard_z, 50, 0.3, max(0,strength * range / 20), strength * range / 15, strength * range / 5, fire_at_connected_levels, target.z), 10 SECONDS)
+	addtimer(CALLBACK(GLOBAL_PROC, .proc/bombard_z, 50, 0.3, max(0,strength * range / 20), strength * range / 15, strength * range / 5, FALSE, fire_at_connected_levels, target.z), 10 SECONDS)
