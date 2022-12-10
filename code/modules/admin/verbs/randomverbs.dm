@@ -841,15 +841,15 @@ Ccomp's first proc.
 		return
 
 	var/devastation_range = input("How big is the devastation range of the explosions?", "Devastation Range") as num|null
-	if(!devastation_range)
+	if(devastation_range < 0)
 		return
 
 	var/heavy_range = input("How big is the heavy-impact range of the explosions?", "Heavy-Impact Range") as num|null
-	if(!heavy_range)
+	if(heavy_range < 0)
 		return
 
 	var/light_range = input("How big is the light-impact range of the explosions?", "Light-Impact Range") as num|null
-	if(!light_range)
+	if(light_range < 0)
 		return
 
 	var/random_range = alert("Randomize the impact ranges for each explosion?", "Random Range", "Yes", "No", "Cancel")
@@ -859,7 +859,9 @@ Ccomp's first proc.
 
 	log_admin("[key_name(src)] has bombed Z-level #[zlevel][connected ? " and connected levels" : ""] with [booms] bombs ([devastation_range], [heavy_range], [light_range]).")
 	message_admins("[key_name(src)] has bombed Z-level #[zlevel][connected ? " and connected levels" : ""] with [booms] bombs ([devastation_range], [heavy_range], [light_range]).")
+	bombard_z(booms, delay, devastation_range, heavy_range, light_range, random_range, connected, zlevel)
 
+/proc/bombard_z(booms = 1, delay = 1, devastation_range = 1, heavy_range = 1, light_range = 1, random_range, connected, zlevel)
 	while(booms > 0)
 		if(random_range)
 			devastation_range += rand(-1, 1)

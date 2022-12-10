@@ -25,7 +25,7 @@
 	var/range = 1 //range of the explosion
 	var/strength = 1 //strength of the explosion
 	var/next_shot = 0 //round time where the next shot can start from
-	var/const/coolinterval = 2 MINUTES //time to wait between safe shots in deciseconds
+	var/coolinterval = 100 SECONDS //time to wait between safe shots in deciseconds
 
 /obj/machinery/computer/ship/disperser/Initialize()
 	. = ..()
@@ -41,14 +41,16 @@
 		return TRUE
 
 	for(var/obj/machinery/disperser/front/F in SSmachines.machinery)
+		if(!(z in GetConnectedZlevels(F.z))) // On a different level
+			continue
 		if(get_dist(src, F) >= link_range)
 			continue
 		var/backwards = turn(F.dir, 180)
 		var/obj/machinery/disperser/middle/M = locate() in get_step(F, backwards)
-		if(!M || get_dist(src, M) >= link_range)
+		if(!M)
 			continue
 		var/obj/machinery/disperser/back/B = locate() in get_step(M, backwards)
-		if(!B || get_dist(src, B) >= link_range)
+		if(!B)
 			continue
 		front = F
 		middle = M
