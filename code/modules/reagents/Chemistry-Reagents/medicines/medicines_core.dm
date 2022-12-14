@@ -203,6 +203,7 @@
 
 
 
+// Peridaxon - Heals minor internal organ damage
 /datum/reagent/medicine/peridaxon
 	name = "Peridaxon"
 	description = "Used to encourage recovery of internal organs and nervous systems. Medicate cautiously."
@@ -211,20 +212,77 @@
 	value = 6
 
 /datum/reagent/medicine/peridaxon/affect_blood(mob/living/carbon/M, alien, removed)
-	if (ishuman(M))
-		var/mob/living/carbon/human/H = M
-		for (var/obj/item/organ/internal/I in H.internal_organs)
-			if (!BP_IS_ROBOTIC(I))
-				if (I.organ_tag == BP_BRAIN)
-					// if we have located an organic brain, apply side effects
-					H.confused++
-					H.drowsyness++
-					// peridaxon only heals minor brain damage
-					if (I.damage >= I.min_bruised_damage)
-						continue
-				I.heal_damage(removed)
+	if(!ishuman(M))
+		return
+	var/mob/living/carbon/human/H = M
+	for(var/obj/item/organ/internal/I in H.internal_organs)
+		if(BP_IS_ROBOTIC(I))
+			continue
+		if(I.organ_tag == BP_BRAIN)
+			// if we have located an organic brain, apply side effects
+			H.confused++
+			H.drowsyness++
+			// peridaxon only heals minor brain damage
+			if(I.damage >= I.min_bruised_damage)
+				continue
+		I.heal_damage(removed)
 
+// Peridaxon Plus - For when organ failure must be gone
+/datum/reagent/medicine/peridaxon_plus
+	name = "Peridaxon Plus"
+	description = "An advanced chemical used to near instantly treat organ failures. Has much more intense side effects."
+	color = "#561ec3"
+	overdose = REAGENTS_OVERDOSE / 3
+	value = 18
 
+/datum/reagent/medicine/peridaxon_plus/affect_blood(mob/living/carbon/M, alien, removed)
+	if(!ishuman(M))
+		return
+	var/mob/living/carbon/human/H = M
+	for(var/obj/item/organ/internal/I in H.internal_organs)
+		if(BP_IS_ROBOTIC(I))
+			continue
+		if(I.organ_tag == BP_BRAIN)
+			H.confused++
+			H.drowsyness++
+			if(prob(5)) // It is NOT a combat drug
+				H.Weaken(2)
+			else if(prob(5))
+				H.Stun(2)
+
+			if(I.damage >= I.min_broken_damage)
+				continue
+		I.heal_damage(removed * 4)
+
+// Peridaxon Omega - I'll be honest, I just wanted to add more funny chems.
+// This one just revives your organs if you can still process chems.
+/datum/reagent/medicine/peridaxon_omega
+	name = "Peridaxon Omega"
+	description = "The holy grail of chemistry. This shouldn't even be possible..."
+	color = "#d821fc"
+	overdose = REAGENTS_OVERDOSE / 5
+	value = 50
+
+/datum/reagent/medicine/peridaxon_omega/affect_blood(mob/living/carbon/M, alien, removed)
+	if(!ishuman(M))
+		return
+	var/mob/living/carbon/human/H = M
+	for(var/obj/item/organ/internal/I in H.internal_organs)
+		if(BP_IS_ROBOTIC(I))
+			continue
+		if(I.organ_tag == BP_BRAIN)
+			H.confused += 2
+			H.drowsyness += 2
+			if(prob(10)) // Perish
+				H.Weaken(5)
+			else if(prob(10))
+				H.Stun(5)
+			else if(prob(10))
+				H.sleeping = max(H.sleeping, 5)
+		else if(I.status & ORGAN_DEAD) // Sorry, it cannot revive the dead brains
+			I.revive()
+			continue
+		I.heal_damage(I.max_damage * 0.1)
 
 /datum/reagent/medicine/alkysine
 	name = "Alkysine"
@@ -249,6 +307,7 @@
 // Splended question, voice in my brain! Nanoblood is species-agnostic and type-agnostic.
 // Carrying blood bags of several types for several species massively increases the logistical requirements of doctors.
 // We don't endeavor to make that a big concern right now, so instead we make it easy to get and provide nanoblood easily.
+//  -  Who asked???
 /datum/reagent/medicine/nanoblood
 	name = "Nanoblood"
 	description = "A stable hemoglobin-based nanoparticle oxygen carrier, used to rapidly replace lost blood. Toxic unless injected in small doses. Does not contain white blood cells."

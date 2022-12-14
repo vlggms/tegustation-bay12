@@ -47,7 +47,7 @@ obj/item/organ/external/take_general_damage(var/amount, var/silent = FALSE)
 		owner.updatehealth() //droplimb will call updatehealth() again if it does end up being called
 		if(!is_stump() && (limb_flags & ORGAN_FLAG_CAN_AMPUTATE) && config.limbs_can_break)
 			var/total_damage = brute_dam + burn_dam + brute + burn + spillover
-			var/threshold = max_damage * config.organ_health_multiplier
+			var/threshold = max_damage * config.organ_health_multiplier * 1.5
 			if(total_damage > threshold)
 				if(attempt_dismemberment(pure_brute, burn, sharp, edge, used_weapon, spillover, total_damage > threshold*6))
 					return
@@ -130,21 +130,20 @@ obj/item/organ/external/take_general_damage(var/amount, var/silent = FALSE)
 	var/laser = (damage_flags & DAM_LASER)
 
 	var/damage_amt = brute
-	var/cur_damage = brute_dam
 	if(laser || BP_IS_ROBOTIC(src))
 		damage_amt += burn
-		cur_damage += burn_dam
 
 	if(!damage_amt)
 		return FALSE
 
-	var/organ_damage_threshold = 10
+	var/organ_damage_threshold = INTERNAL_ORGAN_DAMAGE_THRESHOLD
 	if(damage_flags & DAM_SHARP)
-		organ_damage_threshold *= 0.5
+		organ_damage_threshold *= 0.75
 	if(laser)
-		organ_damage_threshold *= 2
+		organ_damage_threshold *= 1.5
 
-	if(!(cur_damage + damage_amt >= max_damage) && !(damage_amt >= organ_damage_threshold))
+	// Damage to organs is only dealt if damage exceeds threshold.
+	if(damage_amt < organ_damage_threshold)
 		return FALSE
 
 	var/list/victims = list()
@@ -158,15 +157,15 @@ obj/item/organ/external/take_general_damage(var/amount, var/silent = FALSE)
 	if(!length(victims))
 		return FALSE
 
-	organ_hit_chance += 5 * damage_amt/organ_damage_threshold
+	organ_hit_chance += 5 * damage_amt / organ_damage_threshold
 
 	if(encased && !(status & ORGAN_BROKEN)) //ribs protect
-		organ_hit_chance *= 0.6
+		organ_hit_chance *= 0.5
 
 	organ_hit_chance = min(organ_hit_chance, 100)
 	if(prob(organ_hit_chance))
 		var/obj/item/organ/internal/victim = pickweight(victims)
-		damage_amt -= max(damage_amt*victim.damage_reduction, 0)
+		damage_amt = clamp(damage_amt * victim.damage_reduction, 0, victim.min_broken_damage * 0.75)
 		victim.take_internal_damage(damage_amt)
 		return TRUE
 
@@ -353,16 +352,18 @@ obj/item/organ/external/take_general_damage(var/amount, var/silent = FALSE)
 //   and the brute damage dealt exceeds the tearoff threshold, the organ is torn off.
 /obj/item/organ/external/proc/attempt_dismemberment(brute, burn, sharp, edge, used_weapon, spillover, force_droplimb)
 	//Check edge eligibility
-	var/edge_eligible = 0
+	var/edge_eligible = FALSE
 	if(edge)
-		if(istype(used_weapon,/obj/item))
+		if(istype(used_weapon, /obj/item))
 			var/obj/item/W = used_weapon
 			if(W.w_class >= w_class)
-				edge_eligible = 1
+				edge_eligible = TRUE
 		else
-			edge_eligible = 1
+			edge_eligible = TRUE
 	else if(sharp)
-		brute = 0.5 * brute
+		brute *= 0.5
+
+	// Forced; Nothing to discuss here.
 	if(force_droplimb)
 		if(burn)
 			droplimb(0, DROPLIMB_BURN)
@@ -370,19 +371,26 @@ obj/item/organ/external/take_general_damage(var/amount, var/silent = FALSE)
 			droplimb(0, edge_eligible ? DROPLIMB_EDGE : DROPLIMB_BLUNT)
 		return TRUE
 
-	if(edge_eligible && brute >= max_damage / DROPLIMB_THRESHOLD_EDGE)
+	// Sharp/Edgy weapons with enough BRUTE damage
+	if(edge_eligible && brute >= max_damage * DROPLIMB_THRESHOLD_EDGE)
 		if(prob(brute))
 			droplimb(0, DROPLIMB_EDGE)
 			return TRUE
-	else if(burn >= max_damage / DROPLIMB_THRESHOLD_DESTROY)
-		if(prob(burn/3))
+
+	// Overly high BURN damage
+	else if(burn >= max_damage * DROPLIMB_THRESHOLD_DESTROY_BURN)
+		if(prob(burn * 0.3))
 			droplimb(0, DROPLIMB_BURN)
 			return TRUE
-	else if(brute >= max_damage / DROPLIMB_THRESHOLD_DESTROY)
+
+	// Overly high BRUTE damage
+	else if(brute >= max_damage * DROPLIMB_THRESHOLD_DESTROY_BRUTE)
 		if(prob(brute))
 			droplimb(0, DROPLIMB_BLUNT)
 			return TRUE
-	else if(brute >= max_damage / DROPLIMB_THRESHOLD_TEAROFF)
-		if(prob(brute/3))
+
+	// Not as high brute damage
+	else if(brute >= max_damage * DROPLIMB_THRESHOLD_TEAROFF)
+		if(prob(brute * 0.3))
 			droplimb(0, DROPLIMB_EDGE)
 			return TRUE

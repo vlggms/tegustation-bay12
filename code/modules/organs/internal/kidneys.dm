@@ -4,26 +4,21 @@
 	gender = PLURAL
 	organ_tag = BP_KIDNEYS
 	parent_organ = BP_GROIN
-	min_bruised_damage = 25
-	min_broken_damage = 45
 	max_damage = 70
 	relative_size = 10
-
-/obj/item/organ/internal/kidneys/robotize()
-	. = ..()
-	icon_state = "kidneys-prosthetic"
+	var/list/bad_reagents = list(
+		/datum/reagent/drink/coffee,
+		)
 
 /obj/item/organ/internal/kidneys/Process()
-	..()
+	. =..()
 
 	if(!owner)
 		return
 
-	// Coffee is really bad for you with busted kidneys.
-	// This should probably be expanded in some way, but fucked if I know
-	// what else kidneys can process in our reagent list.
-	var/datum/reagent/coffee = locate(/datum/reagent/drink/coffee) in owner.reagents.reagent_list
-	if(coffee)
+	// Don't drink bad reagents with busted kidneys
+	var/bad_stuff = same_entries(bad_reagents, owner.reagents.reagent_list)
+	if(bad_stuff)
 		if(is_bruised())
 			owner.adjustToxLoss(0.1)
 		else if(is_broken())
@@ -44,4 +39,6 @@
 			if(status & ORGAN_DEAD)
 				owner.adjustToxLoss(1)
 
-
+/obj/item/organ/internal/kidneys/robotize()
+	. = ..()
+	icon_state = "kidneys-prosthetic"

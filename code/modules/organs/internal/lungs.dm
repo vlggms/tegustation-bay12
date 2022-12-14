@@ -30,47 +30,6 @@
 	var/last_successful_breath
 	var/breath_fail_ratio // How badly they failed a breath. Higher is worse.
 
-/obj/item/organ/internal/lungs/proc/can_drown()
-	return (is_broken() || !has_gills)
-
-/obj/item/organ/internal/lungs/proc/remove_oxygen_deprivation(var/amount)
-	var/last_suffocation = oxygen_deprivation
-	oxygen_deprivation = min(species.total_health,max(0,oxygen_deprivation - amount))
-	return -(oxygen_deprivation - last_suffocation)
-
-/obj/item/organ/internal/lungs/proc/add_oxygen_deprivation(var/amount)
-	var/last_suffocation = oxygen_deprivation
-	oxygen_deprivation = min(species.total_health,max(0,oxygen_deprivation + amount))
-	return (oxygen_deprivation - last_suffocation)
-
-// Returns a percentage value for use by GetOxyloss().
-/obj/item/organ/internal/lungs/proc/get_oxygen_deprivation()
-	if(status & ORGAN_DEAD)
-		return 100
-	return round((oxygen_deprivation/species.total_health)*100)
-
-/obj/item/organ/internal/lungs/robotize()
-	. = ..()
-	icon_state = "lungs-prosthetic"
-
-/obj/item/organ/internal/lungs/set_dna(var/datum/dna/new_dna)
-	..()
-	sync_breath_types()
-	max_pressure_diff = species.max_pressure_diff
-
-/obj/item/organ/internal/lungs/replaced()
-	..()
-	sync_breath_types()
-
-/**
- *  Set these lungs' breath types based on the lungs' species
- */
-/obj/item/organ/internal/lungs/proc/sync_breath_types()
-	min_breath_pressure = species.breath_pressure
-	breath_type = species.breath_type ? species.breath_type : GAS_OXYGEN
-	poison_types = species.poison_types ? species.poison_types : list(GAS_PHORON = TRUE)
-	exhale_type = species.exhale_type ? species.exhale_type : GAS_CO2
-
 /obj/item/organ/internal/lungs/Process()
 	..()
 	if(!owner)
@@ -107,6 +66,73 @@
 
 			owner.losebreath = max(round(damage / 2), owner.losebreath)
 
+/obj/item/organ/internal/lungs/listen()
+	if(owner.failed_last_breath || !active_breathing)
+		return "no respiration"
+
+	if(BP_IS_ROBOTIC(src))
+		if(is_bruised())
+			return "malfunctioning fans"
+		else
+			return "air flowing"
+
+	. = list()
+	if(is_bruised())
+		. += "[pick("wheezing", "gurgling")] sounds"
+
+	var/list/breathtype = list()
+	if(get_oxygen_deprivation() > 50)
+		breathtype += pick("straining","labored")
+	if(owner.shock_stage > 50)
+		breathtype += pick("shallow and rapid")
+	if(!breathtype.len)
+		breathtype += "healthy"
+
+	. += "[english_list(breathtype)] breathing"
+
+	return english_list(.)
+
+/obj/item/organ/internal/lungs/robotize()
+	. = ..()
+	icon_state = "lungs-prosthetic"
+
+/obj/item/organ/internal/lungs/set_dna(datum/dna/new_dna)
+	..()
+	sync_breath_types()
+	max_pressure_diff = species.max_pressure_diff
+
+/obj/item/organ/internal/lungs/replaced()
+	..()
+	sync_breath_types()
+
+/obj/item/organ/internal/lungs/proc/can_drown()
+	return (is_broken() || !has_gills)
+
+/obj/item/organ/internal/lungs/proc/remove_oxygen_deprivation(var/amount)
+	var/last_suffocation = oxygen_deprivation
+	oxygen_deprivation = min(species.total_health,max(0,oxygen_deprivation - amount))
+	return -(oxygen_deprivation - last_suffocation)
+
+/obj/item/organ/internal/lungs/proc/add_oxygen_deprivation(var/amount)
+	var/last_suffocation = oxygen_deprivation
+	oxygen_deprivation = min(species.total_health,max(0,oxygen_deprivation + amount))
+	return (oxygen_deprivation - last_suffocation)
+
+// Returns a percentage value for use by GetOxyloss().
+/obj/item/organ/internal/lungs/proc/get_oxygen_deprivation()
+	if(status & ORGAN_DEAD)
+		return 100
+	return round((oxygen_deprivation/species.total_health)*100)
+
+/**
+ *  Set these lungs' breath types based on the lungs' species
+ */
+/obj/item/organ/internal/lungs/proc/sync_breath_types()
+	min_breath_pressure = species.breath_pressure
+	breath_type = species.breath_type ? species.breath_type : GAS_OXYGEN
+	poison_types = species.poison_types ? species.poison_types : list(GAS_PHORON = TRUE)
+	exhale_type = species.exhale_type ? species.exhale_type : GAS_CO2
+
 /obj/item/organ/internal/lungs/proc/rupture()
 	var/obj/item/organ/external/parent = owner.get_organ(parent_organ)
 	if(istype(parent))
@@ -127,15 +153,14 @@
 		if(!is_bruised() && lung_rupture_prob) //only rupture if NOT already ruptured
 			rupture()
 
-/obj/item/organ/internal/lungs/proc/handle_breath(datum/gas_mixture/breath, var/forced)
-
+/obj/item/organ/internal/lungs/proc/handle_breath(datum/gas_mixture/breath, forced)
 	if(!owner)
-		return 1
+		return TRUE
 
 	if(!breath || (max_damage <= 0))
 		breath_fail_ratio = 1
 		handle_failed_breath()
-		return 1
+		return TRUE
 
 	var/breath_pressure = breath.return_pressure()
 	check_rupturing(breath_pressure)
@@ -146,7 +171,7 @@
 	if(breath.total_moles == 0)
 		breath_fail_ratio = 1
 		handle_failed_breath()
-		return 1
+		return TRUE
 
 	var/safe_pressure_min = min_breath_pressure // Minimum safe partial pressure of breathable gas in kPa
 	// Lung damage increases the minimum safe pressure.
@@ -280,7 +305,7 @@
 
 		//breathing in hot/cold air also heats/cools you a bit
 		var/temp_adj = breath.temperature - owner.bodytemperature
-		if (temp_adj < 0)
+		if(temp_adj < 0)
 			temp_adj /= (BODYTEMP_COLD_DIVISOR * 5)	//don't raise temperature as much as if we were directly exposed
 		else
 			temp_adj /= (BODYTEMP_HEAT_DIVISOR * 5)	//don't raise temperature as much as if we were directly exposed
@@ -288,8 +313,10 @@
 		var/relative_density = breath.total_moles / (MOLES_CELLSTANDARD * breath.volume/CELL_VOLUME)
 		temp_adj *= relative_density
 
-		if (temp_adj > BODYTEMP_HEATING_MAX) temp_adj = BODYTEMP_HEATING_MAX
-		if (temp_adj < BODYTEMP_COOLING_MAX) temp_adj = BODYTEMP_COOLING_MAX
+		if(temp_adj > BODYTEMP_HEATING_MAX)
+			temp_adj = BODYTEMP_HEATING_MAX
+		if(temp_adj < BODYTEMP_COOLING_MAX)
+			temp_adj = BODYTEMP_COOLING_MAX
 //		log_debug("Breath: [breath.temperature], [src]: [bodytemperature], Adjusting: [temp_adj]")
 		owner.bodytemperature += temp_adj
 
@@ -297,29 +324,3 @@
 		species.get_environment_discomfort(owner,"heat")
 	else if(breath.temperature <= species.cold_discomfort_level)
 		species.get_environment_discomfort(owner,"cold")
-
-/obj/item/organ/internal/lungs/listen()
-	if(owner.failed_last_breath || !active_breathing)
-		return "no respiration"
-
-	if(BP_IS_ROBOTIC(src))
-		if(is_bruised())
-			return "malfunctioning fans"
-		else
-			return "air flowing"
-
-	. = list()
-	if(is_bruised())
-		. += "[pick("wheezing", "gurgling")] sounds"
-
-	var/list/breathtype = list()
-	if(get_oxygen_deprivation() > 50)
-		breathtype += pick("straining","labored")
-	if(owner.shock_stage > 50)
-		breathtype += pick("shallow and rapid")
-	if(!breathtype.len)
-		breathtype += "healthy"
-
-	. += "[english_list(breathtype)] breathing"
-
-	return english_list(.)

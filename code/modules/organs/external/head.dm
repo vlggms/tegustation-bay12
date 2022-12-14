@@ -3,8 +3,8 @@
 	icon_name = "head"
 	name = "head"
 	slot_flags = SLOT_BELT
-	max_damage = 75
-	min_broken_damage = 35
+	max_damage = 100
+	min_broken_damage = 50
 	w_class = ITEM_SIZE_NORMAL
 	cavity_max_w_class = ITEM_SIZE_SMALL
 	body_part = HEAD

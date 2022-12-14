@@ -104,3 +104,25 @@
 #define BLOOD_VOLUME_BAD     60
 #define BLOOD_VOLUME_SURVIVE 30
 
+
+// Minimum damage delt to external(parent) organ to be able to damage internal organs
+// The number changes a bit depending on properties of the weapon used
+#define INTERNAL_ORGAN_DAMAGE_THRESHOLD 30
+
+// Damage thresholds for limb(external organ) dismemberment from various damage sources
+// Those are all multipliers of max_damage of limb itself, so for organ with 100 max health - Edge threshold will be 50.
+#define DROPLIMB_THRESHOLD_EDGE 0.2
+#define DROPLIMB_THRESHOLD_TEAROFF 0.4
+#define DROPLIMB_THRESHOLD_DESTROY_BRUTE 0.6
+#define DROPLIMB_THRESHOLD_DESTROY_BURN 0.7
+
+#define ORGAN_RECOVERY_THRESHOLD (5 MINUTES)
+
+// Stages of appendix inflamation
+// Worth mentioning that the value increase by one every tick, so consider these the time it'd take to kill someone
+/// Early effects of appendicitis - owner is getting slight organ and toxin damage
+#define APPENDIX_INFLAMATION_EARLY 200
+/// The owner starts vomiting
+#define APPENDIX_INFLAMATION_MIDDLE 400
+/// The finale - appendix rupture is inevitable
+#define APPENDIX_INFLAMATION_CRITICAL 600
