@@ -618,6 +618,12 @@
 /turf/simulated/wall/ocp_wall,
 /area/intrepid/department/engineering/engine_room)
 "du" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/department/engineering/atmos)
 "dC" = (
@@ -825,6 +831,12 @@
 "eW" = (
 /obj/structure/sign/directions{
 	name = "\improper Dock Airlock"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
 	},
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/department/engineering/atmos)
@@ -1639,12 +1651,13 @@
 /area/intrepid/department/engineering/engine_room)
 "jB" = (
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2-8"
 	},
-/obj/machinery/power/solar/improved,
-/obj/effect/floor_decal/solarpanel,
-/turf/simulated/floor/airless,
-/area/space)
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/wall/r_wall/hull,
+/area/tcommsat)
 "jQ" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -2067,15 +2080,24 @@
 /area/space)
 "ml" = (
 /obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	icon_state = "0-4"
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
 	},
-/obj/machinery/power/solar/improved,
-/obj/effect/floor_decal/solarpanel,
-/turf/simulated/floor/airless,
-/area/space)
+/turf/simulated/wall/r_wall/hull,
+/area/intrepid/department/engineering/atmos)
+"mm" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/simulated/wall/r_wall/hull,
+/area/intrepid/department/engineering/atmos)
 "mn" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -2268,13 +2290,10 @@
 /area/intrepid/department/engineering/engine_room)
 "nG" = (
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "0-1"
 	},
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
-/obj/machinery/power/solar/improved,
 /obj/effect/floor_decal/solarpanel,
+/obj/machinery/power/solar/improved,
 /turf/simulated/floor/airless,
 /area/space)
 "nM" = (
@@ -2817,14 +2836,11 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "rD" = (
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
 /obj/machinery/power/solar/improved,
 /obj/effect/floor_decal/solarpanel,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/airless,
 /area/space)
 "rF" = (
@@ -2902,14 +2918,11 @@
 /turf/simulated/floor/reinforced/airless,
 /area/space)
 "sj" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/structure/cable,
-/obj/machinery/power/solar/improved,
 /obj/effect/floor_decal/solarpanel,
+/obj/structure/cable{
+	icon_state = "0-1"
+	},
+/obj/machinery/power/solar/improved,
 /turf/simulated/floor/airless,
 /area/space)
 "sq" = (
@@ -3102,6 +3115,15 @@
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/department/engineering/engine_room)
+"tH" = (
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/wall/r_wall/hull,
+/area/intrepid/department/engineering/atmos)
 "tP" = (
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
 /turf/simulated/wall/r_wall/prepainted,
@@ -3189,13 +3211,15 @@
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room)
 "uj" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /obj/structure/sign/directions{
 	dir = 4;
 	name = "\improper Dock Airlock";
 	pixel_y = -8
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /turf/simulated/wall/r_wall/hull,
 /area/tcommsat)
@@ -3425,15 +3449,18 @@
 /area/tcommsat)
 "vI" = (
 /obj/structure/cable{
-	icon_state = "0-4"
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/power/solar/improved,
-/obj/effect/floor_decal/solarpanel,
-/turf/simulated/floor/airless,
-/area/space)
+/turf/simulated/wall/r_wall/hull,
+/area/intrepid/department/engineering/atmos)
 "vN" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel,
 /obj/machinery/meter,
@@ -3451,15 +3478,13 @@
 /area/tcommsat)
 "vS" = (
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "2-4"
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/power/solar/improved,
-/obj/effect/floor_decal/solarpanel,
-/turf/simulated/floor/airless,
-/area/space)
+/turf/simulated/wall/r_wall/hull,
+/area/intrepid/department/civillian/dockbay)
 "vU" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
@@ -3662,13 +3687,10 @@
 /area/eva)
 "xd" = (
 /obj/structure/cable{
-	icon_state = "1-4"
-	},
-/obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/solar/improved,
 /obj/effect/floor_decal/solarpanel,
+/obj/machinery/power/solar/improved,
 /turf/simulated/floor/airless,
 /area/space)
 "xf" = (
@@ -3701,13 +3723,13 @@
 /area/intrepid/misc/maint/upper)
 "xh" = (
 /obj/structure/cable{
-	icon_state = "1-2"
+	icon_state = "2-8"
 	},
-/obj/structure/cable,
-/obj/machinery/power/solar/improved,
-/obj/effect/floor_decal/solarpanel,
-/turf/simulated/floor/airless,
-/area/space)
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/wall/r_wall/hull,
+/area/intrepid/department/engineering/atmos)
 "xk" = (
 /obj/effect/floor_decal/corner_techfloor_gray{
 	dir = 4
@@ -3885,6 +3907,9 @@
 "yR" = (
 /obj/structure/cable{
 	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
 	},
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/department/engineering/engine_room)
@@ -4579,10 +4604,10 @@
 /area/intrepid/misc/maint/upper)
 "Fi" = (
 /obj/structure/cable{
-	icon_state = "1-2"
+	icon_state = "1-4"
 	},
 /obj/structure/cable{
-	icon_state = "1-4"
+	icon_state = "1-2"
 	},
 /turf/simulated/wall/r_wall/hull,
 /area/tcommsat)
@@ -4968,13 +4993,11 @@
 /area/intrepid/department/engineering/engine_room)
 "HV" = (
 /obj/structure/cable{
-	icon_state = "1-2"
+	d2 = 4;
+	icon_state = "0-4"
 	},
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
-/obj/machinery/power/solar/improved,
 /obj/effect/floor_decal/solarpanel,
+/obj/machinery/power/solar/improved,
 /turf/simulated/floor/airless,
 /area/space)
 "Ik" = (
@@ -5074,6 +5097,15 @@
 /obj/structure/lattice,
 /turf/space,
 /area/space)
+"Jc" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/turf/simulated/wall/r_wall/hull,
+/area/intrepid/department/engineering/atmos)
 "Jh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -5241,6 +5273,11 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/engineering/engine_room/aux)
 "KB" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/misc/maint/upper)
 "KD" = (
@@ -5860,8 +5897,14 @@
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/department/engineering/engine_room)
 "OC" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/simulated/wall/r_wall/hull,
-/area/intrepid/department/engineering/engine_room)
+/area/intrepid/department/engineering/engine_room/aux)
 "OD" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -6026,13 +6069,13 @@
 /area/tcommsat)
 "PM" = (
 /obj/structure/cable{
-	icon_state = "1-8"
+	icon_state = "2-4"
 	},
-/obj/structure/cable,
-/obj/machinery/power/solar/improved,
-/obj/effect/floor_decal/solarpanel,
-/turf/simulated/floor/airless,
-/area/space)
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/wall/r_wall/hull,
+/area/intrepid/department/engineering/atmos)
 "PP" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -6071,6 +6114,12 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/tcommsat)
+"Ql" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/simulated/wall/r_wall/hull,
+/area/intrepid/department/engineering/engine_room/aux)
 "Qq" = (
 /obj/structure/table/standard,
 /obj/item/stack/cable_coil,
@@ -6173,9 +6222,6 @@
 "Re" = (
 /obj/structure/sign/warning/hot_exhaust{
 	pixel_y = 26
-	},
-/obj/structure/cable{
-	icon_state = "2-8"
 	},
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -6329,6 +6375,12 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbay)
 "Sr" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
 /turf/simulated/wall/r_wall/hull,
 /area/tcommsat)
 "St" = (
@@ -6747,14 +6799,11 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "VP" = (
-/obj/structure/cable,
+/obj/effect/floor_decal/solarpanel,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
+	icon_state = "0-8"
 	},
 /obj/machinery/power/solar/improved,
-/obj/effect/floor_decal/solarpanel,
 /turf/simulated/floor/airless,
 /area/space)
 "VV" = (
@@ -6775,13 +6824,10 @@
 /turf/simulated/floor,
 /area/intrepid/department/engineering/atmos)
 "Wj" = (
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
 /obj/machinery/power/solar/improved,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
 /obj/effect/floor_decal/solarpanel,
 /turf/simulated/floor/airless,
 /area/space)
@@ -6804,14 +6850,14 @@
 /area/intrepid/department/engineering/engine_room)
 "Wo" = (
 /obj/structure/cable{
-	icon_state = "1-4"
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
 	},
 /turf/simulated/wall/r_wall/hull,
 /area/tcommsat)
 "Wr" = (
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
@@ -28464,11 +28510,11 @@ ZZ
 ZZ
 ZZ
 ZZ
-jB
 HV
 HV
 HV
-wG
+HV
+Ml
 oB
 sB
 Yl
@@ -28496,10 +28542,10 @@ cA
 cA
 xg
 oB
-FS
-vS
-HV
-HV
+Ml
+xd
+xd
+xd
 xd
 Pi
 Kf
@@ -28666,10 +28712,10 @@ ZZ
 ZZ
 ZZ
 vs
-Jj
-Jj
-Jj
-Jj
+Ql
+OC
+OC
+OC
 KB
 oB
 Le
@@ -28698,10 +28744,10 @@ lJ
 yF
 LF
 oB
-KB
-OC
-OC
-OC
+FS
+yR
+yR
+yR
 yR
 Ak
 ZZ
@@ -31530,7 +31576,7 @@ az
 rm
 BX
 vF
-Sr
+zW
 uj
 Ne
 Yi
@@ -31733,7 +31779,7 @@ rm
 ew
 vF
 Sr
-vI
+sj
 lb
 os
 os
@@ -31935,7 +31981,7 @@ rm
 St
 vF
 Sr
-ml
+sj
 lb
 os
 os
@@ -32137,7 +32183,7 @@ rm
 jz
 vF
 Sr
-ml
+sj
 lb
 os
 os
@@ -32339,7 +32385,7 @@ mK
 rm
 vF
 Sr
-ml
+sj
 lb
 os
 os
@@ -32541,7 +32587,7 @@ SO
 Xx
 vF
 Sr
-ml
+sj
 lb
 os
 os
@@ -32693,7 +32739,7 @@ ZZ
 lb
 os
 os
-os
+pc
 os
 os
 os
@@ -32743,7 +32789,7 @@ wS
 rm
 vF
 Sr
-ml
+sj
 lb
 os
 os
@@ -32898,7 +32944,7 @@ os
 os
 os
 os
-pc
+os
 os
 os
 os
@@ -32945,7 +32991,7 @@ rm
 kp
 vF
 Sr
-ml
+sj
 lb
 os
 os
@@ -33147,7 +33193,7 @@ rm
 cO
 vF
 Sr
-ml
+sj
 lb
 os
 os
@@ -33349,7 +33395,7 @@ rm
 FX
 vF
 Sr
-ml
+sj
 lb
 os
 os
@@ -33550,7 +33596,7 @@ vF
 vF
 vF
 vF
-zW
+jB
 sj
 lb
 os
@@ -33717,14 +33763,14 @@ os
 XJ
 SP
 JA
-JA
-JA
-JA
-JA
-JA
-JA
-JA
 Yn
+vS
+vS
+vS
+vS
+vS
+vS
+vS
 hU
 CS
 CS
@@ -33745,13 +33791,13 @@ CS
 CS
 Fi
 Wo
-Sr
-Sr
-Sr
-Sr
-Sr
-Sr
-zW
+Wo
+Wo
+Wo
+Wo
+Wo
+Wo
+Wo
 al
 ZZ
 lb
@@ -33919,13 +33965,13 @@ os
 XJ
 ZZ
 ZZ
-jB
-HV
-HV
-HV
-HV
-HV
-HV
+VP
+VP
+VP
+VP
+VP
+VP
+VP
 Wr
 zR
 DQ
@@ -33947,12 +33993,12 @@ DQ
 DQ
 zR
 Re
-xh
-xh
-xh
-xh
-xh
-xh
+VP
+VP
+VP
+VP
+VP
+VP
 VP
 ZZ
 ZZ
@@ -35746,9 +35792,9 @@ ZZ
 ZZ
 SP
 iZ
+tH
+Jc
 bn
-du
-du
 DQ
 DQ
 GZ
@@ -35760,9 +35806,9 @@ Zm
 GZ
 DQ
 DQ
-du
-du
 eB
+PM
+PM
 OX
 ZZ
 ZZ
@@ -35949,9 +35995,9 @@ ZZ
 ZZ
 Lg
 rD
-HV
+rD
+iZ
 bn
-du
 DQ
 Ir
 PT
@@ -35961,10 +36007,10 @@ PT
 PT
 Mr
 DQ
-du
 eB
-xh
-PM
+mm
+VP
+VP
 Lg
 ZZ
 ZZ
@@ -36152,7 +36198,7 @@ Na
 Lg
 Lg
 Lg
-nG
+Wj
 du
 DQ
 Jv
@@ -36163,7 +36209,7 @@ Sx
 ko
 fl
 DQ
-du
+xh
 nG
 Lg
 Lg
@@ -36354,7 +36400,7 @@ ZZ
 ap
 hV
 Lg
-nG
+Wj
 du
 DQ
 DQ
@@ -36365,7 +36411,7 @@ DQ
 DQ
 DQ
 DQ
-du
+xh
 nG
 Lg
 Ma
@@ -36557,18 +36603,18 @@ ZZ
 Na
 Lg
 Wj
-bn
-du
-du
-du
-du
+ml
+PM
+PM
+PM
+PM
 eW
-du
-du
-du
-du
-eB
-Wr
+PM
+PM
+PM
+PM
+vI
+nG
 Lg
 gz
 ZZ
@@ -36759,17 +36805,17 @@ ZZ
 Na
 Lg
 Lg
-Wj
-HV
-HV
-HV
-HV
+VP
+VP
+VP
+VP
+VP
 hd
-HV
-HV
-HV
-HV
-Wr
+VP
+VP
+VP
+VP
+VP
 Lg
 Lg
 gz
