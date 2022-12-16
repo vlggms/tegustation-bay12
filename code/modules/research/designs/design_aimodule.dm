@@ -3,7 +3,7 @@
 	materials = list(MATERIAL_GLASS = 2000, MATERIAL_GOLD = 100)
 
 /datum/design/aimodule/AssembleDesignName()
-	name = "AI module design ([name])"
+	name = "\[AI Module\] - [name]"
 
 /datum/design/aimodule/AssembleDesignDesc()
 	desc = "Allows for the construction of \a '[name]' AI module."
@@ -76,7 +76,7 @@
 	req_tech = list(TECH_DATA = 4, TECH_MATERIAL = 6)
 
 /datum/design/aimodule/core/AssembleDesignName()
-	name = "AI core module design ([name])"
+	name = "\[AI Core Module\] - [name]"
 
 /datum/design/aimodule/core/AssembleDesignDesc()
 	desc = "Allows for the construction of \a '[name]' AI core module."

@@ -1,5 +1,5 @@
 /datum/design/item/beaker/AssembleDesignName()
-	name = "Beaker prototype ([item_name])"
+	name = "\[Beaker\] - [item_name]"
 
 /datum/design/item/beaker/noreact
 	name = "cryostasis"

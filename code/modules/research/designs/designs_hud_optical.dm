@@ -3,7 +3,7 @@
 
 /datum/design/item/hud/AssembleDesignName()
 	..()
-	name = "HUD glasses design ([item_name])"
+	name = "\[HUD\] - [item_name]"
 
 /datum/design/item/hud/AssembleDesignDesc()
 	desc = "Allows for the construction of \a [item_name] HUD glasses."
@@ -31,7 +31,7 @@
 
 /datum/design/item/optical/AssembleDesignName()
 	..()
-	name = "Optical glasses design ([item_name])"
+	name = "\[Optical HUD\] - [item_name]"
 	materials = list(MATERIAL_STEEL = 50, MATERIAL_GLASS = 50)
 
 /datum/design/item/optical/mesons

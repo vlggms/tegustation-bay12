@@ -431,6 +431,9 @@
 		item_state = "t12-empty"
 		wielded_item_state = "t12-wielded-empty"
 
+/obj/item/gun/projectile/automatic/t12/empty
+	magazine_type = null
+
 /obj/item/gun/projectile/automatic/ak47
 	name = "AK47 rifle"
 	desc = "An old assault rifle, dating back to 20th century. It is commonly used by various bandits, pirates and colonists due to its cheap production and maintenance cost."
@@ -468,3 +471,4 @@
 	else
 		item_state = "ak47-empty"
 		wielded_item_state = "ak47-wielded-empty"
+

@@ -1,6 +1,6 @@
 /datum/design/item/weapon/AssembleDesignName()
 	..()
-	name = "Weapon prototype ([item_name])"
+	name = "\[Weapon\] - [item_name]"
 
 /datum/design/item/weapon/AssembleDesignDesc()
 	if(!desc)
@@ -155,7 +155,7 @@
 
 /datum/design/item/weapon/ammunition/AssembleDesignName()
 	..()
-	name = "Ammunition prototype ([item_name])"
+	name = "\[Ammunition\] - [item_name]"
 
 /datum/design/item/weapon/ammunition/ammo_small
 	id = "ammo_small"

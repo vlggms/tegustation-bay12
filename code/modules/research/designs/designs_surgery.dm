@@ -1,6 +1,6 @@
 /datum/design/item/surgery/AssembleDesignName()
 	..()
-	name = "Surgical tool design ([item_name])"
+	name = "\[Surgery\] - [item_name]"
 
 /datum/design/item/surgery/scalpel_laser1
 	name = "Basic Laser Scalpel"

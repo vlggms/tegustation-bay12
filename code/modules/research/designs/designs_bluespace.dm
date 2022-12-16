@@ -1,6 +1,6 @@
 /datum/design/item/bluespace/AssembleDesignName()
 	..()
-	name = "Bluespace device ([item_name])"
+	name = "\[Bluespace\] - [item_name]"
 
 /datum/design/item/bluespace/gps
 	name = "triangulating device"
@@ -38,7 +38,7 @@
 	build_path = /obj/item/storage/backpack/holding
 	sort_string = "VAFAA"
 
-/datum/design/item/dufflebag_holding
+/datum/design/item/bluespace/dufflebag_holding
 	name = "dufflebag of holding"
 	desc = "A variation of the popular Bag of Holding, the dufflebag of holding is, functionally, identical to the bag of holding, but comes in an easier to carry form."
 	id = "dufflebag_holding"

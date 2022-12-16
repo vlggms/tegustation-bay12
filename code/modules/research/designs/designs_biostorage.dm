@@ -1,6 +1,6 @@
 /datum/design/item/biostorage/AssembleDesignName()
 	..()
-	name = "Biological intelligence storage ([item_name])"
+	name = "\[Brain-Storage\] - [item_name]"
 
 /datum/design/item/biostorage/mmi
 	name = "man-machine interface"

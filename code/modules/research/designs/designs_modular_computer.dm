@@ -1,7 +1,7 @@
 // Drives
 /datum/design/item/modularcomponent/disk/AssembleDesignName()
 	..()
-	name = "Hard drive design ([item_name])"
+	name = "\[Computer Hard Drive\] - [item_name]"
 
 /datum/design/item/modularcomponent/disk/normal
 	name = "basic hard drive"
@@ -60,7 +60,7 @@
 // Network cards
 /datum/design/item/modularcomponent/netcard/AssembleDesignName()
 	..()
-	name = "Network card design ([item_name])"
+	name = "\[Computer Network Card\] - [item_name]"
 
 /datum/design/item/modularcomponent/netcard/basic
 	name = "basic network card"
@@ -95,7 +95,7 @@
 // Data crystals (USB flash drives)
 /datum/design/item/modularcomponent/portabledrive/AssembleDesignName()
 	..()
-	name = "Portable drive design ([item_name])"
+	name = "\[Computer Portable Drive\] - [item_name]"
 
 /datum/design/item/modularcomponent/portabledrive/basic
 	name = "basic data crystal"
@@ -130,7 +130,7 @@
 // Card slot
 /datum/design/item/modularcomponent/accessory/AssembleDesignName()
 	..()
-	name = "Computer accessory ([item_name])"
+	name = "\[Computer Accessory\] - [item_name]"
 
 /datum/design/item/modularcomponent/accessory/cardslot
 	name = "RFID card slot"
@@ -222,7 +222,7 @@
 // Batteries
 /datum/design/item/modularcomponent/battery/AssembleDesignName()
 	..()
-	name = "Battery design ([item_name])"
+	name = "\[Computer Battery\] - [item_name]"
 
 /datum/design/item/modularcomponent/battery/normal
 	name = "standard battery module"
@@ -281,9 +281,9 @@
 // Processor unit
 /datum/design/item/modularcomponent/cpu/AssembleDesignName()
 	..()
-	name = "CPU design ([item_name])"
+	name = "\[Computer CPU\] - [item_name]"
 
-/datum/design/item/modularcomponent/cpu/
+/datum/design/item/modularcomponent/cpu
 	name = "computer processor unit"
 	id = "cpu_normal"
 	req_tech = list(TECH_DATA = 3, TECH_ENGINEERING = 2)

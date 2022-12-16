@@ -1,6 +1,6 @@
 /datum/design/item/synthstorage/AssembleDesignName()
 	..()
-	name = "Synthetic intelligence storage ([item_name])"
+	name = "\[AI Device\] - [item_name]"
 
 /datum/design/item/synthstorage/paicard
 	name = "pAI"

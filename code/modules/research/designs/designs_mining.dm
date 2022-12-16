@@ -1,6 +1,6 @@
 /datum/design/item/mining/AssembleDesignName()
 	..()
-	name = "Mining equipment design ([item_name])"
+	name = "\[Mining\] - [item_name]"
 
 /datum/design/item/mining/jackhammer
 	id = "jackhammer"
@@ -44,3 +44,19 @@
 	materials = list(MATERIAL_STEEL = 1000, MATERIAL_GLASS = 500, MATERIAL_ALUMINIUM = 150)
 	build_path = /obj/item/device/depth_scanner
 	sort_string = "KAAAF"
+
+/datum/design/item/mining/drill_upgrade_automatic
+	desc = "Modifies mining drill to automatically dispense stored ores."
+	id = "drill_upgrade_automatic"
+	req_tech = list(TECH_ENGINEERING = 4, TECH_POWER = 3)
+	materials = list(MATERIAL_STEEL = 1000, MATERIAL_PLASTEEL = 750, MATERIAL_GLASS = 500, MATERIAL_ALUMINIUM = 250)
+	build_path = /obj/item/drill_upgrade/auto_dispense
+	sort_string = "KAAAG"
+
+/datum/design/item/mining/drill_upgrade_range
+	desc = "Modifies mining drill to increase mining range."
+	id = "drill_upgrade_range"
+	req_tech = list(TECH_ENGINEERING = 4, TECH_POWER = 3)
+	materials = list(MATERIAL_STEEL = 1000, MATERIAL_PLASTEEL = 750, MATERIAL_GLASS = 500, MATERIAL_ALUMINIUM = 250)
+	build_path = /obj/item/drill_upgrade/range_increase
+	sort_string = "KAAAH"

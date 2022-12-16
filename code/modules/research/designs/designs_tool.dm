@@ -1,6 +1,6 @@
 /datum/design/item/tool/AssembleDesignName()
 	..()
-	name = "Tool design ([item_name])"
+	name = "\[Tool\] - [item_name]"
 
 /datum/design/item/tool/light_replacer
 	name = "light replacer"
@@ -45,6 +45,7 @@
 	req_tech = list(TECH_POWER = 6, TECH_ENGINEERING = 4)
 	materials = list(MATERIAL_STEEL = 2000, MATERIAL_GLASS = 100)
 	build_path = /obj/item/inducer
+	sort_string = "VAGAF"
 
 /datum/design/item/tool/price_scanner
 	name = "price scanner"
@@ -53,7 +54,7 @@
 	req_tech = list(TECH_MATERIAL = 6, TECH_MAGNET = 4)
 	materials = list(MATERIAL_STEEL = 3000, MATERIAL_GLASS = 3000, MATERIAL_SILVER = 250)
 	build_path = /obj/item/device/scanner/price
-	sort_string = "VAGAF"
+	sort_string = "VAGAG"
 
 /datum/design/item/tool/experimental_welder
 	name = "experimental welding tool"
@@ -62,7 +63,7 @@
 	req_tech = list(TECH_ENGINEERING = 5, TECH_PHORON = 4)
 	materials = list(MATERIAL_STEEL = 120, MATERIAL_GLASS = 50)
 	build_path = /obj/item/weldingtool/experimental
-	sort_string = "VAGAG"
+	sort_string = "VAGAH"
 
 /datum/design/item/tool/shield_diffuser
 	name = "portable shield diffuser"
@@ -71,7 +72,7 @@
 	req_tech = list(TECH_MAGNET = 5, TECH_POWER = 5, TECH_ESOTERIC = 2)
 	materials = list(MATERIAL_STEEL = 5000, MATERIAL_GLASS = 5000, MATERIAL_GOLD = 2000, MATERIAL_SILVER = 2000)
 	build_path = /obj/item/shield_diffuser
-	sort_string = "VAGAH"
+	sort_string = "VAGAI"
 
 /datum/design/item/tool/rpd
 	name = "rapid piping device"
@@ -80,7 +81,7 @@
 	req_tech = list(TECH_ENGINEERING = 6, TECH_MATERIAL = 6)
 	materials = list(MATERIAL_STEEL = 15000, MATERIAL_GLASS = 10000, MATERIAL_SILVER = 2000)
 	build_path = /obj/item/rpd
-	sort_string = "VAGAI"
+	sort_string = "VAGAJ"
 
 /datum/design/item/tool/oxycandle
 	name = "oxycandle"
@@ -90,4 +91,22 @@
 	materials = list(MATERIAL_STEEL = 3000)
 	chemicals = list(/datum/reagent/sodiumchloride = 20, /datum/reagent/acetone = 20)
 	build_path = /obj/item/device/oxycandle
-	sort_string = "VAGAJ"
+	sort_string = "VAGAK"
+
+/datum/design/item/tool/RPED
+	name = "Rapid Part Exchange Device"
+	desc = "Special mechanical module made to store, sort, and apply standard machine parts."
+	id = "rped"
+	req_tech = list(TECH_ENGINEERING = 3, TECH_MATERIAL = 3)
+	materials = list(MATERIAL_STEEL = 15000, MATERIAL_GLASS = 5000)
+	build_path = /obj/item/storage/part_replacer
+	sort_string = "CBAAA" // Will appear right after stock parts
+
+/datum/design/item/tool/BRPED
+	name = "Bluespace Rapid Part Exchange Device"
+	desc = "Powered by bluespace technology, this RPED variant can upgrade buildings from a distance, without needing to remove the panel first."
+	id = "rped_bs"
+	req_tech = list(TECH_ENGINEERING = 5, TECH_MATERIAL = 5, TECH_BLUESPACE = 3)
+	materials = list(MATERIAL_STEEL = 25000, MATERIAL_GLASS = 10000, MATERIAL_TITANIUM = 5000, MATERIAL_PLATINUM = 5000)
+	build_path = /obj/item/storage/part_replacer/bluespace
+	sort_string = "CBAAB"

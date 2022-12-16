@@ -8,7 +8,7 @@
 	active_power_usage = 5000
 	base_type = /obj/machinery/r_n_d/protolathe
 	construct_state = /decl/machine_construction/default/panel_closed
-	
+
 	machine_name = "protolathe"
 	machine_desc = "Uses raw materials to produce prototypes. Part of an R&D network."
 
@@ -61,7 +61,7 @@
 		else
 			reagents.maximum_volume = T
 
-	max_material_storage = 75000 * Clamp(total_component_rating_of_type(/obj/item/stock_parts/matter_bin), 0, 10)
+	max_material_storage = 125000 * Clamp(total_component_rating_of_type(/obj/item/stock_parts/matter_bin), 0, 10)
 
 	T = Clamp(total_component_rating_of_type(/obj/item/stock_parts/manipulator), 0, 6)
 	mat_efficiency = 1 - (T - 2) / 8

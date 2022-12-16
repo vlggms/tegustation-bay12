@@ -1,5 +1,5 @@
 /datum/design/item/syringe/AssembleDesignName()
-	name = "Syringe prototype ([item_name])"
+	name = "\[Syringe\] - [item_name]"
 
 /datum/design/item/syringe/noreactsyringe
 	name = "Cryo Syringe"
