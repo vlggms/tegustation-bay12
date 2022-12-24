@@ -102,7 +102,7 @@
 	dress_preview_mob(mannequin)
 
 	preview_icon = icon('icons/effects/128x48.dmi', bgstate)
-	preview_icon.Scale(48+32, 16+32)
+	preview_icon.Scale(48+32, 16+32+16) //older values were: (48+32, 16+32), adding a +16 on the Y axis in order to fit in taller species
 
 	mannequin.dir = NORTH
 	var/icon/stamp = getFlatIcon(mannequin, NORTH, always_use_defdir = 1)
@@ -116,4 +116,4 @@
 	stamp = getFlatIcon(mannequin, SOUTH, always_use_defdir = 1)
 	preview_icon.Blend(stamp, ICON_OVERLAY, 49, 1)
 
-	preview_icon.Scale(preview_icon.Width() * 2, preview_icon.Height() * 2) // Scaling here to prevent blurring in the browser.
+	preview_icon.Scale(preview_icon.Width() * 4, preview_icon.Height() * 4) // Scaling here to prevent blurring in the browser. //old values were 2 instead of 4

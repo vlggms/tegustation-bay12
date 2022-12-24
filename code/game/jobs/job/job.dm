@@ -379,7 +379,7 @@
 		dress_mannequin(mannequin)
 		mannequin.dir = SOUTH
 		var/icon/preview_icon = getFlatIcon(mannequin)
-		preview_icon.Scale(preview_icon.Width() * 2, preview_icon.Height() * 2) // Scaling here to prevent blurring in the browser.
+		preview_icon.Scale(preview_icon.Width() * 4, preview_icon.Height() * 4) // Scaling here to prevent blurring in the browser. //old values were 2 instead of 4
 		SSjobs.job_icons[title] = preview_icon
 	return SSjobs.job_icons[title]
 
