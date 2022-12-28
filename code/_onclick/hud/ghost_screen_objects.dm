@@ -31,3 +31,19 @@
 	var/A = input(G, "Teleport", "Teleport to an Area") as null | anything in area_repository.get_areas_by_z_level()
 	if(A != "Cancel")
 		G.dead_tele(A)
+
+/obj/screen/ghost/move_down
+	name = "Move down"
+	icon_state = "move_down"
+
+/obj/screen/ghost/move_down/Click()
+	var/mob/observer/ghost/G = usr
+	G.down()
+
+/obj/screen/ghost/move_up
+	name = "Move up"
+	icon_state = "move_up"
+
+/obj/screen/ghost/move_up/Click()
+	var/mob/observer/ghost/G = usr
+	G.up()

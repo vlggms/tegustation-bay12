@@ -23,5 +23,13 @@
 	using.screen_loc = ui_ghost_teleport
 	adding += using
 
+	using = new /obj/screen/ghost/move_down()
+	using.screen_loc = ui_ghost_move_down
+	adding += using
+
+	using = new /obj/screen/ghost/move_up()
+	using.screen_loc = ui_ghost_move_up
+	adding += using
+
 	G.client.screen = list()
 	G.client.screen += adding
