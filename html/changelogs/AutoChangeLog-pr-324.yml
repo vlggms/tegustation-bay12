@@ -1,0 +1,6 @@
+author: OverDriveZ
+delete-after: true
+changes:
+  - tweak: Adds two new arrows for the ghost hud.
+  - bugfix: Prevents the user entering the dark void by double clicking the ghost
+      hud.
