@@ -16,6 +16,10 @@
 			reenter_corpse()						// (cloning scanner, body bag, closet, exosuit, etc)
 			return
 
+	//this fixes the double click bug on the ghost hud, responsible for making your ghost enter void
+	if(istype(A,/obj/screen/ghost))
+		return
+
 	// Things you might plausibly want to follow
 	if(istype(A,/atom/movable))
 		start_following(A)
