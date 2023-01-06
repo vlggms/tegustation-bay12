@@ -10,3 +10,5 @@ GLOBAL_LIST_INIT(spell_categories, list(
 	SPELL_CATEGORY_ANTIMAGIC,
 	SPELL_CATEGORY_FORBIDDEN,
 	))
+
+GLOBAL_LIST_EMPTY(trade_factions) // Datums of all factions currently in the game

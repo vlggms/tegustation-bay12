@@ -8,24 +8,15 @@ var/list/event_last_fired = list()
 	var/minutes_passed = world.time/600
 
 	var/list/active_with_role = number_active_with_role()
-	//var/engineer_count = number_active_with_role("Engineer")
-	//var/security_count = number_active_with_role("Security")
-	//var/medical_count = number_active_with_role("Medical")
-	//var/AI_count = number_active_with_role("AI")
-	//var/janitor_count = number_active_with_role("Janitor")
 
 	// Maps event names to event chances
 	// For each chance, 100 represents "normal likelihood", anything below 100 is "reduced likelihood", anything above 100 is "increased likelihood"
 	// Events have to be manually added to this proc to happen
 	var/list/possibleEvents = list()
 
-	//see:
-	// Code/WorkInProgress/Cael_Aislinn/Economy/Economy_Events.dm
-	// Code/WorkInProgress/Cael_Aislinn/Economy/Economy_Events_Mundane.dm
-
-	possibleEvents[/datum/event/economic_event] = 300
-	possibleEvents[/datum/event/trivial_news] = 400
-	possibleEvents[/datum/event/mundane_news] = 300
+	//possibleEvents[/datum/event/economic_event] = 300
+	//possibleEvents[/datum/event/trivial_news] = 400
+	//possibleEvents[/datum/event/mundane_news] = 300
 
 	possibleEvents[/datum/event/money_lotto] = max(min(5, GLOB.player_list.len), 50)
 	if(account_hack_attempted)
