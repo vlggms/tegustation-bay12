@@ -190,6 +190,16 @@
 	lightbulb.set_color(color)
 	queue_icon_update()
 
+// Subtypes for mapping
+/obj/machinery/light/medbay
+	light_type = /obj/item/light/tube/medbay
+
+/obj/machinery/light/yellowish
+	light_type = /obj/item/light/tube/yellowish
+
+/obj/machinery/light/dystopian
+	light_type = /obj/item/light/tube/dystopian
+
 // the smaller bulb light fixture
 /obj/machinery/light/small
 	icon_state = "bulb_map"
@@ -614,14 +624,15 @@
 	atom_flags = ATOM_FLAG_NO_TEMP_CHANGE | ATOM_FLAG_CAN_BE_PAINTED
 
 	var/b_max_bright = 0.9
-	var/b_inner_range = 1
-	var/b_outer_range = 5
+	var/b_inner_range = 2
+	var/b_outer_range = 6
 	var/b_curve = 2
-	var/b_colour = "#fffee0"
+	var/b_colour = "#ffffff"
 	var/list/lighting_modes = list()
 	var/sound_on
-	var/random_tone = TRUE
+	var/random_tone = FALSE
 	var/list/random_tone_options = list(
+		"#ffffff",
 		"#fffee0",
 		"#e0fefe",
 		"#fefefe",
@@ -653,12 +664,25 @@
 	item_state = "c_tube"
 	matter = list(MATERIAL_GLASS = 100, MATERIAL_ALUMINIUM = 20)
 
-	b_outer_range = 5
-	b_colour = "#fffee0"
 	lighting_modes = list(
 		LIGHTMODE_EMERGENCY = list(l_outer_range = 4, l_max_bright = 1, l_color = "#da0205"),
 		)
 	sound_on = 'sound/machines/lightson.ogg'
+
+// Blue-ish color for use in medical areas
+/obj/item/light/tube/medbay
+	desc = "A replacement light tube. This one is meant to be used in sterile/medical areas."
+	b_colour = "#e0fefe"
+
+// Yellow-ish color
+/obj/item/light/tube/yellowish
+	desc = "A replacement light tube. This one has a yellow tint to it."
+	b_colour = "#fffee0"
+
+// DYSTOPIAN GREEN-BLUE COLOR OF CORPORATE OFFICES!
+/obj/item/light/tube/dystopian
+	desc = "A replacement light tube. This one is meant to be used in a corporate office where you will spend your life doing meaningless, soul-consuming paperwork."
+	b_colour = "#addbbe"
 
 /obj/item/light/tube/party/Initialize() //Randomly colored light tubes. Mostly for testing, but maybe someone will find a use for them.
 	. = ..()
@@ -667,9 +691,9 @@
 /obj/item/light/tube/large
 	w_class = ITEM_SIZE_SMALL
 	name = "large light tube"
-	b_max_bright = 0.95
-	b_inner_range = 2
-	b_outer_range = 8
+	b_max_bright = 1
+	b_inner_range = 3
+	b_outer_range = 9
 	b_curve = 2.5
 
 /obj/item/light/tube/large/party/Initialize() //Randomly colored light tubes. Mostly for testing, but maybe someone will find a use for them.
@@ -685,8 +709,8 @@
 	broken_chance = 3
 	matter = list(MATERIAL_GLASS = 100)
 
-	b_max_bright = 0.6
-	b_inner_range = 0.1
+	b_max_bright = 0.7
+	b_inner_range = 0.5
 	b_outer_range = 4
 	b_curve = 3
 	b_colour = "#fcfcc7"

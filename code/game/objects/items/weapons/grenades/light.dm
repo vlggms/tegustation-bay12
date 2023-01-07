@@ -7,10 +7,10 @@
 
 /obj/item/grenade/light/detonate(mob/living/user)
 	..()
-	var/lifetime = rand(2 MINUTES, 4 MINUTES)
+	var/lifetime = rand(2 MINUTES, 3 MINUTES)
 	var/light_colour = pick("#49f37c", "#fc0f29", "#599dff", "#fa7c0b", "#fef923")
 
 	playsound(src, 'sound/effects/snap.ogg', 80, 1)
 	audible_message("<span class='warning'>\The [src] detonates with a sharp crack!</span>")
-	set_light(1, 1, 12, 2, light_colour)
+	set_light(1, 3, 12, 2, light_colour)
 	QDEL_IN(src, lifetime)
