@@ -1,0 +1,5 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: Most light sources(light tubes, flashlights, helmet lights) have higher
+      range.
