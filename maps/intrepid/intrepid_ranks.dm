@@ -52,6 +52,7 @@
 	species_to_rank_whitelist = list(
 		/datum/species/machine = list(
 			/datum/mil_branch/exploration_division = list(
+				/datum/mil_rank/ed/e1,
 				/datum/mil_rank/ed/e3,
 				/datum/mil_rank/ed/e5,
 				/datum/mil_rank/ed/e7,
@@ -92,6 +93,7 @@
 	email_domain = "terra.ed.tg"
 
 	rank_types = list(
+		/datum/mil_rank/ed/e1,
 		/datum/mil_rank/ed/e3,
 		/datum/mil_rank/ed/e5,
 		/datum/mil_rank/ed/e7,
@@ -102,6 +104,7 @@
 	)
 
 	spawn_rank_types = list(
+		/datum/mil_rank/ed/e1,
 		/datum/mil_rank/ed/e3,
 		/datum/mil_rank/ed/e5,
 		/datum/mil_rank/ed/e7,
