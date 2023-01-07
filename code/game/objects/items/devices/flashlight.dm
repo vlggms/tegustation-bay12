@@ -18,7 +18,7 @@
 	var/activation_sound = 'sound/effects/flashlight.ogg'
 	var/flashlight_max_bright = 0.5 //brightness of light when on, must be no greater than 1.
 	var/flashlight_inner_range = 1 //inner range of light when on, can be negative
-	var/flashlight_outer_range = 3 //outer range of light when on, can be negative
+	var/flashlight_outer_range = 5 //outer range of light when on, can be negative
 	var/flashlight_flags = 0 // FLASHLIGHT_ bitflags
 
 /obj/item/device/flashlight/Initialize()
@@ -136,7 +136,8 @@
 	icon_state = "biglight"
 	item_state = "biglight"
 	flashlight_max_bright = 0.75
-	flashlight_outer_range = 4
+	flashlight_inner_range = 2
+	flashlight_outer_range = 6
 
 /obj/item/device/flashlight/flashdark
 	name = "flashdark"
@@ -157,7 +158,7 @@
 	slot_flags = SLOT_EARS
 	w_class = ITEM_SIZE_TINY
 	flashlight_max_bright = 0.25
-	flashlight_inner_range = 0.1
+	flashlight_inner_range = 0.2
 	flashlight_outer_range = 2
 
 /obj/item/device/flashlight/maglight
@@ -170,7 +171,8 @@
 	matter = list(MATERIAL_ALUMINIUM = 200, MATERIAL_GLASS = 50)
 	hitsound = "swing_hit"
 	flashlight_max_bright = 0.5
-	flashlight_outer_range = 5
+	flashlight_inner_range = 1.5
+	flashlight_outer_range = 6
 
 /******************************Lantern*******************************/
 /obj/item/device/flashlight/lantern
@@ -204,8 +206,8 @@
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	w_class = ITEM_SIZE_TINY
 	flashlight_max_bright = 0.25
-	flashlight_inner_range = 0.1
-	flashlight_outer_range = 2
+	flashlight_inner_range = 0.2
+	flashlight_outer_range = 3
 
 
 // the desk lamps are a bit special
@@ -254,8 +256,8 @@
 	flashlight_flags = FLASHLIGHT_SINGLE_USE
 
 	flashlight_max_bright = 0.8
-	flashlight_inner_range = 0.1
-	flashlight_outer_range = 5
+	flashlight_inner_range = 0.2
+	flashlight_outer_range = 6
 
 /obj/item/device/flashlight/flare/Initialize()
 	. = ..()
@@ -330,7 +332,7 @@
 
 	flashlight_max_bright = 0.6
 	flashlight_inner_range = 0.1
-	flashlight_outer_range = 3
+	flashlight_outer_range = 4
 
 /obj/item/device/flashlight/flare/glowstick/Initialize()
 	. = ..()
@@ -399,7 +401,7 @@
 
 	flashlight_max_bright = 1
 	flashlight_inner_range = 0.1
-	flashlight_outer_range = 5
+	flashlight_outer_range = 8
 
 /obj/item/device/flashlight/slime/New()
 	..()
@@ -417,8 +419,8 @@
 	obj_flags = OBJ_FLAG_CONDUCTIBLE | OBJ_FLAG_ROTATABLE
 
 	flashlight_max_bright = 0.8
-	flashlight_inner_range = 1
-	flashlight_outer_range = 5
+	flashlight_inner_range = 3
+	flashlight_outer_range = 6
 
 /obj/item/device/flashlight/lamp/floodlamp/green
 	icon_state = "greenfloodlamp"
