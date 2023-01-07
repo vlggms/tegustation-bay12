@@ -2,6 +2,7 @@
 	title = "Senior Engineer"
 	department = "Engineering"
 	department_flag = ENG
+
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the Chief Engineer"
@@ -13,13 +14,9 @@
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/engineering/senior_engineer
 	allowed_branches = list(
 		/datum/mil_branch/exploration_division,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/intrepid/crew/engineering/senior_engineer/fleet
 	)
 	allowed_ranks = list(
 		/datum/mil_rank/ed/e7,
-		/datum/mil_rank/fleet/e6,
-		/datum/mil_rank/fleet/e7,
-		/datum/mil_rank/fleet/e8,
 	)
 	min_skill = list(   SKILL_COMPUTER     = SKILL_BASIC,
 	                    SKILL_EVA          = SKILL_TRAINED,
@@ -49,10 +46,18 @@
 							 /datum/computer_file/program/shields_monitor)
 
 /datum/job/senior_engineer/get_description_blurb()
-	return "You are the Senior Engineer. You are a veteran SNCO. You are subordinate to the Chief Engineer though you may have many years more experience than them and your subordinates are the rest of engineering. You should be an expert in practically every engineering area and familiar and possess leadership skills. Coordinate the team and ensure the smooth running of the department along with the Chief Engineer."
+	return "You are the Senior Engineer. You are a veteran SNCO. \
+			<br><hr><br>\
+			You are subordinate to the Chief Engineer though you may have many years more experience than them \
+			and your subordinates are the rest of engineering. You should be an expert in practically every \
+			engineering area and familiar and possess leadership skills. \
+			Coordinate the team and ensure the smooth running of the department along with the Chief Engineer."
 
 /datum/job/engineer
 	title = "Engineer"
+	department = "Engineering"
+	department_flag = ENG
+
 	total_positions = 6
 	spawn_positions = 6
 	supervisors = "the Chief Engineer"
@@ -69,13 +74,9 @@
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/engineering/engineer
 	allowed_branches = list(
 		/datum/mil_branch/exploration_division,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/intrepid/crew/engineering/engineer/fleet,
-		/datum/mil_branch/worker = /decl/hierarchy/outfit/job/intrepid/crew/engineering/engineer/alien
+		/datum/mil_branch/worker = /decl/hierarchy/outfit/job/intrepid/crew/engineering/engineer/alien,
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/fleet/e3,
-		/datum/mil_rank/fleet/e4,
-		/datum/mil_rank/fleet/e5,
 		/datum/mil_rank/ed/e3,
 		/datum/mil_rank/ed/e5,
 		/datum/mil_rank/worker/trained,
@@ -111,12 +112,17 @@
 							 /datum/computer_file/program/shields_monitor)
 
 /datum/job/engineer/get_description_blurb()
-	return "You are an Engineer. You operate under one of many titles and may be highly specialised in a specific area of engineering. You probably have at least a general familiarity with most other areas though this is not expected. You are subordinate to the Senior Engineer and the Chief Engineer and are expected to follow them."
+	return "You are an Engineer. \
+			<br><hr><br>\
+			You operate under one of many titles and may be highly specialised in a specific area of engineering. \
+			You probably have at least a general familiarity with most other areas though this is not expected. \
+			You are subordinate to the Senior Engineer and the Chief Engineer and are expected to follow them."
 
 /datum/job/engineer_trainee
 	title = "Engineer Trainee"
 	department = "Engineering"
 	department_flag = ENG
+
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the Chief Engineer and Engineering Personnel"
@@ -127,11 +133,9 @@
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/engineering/engineer
 	allowed_branches = list(
 		/datum/mil_branch/exploration_division,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/intrepid/crew/engineering/engineer/fleet
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/ed/e3,
-		/datum/mil_rank/fleet/e2
+		/datum/mil_rank/ed/e1,
 	)
 
 	skill_points = 4
@@ -165,7 +169,10 @@
 							 /datum/computer_file/program/shields_monitor)
 
 /datum/job/engineer_trainee/get_description_blurb()
-	return "You are an Engineer Trainee. You are learning how to operate the various onboard engineering systems from senior engineering staff. You are subordinate to all of the other engineers aboard."
+	return "You are an Engineer Trainee. \
+			<br><hr><br>\
+			You are learning how to operate the various onboard engineering systems from senior engineering staff. \
+			You are subordinate to all of the other engineers aboard."
 
 /datum/job/roboticist
 	title = "Roboticist"
@@ -180,18 +187,17 @@
 	selection_color = "#5b4d20"
 	economic_power = 6
 	alt_titles = list(
-		"Mechsuit Technician")
+		"Mechsuit Technician",
+		)
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/engineering/roboticisted
 	allowed_branches = list(
 		/datum/mil_branch/exploration_division,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/intrepid/crew/engineering/roboticistfleet,
-		/datum/mil_branch/worker = /decl/hierarchy/outfit/job/intrepid/crew/engineering/roboticistalien
+		/datum/mil_branch/worker = /decl/hierarchy/outfit/job/intrepid/crew/engineering/roboticistalien,
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/fleet/e5,
 		/datum/mil_rank/ed/e5,
 		/datum/mil_rank/worker/trained,
-		/datum/mil_rank/worker/professional
+		/datum/mil_rank/worker/professional,
 	)
 	min_skill = list(   SKILL_COMPUTER		= SKILL_TRAINED,
 	                    SKILL_DEVICES		= SKILL_TRAINED,
@@ -217,4 +223,8 @@
 	minimal_access = list()
 
 /datum/job/roboticist/get_description_blurb()
-	return "You are the Roboticist. You are responsible for repairing, upgrading and handling ship synthetics (like robots). You are also responsible for the production of exosuits(mechs) and bots for various departments. You answer to the Chief Engineer."
+	return "You are the Roboticist. \
+			<br><hr><br>\
+			You are responsible for repairing, upgrading and handling ship synthetics (like robots). \
+			You are also responsible for the production of exosuits(mechs) and bots for various departments. \
+			You answer to the Chief Engineer."

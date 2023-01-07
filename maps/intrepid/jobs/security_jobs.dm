@@ -9,14 +9,11 @@
 	ideal_character_age = 35
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/security/brig_chief
 	allowed_branches = list(
-		/datum/mil_branch/exploration_division,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/intrepid/crew/security/brig_chief/fleet
+		/datum/mil_branch/military_police
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/ed/e7,
-		/datum/mil_rank/fleet/e6,
-		/datum/mil_rank/fleet/e7,
-		/datum/mil_rank/fleet/e8,
+		/datum/mil_rank/military_police/e5,
+		/datum/mil_rank/military_police/o1,
 	)
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_TRAINED,
 	                    SKILL_EVA         = SKILL_BASIC,
@@ -42,7 +39,7 @@
 							 /datum/computer_file/program/camera_monitor)
 
 /datum/job/detective
-	title = "Forensic Technician"
+	title = "Detective"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the Chief of Security"
@@ -53,21 +50,18 @@
 	skill_points = 14
 	alt_titles = list(
 		"Criminal Investigator",
-		"Detective"
+		"Forensic Technician",
+		"Inspector",
 	)
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/security/forensic_tech
 	allowed_branches = list(
-		/datum/mil_branch/exploration_division,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/intrepid/crew/security/forensic_tech/fleet,
+		/datum/mil_branch/military_police,
 		/datum/mil_branch/terragov = /decl/hierarchy/outfit/job/intrepid/crew/security/forensic_tech/agent
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/ed/e3,
-		/datum/mil_rank/ed/e5,
-		/datum/mil_rank/fleet/e3,
-		/datum/mil_rank/fleet/e4,
-		/datum/mil_rank/fleet/e5,
-		/datum/mil_rank/terragov/agent
+		/datum/mil_rank/military_police/e3,
+		/datum/mil_rank/military_police/e3_alt,
+		/datum/mil_rank/terragov/inspector,
 	)
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
 	                    SKILL_COMPUTER    = SKILL_BASIC,
@@ -102,16 +96,17 @@
 	minimal_player_age = 7
 	minimum_character_age = list(SPECIES_HUMAN = 18)
 	ideal_character_age = 25
-	alt_titles = list() // This is a hack. Overriding a list var with null does not actually override it due to the particulars of dm list init. Do not "clean up" without testing.
+	alt_titles = list(
+		"Security Trooper",
+	)
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/security/officer
 	allowed_branches = list(
-		/datum/mil_branch/exploration_division,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/intrepid/crew/security/officer/fleet,
+		/datum/mil_branch/military_police,
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/ed/e3,
-		/datum/mil_rank/fleet/e3,
-		/datum/mil_rank/fleet/e4,
+		/datum/mil_rank/military_police/e1,
+		/datum/mil_rank/military_police/e2,
+		/datum/mil_rank/military_police/e3,
 	)
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
 	                    SKILL_EVA         = SKILL_BASIC,

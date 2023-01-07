@@ -2,6 +2,7 @@
 	title = "Squad Leader"
 	department = "Exploration"
 	department_flag = EXP
+
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the Commanding Officer"
@@ -44,12 +45,16 @@
 							 /datum/computer_file/program/reports)
 
 /datum/job/squad_leader/get_description_blurb()
-	return "You are the Marine Corps Squad Leader. Your duty is to organize and lead the expeditions to away sites, securing planets worthy of colonization, purging the area of hostile lifeforms in the process."
+	return "You are the Marine Corps Squad Leader. \
+			<br><hr><br>\
+			Your duty is to organize and lead the expeditions to away sites, securing planets worthy of \
+			colonization, purging the area of hostile lifeforms in the process."
 
 /datum/job/marine_medic
 	title = "Combat Medic"
 	department = "Exploration"
 	department_flag = EXP
+
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the Squad Leader and Commanding Officer"
@@ -82,12 +87,20 @@
 	)
 
 /datum/job/marine_medic/get_description_blurb()
-	return "You are a Combat Medic of Marine Corps. Your duty is to assist your squad on the expeditions by providing medical assistance. You report directly to your Squad Leader and Commanding Officer. Your primary goal is securing the sector, clearing it from the hostile lifeforms and recovering anything of economic/scientific value to TerraGov. You will most likely encounter hazardous environments, aggressive wildlife or malfunctioning defense systems, so tread carefully."
+	return "You are a Combat Medic of Marine Corps. \
+			<br><hr><br>\
+			Your duty is to assist your squad on the expeditions by providing medical assistance. \
+			You report directly to your Squad Leader and Commanding Officer. \
+			Your primary goal is securing the sector, clearing it from the hostile lifeforms and recovering \
+			anything of economic/scientific value to TerraGov. \
+			You will most likely encounter hazardous environments, aggressive wildlife or malfunctioning \
+			defense systems, so tread carefully."
 
 /datum/job/marine_engineer
 	title = "Combat Engineer"
 	department = "Exploration"
 	department_flag = EXP
+
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the Squad Leader and Commanding Officer"
@@ -120,12 +133,20 @@
 	)
 
 /datum/job/marine_engineer/get_description_blurb()
-	return "You are a Combat Engineer of Marine Corps. Your duty is to assist your squad on the expeditions by demolishing enemy's defenses, broken-down structures or building cover. You report directly to your Squad Leader and Commanding Officer. Your primary goal is securing the sector, clearing it from the hostile lifeforms and recovering anything of economic/scientific value to TerraGov. You will most likely encounter hazardous environments, aggressive wildlife or malfunctioning defense systems, so tread carefully."
+	return "You are a Combat Engineer of Marine Corps. \
+			<br><hr><br>\
+			Your duty is to assist your squad on the expeditions by demolishing enemy's defenses, \
+			broken-down structures or building cover. You report directly to your Squad Leader and \
+			Commanding Officer. Your primary goal is securing the sector, clearing it from the hostile \
+			lifeforms and recovering anything of economic/scientific value to TerraGov. \
+			You will most likely encounter hazardous environments, aggressive wildlife or malfunctioning defense \
+			systems, so tread carefully."
 
 /datum/job/marine
 	title = "Marine"
 	department = "Exploration"
 	department_flag = EXP
+
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the Squad Leader and Commanding Officer"
@@ -153,4 +174,10 @@
 	)
 
 /datum/job/marine/get_description_blurb()
-	return "You are a Marine. Your duty is to go on expeditions to away sites. You report directly to your Squad Leader and Commanding Officer. Your primary goal is securing the sector, clearing it from the hostile lifeforms and recovering anything of economic/scientific value to TerraGov. You will most likely encounter hazardous environments, aggressive wildlife or malfunctioning defense systems, so tread carefully."
+	return "You are a Marine. \
+			<br><hr><br>\
+			Your duty is to go on expeditions to away sites. \
+			You report directly to your Squad Leader and Commanding Officer. \
+			Your primary goal is securing the sector, clearing it from the hostile lifeforms and recovering \
+			anything of economic/scientific value to TerraGov. You will most likely encounter hazardous \
+			environments, aggressive wildlife or malfunctioning defense systems, so tread carefully."

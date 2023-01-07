@@ -2,6 +2,7 @@
 	title = "Physician"
 	department = "Medical"
 	department_flag = MED
+
 	minimal_player_age = 2
 	minimum_character_age = list(SPECIES_HUMAN = 29)
 	ideal_character_age = 45
@@ -15,12 +16,9 @@
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/medical/senior
 	allowed_branches = list(
 		/datum/mil_branch/exploration_division,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/intrepid/crew/medical/senior/fleet
 	)
 	allowed_ranks = list(
 		/datum/mil_rank/ed/o1,
-		/datum/mil_rank/fleet/o1,
-		/datum/mil_rank/fleet/o2
 	)
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
 	                    SKILL_MEDICAL     = SKILL_EXPERIENCED,
@@ -57,15 +55,10 @@
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/medical/doctor
 	allowed_branches = list(
 		/datum/mil_branch/exploration_division,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/intrepid/crew/medical/doctor/fleet
 	)
 	allowed_ranks = list(
 		/datum/mil_rank/ed/e3,
 		/datum/mil_rank/ed/e5,
-		/datum/mil_rank/fleet/e3,
-		/datum/mil_rank/fleet/e4,
-		/datum/mil_rank/fleet/e5,
-		/datum/mil_rank/fleet/e6
 	)
 	min_skill = list(   SKILL_EVA     = SKILL_BASIC,
 	                    SKILL_MEDICAL = SKILL_BASIC,
@@ -91,6 +84,7 @@
 	title = "Trainee Medical Technician"
 	department = "Medical"
 	department_flag = MED
+
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "medical personnel and the Chief Medical Officer"
@@ -98,16 +92,15 @@
 	minimum_character_age = list(SPECIES_HUMAN = 18)
 	ideal_character_age = 20
 	alt_titles = list(
-		"Corpsman Trainee")
+		"Corpsman Trainee",
+		)
 
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/medical/doctor
 	allowed_branches = list(
 		/datum/mil_branch/exploration_division,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/intrepid/crew/medical/doctor/fleet
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/ed/e3,
-		/datum/mil_rank/fleet/e2
+		/datum/mil_rank/ed/e1,
 	)
 
 	skill_points = 4
@@ -133,15 +126,19 @@
 							 /datum/computer_file/program/camera_monitor)
 
 /datum/job/medical_trainee/get_description_blurb()
-	return "You are a Trainee Medical Technician. You are learning how to treat and recover wounded crew from the more experienced medical personnel aboard. You are subordinate to the rest of the medical team."
+	return "You are a Trainee Medical Technician. \
+			<br><hr><br>\
+			You are learning how to treat and recover wounded crew from the more experienced medical personnel \
+			aboard. You are subordinate to the rest of the medical team."
 
 /datum/job/chemist
 	title = "Pharmacist"
 	department = "Medical"
 	department_flag = MED
+
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "medical personnel, the Corporate Liaison, and the Chief Medical Officer"
+	supervisors = "physicians and the Chief Medical Officer"
 	selection_color = "#013d3b"
 	economic_power = 4
 	minimum_character_age = list(SPECIES_HUMAN = 25)
@@ -176,7 +173,11 @@
 	minimal_access = list()
 
 /datum/job/chemist/get_description_blurb()
-	return "You are the Pharmacist. You make medicine and other useful substances. You are not a doctor or medic; you should not be treating patients, but rather providing the medicine to do so. You are subordinate to Physicians and Medical Technicians."
+	return "You are the Pharmacist. \
+			<br><hr><br>\
+			You make medicine and other useful substances. You are not a doctor or medic; \
+			you should not be treating patients, but rather providing the medicine to do so. \
+			You are subordinate to Physicians and Chief Medical Officer."
 
 /datum/job/psychiatrist
 	title = "Counselor"
@@ -189,15 +190,15 @@
 	supervisors = "the Chief Medical Officer"
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/medical/counselor
 	alt_titles = list(
-		"Psychiatrist"
+		"Psychiatrist",
 	)
 
 	allowed_branches = list(
 		/datum/mil_branch/exploration_division = /decl/hierarchy/outfit/job/intrepid/crew/medical/counselor/ed,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/intrepid/crew/medical/counselor/fleet)
+		)
 	allowed_ranks = list(
-		/datum/mil_rank/fleet/o1,
-		/datum/mil_rank/ed/o1)
+		/datum/mil_rank/ed/e5,
+		)
 	min_skill = list(
 		SKILL_BUREAUCRACY = SKILL_BASIC,
 		SKILL_MEDICAL     = SKILL_BASIC
@@ -218,4 +219,7 @@
 	)
 
 /datum/job/psychiatrist/get_description_blurb()
-	return "You are the Counselor. Your main responsibility is the mental health and wellbeing of the crew. You are subordinate to the Chief Medical Officer."
+	return "You are the Counselor. \
+			<br><hr><br>\
+			Your main responsibility is the mental health and wellbeing of the crew. \
+			You are subordinate to the Chief Medical Officer."

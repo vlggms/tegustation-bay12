@@ -5,6 +5,7 @@
 		/datum/mil_branch/civilian,
 		/datum/mil_branch/terragov,
 		/datum/mil_branch/army,
+		/datum/mil_branch/military_police,
 		/datum/mil_branch/marine_corps,
 		/datum/mil_branch/worker,
 		/datum/mil_branch/alien,
@@ -17,6 +18,7 @@
 		/datum/mil_branch/civilian,
 		/datum/mil_branch/terragov,
 		/datum/mil_branch/army,
+		/datum/mil_branch/military_police,
 		/datum/mil_branch/marine_corps,
 		/datum/mil_branch/worker,
 		/datum/mil_branch/alien,
@@ -25,13 +27,14 @@
 
 	species_to_branch_blacklist = list(
 		/datum/species/human   = list(/datum/mil_branch/worker, /datum/mil_branch/alien, /datum/mil_branch/skrell_fleet),
-		/datum/species/machine = list(/datum/mil_branch/terragov, /datum/mil_branch/army, /datum/mil_branch/marine_corps, /datum/mil_branch/worker, /datum/mil_branch/alien, /datum/mil_branch/skrell_fleet),
+		/datum/species/machine = list(/datum/mil_branch/terragov, /datum/mil_branch/army, /datum/mil_branch/military_police, /datum/mil_branch/marine_corps, /datum/mil_branch/worker, /datum/mil_branch/alien, /datum/mil_branch/skrell_fleet),
 		/datum/species/vox     = list(
 			/datum/mil_branch/exploration_division,
 			/datum/mil_branch/fleet,
 			/datum/mil_branch/civilian,
 			/datum/mil_branch/terragov,
 			/datum/mil_branch/army,
+			/datum/mil_branch/military_police,
 			/datum/mil_branch/marine_corps,
 			/datum/mil_branch/skrell_fleet
 		)
@@ -223,6 +226,45 @@
 	                    SKILL_WEAPONS = SKILL_BASIC,
 	                    SKILL_COMBAT  = SKILL_BASIC)
 
+/datum/mil_branch/military_police
+	name = "Military Police"
+	name_short = "TGMP"
+	email_domain = "terra.mp.tg"
+
+	rank_types = list(
+		/datum/mil_rank/military_police/e1,
+		/datum/mil_rank/military_police/e2,
+		/datum/mil_rank/military_police/e3,
+		/datum/mil_rank/military_police/e3_alt,
+		/datum/mil_rank/military_police/e4,
+		/datum/mil_rank/military_police/e5,
+		/datum/mil_rank/military_police/o1,
+		/datum/mil_rank/military_police/o2,
+		/datum/mil_rank/military_police/o3,
+		/datum/mil_rank/military_police/o4,
+		/datum/mil_rank/military_police/o5,
+		/datum/mil_rank/military_police/o6,
+	)
+
+	spawn_rank_types = list(
+		/datum/mil_rank/military_police/e1,
+		/datum/mil_rank/military_police/e2,
+		/datum/mil_rank/military_police/e3,
+		/datum/mil_rank/military_police/e3_alt,
+		/datum/mil_rank/military_police/e4,
+		/datum/mil_rank/military_police/e5,
+		/datum/mil_rank/military_police/o1,
+		/datum/mil_rank/military_police/o2,
+		/datum/mil_rank/military_police/o3,
+		/datum/mil_rank/military_police/o4,
+		/datum/mil_rank/military_police/o5,
+	)
+
+	assistant_job = /datum/job/crew
+	min_skill = list(	SKILL_HAULING = SKILL_TRAINED,
+	                    SKILL_WEAPONS = SKILL_BASIC,
+	                    SKILL_COMBAT  = SKILL_BASIC)
+
 /datum/mil_branch/marine_corps
 	name = "Marine Corps"
 	name_short = "TGMC" // IS IT A TGMC REFERENCE??????
@@ -298,6 +340,7 @@
 	rank_types = list(
 		/datum/mil_rank/terragov/gov,
 		/datum/mil_rank/terragov/agent,
+		/datum/mil_rank/terragov/inspector,
 		/datum/mil_rank/terragov/scientist,
 		/datum/mil_rank/terragov/psiadvisor
 	)
@@ -305,6 +348,7 @@
 	spawn_rank_types = list(
 		/datum/mil_rank/terragov/gov,
 		/datum/mil_rank/terragov/agent,
+		/datum/mil_rank/terragov/inspector,
 		/datum/mil_rank/terragov/scientist,
 		/datum/mil_rank/terragov/psiadvisor
 	)
@@ -668,6 +712,82 @@
 	sort_order = 20
 
 /*
+ *  Military Police
+ *  ====
+ */
+/datum/mil_rank/military_police/e1
+	name = "Recruit"
+	name_short = "RCT"
+	accessory = list()
+	sort_order = 1
+
+/datum/mil_rank/military_police/e2
+	name = "Trooper"
+	name_short = "TPR"
+	accessory = list()
+	sort_order = 2
+
+/datum/mil_rank/military_police/e3
+	name = "Corporal"
+	name_short = "CPL"
+	accessory = list()
+	sort_order = 3
+
+/datum/mil_rank/military_police/e3_alt
+	name = "Inspector"
+	name_short = "INS"
+	accessory = list()
+	sort_order = 3
+
+/datum/mil_rank/military_police/e4
+	name = "Sergeant"
+	name_short = "SGT"
+	accessory = list()
+	sort_order = 4
+
+/datum/mil_rank/military_police/e5
+	name = "First Sergeant"
+	name_short = "FSGT"
+	accessory = list()
+	sort_order = 5
+
+/datum/mil_rank/military_police/o1
+	name = "Lieutenant"
+	name_short = "LT"
+	accessory = list()
+	sort_order = 11
+
+/datum/mil_rank/military_police/o2
+	name = "Captain"
+	name_short = "CPT"
+	accessory = list()
+	sort_order = 12
+
+/datum/mil_rank/military_police/o3
+	name = "Major"
+	name_short = "MAJ"
+	accessory = list()
+	sort_order = 13
+
+/datum/mil_rank/military_police/o4
+	name = "Lieutenant Colonel"
+	name_short = "LTC"
+	accessory = list()
+	sort_order = 14
+
+/datum/mil_rank/military_police/o5
+	name = "Colonel"
+	name_short = "COL"
+	accessory = list()
+	sort_order = 15
+
+/datum/mil_rank/military_police/o6
+	name = "Superintendent"
+	name_short = "SI"
+	accessory = list()
+	sort_order = 16
+
+/*
  *  Marine Corps
  *  ============
  */
@@ -810,6 +930,10 @@
 	name = "TerraGov Agent"
 	name_short = "AGT"
 	accessory = list()
+
+/datum/mil_rank/terragov/inspector
+	name = "TerraGov Inspector"
+	name_short = "TGISP"
 
 /datum/mil_rank/terragov/scientist
 	name = "TerraGov Scientist"

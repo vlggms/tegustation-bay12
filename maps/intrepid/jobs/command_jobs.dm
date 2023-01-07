@@ -7,12 +7,10 @@
 	ideal_character_age = 50
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/command/CO
 	allowed_branches = list(
-		/datum/mil_branch/fleet,
-		/datum/mil_branch/marine_corps
+		/datum/mil_branch/fleet
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/fleet/o7,
-		/datum/mil_rank/mc/o7
+		/datum/mil_rank/fleet/o7
 	)
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
 	                    SKILL_SCIENCE     = SKILL_TRAINED,
@@ -28,7 +26,13 @@
 							 /datum/computer_file/program/reports)
 
 /datum/job/captain/get_description_blurb()
-	return "You are the Commanding Officer. You are the top dog. You are an experienced professional officer in control of an entire ship, and ultimately responsible for all that happens onboard. Your job is to make sure [GLOB.using_map.full_name] fulfils its space exploration mission. Delegate to your Executive Officer, your department heads, and your Senior Enlisted Advisor to effectively manage the ship, and listen to and trust their expertise."
+	return "You are the Commanding Officer. You are the top dog. \
+			<br><hr><br>\
+			You are an experienced professional officer in control of an entire ship, \
+			and ultimately responsible for all that happens onboard. Your job is to make sure \
+			[GLOB.using_map.full_name] fulfils its space exploration mission. \
+			Delegate to your Executive Officer and your department heads to effectively manage the ship, \
+			and listen to and trust their expertise."
 
 /datum/job/captain/post_equip_rank(var/mob/person, var/alt_title)
 	var/sound/announce_sound = (GAME_STATE <= RUNLEVEL_SETUP)? null : sound('sound/misc/boatswain.ogg', volume=20)
@@ -46,11 +50,9 @@
 	ideal_character_age = 45
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/command/XO
 	allowed_branches = list(
-		/datum/mil_branch/marine_corps,
 		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/intrepid/crew/command/XO/fleet
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/mc/o4,
 		/datum/mil_rank/fleet/o4
 	)
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_TRAINED,
@@ -99,21 +101,27 @@
 							 /datum/computer_file/program/reports)
 
 /datum/job/hop/get_description_blurb()
-	return "You are the Executive Officer. You are an experienced senior officer, second in command of the ship, and are responsible for the smooth operation of the ship under your Commanding Officer. In their absence, you are expected to take their place. Your primary duty is directly managing department heads and all those outside a department heading. You are also responsible for the contractors and passengers aboard the ship. Consider the Senior Enlisted Advisor and Bridge Officers tools at your disposal."
+	return "You are the Executive Officer. You are an experienced senior officer, second in command of the ship \
+			and right hand of the Commanding Officer.\
+			<br><hr><br>\
+			You are responsible for the smooth operation of the ship under your Commanding Officer. \
+			In their absence, you are expected to take their place. Your primary duty is directly managing \
+			department heads and all those outside a department heading. You are also responsible for the \
+			contractors and passengers aboard the ship. Consider the Bridge Officers tools at your disposal."
 
 /datum/job/rd
 	title = "Chief Science Officer"
-	supervisors = "the Commanding Officer"
+	supervisors = "the Commanding Officer and the Executive Officer"
 	economic_power = 12
 	minimal_player_age = 14
 	minimum_character_age = list(SPECIES_HUMAN = 35)
 	ideal_character_age = 60
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/research/cso
 	allowed_branches = list(
-		/datum/mil_branch/exploration_division
+		/datum/mil_branch/exploration_division,
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/ed/o3
+		/datum/mil_rank/ed/o3,
 	)
 
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_TRAINED,
@@ -147,7 +155,12 @@
 							 /datum/computer_file/program/reports)
 
 /datum/job/rd/get_description_blurb()
-	return "You are the Chief Science Officer. You are responsible for the research department. You handle the science aspects of the project and liase with the corporate interests of the Expeditionary Corps Organisation. Make sure science gets done, do some yourself, and get your scientists on away missions to find things to benefit the project. Advise the CO on science matters."
+	return "You are the Chief Science Officer. \
+			<br><hr><br>\
+			You are responsible for the research department. You handle the science aspects of the project \
+			and liase with the corporate interests of the Expeditionary Corps Organisation. \
+			Make sure science gets done, do some yourself, and get your scientists on away missions to \
+			find things to benefit the project. Advise the CO on science matters."
 
 /datum/job/cmo
 	title = "Chief Medical Officer"
@@ -159,12 +172,9 @@
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/command/cmo
 	allowed_branches = list(
 		/datum/mil_branch/exploration_division,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/intrepid/crew/command/cmo/fleet
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/fleet/o3,
-		/datum/mil_rank/fleet/o4,
-		/datum/mil_rank/ed/o3
+		/datum/mil_rank/ed/o3,
 	)
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
 	                    SKILL_MEDICAL     = SKILL_EXPERIENCED,
@@ -194,7 +204,12 @@
 							 /datum/computer_file/program/reports)
 
 /datum/job/cmo/get_description_blurb()
-	return "You are the Chief Medical Officer. You manage the medical department. You ensure all members of medical are skilled, tasked and handling their duties. Ensure your doctors are staffing your infirmary and your corpsman/paramedics are ready for response. Act as a second surgeon or backup pharmacist in the absence of either. You are expected to know medical very well, along with general regulations."
+	return "You are the Chief Medical Officer. \
+			<br><hr><br>\
+			You manage the medical department. You ensure all members of medical are skilled, tasked and \
+			handling their duties. Ensure your doctors are staffing your infirmary and your \
+			corpsman/paramedics are ready for response. Act as a second surgeon or backup pharmacist in the \
+			absence of either. You are expected to know medical very well, along with general regulations."
 
 /datum/job/chief_engineer
 	title = "Chief Engineer"
@@ -258,7 +273,15 @@
 							 /datum/computer_file/program/reports)
 
 /datum/job/chief_engineer/get_description_blurb()
-	return "You are the Chief Engineer. You manage the Engineering Department. You are responsible for the Senior engineer, who is your right hand and (should be) an experienced, skilled engineer. Delegate to and listen to them. Manage your engineers, ensure vessel power stays on, breaches are patched and problems are fixed. Advise the CO on engineering matters. You are also responsible for the maintenance and control of any vessel synthetics. You are an experienced engineer with a wealth of theoretical knowledge. You should also know vessel regulations to a reasonable degree."
+	return "You are the Chief Engineer. \
+			<br><hr><br>\
+			You manage the Engineering Department. You are responsible for the Senior Engineer, \
+			who is your right hand and (should be) an experienced, skilled engineer. \
+			Delegate to and listen to them. Manage your engineers, ensure vessel power stays on, \
+			breaches are patched and problems are fixed. Advise the CO on engineering matters. \
+			You are also responsible for the maintenance and control of any vessel synthetics. \
+			You are an experienced engineer with a wealth of theoretical knowledge. \
+			You should also know vessel regulations to a reasonable degree."
 
 /datum/job/hos
 	title = "Chief of Security"
@@ -269,13 +292,11 @@
 	ideal_character_age = 35
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/command/cos
 	allowed_branches = list(
-		/datum/mil_branch/marine_corps,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/intrepid/crew/command/cos/fleet
+		/datum/mil_branch/military_police,
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/mc/o2,
-		/datum/mil_rank/fleet/o2,
-		/datum/mil_rank/fleet/o3
+		/datum/mil_rank/military_police/o1,
+		/datum/mil_rank/military_police/o3
 	)
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_TRAINED,
 	                    SKILL_EVA         = SKILL_BASIC,
@@ -305,12 +326,21 @@
 							 /datum/computer_file/program/reports)
 
 /datum/job/hos/get_description_blurb()
-	return "You are the Chief of Security. You manage ship security. The Masters at Arms and the Military Police, as well as the Brig Chief and the Forensic Technician. You keep the vessel safe. You handle both internal and external security matters. You are the law. You are subordinate to the CO and the XO. You are expected to know the constitution, Terran law and Alert Procedure to a very high degree along with general regulations."
+	return "You are the Chief of Security. \
+			<br><hr><br>\
+			You manage ship security and entirety of military police force aboard it: \
+			The Security Officers/Troopers, Brig Chief and the Detective. You keep the vessel safe. \
+			You handle both internal and external security matters. You are the law. \
+			You are expected to know the constitution, \
+			Terran law and Alert Procedure to a very high degree along with general regulations. \
+			You are subordinate to the CO and the XO, but your only true loyalty is for the Terran Government, \
+			its people and their wellbeing."
 
 /datum/job/representative
 	title = "Terran Senator"
 	department = "Support"
 	department_flag = SPT
+
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the Terran Constitution and your chosen faction within the senate"
@@ -335,12 +365,25 @@
 	software_on_spawn = list(/datum/computer_file/program/reports)
 
 /datum/job/representative/get_description_blurb()
-	return "You are the Terran Senator. You are one of the 200 senators that resign in Terran Senate. You have been assigned to oversee the exploration mission of this vessel. You are also responsible for monitoring for any serious missteps of justice, Terran constituion or other ethical and legal issues aboard, informing and advising the Commanding Officer on them. You are also responsible for furthering the vision of your chosen senate faction."
+	return "You are the Terran Senator. \
+			<br><hr><br>\
+			You are one of the many senators that resign in Terran Senate. \
+			You have been assigned to oversee the exploration mission of this vessel. \
+			You are also responsible for monitoring for any serious missteps of justice, \
+			Terran constituion or other ethical and legal issues aboard, informing and advising \
+			the Commanding Officer on them. You are also responsible for furthering the vision of your chosen \
+			senate faction. \
+			<br><hr><br>\
+			You are NOT a subbordinate of any officers aboard the ship, but you are expected to obey all LAWFUL \
+			orders issued to you. \
+			Your only true loyalty is for the Terran Government and especially the faction you are a part of. \
+			Do not be afraid to further your own agenda if it is ensuring success of your faction."
 
 /datum/job/bridgeofficer
 	title = "Bridge Officer"
 	department = "Support"
 	department_flag = SPT
+
 	total_positions = 3
 	spawn_positions = 3
 	supervisors = "the Commanding Officer and heads of staff"
@@ -384,12 +427,18 @@
 							 /datum/computer_file/program/deck_management)
 
 /datum/job/bridgeofficer/get_description_blurb()
-	return "You are a Bridge Officer. You are a very junior officer. You do not give orders of your own. You are subordinate to all of command. You handle matters on the bridge and report directly to the CO and XO. You take the Ion's helm and pilot the dropships if needed. You monitor bridge computer programs and communications and report relevant information to command."
+	return "You are a Bridge Officer. \
+			<br><hr><br>\
+			You are a very junior officer. You do not give orders of your own. You are subordinate to all of \
+			command. You handle matters on the bridge and report directly to the CO and XO. \
+			You take the Intrepid's helm and pilot the dropships if needed. You monitor bridge computer programs \
+			and communications and report relevant information to command."
 
 /datum/job/psiadvisor
 	title = "Psionic Advisor"
 	department = "Support"
 	department_flag = SPT
+
 	selection_color = "#2f2f7f"
 	total_positions = 1
 	spawn_positions = 1
@@ -424,4 +473,10 @@
 	return ..()
 
 /datum/job/psiadvisor/get_description_blurb()
-	return "You are the Psionic Advisor. You are psionically awakened, and you are the first and only exposure most of the crew will have to the mentally gifted. Your main responsibility is advising the Commanding Officer on psionic matters, and helping freshly awakened psions discover and control their abilities, and overseeing them, or suppress it if they wish to do so. You must report any violent psions to the appropriate personnel to take care of them. Avoid direct confrontation with them as much as possible."
+	return "You are the Psionic Advisor. \
+			<br><hr><br>\
+			You are psionically awakened, and you are the first and only exposure most of the crew will \
+			have to the mentally gifted. Your main responsibility is advising the Commanding Officer on \
+			psionic matters, and helping freshly awakened psions discover and control their abilities, and \
+			overseeing them, or suppress it if they wish to do so. You must report any violent psions to the \
+			appropriate personnel to take care of them. Avoid direct confrontation with them as much as possible."

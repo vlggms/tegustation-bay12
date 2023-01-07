@@ -2,6 +2,7 @@
 	title = "Deck Chief"
 	department = "Supply"
 	department_flag = SUP
+
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the Executive Officer"
@@ -16,9 +17,6 @@
 	)
 	allowed_ranks = list(
 		/datum/mil_rank/ed/e7,
-		/datum/mil_rank/fleet/e6,
-		/datum/mil_rank/fleet/e7,
-		/datum/mil_rank/fleet/e8
 	)
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_TRAINED,
 	                    SKILL_FINANCE     = SKILL_BASIC,
@@ -46,6 +44,7 @@
 	title = "Deck Technician"
 	department = "Supply"
 	department_flag = SUP
+
 	total_positions = 3
 	spawn_positions = 3
 	supervisors = "the Deck Chief and the Executive Officer"
@@ -59,9 +58,6 @@
 	)
 	allowed_ranks = list(
 		/datum/mil_rank/ed/e3,
-		/datum/mil_rank/fleet/e2,
-		/datum/mil_rank/fleet/e3,
-		/datum/mil_rank/fleet/e4,
 		/datum/mil_rank/worker/recruit,
 		/datum/mil_rank/worker/trained,
 		/datum/mil_rank/worker/professional
@@ -97,7 +93,8 @@
 	alt_titles = list(
 		"Drill Technician",
 		"Shaft Miner",
-		"Salvage Technician")
+		"Salvage Technician",
+		)
 	min_skill = list(   SKILL_HAULING = SKILL_TRAINED,
 	                    SKILL_EVA     = SKILL_BASIC)
 
