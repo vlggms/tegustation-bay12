@@ -2523,7 +2523,6 @@
 #include "code\modules\nano\modules\human_appearance.dm"
 #include "code\modules\nano\modules\law_manager.dm"
 #include "code\modules\nano\modules\nano_module.dm"
-#include "code\modules\organs\_organ_setup.dm"
 #include "code\modules\organs\blood.dm"
 #include "code\modules\organs\organ.dm"
 #include "code\modules\organs\pain.dm"

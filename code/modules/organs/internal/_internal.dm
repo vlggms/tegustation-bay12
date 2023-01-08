@@ -4,13 +4,13 @@
 /obj/item/organ/internal
 	var/dead_icon // Icon to use when the organ has died.
 	var/surface_accessible = FALSE
-	var/relative_size = 25   // Relative size of the organ. Roughly % of space they take in the target projection :D
-	var/min_bruised_damage = 10       // Damage before considered bruised
-	var/damage_reduction = 0.5     //modifier for internal organ injury
+	var/relative_size = 25 // Relative size of the organ. Roughly % of space they take in the target projection :D
+	var/min_bruised_damage = 15 // Damage before considered bruised
+	var/damage_reduction = 0.5 // Multiplier for internal organ injury
 
-/obj/item/organ/internal/New(var/mob/living/carbon/holder)
+/obj/item/organ/internal/New(mob/living/carbon/holder)
 	if(max_damage)
-		min_bruised_damage = Floor(max_damage / 4)
+		min_bruised_damage = Floor(max_damage * 0.4)
 	..()
 	if(istype(holder))
 		holder.internal_organs |= src
@@ -33,7 +33,11 @@
 		if(istype(E)) E.internal_organs -= src
 	return ..()
 
-/obj/item/organ/internal/set_dna(var/datum/dna/new_dna)
+/obj/item/organ/internal/Process()
+	..()
+	handle_regeneration()
+
+/obj/item/organ/internal/set_dna(datum/dna/new_dna)
 	..()
 	if(species && species.organs_icon)
 		icon = species.organs_icon
@@ -85,6 +89,11 @@
 	if((status & ORGAN_DEAD) && dead_icon)
 		icon_state = dead_icon
 
+/obj/item/organ/internal/revive()
+	..()
+	if(!(status & ORGAN_DEAD))
+		icon_state = initial(icon_state)
+
 /obj/item/organ/internal/remove_rejuv()
 	if(owner)
 		owner.internal_organs -= src
@@ -118,28 +127,28 @@
 /obj/item/organ/internal/proc/is_bruised()
 	return damage >= min_bruised_damage
 
-/obj/item/organ/internal/proc/set_max_damage(var/ndamage)
+/obj/item/organ/internal/proc/set_max_damage(ndamage)
 	max_damage = Floor(ndamage)
 	min_broken_damage = Floor(0.75 * max_damage)
 	min_bruised_damage = Floor(0.25 * max_damage)
 
-obj/item/organ/internal/take_general_damage(var/amount, var/silent = FALSE)
+obj/item/organ/internal/take_general_damage(amount, silent = FALSE)
 	take_internal_damage(amount, silent)
 
-/obj/item/organ/internal/proc/take_internal_damage(amount, var/silent=0)
+/obj/item/organ/internal/proc/take_internal_damage(amount, silent = FALSE)
 	if(BP_IS_ROBOTIC(src))
-		damage = between(0, src.damage + (amount * 0.8), max_damage)
+		damage = clamp(damage + (amount * 0.8), 0, max_damage)
 	else
-		damage = between(0, src.damage + amount, max_damage)
+		damage = clamp(damage + amount, 0, max_damage)
 
-		//only show this if the organ is not robotic
+		// Only show this if the organ is not robotic
 		if(owner && can_feel_pain() && parent_organ && (amount > 5 || prob(10)))
 			var/obj/item/organ/external/parent = owner.get_organ(parent_organ)
 			if(parent && !silent)
 				var/degree = ""
 				if(is_bruised())
 					degree = " a lot"
-				if(damage < 5)
+				else if(damage < min_bruised_damage*0.5) // If it's higher and not bruised - it just hurts
 					degree = " a bit"
 				owner.custom_pain("Something inside your [parent.name] hurts[degree].", amount, affecting = parent)
 
@@ -158,10 +167,6 @@ obj/item/organ/internal/take_general_damage(var/amount, var/silent = FALSE)
 		else
 			. = "necrotic [.]"
 	. = "[.][name]"
-
-/obj/item/organ/internal/Process()
-	..()
-	handle_regeneration()
 
 /obj/item/organ/internal/proc/handle_regeneration()
 	if(!damage || BP_IS_ROBOTIC(src) || !owner || owner.chem_effects[CE_TOXIN] || owner.is_asystole())

@@ -4,27 +4,14 @@
 	organ_tag = "heart"
 	parent_organ = BP_CHEST
 	dead_icon = "heart-off"
+	relative_size = 5
+	max_damage = 50
 	var/pulse = PULSE_NORM
 	var/heartbeat = 0
 	var/beat_sound = 'sound/effects/singlebeat.ogg'
 	var/tmp/next_blood_squirt = 0
-	damage_reduction = 0.7
-	relative_size = 5
-	max_damage = 45
 	var/open
 	var/list/external_pump
-
-/obj/item/organ/internal/heart/open
-	open = 1
-
-/obj/item/organ/internal/heart/die()
-	if(dead_icon)
-		icon_state = dead_icon
-	..()
-
-/obj/item/organ/internal/heart/robotize()
-	. = ..()
-	icon_state = "heart-prosthetic"
 
 /obj/item/organ/internal/heart/Process()
 	if(owner)
@@ -36,7 +23,48 @@
 			if(pulse == PULSE_THREADY && prob(5))
 				take_internal_damage(0.5)
 		handle_blood()
-	..()
+	return ..()
+
+/obj/item/organ/internal/heart/open
+	open = 1
+
+/obj/item/organ/internal/heart/die()
+	if(dead_icon)
+		icon_state = dead_icon
+	return ..()
+
+/obj/item/organ/internal/heart/robotize()
+	. = ..()
+	icon_state = "heart-prosthetic"
+
+/obj/item/organ/internal/heart/listen()
+	if(BP_IS_ROBOTIC(src) && is_working())
+		if(is_bruised())
+			return "sputtering pump"
+		else
+			return "steady whirr of the pump"
+
+	if(!pulse || (owner.status_flags & FAKEDEATH))
+		return "no pulse"
+
+	var/pulsesound = "normal"
+	if(is_bruised())
+		pulsesound = "irregular"
+
+	switch(pulse)
+		if(PULSE_SLOW)
+			pulsesound = "slow"
+		if(PULSE_FAST)
+			pulsesound = "fast"
+		if(PULSE_2FAST)
+			pulsesound = "very fast"
+		if(PULSE_THREADY)
+			pulsesound = "extremely fast and faint"
+
+	. = "[pulsesound] pulse"
+
+/obj/item/organ/internal/heart/get_mechanical_assisted_descriptor()
+	return "pacemaker-assisted [name]"
 
 /obj/item/organ/internal/heart/proc/handle_pulse()
 	if(BP_IS_ROBOTIC(src))
@@ -46,13 +74,13 @@
 	// pulse mod starts out as just the chemical effect amount
 	var/pulse_mod = owner.chem_effects[CE_PULSE]
 	var/is_stable = owner.chem_effects[CE_STABLE]
-		
+
 	// If you have enough heart chemicals to be over 2, you're likely to take extra damage.
 	if(pulse_mod > 2 && !is_stable)
 		var/damage_chance = (pulse_mod - 2) ** 2
 		if(prob(damage_chance))
 			take_internal_damage(0.5)
-	
+
 	// Now pulse mod is impacted by shock stage and other things too
 	if(owner.shock_stage > 30)
 		pulse_mod++
@@ -197,32 +225,3 @@
 		return FALSE
 
 	return pulse > PULSE_NONE || BP_IS_ROBOTIC(src) || (owner.status_flags & FAKEDEATH)
-
-/obj/item/organ/internal/heart/listen()
-	if(BP_IS_ROBOTIC(src) && is_working())
-		if(is_bruised())
-			return "sputtering pump"
-		else
-			return "steady whirr of the pump"
-
-	if(!pulse || (owner.status_flags & FAKEDEATH))
-		return "no pulse"
-
-	var/pulsesound = "normal"
-	if(is_bruised())
-		pulsesound = "irregular"
-
-	switch(pulse)
-		if(PULSE_SLOW)
-			pulsesound = "slow"
-		if(PULSE_FAST)
-			pulsesound = "fast"
-		if(PULSE_2FAST)
-			pulsesound = "very fast"
-		if(PULSE_THREADY)
-			pulsesound = "extremely fast and faint"
-
-	. = "[pulsesound] pulse"
-
-/obj/item/organ/internal/heart/get_mechanical_assisted_descriptor()
-	return "pacemaker-assisted [name]"

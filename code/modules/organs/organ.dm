@@ -32,31 +32,14 @@ var/list/organ_cache = list()
 	var/can_be_printed = TRUE
 	var/print_cost
 
-/obj/item/organ/Destroy()
-	owner = null
-	dna = null
-	return ..()
-
-/obj/item/organ/proc/refresh_action_button()
-	return action
-
-/obj/item/organ/attack_self(var/mob/user)
-	return (owner && loc == owner && owner == user)
-
-/obj/item/organ/proc/update_health()
-	return
-
-/obj/item/organ/proc/is_broken()
-	return (damage >= min_broken_damage || (status & ORGAN_CUT_AWAY) || (status & ORGAN_BROKEN))
-
 //Second argument may be a dna datum; if null will be set to holder's dna.
-/obj/item/organ/New(var/mob/living/carbon/holder, var/datum/dna/given_dna)
+/obj/item/organ/New(mob/living/carbon/holder, datum/dna/given_dna)
 	..(holder)
 	if(!istype(given_dna))
 		given_dna = null
 
 	if(max_damage)
-		min_broken_damage = Floor(max_damage / 2)
+		min_broken_damage = Floor(max_damage * 0.75)
 	else
 		max_damage = min_broken_damage * 2
 
@@ -78,27 +61,12 @@ var/list/organ_cache = list()
 
 	update_icon()
 
-/obj/item/organ/proc/set_dna(var/datum/dna/new_dna)
-	if(new_dna)
-		dna = new_dna.Clone()
-		if(!blood_DNA)
-			blood_DNA = list()
-		blood_DNA.Cut()
-		blood_DNA[dna.unique_enzymes] = dna.b_type
-		species = all_species[dna.species]
-		if (!species)
-			crash_with("Invalid DNA species. Expected a valid species name as string, was: [log_info_line(dna.species)]")
-
-/obj/item/organ/proc/die()
-	damage = max_damage
-	status |= ORGAN_DEAD
-	STOP_PROCESSING(SSobj, src)
-	death_time = world.time
-	if(owner && vital)
-		owner.death()
+/obj/item/organ/Destroy()
+	owner = null
+	dna = null
+	return ..()
 
 /obj/item/organ/Process()
-
 	if(loc != owner)
 		owner = null
 
@@ -112,7 +80,7 @@ var/list/organ_cache = list()
 		return
 
 	//Process infections
-	if (BP_IS_ROBOTIC(src) || (owner && owner.species && (owner.species.species_flags & SPECIES_FLAG_IS_PLANT)))
+	if(BP_IS_ROBOTIC(src) || (owner && owner.species && (owner.species.species_flags & SPECIES_FLAG_IS_PLANT)))
 		germ_level = 0
 		return
 
@@ -138,6 +106,42 @@ var/list/organ_cache = list()
 		handle_antibiotics()
 		handle_rejection()
 		handle_germ_effects()
+
+/obj/item/organ/proc/refresh_action_button()
+	return action
+
+/obj/item/organ/attack_self(mob/user)
+	return (owner && loc == owner && owner == user)
+
+/obj/item/organ/proc/update_health()
+	return
+
+/obj/item/organ/proc/is_broken()
+	return (damage >= min_broken_damage || (status & ORGAN_CUT_AWAY) || (status & ORGAN_BROKEN))
+
+/obj/item/organ/proc/set_dna(datum/dna/new_dna)
+	if(new_dna)
+		dna = new_dna.Clone()
+		if(!blood_DNA)
+			blood_DNA = list()
+		blood_DNA.Cut()
+		blood_DNA[dna.unique_enzymes] = dna.b_type
+		species = all_species[dna.species]
+		if (!species)
+			crash_with("Invalid DNA species. Expected a valid species name as string, was: [log_info_line(dna.species)]")
+
+/obj/item/organ/proc/die()
+	damage = max_damage
+	status |= ORGAN_DEAD
+	STOP_PROCESSING(SSobj, src)
+	death_time = world.time
+	if(owner && vital)
+		owner.death()
+
+/obj/item/organ/proc/revive()
+	damage = 0
+	status &= ~ORGAN_DEAD
+	START_PROCESSING(SSobj, src)
 
 /obj/item/organ/proc/is_preserved()
 	if(istype(loc,/obj/item/organ))
