@@ -1,0 +1,5 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: Limbs will take more damage before delimbing.
+  - tweak: Internal organs will be taking less damage from external sources.
