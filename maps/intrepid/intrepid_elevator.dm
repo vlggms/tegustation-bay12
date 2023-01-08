@@ -1,7 +1,7 @@
 //Data for those lifts. (The actual shuttle data)
 /datum/shuttle/autodock/ferry/port
 	name = "Port Lift"
-	shuttle_area = /area/turbolift/port
+	shuttle_area = /area/turbolift/port/lift
 	warmup_time = 3
 	waypoint_station = "nav_port_lift_top"
 	waypoint_offsite = "nav_port_lift_bottom"
@@ -10,9 +10,9 @@
 	ceiling_type = null
 	knockdown = 0
 
-/datum/shuttle/autodock/ferry/starboard
+/datum/shuttle/autodock/ferry/starboard/lift
 	name = "Starboard Lift"
-	shuttle_area = /area/turbolift/starboard
+	shuttle_area = /area/turbolift/starboard/lift
 	warmup_time = 3
 	waypoint_station = "nav_starboard_lift_top"
 	waypoint_offsite = "nav_starboard_lift_bottom"
@@ -45,25 +45,25 @@
 /obj/effect/shuttle_landmark/lift/port_top
 	name = "Port Lift Top Deck"
 	landmark_tag = "nav_port_lift_top"
-	base_area = /area/turbolift/port
+	base_area = /area/intrepid/misc/maint/upper
 	base_turf = /turf/simulated/open
 
 /obj/effect/shuttle_landmark/lift/port_bottom
 	name = "Port Lift Lower Deck"
 	landmark_tag = "nav_port_lift_bottom"
 	flags = SLANDMARK_FLAG_AUTOSET
-	base_area = /area/turbolift/port
+	base_area = /area/intrepid/department/engineering/drone_fabrication
 	base_turf = /turf/simulated/floor/plating
 
 /obj/effect/shuttle_landmark/lift/starboard_top
 	name = "Starboard Lift Top Deck"
 	landmark_tag = "nav_starboard_lift_top"
-	base_area = /area/turbolift/starboard
+	base_area = /area/intrepid/misc/maint/upper
 	base_turf = /turf/simulated/open
 
 /obj/effect/shuttle_landmark/lift/starboard_bottom
 	name = "Starboard Lower Deck"
 	landmark_tag = "nav_starboard_lift_bottom"
 	flags = SLANDMARK_FLAG_AUTOSET
-	base_area = /area/turbolift/starboard
+	base_area = /area/intrepid/department/engineering/drone_fabrication
 	base_turf = /turf/simulated/floor/plating

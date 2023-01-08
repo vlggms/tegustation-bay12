@@ -1,8 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "ab" = (
-/obj/item/caution/cone,
 /turf/simulated/floor/tiled/monotile,
-/area/turbolift/port)
+/area/turbolift/port/lift)
 "ai" = (
 /obj/structure/railing/mapped{
 	dir = 1;
@@ -860,7 +859,7 @@
 "fd" = (
 /obj/structure/bed/chair/shuttle,
 /obj/effect/floor_decal/industrial/outline/blue,
-/obj/machinery/light{
+/obj/machinery/light/dystopian{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white/monotile,
@@ -4931,9 +4930,8 @@
 /turf/simulated/floor,
 /area/intrepid/department/command/obstructionfielddisperser)
 "Hn" = (
-/obj/item/caution/cone,
 /turf/simulated/floor/tiled/monotile,
-/area/turbolift/starboard)
+/area/turbolift/starboard/lift)
 "Hr" = (
 /obj/effect/wingrille_spawn/reinforced_phoron/full,
 /obj/machinery/door/blast/regular{
@@ -5237,7 +5235,7 @@
 	use_power = 0
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/turbolift/starboard)
+/area/turbolift/starboard/lift)
 "Kf" = (
 /obj/structure/railing/mapped{
 	dir = 8;
@@ -7174,7 +7172,7 @@
 /obj/effect/shuttle_landmark/lift/port_top,
 /obj/machinery/computer/shuttle_control/lift/port,
 /turf/simulated/floor/tiled/monotile,
-/area/turbolift/port)
+/area/turbolift/port/lift)
 "Yr" = (
 /obj/machinery/vending/sol{
 	dir = 1

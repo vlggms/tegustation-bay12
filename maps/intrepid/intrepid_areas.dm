@@ -366,7 +366,7 @@
 	name = "\improper Pandora"
 	icon_state = "shuttlered"
 	base_turf = /turf/simulated/floor/plating
-	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
+	area_flags = AREA_FLAG_RAD_SHIELDED
 	holomap_color = HOLOMAP_AREACOLOR_EXPLORATION
 
 /area/shuttle/pandora/cockpit
@@ -412,12 +412,12 @@
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
 	req_access = list(access_maint_tunnels)
 
-/area/turbolift/port
+/area/turbolift/port/lift
 	name = "\improper Portside Amidships Lift"
 	icon_state = "shuttle3"
 	base_turf = /turf/simulated/open
 
-/area/turbolift/starboard
+/area/turbolift/starboard/lift
 	name = "\improper Starboardside Amidships Lift"
 	icon_state = "shuttle3"
 	base_turf = /turf/simulated/open
