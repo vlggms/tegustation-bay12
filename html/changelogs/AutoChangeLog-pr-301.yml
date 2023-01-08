@@ -1,0 +1,6 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: Zombies no longer delete the armor and helmet they were wearing prior to
+      infection. Now they only DROP their ID.
+  - tweak: Added a bunch of zombie types for events.
