@@ -1,0 +1,6 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: Artifacts now can only have one effect.
+  - tweak: 'Artifacts may now be activated by: touch, bumping, temperature, attack,
+      bullets, lasers, explosions, water and speech.'
