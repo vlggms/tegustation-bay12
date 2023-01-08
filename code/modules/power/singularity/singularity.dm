@@ -59,7 +59,7 @@
 		return
 	switch(severity)
 		if(1.0)
-			if(prob(25))
+			if(prob(35 / current_size))
 				investigate_log("has been destroyed by an explosion.", I_SINGULO)
 				qdel(src)
 				return
@@ -112,7 +112,7 @@
 	else
 		dissipate_track++
 
-/obj/singularity/proc/expand(var/force_size = 0, var/growing = 1)
+/obj/singularity/proc/expand(force_size = 0, growing = 1)
 	if(current_size == STAGE_SUPER)//if this is happening, this is an error
 		message_admins("expand() was called on a super singulo. This should not happen. Contact a coder immediately!")
 		return
@@ -293,11 +293,11 @@
 
 	return
 
-/obj/singularity/proc/consume(const/atom/A)
-	src.energy += A.singularity_act(src, current_size)
+/obj/singularity/proc/consume(atom/A)
+	energy += A.singularity_act(src, current_size)
 	return
 
-/obj/singularity/proc/move(var/force_move = 0)
+/obj/singularity/proc/move(force_move = 0)
 	if(!move_self)
 		return 0
 
