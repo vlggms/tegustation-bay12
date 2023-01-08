@@ -7572,7 +7572,7 @@
 /area/shuttle/research/anomalyresearch)
 "gFn" = (
 /obj/machinery/hologram/holopad/longrange{
-	department = "TGLV Intrepid Medical Bay"
+	identifier = "TGLV Intrepid Medical Bay"
 	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/misc/hallway/portside)
@@ -11599,7 +11599,7 @@
 	dir = 1
 	},
 /obj/machinery/hologram/holopad/longrange{
-	department = "TGLV Intrepid Bridge"
+	identifier = "TGLV Intrepid Bridge"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/bridge)
@@ -11646,7 +11646,7 @@
 	icon_state = "2-4"
 	},
 /obj/machinery/hologram/holopad/longrange{
-	department = "TGLV Intrepid Bar"
+	identifier = "TGLV Intrepid Bar"
 	},
 /turf/simulated/floor/wood/walnut,
 /area/intrepid/department/civillian/mess)
@@ -14713,7 +14713,7 @@
 /area/intrepid/department/security/wing)
 "mTY" = (
 /obj/machinery/hologram/holopad/longrange{
-	department = "Pandora Cockpit"
+	identifier = "Pandora Cockpit"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -25654,7 +25654,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/hologram/holopad/longrange{
-	department = "SRV Stardust Cockpit"
+	identifier = "SRV Stardust Cockpit"
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/hallway)
@@ -27754,7 +27754,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/hologram/holopad/longrange{
-	department = "Pandora Cargo Compartment"
+	identifier = "Pandora Cargo Compartment"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/pandora/cargo)
