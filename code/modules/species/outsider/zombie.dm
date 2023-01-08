@@ -5,7 +5,12 @@
 #define LANGUAGE_ZOMBIE "Zombie"
 #define ANTAG_ZOMBIE "Zombie"
 
+#define SPECIES_ZOMBIE_FAST "Fast Zombie"
+#define SPECIES_ZOMBIE_JUGGERNAUT "Juggernaut"
+
 //// Zombie Globals
+
+GLOBAL_LIST_INIT(zombie_types, list(SPECIES_ZOMBIE, SPECIES_ZOMBIE_FAST, SPECIES_ZOMBIE_JUGGERNAUT))
 
 GLOBAL_LIST_INIT(zombie_messages, list(
 	"stage1" = list(
@@ -49,17 +54,17 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 /datum/species/zombie
 	name = "Zombie"
 	name_plural = "Zombies"
-	slowdown = 15
+	slowdown = 9
 	blood_color = "#700f0f"
 	death_message = "writhes and twitches before falling motionless."
 	species_flags = SPECIES_FLAG_NO_PAIN | SPECIES_FLAG_NO_SCAN
 	spawn_flags = SPECIES_IS_RESTRICTED
-	brute_mod = 1
-	burn_mod = 2.5 //Vulnerable to fire
+	brute_mod = 1.5
+	burn_mod = 3.5 //Vulnerable to fire
 	oxy_mod = 0
-	stun_mod = 0.05
-	weaken_mod = 0.05
-	paralysis_mod = 0.2
+	stun_mod = 0.2
+	weaken_mod = 0.2
+	paralysis_mod = 0.4
 	show_ssd = null //No SSD message so NPC logic can take over
 	show_coma = null
 	warning_low_pressure = 0
@@ -70,7 +75,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 	cold_level_3 = -1
 	hidden_from_codex = TRUE
 	has_fine_manipulation = FALSE
-	unarmed_types = list(/datum/unarmed_attack/bite/sharp/zombie)
+	unarmed_types = list(/datum/unarmed_attack/zombie)
 	move_intents = list(/decl/move_intent/creep)
 	var/heal_rate = 1 // Regen.
 	var/mob/living/carbon/human/target = null
@@ -113,28 +118,26 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 	H.weakened = 0
 
 	H.move_intent.move_delay = 6
+	H.set_next_usable_move_intent()
 	H.stat = CONSCIOUS
 
 	if (H.wear_id)
-		qdel(H.wear_id)
-	if (H.gloves)
-		qdel(H.gloves)
-	if (H.head)
-		qdel(H.head) //Remove helmet so headshots aren't impossible
-	if (H.glasses)
-		qdel(H.glasses)
+		H.unEquip(H.wear_id)
 	if (H.wear_mask)
-		qdel(H.wear_mask)
+		H.unEquip(H.wear_mask)
 	..()
+
+/datum/species/zombie/proc/handle_zombie_sounds(mob/living/carbon/human/H)
+	if (prob(5))
+		playsound(H.loc, 'sound/hallucinations/far_noise.ogg', 15, 1)
+	else if (prob(5))
+		playsound(H.loc, 'sound/hallucinations/veryfar_noise.ogg', 15, 1)
+	else if (prob(5))
+		playsound(H.loc, 'sound/hallucinations/wail.ogg', 15, 1)
 
 /datum/species/zombie/handle_environment_special(mob/living/carbon/human/H)
 	if (H.stat == CONSCIOUS)
-		if (prob(5))
-			playsound(H.loc, 'sound/hallucinations/far_noise.ogg', 15, 1)
-		else if (prob(5))
-			playsound(H.loc, 'sound/hallucinations/veryfar_noise.ogg', 15, 1)
-		else if (prob(5))
-			playsound(H.loc, 'sound/hallucinations/wail.ogg', 15, 1)
+		handle_zombie_sounds(H)
 
 	for(var/obj/item/organ/I in H.internal_organs)
 		if (I.damage > 0)
@@ -152,13 +155,14 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 /datum/species/zombie/handle_death(mob/living/carbon/human/H)
 	H.stat = DEAD //Gotta confirm death for some odd reason
 	playsound(H, 'sound/hallucinations/wail.ogg', 30, 1)
+	H.visible_message(SPAN_DANGER("\The [H] stops moving as green gaseous goo leaks from their body!"))
 	handle_death_infection(H)
 	return TRUE
 
 /datum/species/zombie/proc/handle_death_infection(mob/living/carbon/human/H)
 	var/list/victims = hearers(rand(1, 2), H)
 	for(var/mob/living/carbon/human/M in victims)
-		if (H == M || isspecies(M, SPECIES_ZOMBIE))
+		if (H == M || isspecies_inlist(M, GLOB.zombie_types))
 			continue
 		if (!(M.species.name in GLOB.zombie_species) || isspecies(M,SPECIES_DIONA) || M.isSynthetic())
 			continue
@@ -169,10 +173,8 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 
 		var/vuln = 1 - M.get_blocked_ratio(null, TOX, damage_flags = DAM_BIO) //Are they protected by hazmat clothing?
 		if (vuln > 0.10 && prob(10))
-			M.reagents.add_reagent(/datum/reagent/zombie, 0.5) //Infect 'em
-
-	if (H && H.stat != CONSCIOUS)
-		addtimer(CALLBACK(src, .proc/handle_death_infection, H), 1 SECOND)
+			M.reagents.add_reagent(/datum/reagent/zombie, 2*vuln) //Infect 'em
+			to_chat(M, SPAN_WARNING("You feel sick..."))
 
 /datum/species/zombie/handle_npc(mob/living/carbon/human/H)
 	H.resting = FALSE
@@ -195,12 +197,12 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 		H.resist()
 		return
 
-	addtimer(CALLBACK(src, .proc/handle_action, H), rand(10, 20))
+	addtimer(CALLBACK(src, .proc/handle_action, H), 15)
 
 /datum/species/zombie/proc/handle_action(mob/living/carbon/human/H)
 	var/dist = 128
 	for(var/mob/living/M in hearers(H, 15))
-		if ((ishuman(M) || istype(M, /mob/living/exosuit)) && !isspecies(M, SPECIES_ZOMBIE) && !isspecies(M, SPECIES_DIONA)) //Don't attack fellow zombies, or diona
+		if ((ishuman(M) || istype(M, /mob/living/exosuit)) && !isspecies_inlist(M, GLOB.zombie_types) && !isspecies(M, SPECIES_DIONA)) //Don't attack fellow zombies, or diona
 			if (istype(M, /mob/living/exosuit))
 				var/mob/living/exosuit/MC = M
 				if (!LAZYLEN(MC.pilots))
@@ -214,7 +216,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 
 	H.setClickCooldown(DEFAULT_ATTACK_COOLDOWN*2)
 	if (target)
-		if (isspecies(target, SPECIES_ZOMBIE))
+		if (isspecies_inlist(target, GLOB.zombie_types))
 			target = null
 			return
 
@@ -227,7 +229,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 					obstacle.attack_generic(H, 10, "smashes")
 					break
 
-			walk_to(H, target.loc, 1, H.move_intent.move_delay * 1.25)
+			walk_to(H, target.loc, 1, H.movement_delay())
 
 		else
 			if (!target.lying) //Subdue meals
@@ -239,7 +241,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 				target.attack_hand(H)
 
 			else //Eat said meals
-				walk_to(H, target.loc, 0, H.move_intent.move_delay * 2.5) //Move over them
+				walk_to(H, target.loc, 0, H.movement_delay() * 1.5) //Move over them
 				if (H.Adjacent(target)) //Check we're still next to them
 					H.consume()
 
@@ -271,25 +273,29 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 	hidden_from_codex = TRUE
 
 
-/datum/unarmed_attack/bite/sharp/zombie
-	attack_verb = list("slashed", "sunk their teeth into", "bit", "mauled")
-	damage = 3
+/datum/unarmed_attack/zombie
+	attack_name = "claw"
+	attack_verb = list("slashed", "clawed", "mauled")
+	attack_sound = 'sound/weapons/bite.ogg'
+	eye_attack_text = "fingers"
+	eye_attack_text_victim = "digits"
+	damage = 8
 
-/datum/unarmed_attack/bite/sharp/zombie/is_usable(mob/living/carbon/human/user, mob/living/carbon/human/target, zone)
+/datum/unarmed_attack/zombie/is_usable(mob/living/carbon/human/user, mob/living/carbon/human/target, zone)
 	. = ..()
 	if (!.)
 		return FALSE
-	if (isspecies(target, SPECIES_ZOMBIE))
+	if (isspecies_inlist(target, GLOB.zombie_types))
 		to_chat(usr, SPAN_WARNING("They don't look very appetizing!"))
 		return FALSE
 	return TRUE
 
-/datum/unarmed_attack/bite/sharp/zombie/apply_effects(mob/living/carbon/human/user, mob/living/carbon/human/target, attack_damage, zone)
+/datum/unarmed_attack/zombie/apply_effects(mob/living/carbon/human/user, mob/living/carbon/human/target, attack_damage, zone)
 	..()
 	admin_attack_log(user, target, "Bit their victim.", "Was bitten.", "bit")
 	if (!(target.species.name in GLOB.zombie_species) || isspecies(target, SPECIES_DIONA) || target.isSynthetic()) //No need to check infection for FBPs
 		return
-	target.adjustHalLoss(9) //To help bring down targets in voidsuits
+	target.adjustHalLoss(6) //To help bring down targets in voidsuits
 	var/vuln = 1 - target.get_blocked_ratio(zone, TOX, damage_flags = DAM_BIO) //Are they protected from bites?
 	if (vuln > 0.05)
 		if (prob(vuln * 100)) //Protective infection chance
@@ -364,7 +370,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 //// Zombie Procs
 
 
-/mob/living/carbon/human/proc/zombify()
+/mob/living/carbon/human/proc/zombify(chosen_species = SPECIES_ZOMBIE)
 	if (!(species.name in GLOB.zombie_species) || isspecies(src, SPECIES_DIONA) || isspecies(src, SPECIES_ZOMBIE) || isSynthetic())
 		return
 
@@ -377,9 +383,9 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 	new /obj/effect/decal/cleanable/vomit(T)
 	playsound(T, 'sound/effects/splat.ogg', 20, 1)
 
-	addtimer(CALLBACK(src, .proc/transform_zombie), 20)
+	addtimer(CALLBACK(src, .proc/transform_zombie, chosen_species), 20)
 
-/mob/living/carbon/human/proc/transform_zombie()
+/mob/living/carbon/human/proc/transform_zombie(chosen_species = SPECIES_ZOMBIE)
 	make_jittery(300)
 	adjustBruteLoss(100)
 	sleep(150)
@@ -387,7 +393,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 	if (QDELETED(src))
 		return
 
-	if (isspecies(src, SPECIES_ZOMBIE)) //Check again otherwise Consume can run this twice at once
+	if (isspecies_inlist(src, GLOB.zombie_types)) //Check again otherwise Consume can run this twice at once
 		return
 
 	rejuvenate()
@@ -420,7 +426,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 		skillset.skill_list[SKILL_COMBAT] = SKILL_TRAINED
 		skillset.on_levels_change()
 
-	species = all_species[SPECIES_ZOMBIE]
+	species = all_species[chosen_species]
 	species.handle_post_spawn(src)
 
 	var/turf/T = get_turf(src)
@@ -440,7 +446,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 	var/list/victims = list()
 	for (var/mob/living/carbon/human/L in get_turf(src))
 		if (L != src && (L.lying || L.stat == DEAD))
-			if (isspecies(L, SPECIES_ZOMBIE))
+			if (isspecies_inlist(L, GLOB.zombie_types))
 				to_chat(src, SPAN_WARNING("\The [L] isn't fresh anymore!"))
 				continue
 			if (!(L.species.name in GLOB.zombie_species) || isspecies(L, SPECIES_DIONA) || L.isSynthetic())
@@ -494,7 +500,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 		to_chat(target,SPAN_DANGER("\The [src] scrapes your flesh from your bones!"))
 		to_chat(src,SPAN_DANGER("You feed hungrily off \the [target]'s flesh."))
 
-		if (isspecies(target, SPECIES_ZOMBIE)) //Just in case they turn whilst being eaten
+		if (isspecies_inlist(target, GLOB.zombie_types)) //Just in case they turn whilst being eaten
 			return
 
 		target.apply_damage(rand(50, 60), BRUTE, BP_CHEST)
@@ -530,22 +536,101 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 	mode = SYRINGE_INJECT
 	update_icon()
 
+/mob/living/carbon/human/zombie
+	var/transform_to = SPECIES_ZOMBIE
+	var/list/zombo_outfits = list(
+		/decl/hierarchy/outfit/job/science/scientist,
+		/decl/hierarchy/outfit/job/engineering/engineer,
+		/decl/hierarchy/outfit/job/cargo/mining,
+		/decl/hierarchy/outfit/job/medical/chemist
+	)
 
 /mob/living/carbon/human/zombie/New(new_loc)
-	..(new_loc, SPECIES_ZOMBIE)
+	..(new_loc, transform_to)
 
 	var/decl/cultural_info/culture = get_cultural_value(TAG_CULTURE)
 	SetName(culture.get_random_name(gender))
 	real_name = name
 
-	var/decl/hierarchy/outfit/outfit = pick(
-		/decl/hierarchy/outfit/job/science/scientist,\
-		/decl/hierarchy/outfit/job/engineering/engineer,\
-		/decl/hierarchy/outfit/job/cargo/mining,\
-		/decl/hierarchy/outfit/job/medical/chemist\
-	)
+	var/decl/hierarchy/outfit/outfit = pick(zombo_outfits)
 	outfit = outfit_by_type(outfit)
 	outfit.equip(src, OUTFIT_ADJUSTMENT_SKIP_SURVIVAL_GEAR)
 
 	ChangeToHusk()
-	zombify()
+	zombify(transform_to)
+
+// Zombie types, for events
+/mob/living/carbon/human/zombie/ert
+	zombo_outfits = list(
+		/decl/hierarchy/outfit/spec_op_officer,
+		/decl/hierarchy/outfit/spec_op_officer/space,
+		/decl/hierarchy/outfit/ert
+	)
+
+/mob/living/carbon/human/zombie/syndi
+	zombo_outfits = list(
+		/decl/hierarchy/outfit/mercenary,
+		/decl/hierarchy/outfit/mercenary/syndicate,
+		/decl/hierarchy/outfit/mercenary/syndicate/commando
+	)
+
+// Fast, but low on armor
+/datum/species/zombie/fast
+	name = "Fast Zombie"
+	name_plural = "Fast Zombies"
+	slowdown = 2
+	brute_mod = 3
+	burn_mod = 7
+
+/mob/living/carbon/human/zombie/fast
+	transform_to = SPECIES_ZOMBIE_FAST
+	zombo_outfits = list(
+		/decl/hierarchy/outfit/job/assistant,
+		/decl/hierarchy/outfit/job/service/gardener,
+		/decl/hierarchy/outfit/job/cargo/mining,
+		/decl/hierarchy/outfit/clown
+	)
+
+// Slow, but can destroy everything
+/datum/species/zombie/juggernaut
+	name = "Juggernaut"
+	name_plural = "Juggernauts"
+	slowdown = 15
+	brute_mod = 0.7
+	burn_mod = 1.8
+	stun_mod = 0.1
+	weaken_mod = 0.1
+	paralysis_mod = 0.2
+	mob_size = MOB_LARGE
+	unarmed_types = list(/datum/unarmed_attack/zombie/juggernaut)
+
+/datum/species/zombie/juggernaut/handle_zombie_sounds(mob/living/carbon/human/H)
+	if (prob(7))
+		playsound(H.loc, 'sound/hallucinations/growl1.ogg', 15, 1)
+	else if (prob(7))
+		playsound(H.loc, 'sound/hallucinations/growl2.ogg', 15, 1)
+	else if (prob(7))
+		playsound(H.loc, 'sound/hallucinations/growl3.ogg', 15, 1)
+
+/mob/living/carbon/human/zombie/juggernaut
+	transform_to = SPECIES_ZOMBIE_JUGGERNAUT
+	zombo_outfits = list(
+		/decl/hierarchy/outfit/job/security/officer
+	)
+
+/mob/living/carbon/human/zombie/juggernaut/armored
+	zombo_outfits = list(
+		/decl/hierarchy/outfit/job/security/officer/armored,
+		/decl/hierarchy/outfit/job/security/officer/armored/riot
+	)
+
+/datum/unarmed_attack/zombie/juggernaut
+	attack_name = "punch"
+	attack_verb = list("smashed", "devastated", "pummeled")
+	attack_sound = 'sound/weapons/heavysmash.ogg'
+	damage = 20
+
+/datum/unarmed_attack/zombie/juggernaut/apply_effects(mob/living/carbon/human/user, mob/living/carbon/human/target, attack_damage, zone)
+	..()
+	var/atom/target_turf = get_edge_target_turf(target, get_dir(user, get_step_away(target, user)))
+	target.throw_at(target_turf, 2, 3)
