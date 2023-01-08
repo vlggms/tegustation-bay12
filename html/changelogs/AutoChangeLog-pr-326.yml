@@ -1,0 +1,6 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: Singularities will no longer increase energy from consuming turfs that
+      regress into themselves (exoplanets).
+  - tweak: Singularities no longer can pull items from your hands.
