@@ -1038,11 +1038,11 @@ obj/item/organ/external/proc/remove_clamps()
 
 /obj/item/organ/external/proc/fracture()
 	if(!config.bones_can_break)
-		return
+		return FALSE
 	if(BP_IS_ROBOTIC(src))
-		return	//ORGAN_BROKEN doesn't have the same meaning for robot limbs
+		return FALSE	//ORGAN_BROKEN doesn't have the same meaning for robot limbs
 	if((status & ORGAN_BROKEN) || !(limb_flags & ORGAN_FLAG_CAN_BREAK))
-		return
+		return FALSE
 
 	if(owner)
 		owner.visible_message(\
@@ -1067,6 +1067,8 @@ obj/item/organ/external/proc/remove_clamps()
 	if(!splinted && owner && istype(owner.wear_suit, /obj/item/clothing/suit/space/rig))
 		var/obj/item/clothing/suit/space/rig/suit = owner.wear_suit
 		suit.handle_fracture(owner, src)
+
+	return TRUE
 
 /obj/item/organ/external/proc/mend_fracture()
 	if(BP_IS_ROBOTIC(src))

@@ -148,12 +148,33 @@
 			var/obj/machinery/artifact/A = scanned_obj
 			var/out = "Anomalous alien device - composed of an unknown alloy.<br><br>"
 
-			if(A.my_effect)
-				out += A.my_effect.getDescription()
+			if(A.activation_method)
+				out += "Activation requires "
+				switch(A.activation_method)
+					if(ACTIVATE_TOUCH)
+						out += "physical contact."
+					if(ACTIVATE_SPEECH)
+						out += "coherent speech."
+					if(ACTIVATE_TEMPERATURE)
+						out += "environment temperatures [A.temperature_activation_direction ? "above" : "below"] [A.temperature_activation_required]K."
+					if(ACTIVATE_ATTACK)
+						out += "physical contact with an item of [(A.attack_activation_force > 14) ? "heavy" : "medium"] force."
+					if(ACTIVATE_BULLET)
+						out += "contact with a ballistic projectile."
+					if(ACTIVATE_LASER)
+						out += "contact with a laser projectile."
+					if(ACTIVATE_BOMB)
+						out += "contact with an explosive wave."
+					if(ACTIVATE_MOB_BUMP)
+						out += "physical contact by a push."
+					if(ACTIVATE_WATER)
+						out += "submerging into a body of water."
+					if(ACTIVATE_CHEMICAL)
+						out += "application of [A.chemical_activation_name] reagents."
+				out += "<br>"
 
-			if(A.secondary_effect)
-				out += "<br><br>Internal scans indicate ongoing secondary activity operating independently from primary systems.<br><br>"
-				out += A.secondary_effect.getDescription()
+			if(A.effect)
+				out += A.effect.getDescription()
 
 			return out
 		else
