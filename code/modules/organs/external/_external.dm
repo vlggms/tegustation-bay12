@@ -1029,8 +1029,9 @@ obj/item/organ/external/proc/remove_clamps()
 // this is the retract step of surgery
 /obj/item/organ/external/proc/open_incision()
 	var/datum/wound/W = get_incision()
-	if(!W)	return
-	W.open_wound(min(W.damage * 2, W.damage_list[1] - W.damage))
+	if(!W)
+		return
+	W.open_wound(min_broken_damage*0.6 - W.damage)
 
 	if(!encased)
 		for(var/obj/item/implant/I in implants)

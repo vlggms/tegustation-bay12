@@ -151,19 +151,18 @@
 /decl/surgery_step/internal/remove_organ/pre_surgery_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if(affected)
-		var/list/removable_organs
+		var/list/removable_organs = list()
 		for(var/obj/item/organ/internal/I in affected.implants)
 			if(I.status & ORGAN_CUT_AWAY)
-				LAZYDISTINCTADD(removable_organs, I)
+				removable_organs |= I
 		if(!LAZYLEN(removable_organs))
 			to_chat(user, SPAN_WARNING("You can't find any removable organs."))
 		else
 			var/obj/item/organ/organ_to_remove = removable_organs[1]
 			if(removable_organs.len > 1)
 				var/list/options = list()
-				for(var/i = 1 to removable_organs.len)
-					var/obj/item/organ/I = removable_organs[i]
-					options[i] = image(icon = I.icon, icon_state = I.icon_state)
+				for(var/obj/item/organ/I in removable_organs)
+					options[I] = image(icon = I.icon, icon_state = I.icon_state)
 				organ_to_remove = show_radial_menu(user, target, options, radius = 32)
 			if(organ_to_remove)
 				return organ_to_remove
@@ -324,19 +323,22 @@
 
 /decl/surgery_step/internal/attach_organ/pre_surgery_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 
-	var/list/attachable_organs
+	var/list/attachable_organs = list()
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
 	for(var/obj/item/organ/I in affected.implants)
 		if(I && (I.status & ORGAN_CUT_AWAY))
-			LAZYADD(attachable_organs, I)
+			attachable_organs |= I
 
 	if(!LAZYLEN(attachable_organs))
 		return FALSE
 
-	var/obj/item/organ/organ_to_replace = input(user, "Which organ do you want to reattach?") as null|anything in attachable_organs
-	if(!organ_to_replace)
-		return FALSE
+	var/obj/item/organ/organ_to_replace = attachable_organs[1]
+	if(attachable_organs.len > 1)
+		var/list/options = list()
+		for(var/obj/item/organ/I in attachable_organs)
+			options[I] = image(icon = I.icon, icon_state = I.icon_state)
+		organ_to_replace = show_radial_menu(user, target, options, radius = 32)
 
 	if(organ_to_replace.parent_organ != affected.organ_tag)
 		to_chat(user, SPAN_WARNING("You can't find anywhere to attach \the [organ_to_replace] to!"))

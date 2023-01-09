@@ -7,17 +7,17 @@
 	switch(type)
 		if(CUT)
 			switch(damage)
-				if(70 to INFINITY)
+				if(120 to INFINITY)
 					return /datum/wound/cut/massive
-				if(60 to 70)
+				if(100 to 120)
 					return /datum/wound/cut/gaping_big
-				if(50 to 60)
+				if(75 to 100)
 					return /datum/wound/cut/gaping
-				if(25 to 50)
+				if(50 to 75)
 					return /datum/wound/cut/flesh
-				if(15 to 25)
+				if(35 to 50)
 					return /datum/wound/cut/deep
-				if(0 to 15)
+				if(0 to 35)
 					return /datum/wound/cut/small
 		if(PIERCE)
 			switch(damage)
@@ -89,62 +89,62 @@
 	// The major cut types have the max_bleeding_stage set to the clot stage (which is accordingly given the "blood soaked" descriptor).
 	max_bleeding_stage = 3
 	stages = list(
-		"ugly ripped cut" = 20,
-		"ripped cut" = 10,
-		"cut" = 5,
-		"healing cut" = 2,
+		"ugly ripped cut" = 25,
+		"ripped cut" = 15,
+		"cut" = 10,
+		"healing cut" = 5,
 		"small scab" = 0
 		)
 
 /datum/wound/cut/deep
 	max_bleeding_stage = 3
 	stages = list(
-		"ugly deep ripped cut" = 25,
-		"deep ripped cut" = 20,
-		"deep cut" = 15,
-		"clotted cut" = 8,
-		"scab" = 2,
+		"ugly deep ripped cut" = 35,
+		"deep ripped cut" = 25,
+		"deep cut" = 20,
+		"clotted cut" = 15,
+		"scab" = 5,
 		"fresh skin" = 0
 		)
 
 /datum/wound/cut/flesh
 	max_bleeding_stage = 4
 	stages = list(
-		"ugly ripped flesh wound" = 35,
-		"ugly flesh wound" = 30,
-		"flesh wound" = 25,
-		"blood soaked clot" = 15,
-		"large scab" = 5,
+		"ugly ripped flesh wound" = 50,
+		"ugly flesh wound" = 35,
+		"flesh wound" = 30,
+		"blood soaked clot" = 20,
+		"large scab" = 10,
 		"fresh skin" = 0
 		)
 
 /datum/wound/cut/gaping
 	max_bleeding_stage = 3
 	stages = list(
-		"gaping wound" = 50,
-		"large blood soaked clot" = 25,
-		"blood soaked clot" = 15,
-		"small angry scar" = 5,
+		"gaping wound" = 75,
+		"large blood soaked clot" = 50,
+		"blood soaked clot" = 25,
+		"small angry scar" = 15,
 		"small straight scar" = 0
 		)
 
 /datum/wound/cut/gaping_big
 	max_bleeding_stage = 3
 	stages = list(
-		"big gaping wound" = 60,
-		"healing gaping wound" = 40,
-		"large blood soaked clot" = 25,
-		"large angry scar" = 10,
+		"big gaping wound" = 100,
+		"healing gaping wound" = 75,
+		"large blood soaked clot" = 50,
+		"large angry scar" = 25,
 		"large straight scar" = 0
 		)
 
 datum/wound/cut/massive
 	max_bleeding_stage = 3
 	stages = list(
-		"massive wound" = 70,
-		"massive healing wound" = 50,
-		"massive blood soaked clot" = 25,
-		"massive angry scar" = 10,
+		"massive wound" = 120,
+		"massive healing wound" = 90,
+		"massive blood soaked clot" = 60,
+		"massive angry scar" = 30,
 		"massive jagged scar" = 0
 		)
 
@@ -193,7 +193,7 @@ datum/wound/cut/massive
 		"large round scar" = 0
 		)
 
-datum/wound/puncture/massive
+/datum/wound/puncture/massive
 	max_bleeding_stage = 3
 	stages = list(
 		"massive wound" = 60,
