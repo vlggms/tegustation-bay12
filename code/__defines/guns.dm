@@ -7,6 +7,8 @@
 #define CALIBER_RIFLE			"5mmR"
 #define CALIBER_RIFLE_MILITARY	"7mmR"
 #define CALIBER_T12				"10x24mmR"
+#define CALIBER_AK47			"7.62x39mmR"
+#define CALIBER_AK74			"5.45x39mmR"
 #define CALIBER_ANTIMATERIAL	"15mmR"
 
 #define CALIBER_SHOTGUN			"12g"
