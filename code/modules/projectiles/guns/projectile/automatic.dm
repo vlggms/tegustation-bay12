@@ -419,3 +419,52 @@
 		list(mode_name="3-round bursts", burst=3,    fire_delay=null, burst_delay=1.4,     one_hand_penalty=9,  burst_accuracy=list(0,-1),    dispersion=list(0.0, 0.4, 0.8)),
 		list(mode_name="full auto",      burst=1,    fire_delay=0,    burst_delay=0.5,     one_hand_penalty=11, burst_accuracy=list(0,-1,-2), dispersion=list(0.1, 0.5, 0.9), autofire_enabled=1)
 		)
+
+/obj/item/gun/projectile/automatic/t12/on_update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "t12"
+		item_state = "t12"
+		wielded_item_state = "t12-wielded"
+	else
+		icon_state = "t12-empty"
+		item_state = "t12-empty"
+		wielded_item_state = "t12-wielded-empty"
+
+/obj/item/gun/projectile/automatic/ak47
+	name = "AK47 rifle"
+	desc = "An old assault rifle, dating back to 20th century. It is commonly used by various bandits, pirates and colonists due to its cheap production and maintenance cost."
+	icon = 'icons/obj/guns/ak_rifle.dmi'
+	icon_state = "ak47"
+	item_state = "ak47"
+	w_class = ITEM_SIZE_HUGE
+	force = 12
+	caliber = CALIBER_AK47
+	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 1, TECH_ESOTERIC = 3)
+	slot_flags = SLOT_BACK
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/ak47
+	allowed_magazines = /obj/item/ammo_magazine/ak47
+	one_hand_penalty = 7
+	accuracy_power = 7
+	accuracy = 1
+	bulk = GUN_BULK_RIFLE
+	wielded_item_state = "ak47-wielded"
+	mag_insert_sound = 'sound/weapons/guns/interaction/batrifle_magin.ogg'
+	mag_remove_sound = 'sound/weapons/guns/interaction/batrifle_magout.ogg'
+
+	firemodes = list(
+		list(mode_name="semi auto",      burst=1,    fire_delay=null, one_hand_penalty=8,  burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3,    fire_delay=null, burst_delay=1.8,     one_hand_penalty=10,  burst_accuracy=list(0,-1),    dispersion=list(0.1, 0.5, 0.7)),
+		list(mode_name="full auto",      burst=1,    fire_delay=0,    burst_delay=0.7,     one_hand_penalty=17, burst_accuracy=list(0,-1,-2), dispersion=list(0.2, 0.6, 1.0), autofire_enabled=1)
+		)
+
+/obj/item/gun/projectile/automatic/ak47/on_update_icon()
+	. = ..()
+	if(ammo_magazine)
+		overlays += image(icon, "[icon_state]-mag")
+		item_state = "ak47"
+		wielded_item_state = "ak47-wielded"
+	else
+		item_state = "ak47-empty"
+		wielded_item_state = "ak47-wielded-empty"

@@ -340,3 +340,19 @@
 	ammo_type = /obj/item/ammo_casing/rifle/t12
 	max_ammo = 50
 	multiple_sprites = 1
+
+/obj/item/ammo_magazine/ak47
+	name = "AK47 magazine"
+	icon_state = "ak47"
+	mag_type = MAGAZINE
+	caliber = CALIBER_AK47
+	matter = list(MATERIAL_STEEL = 1800)
+	ammo_type = /obj/item/ammo_casing/rifle/ak47
+	max_ammo = 30
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/ak47/extended
+	name = "AK47 extended magazine"
+	icon_state = "ak47_ext"
+	matter = list(MATERIAL_STEEL = 2400)
+	max_ammo = 50

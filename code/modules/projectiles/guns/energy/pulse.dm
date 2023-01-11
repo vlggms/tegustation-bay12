@@ -90,3 +90,24 @@
 		list(mode_name="heavy", projectile_type=/obj/item/projectile/beam/pulse/skrell/heavy, charge_cost=55, burst=2, burst_delay=3),
 		list(mode_name="light", projectile_type=/obj/item/projectile/beam/pulse/skrell, charge_cost=40, burst=3, burst_delay=2)
 		)
+
+/obj/item/gun/energy/pulse_rifle/advanced
+	name = "military pulse rifle"
+	desc = "A modified version of pulse rifle with extended power bank; A rare sight to behold. Commonly used by elite forces of SolGov or found in hands of various warlords as a valuable trophy."
+	icon_state = "pulse_adv"
+	item_state = "pulse_adv"
+	force = 20
+	projectile_type = /obj/item/projectile/beam/pulse/heavy/adv // It's only really for the sound
+	max_shots = 72
+	multi_aim = 1
+	burst_delay = 1
+	burst = 1
+	accuracy = 2
+	wielded_item_state = "pulse_adv-wielded"
+	origin_tech = list(TECH_COMBAT = 11, TECH_MAGNET = 7)
+
+	firemodes = list(
+		list(mode_name="single fire", fire_delay=null, burst=1, one_hand_penalty = 2, dispersion=list(0, 0.2, 0.4)),
+		list(mode_name="short bursts", fire_delay=null, burst=3, burst_delay = 2, one_hand_penalty=6, dispersion=list(0.2, 0.4, 0.6), burst_accuracy=list(0,-1,-1)),
+		list(mode_name="full auto", fire_delay=0, burst=1, burst_delay=1.5, one_hand_penalty=4, dispersion=list(0.3, 0.5), burst_accuracy=list(0,-1,-1,-2), autofire_enabled=1),
+		)

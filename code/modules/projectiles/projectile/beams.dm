@@ -131,6 +131,9 @@
 		list(11, 0.88),
 	)
 
+/obj/item/projectile/beam/pulse/heavy/adv
+	fire_sound='sound/weapons/pulse_adv.ogg'
+
 /obj/item/projectile/beam/pulse/destroy
 	name = "destroyer pulse"
 	damage = 50
