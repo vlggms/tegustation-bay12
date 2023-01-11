@@ -7,8 +7,18 @@
 	idle_power_usage = 5
 	active_power_usage = 60 KILOWATTS	//This is the power drawn when charging
 	power_channel = EQUIP
+	construct_state = /decl/machine_construction/default/panel_closed
+	var/lowest_active_power_usage = 60 KILOWATTS // Used for RefreshParts() proc
 	var/obj/item/cell/charging = null
 	var/chargelevel = -1
+
+/obj/machinery/cell_charger/Process()
+	. = ..()
+	if(!charging)
+		return
+	. = FALSE
+	charging.give(active_power_usage*CELLRATE)
+	set_power()
 
 /obj/machinery/cell_charger/on_update_icon()
 	icon_state = "ccharger[charging ? 1 : 0]"
@@ -30,26 +40,28 @@
 
 /obj/machinery/cell_charger/attackby(obj/item/W, mob/user)
 	if(stat & BROKEN)
-		return
+		return ..()
 
 	if(istype(W, /obj/item/cell) && anchored)
 		if(charging)
 			to_chat(user, "<span class='warning'>There is already a cell in the charger.</span>")
 			return
-		else
-			var/area/a = get_area(loc)
-			if(a.power_equip == 0) // There's no APC in this area, don't try to cheat power!
-				to_chat(user, "<span class='warning'>The [name] blinks red as you try to insert the cell!</span>")
-				return
-			if(!user.unEquip(W, src))
-				return
-			charging = W
-			set_power()
-			START_PROCESSING_MACHINE(src, MACHINERY_PROCESS_SELF)
-			user.visible_message("[user] inserts a cell into the charger.", "You insert a cell into the charger.")
-			chargelevel = -1
+
+		var/area/a = get_area(loc)
+		if(a.power_equip == 0) // There's no APC in this area, don't try to cheat power!
+			to_chat(user, "<span class='warning'>The [name] blinks red as you try to insert the cell!</span>")
+			return
+		if(!user.unEquip(W, src))
+			return
+		charging = W
+		set_power()
+		START_PROCESSING_MACHINE(src, MACHINERY_PROCESS_SELF)
+		user.visible_message("[user] inserts a cell into the charger.", "You insert a cell into the charger.")
+		chargelevel = -1
 		queue_icon_update()
-	else if(isWrench(W))
+		return
+
+	if(isWrench(W))
 		if(charging)
 			to_chat(user, "<span class='warning'>Remove the cell first!</span>")
 			return
@@ -58,6 +70,9 @@
 		set_power()
 		to_chat(user, "You [anchored ? "attach" : "detach"] the cell charger [anchored ? "to" : "from"] the ground")
 		playsound(src.loc, 'sound/items/Ratchet.ogg', 75, 1)
+		return
+
+	return ..()
 
 /obj/machinery/cell_charger/physical_attack_hand(mob/user)
 	if(charging)
@@ -79,6 +94,10 @@
 		charging.emp_act(severity)
 	..(severity)
 
+/obj/machinery/cell_charger/RefreshParts()
+	..()
+	active_power_usage = (lowest_active_power_usage / 2) * Clamp(total_component_rating_of_type(/obj/item/stock_parts/capacitor), 1, 10)
+
 /obj/machinery/cell_charger/proc/set_power()
 	queue_icon_update()
 	if((stat & (BROKEN|NOPOWER)) || !anchored)
@@ -88,11 +107,3 @@
 		update_use_power(POWER_USE_ACTIVE)
 	else
 		update_use_power(POWER_USE_IDLE)
-
-/obj/machinery/cell_charger/Process()
-	. = ..()
-	if(!charging)
-		return
-	. = 0
-	charging.give(active_power_usage*CELLRATE)
-	set_power()

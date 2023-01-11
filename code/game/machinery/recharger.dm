@@ -20,9 +20,10 @@
 	var/portable = 1
 
 /obj/machinery/recharger/attackby(obj/item/G as obj, mob/user as mob)
-	var/allowed = 0
-	for (var/allowed_type in allowed_devices)
-		if (istype(G, allowed_type)) allowed = 1
+	var/allowed = FALSE
+	for(var/allowed_type in allowed_devices)
+		if(istype(G, allowed_type))
+			allowed = TRUE
 
 	if(allowed)
 		if(panel_open)
@@ -47,15 +48,18 @@
 		if(user.unEquip(G))
 			G.forceMove(src)
 			charging = G
-	else if(portable && isWrench(G) && !panel_open)
+		return
+
+	if(portable && isWrench(G) && !panel_open)
 		if(charging)
 			to_chat(user, "<span class='warning'>Remove [charging] first!</span>")
 			return
 		anchored = !anchored
 		to_chat(user, "You [anchored ? "attached" : "detached"] the recharger.")
 		playsound(loc, 'sound/items/Ratchet.ogg', 75, 1)
-	else
-		..()
+		return
+
+	..()
 	update_icon()
 
 /obj/machinery/recharger/physical_attack_hand(mob/user)
@@ -67,6 +71,10 @@
 		return TRUE
 
 /obj/machinery/recharger/Process()
+	if(panel_open)
+		icon_state = icon_state_open
+		return
+
 	if(stat & (NOPOWER|BROKEN) || !anchored)
 		update_use_power(POWER_USE_OFF)
 		icon_state = icon_state_idle
@@ -75,16 +83,17 @@
 	if(!charging)
 		update_use_power(POWER_USE_IDLE)
 		icon_state = icon_state_idle
-	else
-		var/obj/item/cell/C = charging.get_cell()
-		if(istype(C))
-			if(!C.fully_charged())
-				icon_state = icon_state_charging
-				C.give(active_power_usage*CELLRATE)
-				update_use_power(POWER_USE_ACTIVE)
-			else
-				icon_state = icon_state_charged
-				update_use_power(POWER_USE_IDLE)
+		return
+
+	var/obj/item/cell/C = charging.get_cell()
+	if(istype(C))
+		if(!C.fully_charged())
+			icon_state = icon_state_charging
+			C.give(active_power_usage*CELLRATE)
+			update_use_power(POWER_USE_ACTIVE)
+		else
+			icon_state = icon_state_charged
+			update_use_power(POWER_USE_IDLE)
 
 /obj/machinery/recharger/emp_act(severity)
 	if(stat & (NOPOWER|BROKEN) || !anchored)
