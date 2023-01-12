@@ -1,0 +1,4 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: Organ re-attachment surgery now uses radial menu.
