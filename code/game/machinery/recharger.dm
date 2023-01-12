@@ -132,8 +132,9 @@
 	desc = "A heavy duty wall recharger specialized for energy weaponry."
 	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "wrecharger0"
-	active_power_usage = 50 KILOWATTS	//It's more specialized than the standalone recharger (guns and batons only) so make it more powerful
-	lowest_active_power_usage = 50 KILOWATTS
+	active_power_usage = 50 KILOWATTS
+	lowest_active_power_usage = 100 KILOWATTS // If we ever make it buildable - keep in mind that it is currently
+											 // divided by 2 due to lack of any components
 	allowed_devices = list(/obj/item/gun/magnetic/railgun, /obj/item/gun/energy, /obj/item/melee/baton, /obj/item/device/radio)
 	icon_state_charged = "wrecharger2"
 	icon_state_charging = "wrecharger1"
