@@ -25862,7 +25862,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/bridge)
 "vUR" = (
-/turf/simulated/wall/crystal,
+/turf/simulated/wall/prepainted,
 /area/intrepid/department/civillian/adherent)
 "vVc" = (
 /turf/simulated/wall/r_wall/prepainted,
@@ -27924,7 +27924,9 @@
 	},
 /obj/structure/table/standard,
 /obj/item/storage/box/cdeathalarm_kit,
-/mob/living/simple_animal/hostile/retaliate/tegu/atlas,
+/mob/living/simple_animal/hostile/retaliate/tegu/atlas{
+	density = 0
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/bridge)
 "xMk" = (
