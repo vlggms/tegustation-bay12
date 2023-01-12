@@ -310,12 +310,19 @@
 	build_path = /obj/item/stock_parts/circuitboard/recharger
 	sort_string = "HACAB"
 
+/datum/design/circuit/cell_charger
+	name = "cell charger"
+	id = "cell_charger"
+	req_tech = list(TECH_DATA = 2, TECH_POWER = 2, TECH_ENGINEERING = 2)
+	build_path = /obj/item/stock_parts/circuitboard/cell_charger
+	sort_string = "HACAC"
+
 /datum/design/circuit/recharge_station
 	name = "cyborg recharge station"
 	id = "recharge_station"
 	req_tech = list(TECH_DATA = 3, TECH_ENGINEERING = 2)
 	build_path = /obj/item/stock_parts/circuitboard/recharge_station
-	sort_string = "HACAC"
+	sort_string = "HACAD"
 
 /datum/design/circuit/atmosalerts
 	name = "atmosphere alert console"
