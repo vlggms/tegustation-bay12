@@ -61,7 +61,7 @@
 		queue_icon_update()
 		return
 
-	if(isWrench(W))
+	if(isWrench(W) && !panel_open)
 		if(charging)
 			to_chat(user, "<span class='warning'>Remove the cell first!</span>")
 			return
