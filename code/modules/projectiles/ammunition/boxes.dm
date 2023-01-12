@@ -353,6 +353,6 @@
 
 /obj/item/ammo_magazine/ak47/extended
 	name = "AK47 extended magazine"
-	icon_state = "ak47_ext"
+	icon_state = "ak47-ext"
 	matter = list(MATERIAL_STEEL = 2400)
 	max_ammo = 50
