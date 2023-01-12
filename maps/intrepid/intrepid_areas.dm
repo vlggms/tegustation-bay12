@@ -88,6 +88,7 @@
 /area/shuttle/research
 	req_access = list(access_stardust)
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+	requires_power = TRUE
 
 /area/shuttle/research/cockpit
 	name = "\improper SRV Stardust Cockpit"
@@ -368,6 +369,7 @@
 	base_turf = /turf/simulated/floor/plating
 	area_flags = AREA_FLAG_RAD_SHIELDED
 	holomap_color = HOLOMAP_AREACOLOR_EXPLORATION
+	requires_power = TRUE
 
 /area/shuttle/pandora/cockpit
 	name = "\improper Pandora - Cockpit"
