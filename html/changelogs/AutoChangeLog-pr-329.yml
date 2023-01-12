@@ -1,0 +1,4 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: Cell charger can now be built and upgraded.
