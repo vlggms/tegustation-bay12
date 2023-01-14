@@ -161,7 +161,7 @@
 			if (isrobot(U))
 				qdel(bulb)
 
-		var/obj/item/light/L = new target.light_type()
+		var/obj/item/light/L = new target.allowed_light_type()
 		if (emagged)
 			log_and_message_admins("used an emagged light replacer.", U)
 			L.create_reagents(5)

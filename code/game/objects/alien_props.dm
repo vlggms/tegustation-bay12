@@ -26,7 +26,7 @@
 	update_state = 0 //Don't pixelshift us on wall
 	cell_type = /obj/item/cell/alien
 	autoname = 0
-	
+
 /obj/machinery/power/apc/alien/on_update_icon()
 	check_updates()
 	if(update_state & APC_UPDATE_ALLGOOD)
@@ -43,7 +43,8 @@
 	icon_state = "bulb_map"
 	base_state = "bulb"
 	color = COLOR_PURPLE
-	light_type = /obj/item/light/alien
+	allowed_light_type = /obj/item/light/alien
+	spawn_light_type = /obj/item/light/alien
 
 /obj/machinery/light/alien/Initialize()
 	color = null  //It's just for mapping
