@@ -145,8 +145,9 @@ MANTIDIFY(/obj/machinery/door/airlock/external/bolted, "mantid airlock", "door")
 
 /obj/machinery/light/ascent
 	name = "mantid light"
-	light_type = /obj/item/light/tube/ascent
 	desc = "Some kind of strange alien lighting technology."
+	allowed_light_type = /obj/item/light/tube/ascent
+	spawn_light_type = /obj/item/light/tube/ascent
 
 /obj/machinery/computer/ship/helm/ascent
 	icon_state = "ascent"

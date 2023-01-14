@@ -172,7 +172,10 @@
 
 	var/on = 0					// 1 if on, 0 if off
 	var/flickering = 0
-	var/light_type = /obj/item/light/tube		// the type of light item
+	/// Allowed light tube type(and subtypes of it) that can be inserted into the fixture
+	var/allowed_light_type = /obj/item/light/tube
+	/// What type of tube it starts with
+	var/spawn_light_type = /obj/item/light/tube
 	var/construct_type = /obj/machinery/light_construct
 
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
@@ -192,32 +195,44 @@
 
 // Subtypes for mapping
 /obj/machinery/light/medbay
-	light_type = /obj/item/light/tube/medbay
+	spawn_light_type = /obj/item/light/tube/medbay
 
 /obj/machinery/light/yellowish
-	light_type = /obj/item/light/tube/yellowish
+	spawn_light_type = /obj/item/light/tube/yellowish
 
 /obj/machinery/light/dystopian
-	light_type = /obj/item/light/tube/dystopian
+	spawn_light_type = /obj/item/light/tube/dystopian
 
 // the smaller bulb light fixture
 /obj/machinery/light/small
 	icon_state = "bulb_map"
 	base_state = "bulb"
 	desc = "A small lighting fixture."
-	light_type = /obj/item/light/bulb
+	allowed_light_type = /obj/item/light/bulb
+	spawn_light_type = /obj/item/light/bulb
 	construct_type = /obj/machinery/light_construct/small
 
 /obj/machinery/light/small/emergency
-	light_type = /obj/item/light/bulb/red
+	spawn_light_type = /obj/item/light/bulb/red
 
 /obj/machinery/light/small/red
-	light_type = /obj/item/light/bulb/red
+	spawn_light_type = /obj/item/light/bulb/red
+
+// Subtypes for mapping
+/obj/machinery/light/small/medbay
+	spawn_light_type = /obj/item/light/bulb/medbay
+
+/obj/machinery/light/small/yellowish
+	spawn_light_type = /obj/item/light/bulb/yellowish
+
+/obj/machinery/light/small/dystopian
+	spawn_light_type = /obj/item/light/bulb/dystopian
 
 /obj/machinery/light/spot
 	name = "spotlight"
 	desc = "A more robust socket for light tubes that demand more power."
-	light_type = /obj/item/light/tube/large
+	allowed_light_type = /obj/item/light/tube/large
+	spawn_light_type = /obj/item/light/tube/large
 	construct_type = /obj/machinery/light_construct/spot
 
 // create a new lighting fixture
@@ -231,7 +246,7 @@
 		construct.transfer_fingerprints_to(src)
 		set_dir(construct.dir)
 	else
-		lightbulb = new light_type(src)
+		lightbulb = new spawn_light_type(src)
 		if(prob(lightbulb.broken_chance))
 			broken(1)
 
@@ -368,7 +383,7 @@
 			to_chat(user, "The [fitting] has been smashed.")
 
 /obj/machinery/light/proc/get_fitting_name()
-	var/obj/item/light/L = light_type
+	var/obj/item/light/L = allowed_light_type
 	return initial(L.name)
 
 // attack with item - insert light (if right type), otherwise try to break the light
@@ -394,7 +409,7 @@
 		if(lightbulb)
 			to_chat(user, SPAN_WARNING("There is a [get_fitting_name()] already inserted."))
 			return
-		if(!istype(W, light_type))
+		if(!istype(W, allowed_light_type))
 			to_chat(user, SPAN_WARNING("This type of light requires a [get_fitting_name()]."))
 			return
 		if(!user.unEquip(W, src))
@@ -571,7 +586,7 @@
 		broken()
 
 /obj/machinery/light/small/readylight
-	light_type = /obj/item/light/bulb/red/readylight
+	spawn_light_type = /obj/item/light/bulb/red/readylight
 	var/state = 0
 
 /obj/machinery/light/small/readylight/proc/set_state(var/new_state)
@@ -587,7 +602,8 @@
 	icon = 'icons/obj/lighting_nav.dmi'
 	icon_state = "nav10"
 	base_state = "nav1"
-	light_type = /obj/item/light/tube/large
+	allowed_light_type = /obj/item/light/tube/large
+	spawn_light_type = /obj/item/light/tube/large
 	on = TRUE
 
 /obj/machinery/light/navigation/delay2
@@ -672,16 +688,19 @@
 // Blue-ish color for use in medical areas
 /obj/item/light/tube/medbay
 	desc = "A replacement light tube. This one is meant to be used in sterile/medical areas."
+	color = "#e0fefe"
 	b_colour = "#e0fefe"
 
 // Yellow-ish color
 /obj/item/light/tube/yellowish
 	desc = "A replacement light tube. This one has a yellow tint to it."
+	color = "#fffee0"
 	b_colour = "#fffee0"
 
 // DYSTOPIAN GREEN-BLUE COLOR OF CORPORATE OFFICES!
 /obj/item/light/tube/dystopian
 	desc = "A replacement light tube. This one is meant to be used in a corporate office where you will spend your life doing meaningless, soul-consuming paperwork."
+	color = "#addbbe"
 	b_colour = "#addbbe"
 
 /obj/item/light/tube/party/Initialize() //Randomly colored light tubes. Mostly for testing, but maybe someone will find a use for them.
@@ -739,6 +758,22 @@
 	base_state = "fbulb"
 	item_state = "egg4"
 	matter = list(MATERIAL_GLASS = 100)
+
+// Subtypes for mapping
+/obj/item/light/bulb/medbay
+	desc = "A replacement light bulb. This one is meant to be used in sterile/medical areas."
+	color = "#e0fefe"
+	b_colour = "#e0fefe"
+
+/obj/item/light/bulb/yellowish
+	desc = "A replacement light bulb. This one has a yellow tint to it."
+	color = "#fffee0"
+	b_colour = "#fffee0"
+
+/obj/item/light/bulb/dystopian
+	desc = "A replacement light bulb. This one is meant to be used in a corporate office where you will spend your life doing meaningless, soul-consuming paperwork."
+	color = "#addbbe"
+	b_colour = "#addbbe"
 
 // update the icon state and description of the light
 /obj/item/light/on_update_icon()
