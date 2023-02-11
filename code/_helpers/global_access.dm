@@ -169,6 +169,8 @@
 			return global.SStrade;
 		if("SSturf")
 			return global.SSturf;
+		if("SSturf_fire")
+			return global.SSturf_fire;
 		if("SSvines")
 			return global.SSvines;
 		if("SSvote")
@@ -1060,6 +1062,8 @@
 			global.SStrade=newval;
 		if("SSturf")
 			global.SSturf=newval;
+		if("SSturf_fire")
+			global.SSturf_fire=newval;
 		if("SSvines")
 			global.SSvines=newval;
 		if("SSvote")
@@ -1866,6 +1870,7 @@
 	"SStimer",
 	"SStrade",
 	"SSturf",
+	"SSturf_fire",
 	"SSvines",
 	"SSvote",
 	"SSwebhooks",
