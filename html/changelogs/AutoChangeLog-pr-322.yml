@@ -1,0 +1,6 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - rscadd: Mining drill upgrades! Apply them to the drill to improve the experience.
+  - rscadd: Quantum pads! Teleport anyone or anything to anywhere and everywhere.
+      Two pads must be first connected with a multitool to be able to use them.
