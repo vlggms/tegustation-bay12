@@ -3,7 +3,7 @@
 
 /datum/design/item/medical/AssembleDesignName()
 	..()
-	name = "Biotech device prototype ([item_name])"
+	name = "\[Medical\] - [item_name]"
 
 /datum/design/item/medical/slime_scanner
 	desc = "Multipurpose organic life scanner."
@@ -73,3 +73,12 @@
 	materials = list(MATERIAL_PLASTIC = 15000, MATERIAL_GLASS = 15000, MATERIAL_SILVER = 5000, MATERIAL_GOLD = 1000)
 	build_path = /obj/item/bodybag/cryobag
 	sort_string = "MAFAA"
+
+/datum/design/item/weapon/storage/box/freezer
+	name = "Portable Freezer"
+	desc = "This nifty shock-resistant device will keep your 'groceries' nice and non-spoiled."
+	id = "freezer"
+	req_tech = list(TECH_MATERIAL = 3, TECH_POWER = 2)
+	materials = list(MATERIAL_PLASTIC = 350)
+	build_path = /obj/item/storage/box/freezer
+	sort_string = "MAGAA"

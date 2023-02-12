@@ -1,6 +1,6 @@
 /datum/design/item/disk/AssembleDesignName()
 	..()
-	name = "Storage disk ([item_name])"
+	name = "\[Disk\] - [item_name]"
 	materials = list(MATERIAL_PLASTIC = 30, MATERIAL_STEEL = 30, MATERIAL_GLASS = 10)
 
 /datum/design/item/disk/design

@@ -1,6 +1,6 @@
 /datum/design/item/encryptionkey/AssembleDesignName()
 	..()
-	name = "Encryption key design ([item_name])"
+	name = "\[Encryption Key\] - [item_name]"
 
 /datum/design/item/encryptionkey/binary
 	name = "binary"
@@ -13,7 +13,7 @@
 
 /datum/design/item/camouflage/AssembleDesignName()
 	..()
-	name = "Camouflage design ([item_name])"
+	name = "\[Camouflage\] - [item_name]"
 
 /datum/design/item/camouflage/chameleon
 	name = "holographic equipment kit"
@@ -24,15 +24,11 @@
 	build_path = /obj/item/storage/backpack/chameleon/sydie_kit
 	sort_string = "VASBA"
 
-/datum/design/item/weapon/storage/box/freezer
-	name = "Portable Freezer"
-	desc = "This nifty shock-resistant device will keep your 'groceries' nice and non-spoiled."
-	id = "freezer"
-	req_tech = list(TECH_MATERIAL = 3, TECH_POWER = 2)
-	materials = list(MATERIAL_PLASTIC = 350)
-	build_path = /obj/item/storage/box/freezer
+/datum/design/item/janitor/AssembleDesignName()
+	..()
+	name = "\[Janitorial\] - [item_name]"
 
-/datum/design/item/advmop
+/datum/design/item/janitor/advmop
 	name = "Advanced Mop"
 	desc = "An upgraded mop with a large internal capacity for holding water or other cleaning chemicals."
 	id = "advmop"
@@ -40,7 +36,7 @@
 	materials = list(MATERIAL_ALUMINIUM = 2500, MATERIAL_STEEL = 500, MATERIAL_PLASTIC = 200)
 	build_path = /obj/item/mop/advanced
 
-/datum/design/blutrash
+/datum/design/item/janitor/blutrash
 	name = "Trashbag of Holding"
 	desc = "An advanced trash bag with bluespace properties; capable of holding a plethora of garbage."
 	id = "blutrash"
@@ -48,7 +44,7 @@
 	materials = list(MATERIAL_PLASTIC = 5000, MATERIAL_GOLD = 1500, MATERIAL_URANIUM = 250, MATERIAL_PHORON = 1500)
 	build_path = /obj/item/storage/bag/trash/bluespace
 
-/datum/design/item/holosign
+/datum/design/item/janitor/holosign
 	name = "Holographic Sign Projector"
 	desc = "A holograpic projector used to project various warning signs."
 	id = "holosign"

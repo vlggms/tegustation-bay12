@@ -192,7 +192,7 @@ GLOBAL_LIST_INIT(conveyor_switches, list())
 /obj/machinery/conveyor/proc/can_conveyor_run()
 	if(stat & BROKEN)
 		return FALSE
-	else if(stat & NOPOWER)
+	else if(use_power && (stat & NOPOWER))
 		return FALSE
 	else if(!operable)
 		return FALSE

@@ -10,11 +10,11 @@
 	if(build_path)
 		var/obj/item/stock_parts/circuitboard/C = build_path
 		if(initial(C.board_type) == "machine")
-			name = "Machine circuit design ([item_name])"
+			name = "\[Machine Circuit\] - [item_name]"
 		else if(initial(C.board_type) == "computer")
-			name = "Computer circuit design ([item_name])"
+			name = "\[Computer Circuit\] - [item_name]"
 		else
-			name = "Circuit design ([item_name])"
+			name = "\[Circuit\] - [item_name]"
 
 /datum/design/circuit/AssembleDesignDesc()
 	if(!desc)
@@ -122,6 +122,20 @@
 	req_tech = list(TECH_DATA = 4)
 	build_path = /obj/item/stock_parts/circuitboard/robotics
 	sort_string = "HAAAB"
+
+/datum/design/circuit/quantumpad
+	name = "quantum pad"
+	id = "quantumpad"
+	req_tech = list(TECH_BLUESPACE = 5, TECH_ENGINEERING = 5)
+	build_path = /obj/item/stock_parts/circuitboard/quantumpad
+	sort_string = "HAAAC"
+
+/datum/design/circuit/mining_quantumpad
+	name = "mining quantum pad"
+	id = "mining_quantumpad"
+	req_tech = list(TECH_BLUESPACE = 4, TECH_ENGINEERING = 4)
+	build_path = /obj/item/stock_parts/circuitboard/quantumpad/mining
+	sort_string = "HAAAD"
 
 /datum/design/circuit/rdconsole
 	name = "R&D control console"
@@ -643,7 +657,8 @@
 	req_tech = list(TECH_DATA = 4, TECH_ENGINEERING = 4)
 
 /datum/design/circuit/tcom/AssembleDesignName()
-	name = "Telecommunications machinery circuit design ([name])"
+	name = "\[Telecomms Circuit\] - [name]"
+
 /datum/design/circuit/tcom/AssembleDesignDesc()
 	desc = "Allows for the construction of a telecommunications [name] circuit board."
 
