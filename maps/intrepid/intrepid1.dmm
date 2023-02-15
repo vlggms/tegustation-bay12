@@ -347,21 +347,21 @@
 /turf/simulated/wall/r_titanium,
 /area/shuttle/research/maint)
 "arV" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/structure/cable{
+	icon_state = "1-4"
 	},
-/obj/structure/cable/green{
+/obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
+/obj/effect/wallframe_spawn/reinforced_phoron/hull,
+/obj/machinery/door/blast/regular/open{
+	dir = 2;
+	icon_state = "pdoor0";
+	id_tag = "messhallblastdoors"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/structure/reagent_dispensers/watertank,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor,
-/area/intrepid/misc/maint/starboard)
+/area/intrepid/department/civillian/mess)
 "ask" = (
 /obj/structure/closet/secure_closet/guncabinet{
 	name = "laser carbines cabinet"
@@ -1091,20 +1091,23 @@
 /area/intrepid/department/security/wing)
 "aZY" = (
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	dir = 4
 	},
 /obj/structure/cable/green{
-	icon_state = "2-4"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
+	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/door/airlock/maintenance,
+/obj/machinery/door/firedoor{
+	dir = 4
 	},
 /turf/simulated/floor,
-/area/intrepid/misc/maint/starboard)
+/area/intrepid/department/civillian/mess)
 "bau" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 6;
@@ -1155,6 +1158,22 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/department/civillian/janitor)
+"bbm" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/starboard)
 "bbv" = (
 /obj/effect/paint_stripe/mauve,
 /turf/simulated/wall/r_titanium,
@@ -1814,9 +1833,9 @@
 /obj/machinery/button/blast_door{
 	id_tag = "pandora_entry";
 	name = "Pandora Cockpit Entry Hatch button";
-	req_access = list("ACCESS_INTREPID_HANGAR");
+	pixel_x = 9;
 	pixel_y = -10;
-	pixel_x = 9
+	req_access = list("ACCESS_INTREPID_HANGAR")
 	},
 /turf/simulated/wall/r_titanium,
 /area/shuttle/pandora/cockpit)
@@ -1918,6 +1937,22 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/engineering/lockerroom)
+"bMD" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/starboard)
 "bNf" = (
 /obj/effect/floor_decal/corner/green/diagonal,
 /obj/structure/hygiene/sink{
@@ -2223,6 +2258,10 @@
 /obj/machinery/vending/wallmed1{
 	dir = 1;
 	pixel_y = -31
+	},
+/obj/machinery/pager/science{
+	dir = 1;
+	pixel_y = -34
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/portside)
@@ -2554,6 +2593,21 @@
 /obj/effect/floor_decal/corner/blue/border,
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/treatment)
+"ckL" = (
+/obj/effect/paint/silver,
+/obj/machinery/reagentgrinder,
+/obj/effect/floor_decal/corner/yellow/border{
+	dir = 10
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/stack/material/phoron/ten,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/machinery/camera/network/medbay{
+	c_tag = "Medical - Chemistry";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/intrepid/department/medical/chemistry)
 "ckQ" = (
 /obj/machinery/door/firedoor{
 	dir = 4
@@ -3669,9 +3723,9 @@
 	},
 /obj/machinery/button/blast_door{
 	dir = 8;
-	pixel_x = 22;
 	id_tag = "stasisunit";
-	name = "Creature Stasis Unit Storage Room button"
+	name = "Creature Stasis Unit Storage Room button";
+	pixel_x = 22
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/hallway)
@@ -3683,11 +3737,11 @@
 /obj/item/ammo_magazine/smg_top,
 /obj/item/ammo_magazine/smg_top,
 /obj/structure/closet/secure_closet/wall{
+	anchored = 1;
+	density = 0;
 	name = "Lethal Ammunition";
 	pixel_x = -32;
-	req_access = list("ACCESS_ARMORY");
-	anchored = 1;
-	density = 0
+	req_access = list("ACCESS_ARMORY")
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/security/bo)
@@ -3967,6 +4021,10 @@
 /obj/effect/floor_decal/corner/yellow/bordercorner{
 	dir = 8
 	},
+/obj/machinery/pager/robotics{
+	dir = 1;
+	pixel_y = -21
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/portside)
 "dAE" = (
@@ -4128,11 +4186,11 @@
 /obj/machinery/shield_diffuser,
 /obj/machinery/access_button{
 	command = "cycle_exterior";
+	frequency = 1379;
 	master_tag = "fore_starboard_airlock";
 	name = "exterior access button";
 	pixel_x = 22;
-	pixel_y = -25;
-	frequency = 1379
+	pixel_y = -25
 	},
 /turf/simulated/floor,
 /area/space)
@@ -6855,8 +6913,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/bunk)
 "fRQ" = (
-/obj/machinery/vending/mredispenser,
-/turf/simulated/floor/wood/walnut,
+/turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/department/civillian/mess)
 "fSe" = (
 /obj/machinery/power/apc{
@@ -7010,10 +7067,10 @@
 "fWJ" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/button/blast_door{
+	dir = 4;
 	id_tag = "pandorashutter";
 	name = "Pandora Viewport Shutter button";
-	pixel_x = -25;
-	dir = 4
+	pixel_x = -25
 	},
 /obj/machinery/sleeper{
 	dir = 4
@@ -7136,6 +7193,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/pandora/cargo)
+"gdk" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/wood/walnut,
+/area/intrepid/department/civillian/mess)
 "gds" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -7210,10 +7276,10 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/cryopod/robot,
 /obj/machinery/access_button/airlock_interior{
-	pixel_x = -25;
-	pixel_y = 23;
 	frequency = 1331;
-	master_tag = "tcomms"
+	master_tag = "tcomms";
+	pixel_x = -25;
+	pixel_y = 23
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/engineering/assembly/robotics)
@@ -7386,6 +7452,23 @@
 /obj/machinery/door/airlock/glass/civilian,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/misc/hallway/starboard)
+"gsQ" = (
+/obj/structure/disposalpipe/sortjunction{
+	dir = 4;
+	name = "Bar";
+	sort_type = "Bar"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/starboard)
 "gtf" = (
 /obj/structure/bed/chair/office/comfy{
 	dir = 1
@@ -7515,6 +7598,12 @@
 /obj/structure/bed/chair/office/comfy,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/co)
+"gAI" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/wood/walnut,
+/area/intrepid/department/civillian/mess)
 "gAL" = (
 /obj/machinery/door/airlock/external{
 	autoset_access = 0;
@@ -7865,6 +7954,26 @@
 /obj/machinery/navbeacon/Security,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/security/wing)
+"gQJ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/catwalk,
+/obj/structure/sign/poster/tegu_random{
+	pixel_x = -32;
+	pixel_y = 32
+	},
+/turf/simulated/floor,
+/area/intrepid/department/civillian/mess)
 "gQQ" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/effect/floor_decal/corner/green/mono,
@@ -8437,9 +8546,9 @@
 "hph" = (
 /obj/machinery/button/blast_door{
 	dir = 4;
-	pixel_x = -23;
 	id_tag = "pandoracargo";
-	name = "Pandora Cargo Blast Door button"
+	name = "Pandora Cargo Blast Door button";
+	pixel_x = -23
 	},
 /obj/structure/handrail{
 	dir = 4
@@ -8795,10 +8904,10 @@
 	icon_state = "2-4"
 	},
 /obj/machinery/access_button/airlock_interior{
-	pixel_x = -25;
-	pixel_y = -23;
 	frequency = 1331;
-	master_tag = "pandora_shuttle"
+	master_tag = "pandora_shuttle";
+	pixel_x = -25;
+	pixel_y = -23
 	},
 /obj/machinery/light{
 	dir = 8
@@ -9070,6 +9179,15 @@
 /area/shuttle/pandora/cargo)
 "hXj" = (
 /obj/item/storage/box/greenglowsticks,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/portside)
 "hXM" = (
@@ -9763,12 +9881,12 @@
 "iCL" = (
 /obj/machinery/access_button{
 	command = "cycle_interior";
+	frequency = 1379;
 	master_tag = "aft_port_airlock";
 	name = "interior access button";
 	pixel_x = 6;
 	pixel_y = 24;
-	req_access = list("ACCESS_MAINT");
-	frequency = 1379
+	req_access = list("ACCESS_MAINT")
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -10334,6 +10452,12 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/prison)
+"iZe" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/wood/walnut,
+/area/intrepid/department/civillian/mess)
 "iZN" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -10457,12 +10581,12 @@
 /obj/machinery/shield_diffuser,
 /obj/machinery/access_button{
 	command = "cycle_exterior";
+	frequency = 1379;
 	master_tag = "aft_starboard_airlock";
 	name = "exterior access button";
 	pixel_x = -26;
 	pixel_y = -24;
-	req_access = list("ACCESS_MAINT");
-	frequency = 1379
+	req_access = list("ACCESS_MAINT")
 	},
 /turf/simulated/floor,
 /area/space)
@@ -12892,7 +13016,6 @@
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 1
 	},
-/obj/structure/bed/chair/office,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -12902,6 +13025,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
+/obj/structure/closet/wardrobe/chemistry_white,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/storage/box/freezer,
+/obj/item/storage/box/beakers/insulated,
+/obj/item/storage/box/beakers,
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/chemistry)
 "lrW" = (
@@ -12932,11 +13061,11 @@
 "lsl" = (
 /obj/machinery/access_button{
 	command = "cycle_interior";
+	frequency = 1379;
 	master_tag = "fore_starboard_airlock";
 	name = "interior access button";
 	pixel_x = -24;
-	pixel_y = -25;
-	frequency = 1379
+	pixel_y = -25
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9;
@@ -13162,9 +13291,9 @@
 /obj/machinery/button/blast_door{
 	id_tag = "pandora_entry";
 	name = "Pandora Cockpit Entry Hatch button";
-	req_access = list("ACCESS_INTREPID_HANGAR");
+	pixel_x = 23;
 	pixel_y = 22;
-	pixel_x = 23
+	req_access = list("ACCESS_INTREPID_HANGAR")
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/pandora/cockpit)
@@ -13266,8 +13395,8 @@
 	pixel_y = 25
 	},
 /obj/structure/sign/directions/engineering{
-	pixel_y = 32;
-	dir = 4
+	dir = 4;
+	pixel_y = 32
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
@@ -13399,11 +13528,14 @@
 	},
 /area/intrepid/department/command/AI/AIFoyer)
 "lRd" = (
-/obj/machinery/vending/sol,
-/obj/machinery/light{
-	dir = 1
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/blast/regular/open{
+	dir = 2;
+	icon_state = "pdoor0";
+	id_tag = "messhallblastdoors"
 	},
-/turf/simulated/floor/wood/walnut,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor,
 /area/intrepid/department/civillian/mess)
 "lRf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -13458,6 +13590,16 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/portside)
+"lTr" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/camera/network/first_deck{
+	c_tag = "Service - Upper Mess Hall";
+	dir = 8
+	},
+/turf/simulated/floor/wood/walnut,
+/area/intrepid/department/civillian/mess)
 "lTY" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/white,
@@ -13991,14 +14133,7 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
 "mlM" = (
-/obj/effect/floor_decal/corner/yellow/border,
-/obj/machinery/chem_master,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
-/obj/machinery/camera/network/medbay{
-	c_tag = "Medical - Chemistry";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -15193,8 +15328,8 @@
 /obj/machinery/atmospherics/pipe/simple/visible/fuel,
 /obj/structure/disposalpipe/segment,
 /obj/structure/sign/directions/engineering{
-	pixel_x = 32;
-	dir = 1
+	dir = 1;
+	pixel_x = 32
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -15379,6 +15514,25 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/portside)
+"nnG" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance,
+/turf/simulated/floor,
+/area/intrepid/department/civillian/mess)
 "noc" = (
 /obj/structure/bed/chair/shuttle{
 	dir = 8
@@ -15469,14 +15623,14 @@
 /obj/machinery/access_button/airlock_exterior{
 	frequency = 1331;
 	master_tag = "pandora_shuttle";
-	pixel_y = 22;
-	pixel_x = 24
+	pixel_x = 24;
+	pixel_y = 22
 	},
 /obj/machinery/airlock_sensor{
-	pixel_x = 39;
-	pixel_y = 22;
+	frequency = 1331;
 	id_tag = "pandora_shuttle_sensor_outer";
-	frequency = 1331
+	pixel_x = 39;
+	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/pandora/cargo)
@@ -16901,6 +17055,7 @@
 	c_tag = "Medical - Morgue";
 	dir = 1
 	},
+/obj/item/drain,
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/morgue)
 "oJM" = (
@@ -16999,6 +17154,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
+/obj/random/maintenance,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/portside)
 "oMv" = (
@@ -17799,20 +17955,8 @@
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/treatment)
 "puC" = (
-/obj/structure/disposalpipe/sortjunction{
-	dir = 4;
-	name = "Bar";
-	sort_type = "Bar"
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
+/obj/structure/disposalpipe/segment,
+/obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/starboard)
 "pwH" = (
@@ -18265,6 +18409,10 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/machinery/pager/science{
+	pixel_x = -8;
+	pixel_y = 22
+	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/treatment)
 "pKO" = (
@@ -18714,6 +18862,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/pager/medical{
+	dir = 1;
+	pixel_x = 22;
+	pixel_y = -21
+	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/misc/hallway/portside)
 "qcf" = (
@@ -18809,9 +18962,10 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/cargo/cargostorage)
 "qeE" = (
-/obj/effect/floor_decal/corner/yellow/border,
-/obj/machinery/chemical_dispenser/full,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/hygiene/shower{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/hatch/red,
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/chemistry)
 "qfo" = (
@@ -19467,9 +19621,9 @@
 	dir = 1
 	},
 /mob/living/simple_animal/familiar/pet/cat{
-	name = "Miranda";
+	desc = "A pitch black cat, a pet for the current Supply Chief!";
 	dir = 8;
-	desc = "A pitch black cat, a pet for the current Supply Chief!"
+	name = "Miranda"
 	},
 /obj/structure/dogbed{
 	name = "catbed"
@@ -19639,10 +19793,7 @@
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/misc/maint/portside)
 "qNy" = (
-/obj/structure/sign/poster/tegu_random{
-	pixel_x = 32;
-	pixel_y = 32
-	},
+/obj/machinery/vending/sol,
 /turf/simulated/floor/wood/walnut,
 /area/intrepid/department/civillian/mess)
 "qOD" = (
@@ -20349,12 +20500,12 @@
 "rsD" = (
 /obj/machinery/access_button{
 	command = "cycle_interior";
+	frequency = 1379;
 	master_tag = "aft_starboard_airlock";
 	name = "interior access button";
 	pixel_x = 6;
 	pixel_y = -24;
-	req_access = list("ACCESS_MAINT");
-	frequency = 1379
+	req_access = list("ACCESS_MAINT")
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -20664,6 +20815,14 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/security/armory)
+"rIZ" = (
+/obj/effect/paint/silver,
+/obj/machinery/chemical_dispenser/full,
+/obj/effect/floor_decal/corner/yellow/border,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/light/medbay,
+/turf/simulated/floor/tiled/white,
+/area/intrepid/department/medical/chemistry)
 "rJi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	dir = 4
@@ -21098,6 +21257,22 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/hallway)
+"sbS" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor,
+/area/intrepid/department/civillian/mess)
 "sbZ" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -21319,6 +21494,13 @@
 /obj/machinery/chem_master/condimaster,
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/civillian/galley)
+"slo" = (
+/obj/effect/paint/silver,
+/obj/machinery/chem_master,
+/obj/effect/floor_decal/corner/yellow/border,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/white,
+/area/intrepid/department/medical/chemistry)
 "slp" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -22007,18 +22189,10 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/starboard)
 "sJe" = (
-/obj/effect/floor_decal/corner/yellow/border,
-/obj/structure/closet/wardrobe/chemistry_white,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/storage/box/beakers,
-/obj/item/storage/box/beakers/insulated,
-/obj/item/storage/box/freezer,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
-/obj/item/reagent_containers/glass/beaker/large,
-/obj/item/reagent_containers/glass/beaker/large,
-/obj/machinery/light/medbay,
+/obj/structure/bed/chair/office,
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/chemistry)
 "sJE" = (
@@ -22642,7 +22816,15 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/security/storage)
 "tjd" = (
-/obj/machinery/vending/coffee,
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/obj/machinery/button/blast_door{
+	id_tag = "messhallblastdoors";
+	name = "Mess Hall Viewport Shutters button";
+	pixel_x = -25;
+	pixel_y = 24
+	},
 /turf/simulated/floor/wood/walnut,
 /area/intrepid/department/civillian/mess)
 "tjD" = (
@@ -22821,18 +23003,9 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/security/armory)
 "tnG" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-	},
-/obj/structure/cable/green{
-	icon_state = "2-4"
-	},
-/obj/random/maintenance,
-/turf/simulated/floor,
-/area/intrepid/misc/maint/portside)
+/obj/structure/table/standard,
+/turf/simulated/floor/wood/walnut,
+/area/intrepid/department/civillian/mess)
 "tnU" = (
 /obj/effect/floor_decal/corner/blue/diagonal,
 /obj/machinery/power/apc{
@@ -23097,7 +23270,7 @@
 	dir = 1
 	},
 /obj/machinery/camera/network/first_deck{
-	c_tag = "Service - Mess Hall";
+	c_tag = "Service - Lower Mess Hall";
 	dir = 8
 	},
 /obj/machinery/firealarm{
@@ -23692,6 +23865,9 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 4
 	},
+/obj/machinery/pager/cargo{
+	pixel_y = 24
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/starboard)
 "uas" = (
@@ -24066,12 +24242,12 @@
 /obj/machinery/shield_diffuser,
 /obj/machinery/access_button{
 	command = "cycle_exterior";
+	frequency = 1379;
 	master_tag = "aft_port_airlock";
 	name = "exterior access button";
 	pixel_x = -26;
 	pixel_y = 24;
-	req_access = list("ACCESS_MAINT");
-	frequency = 1379
+	req_access = list("ACCESS_MAINT")
 	},
 /turf/simulated/floor,
 /area/space)
@@ -24157,9 +24333,8 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/primarythruster)
 "uvA" = (
-/obj/structure/sign/poster/tegu_random{
-	pixel_x = -32;
-	pixel_y = 32
+/obj/structure/bed/chair{
+	dir = 8
 	},
 /turf/simulated/floor/wood/walnut,
 /area/intrepid/department/civillian/mess)
@@ -24456,6 +24631,10 @@
 	dir = 1;
 	pixel_y = -13
 	},
+/obj/machinery/pager/security{
+	dir = 1;
+	pixel_y = -25
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/starboard)
 "uIc" = (
@@ -24601,6 +24780,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
+/obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/chemistry)
 "uPE" = (
@@ -24993,17 +25173,14 @@
 /turf/simulated/floor/tiled,
 /area/intrepid/department/cargo/cargobay)
 "viY" = (
-/obj/effect/floor_decal/corner/yellow/border{
-	dir = 10
-	},
-/obj/item/reagent_containers/glass/beaker/large,
-/obj/item/reagent_containers/glass/beaker/large,
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -23
 	},
-/obj/item/stack/material/phoron/ten,
-/obj/machinery/reagentgrinder,
+/obj/effect/floor_decal/corner/yellow/border{
+	dir = 8
+	},
+/obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/chemistry)
 "vjX" = (
@@ -26387,22 +26564,9 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/hallway)
 "wAa" = (
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
-/obj/machinery/space_heater,
-/obj/structure/cable/green{
-	icon_state = "1-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
-/turf/simulated/floor,
-/area/intrepid/misc/maint/starboard)
+/obj/machinery/vending/mredispenser,
+/turf/simulated/floor/wood/walnut,
+/area/intrepid/department/civillian/mess)
 "wAh" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/fuel{
 	dir = 8
@@ -26666,8 +26830,8 @@
 	dir = 4
 	},
 /obj/structure/sign/directions/engineering{
-	pixel_y = 32;
-	dir = 4
+	dir = 4;
+	pixel_y = 32
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -43004,8 +43168,8 @@ cjD
 hEP
 dTB
 cpl
-rsa
-hnZ
+bbm
+bMD
 orz
 orz
 orz
@@ -43206,8 +43370,8 @@ cjD
 hEP
 dTB
 cpl
-rsa
 eIn
+eBr
 orz
 kmc
 hRh
@@ -43408,7 +43572,7 @@ hEP
 xYb
 eGJ
 cpl
-rsa
+gsQ
 puC
 pip
 dQP
@@ -43610,8 +43774,8 @@ hEP
 cqd
 cpl
 cpl
-rsa
-arV
+eIn
+btm
 orz
 fPf
 mDM
@@ -43810,10 +43974,10 @@ cjD
 cjD
 hEP
 cqd
-cpl
-rsa
+fRQ
+fRQ
 aZY
-wAa
+rmu
 orz
 pNA
 qRb
@@ -44012,11 +44176,11 @@ cjD
 cjD
 hEP
 cqd
-cpl
-rsa
-eIn
-rmu
-rmu
+fRQ
+qNy
+gQJ
+gdk
+cRN
 iod
 aUH
 aUH
@@ -44213,13 +44377,13 @@ cjD
 cjD
 cjD
 hEP
-cqd
-cpl
-rsa
-eIn
-rmu
+arV
+lRd
 tjd
-uvA
+sbS
+iZe
+cRN
+cRN
 cRN
 cRN
 aCe
@@ -44415,12 +44579,12 @@ cjD
 cjD
 cjD
 hEP
-cqd
-cpl
-rsa
-eIn
-rmu
+arV
 lRd
+tnG
+sbS
+iZe
+cRN
 cRN
 cRN
 xZa
@@ -44617,13 +44781,13 @@ cjD
 cjD
 cjD
 hEP
-cqd
-cpl
-rsa
-eIn
-rmu
-fRQ
-qNy
+arV
+lRd
+uvA
+sbS
+iZe
+cRN
+cRN
 cRN
 pab
 svO
@@ -44820,11 +44984,11 @@ cjD
 cjD
 hEP
 cqd
-cpl
-rsa
-eIn
-rmu
-rmu
+fRQ
+wAa
+sbS
+lTr
+gAI
 sgJ
 hLz
 gDV
@@ -45022,10 +45186,10 @@ cjD
 cjD
 hEP
 cqd
-cpl
-rsa
-eIn
-btm
+fRQ
+fRQ
+nnG
+rmu
 rmu
 rmu
 rmu
@@ -48728,9 +48892,9 @@ bot
 sfE
 jbM
 viY
-gQn
-tnG
-jOe
+ckL
+sSX
+luw
 oMt
 vVc
 nkh
@@ -48930,9 +49094,9 @@ wLd
 sfE
 uOS
 sJe
-gQn
+rIZ
+sSX
 eVK
-fNC
 gVc
 vVc
 nkh
@@ -49132,9 +49296,9 @@ hyl
 sfE
 lrF
 mlM
-gQn
+slo
+sSX
 eVK
-fNC
 rwe
 vVc
 nkh
@@ -49335,8 +49499,8 @@ sfE
 akp
 qeE
 gQn
+sSX
 eVK
-fNC
 gVc
 vVc
 nkh
@@ -49537,7 +49701,7 @@ gQn
 iQt
 ukm
 gQn
-eVK
+luw
 hXj
 mtl
 whw

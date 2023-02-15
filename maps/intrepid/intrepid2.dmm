@@ -6638,8 +6638,8 @@
 	dir = 10
 	},
 /obj/structure/sign/warning/fall{
-	pixel_y = 32;
-	pixel_x = 32
+	pixel_x = 32;
+	pixel_y = 32
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
