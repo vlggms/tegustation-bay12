@@ -42,8 +42,6 @@
 	#include "jobs/outfits/supply_outfits.dm"
 	//#include "jobs/outfits/unused_outfits.dm"
 
-	#include "loadout/misc.dm"
-
 	#include "items/cards_ids.dm"
 	#include "items/encryption_keys.dm"
 	#include "items/headsets.dm"
@@ -77,6 +75,12 @@
 	#include "structures/closets/exploration.dm"
 
 	#include "supplypacks/marine.dm"
+
+	#include "loadout/_defines.dm"
+	#include "loadout/loadout_accessories.dm"
+	#include "loadout/loadout_misc.dm"
+	#include "loadout/loadout_xeno.dm"
+	#include "loadout/~defines.dm"
 
 	#include "intrepid1.dmm"
 	#include "intrepid2.dmm"
