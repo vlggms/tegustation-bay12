@@ -458,3 +458,47 @@
 		to_chat(user,"This one belongs to Dr.[claimant], MD.")
 	else
 		to_chat(user,"The name is left blank for some reason.")
+
+/* Factions specific things */
+// SolGov
+/obj/structure/sign/solgov
+	name = "\improper SolGov Seal"
+	desc = "A sign which signifies who this vessel belongs to."
+	icon = 'icons/obj/solgov_decals.dmi'
+	icon_state = "solgovseal"
+
+/obj/structure/sign/double/solgovflag
+	name = "Sol Central Government Flag"
+	desc = "The flag of the Sol Central Government, a symbol of many things to many people."
+	icon = 'icons/obj/solgov_decals.dmi'
+
+/obj/structure/sign/double/solgovflag/left
+	icon_state = "solgovflag-left"
+
+/obj/structure/sign/double/solgovflag/right
+	icon_state = "solgovflag-right"
+
+// TerraGov
+/obj/structure/sign/terragov
+	name = "\improper TerraGov Seal"
+	desc = "A sign which signifies who this vessel belongs to."
+	icon = 'icons/obj/terragov_decals.dmi'
+	icon_state = "terragovseal"
+
+/obj/structure/sign/double/terragovflag
+	name = "Terran Government Flag"
+	desc = "The flag of the Terran Government, a symbol of many things to many people."
+	icon = 'icons/obj/terragov_decals.dmi'
+
+/obj/structure/sign/double/terragovflag/left
+	icon_state = "terragovflag-left"
+
+/obj/structure/sign/double/terragovflag/right
+	icon_state = "terragovflag-right"
+
+// Miscellaneous
+/obj/structure/sign/obs
+	name = "\improper Order of the Black Sun Seal"
+	desc = "A sign which signifies who this vessel belongs to."
+	icon = 'icons/obj/terragov_decals.dmi'
+	icon_state = "obsseal"
