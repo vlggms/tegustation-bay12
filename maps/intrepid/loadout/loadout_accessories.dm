@@ -14,8 +14,6 @@
 	terramajors["medical heart"] = /obj/item/clothing/accessory/medal/terragov/heart
 	terramajors["valor medal"] = /obj/item/clothing/accessory/medal/terragov/silver/terra
 	terramajors["sapienterian medal"] = /obj/item/clothing/accessory/medal/terragov/gold/terra
-	terramajors["peacekeeper ribbon"] = /obj/item/clothing/accessory/ribbon/terragov/peace
-	terramajors["marksman ribbon"] = /obj/item/clothing/accessory/ribbon/terragov/marksman
 	gear_tweaks += new/datum/gear_tweak/path(terramajors)
 
 /datum/gear/accessory/terraawardminor
@@ -30,8 +28,6 @@
 	var/terraminors = list()
 	terraminors["expeditionary medal"] = /obj/item/clothing/accessory/medal/terragov/iron/terra
 	terraminors["operations medal"] = /obj/item/clothing/accessory/medal/terragov/bronze/terra
-	terraminors["frontier ribbon"] = /obj/item/clothing/accessory/ribbon/terragov/frontier
-	terraminors["instructor ribbon"] = /obj/item/clothing/accessory/ribbon/terragov/instructor
 	gear_tweaks += new/datum/gear_tweak/path(terraminors)
 
 /datum/gear/accessory/armband_ofc

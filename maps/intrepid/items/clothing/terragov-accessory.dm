@@ -18,8 +18,8 @@ medals
 	desc = "An iron star awarded to members of the TG for meritorious achievement or service in a combat zone."
 	icon_state = "iron_star"
 
-/obj/item/clothing/accessory/medal/terragov/iron/sol
-	name = "\improper Sol expeditionary medal"
+/obj/item/clothing/accessory/medal/terragov/iron/terra
+	name = "\improper Terran expeditionary medal"
 	desc = "An iron medal awarded to members of the TG for service outside of the borders of the Terran Government."
 	icon_state = "iron_sol"
 
@@ -28,8 +28,8 @@ medals
 	desc = "A bronze heart awarded to members of the TG for injury or death in the line of duty."
 	icon_state = "bronze_heart"
 
-/obj/item/clothing/accessory/medal/terragov/bronze/sol
-	name = "\improper Sol defensive operations medal"
+/obj/item/clothing/accessory/medal/terragov/bronze/terra
+	name = "\improper Terran defensive operations medal"
 	desc = "A bronze medal awarded for members of the TG for service defending the border regions."
 	icon_state = "bronze_sol"
 
@@ -38,8 +38,8 @@ medals
 	desc = "A silver medal awarded to members of the TG for honorable service while under enemy fire."
 	icon_state = "silver_sword"
 
-/obj/item/clothing/accessory/medal/terragov/silver/sol
-	name = "\improper Sol valor medal"
+/obj/item/clothing/accessory/medal/terragov/silver/terra
+	name = "\improper Terran valor medal"
 	desc = "A silver medal awarded for members of the TG for acts of exceptional valor."
 	icon_state = "silver_sol"
 
@@ -58,8 +58,8 @@ medals
 	desc = "A gold medal awarded to members of the Defense Forces by the Secretary General for personal acts of valor and heroism above and beyond the call of duty."
 	icon_state = "gold_crest"
 
-/obj/item/clothing/accessory/medal/terragov/gold/sol
-	name = "\improper Sol sapientarian medal"
+/obj/item/clothing/accessory/medal/terragov/gold/terra
+	name = "\improper Terran sapientarian medal"
 	desc = "A gold medal awarded for members of the TG for significant contributions to sapient rights."
 	icon_state = "gold_sol"
 
