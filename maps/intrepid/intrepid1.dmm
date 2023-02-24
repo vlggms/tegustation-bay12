@@ -244,6 +244,9 @@
 /obj/machinery/camera/network/security{
 	c_tag = "Security - Standard Gear Storage"
 	},
+/obj/structure/sign/terragov{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/security/storage)
 "alW" = (
@@ -3228,6 +3231,9 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/sign/double/terragovflag/right{
+	pixel_y = 30
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/computerlab)
 "cQc" = (
@@ -4396,6 +4402,9 @@
 "dOC" = (
 /obj/effect/floor_decal/corner/blue/diagonal,
 /obj/machinery/computer/modular/preset/cardslot/command,
+/obj/structure/sign/double/terragovflag/left{
+	pixel_y = 30
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/computerlab)
 "dQh" = (
@@ -5691,11 +5700,11 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/exploration/hangar)
 "eNb" = (
-/obj/structure/sign/double/icarus_solgovflag/right{
+/obj/structure/undies_wardrobe,
+/obj/structure/sign/double/terragovflag/right{
 	dir = 8;
 	pixel_x = 30
 	},
-/obj/structure/undies_wardrobe,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/command/commandquarters/tgs)
 "eOb" = (
@@ -6164,6 +6173,9 @@
 "fiD" = (
 /obj/machinery/suit_cycler/security,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/sign/terragov{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/security/armory_tactical)
 "fiH" = (
@@ -9668,6 +9680,9 @@
 	},
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/structure/sign/terragov{
+	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/command/meetingroom)
@@ -13666,6 +13681,10 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/portside)
+"lXK" = (
+/obj/structure/sign/terragov,
+/turf/simulated/wall/r_wall/prepainted,
+/area/intrepid/department/command/AI/AICore)
 "lXQ" = (
 /obj/structure/cable/orange{
 	icon_state = "1-4"
@@ -17007,6 +17026,9 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/structure/sign/double/terragovflag/left{
+	pixel_y = 30
+	},
 /turf/simulated/floor/carpet/blue,
 /area/intrepid/department/command/commandquarters/co)
 "oHW" = (
@@ -17339,11 +17361,11 @@
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/misc/maint/aft)
 "oSM" = (
-/obj/structure/sign/double/icarus_solgovflag/left{
+/obj/structure/closet/secure_closet/representative,
+/obj/structure/sign/double/terragovflag/left{
 	dir = 8;
 	pixel_x = 30
 	},
-/obj/structure/closet/secure_closet/representative,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/command/commandquarters/tgs)
 "oSS" = (
@@ -26085,6 +26107,9 @@
 "vXv" = (
 /obj/structure/bed/padded,
 /obj/item/bedsheet/captain,
+/obj/structure/sign/double/terragovflag/right{
+	pixel_y = 30
+	},
 /turf/simulated/floor/carpet/blue,
 /area/intrepid/department/command/commandquarters/co)
 "vXS" = (
@@ -57343,7 +57368,7 @@ tKm
 uaG
 sTb
 wQk
-tKm
+lXK
 llw
 llw
 llw

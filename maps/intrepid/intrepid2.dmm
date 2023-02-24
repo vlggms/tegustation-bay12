@@ -5821,9 +5821,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/engineering/engine_room)
 "NT" = (
-/obj/structure/sign/icarus_solgov{
-	name = "\improper Terran seal"
-	},
+/obj/structure/sign/terragov,
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/department/civillian/dockbay)
 "NV" = (
@@ -5908,9 +5906,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/structure/sign/icarus_solgov{
-	name = "\improper Terran seal"
-	},
+/obj/structure/sign/terragov,
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/department/engineering/atmos)
 "Oz" = (
@@ -6033,9 +6029,7 @@
 /turf/simulated/floor/wood,
 /area/intrepid/department/command/commandquarters/psiadvisor)
 "Pu" = (
-/obj/structure/sign/icarus_solgov{
-	name = "\improper Terran seal"
-	},
+/obj/structure/sign/terragov,
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/misc/maint/upper)
 "Pw" = (
