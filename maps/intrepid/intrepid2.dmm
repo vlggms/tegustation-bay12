@@ -2379,7 +2379,7 @@
 	id_tag = "ofdloading";
 	name = "OFD Loading blast door button";
 	pixel_x = -25;
-	req_access = list(access_bridge)
+	req_access = list("ACCESS_BRIDGE")
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
