@@ -1487,11 +1487,9 @@
 /turf/simulated/floor/carpet/brown,
 /area/intrepid/department/medical/therapy)
 "bpB" = (
-/obj/random/maintenance,
-/obj/machinery/suit_cycler/mining,
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/intrepid/misc/maint/starboard)
+/obj/machinery/jukebox/old,
+/turf/simulated/floor/wood/walnut,
+/area/intrepid/department/civillian/mess)
 "bpK" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -2177,7 +2175,7 @@
 	name = "Senator Quarters Window Blast Door button";
 	pixel_x = -25
 	},
-/obj/item/reagent_containers/food/drinks/glass2/coffeecup/SCG,
+/obj/item/reagent_containers/food/drinks/glass2/coffeecup/STC,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/command/commandquarters/tgs)
 "bVS" = (
@@ -3034,10 +3032,12 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/valve/shutoff/scrubbers,
+/obj/machinery/atmospherics/valve/shutoff/supply,
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor,
-/area/intrepid/misc/maint/starboard)
+/area/intrepid/department/cargo/cargostorage)
 "cHI" = (
 /obj/effect/floor_decal/corner/research/border,
 /obj/machinery/light,
@@ -3650,13 +3650,7 @@
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/civillian/galleybackroom)
 "djU" = (
-/obj/machinery/door/firedoor{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor,
+/turf/simulated/wall/prepainted,
 /area/intrepid/misc/maint/starboard)
 "djX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -5138,14 +5132,14 @@
 /obj/structure/disposalpipe/segment/bent{
 	dir = 1
 	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/starboard)
@@ -7611,9 +7605,13 @@
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/co)
 "gAI" = (
-/obj/machinery/light{
-	dir = 4
+/obj/structure/table/standard,
+/obj/structure/noticeboard{
+	dir = 8;
+	pixel_x = 32
 	},
+/obj/item/paper_bin,
+/obj/item/pen,
 /turf/simulated/floor/wood/walnut,
 /area/intrepid/department/civillian/mess)
 "gAL" = (
@@ -10045,9 +10043,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/portside)
 "iIg" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/internalstarboard)
 "iIl" = (
@@ -11806,6 +11801,9 @@
 	c_tag = "Command - Command Hallway Amidships";
 	dir = 4
 	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/center)
 "knx" = (
@@ -11987,6 +11985,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/portside)
 "kwB" = (
@@ -12481,6 +12480,7 @@
 /area/intrepid/department/civillian/hydroponics)
 "kTC" = (
 /obj/random_multi/single_item/piano,
+/obj/effect/decal/cleanable/cobweb,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/starboard)
 "kTJ" = (
@@ -12889,6 +12889,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/random/maintenance,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/internalstarboard)
 "lnr" = (
@@ -13613,6 +13617,8 @@
 	c_tag = "Service - Upper Mess Hall";
 	dir = 8
 	},
+/obj/structure/table/standard,
+/obj/item/sticky_pad/random,
 /turf/simulated/floor/wood/walnut,
 /area/intrepid/department/civillian/mess)
 "lTY" = (
@@ -15838,6 +15844,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/starboard)
@@ -18210,6 +18219,9 @@
 /obj/machinery/ship_map{
 	dir = 4
 	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/center)
 "pEa" = (
@@ -18570,6 +18582,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/starboard)
 "pOn" = (
@@ -19320,14 +19336,14 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/internalstarboard)
@@ -21354,8 +21370,10 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/starboard)
 "sdB" = (
-/obj/effect/wallframe_spawn/no_grille,
-/turf/simulated/floor,
+/obj/random/maintenance,
+/obj/machinery/suit_cycler/mining,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/cargo/cargostorage)
 "sdI" = (
 /obj/structure/table/rack,
@@ -21441,7 +21459,10 @@
 /turf/simulated/floor/carpet/purple,
 /area/intrepid/department/command/commandquarters/rd)
 "sgJ" = (
-/obj/machinery/jukebox/old,
+/obj/structure/table/standard,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/wood/walnut,
 /area/intrepid/department/civillian/mess)
 "shd" = (
@@ -24096,6 +24117,9 @@
 	color = "#666666";
 	dir = 8
 	},
+/mob/living/simple_animal/hostile/retaliate/tegu/atlas{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/command/bridge)
 "ulq" = (
@@ -24144,10 +24168,9 @@
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/morgue)
 "umd" = (
-/obj/machinery/suit_cycler/salvage,
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/intrepid/misc/maint/starboard)
+/obj/item/stool/padded,
+/turf/simulated/floor/wood/walnut,
+/area/intrepid/department/civillian/mess)
 "umm" = (
 /obj/structure/bed/chair/office/comfy/black{
 	dir = 1
@@ -25126,6 +25149,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/internalstarboard)
@@ -26885,11 +26911,10 @@
 /turf/simulated/floor/tiled/white,
 /area/space)
 "wKy" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor,
-/area/intrepid/misc/maint/starboard)
+/obj/machinery/suit_cycler/salvage,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/intrepid/department/cargo/cargostorage)
 "wKB" = (
 /obj/machinery/vitals_monitor,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -27207,11 +27232,11 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
 "wWo" = (
-/obj/machinery/door/firedoor{
-	dir = 4
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
 	},
-/turf/simulated/floor,
-/area/intrepid/misc/maint/portside)
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/misc/hallway/center)
 "wWw" = (
 /obj/machinery/door/blast/shutters{
 	dir = 4;
@@ -27332,11 +27357,9 @@
 /turf/simulated/floor/tiled/white,
 /area/space)
 "xbg" = (
-/obj/structure/cable/green{
-	icon_state = "1-4"
-	},
+/obj/structure/table/standard,
 /turf/simulated/floor,
-/area/intrepid/misc/maint/starboard)
+/area/intrepid/misc/maint/portside)
 "xbP" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 4
@@ -28116,9 +28139,6 @@
 	},
 /obj/structure/table/standard,
 /obj/item/storage/box/cdeathalarm_kit,
-/mob/living/simple_animal/hostile/retaliate/tegu/atlas{
-	density = 0
-	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/bridge)
 "xMk" = (
@@ -28573,14 +28593,12 @@
 /turf/simulated/floor,
 /area/space)
 "ylH" = (
-/obj/machinery/door/airlock/maintenance,
-/obj/machinery/door/firedoor,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/valve/shutoff/scrubbers,
-/obj/machinery/atmospherics/valve/shutoff/supply,
-/turf/simulated/floor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/cargo/cargostorage)
 "ylJ" = (
 /obj/effect/floor_decal/solarpanel,
@@ -40821,7 +40839,7 @@ adF
 fLr
 rXr
 vVc
-fNC
+xbg
 eVK
 biS
 mGf
@@ -40994,7 +41012,7 @@ jiY
 eRc
 wkY
 emY
-xbg
+rsa
 rsa
 cpl
 msM
@@ -41023,7 +41041,7 @@ adF
 fLr
 rXr
 vVc
-fNC
+xbg
 iqQ
 jOe
 rgY
@@ -41196,7 +41214,7 @@ kRK
 oTl
 oTl
 nCs
-wKy
+rsa
 rsa
 cpl
 msM
@@ -41398,7 +41416,7 @@ qgH
 hlM
 oTl
 nCs
-wKy
+rsa
 qKJ
 cpl
 msM
@@ -41631,7 +41649,7 @@ rXr
 vVc
 vVc
 kwA
-wWo
+olh
 cao
 jMF
 aNE
@@ -44208,7 +44226,7 @@ fRQ
 qNy
 gQJ
 gdk
-cRN
+bpB
 iod
 aUH
 aUH
@@ -44814,7 +44832,7 @@ lRd
 uvA
 sbS
 iZe
-cRN
+umd
 cRN
 cRN
 pab
@@ -51682,7 +51700,7 @@ msM
 sUD
 htq
 txh
-bpB
+eRv
 sdB
 kWu
 qeC
@@ -51884,8 +51902,8 @@ qgh
 kKr
 aQj
 aTz
-umd
-sdB
+eRv
+wKy
 ccy
 pif
 cAI
@@ -52288,7 +52306,7 @@ qLh
 bRG
 fvN
 jBI
-iiX
+eRv
 eRv
 tUv
 oag
@@ -52322,7 +52340,7 @@ uoT
 oxV
 kmR
 pDy
-dnj
+wWo
 rLc
 jic
 stl
@@ -52490,7 +52508,7 @@ vHs
 qgh
 aQj
 nDj
-rsa
+iiX
 eRv
 caf
 ccy
