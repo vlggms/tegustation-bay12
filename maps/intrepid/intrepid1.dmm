@@ -10239,7 +10239,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/portside)
 "iPM" = (
-/obj/machinery/keycard_auth{
+/obj/machinery/keycard_auth/terra{
 	pixel_x = -26;
 	pixel_y = 24
 	},
@@ -13422,7 +13422,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/security/bo)
 "lIt" = (
-/obj/machinery/keycard_auth{
+/obj/machinery/keycard_auth/terra{
 	pixel_x = -26;
 	pixel_y = 24
 	},
@@ -16211,15 +16211,15 @@
 	pixel_x = 25;
 	pixel_y = -9
 	},
-/obj/machinery/keycard_auth{
-	pixel_x = 27
-	},
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
+	},
+/obj/machinery/keycard_auth/terra{
+	pixel_x = 27
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/bridge)
@@ -18070,9 +18070,9 @@
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/research/xenoarchlab)
 "pzH" = (
-/obj/machinery/keycard_auth{
+/obj/machinery/keycard_auth/terra{
 	pixel_x = -26;
-	pixel_y = -25
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/cmo)
@@ -18096,9 +18096,9 @@
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/research/hallway)
 "pAl" = (
-/obj/machinery/keycard_auth{
+/obj/machinery/keycard_auth/terra{
 	pixel_x = -26;
-	pixel_y = -25
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/rd)
@@ -19185,13 +19185,13 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/keycard_auth{
-	pixel_x = 27
-	},
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/keycard_auth/terra{
+	pixel_x = 27
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/bridge)
 "qlP" = (
@@ -20434,7 +20434,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/lockerroom)
 "rpp" = (
-/obj/machinery/keycard_auth{
+/obj/machinery/keycard_auth/terra{
 	pixel_x = -26;
 	pixel_y = 24
 	},
@@ -22667,9 +22667,9 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
 "sZO" = (
-/obj/machinery/keycard_auth{
+/obj/machinery/keycard_auth/terra{
 	pixel_x = -26;
-	pixel_y = -25
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/ce)
@@ -25287,6 +25287,9 @@
 	},
 /obj/machinery/light/dystopian{
 	dir = 8
+	},
+/obj/machinery/keycard_auth/terra{
+	pixel_x = -27
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/security/bo)
