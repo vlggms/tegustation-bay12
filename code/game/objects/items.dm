@@ -300,6 +300,8 @@
 			user.l_hand.update_twohanding()
 		if(user.r_hand)
 			user.r_hand.update_twohanding()
+	GLOB.mob_unequipped_event.raise_event(user, src)
+	GLOB.item_unequipped_event.raise_event(src, user)
 
 // called just as an item is picked up (loc is not yet changed)
 /obj/item/proc/pickup(mob/user)
@@ -317,15 +319,19 @@
 /obj/item/proc/on_found(mob/finder as mob)
 	return
 
-// called after an item is placed in an equipment slot
-// user is mob that equipped it
-// slot uses the slot_X defines found in setup.dm
-// for items that can be placed in multiple slots
-// note this isn't called during the initial dressing of a player
+/*
+called after an item is placed in an equipment slot
+user is mob that equipped it
+slot uses the slot_X defines found in setup.dm
+for items that can be placed in multiple slots
+note this isn't called during the initial dressing of a player
+*/
 /obj/item/proc/equipped(var/mob/user, var/slot)
 	hud_layerise()
-	if(user.client)	user.client.screen |= src
-	if(user.pulling == src) user.stop_pulling()
+	if(user.client)
+		user.client.screen |= src
+	if(user.pulling == src)
+		user.stop_pulling()
 
 	//Update two-handing status
 	var/mob/M = loc
@@ -335,6 +341,8 @@
 		M.l_hand.update_twohanding()
 	if(M.r_hand)
 		M.r_hand.update_twohanding()
+	GLOB.mob_equipped_event.raise_event(user, src, slot)
+	GLOB.item_equipped_event.raise_event(src, user, slot)
 
 //Defines which slots correspond to which slot flags
 var/list/global/slot_flags_enumeration = list(
