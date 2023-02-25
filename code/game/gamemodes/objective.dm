@@ -287,10 +287,11 @@ var/global/list/all_objectives = list()
 // RnD progress download //
 
 /datum/objective/download
-	proc/gen_amount_goal()
-		target_amount = rand(10,20)
-		explanation_text = "Download [target_amount] research levels."
-		return target_amount
+
+/datum/objective/download/proc/gen_amount_goal()
+	target_amount = rand(10,20)
+	explanation_text = "Download [target_amount] research levels."
+	return target_amount
 
 // Capture //
 
@@ -425,7 +426,7 @@ var/global/list/all_objectives = list()
 
 /datum/objective/borer_reproduce
 	explanation_text = "Reproduce at least once."
-	
+
 /datum/objective/ninja_highlander
    explanation_text = "You aspire to be a Grand Master of the Spider Clan. Kill all of your fellow acolytes."
 
