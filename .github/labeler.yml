@@ -1,0 +1,8 @@
+💻2 Github:
+- any ['.github/**/*', '.vscode/**/*', 'docs/**/*', 'scripts/**/*', 'test/**/*', 'tools/**/*', '.editorconfig', '.git*', 'LICENSE', 'README.md', 'SpacemanDMM.toml']
+
+📃2 Changes configs:
+- any ['.config/**/*']
+
+🍁1 Map:
+- *.dmm

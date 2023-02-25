@@ -1,47 +1,46 @@
 /obj/machinery/bluespace_beacon
-
-	icon = 'icons/obj/objects.dmi'
-	icon_state = "floor_beaconf"
 	name = "Bluespace Gigabeacon"
 	desc = "A device that draws power from bluespace and creates a permanent tracking beacon."
+	icon = 'icons/obj/objects.dmi'
+	icon_state = "floor_beaconf"
 	level = 1		// underfloor
 	anchored = TRUE
 	idle_power_usage = 0
 	var/obj/machinery/tele_beacon/Beacon
 
-	New()
-		..()
-		var/turf/T = get_turf(src)
-		Beacon = new /obj/machinery/tele_beacon(T)
-		Beacon.invisibility = INVISIBILITY_MAXIMUM
+/obj/machinery/bluespace_beacon/New()
+	..()
+	var/turf/T = get_turf(src)
+	Beacon = new /obj/machinery/tele_beacon(T)
+	Beacon.invisibility = INVISIBILITY_MAXIMUM
 
-		hide(!T.is_plating())
+	hide(!T.is_plating())
 
-	Destroy()
-		QDEL_NULL(Beacon)
-		. = ..()
+/obj/machinery/bluespace_beacon/Destroy()
+	QDEL_NULL(Beacon)
+	. = ..()
 
-	// update the invisibility and icon
-	hide(var/intact)
-		set_invisibility(intact ? 101 : 0)
-		update_icon()
-
-	// update the icon_state
+// update the invisibility and icon
+/obj/machinery/bluespace_beacon/hide(intact)
+	set_invisibility(intact ? 101 : 0)
 	update_icon()
-		var/state="floor_beacon"
 
-		if(invisibility)
-			icon_state = "[state]f"
+// update the icon_state
+/obj/machinery/bluespace_beacon/update_icon()
+	var/state="floor_beacon"
 
-		else
-			icon_state = "[state]"
+	if(invisibility)
+		icon_state = "[state]f"
 
-	Process()
-		if(!Beacon)
-			Beacon = new /obj/machinery/tele_beacon(get_turf(src))
-			Beacon.set_invisibility(INVISIBILITY_MAXIMUM)
-		if(Beacon)
-			if(Beacon.loc != loc)
-				Beacon.forceMove(loc)
+	else
+		icon_state = "[state]"
 
-		update_icon()
+/obj/machinery/bluespace_beacon/Process()
+	if(!Beacon)
+		Beacon = new /obj/machinery/tele_beacon(get_turf(src))
+		Beacon.set_invisibility(INVISIBILITY_MAXIMUM)
+	if(Beacon)
+		if(Beacon.loc != loc)
+			Beacon.forceMove(loc)
+
+	update_icon()

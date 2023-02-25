@@ -139,12 +139,14 @@
 /atom/proc/HasProximity(atom/movable/AM as mob|obj)
 	return
 
-/atom/proc/emp_act(var/severity)
+/atom/proc/emp_act(severity)
 	return
 
-/atom/proc/set_density(var/new_density)
-	if(density != new_density)
-		density = !!new_density
+/atom/proc/set_density(new_density)
+	var/changed = density != new_density
+	if(changed)
+		density = !density
+		GLOB.density_set_event.raise_event(src, !density, density)
 
 /atom/proc/bullet_act(obj/item/projectile/P, def_zone)
 	P.on_hit(src, 0, def_zone)
@@ -285,6 +287,7 @@ its easier to just keep the beam vertical.
 	if(new_dir == old_dir)
 		return FALSE
 	dir = new_dir
+	GLOB.dir_set_event.raise_event(src, old_dir, dir)
 	return TRUE
 
 /atom/proc/set_icon_state(var/new_icon_state)

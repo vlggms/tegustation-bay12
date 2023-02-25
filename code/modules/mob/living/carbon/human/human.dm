@@ -1226,6 +1226,7 @@
 		if(istype(C) && !C.mob_can_equip(src, slot, 1))
 			unEquip(C)
 
+	update_emotes()
 	return 1
 
 /mob/living/carbon/human/proc/update_languages()

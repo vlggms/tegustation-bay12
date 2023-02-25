@@ -94,7 +94,3 @@
 		/decl/emote/audible/chirp,
 		/decl/emote/audible/multichirp
 	)
-
-/mob/living/carbon/human/set_species(var/new_species, var/default_colour = 1)
-	UNLINT(. = ..())
-	update_emotes()
