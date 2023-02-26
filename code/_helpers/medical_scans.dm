@@ -101,6 +101,14 @@
 		scan["blind"] = TRUE
 	if(H.sdisabilities & NEARSIGHTED)
 		scan["nearsight"] = TRUE
+
+	scan["diseases"] = list()
+
+	for(var/datum/disease/D in H.diseases)
+		if(D.visibility_flags & HIDDEN_ADVSCANNER)
+			continue
+		scan["diseases"] += D
+
 	return scan
 
 /proc/display_medical_data_header(var/list/scan, skill_level = SKILL_DEFAULT)
