@@ -200,7 +200,14 @@ var/datum/robolimb/basic_robolimb
 	can_eat = 1
 	skintone = 1
 	unavailable_at_fab = 1
-	species_cannot_use = list(SPECIES_IPC)
+
+/datum/robolimb/veymed/gynoid
+	company = "Vey-Med Gynoid"
+	icon = 'icons/mob/human_races/cyberlimbs/veymed/veymed_gynoid.dmi'
+	can_eat = 1
+	skintone = 1
+	unavailable_at_fab = 1
+	restricted_to = list(SPECIES_IPC)
 
 /datum/robolimb/shellguard
 	company = "Shellguard"
