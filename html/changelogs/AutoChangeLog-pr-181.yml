@@ -1,0 +1,4 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - rscadd: Random rooms framework is added.
