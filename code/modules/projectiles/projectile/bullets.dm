@@ -146,6 +146,35 @@
 /obj/item/projectile/bullet/pistol/rubber/holdout
 	agony = 20
 
+// Revolvers
+/obj/item/projectile/bullet/revolver
+	fire_sound = 'sound/weapons/gunshot/revolver.ogg'
+	damage = 50
+	distance_falloff = 3
+
+/obj/item/projectile/bullet/revolver/rubber
+	name = "rubber bullet"
+	damage_flags = 0
+	damage = 5
+	agony = 40
+	embed = FALSE
+
+/obj/item/projectile/bullet/revolver/small
+	fire_sound = 'sound/weapons/gunshot/revolver_light.ogg'
+	damage = 40
+	penetration_modifier = 1.2
+	distance_falloff = 4
+
+/obj/item/projectile/bullet/revolver/medium
+	damage = 45
+
+/obj/item/projectile/bullet/revolver/heavy
+	fire_sound = 'sound/weapons/gunshot/revolver_heavy.ogg'
+	damage = 60
+	penetration_modifier = 0.8
+	distance_falloff = 2.5
+	armor_penetration = 15
+
 //4mm. Tiny, very low damage, does not embed, but has very high penetration. Only to be used for the experimental SMG.
 /obj/item/projectile/bullet/flechette
 	fire_sound = 'sound/weapons/gunshot/smg.ogg'
@@ -286,3 +315,23 @@
 	pixel_x = rand(-10,10)
 	pixel_y = rand(-10,10)
 	..()
+
+// Rocket launcher
+/obj/item/projectile/bullet/rocket
+	name = "missile"
+	icon_state = "missile"
+	fire_sound = 'sound/weapons/gunshot/launcher.ogg'
+	var/exp_devastation = -1
+	var/exp_heavy_impact = 2
+	var/exp_light_impact = 4
+
+/obj/item/projectile/bullet/rocket/on_hit(atom/target, blocked = 0)
+	var/turf/T = get_turf(target)
+	if(T)
+		explosion(T, exp_devastation, exp_heavy_impact, exp_light_impact)
+	..()
+
+/obj/item/projectile/bullet/rocket/heavy
+	exp_devastation = 2
+	exp_heavy_impact = 5
+	exp_light_impact = 8
