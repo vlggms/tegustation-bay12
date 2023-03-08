@@ -1,0 +1,397 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"h" = (
+/obj/effect/wallframe_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/abandoned_bunker/bunker/quantum_entry)
+"o" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/greengrid,
+/area/abandoned_bunker/bunker/quantum_entry)
+"p" = (
+/turf/simulated/wall/r_titanium,
+/area/abandoned_bunker/bunker/quantum_entry)
+"s" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/greengrid,
+/area/abandoned_bunker/bunker/quantum_entry)
+"u" = (
+/turf/simulated/floor/tiled/dark/monotile,
+/area/abandoned_bunker/bunker/quantum_entry)
+"x" = (
+/obj/machinery/light/small/red{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/abandoned_bunker/bunker/quantum_entry)
+"y" = (
+/obj/machinery/light/small/red,
+/turf/simulated/floor/tiled/dark,
+/area/abandoned_bunker/bunker/quantum_entry)
+"B" = (
+/obj/machinery/door/airlock/research{
+	name = "Quantum Entry"
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/abandoned_bunker/bunker/quantum_entry)
+"D" = (
+/obj/machinery/light/small/red{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/abandoned_bunker/bunker/quantum_entry)
+"G" = (
+/obj/machinery/light/small/red{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/abandoned_bunker/bunker/quantum_entry)
+"H" = (
+/turf/simulated/floor/tiled/dark/monotile,
+/area/template_noop)
+"K" = (
+/turf/simulated/floor/tiled/dark,
+/area/abandoned_bunker/bunker/quantum_entry)
+"S" = (
+/obj/machinery/door/airlock/glass/research{
+	name = "Quantum Entry"
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/abandoned_bunker/bunker/quantum_entry)
+"V" = (
+/obj/machinery/quantumpad{
+	map_pad_id = "abandoned_bunker_entry";
+	map_pad_link_id = "abandoned_bunker_facility_entry"
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/abandoned_bunker/bunker/quantum_entry)
+"Z" = (
+/turf/simulated/floor/greengrid,
+/area/abandoned_bunker/bunker/quantum_entry)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(3,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(4,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(5,1,1) = {"
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+a
+"}
+(6,1,1) = {"
+p
+K
+K
+K
+K
+K
+D
+K
+K
+K
+K
+K
+p
+a
+"}
+(7,1,1) = {"
+p
+K
+u
+u
+u
+u
+u
+u
+u
+u
+u
+K
+p
+a
+"}
+(8,1,1) = {"
+p
+K
+u
+h
+h
+h
+h
+h
+h
+h
+u
+K
+p
+a
+"}
+(9,1,1) = {"
+p
+K
+u
+h
+o
+Z
+Z
+Z
+o
+h
+u
+K
+p
+a
+"}
+(10,1,1) = {"
+p
+K
+u
+h
+Z
+u
+u
+u
+Z
+h
+u
+y
+p
+a
+"}
+(11,1,1) = {"
+p
+G
+u
+h
+Z
+u
+V
+u
+u
+S
+u
+u
+B
+H
+"}
+(12,1,1) = {"
+p
+K
+u
+h
+Z
+u
+u
+u
+Z
+h
+u
+y
+p
+a
+"}
+(13,1,1) = {"
+p
+K
+u
+h
+s
+Z
+Z
+Z
+s
+h
+u
+K
+p
+a
+"}
+(14,1,1) = {"
+p
+K
+u
+h
+h
+h
+h
+h
+h
+h
+u
+K
+p
+a
+"}
+(15,1,1) = {"
+p
+K
+u
+u
+u
+u
+u
+u
+u
+u
+u
+K
+p
+a
+"}
+(16,1,1) = {"
+p
+K
+K
+K
+K
+K
+x
+K
+K
+K
+K
+K
+p
+a
+"}
+(17,1,1) = {"
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+p
+a
+"}
+(18,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(19,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(20,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}

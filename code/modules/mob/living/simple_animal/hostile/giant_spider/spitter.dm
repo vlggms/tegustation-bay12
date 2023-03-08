@@ -12,7 +12,6 @@
 	projectiletype = /obj/item/projectile/venom
 	projectilesound = 'sound/effects/hypospray.ogg'
 	fire_desc = "spits venom"
-	ranged_range = 6
 	pry_time = 7 SECONDS
 	flash_vulnerability = 2
 	base_attack_cooldown = 2 SECONDS

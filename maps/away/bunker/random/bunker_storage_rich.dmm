@@ -1,0 +1,287 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/abandoned_bunker/bunker/storage)
+"c" = (
+/obj/structure/table/rack,
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
+/obj/item/stack/material/iron{
+	amount = 50
+	},
+/obj/item/stack/material/iron{
+	amount = 50
+	},
+/obj/item/stack/material/iron{
+	amount = 50
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/abandoned_bunker/bunker/storage)
+"e" = (
+/obj/machinery/door/airlock/engineering{
+	name = "Main Storage"
+	},
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/abandoned_bunker/bunker/storage)
+"f" = (
+/obj/machinery/power/apc{
+	dir = 4;
+	pixel_x = 24
+	},
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/obj/structure/cable/cyan{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/abandoned_bunker/bunker/storage)
+"i" = (
+/obj/structure/table/rack,
+/obj/item/stack/material/uranium{
+	amount = 50
+	},
+/obj/item/stack/material/uranium{
+	amount = 50
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/abandoned_bunker/bunker/storage)
+"k" = (
+/turf/simulated/floor/tiled/steel_grid,
+/area/abandoned_bunker/bunker/storage)
+"o" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/abandoned_bunker/bunker/storage)
+"t" = (
+/obj/structure/table/rack,
+/obj/item/stack/material/plastic/fifty,
+/obj/item/stack/material/plastic/fifty,
+/obj/item/stack/material/plastic/fifty,
+/obj/item/stack/material/plastic/fifty,
+/obj/item/stack/material/plastic/fifty,
+/turf/simulated/floor/tiled/techmaint,
+/area/abandoned_bunker/bunker/storage)
+"x" = (
+/obj/structure/table/rack,
+/obj/item/stack/material/aluminium/fifty,
+/obj/item/stack/material/aluminium/fifty,
+/obj/item/stack/material/aluminium/fifty,
+/obj/item/stack/material/aluminium/fifty,
+/obj/item/stack/material/aluminium/fifty,
+/turf/simulated/floor/tiled/techmaint,
+/area/abandoned_bunker/bunker/storage)
+"A" = (
+/obj/structure/table/rack,
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
+/obj/item/stack/material/titanium/fifty,
+/obj/item/stack/material/titanium/fifty,
+/turf/simulated/floor/tiled/techmaint,
+/area/abandoned_bunker/bunker/storage)
+"D" = (
+/obj/machinery/light,
+/turf/simulated/floor/tiled/steel_grid,
+/area/abandoned_bunker/bunker/storage)
+"F" = (
+/turf/simulated/floor/tiled/techmaint,
+/area/abandoned_bunker/bunker/storage)
+"I" = (
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/abandoned_bunker/bunker/storage)
+"L" = (
+/obj/structure/table/rack,
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
+/obj/item/stack/material/gold{
+	amount = 50
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/abandoned_bunker/bunker/storage)
+"M" = (
+/obj/structure/anomaly_container,
+/turf/simulated/floor/tiled/steel_grid,
+/area/abandoned_bunker/bunker/storage)
+"O" = (
+/obj/structure/table/rack,
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
+/obj/item/stack/material/plasteel/fifty,
+/obj/item/stack/material/plasteel/fifty,
+/turf/simulated/floor/tiled/techmaint,
+/area/abandoned_bunker/bunker/storage)
+"Q" = (
+/obj/structure/table/rack,
+/obj/item/stack/material/steel/fifty,
+/obj/item/stack/material/steel/fifty,
+/obj/item/stack/material/steel/fifty,
+/obj/item/stack/material/steel/fifty,
+/obj/item/stack/material/steel/fifty,
+/turf/simulated/floor/tiled/techmaint,
+/area/abandoned_bunker/bunker/storage)
+"S" = (
+/obj/machinery/artifact,
+/turf/simulated/floor/tiled/techmaint,
+/area/abandoned_bunker/bunker/storage)
+"V" = (
+/obj/structure/table/rack,
+/obj/item/stack/cable_coil/cyan,
+/obj/item/stack/cable_coil/cyan,
+/obj/item/stack/cable_coil/cyan,
+/obj/item/stack/cable_coil/cyan,
+/obj/item/stack/cable_coil/cyan,
+/obj/item/stack/cable_coil/cyan,
+/obj/item/stack/cable_coil/cyan,
+/obj/item/stack/cable_coil/cyan,
+/obj/item/stack/cable_coil/cyan,
+/obj/item/stack/cable_coil/cyan,
+/obj/item/stack/cable_coil/cyan,
+/obj/item/stack/cable_coil/cyan,
+/obj/item/stack/cable_coil/cyan,
+/obj/item/stack/cable_coil/cyan,
+/obj/item/stack/cable_coil/cyan,
+/turf/simulated/floor/tiled/techmaint,
+/area/abandoned_bunker/bunker/storage)
+"W" = (
+/obj/structure/table/rack,
+/obj/item/stack/material/glass/fifty,
+/obj/item/stack/material/glass/fifty,
+/obj/item/stack/material/glass/fifty,
+/obj/item/stack/material/glass/fifty,
+/obj/item/stack/material/glass/fifty,
+/turf/simulated/floor/tiled/techmaint,
+/area/abandoned_bunker/bunker/storage)
+"X" = (
+/obj/structure/table/rack,
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
+/obj/item/stack/material/silver{
+	amount = 50
+	},
+/obj/item/stack/material/silver{
+	amount = 50
+	},
+/obj/item/stack/material/silver{
+	amount = 50
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/abandoned_bunker/bunker/storage)
+"Y" = (
+/obj/structure/table/rack,
+/obj/item/stack/material/phoron/fifty,
+/obj/item/stack/material/phoron/fifty,
+/turf/simulated/floor/tiled/techmaint,
+/area/abandoned_bunker/bunker/storage)
+
+(1,1,1) = {"
+a
+a
+a
+a
+e
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+M
+k
+k
+I
+k
+k
+M
+a
+"}
+(3,1,1) = {"
+a
+k
+V
+F
+L
+F
+i
+k
+a
+"}
+(4,1,1) = {"
+a
+k
+x
+F
+c
+F
+S
+k
+a
+"}
+(5,1,1) = {"
+a
+o
+W
+F
+X
+F
+S
+D
+a
+"}
+(6,1,1) = {"
+a
+k
+t
+F
+A
+F
+S
+k
+a
+"}
+(7,1,1) = {"
+a
+k
+Q
+F
+O
+F
+Y
+k
+a
+"}
+(8,1,1) = {"
+a
+k
+k
+k
+f
+k
+k
+M
+a
+"}
+(9,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}

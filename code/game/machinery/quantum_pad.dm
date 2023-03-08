@@ -215,7 +215,7 @@
 /obj/machinery/quantumpad/mining
 	name = "mining quantum pad"
 	desc = "A bluespace quantum-linked telepad used for teleporting ores to other quantum pads."
-	icon_state = "pad_idle"
+	icon_state = "pad-idle"
 	icon_state_default = "pad"
 	idle_power_usage = 0
 	teleport_power_cost = 20 KILOWATTS // It only teleports ores, after all

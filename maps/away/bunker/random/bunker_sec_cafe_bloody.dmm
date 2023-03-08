@@ -1,0 +1,216 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"b" = (
+/obj/item/material/kitchen/utensil/fork{
+	pixel_x = 10
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"f" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"g" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"i" = (
+/obj/effect/gibspawner/generic,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"l" = (
+/obj/machinery/vending/snack,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/maple{
+	icon_state = "wood_broken3"
+	},
+/area/template_noop)
+"m" = (
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"o" = (
+/obj/structure/table/woodentable,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/maple{
+	icon_state = "wood_broken3"
+	},
+/area/template_noop)
+"u" = (
+/obj/structure/bed/chair/wood{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"v" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/maple{
+	icon_state = "wood_broken0"
+	},
+/area/template_noop)
+"w" = (
+/obj/machinery/vending/sovietsoda,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"x" = (
+/obj/structure/bed/chair/wood,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"y" = (
+/obj/structure/bed/chair/wood,
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"E" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/maple{
+	icon_state = "wood_broken2"
+	},
+/area/template_noop)
+"F" = (
+/obj/effect/gibspawner/human,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"G" = (
+/obj/structure/table/woodentable,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"H" = (
+/obj/structure/table/woodentable,
+/obj/item/reagent_containers/food/snacks/canned/beans{
+	pixel_y = 5
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"O" = (
+/obj/structure/table/woodentable,
+/obj/random/toy,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"R" = (
+/obj/effect/gibspawner/generic,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/maple{
+	icon_state = "wood_broken5"
+	},
+/area/template_noop)
+"S" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/maple{
+	icon_state = "wood_broken6"
+	},
+/area/template_noop)
+"U" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"X" = (
+/obj/machinery/door/airlock/glass/security,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"Y" = (
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/maple{
+	icon_state = "wood_broken3"
+	},
+/area/template_noop)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+o
+m
+f
+l
+a
+"}
+(3,1,1) = {"
+a
+F
+u
+E
+i
+a
+"}
+(4,1,1) = {"
+a
+S
+U
+g
+w
+a
+"}
+(5,1,1) = {"
+X
+g
+g
+Y
+U
+a
+"}
+(6,1,1) = {"
+a
+R
+U
+b
+m
+a
+"}
+(7,1,1) = {"
+a
+x
+G
+F
+v
+a
+"}
+(8,1,1) = {"
+a
+y
+H
+O
+u
+a
+"}
+(9,1,1) = {"
+a
+a
+a
+a
+a
+a
+"}

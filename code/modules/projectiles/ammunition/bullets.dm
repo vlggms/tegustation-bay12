@@ -238,3 +238,22 @@
 	spent_icon = "empshell-spent"
 	projectile_type  = /obj/item/projectile/ion
 	matter = list(MATERIAL_STEEL = 260, MATERIAL_URANIUM = 200)
+
+/* Used bullet casings **/
+/obj/item/ammo_casing/rifle/used/Initialize()
+	. = ..()
+	expend()
+	pixel_x = rand(-10, 10)
+	pixel_y = rand(-10, 10)
+
+/obj/item/ammo_casing/pistol/used/Initialize()
+	. = ..()
+	expend()
+	pixel_x = rand(-10, 10)
+	pixel_y = rand(-10, 10)
+
+/obj/item/ammo_casing/pistol/magnum/used/Initialize()
+	. = ..()
+	expend()
+	pixel_x = rand(-10, 10)
+	pixel_y = rand(-10, 10)

@@ -242,6 +242,10 @@
 	fire_sound = 'sound/weapons/gunshot/ak47.ogg'
 	damage = 30
 
+/obj/item/projectile/bullet/rifle/m16
+	fire_sound = 'sound/weapons/gunshot/m16.ogg'
+	damage = 35
+
 /obj/item/projectile/bullet/rifle/shell
 	fire_sound = 'sound/weapons/gunshot/sniper.ogg'
 	damage = 80

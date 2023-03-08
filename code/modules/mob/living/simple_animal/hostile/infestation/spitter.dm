@@ -14,7 +14,6 @@
 	projectiletype = /obj/item/projectile/energy/acid_spit
 	projectilesound = 'sound/weapons/alien_spit.ogg'
 	fire_desc = "spits acid"
-	ranged_range = 7
 
 	health = 150
 	maxHealth = 150

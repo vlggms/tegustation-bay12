@@ -174,6 +174,7 @@
 	#include "../away/rawl/rawl.dm"
 	#include "../away/ascent_caulship/_ascent_caulship.dm"
 	#include "../away/translocated_gateway/translocated_gateway.dm"
+	#include "../away/bunker/bunker.dm"
 
 	#define using_map_DATUM /datum/map/torch
 
