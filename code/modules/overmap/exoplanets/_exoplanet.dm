@@ -71,6 +71,9 @@ GLOBAL_VAR_INIT(number_of_planetoids, 0)
 	)
 	var/habitability_class
 
+	/// Name of the group/government that claimed this planet first
+	var/claim = null
+
 /obj/effect/overmap/visitable/sector/exoplanet/proc/generate_habitability()
 	if (isnum(habitability_distribution))
 		habitability_class = habitability_distribution
@@ -269,6 +272,8 @@ GLOBAL_VAR_INIT(number_of_planetoids, 0)
 
 /obj/effect/overmap/visitable/sector/exoplanet/get_scan_data(mob/user)
 	var/list/extra_data = list("<b>Target:</b> [name]")
+	if(claim)
+		extra_data += "<br><b>This planet has been claimed by <u>[claim]</u>!</b>"
 	var/user_skill = user.get_skill_value(SKILL_SCIENCE)
 	// Show a detailed scan summary if we have it
 	if (scan_summary)

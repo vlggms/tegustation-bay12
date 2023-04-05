@@ -58,7 +58,6 @@
 	#include "items/stamps.dm"
 	#include "items/uniform_vendor.dm"
 	#include "items/rigs.dm"
-	#include "items/solbanner.dm"
 	#include "items/explo_shotgun.dm"
 	#include "items/mecha.dm"
 	#include "items/memos.dm"

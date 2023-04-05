@@ -117,6 +117,14 @@ Weapons
 /obj/item/ammo_magazine/pistol/small/oneway
 	initial_ammo = 1
 
+// Explo banner capsule
+/obj/item/explo_banner/solgov
+	name = "\improper SCG banner capsule"
+	desc = "SCG banner packed in a rapid deployment cpsule. Used for staking claims on new worlds in the name of Sol Central Government."
+	req_access = list(access_pathfinder)
+	claim_government = "Sol Central Government"
+	banner_type = /obj/structure/banner/exploration/solgov
+
 /obj/effect/paint/hull
 	color = COLOR_SOL
 
