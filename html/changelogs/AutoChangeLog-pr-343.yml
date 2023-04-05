@@ -1,0 +1,6 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: Planets can only be claimed once and the group that claimed it will show
+      up on the planet scan result.
+  - tweak: Planets can be claimed by pretty much anyone, not just main map faction.
