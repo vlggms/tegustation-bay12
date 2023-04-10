@@ -3,7 +3,7 @@
 /obj/effect/overmap/visitable/sector/mobius_rift
 	name = "unusual asteroid"
 	desc = "Sensors error: ERROR #E0x003141592: recursive stack overflow for CALCULATE_APPROXIMATE_SIZE()."
-	icon_state = "object"
+	icon_state = "sector"
 	known = 0
 
 /datum/map_template/ruin/away_site/mobius_rift
