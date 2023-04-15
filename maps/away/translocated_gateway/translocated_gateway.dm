@@ -3,7 +3,7 @@
 /obj/effect/overmap/visitable/sector/translocated_gateway
 	name = "debris cloud"
 	desc = "Sensors detect a group of rock and metal structures. Unstable bluespace signatures have also been detected, similar to that of a bluespace drive."
-	icon_state = "object"
+	icon_state = "object_broken"
 	known = 0
 	initial_generic_waypoints = list(
 		"nav_gateway_1",
