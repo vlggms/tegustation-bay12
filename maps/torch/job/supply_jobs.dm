@@ -8,7 +8,6 @@
 	economic_power = 5
 	minimal_player_age = 0
 	minimum_character_age = list(SPECIES_HUMAN = 27)
-	ideal_character_age = 35
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/supply/deckofficer
 	allowed_branches = list(
 		/datum/mil_branch/expeditionary_corps,
@@ -55,7 +54,6 @@
 	spawn_positions = 3
 	supervisors = "the Deck Chief and Executive Officer"
 	minimum_character_age = list(SPECIES_HUMAN = 18)
-	ideal_character_age = 24
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/supply/tech
 	allowed_branches = list(
 		/datum/mil_branch/expeditionary_corps,
@@ -101,7 +99,6 @@
 	supervisors = "the Deck Chief, the Corporate Liaison and the Executive Officer"
 	economic_power = 7
 	minimum_character_age = list(SPECIES_HUMAN = 18)
-	ideal_character_age = 25
 	alt_titles = list(
 		"Drill Technician",
 		"Shaft Miner",

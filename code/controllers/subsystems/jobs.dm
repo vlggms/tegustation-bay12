@@ -238,32 +238,21 @@ SUBSYSTEM_DEF(jobs)
 	for(var/level = 1 to 3)
 		for(var/command_position in titles_by_department(COM))
 			var/datum/job/job = get_by_title(command_position)
-			if(!job)	continue
+			if(!job)
+				continue
 			var/list/candidates = find_occupation_candidates(job, level)
-			if(!candidates.len)	continue
-			// Build a weighted list, weight by age.
-			var/list/weightedCandidates = list()
+			if(!candidates.len)
+				continue
+			var/list/available_candidates = list()
 			for(var/mob/V in candidates)
 				// Log-out during round-start? What a bad boy, no head position for you!
-				if(!V.client) continue
+				if(!V.client)
+					continue
 				var/age = V.client.prefs.age
 				if(age < job.minimum_character_age) // Nope.
 					continue
-				switch(age)
-					if(job.minimum_character_age to (job.minimum_character_age+10))
-						weightedCandidates[V] = 3 // Still a bit young.
-					if((job.minimum_character_age+10) to (job.ideal_character_age-10))
-						weightedCandidates[V] = 6 // Better.
-					if((job.ideal_character_age-10) to (job.ideal_character_age+10))
-						weightedCandidates[V] = 10 // Great.
-					if((job.ideal_character_age+10) to (job.ideal_character_age+20))
-						weightedCandidates[V] = 6 // Still good.
-					if((job.ideal_character_age+20) to INFINITY)
-						weightedCandidates[V] = 3 // Geezer.
-					else
-						// If there's ABSOLUTELY NOBODY ELSE
-						if(candidates.len == 1) weightedCandidates[V] = 1
-			var/mob/new_player/candidate = pickweight(weightedCandidates)
+				available_candidates |= V
+			var/mob/new_player/candidate = pick(available_candidates)
 			if(assign_role(candidate, command_position, mode = mode))
 				return 1
 	return 0

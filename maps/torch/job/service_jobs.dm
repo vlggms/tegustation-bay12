@@ -5,7 +5,6 @@
 	total_positions = 1
 	spawn_positions = 1
 	minimum_character_age = list(SPECIES_HUMAN = 24)
-	ideal_character_age = 40
 	economic_power = 6
 	minimal_player_age = 0
 	supervisors = "the Executive Officer"
@@ -37,7 +36,6 @@
 	spawn_positions = 2
 	supervisors = "the Executive Officer"
 	minimum_character_age = list(SPECIES_HUMAN = 18)
-	ideal_character_age = 20
 	alt_titles = list(
 		"Janitor")
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/service/janitor
@@ -105,7 +103,6 @@
 	department_flag = SRV
 	supervisors = "the Executive Officer and the Corporate Liaison"
 	minimum_character_age = list(SPECIES_HUMAN = 18)
-	ideal_character_age = 30
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/service/bartender
 	allowed_branches = list(/datum/mil_branch/civilian)
 	allowed_ranks = list(/datum/mil_rank/civ/contractor)
@@ -130,7 +127,6 @@
 	spawn_positions = 5
 	supervisors = "the Executive Officer and SolGov Personnel"
 	minimum_character_age = list(SPECIES_HUMAN = 18)
-	ideal_character_age = 20
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/service/crewman
 	allowed_branches = list(
 		/datum/mil_branch/expeditionary_corps,

@@ -4,7 +4,6 @@
 	department_flag = MED
 	minimal_player_age = 2
 	minimum_character_age = list(SPECIES_HUMAN = 29)
-	ideal_character_age = 45
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the Chief Medical Officer"
@@ -54,7 +53,6 @@
 	department_flag = MED
 	minimal_player_age = 2
 	minimum_character_age = list(SPECIES_HUMAN = 24)
-	ideal_character_age = 45
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "physicians and the Chief Medical Officer"
@@ -102,7 +100,6 @@
 	supervisors = "physicians and the Chief Medical Officer"
 	economic_power = 7
 	minimum_character_age = list(SPECIES_HUMAN = 19)
-	ideal_character_age = 40
 	minimal_player_age = 0
 	alt_titles = list(
 		"Paramedic",
@@ -155,7 +152,6 @@
 	supervisors = "medical personnel and the Chief Medical Officer"
 	selection_color = "#013d3b"
 	minimum_character_age = list(SPECIES_HUMAN = 18)
-	ideal_character_age = 20
 	alt_titles = list(
 		"Corpsman Trainee")
 
@@ -204,7 +200,6 @@
 	selection_color = "#013d3b"
 	economic_power = 4
 	minimum_character_age = list(SPECIES_HUMAN = 25)
-	ideal_character_age = 30
 	minimal_player_age = 7
 	alt_titles = list(
 		"Chemist"
@@ -239,7 +234,6 @@
 	title = "Counselor"
 	total_positions = 1
 	spawn_positions = 1
-	ideal_character_age = 40
 	economic_power = 5
 	minimum_character_age = list(SPECIES_HUMAN = 24)
 	minimal_player_age = 0
