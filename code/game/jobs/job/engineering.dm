@@ -11,9 +11,6 @@
 	req_admin_notify = 1
 	economic_power = 10
 
-	ideal_character_age = 50
-
-
 	access = list(access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_heads,
 			            access_teleporter, access_external_airlocks, access_atmospherics, access_emergency_storage, access_eva,
 			            access_bridge, access_construction, access_sec_doors,

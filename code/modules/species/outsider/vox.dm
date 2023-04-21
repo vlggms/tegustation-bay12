@@ -138,9 +138,6 @@
 	var/datum/gender/T = gender_datums[H.get_gender()]
 	return "<span class='danger'>[T.His] beak-segments are cracked and chipped! [T.He] [T.is] not even recognizable.</span>\n"
 
-/datum/species/vox/skills_from_age(age)
-	. = 8
-
 /datum/species/vox/armalis
 	name = SPECIES_VOX_ARMALIS
 	name_plural = SPECIES_VOX_ARMALIS
