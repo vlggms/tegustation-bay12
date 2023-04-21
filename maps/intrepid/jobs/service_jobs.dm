@@ -6,7 +6,6 @@
 	spawn_positions = 5
 	supervisors = "the Executive Officer and TerraGov Personnel"
 	minimum_character_age = list(SPECIES_HUMAN = 18)
-	ideal_character_age = 20
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/service/crewman
 	allowed_branches = list(
 		/datum/mil_branch/exploration_division,
@@ -38,7 +37,6 @@
 	spawn_positions = 2
 	supervisors = "the Executive Officer"
 	minimum_character_age = list(SPECIES_HUMAN = 18)
-	ideal_character_age = 20
 	alt_titles = list(
 		"Sanitation Technician")
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/service/janitor

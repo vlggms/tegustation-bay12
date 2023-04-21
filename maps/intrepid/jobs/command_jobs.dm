@@ -4,7 +4,6 @@
 	minimal_player_age = 14
 	economic_power = 16
 	minimum_character_age = list(SPECIES_HUMAN = 40)
-	ideal_character_age = 50
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/command/CO
 	allowed_branches = list(
 		/datum/mil_branch/fleet
@@ -47,7 +46,6 @@
 	minimal_player_age = 14
 	economic_power = 14
 	minimum_character_age = list(SPECIES_HUMAN = 35)
-	ideal_character_age = 45
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/command/XO
 	allowed_branches = list(
 		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/intrepid/crew/command/XO/fleet
@@ -115,7 +113,6 @@
 	economic_power = 12
 	minimal_player_age = 14
 	minimum_character_age = list(SPECIES_HUMAN = 35)
-	ideal_character_age = 60
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/research/cso
 	allowed_branches = list(
 		/datum/mil_branch/exploration_division,
@@ -168,7 +165,6 @@
 	economic_power = 14
 	minimal_player_age = 14
 	minimum_character_age = list(SPECIES_HUMAN = 35)
-	ideal_character_age = 48
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/command/cmo
 	allowed_branches = list(
 		/datum/mil_branch/exploration_division,
@@ -216,7 +212,6 @@
 	supervisors = "the Commanding Officer and the Executive Officer"
 	economic_power = 12
 	minimum_character_age = list(SPECIES_HUMAN = 27)
-	ideal_character_age = 40
 	minimal_player_age = 14
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/command/chief_engineer
 	allowed_branches = list(
@@ -289,7 +284,6 @@
 	economic_power = 10
 	minimal_player_age = 14
 	minimum_character_age = list(SPECIES_HUMAN = 25)
-	ideal_character_age = 35
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/command/cos
 	allowed_branches = list(
 		/datum/mil_branch/military_police,
@@ -354,7 +348,6 @@
 	                    SKILL_FINANCE     = SKILL_EXPERIENCED)
 	skill_points = 20
 	minimum_character_age = list(SPECIES_HUMAN = 28)
-	ideal_character_age = 45
 
 	access = list(
 		access_representative, access_security, access_medical,
@@ -391,7 +384,6 @@
 	minimal_player_age = 0
 	economic_power = 8
 	minimum_character_age = list(SPECIES_HUMAN = 22)
-	ideal_character_age = 24
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/command/bridgeofficer
 	allowed_branches = list(
 		/datum/mil_branch/exploration_division,
@@ -444,7 +436,6 @@
 	spawn_positions = 1
 	economic_power = 10
 	minimum_character_age = list(SPECIES_HUMAN = 28)
-	ideal_character_age = 34
 	minimal_player_age = 7
 	supervisors = "the Commanding Officer"
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/command/psiadvisor

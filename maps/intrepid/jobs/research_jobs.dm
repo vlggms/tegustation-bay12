@@ -10,7 +10,6 @@
 	economic_power = 12
 	minimal_player_age = 3
 	minimum_character_age = list(SPECIES_HUMAN = 30)
-	ideal_character_age = 50
 	alt_titles = list(
 		"Research Supervisor")
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/research/senior_scientist
@@ -49,7 +48,6 @@
 	supervisors = "the Chief Science Officer"
 	economic_power = 10
 	minimum_character_age = list(SPECIES_HUMAN = 25)
-	ideal_character_age = 45
 	minimal_player_age = 0
 	alt_titles = list(
 		"Xenoarcheologist",
@@ -98,7 +96,6 @@
 	selection_color = "#633d63"
 	economic_power = 3
 	minimum_character_age = list(SPECIES_HUMAN = 18)
-	ideal_character_age = 30
 	alt_titles = list(
 		"Custodian" = /decl/hierarchy/outfit/job/intrepid/passenger/research/assist/janitor,
 		"Testing Assistant" = /decl/hierarchy/outfit/job/intrepid/passenger/research/assist/testsubject,

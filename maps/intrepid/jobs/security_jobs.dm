@@ -6,7 +6,6 @@
 	economic_power = 5
 	minimal_player_age = 7
 	minimum_character_age = list(SPECIES_HUMAN = 27)
-	ideal_character_age = 35
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/security/brig_chief
 	allowed_branches = list(
 		/datum/mil_branch/military_police
@@ -46,7 +45,6 @@
 	economic_power = 5
 	minimal_player_age = 7
 	minimum_character_age = list(SPECIES_HUMAN = 25)
-	ideal_character_age = 35
 	skill_points = 14
 	alt_titles = list(
 		"Criminal Investigator",
@@ -95,7 +93,6 @@
 	economic_power = 4
 	minimal_player_age = 7
 	minimum_character_age = list(SPECIES_HUMAN = 18)
-	ideal_character_age = 25
 	alt_titles = list(
 		"Security Trooper",
 	)

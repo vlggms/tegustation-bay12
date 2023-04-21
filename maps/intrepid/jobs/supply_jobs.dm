@@ -9,7 +9,6 @@
 	economic_power = 8
 	minimal_player_age = 0
 	minimum_character_age = list(SPECIES_HUMAN = 24)
-	ideal_character_age = 32
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/supply/deckofficer
 	allowed_branches = list(
 		/datum/mil_branch/exploration_division,
@@ -49,7 +48,6 @@
 	spawn_positions = 3
 	supervisors = "the Deck Chief and the Executive Officer"
 	minimum_character_age = list(SPECIES_HUMAN = 18)
-	ideal_character_age = 24
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/supply/tech
 	allowed_branches = list(
 		/datum/mil_branch/exploration_division,
@@ -89,7 +87,6 @@
 	supervisors = "the Deck Chief and the Executive Officer"
 	economic_power = 7
 	minimum_character_age = list(SPECIES_HUMAN = 18)
-	ideal_character_age = 24
 	alt_titles = list(
 		"Drill Technician",
 		"Shaft Miner",
