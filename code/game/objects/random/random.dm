@@ -23,6 +23,9 @@
 
 	var/build_path = pickweight(spawn_choices())
 
+	if(!isatom(build_path))
+		return
+
 	var/atom/A = new build_path(src.loc)
 	if(pixel_x || pixel_y)
 		A.pixel_x = pixel_x
@@ -460,6 +463,7 @@ obj/random/closet //A couple of random closets to spice up maint
 				/obj/structure/closet/wardrobe/suit,
 				/obj/structure/closet/wardrobe/orange
 				)
+
 /obj/random/closet/spawn_item()
 	. = ..()
 	if(. && length(locker_vermin) && prob(vermin_chance))
@@ -1369,3 +1373,12 @@ var/list/random_useful_
 	icon = 'icons/obj/drinks.dmi'
 	icon_state = "cola"
 	spawn_object = /obj/item/reagent_containers/food/drinks/cans/cola
+
+/obj/random/ore
+	name = "random ore"
+	desc = "This is a random ore."
+	icon = 'icons/obj/clothing/obj_accessories.dmi'
+	icon_state = "horribletie"
+
+/obj/random/ore/spawn_choices()
+	return subtypesof(/obj/item/ore)
