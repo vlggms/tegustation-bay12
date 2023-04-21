@@ -78,8 +78,8 @@
 		new /datum/atom_creator/simple(/obj/item/clothing/gloves/thick/duty, 80),
 		new /datum/atom_creator/simple(/obj/item/clothing/mask/balaclava/tactical, 30))
 
-/obj/random/ore
-	name = "random ore"
+/obj/random/ore_smug
+	name = "random ore - Smugglers submap"
 	desc = "This is a random ore."
 	icon = 'icons/obj/clothing/obj_accessories.dmi'
 	icon_state = "horribletie"
