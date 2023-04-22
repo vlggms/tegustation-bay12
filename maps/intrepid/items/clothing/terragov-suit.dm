@@ -401,19 +401,11 @@
 
 /obj/item/clothing/suit/space/void/marine
 	name = "marine voidsuit"
-	icon = 'maps/torch/icons/obj/obj_suit_solgov.dmi'
-	item_icons = list(slot_wear_suit_str = 'maps/torch/icons/mob/onmob_suit_solgov.dmi')
 	desc = "The bulky voidsuit, standard issue of TerraGov Marine Corps exploration division. It features extra padding and respectable radiation-resistant lining."
-	icon_state = "rig_explorer"
-	item_state = "rig_explorer"
-	sprite_sheets = list(
-		SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_suit_solgov_unathi.dmi',
-		SPECIES_SKRELL = 'maps/torch/icons/mob/skrell/onmob_suit_solgov_skrell.dmi',
-		)
-	sprite_sheets_obj = list(
-		SPECIES_UNATHI = 'maps/torch/icons/obj/unathi/obj_suit_solgov_unathi.dmi',
-		SPECIES_SKRELL = 'maps/torch/icons/obj/skrell/obj_suit_solgov_skrell.dmi',
-		)
+	icon = 'maps/intrepid/icons/obj/obj_suit_terragov.dmi'
+	item_icons = list(slot_wear_suit_str = 'maps/intrepid/icons/mob/onmob_suit_terragov.dmi')
+	icon_state = "rig_marine"
+	item_state = "rig_marine"
 	armor = list(
 		melee = ARMOR_MELEE_RESISTANT,
 		bullet = ARMOR_BALLISTIC_MINOR,
@@ -427,4 +419,25 @@
 
 /obj/item/clothing/suit/space/void/marine/prepared
 	helmet = /obj/item/clothing/head/helmet/space/void/marine
+	boots = /obj/item/clothing/shoes/magboots
+
+/obj/item/clothing/suit/space/void/marine/leader
+	name = "squad leader voidsuit"
+	desc = "The reinforced voidsuit commonly worn by sergeants of Terran Government Marine Corps. Slightly more resistant than standard issue of average marines."
+	icon = 'maps/intrepid/icons/obj/obj_suit_terragov.dmi'
+	item_icons = list(slot_wear_suit_str = 'maps/intrepid/icons/mob/onmob_suit_terragov.dmi')
+	icon_state = "rig_marine_alt"
+	item_state = "rig_marine_alt"
+	armor = list(
+		melee = ARMOR_MELEE_MAJOR,
+		bullet = ARMOR_BALLISTIC_SMALL,
+		laser = ARMOR_LASER_SMALL,
+		energy = ARMOR_ENERGY_RESISTANT,
+		bomb = ARMOR_BOMB_PADDED,
+		bio = ARMOR_BIO_SHIELDED,
+		rad = ARMOR_RAD_RESISTANT
+		)
+
+/obj/item/clothing/suit/space/void/marine/leader/prepared
+	helmet = /obj/item/clothing/head/helmet/space/void/marine/leader
 	boots = /obj/item/clothing/shoes/magboots

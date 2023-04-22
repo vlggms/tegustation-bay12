@@ -338,18 +338,10 @@
 	name = "marine voidsuit helmet"
 	desc = "An armored helmet, standard issue of TerraGov Marine Corps exploration division. It has an armored glass dome for superiour visibility and extra anti-radiation lining."
 	camera = /obj/machinery/camera/network/exploration
-	icon = 'maps/torch/icons/obj/obj_head_solgov.dmi'
-	item_icons = list(slot_head_str = 'maps/torch/icons/mob/onmob_head_solgov.dmi')
-	icon_state = "rig0_explorer"
-	item_state = "explorer_helm"
-	sprite_sheets = list(
-		SPECIES_UNATHI = 'maps/torch/icons/mob/unathi/onmob_head_solgov_unathi.dmi',
-		SPECIES_SKRELL = 'maps/torch/icons/mob/skrell/onmob_head_solgov_skrell.dmi',
-		)
-	sprite_sheets_obj = list(
-		SPECIES_UNATHI = 'maps/torch/icons/obj/unathi/obj_head_solgov_unathi.dmi',
-		SPECIES_SKRELL = 'maps/torch/icons/obj/skrell/obj_head_solgov_skrell.dmi',
-		)
+	icon = 'maps/intrepid/icons/obj/obj_head_terragov.dmi'
+	item_icons = list(slot_head_str = 'maps/intrepid/icons/mob/onmob_head_terragov.dmi')
+	icon_state = "rig_marine"
+	item_state = "rig_marine"
 	armor = list(
 		melee = ARMOR_MELEE_RESISTANT,
 		bullet = ARMOR_BALLISTIC_MINOR,
@@ -361,3 +353,25 @@
 		)
 	light_overlay = "helmet_light_dual_alt"
 	tinted = FALSE
+
+/obj/item/clothing/head/helmet/space/void/marine/dark
+	name = "tinted marine voidsuit helmet"
+	icon_state = "rig_marine_dark"
+	item_state = "rig_marine_dark"
+	tinted = TRUE
+
+/obj/item/clothing/head/helmet/space/void/marine/leader
+	name = "squad leader voidsuit helmet"
+	desc = "A reinforced helmet belonging to sergeants within TerraGov Marine Corps. Slightly more resistant than the standard issue."
+	icon_state = "rig_marine_alt"
+	item_state = "rig_marine_alt"
+	armor = list(
+		melee = ARMOR_MELEE_MAJOR,
+		bullet = ARMOR_BALLISTIC_SMALL,
+		laser = ARMOR_LASER_SMALL,
+		energy = ARMOR_ENERGY_RESISTANT,
+		bomb = ARMOR_BOMB_PADDED,
+		bio = ARMOR_BIO_SHIELDED,
+		rad = ARMOR_RAD_RESISTANT
+		)
+	tinted = TRUE

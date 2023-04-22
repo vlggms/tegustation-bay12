@@ -50,6 +50,10 @@
 		/obj/item/ammo_magazine/mil_rifle = 3,
 		/obj/item/gun/projectile/pistol/military/alt,
 		/obj/item/ammo_magazine/pistol/double = 3,
+		/obj/item/grenade/frag,
+		/obj/item/storage/belt/holster/security/tactical,
+		/obj/item/clothing/suit/space/void/marine/leader/prepared,
+		/obj/item/tank/oxygen,
 		/obj/item/device/radio,
 		/obj/item/device/tape/random,
 		/obj/item/device/gps,
@@ -84,6 +88,10 @@
 	return list(
 		/obj/item/gun/projectile/automatic/bullpup_rifle,
 		/obj/item/ammo_magazine/mil_rifle = 3,
+		/obj/item/grenade/frag,
+		/obj/item/storage/belt/holster/security/tactical,
+		/obj/item/clothing/suit/space/void/marine/prepared,
+		/obj/item/tank/oxygen,
 		/obj/item/device/radio,
 		/obj/item/device/gps,
 		/obj/item/taperoll/research,
@@ -114,6 +122,10 @@
 	return list(
 		/obj/item/gun/projectile/automatic/bullpup_rifle,
 		/obj/item/ammo_magazine/mil_rifle = 3,
+		/obj/item/grenade/frag,
+		/obj/item/storage/belt/holster/security/tactical,
+		/obj/item/clothing/suit/space/void/marine/prepared,
+		/obj/item/tank/oxygen,
 		/obj/item/storage/firstaid/combat,
 		/obj/item/storage/firstaid/adv,
 		/obj/item/bodybag/cryobag,
@@ -147,6 +159,10 @@
 	return list(
 		/obj/item/gun/projectile/automatic/bullpup_rifle,
 		/obj/item/ammo_magazine/mil_rifle = 3,
+		/obj/item/grenade/frag,
+		/obj/item/storage/belt/holster/security/tactical,
+		/obj/item/clothing/suit/space/void/marine/prepared,
+		/obj/item/tank/oxygen,
 		/obj/item/storage/belt/utility/full,
 		/obj/item/gun/energy/plasmacutter,
 		/obj/item/storage/briefcase/inflatable,
@@ -171,6 +187,7 @@
 		new /datum/atom_creator/weighted(list(/obj/item/device/flashlight, /obj/item/device/flashlight/flare, /obj/item/device/flashlight/flare/glowstick/random))
 	)
 
+// PILOTS DON'T EXIST!
 /obj/structure/closet/secure_closet/pilot
 	name = "pilot's locker"
 	req_access = list(access_pilot)

@@ -10719,9 +10719,6 @@
 /obj/effect/floor_decal/corner/paleblue/mono,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/secure_closet/combat_medic,
-/obj/item/storage/belt/holster/security/tactical,
-/obj/item/grenade/frag,
-/obj/item/clothing/suit/space/void/marine/prepared,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -16761,9 +16758,6 @@
 /obj/effect/floor_decal/corner/orange/mono,
 /obj/structure/closet/secure_closet/marine,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/storage/belt/holster/security/tactical,
-/obj/item/grenade/frag,
-/obj/item/clothing/suit/space/void/marine/prepared,
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/exploration/storage)
 "oui" = (
@@ -17931,9 +17925,6 @@
 /obj/effect/floor_decal/corner/orange/mono,
 /obj/structure/closet/secure_closet/marine,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/storage/belt/holster/security/tactical,
-/obj/item/grenade/frag,
-/obj/item/clothing/suit/space/void/marine/prepared,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -21260,12 +21251,6 @@
 /obj/item/clothing/suit/armor/pcarrier/tan/tactical,
 /obj/item/clothing/suit/armor/pcarrier/tan/tactical,
 /obj/item/clothing/suit/armor/pcarrier/tan/tactical,
-/obj/item/clothing/accessory/armguards/tan,
-/obj/item/clothing/accessory/armguards/tan,
-/obj/item/clothing/accessory/armguards/tan,
-/obj/item/clothing/accessory/legguards/tan,
-/obj/item/clothing/accessory/legguards/tan,
-/obj/item/clothing/accessory/legguards/tan,
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/exploration/storage)
 "saZ" = (
@@ -22589,9 +22574,6 @@
 /obj/effect/floor_decal/corner/yellow/mono,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/secure_closet/combat_engi,
-/obj/item/storage/belt/holster/security/tactical,
-/obj/item/grenade/frag,
-/obj/item/clothing/suit/space/void/marine/prepared,
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/exploration/storage)
 "sWR" = (
@@ -25622,9 +25604,6 @@
 /obj/effect/floor_decal/corner/red/mono,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/secure_closet/squad_leader,
-/obj/item/storage/belt/holster/security/tactical,
-/obj/item/grenade/frag,
-/obj/item/clothing/suit/space/void/marine/prepared,
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/exploration/storage)
 "vAd" = (
