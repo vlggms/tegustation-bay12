@@ -548,7 +548,7 @@ Ccomp's first proc.
 	var/selected_sound = GLOB.using_map.command_report_sound
 	switch(alert("Do you wish to set custom announcement sound?",,"Yes","No"))
 		if("Yes")
-			var/S = input("Upload sound") as sound
+			var/S = input("Pick sound:","Sound") as null|sound
 			if(!S)
 				to_chat(usr, SPAN_WARNING("You didn't upload any file!"))
 				return
