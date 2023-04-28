@@ -74,6 +74,8 @@
 	var/ranged_attack_delay = null
 	var/special_attack_delay = null
 
+	var/ranged_attack_cooldown = DEFAULT_ATTACK_COOLDOWN
+
 	//Mob interaction
 	var/list/friends = list()		// Mobs on this list wont get attacked regardless of faction status.
 	var/harm_intent_damage = 3		// How much an unarmed harm click does to this mob.
@@ -161,6 +163,10 @@
 	var/return_damage_min
 	var/return_damage_max
 
+	// For ranged bursts
+	var/ranged_burst_count = 0
+	var/ranged_burst_delay = 5
+
 	// List of potential death sounds, if any
 	var/list/death_sounds = list()
 
@@ -180,9 +186,13 @@
 
 	if(statpanel("Status") && show_stat_health)
 		stat(null, "Health: [round((health / maxHealth) * 100)]%")
+	if(needs_reload)
+		stat(null, "Ammo: [max(0, reload_max - reload_count)]/[reload_max]")
 
 /mob/living/simple_animal/death(gibbed, deathmessage = "dies!", show_dead_message)
-	. = ..(gibbed,deathmessage,show_dead_message)
+	. = ..()
+	if(!.)
+		return
 	drop_loot()
 	icon_state = icon_dead
 	update_icon()
@@ -191,7 +201,6 @@
 	walk_to(src,0)
 	if(LAZYLEN(death_sounds))
 		playsound(src, pick(death_sounds), 50, TRUE)
-	return ..(gibbed,deathmessage,show_dead_message)
 
 /mob/living/simple_animal/proc/drop_loot()
 	if(!loot_list.len)

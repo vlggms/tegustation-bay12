@@ -20,7 +20,7 @@
 				Lines += entry
 				continue
 
-			entry += " - Playing as [C.mob.real_name]"
+			entry += " - Playing as [C.mob.real_name ? C.mob.real_name : C.mob.name]"
 			switch(C.mob.stat)
 				if(UNCONSCIOUS)
 					entry += " - <font color='darkgray'><b>Unconscious</b></font>"

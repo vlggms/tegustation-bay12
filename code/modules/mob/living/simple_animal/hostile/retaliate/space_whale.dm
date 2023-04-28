@@ -15,7 +15,6 @@
 	minbodytemp = 0
 
 	turns_per_move = 10
-	attack_delay = 2 SECONDS
 	move_to_delay = 2 SECONDS
 
 	mob_size = MOB_LARGE

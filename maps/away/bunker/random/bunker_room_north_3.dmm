@@ -1,0 +1,89 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"c" = (
+/obj/structure/flora/pottedplant/minitree,
+/turf/simulated/floor/carpet/brown,
+/area/template_noop)
+"m" = (
+/obj/structure/filingcabinet/chestdrawer,
+/turf/simulated/floor/carpet/brown,
+/area/template_noop)
+"s" = (
+/obj/structure/closet/wardrobe,
+/obj/random/clothing,
+/obj/random/clothing,
+/obj/random/clothing,
+/obj/random/clothing,
+/obj/random/cash,
+/obj/random/accessory,
+/obj/random/accessory,
+/obj/random/hat,
+/obj/random/shoes,
+/obj/random/shoes,
+/turf/simulated/floor/carpet/brown,
+/area/template_noop)
+"A" = (
+/obj/structure/bed,
+/obj/item/bedsheet/orange,
+/turf/simulated/floor/carpet/brown,
+/area/template_noop)
+"M" = (
+/obj/machinery/door/airlock/civilian,
+/turf/simulated/floor/carpet/brown,
+/area/template_noop)
+"P" = (
+/turf/simulated/floor/carpet/brown,
+/area/template_noop)
+"Q" = (
+/obj/structure/flora/pottedplant/overgrown,
+/turf/simulated/floor/carpet/brown,
+/area/template_noop)
+"T" = (
+/obj/machinery/light/small/yellowish{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/brown,
+/area/template_noop)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+Q
+P
+T
+m
+a
+"}
+(3,1,1) = {"
+a
+c
+P
+P
+P
+M
+"}
+(4,1,1) = {"
+a
+A
+P
+P
+s
+a
+"}
+(5,1,1) = {"
+a
+a
+a
+a
+a
+a
+"}

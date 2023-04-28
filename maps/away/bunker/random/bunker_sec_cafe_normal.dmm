@@ -1,0 +1,175 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"d" = (
+/obj/structure/bed/chair/wood{
+	dir = 1
+	},
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"h" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"p" = (
+/obj/structure/table/woodentable,
+/obj/item/reagent_containers/food/snacks/canned/caviar{
+	pixel_y = -3
+	},
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"s" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"t" = (
+/obj/structure/table/woodentable,
+/obj/random/mre/dessert{
+	pixel_x = -1;
+	pixel_y = 2
+	},
+/obj/random/mre/drink{
+	pixel_x = 14
+	},
+/obj/effect/decal/cleanable/cobweb,
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"u" = (
+/obj/machinery/door/airlock/glass/security,
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"v" = (
+/obj/structure/table/woodentable,
+/obj/random/toy,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"w" = (
+/obj/structure/table/woodentable,
+/obj/item/reagent_containers/food/snacks/canned/beans{
+	pixel_y = 5
+	},
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"C" = (
+/obj/machinery/vending/soda,
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"D" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"F" = (
+/obj/structure/table/woodentable,
+/obj/item/reagent_containers/food/snacks/canned/beef{
+	pixel_y = -3
+	},
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"L" = (
+/obj/structure/bed/chair/wood{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"M" = (
+/obj/machinery/vending/snack,
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"N" = (
+/obj/machinery/vending/sovietsoda,
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"R" = (
+/obj/structure/bed/chair/wood,
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"V" = (
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+"Z" = (
+/obj/structure/table/woodentable,
+/obj/item/material/kitchen/utensil/fork{
+	pixel_x = 10
+	},
+/turf/simulated/floor/wood/maple,
+/area/template_noop)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+t
+d
+h
+M
+a
+"}
+(3,1,1) = {"
+a
+D
+d
+s
+C
+a
+"}
+(4,1,1) = {"
+a
+s
+s
+V
+N
+a
+"}
+(5,1,1) = {"
+u
+V
+V
+V
+V
+a
+"}
+(6,1,1) = {"
+a
+R
+F
+Z
+d
+a
+"}
+(7,1,1) = {"
+a
+R
+D
+p
+L
+a
+"}
+(8,1,1) = {"
+a
+R
+w
+v
+d
+a
+"}
+(9,1,1) = {"
+a
+a
+a
+a
+a
+a
+"}

@@ -139,7 +139,7 @@
 /turf/simulated/floor/blueriver
 	name = "glowing floor"
 	desc = "The ground here is made of indeterminate substance. It shimmers gently, without any apparent cause."
-	icon = 'riverturfs.dmi'
+	icon = 'maps/away/blueriver/riverturfs.dmi'
 	icon_state = "floor"
 	temperature = 233
 
@@ -150,7 +150,7 @@
 /turf/simulated/wall/iron/blueriver
 	name = "alien wall"
 	desc = "Its surface seems to be constantly moving, as if it were breathing. You feel a sense of lightheadedness just from looking at it."
-	icon = 'riverturfs.dmi'
+	icon = 'maps/away/blueriver/riverturfs.dmi'
 	icon_state = "evilwall_1"
 	temperature = 233
 
@@ -172,7 +172,7 @@
 /turf/unsimulated/floor/bluespace_river
 	name = "blue river"
 	desc = "This looks like a sort of semi-solid liquid, with the consistency of slime. It glows a shade of blue that's strangely familiar, and flows silently under the influence of some unseen force."
-	icon = 'blueriver.dmi'
+	icon = 'maps/away/blueriver/blueriver.dmi'
 	icon_state = "bluespacecrystal1"
 	opacity = FALSE
 

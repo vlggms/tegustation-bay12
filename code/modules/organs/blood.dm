@@ -188,6 +188,9 @@
 	return 0
 
 /mob/living/carbon/human/proc/regenerate_blood(var/amount)
+	if(QDELETED(vessel))
+		return FALSE
+
 	amount *= (species.blood_volume / SPECIES_BLOOD_DEFAULT)
 	var/blood_volume_raw = vessel.get_reagent_amount(/datum/reagent/blood)
 	amount = max(0,min(amount, species.blood_volume - blood_volume_raw))
@@ -270,7 +273,7 @@ proc/blood_splatter(var/target,var/datum/reagent/blood/source,var/large,var/spra
 
 //Percentage of maximum blood volume.
 /mob/living/carbon/human/proc/get_blood_volume()
-	return round((vessel.get_reagent_amount(/datum/reagent/blood)/species.blood_volume)*100)
+	return isnull(vessel) ? 0 : round((vessel.get_reagent_amount(/datum/reagent/blood)/species.blood_volume)*100)
 
 //Percentage of maximum blood volume, affected by the condition of circulation organs
 /mob/living/carbon/human/proc/get_blood_circulation()

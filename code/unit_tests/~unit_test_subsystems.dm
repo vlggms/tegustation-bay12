@@ -44,6 +44,10 @@ SUBSYSTEM_DEF(unit_tests)
 			report_progress("Skipping template '[map_template]' ([map_template.type]): Is an Away Site")
 			continue
 
+		if(istype(map_template, /datum/map_template/ruin/random_room))
+			report_progress("Skipping template '[map_template]' ([map_template.type]): Is a random room")
+			continue
+
 		// Suggestion: Do smart things here to squeeze as many templates as possible into the same Z-level
 		if(map_template.tallness == 1)
 			INCREMENT_WORLD_Z_SIZE
