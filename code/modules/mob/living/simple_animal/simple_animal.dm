@@ -190,15 +190,18 @@
 		stat(null, "Ammo: [max(0, reload_max - reload_count)]/[reload_max]")
 
 /mob/living/simple_animal/death(gibbed, deathmessage = "dies!", show_dead_message)
+
 	. = ..()
 	if(!.)
 		return
 	drop_loot()
+	if(QDELETED(src)) // Gibbed/dusted/otherwise gone
+		return
 	icon_state = icon_dead
 	update_icon()
 	density = FALSE
 	adjustBruteLoss(maxHealth) //Make sure dey dead.
-	walk_to(src,0)
+	walk_to(src, 0)
 	if(LAZYLEN(death_sounds))
 		playsound(src, pick(death_sounds), 50, TRUE)
 
@@ -336,7 +339,10 @@
 		if(turn_sound && dir != old_dir)
 			playsound(src, turn_sound, 50, 1)
 		else if(movement_sound && old_turf != get_turf(src)) // Playing both sounds at the same time generally sounds bad.
-			playsound(src, movement_sound, 50, 1)
+			PlayMovementSound()
+
+/mob/living/simple_animal/proc/PlayMovementSound()
+	playsound(src, movement_sound, 50, 1)
 
 /mob/living/simple_animal/movement_delay()
 	. = movement_cooldown
@@ -350,8 +356,6 @@
 		if(. <= 0)
 			. = 1
 		. *= purge
-
-	 . += ..()
 
 /mob/living/simple_animal/get_inventory_slot(obj/item/I)
 	return -1

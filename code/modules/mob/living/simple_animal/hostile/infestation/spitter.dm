@@ -43,8 +43,6 @@
 		)
 
 /datum/ai_holder/simple_animal/infestation/spitter
-	hostile = TRUE
-	retaliate = TRUE
 	returns_home = FALSE
 	home_low_priority = TRUE
 	speak_chance = 2

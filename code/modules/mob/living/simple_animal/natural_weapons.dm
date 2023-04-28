@@ -67,6 +67,10 @@
 	attack_verb = list("kicked")
 	force = 5
 
+/obj/item/natural_weapon/hooves/rhino
+	force = 45
+	hitsound = 'sound/weapons/heavysmash.ogg'
+
 /obj/item/natural_weapon/punch
 	name = "fists"
 	attack_verb = list("punched")

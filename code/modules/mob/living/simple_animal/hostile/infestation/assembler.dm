@@ -39,15 +39,14 @@
 		/mob/living/simple_animal/hostile/infestation/spitter = 8,
 		/mob/living/simple_animal/hostile/infestation/eviscerator = 12,
 		/mob/living/simple_animal/hostile/infestation/assembler = 16,
+		/mob/living/simple_animal/hostile/infestation/rhino = 20,
 		)
 	/// Not actually the limit, but the point where it will forcefully spawn larva without waiting for time
-	var/nutrient_max = 20
-	/// World time by which we will spawn an larva if we have no target
+	var/nutrient_max = 25
+	/// World time by which we will spawn a larva if we have no target
 	var/larva_time
 
 /datum/ai_holder/simple_animal/infestation/assembler
-	hostile = TRUE
-	retaliate = TRUE
 	cooperative = FALSE
 	mauling = TRUE
 	handle_corpse = TRUE

@@ -38,13 +38,11 @@
 		)
 
 /datum/ai_holder/simple_animal/infestation/broodling
-	hostile = TRUE
-	retaliate = TRUE
 	returns_home = FALSE
 	home_low_priority = TRUE
 	speak_chance = 3
 	wander = TRUE
-	base_wander_delay = 2
+	base_wander_delay = 1
 
 /datum/ai_holder/simple_animal/infestation/broodling/post_melee_attack(atom/A)
 	if(holder.Adjacent(A))

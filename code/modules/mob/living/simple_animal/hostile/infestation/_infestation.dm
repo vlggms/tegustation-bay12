@@ -12,12 +12,12 @@
 	min_gas = null
 	max_gas = null
 	minbodytemp = 0
+	status_flags = CANPUSH // Cannot be stunned or otherwise incapacitated
 	/// Reference to structure that effectively controls the colony
 	var/overmind = null
 	/// World time at which we will begin transforming into another mob
 	var/transformation_time
-	/// Assoc list of potential transformations if none are set by outer forces
-	// Type = Time
+	/// Assoc list of potential transformations if none are set by outer forces. Type = Time
 	var/list/transformation_types = list()
 	/// Which mob we will be transformed into
 	var/transformation_target_type = null
@@ -43,9 +43,19 @@
 			playsound(src, 'sound/effects/splat.ogg', 50, TRUE)
 			return
 		if(icon_state != icon_egg) // Become egg
+			// We're in combat, forget evolving for a moment
+			if(ai_holder.target)
+				transformation_time = world.time + 10 SECONDS
+				return
 			BecomeEgg()
 			return
 		Evolve()
+
+/mob/living/simple_animal/hostile/infestation/death()
+	if(icon_state == icon_egg)
+		animate(src, alpha = 0, time = 25)
+		QDEL_IN(src, 25)
+	return ..()
 
 /mob/living/simple_animal/hostile/infestation/proc/BecomeEgg()
 	name = "egg"
@@ -75,3 +85,10 @@
 	if(ckey) // We're player controlled
 		broodling.ckey = ckey
 	gib()
+
+// Shared AI behavior
+/datum/ai_holder/simple_animal/infestation
+	hostile = TRUE
+	retaliate = TRUE
+	cooperative = TRUE
+	respect_confusion = FALSE
