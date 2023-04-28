@@ -355,10 +355,9 @@
 	tinted = FALSE
 
 /obj/item/clothing/head/helmet/space/void/marine/dark
-	name = "tinted marine voidsuit helmet"
+	name = "dark marine voidsuit helmet"
 	icon_state = "rig_marine_dark"
 	item_state = "rig_marine_dark"
-	tinted = TRUE
 
 /obj/item/clothing/head/helmet/space/void/marine/leader
 	name = "squad leader voidsuit helmet"
@@ -374,4 +373,3 @@
 		bio = ARMOR_BIO_SHIELDED,
 		rad = ARMOR_RAD_RESISTANT
 		)
-	tinted = TRUE
