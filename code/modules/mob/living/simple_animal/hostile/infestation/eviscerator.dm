@@ -6,7 +6,6 @@
 	icon_living = "eviscerator"
 	icon_dead = "eviscerator_dead"
 	mob_size = MOB_MEDIUM
-	move_to_delay = 3.5
 	default_pixel_x = -8
 	pixel_x = -8
 

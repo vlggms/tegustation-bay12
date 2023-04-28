@@ -71,6 +71,14 @@
 	force = 45
 	hitsound = 'sound/weapons/heavysmash.ogg'
 
+/obj/item/natural_weapon/assembler
+	name = "sharp tentacle"
+	attack_verb = list("stabbed", "pierced")
+	force = 20
+	hitsound = 'sound/weapons/rapidslice.ogg'
+	sharp = TRUE
+	edge = TRUE
+
 /obj/item/natural_weapon/punch
 	name = "fists"
 	attack_verb = list("punched")

@@ -6,16 +6,15 @@
 	icon_living = "assembler"
 	icon_dead = "assembler_dead"
 	mob_size = MOB_MEDIUM
-	move_to_delay = 3.5
 	default_pixel_x = -8
 	pixel_x = -8
 
-	natural_weapon = /obj/item/natural_weapon/claws
+	natural_weapon = /obj/item/natural_weapon/assembler
 
 	health = 200
 	maxHealth = 200
 
-	move_to_delay = 5
+	move_to_delay = 4
 
 	meat_type = /obj/item/reagent_containers/food/snacks/abominationmeat
 	meat_amount = 8
