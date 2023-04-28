@@ -25,7 +25,7 @@
 	bone_material = MATERIAL_BONE_CARTILAGE
 	bone_amount = 4
 
-	ai_holder_type = /obj/item/natural_weapon/hooves/rhino
+	ai_holder_type = /datum/ai_holder/simple_animal/infestation/eviscerator
 	//say_list_type = /datum/say_list/infestation_eviscerator
 	death_sounds = list(
 		'sound/simple_mob/abominable_infestation/eviscerator/death_1.ogg',
