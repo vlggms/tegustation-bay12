@@ -13,6 +13,7 @@
 	max_gas = null
 	minbodytemp = 0
 	status_flags = CANPUSH // Cannot be stunned or otherwise incapacitated
+	melee_attack_delay = 0
 	/// Reference to structure that effectively controls the colony
 	var/overmind = null
 	/// World time at which we will begin transforming into another mob

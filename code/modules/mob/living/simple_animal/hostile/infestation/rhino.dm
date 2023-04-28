@@ -16,7 +16,7 @@
 	maxHealth = 800
 	resistance = 15
 
-	move_to_delay = 5
+	move_to_delay = 6
 	movement_sound = 'sound/simple_mob/abominable_infestation/rhino/step.ogg'
 	movement_shake_radius = 3
 
@@ -51,7 +51,7 @@
 
 /mob/living/simple_animal/hostile/infestation/rhino/PlayMovementSound()
 	if(enraged)
-		playsound(src, enraged_movement_sound, 50, 1, 3)
+		playsound(src, enraged_movement_sound, 75, 1, 3)
 		return
 	return ..()
 
