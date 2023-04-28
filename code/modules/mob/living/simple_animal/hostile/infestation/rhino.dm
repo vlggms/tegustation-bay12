@@ -10,7 +10,7 @@
 	default_pixel_x = -8
 	pixel_x = -8
 
-	natural_weapon = /obj/item/natural_weapon/claws/strong/eviscerator
+	natural_weapon = /obj/item/natural_weapon/hooves/rhino
 
 	health = 800
 	maxHealth = 800
