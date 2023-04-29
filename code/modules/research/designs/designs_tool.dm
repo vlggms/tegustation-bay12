@@ -78,10 +78,19 @@
 	name = "rapid piping device"
 	desc = "A compacted and complicated device, that relies on compressed matter to dispense piping on the move."
 	id = "rpd"
-	req_tech = list(TECH_ENGINEERING = 6, TECH_MATERIAL = 6)
+	req_tech = list(TECH_ENGINEERING = 4, TECH_MATERIAL = 4)
 	materials = list(MATERIAL_STEEL = 15000, MATERIAL_GLASS = 10000, MATERIAL_SILVER = 2000)
 	build_path = /obj/item/rpd
 	sort_string = "VAGAJ"
+
+/datum/design/item/tool/ircd
+	name = "improved rapid construction device"
+	desc = "Rapid construction device with increased storage space and building speed."
+	id = "irpd"
+	req_tech = list(TECH_ENGINEERING = 6, TECH_MATERIAL = 4)
+	materials = list(MATERIAL_STEEL = 75000, MATERIAL_SILVER = 5000)
+	build_path = /obj/item/rcd/improved
+	sort_string = "VAGAK"
 
 /datum/design/item/tool/oxycandle
 	name = "oxycandle"
@@ -91,7 +100,7 @@
 	materials = list(MATERIAL_STEEL = 3000)
 	chemicals = list(/datum/reagent/sodiumchloride = 20, /datum/reagent/acetone = 20)
 	build_path = /obj/item/device/oxycandle
-	sort_string = "VAGAK"
+	sort_string = "VAGAL"
 
 /datum/design/item/tool/RPED
 	name = "Rapid Part Exchange Device"
