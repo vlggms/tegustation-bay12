@@ -10325,10 +10325,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fourthdeck/aft)
-"Jz" = (
-/obj/structure/sign/poster/tegu_9,
-/turf/simulated/wall/prepainted,
-/area/quartermaster/storage/upper)
 "JA" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -37903,7 +37899,7 @@ MT
 Ou
 Qb
 YB
-Jz
+Yf
 Yf
 QI
 Yf

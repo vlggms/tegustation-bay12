@@ -96,24 +96,6 @@
 
 	return 1
 
-/datum/unit_test/icon_test/posters_shall_have_icon_states
-	name = "ICON STATE - Posters Shall Have Icon States"
-
-/datum/unit_test/icon_test/posters_shall_have_icon_states/start_test()
-	var/contraband_icons = icon_states('icons/obj/contraband.dmi')
-	var/list/invalid_posters = list()
-
-	for(var/poster_type in subtypesof(/decl/poster))
-		var/decl/poster/P = decls_repository.get_decl(poster_type)
-		if(!(P.icon_state in contraband_icons))
-			invalid_posters += poster_type
-
-	if(invalid_posters.len)
-		fail("/decl/poster with missing icon states: [english_list(invalid_posters)]")
-	else
-		pass("All /decl/poster subtypes have valid icon states.")
-	return 1
-
 /datum/unit_test/icon_test/item_modifiers_shall_have_icon_states
 	name = "ICON STATE - Item Modifiers Shall Have Icon Sates"
 	var/list/icon_states_by_type

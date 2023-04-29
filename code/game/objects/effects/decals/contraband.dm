@@ -1,12 +1,8 @@
-
-//########################## CONTRABAND ;3333333333333333333 -Agouri ###################################################
-
 /obj/item/contraband
 	name = "contraband item"
 	desc = "You probably shouldn't be holding this."
 	icon = 'icons/obj/contraband.dmi'
 	force = 0
-
 
 /obj/item/contraband/poster
 	name = "rolled-up poster"
@@ -14,7 +10,7 @@
 	icon_state = "rolled_poster"
 	var/poster_type
 
-/obj/item/contraband/poster/New(var/maploading, var/given_poster_type)
+/obj/item/contraband/poster/New(maploading, given_poster_type)
 	if(given_poster_type && !ispath(given_poster_type, /decl/poster))
 		CRASH("Invalid poster type: [log_info_line(given_poster_type)]")
 
@@ -31,7 +27,7 @@
 	return ..()
 
 //Places the poster on a wall
-/obj/item/contraband/poster/afterattack(var/atom/A, var/mob/user, var/adjacent, var/clickparams)
+/obj/item/contraband/poster/afterattack(atom/A, mob/user, adjacent, clickparams)
 	if (!adjacent)
 		return
 
@@ -65,13 +61,13 @@
 		// We cannot rely on user being on the appropriate turf when placement fails
 		P.roll_and_drop(get_step(W, turn(placement_dir, 180)))
 
-/obj/item/contraband/poster/proc/ArePostersOnWall(var/turf/W, var/placed_poster)
+/obj/item/contraband/poster/proc/ArePostersOnWall(turf/W, placed_poster)
 	//just check if there is a poster on or adjacent to the wall
-	if (locate(/obj/structure/sign/poster) in W)
+	if(locate(/obj/structure/sign/poster) in W)
 		return TRUE
 
 	//crude, but will cover most cases. We could do stuff like check pixel_x/y but it's not really worth it.
-	for (var/dir in GLOB.cardinal)
+	for(var/dir in GLOB.cardinal)
 		var/turf/T = get_step(W, dir)
 		var/poster = locate(/obj/structure/sign/poster) in T
 		if (poster && placed_poster != poster)
@@ -82,48 +78,42 @@
 //############################## THE ACTUAL DECALS ###########################
 
 /obj/structure/sign/poster
-	name = "poster"
+	name = "random poster"
 	desc = "A large piece of space-resistant printed paper."
 	icon = 'icons/obj/contraband.dmi'
 	anchored = TRUE
-	var/poster_type
+	var/poster_type = null
 	var/random_poster_type = /decl/poster
-	var/ruined = 0
+	var/ruined = FALSE
 
-/obj/structure/sign/poster/tegu_9
-	poster_type = /decl/poster/tegu/t9
+/obj/structure/sign/poster/New(newloc, placement_dir = null, give_poster_type = poster_type)
+	. = ..()
 
-/obj/structure/sign/poster/New(var/newloc, var/placement_dir = null, var/give_poster_type = null)
-	..(newloc)
-
+	poster_type = give_poster_type
 	if(!poster_type)
-		if(give_poster_type)
-			poster_type = give_poster_type
-		else
-			poster_type = pick(subtypesof(random_poster_type))
+		var/list/valid_types = list()
+		for(var/T in subtypesof(random_poster_type))
+			var/decl/poster/P = T
+			if(initial(P.icon_state) && initial(P.name) && !initial(P.never_random))
+				valid_types |= P
+		poster_type = pick(valid_types)
 	set_poster(poster_type)
 
-	switch (placement_dir)
-		if (NORTH)
+	switch(placement_dir)
+		if(NORTH)
 			pixel_x = 0
 			pixel_y = 32
-		if (SOUTH)
+		if(SOUTH)
 			pixel_x = 0
 			pixel_y = -32
-		if (EAST)
+		if(EAST)
 			pixel_x = 32
 			pixel_y = 0
-		if (WEST)
+		if(WEST)
 			pixel_x = -32
 			pixel_y = 0
 
-/obj/structure/sign/poster/proc/set_poster(var/poster_type)
-	var/decl/poster/design = decls_repository.get_decl(poster_type)
-	SetName("[initial(name)] - [design.name]")
-	desc = "[initial(desc)] [design.desc]"
-	icon_state = design.icon_state
-
-/obj/structure/sign/poster/attackby(obj/item/W as obj, mob/user as mob)
+/obj/structure/sign/poster/attackby(obj/item/W, mob/user)
 	if(isWirecutter(W))
 		playsound(loc, 'sound/items/Wirecutter.ogg', 100, 1)
 		if(ruined)
@@ -134,35 +124,46 @@
 			roll_and_drop(user.loc)
 		return
 
-
-/obj/structure/sign/poster/attack_hand(mob/user as mob)
-
+/obj/structure/sign/poster/attack_hand(mob/user)
 	if(ruined)
 		return
 
-	if(alert("Do I want to rip the poster from the wall?","You think...","Yes","No") == "Yes")
+	if(alert("Do you want to rip the poster from the wall?","You think...","Yes","No") != "Yes")
+		return
 
-		if(ruined || !user.Adjacent(src))
-			return
+	if(ruined || !user.Adjacent(src))
+		return
 
-		visible_message("<span class='warning'>\The [user] rips \the [src] in a single, decisive motion!</span>" )
-		playsound(src.loc, 'sound/items/poster_ripped.ogg', 100, 1)
-		ruined = 1
-		icon_state = "poster_ripped"
-		SetName("ripped poster")
-		desc = "You can't make out anything from the poster's original print. It's ruined."
-		add_fingerprint(user)
+	visible_message("<span class='warning'>\The [user] rips \the [src] in a single, decisive motion!</span>" )
+	playsound(src.loc, 'sound/items/poster_ripped.ogg', 100, 1)
+	ruined = TRUE
+	icon_state = "poster_ripped"
+	SetName("ripped poster")
+	desc = "You can't make out anything from the poster's original print. It's ruined."
+	add_fingerprint(user)
+
+
+/obj/structure/sign/poster/proc/set_poster(poster_type)
+	var/decl/poster/design = decls_repository.get_decl(poster_type)
+	SetName("[initial(name)] - [design.name]")
+	desc = "[initial(desc)] [design.desc]"
+	icon_state = design.icon_state
 
 /obj/structure/sign/poster/proc/roll_and_drop(turf/newloc)
 	new/obj/item/contraband/poster(newloc, poster_type)
 	qdel(src)
 
-/obj/structure/sign/poster/tegu_random // Spawns a random tegustation poster
-	random_poster_type = /decl/poster/tegu
+/obj/structure/sign/poster/safety_moth_random
+	random_poster_type = /decl/poster/safety_moth
+
+/obj/structure/sign/poster/illegal_random
+	random_poster_type = /decl/poster/illegal
 
 /decl/poster
 	// Name suffix. Poster - [name]
-	var/name=""
+	var/name = null
 	// Description suffix
-	var/desc=""
-	var/icon_state=""
+	var/desc = null
+	var/icon_state = null
+	/// If TRUE - this will never appear as random poster
+	var/never_random = FALSE
