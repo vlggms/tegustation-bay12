@@ -77,5 +77,5 @@
 	smoothing_iterations = 2
 	land_type = /turf/simulated/floor/exoplanet/flesh
 
-	flora_prob = 5
-	fauna_prob = 25
+	flora_prob = 10
+	fauna_prob = 20
