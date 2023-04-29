@@ -1287,6 +1287,15 @@
 /obj/effect/floor_decal/corner/research/border,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/xenobiolab)
+"bhJ" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 4
+	},
+/obj/structure/sign/poster{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/misc/hallway/portside)
 "biN" = (
 /turf/simulated/wall/prepainted,
 /area/intrepid/misc/maint/internalstarboard)
@@ -1304,6 +1313,9 @@
 /obj/effect/floor_decal/corner/research/border,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
+	},
+/obj/structure/sign/poster{
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/hallway)
@@ -2002,6 +2014,9 @@
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -23
+	},
+/obj/structure/sign/poster{
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo)
@@ -2815,6 +2830,15 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo)
+"cwp" = (
+/obj/effect/floor_decal/corner/purple{
+	dir = 4
+	},
+/obj/structure/sign/poster{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/misc/hallway/portside)
 "cwr" = (
 /obj/effect/floor_decal/corner/research/border{
 	dir = 1
@@ -5160,7 +5184,7 @@
 /area/intrepid/misc/maint/internalportside)
 "eoF" = (
 /obj/item/stool,
-/obj/structure/sign/poster/tegu_random{
+/obj/structure/sign/poster{
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/dark/monotile,
@@ -5544,6 +5568,9 @@
 	dir = 4
 	},
 /obj/structure/table/standard,
+/obj/structure/sign/poster{
+	pixel_x = 32
+	},
 /turf/simulated/floor/wood/walnut,
 /area/intrepid/department/civillian/mess)
 "eGh" = (
@@ -5725,7 +5752,7 @@
 	pixel_x = -10;
 	pixel_y = -6
 	},
-/obj/structure/sign/poster/tegu_random{
+/obj/structure/sign/poster/illegal_random{
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
@@ -5899,7 +5926,7 @@
 /obj/machinery/vending/wallmed1{
 	pixel_y = 32
 	},
-/obj/structure/sign/poster/tegu_random{
+/obj/structure/sign/poster{
 	pixel_x = -32;
 	pixel_y = 32
 	},
@@ -6132,6 +6159,9 @@
 /obj/machinery/camera/network/research{
 	c_tag = "Stardust - Research and Development";
 	dir = 4
+	},
+/obj/structure/sign/poster{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/fabricator)
@@ -7978,7 +8008,7 @@
 	dir = 8
 	},
 /obj/structure/catwalk,
-/obj/structure/sign/poster/tegu_random{
+/obj/structure/sign/poster{
 	pixel_x = -32;
 	pixel_y = 32
 	},
@@ -12725,6 +12755,9 @@
 	dir = 8;
 	icon_state = "corner_white"
 	},
+/obj/structure/sign/poster{
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/portside)
 "lhe" = (
@@ -16850,6 +16883,9 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 4
 	},
+/obj/structure/sign/poster{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/starboard)
 "oyo" = (
@@ -18325,6 +18361,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/portside)
+"pHT" = (
+/obj/structure/sign/poster/illegal_random{
+	pixel_y = -32
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/internalstarboard)
 "pIn" = (
 /obj/machinery/rotating_alarm/security_alarm{
 	dir = 4;
@@ -20429,7 +20471,7 @@
 /obj/structure/table/standard,
 /obj/item/device/multitool,
 /obj/item/device/multitool,
-/obj/structure/sign/poster/tegu_random{
+/obj/structure/sign/poster{
 	pixel_y = -32
 	},
 /obj/item/caution/cone,
@@ -21484,6 +21526,16 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/security/detectives_office)
+"ski" = (
+/obj/effect/floor_decal/industrial/outline/blue,
+/obj/machinery/cryopod{
+	dir = 2
+	},
+/obj/structure/sign/poster{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/sleep/cryo)
 "skk" = (
 /obj/machinery/door/firedoor,
 /obj/effect/wallframe_spawn/reinforced,
@@ -21674,6 +21726,9 @@
 /obj/machinery/camera/network/first_deck{
 	c_tag = "Service - Hydroponics";
 	dir = 4
+	},
+/obj/structure/sign/poster{
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/civillian/hydroponics)
@@ -22601,6 +22656,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/prison)
+"sXm" = (
+/obj/effect/floor_decal/corner/green{
+	dir = 8
+	},
+/obj/structure/sign/poster{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/misc/hallway/starboard)
 "sXq" = (
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/security/armory)
@@ -24190,6 +24254,9 @@
 /obj/machinery/camera/network/security{
 	c_tag = "Security - Cell Two"
 	},
+/obj/structure/sign/poster/safety_moth_random{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/prison)
 "uoL" = (
@@ -24916,6 +24983,13 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/civillian/hydroponics)
+"uSy" = (
+/obj/structure/closet/emcloset,
+/obj/structure/sign/poster/illegal_random{
+	pixel_y = -32
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/portside)
 "uSA" = (
 /obj/effect/floor_decal/terralogo{
 	dir = 1;
@@ -25075,6 +25149,9 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/blue/border,
+/obj/structure/sign/poster{
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/treatment)
 "vbH" = (
@@ -25615,6 +25692,9 @@
 	},
 /obj/machinery/camera/network/security{
 	c_tag = "Security - Cell One"
+	},
+/obj/structure/sign/poster/safety_moth_random{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/prison)
@@ -27627,7 +27707,7 @@
 "xmJ" = (
 /obj/structure/table/standard,
 /obj/item/reagent_containers/spray/cleaner,
-/obj/structure/sign/poster/tegu_9{
+/obj/structure/sign/poster{
 	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/dark/monotile,
@@ -41998,7 +42078,7 @@ qsL
 kQp
 qZg
 oWx
-yjx
+sXm
 oTl
 vfy
 iIg
@@ -42809,7 +42889,7 @@ oWx
 yjx
 oTl
 vfy
-iIg
+pHT
 gJQ
 oLF
 fLr
@@ -44274,7 +44354,7 @@ boN
 tQY
 qJM
 fSV
-rqB
+uSy
 vVc
 nkh
 raF
@@ -46031,7 +46111,7 @@ mbV
 dWr
 tff
 gdv
-aoT
+ski
 hkO
 awW
 bHK
@@ -46075,7 +46155,7 @@ kiU
 jDs
 ksQ
 cao
-vze
+cwp
 euw
 nAw
 skk
@@ -52943,7 +53023,7 @@ ioZ
 iNC
 tYb
 cao
-iDb
+bhJ
 dlG
 fzM
 pLD
