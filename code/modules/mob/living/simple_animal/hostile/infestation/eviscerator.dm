@@ -14,7 +14,7 @@
 	health = 300
 	maxHealth = 300
 
-	move_to_delay = 3.5
+	movement_cooldown = 3.5
 	movement_sound = 'sound/simple_mob/abominable_infestation/eviscerator/step.ogg'
 
 	meat_type = /obj/item/reagent_containers/food/snacks/abominationmeat

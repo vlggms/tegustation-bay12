@@ -49,6 +49,7 @@
 
 /obj/item/natural_weapon/claws/broodling
 	force = 4
+	armor_penetration = 15
 	hitsound = 'sound/weapons/slashmiss.ogg'
 	attack_cooldown = 2
 
@@ -56,6 +57,7 @@
 	force = 25
 
 /obj/item/natural_weapon/claws/strong/eviscerator
+	armor_penetration = 15
 	hitsound = 'sound/simple_mob/abominable_infestation/eviscerator/attack.ogg'
 
 /obj/item/natural_weapon/claws/weak
@@ -69,12 +71,14 @@
 
 /obj/item/natural_weapon/hooves/rhino
 	force = 45
+	armor_penetration = 15
 	hitsound = 'sound/weapons/heavysmash.ogg'
 
 /obj/item/natural_weapon/assembler
 	name = "sharp tentacle"
 	attack_verb = list("stabbed", "pierced")
 	force = 20
+	armor_penetration = 15
 	hitsound = 'sound/weapons/rapidslice.ogg'
 	sharp = TRUE
 	edge = TRUE

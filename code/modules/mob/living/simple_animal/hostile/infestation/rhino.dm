@@ -15,7 +15,7 @@
 	maxHealth = 800
 	resistance = 15
 
-	move_to_delay = 6
+	movement_cooldown = 6
 	movement_sound = 'sound/simple_mob/abominable_infestation/rhino/step.ogg'
 	movement_shake_radius = 3
 

@@ -8,7 +8,7 @@
 	health = 90
 	poison_per_bite = 15
 	ranged = TRUE
-	move_to_delay = 2
+	movement_cooldown = 2
 	projectiletype = /obj/item/projectile/venom
 	projectilesound = 'sound/effects/hypospray.ogg'
 	fire_desc = "spits venom"

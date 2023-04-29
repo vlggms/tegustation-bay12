@@ -13,7 +13,7 @@
 	layer = LYING_MOB_LAYER
 	speak_emote = list("gurgles")
 	pass_flags = PASS_FLAG_TABLE | PASS_FLAG_GRILLE
-	move_to_delay = 1.5
+	movement_cooldown = 1.5
 
 	health = 20
 	maxHealth = 20

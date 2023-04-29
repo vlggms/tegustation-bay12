@@ -39,7 +39,7 @@ var/global/list/protected_objects = list(/obj/machinery,
 	minbodytemp = 0
 
 	faction = "mimic"
-	move_to_delay = 8
+	movement_cooldown = 8
 
 	var/weakref/copy_of
 	var/weakref/creator // the creator
@@ -90,7 +90,7 @@ var/global/list/protected_objects = list(/obj/machinery,
 			var/obj/item/I = O
 			health = 15 * I.w_class
 			W.force = 2 + initial(I.force)
-			move_to_delay = 2 * I.w_class
+			movement_cooldown = 2 * I.w_class
 
 		maxHealth = health
 		if(creator)

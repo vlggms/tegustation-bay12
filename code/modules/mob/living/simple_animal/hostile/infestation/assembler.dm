@@ -14,7 +14,7 @@
 	health = 200
 	maxHealth = 200
 
-	move_to_delay = 4
+	movement_cooldown = 4
 
 	meat_type = /obj/item/reagent_containers/food/snacks/abominationmeat
 	meat_amount = 8

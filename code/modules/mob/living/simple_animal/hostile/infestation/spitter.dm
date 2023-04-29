@@ -5,7 +5,7 @@
 	icon_living = "spitter"
 	icon_dead = "spitter_dead"
 	mob_size = MOB_SMALL
-	move_to_delay = 3
+	movement_cooldown = 3
 
 	natural_weapon = /obj/item/natural_weapon/bite/abomination_spitter
 

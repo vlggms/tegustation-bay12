@@ -15,7 +15,7 @@
 	minbodytemp = 0
 
 	turns_per_move = 10
-	move_to_delay = 2 SECONDS
+	movement_cooldown = 2 SECONDS
 
 	mob_size = MOB_LARGE
 	mob_bump_flag = HEAVY

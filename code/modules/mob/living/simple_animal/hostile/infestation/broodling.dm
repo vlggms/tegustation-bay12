@@ -5,7 +5,7 @@
 	icon_living = "broodling"
 	icon_dead = "broodling_dead"
 	mob_size = MOB_SMALL
-	move_to_delay = 2
+	movement_cooldown = 2
 
 	natural_weapon = /obj/item/natural_weapon/claws/broodling
 	melee_attack_delay = 0
