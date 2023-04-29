@@ -1,0 +1,6 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: Times and costs for using RCD have been modified.
+  - tweak: Added improved RCD, which builds/destroys faster and has more storage space.
+      Chief Engineer starts with one and more can be acquired from R&D.
