@@ -10,6 +10,8 @@
 	natural_weapon = /obj/item/natural_weapon/bite/abomination_spitter
 
 	base_attack_cooldown = 1 SECONDS
+	ranged_attack_cooldown = 2 SECONDS
+
 	ranged = TRUE
 	projectiletype = /obj/item/projectile/energy/acid_spit
 	projectilesound = 'sound/weapons/alien_spit.ogg'

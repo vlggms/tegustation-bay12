@@ -14,9 +14,12 @@
 	habitability_distribution = list(HABITABILITY_IDEAL = 5, HABITABILITY_OKAY = 75, HABITABILITY_BAD = 20)
 	flora_diversity = 15
 	fauna_types = list(
-		/mob/living/simple_animal/hostile/infestation/broodling,
-		/mob/living/simple_animal/hostile/infestation/eviscerator,
-		/mob/living/simple_animal/hostile/infestation/assembler,
+		/mob/living/simple_animal/hostile/infestation/broodling = 7,
+		/mob/living/simple_animal/hostile/infestation/eviscerator = 5,
+		/mob/living/simple_animal/hostile/infestation/spitter = 3,
+		/mob/living/simple_animal/hostile/infestation/assembler = 3,
+		/mob/living/simple_animal/hostile/infestation/rhino = 2,
+		/mob/living/simple_animal/hostile/infestation/larva/implanter = 1,
 		)
 
 /obj/effect/overmap/visitable/sector/exoplanet/infested/generate_map()
@@ -75,4 +78,4 @@
 	land_type = /turf/simulated/floor/exoplanet/flesh
 
 	flora_prob = 5
-	fauna_prob = 15
+	fauna_prob = 25
