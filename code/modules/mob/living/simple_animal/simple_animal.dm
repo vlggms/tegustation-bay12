@@ -53,7 +53,10 @@
 	var/projectilesound				// The sound I make when I do it
 	var/projectile_accuracy = 0		// Accuracy modifier to add onto the bullet when its fired.
 	var/projectile_dispersion = 0	// How many degrees to vary when I do it.
+	/// Type of a casing to spawn alongside with projectile.
 	var/casingtype
+	/// If not 0, casing will self-delete after set amount of time in this variable
+	var/casing_disappears = 0
 
 	// Reloading settings, part of ranged code
 	var/needs_reload = FALSE							// If TRUE, mob needs to reload occasionally

@@ -125,6 +125,10 @@
 		casing.expend()
 		casing.pixel_x = rand(-10, 10)
 		casing.pixel_y = rand(-10, 10)
+		if(casing_disappears)
+			casing.mouse_opacity = 0 // So people don't pick it up
+			animate(casing, alpha = 0, time = casing_disappears)
+			QDEL_IN(casing, casing_disappears)
 
 	// If mob has set projectilesound - use it
 	// Otherwise use the one projectile has set to it
