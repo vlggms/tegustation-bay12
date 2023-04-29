@@ -17,6 +17,9 @@
 /datum/fabricator_recipe/engineering/rcd_ammo_large
 	path = /obj/item/rcd_ammo/large
 
+/datum/fabricator_recipe/engineering/rcd_ammo_giant
+	path = /obj/item/rcd_ammo/giant
+
 /datum/fabricator_recipe/engineering/camera_assembly
 	path = /obj/item/camera_assembly
 
