@@ -32,7 +32,7 @@ GLOBAL_LIST_INIT(carp_count,list())// a list of Z levels (string), associated wi
 		announcement = "A massive migration of unknown biological entities has been detected in the vicinity of the [location_name()]. Exercise external operations with caution."
 	else
 		announcement = "A large migration of unknown biological entities has been detected in the vicinity of the [location_name()]. Caution is advised."
-	
+
 	command_announcement.Announce(announcement, "[location_name()] Sensor Array", zlevels = affecting_z)
 
 /datum/event/carp_migration/tick()
@@ -68,7 +68,7 @@ GLOBAL_LIST_INIT(carp_count,list())// a list of Z levels (string), associated wi
 			GLOB.destroyed_event.register(M,src,/datum/event/carp_migration/proc/reduce_carp_count)
 			LAZYADD(GLOB.carp_count["[Z]"], M)
 			spawned_carp ++
-			M.throw_at(get_random_edge_turf(GLOB.reverse_dir[dir],TRANSITIONEDGE + 2, Z), 5, speed, callback = CALLBACK(src,/datum/event/carp_migration/proc/check_gib,M))
+			M.throw_at(get_random_edge_turf(GLOB.reverse_dir[dir],TRANSITIONEDGE + 2, Z), 250, speed, callback = CALLBACK(src,/datum/event/carp_migration/proc/check_gib,M))
 		I++
 		if(no_show)
 			break

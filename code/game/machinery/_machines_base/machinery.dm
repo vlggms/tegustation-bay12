@@ -82,6 +82,8 @@ Class Procs:
 	w_class = ITEM_SIZE_NO_CONTAINER
 	layer = STRUCTURE_LAYER // Layer under items
 	init_flags = INIT_MACHINERY_PROCESS_SELF
+	throw_speed = 1
+	throw_range = 5
 
 	var/stat = 0
 	var/reason_broken = 0
