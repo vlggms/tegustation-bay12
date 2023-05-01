@@ -183,7 +183,7 @@
 			should_warn = FALSE // If it isn't available there will be its own message.
 
 		if(should_warn)
-			if(alert(client, "You don't have any preferences set for [job.title]. Are you sure you want to join as it?", "Confirm Job Selection", "Yes", "No") == "No")
+			if(tgui_alert(client, "You don't have any preferences set for [job.title]. Are you sure you want to join as it?", "Confirm Job Selection", list("Yes", "No")) != "Yes")
 				return FALSE
 
 		AttemptLateSpawn(job, client.prefs.spawnpoint)
