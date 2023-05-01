@@ -1,0 +1,4 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: 'Following species no longer require whitelist: Skrell, Unathi, IPC.'
