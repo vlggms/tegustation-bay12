@@ -45,6 +45,8 @@
 			return global.SSantags;
 		if("SSao")
 			return global.SSao;
+		if("SSassets")
+			return global.SSassets;
 		if("SSatoms")
 			return global.SSatoms;
 		if("SScharacter_setup")
@@ -365,10 +367,6 @@
 			return global.csrfz_check;
 		if("damage_icon_parts")
 			return global.damage_icon_parts;
-		if("dbcon")
-			return global.dbcon;
-		if("dbcon_old")
-			return global.dbcon_old;
 		if("debug_verbs")
 			return global.debug_verbs;
 		if("decls_repository")
@@ -607,6 +605,8 @@
 			return global.newscaster_standard_feeds;
 		if("next_account_number")
 			return global.next_account_number;
+		if("next_station_date_change")
+			return global.next_station_date_change;
 		if("ninjastart")
 			return global.ninjastart;
 		if("ntnet_card_uid")
@@ -703,6 +703,8 @@
 			return global.robot_hud_colours;
 		if("robot_inventory")
 			return global.robot_inventory;
+		if("roundstart_hour")
+			return global.roundstart_hour;
 		if("rune_list")
 			return global.rune_list;
 		if("same_wires")
@@ -763,6 +765,8 @@
 			return global.sqlport;
 		if("station_account")
 			return global.station_account;
+		if("station_date")
+			return global.station_date;
 		if("stool_cache")
 			return global.stool_cache;
 		if("stored_shock_by_ref")
@@ -916,6 +920,8 @@
 			global.SSantags=newval;
 		if("SSao")
 			global.SSao=newval;
+		if("SSassets")
+			global.SSassets=newval;
 		if("SSatoms")
 			global.SSatoms=newval;
 		if("SScharacter_setup")
@@ -1236,10 +1242,6 @@
 			global.csrfz_check=newval;
 		if("damage_icon_parts")
 			global.damage_icon_parts=newval;
-		if("dbcon")
-			global.dbcon=newval;
-		if("dbcon_old")
-			global.dbcon_old=newval;
 		if("debug_verbs")
 			global.debug_verbs=newval;
 		if("decls_repository")
@@ -1478,6 +1480,8 @@
 			global.newscaster_standard_feeds=newval;
 		if("next_account_number")
 			global.next_account_number=newval;
+		if("next_station_date_change")
+			global.next_station_date_change=newval;
 		if("ninjastart")
 			global.ninjastart=newval;
 		if("ntnet_card_uid")
@@ -1574,6 +1578,8 @@
 			global.robot_hud_colours=newval;
 		if("robot_inventory")
 			global.robot_inventory=newval;
+		if("roundstart_hour")
+			global.roundstart_hour=newval;
 		if("rune_list")
 			global.rune_list=newval;
 		if("same_wires")
@@ -1634,6 +1640,8 @@
 			global.sqlport=newval;
 		if("station_account")
 			global.station_account=newval;
+		if("station_date")
+			global.station_date=newval;
 		if("stool_cache")
 			global.stool_cache=newval;
 		if("stored_shock_by_ref")
@@ -1764,6 +1772,7 @@
 	"SSalarm",
 	"SSantags",
 	"SSao",
+	"SSassets",
 	"SSatoms",
 	"SScharacter_setup",
 	"SSchat",
@@ -1924,8 +1933,6 @@
 	"crew_repository",
 	"csrfz_check",
 	"damage_icon_parts",
-	"dbcon",
-	"dbcon_old",
 	"debug_verbs",
 	"decls_repository",
 	"default_material_composition",
@@ -2045,6 +2052,7 @@
 	"news_network",
 	"newscaster_standard_feeds",
 	"next_account_number",
+	"next_station_date_change",
 	"ninjastart",
 	"ntnet_card_uid",
 	"ntnet_global",
@@ -2093,6 +2101,7 @@
 	"robot_custom_icons",
 	"robot_hud_colours",
 	"robot_inventory",
+	"roundstart_hour",
 	"rune_list",
 	"same_wires",
 	"send_emergency_team",
@@ -2123,6 +2132,7 @@
 	"sqlpass",
 	"sqlport",
 	"station_account",
+	"station_date",
 	"stool_cache",
 	"stored_shock_by_ref",
 	"string_part_flags",
