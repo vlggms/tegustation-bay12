@@ -79,7 +79,7 @@
 
 /mob/living/carbon/slime/New(var/location, var/colour="grey")
 	ingested = new(240, src, CHEM_INGEST)
-	verbs += /mob/living/proc/ventcrawl
+	add_verb(src, /mob/living/proc/ventcrawl)
 
 	src.colour = colour
 	number = random_id(/mob/living/carbon/slime, 1, 1000)

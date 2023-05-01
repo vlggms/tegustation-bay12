@@ -27,10 +27,10 @@ obj/item/var/list/trace_DNA
 	if (ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if (H.gloves)
-			src.fingerprintshidden += "\[[time_stamp()]\] (Wearing gloves). Real name: [H.real_name], Key: [H.key]"
+			src.fingerprintshidden += "\[[station_time_timestamp()]\] (Wearing gloves). Real name: [H.real_name], Key: [H.key]"
 			return 0
 
-	src.fingerprintshidden += "\[[time_stamp()]\] Real name: [M.real_name], Key: [M.key]"
+	src.fingerprintshidden += "\[[station_time_timestamp()]\] Real name: [M.real_name], Key: [M.key]"
 	return 1
 
 /atom/proc/add_fingerprint(mob/M, ignoregloves, obj/item/tool)
