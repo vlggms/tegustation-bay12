@@ -187,6 +187,26 @@
 		if (!predicates || all_predicates_true(list(T), predicates))
 			. += T
 
+// Returns all turfs in z-level
+/proc/get_turfs_in_zlevel(zlevel, list/area_predicates, list/turf_predicates)
+	if(isnull(zlevel))
+		return
+
+	area_predicates |= /proc/is_area_with_turf
+	area_predicates[/proc/area_belongs_to_zlevels] = list(zlevel)
+	var/list/turfs = list()
+	var/list/areas = get_filtered_areas(area_predicates)
+	for(var/area/A in areas)
+		turfs |= get_area_turfs(A, turf_predicates)
+	return turfs
+
+// Same as above, but list of levels
+/proc/get_turfs_in_zlevels(list/zlevels, list/area_predicates = list(), list/turf_predicates = list())
+	var/list/turfs = list()
+	for(var/zlevel in zlevels)
+		turfs |= get_turfs_in_zlevel(zlevel, area_predicates, turf_predicates)
+	return turfs
+
 /*
 	Pick helpers
 */
