@@ -292,3 +292,7 @@
 			if(L.pulling)
 				var/atom/movable/AM = L.pulling
 				AM.forceMove(T)
+
+// Singulo won't delete literal planet edges
+/turf/simulated/planet_edge/singularity_act()
+	return

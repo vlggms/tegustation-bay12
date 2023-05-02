@@ -330,11 +330,13 @@
 	var/exp_heavy_impact = 2
 	var/exp_light_impact = 4
 
-/obj/item/projectile/bullet/rocket/on_hit(atom/target, blocked = 0)
+/obj/item/projectile/bullet/rocket/on_impact(atom/target, blocked = 0)
+	if(QDELETED(src))
+		return
 	var/turf/T = get_turf(target)
 	if(T)
 		explosion(T, exp_devastation, exp_heavy_impact, exp_light_impact)
-	..()
+	return ..()
 
 /obj/item/projectile/bullet/rocket/heavy
 	exp_devastation = 2
