@@ -861,19 +861,22 @@ Ccomp's first proc.
 	message_admins("[key_name(src)] has bombed Z-level #[zlevel][connected ? " and connected levels" : ""] with [booms] bombs ([devastation_range], [heavy_range], [light_range]).")
 	bombard_z(booms, delay, devastation_range, heavy_range, light_range, random_range, connected, zlevel)
 
-/proc/bombard_z(booms = 1, delay = 1, devastation_range = 1, heavy_range = 1, light_range = 1, random_range, connected, zlevel)
+/proc/bombard_z(booms = 1, delay = 1, devastation_range = 1, heavy_range = 1, light_range = 1, random_range, connected = FALSE, zlevel)
+	var/list/available_turfs
+	// We are using this instead of getting random areas due to large probability bias with large amount of areas
+	// on zlevels. With this, every turf is more or less equally screwed.
+	if(connected)
+		available_turfs = get_turfs_in_zlevels(GetConnectedZlevels(zlevel), list(/proc/is_not_space_area))
+	else
+		available_turfs = get_turfs_in_zlevel(zlevel, list(/proc/is_not_space_area))
+
 	while(booms > 0)
 		if(random_range)
 			devastation_range += rand(-1, 1)
 			heavy_range += rand(-2,2)
 			light_range += rand(-4,4)
 
-		var/turf/T
-		if(connected)
-			T = pick_area_turf_in_connected_z_levels(list(/proc/is_not_space_area), z_level = zlevel)
-		else
-			T = pick_area_turf_in_single_z_level(list(/proc/is_not_space_area), z_level = zlevel)
-
+		var/turf/T = pick(available_turfs)
 		explosion(T, devastation_range, heavy_range, light_range, adminlog = FALSE)
 		booms -= 1
 		sleep(delay SECONDS)

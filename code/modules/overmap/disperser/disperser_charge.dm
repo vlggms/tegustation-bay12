@@ -23,7 +23,7 @@
 		explosion(target, 1, 2, 3)
 	return
 
-/obj/structure/ship_munition/disperser_charge/proc/fire(turf/target, strength, range)
+/obj/structure/ship_munition/disperser_charge/proc/fire(turf/target, strength = 1, range = 1)
 	CRASH("OFD charge firing logic not set!")
 
 /obj/structure/ship_munition/disperser_charge/fire
@@ -33,7 +33,7 @@
 	chargetype = OVERMAP_WEAKNESS_FIRE
 	chargedesc = "ENFER"
 
-/obj/structure/ship_munition/disperser_charge/fire/fire(turf/target, strength, range)
+/obj/structure/ship_munition/disperser_charge/fire/fire(turf/target, strength = 1, range = 1)
 	for(var/turf/T in range(range, target))
 		var/obj/effect/fake_fire/bluespace/disperserf = new(T)
 		disperserf.lifetime = strength * 20
@@ -50,7 +50,7 @@
 	chargetype = OVERMAP_WEAKNESS_EMP
 	chargedesc = "QUASAR"
 
-/obj/structure/ship_munition/disperser_charge/emp/fire(turf/target, strength, range)
+/obj/structure/ship_munition/disperser_charge/emp/fire(turf/target, strength = 1, range = 1)
 	empulse(target, strength * range / 3, strength * range)
 
 /obj/structure/ship_munition/disperser_charge/mining
@@ -60,7 +60,7 @@
 	chargetype = OVERMAP_WEAKNESS_MINING
 	chargedesc = "BERGBAU"
 
-/obj/structure/ship_munition/disperser_charge/mining/fire(turf/target, strength, range)
+/obj/structure/ship_munition/disperser_charge/mining/fire(turf/target, strength = 1, range = 1)
 	var/list/victims = range(range * 3, target)
 	for(var/turf/simulated/mineral/M in victims)
 		if(prob(strength * 100 / 6)) //6 instead of 5 so there are always leftovers
@@ -79,7 +79,7 @@
 	var/heavy_modifier = 0.15
 	var/light_modifier = 0.5
 
-/obj/structure/ship_munition/disperser_charge/explosive/fire(turf/target, strength, range)
+/obj/structure/ship_munition/disperser_charge/explosive/fire(turf/target, strength = 1, range = 1)
 	explosion(target, strength * range * devastation_modifier, strength * range * heavy_modifier, strength * range * light_modifier)
 
 /obj/structure/ship_munition/disperser_charge/explosive/high
@@ -103,7 +103,7 @@
 	var/heavy_modifier = 0.07
 	var/light_modifier = 0.2
 
-/obj/structure/ship_munition/disperser_charge/orbital_bombardment/fire(turf/target, strength, range)
+/obj/structure/ship_munition/disperser_charge/orbital_bombardment/fire(turf/target, strength = 1, range = 1)
 	var/sound_z = target.z
 	if(fire_at_connected_levels)
 		sound_z = GetConnectedZlevels(sound_z)
