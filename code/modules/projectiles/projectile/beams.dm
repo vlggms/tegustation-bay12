@@ -463,7 +463,10 @@
 	tracer_type = /obj/effect/projectile/tracer/emitter
 	impact_type = /obj/effect/projectile/impact/emitter
 
-/obj/item/projectile/beam/gigabeam/on_hit(atom/target, blocked = 0)
-	..()
+/obj/item/projectile/beam/gigabeam/on_impact(atom/target)
+	if(QDELETED(src))
+		return
 	var/turf/T = get_turf(target)
-	explosion(T, 1, 3, 5)
+	if(T)
+		explosion(T, 1, 3, 5)
+	return ..()
