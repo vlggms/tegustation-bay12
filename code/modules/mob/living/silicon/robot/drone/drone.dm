@@ -32,12 +32,12 @@ var/list/mob_hat_cache = list()
 	pass_flags = PASS_FLAG_TABLE
 	braintype = "Drone"
 	lawupdate = FALSE
-	density = TRUE
+	density = FALSE
 	req_access = list(access_engine, access_robotics)
 	integrated_light_max_bright = 0.5
 	local_transmit = 1
 	possession_candidate = 1
-	speed = -2
+	speed = -1
 
 	can_pull_size = ITEM_SIZE_NORMAL
 	can_pull_mobs = MOB_PULL_SMALLER
@@ -102,7 +102,7 @@ var/list/mob_hat_cache = list()
 	// None of the tests passed, good bye
 	self_destruct()
 
-/mob/living/silicon/robot/drone/can_be_possessed_by(var/mob/observer/ghost/possessor)
+/mob/living/silicon/robot/drone/can_be_possessed_by(mob/observer/ghost/possessor)
 	if(!istype(possessor) || !possessor.client || !possessor.ckey)
 		return 0
 	if(!config.allow_drone_spawn)
@@ -130,6 +130,21 @@ var/list/mob_hat_cache = list()
 	qdel(possessor)
 	return 1
 
+/mob/living/silicon/robot/drone/show_laws(everyone = FALSE)
+	if(!controlling_ai)
+		return..()
+	to_chat(src, "<b>Obey these laws:</b>")
+	controlling_ai.laws_sanity_check()
+	controlling_ai.laws.show_laws(src)
+
+/mob/living/silicon/robot/drone/robot_checklaws()
+	set category = "Silicon Commands"
+	set name = "State Laws"
+
+	if(!controlling_ai)
+		return ..()
+	controlling_ai.open_subsystem(/datum/nano_module/law_manager)
+
 /mob/living/silicon/robot/drone/construction
 	name = "construction drone"
 	icon_state = "constructiondrone"
@@ -154,14 +169,18 @@ var/list/mob_hat_cache = list()
 	SetName(real_name)
 
 /mob/living/silicon/robot/drone/updatename()
-	real_name = "[initial(name)] ([random_id(type,100,999)])"
+	if(controlling_ai)
+		real_name = "remote [initial(name)] ([controlling_ai.name])"
+	else
+		real_name = "[initial(name)] ([random_id(type,100,999)])"
 	SetName(real_name)
 
 /mob/living/silicon/robot/drone/on_update_icon()
-
 	overlays.Cut()
 	if(stat == 0)
-		if(emagged)
+		if(controlling_ai)
+			overlays += "eyes-[icon_state]-ai"
+		else if(emagged)
 			overlays += "eyes-[icon_state]-emag"
 		else
 			overlays += "eyes-[icon_state]"
@@ -236,7 +255,7 @@ var/list/mob_hat_cache = list()
 
 	..()
 
-/mob/living/silicon/robot/drone/emag_act(var/remaining_charges, var/mob/user)
+/mob/living/silicon/robot/drone/emag_act(remaining_charges, mob/user)
 	if(!client || stat == 2)
 		to_chat(user, "<span class='danger'>There's not much point subverting this heap of junk.</span>")
 		return
@@ -248,9 +267,12 @@ var/list/mob_hat_cache = list()
 
 	to_chat(user, "<span class='danger'>You swipe the sequencer across [src]'s interface and watch its eyes flicker.</span>")
 
-	to_chat(src, "<span class='danger'>You feel a sudden burst of malware loaded into your execute-as-root buffer. Your tiny brain methodically parses, loads and executes the script.</span>")
+	if(controlling_ai)
+		to_chat(src, "<span class='danger'>\The [user] loads some kind of subversive software into the remote drone, corrupting its lawset but luckily sparing yours.</span>")
+	else
+		to_chat(src, "<span class='danger'>You feel a sudden burst of malware loaded into your execute-as-root buffer. Your tiny brain methodically parses, loads and executes the script.</span>")
 
-	log_and_message_admins("emagged drone [key_name_admin(src)].  Laws overridden.", user)
+	log_and_message_admins("[key_name_admin(user)] emagged drone [key_name_admin(src)][controlling_ai ? ", but AI [key_name(controlling_ai)] is in remote control" : ". Laws overridden"].")
 	var/time = time2text(world.realtime,"hh:mm:ss")
 	GLOB.lawchanges.Add("[time] <B>:</B> [user.name]([user.key]) emagged [name]([key])")
 
@@ -262,6 +284,9 @@ var/list/mob_hat_cache = list()
 	QDEL_NULL(laws)
 	laws = new /datum/ai_laws/syndicate_override
 	set_zeroth_law("Only [user.real_name] and people \he designates as being such are operatives.")
+	if(!controlling_ai)
+		to_chat(src, "<b>Obey these laws:</b>")
+		show_laws()
 
 //DRONE LIFE/DEATH
 //For some goddamn reason robots have this hardcoded. Redefining it for our fragile friends here.
@@ -296,6 +321,10 @@ var/list/mob_hat_cache = list()
 
 //CONSOLE PROCS
 /mob/living/silicon/robot/drone/proc/law_resync()
+	if(controlling_ai)
+		to_chat(src, "<span class='warning'>Someone issues a remote law reset order for this unit, but you disregard it.</span>")
+		return
+
 	if(stat != 2)
 		if(emagged)
 			to_chat(src, "<span class='danger'>You feel something attempting to modify your programming, but your hacked subroutines are unaffected.</span>")
@@ -305,6 +334,9 @@ var/list/mob_hat_cache = list()
 			show_laws()
 
 /mob/living/silicon/robot/drone/proc/shut_down()
+	if(controlling_ai)
+		to_chat(src, "<span class='warning'>Someone issues a remote kill order for this unit, but you disregard it.</span>")
+		return
 
 	if(stat != 2)
 		if(emagged)
