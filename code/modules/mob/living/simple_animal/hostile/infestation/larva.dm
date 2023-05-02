@@ -33,6 +33,7 @@
 		/mob/living/simple_animal/hostile/infestation/spitter = 45 SECONDS,
 		/mob/living/simple_animal/hostile/infestation/eviscerator = 60 SECONDS,
 		/mob/living/simple_animal/hostile/infestation/assembler = 90 SECONDS,
+		/mob/living/simple_animal/hostile/infestation/rhino = 120 SECONDS,
 		)
 
 /datum/say_list/infestation_larva
@@ -102,6 +103,9 @@
 
 /mob/living/simple_animal/hostile/infestation/larva/implanter/attack_target(atom/A)
 	if(!ishuman(A))
+		return
+
+	if(transformation_time != null) // Already implanted once
 		return
 
 	var/mob/living/carbon/human/H = A

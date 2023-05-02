@@ -11,8 +11,8 @@
 
 	natural_weapon = /obj/item/natural_weapon/hooves/rhino
 
-	health = 800
-	maxHealth = 800
+	health = 1000
+	maxHealth = 1000
 	resistance = 15
 
 	movement_cooldown = 5
@@ -37,7 +37,7 @@
 	var/enraged_movement_sound = 'sound/simple_mob/abominable_infestation/rhino/step_angry.ogg'
 
 /obj/item/natural_weapon/hooves/rhino
-	force = 45
+	force = 50
 	armor_penetration = 10
 	hitsound = 'sound/weapons/heavysmash.ogg'
 

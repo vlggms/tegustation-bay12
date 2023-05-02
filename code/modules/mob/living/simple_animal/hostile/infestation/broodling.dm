@@ -25,7 +25,7 @@
 	death_sounds = list('sound/simple_mob/abominable_infestation/broodling/death.ogg')
 
 /obj/item/natural_weapon/claws/broodling
-	force = 4
+	force = 7
 	armor_penetration = 10
 	hitsound = 'sound/weapons/slashmiss.ogg'
 	attack_cooldown = 2
