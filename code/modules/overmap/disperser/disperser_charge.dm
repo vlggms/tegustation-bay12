@@ -1,3 +1,13 @@
+/obj/structure/ship_munition
+	name = "munitions"
+	icon = 'icons/obj/munitions.dmi'
+	w_class = ITEM_SIZE_GARGANTUAN
+	density = TRUE
+
+/obj/structure/ship_munition/Initialize()
+	. = ..()
+	set_extension(src, /datum/extension/play_sound_on_moved)
+
 /obj/structure/ship_munition/disperser_charge
 	name = "unknown disperser charge"
 	desc = "A charge to power the obstruction field disperser with. It looks impossibly round and shiny. This charge does not have a defined purpose."
@@ -82,16 +92,31 @@
 
 /obj/structure/ship_munition/disperser_charge/orbital_bombardment
 	name = "OB6-TERRA charge"
-	desc = "A charge to power the obstruction field disperser with. It looks impossibly round and shiny. This charge is designed to bombard the target with large amount of tiny explosions. \
+	desc = "A charge to power the obstruction field disperser with. This charge is designed to bombard the target with large amount of tiny explosions. \
 			It is usually used by Terran navy as a tool for orbital bombardment."
 	icon_state = "ob_ammo"
 	chargetype = OVERMAP_WEAKNESS_EXPLOSIVE
 	chargedesc = "TERRA"
 	var/fire_at_connected_levels = FALSE
+	var/bomb_number = 50
+	var/devastation_modifier = 0.05
+	var/heavy_modifier = 0.07
+	var/light_modifier = 0.2
 
 /obj/structure/ship_munition/disperser_charge/orbital_bombardment/fire(turf/target, strength, range)
 	var/sound_z = target.z
 	if(fire_at_connected_levels)
 		sound_z = GetConnectedZlevels(sound_z)
 	sound_to_playing_players_on_level('sound/effects/orbital_bombardment.ogg', 50, ignore_pressure = TRUE, zlevel = sound_z)
-	addtimer(CALLBACK(GLOBAL_PROC, .proc/bombard_z, 50, 0.3, max(0,strength * range / 20), strength * range / 15, strength * range / 5, FALSE, fire_at_connected_levels, target.z), 10 SECONDS)
+	addtimer(CALLBACK(GLOBAL_PROC, .proc/bombard_z, bomb_number, 0.3, max(0,strength * range * devastation_modifier), strength * range * heavy_modifier, strength * range * light_modifier, FALSE, fire_at_connected_levels, target.z), 10 SECONDS)
+
+/obj/structure/ship_munition/disperser_charge/orbital_bombardment/high
+	name = "OB7-DOOM charge"
+	desc = "A charge to power the obstruction field disperser with. This charge is designed to utterly destroy planets and their population. \
+			In this era, it is rarely used outside of shows of power or clearing infested worlds."
+	icon_state = "ob_ammo_high"
+	chargedesc = "DOOM"
+	bomb_number = 200
+	devastation_modifier = 0.1
+	heavy_modifier = 0.2
+	light_modifier = 0.4

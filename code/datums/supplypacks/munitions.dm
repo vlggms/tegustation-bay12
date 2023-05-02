@@ -1,17 +1,7 @@
 /decl/hierarchy/supply_pack/munition
 	name = "Ship Munitions"
 	containertype = /obj/structure/largecrate
-	containername = "mass driver munition crate"
-
-/decl/hierarchy/supply_pack/munition/md_slug
-	name = "Ammo - Mass Driver Slug"
-	contains = list(/obj/structure/ship_munition/md_slug)
-	cost = 50
-
-/decl/hierarchy/supply_pack/munition/ap_slug
-	name = "Ammo - Armor Piercing Mass Driver Slug"
-	contains = list(/obj/structure/ship_munition/ap_slug)
-	cost = 60
+	containername = "field disperser munition crate"
 
 /decl/hierarchy/supply_pack/munition/fire
 	name = "Ammo - disperser-FR1-ENFER charge"
@@ -32,3 +22,18 @@
 	name = "Ammo - disperser-XP4-INDARRA charge"
 	contains = list(/obj/structure/ship_munition/disperser_charge/explosive)
 	cost = 40
+
+/decl/hierarchy/supply_pack/munition/explosive_high
+	name = "Ammo - disperser-XP5-ANNIR charge"
+	contains = list(/obj/structure/ship_munition/disperser_charge/explosive/high)
+	cost = 60
+
+/decl/hierarchy/supply_pack/munition/orbital_bombardment
+	name = "Ammo - disperser-OB6-TERRA charge"
+	contains = list(/obj/structure/ship_munition/disperser_charge/orbital_bombardment)
+	cost = 80
+
+/decl/hierarchy/supply_pack/munition/orbital_bombardment
+	name = "Ammo - disperser-OB7-DOOM charge"
+	contains = list(/obj/structure/ship_munition/disperser_charge/orbital_bombardment/high)
+	cost = 160

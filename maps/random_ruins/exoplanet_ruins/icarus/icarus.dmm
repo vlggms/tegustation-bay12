@@ -791,7 +791,6 @@
 	icon_state = "pdoor0";
 	opacity = 0
 	},
-/obj/structure/ship_munition/ap_slug,
 /turf/simulated/floor/reinforced/airless,
 /area/map_template/icarus/driver/west)
 "wr" = (
@@ -1285,11 +1284,6 @@
 /obj/machinery/light_construct,
 /turf/simulated/floor/tiled/dark,
 /area/map_template/icarus/bridge)
-"NQ" = (
-/obj/structure/ship_munition/ap_slug,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/techmaint,
-/area/map_template/icarus/driver/east)
 "NU" = (
 /obj/effect/floor_decal/corner/yellow/half{
 	dir = 8;
@@ -3435,7 +3429,7 @@ Gl
 Gl
 YJ
 HB
-NQ
+aB
 HH
 HH
 oy
