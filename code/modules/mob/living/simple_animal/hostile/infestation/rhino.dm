@@ -36,6 +36,11 @@
 	var/enraged_cooldown_time = 20 SECONDS
 	var/enraged_movement_sound = 'sound/simple_mob/abominable_infestation/rhino/step_angry.ogg'
 
+/obj/item/natural_weapon/hooves/rhino
+	force = 45
+	armor_penetration = 10
+	hitsound = 'sound/weapons/heavysmash.ogg'
+
 /mob/living/simple_animal/hostile/infestation/rhino/Life()
 	. = ..()
 	if(!.)

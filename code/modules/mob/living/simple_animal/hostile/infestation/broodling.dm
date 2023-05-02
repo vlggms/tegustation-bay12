@@ -24,6 +24,12 @@
 	say_list_type = /datum/say_list/infestation_broodling
 	death_sounds = list('sound/simple_mob/abominable_infestation/broodling/death.ogg')
 
+/obj/item/natural_weapon/claws/broodling
+	force = 4
+	armor_penetration = 10
+	hitsound = 'sound/weapons/slashmiss.ogg'
+	attack_cooldown = 2
+
 /datum/say_list/infestation_broodling
 	emote_hear = list("hisses", "attempts to bark", "breathes heavily", "gurgles")
 	emote_see = list("jumps from place to place")

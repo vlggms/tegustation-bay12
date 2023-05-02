@@ -31,6 +31,10 @@
 		'sound/simple_mob/abominable_infestation/eviscerator/death_2.ogg',
 		)
 
+/obj/item/natural_weapon/claws/strong/eviscerator
+	armor_penetration = 10
+	hitsound = 'sound/simple_mob/abominable_infestation/eviscerator/attack.ogg'
+
 /datum/ai_holder/simple_animal/infestation/eviscerator
 	returns_home = FALSE
 	home_low_priority = TRUE

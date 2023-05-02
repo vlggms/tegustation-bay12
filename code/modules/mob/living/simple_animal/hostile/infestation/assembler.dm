@@ -45,6 +45,15 @@
 	/// World time by which we will spawn a larva if we have no target
 	var/larva_time
 
+/obj/item/natural_weapon/assembler
+	name = "sharp tentacle"
+	attack_verb = list("stabbed", "pierced")
+	force = 20
+	armor_penetration = 10
+	hitsound = 'sound/weapons/rapidslice.ogg'
+	sharp = TRUE
+	edge = TRUE
+
 /datum/ai_holder/simple_animal/infestation/assembler
 	cooperative = FALSE
 	mauling = TRUE
@@ -85,6 +94,9 @@
 		return
 
 /mob/living/simple_animal/hostile/infestation/assembler/attack_target(atom/A)
+	return UnarmedAttack(A)
+
+/mob/living/simple_animal/hostile/infestation/assembler/UnarmedAttack(atom/A)
 	if(istype(A, /obj/item/organ))
 		ConsumeOrgan(A)
 		ai_holder.target = null

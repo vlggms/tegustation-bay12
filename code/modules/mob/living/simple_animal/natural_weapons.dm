@@ -31,9 +31,6 @@
 	attack_verb = list("nibbled")
 	hitsound = null
 
-/obj/item/natural_weapon/bite/abomination_spitter
-	hitsound = 'sound/simple_mob/abominable_infestation/spitter/attack.ogg'
-
 /obj/item/natural_weapon/bite/medium
 	force = 20
 
@@ -47,18 +44,8 @@
 	sharp = TRUE
 	edge = TRUE
 
-/obj/item/natural_weapon/claws/broodling
-	force = 4
-	armor_penetration = 15
-	hitsound = 'sound/weapons/slashmiss.ogg'
-	attack_cooldown = 2
-
 /obj/item/natural_weapon/claws/strong
 	force = 25
-
-/obj/item/natural_weapon/claws/strong/eviscerator
-	armor_penetration = 15
-	hitsound = 'sound/simple_mob/abominable_infestation/eviscerator/attack.ogg'
 
 /obj/item/natural_weapon/claws/weak
 	force = 5
@@ -68,20 +55,6 @@
 	name = "hooves"
 	attack_verb = list("kicked")
 	force = 5
-
-/obj/item/natural_weapon/hooves/rhino
-	force = 45
-	armor_penetration = 15
-	hitsound = 'sound/weapons/heavysmash.ogg'
-
-/obj/item/natural_weapon/assembler
-	name = "sharp tentacle"
-	attack_verb = list("stabbed", "pierced")
-	force = 20
-	armor_penetration = 15
-	hitsound = 'sound/weapons/rapidslice.ogg'
-	sharp = TRUE
-	edge = TRUE
 
 /obj/item/natural_weapon/punch
 	name = "fists"

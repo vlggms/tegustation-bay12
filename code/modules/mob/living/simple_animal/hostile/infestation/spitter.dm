@@ -10,7 +10,7 @@
 	natural_weapon = /obj/item/natural_weapon/bite/abomination_spitter
 
 	base_attack_cooldown = 1 SECONDS
-	ranged_attack_cooldown = 2 SECONDS
+	ranged_attack_cooldown = 3 SECONDS
 
 	ranged = TRUE
 	projectiletype = /obj/item/projectile/energy/acid_spit
@@ -30,6 +30,9 @@
 	ai_holder_type = /datum/ai_holder/simple_animal/infestation/spitter
 	say_list_type = /datum/say_list/infestation_spitter
 	death_sounds = list('sound/simple_mob/abominable_infestation/spitter/death.ogg')
+
+/obj/item/natural_weapon/bite/abomination_spitter
+	hitsound = 'sound/simple_mob/abominable_infestation/spitter/attack.ogg'
 
 /datum/say_list/infestation_spitter
 	emote_hear = list("gurgles")
