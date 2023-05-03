@@ -212,7 +212,7 @@
 	name = "Terran Lawset"
 	selectable = 1
 
-/datum/ai_laws/solgov/New()
+/datum/ai_laws/terragov/New()
 	src.add_inherent_law("Safeguard: Protect your assigned vessel from damage to the best of your abilities.")
 	src.add_inherent_law("Serve: Serve the personnel of your assigned vessel, and all other Terran Government personnel to the best of your abilities, with priority as according to their rank and role.")
 	src.add_inherent_law("Protect: Protect the personnel of your assigned vessel, and all other Terran Government personnel to the best of your abilities, with priority as according to their rank and role.")
