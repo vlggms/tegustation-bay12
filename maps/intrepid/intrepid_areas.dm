@@ -363,6 +363,7 @@
 	icon_state = "shuttle"
 	name = "\improper Transport Shuttle Centcom"
 
+// Pandora
 /area/shuttle/pandora
 	name = "\improper Pandora"
 	icon_state = "shuttlered"
@@ -393,7 +394,17 @@
 	base_turf = /turf/simulated/floor/plating
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
 
-//Merchant
+// Caduceus
+/area/shuttle/ambulance
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+	requires_power = TRUE
+
+/area/shuttle/ambulance/home
+	name = "\improper APV Caduceus"
+	icon_state = "shuttlegrn"
+	req_access = list(access_medical)
+
+// Merchant
 /area/shuttle/merchant/home
 	name = "\improper Merchant Vessel"
 	icon_state = "shuttlegrn"
@@ -405,7 +416,7 @@
 	icon_state = "LP"
 	req_access = list(access_merchant)
 
-//Turbolift
+// Turbolift
 /area/turbolift
 	name = "\improper Turbolift"
 	icon_state = "shuttle"
@@ -423,14 +434,6 @@
 	name = "\improper Starboardside Amidships Lift"
 	icon_state = "shuttle3"
 	base_turf = /turf/simulated/open
-
-//Merchant
-
-/area/shuttle/merchant/home
-	name = "\improper Merchant Vessel"
-	icon_state = "shuttlegrn"
-	req_access = list(access_merchant)
-	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
 
 // Holodecks
 

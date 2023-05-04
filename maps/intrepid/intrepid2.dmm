@@ -1709,7 +1709,6 @@
 	c_tag = "Engineering - Telecommunications Monitoring"
 	},
 /obj/machinery/access_button/airlock_exterior{
-	frequency = 1331;
 	master_tag = "tcomms";
 	pixel_x = 24;
 	pixel_y = 22
@@ -2143,7 +2142,8 @@
 /obj/machinery/door/airlock/external/bolted_open{
 	icon_state = "open";
 	id_tag = "tcomm_inner";
-	name = "Telecommunications Secure Access"
+	name = "Telecommunications Secure Access";
+	frequency = 1379
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/tcommsat)
@@ -3335,7 +3335,6 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/access_button/airlock_interior{
-	frequency = 1331;
 	master_tag = "tcomms";
 	pixel_x = -25;
 	pixel_y = 23
@@ -3823,7 +3822,8 @@
 "xX" = (
 /obj/machinery/door/airlock/external/bolted{
 	id_tag = "tcomm_outer";
-	name = "Telecommunications Secure Access"
+	name = "Telecommunications Secure Access";
+	frequency = 1379
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -3886,7 +3886,8 @@
 /obj/machinery/door/airlock/external/bolted_open{
 	icon_state = "open";
 	id_tag = "tcomm_inner";
-	name = "Telecommunications Secure Access"
+	name = "Telecommunications Secure Access";
+	frequency = 1379
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/tcommsat)
@@ -4327,7 +4328,8 @@
 /obj/machinery/door/airlock/external/bolted_open{
 	icon_state = "open";
 	id_tag = "tcomm_inner";
-	name = "Telecommunications Secure Access"
+	name = "Telecommunications Secure Access";
+	frequency = 1379
 	},
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -6127,7 +6129,8 @@
 /obj/machinery/door/airlock/external/bolted_open{
 	icon_state = "open";
 	id_tag = "tcomm_inner";
-	name = "Telecommunications Secure Access"
+	name = "Telecommunications Secure Access";
+	frequency = 1379
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/tcommsat)

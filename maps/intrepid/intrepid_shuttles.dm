@@ -86,6 +86,19 @@
 	name = "In transit"
 	landmark_tag = "nav_transit_pandora"
 
+// Caduceus
+/datum/shuttle/autodock/ferry/ambulance
+	name = "Caduceus"
+	shuttle_area = /area/shuttle/ambulance/home
+	current_location = "nav_hangar_ambulance"
+	move_time = 60
+	dock_target = "ambulance_shuttle_dock"
+
+/obj/effect/shuttle_landmark/intrepid/hangar/ambulance_shuttle
+	name = "Caduceus Dock"
+	landmark_tag = "nav_hangar_ambulance"
+	docking_controller = "ambulance_intrepid_dock"
+
 // Merchant
 /datum/shuttle/autodock/ferry/merchant
 	name = "Merchant"
