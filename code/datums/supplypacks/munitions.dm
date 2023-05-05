@@ -33,7 +33,7 @@
 	contains = list(/obj/structure/ship_munition/disperser_charge/orbital_bombardment)
 	cost = 80
 
-/decl/hierarchy/supply_pack/munition/orbital_bombardment
+/decl/hierarchy/supply_pack/munition/orbital_bombardment_high
 	name = "Ammo - disperser-OB7-DOOM charge"
 	contains = list(/obj/structure/ship_munition/disperser_charge/orbital_bombardment/high)
 	cost = 160
