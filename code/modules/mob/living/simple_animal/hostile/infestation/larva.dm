@@ -35,6 +35,7 @@
 		/mob/living/simple_animal/hostile/infestation/assembler = 90 SECONDS,
 		/mob/living/simple_animal/hostile/infestation/rhino = 120 SECONDS,
 		)
+	ignore_combat = TRUE
 
 /datum/say_list/infestation_larva
 	emote_hear = list("gurgles", "hisses", "attempts to make a sound")
