@@ -132,3 +132,8 @@
 	var/new_falloff = variable == "light_falloff_curve" ? var_value : A.light_falloff_curve
 
 	A.set_light(new_max, new_inner, new_outer, new_falloff)
+
+/decl/vv_set_handler/holopad_id_handler
+	handled_type = /obj/machinery/hologram/holopad
+	handled_vars = list("holopad_id" = /obj/machinery/hologram/holopad/proc/ChangeID)
+	predicates = list(/proc/is_text_predicate)
