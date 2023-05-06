@@ -378,10 +378,10 @@
 /obj/structure/closet/secure_closet/guncabinet{
 	name = "laser carbines cabinet"
 	},
-/obj/item/gun/energy/laser/secure,
-/obj/item/gun/energy/laser/secure,
-/obj/item/gun/energy/laser/secure,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/gun/energy/laser/secure,
+/obj/item/gun/energy/laser/secure,
+/obj/item/gun/energy/laser/secure,
 /obj/machinery/camera/motion{
 	c_tag = "Security - Heavy Armoury";
 	dir = 4;
@@ -1574,8 +1574,8 @@
 	},
 /obj/structure/cable/orange,
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	pixel_y = 19;
 	pixel_x = 28;
+	pixel_y = 19;
 	tag = "ambulance_shuttle_dock";
 	tag_door = "ambulance_interior"
 	},
@@ -3493,7 +3493,7 @@
 /turf/simulated/floor/tiled/white,
 /area/space)
 "cXn" = (
-/obj/machinery/hologram/holopad,
+/obj/machinery/hologram/holopad/longrange,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/meetingroom)
 "cXU" = (
@@ -5823,10 +5823,10 @@
 	icon_state = "computer"
 	},
 /obj/item/paper/sticky{
-	pixel_y = -4;
-	pixel_x = -2;
 	info = "The Intrepid is equipped with a 'state-of-the-art' autopilot system, you can enter coordinates and the ship will do the rest (given enough thruster fuel and electricity), HOWEVER, it will NOT detect meteroids! If you intend to use it to manuver, please put in near-by coordinates with no obstructions!";
-	name = "autopilot sticky note"
+	name = "autopilot sticky note";
+	pixel_x = -2;
+	pixel_y = -4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/pandora/cockpit)
@@ -6361,11 +6361,11 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/internalstarboard)
 "fiD" = (
-/obj/machinery/suit_cycler/security,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/sign/terragov{
 	pixel_y = 32
 	},
+/obj/machinery/suit_cycler/security/alt,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/security/armory_tactical)
 "fiH" = (
@@ -7456,17 +7456,14 @@
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/center)
 "gdG" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/secure_closet/guncabinet{
 	name = "rifle cabinet"
 	},
-/obj/item/gun/projectile/automatic/sec_smg,
-/obj/item/gun/projectile/automatic/sec_smg,
-/obj/item/gun/projectile/automatic/sec_smg,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/gun/projectile/pistol/military/alt,
+/obj/item/gun/projectile/pistol/military/alt,
 /obj/item/gun/projectile/pistol/military/alt,
 /obj/item/ammo_magazine/pistol/double,
-/obj/item/gun/projectile/pistol/military/alt,
-/obj/item/gun/projectile/pistol/military/alt,
 /obj/item/ammo_magazine/pistol/double,
 /obj/item/ammo_magazine/pistol/double,
 /obj/item/ammo_magazine/pistol/double/rubber{
@@ -7478,6 +7475,15 @@
 /obj/item/ammo_magazine/pistol/double/rubber{
 	name = "rubber doublestack pistol magazine"
 	},
+/obj/item/gun/projectile/automatic/sec_smg,
+/obj/item/gun/projectile/automatic/sec_smg,
+/obj/item/gun/projectile/automatic/sec_smg,
+/obj/item/ammo_magazine/smg_top/rubber,
+/obj/item/ammo_magazine/smg_top/rubber,
+/obj/item/ammo_magazine/smg_top/rubber,
+/obj/item/ammo_magazine/smg_top/rubber,
+/obj/item/ammo_magazine/smg_top/rubber,
+/obj/item/ammo_magazine/smg_top/rubber,
 /obj/machinery/rotating_alarm/security_alarm{
 	pixel_y = 13
 	},
@@ -7995,9 +8001,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/center)
 "gFn" = (
-/obj/machinery/hologram/holopad/longrange{
-	identifier = "TGLV Intrepid Medical Bay"
-	},
+/obj/machinery/hologram/holopad/longrange,
 /turf/simulated/floor/tiled/white,
 /area/intrepid/misc/hallway/portside)
 "gFC" = (
@@ -9721,6 +9725,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/exploration/storage)
 "igg" = (
@@ -9766,8 +9771,6 @@
 "iij" = (
 /obj/structure/closet/secure_closet/engineering_senior,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/rcd,
-/obj/item/rcd_ammo/large,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/engineering/lockerroom)
 "iiM" = (
@@ -11461,16 +11464,16 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/bunk)
 "jIV" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/table/rack{
 	dir = 4
 	},
-/obj/item/clothing/glasses/hud/security,
 /obj/item/clothing/glasses/hud/security/prescription,
 /obj/item/clothing/glasses/hud/security/prescription,
-/obj/item/clothing/glasses/hud/security,
-/obj/item/clothing/glasses/hud/security,
 /obj/item/clothing/glasses/hud/security/prescription,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/item/clothing/glasses/hud/security,
+/obj/item/clothing/glasses/hud/security,
+/obj/item/clothing/glasses/hud/security,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/security/storage)
 "jJc" = (
@@ -11715,6 +11718,7 @@
 	c_tag = "Stardust - Anomalous Materials Laboratory";
 	dir = 1
 	},
+/obj/machinery/hologram/holopad/longrange,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/anomalyresearch)
 "jRI" = (
@@ -11773,6 +11777,12 @@
 /obj/machinery/atmospherics/tvalve,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/internalportside)
+"jWx" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/hologram/holopad/longrange,
+/turf/simulated/floor/tiled/white,
+/area/intrepid/department/medical/treatment)
 "jWP" = (
 /obj/structure/window/reinforced,
 /obj/machinery/door/window/brigdoor/northleft,
@@ -12206,9 +12216,7 @@
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
-/obj/machinery/hologram/holopad/longrange{
-	identifier = "TGLV Intrepid Bar"
-	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/wood/walnut,
 /area/intrepid/department/civillian/mess)
 "ksN" = (
@@ -13883,9 +13891,9 @@
 /obj/structure/table/rack{
 	dir = 4
 	},
-/obj/item/melee/baton/loaded,
-/obj/item/melee/baton/loaded,
 /obj/item/storage/box/flashbangs,
+/obj/item/melee/baton/loaded,
+/obj/item/melee/baton/loaded,
 /obj/item/melee/baton/loaded,
 /obj/machinery/light/dystopian{
 	dir = 8
@@ -14089,6 +14097,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/civillian/bar)
 "mab" = (
@@ -14404,6 +14413,7 @@
 /area/intrepid/department/cargo/cargostorage)
 "miE" = (
 /obj/machinery/navbeacon/Hydroponics,
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/civillian/hydroponics)
 "miG" = (
@@ -14621,8 +14631,8 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/exploration/storage)
 "msh" = (
-/obj/machinery/suit_storage_unit/security,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/suit_storage_unit/security/alt,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/security/armory_tactical)
 "msq" = (
@@ -21415,6 +21425,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/civillian/hydroponics)
+"rJP" = (
+/obj/machinery/hologram/holopad/longrange,
+/turf/simulated/floor/tiled/techmaint,
+/area/intrepid/department/command/commandquarters/tgs)
 "rJX" = (
 /obj/structure/flora/pottedplant/floorleaf,
 /obj/structure/railing/mapped{
@@ -21783,6 +21797,12 @@
 /obj/item/clothing/suit/armor/pcarrier/tan/tactical,
 /obj/item/clothing/suit/armor/pcarrier/tan/tactical,
 /obj/item/clothing/suit/armor/pcarrier/tan/tactical,
+/obj/item/clothing/accessory/armguards/tan,
+/obj/item/clothing/accessory/armguards/tan,
+/obj/item/clothing/accessory/armguards/tan,
+/obj/item/clothing/accessory/legguards/tan,
+/obj/item/clothing/accessory/legguards/tan,
+/obj/item/clothing/accessory/legguards/tan,
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/exploration/storage)
 "saZ" = (
@@ -22410,9 +22430,6 @@
 /area/crew_quarters/sleep/bunk)
 "swI" = (
 /obj/structure/closet/secure_closet/guncabinet,
-/obj/item/clothing/suit/armor/pcarrier/blue,
-/obj/item/clothing/suit/armor/pcarrier/blue,
-/obj/item/clothing/suit/armor/pcarrier/blue,
 /obj/item/clothing/head/helmet/terragov,
 /obj/item/clothing/head/helmet/terragov,
 /obj/item/clothing/head/helmet/terragov,
@@ -22433,6 +22450,9 @@
 /obj/item/melee/telebaton,
 /obj/item/storage/box/cdeathalarm_kit,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/clothing/suit/armor/pcarrier/medium/terra,
+/obj/item/clothing/suit/armor/pcarrier/medium/terra,
+/obj/item/clothing/suit/armor/pcarrier/medium/terra,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/security/armory)
 "sxg" = (
@@ -23468,9 +23488,6 @@
 /obj/structure/table/rack{
 	dir = 4
 	},
-/obj/item/gun/energy/gun/small/secure,
-/obj/item/gun/energy/gun/small/secure,
-/obj/item/gun/energy/gun/small/secure,
 /obj/item/ammo_magazine/pistol/double/practice{
 	name = "practice doublestack pistol magazine"
 	},
@@ -23489,6 +23506,12 @@
 /obj/item/ammo_magazine/pistol/double/practice{
 	name = "practice doublestack pistol magazine"
 	},
+/obj/item/ammo_magazine/smg_top/practice,
+/obj/item/ammo_magazine/smg_top/practice,
+/obj/item/ammo_magazine/smg_top/practice,
+/obj/item/ammo_magazine/smg_top/practice,
+/obj/item/ammo_magazine/smg_top/practice,
+/obj/item/ammo_magazine/smg_top/practice,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/security/storage)
 "tjS" = (
@@ -23794,6 +23817,10 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/starboard)
+"tvZ" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/department/security/wing)
 "twi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -24448,6 +24475,10 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
+"tXY" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/engineering/assembly/robotics)
 "tXZ" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/crate,
@@ -26201,10 +26232,10 @@
 	dir = 9
 	},
 /obj/item/paper/sticky{
-	pixel_y = -4;
-	pixel_x = -2;
 	info = "The Pandora is equipped with a 'state-of-the-art' autopilot system, you can enter coordinates and the ship will do the rest (given enough thruster fuel and electricity), HOWEVER, it will NOT detect meteroids! If you intend to use it to manuver, please put in near-by coordinates with no obstructions!";
-	name = "autopilot sticky note"
+	name = "autopilot sticky note";
+	pixel_x = -2;
+	pixel_y = -4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/bridge)
@@ -26742,9 +26773,6 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/hologram/holopad/longrange{
-	identifier = "SRV Stardust Cockpit"
-	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/hallway)
 "vTr" = (
@@ -26989,6 +27017,18 @@
 	},
 /obj/item/storage/box/cdeathalarm_kit,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/implantcase/chem,
+/obj/item/implantcase/chem,
+/obj/item/implantcase/chem,
+/obj/item/implantcase/chem,
+/obj/item/implantcase/tracking,
+/obj/item/implantcase/tracking,
+/obj/item/implantcase/tracking,
+/obj/item/implantcase/tracking,
+/obj/item/implantcase/psi_control,
+/obj/item/implantcase/psi_control,
+/obj/item/implantcase/psi_control,
+/obj/item/implantcase/psi_control,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/security/armory_tactical)
 "wgV" = (
@@ -27377,6 +27417,19 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor,
 /area/intrepid/misc/hallway/portside)
+"wBF" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/hologram/holopad/longrange,
+/turf/simulated/floor/tiled/white,
+/area/shuttle/research/fabricator)
 "wBH" = (
 /obj/structure/railing/mapped,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -40990,7 +41043,7 @@ cgj
 pOW
 ddX
 kNm
-kNm
+rJP
 jlX
 pOW
 bVs
@@ -46854,7 +46907,7 @@ nAw
 skk
 oCv
 raj
-kqE
+wBF
 vnw
 uNk
 lqw
@@ -51909,7 +51962,7 @@ tYF
 cTV
 ddj
 dIE
-qTu
+jWx
 qTu
 jAh
 bcY
@@ -54734,7 +54787,7 @@ gfn
 crs
 uDE
 mgi
-rEr
+tXY
 bxO
 xtd
 qWI
@@ -56303,7 +56356,7 @@ gnO
 vMO
 bWq
 nBv
-wsX
+tvZ
 tTA
 lUE
 lUE
