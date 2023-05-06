@@ -34,7 +34,8 @@
 #define DAM_BIO       64 // Toxin damage that should be mitigated by biological (i.e. sterile) armor
 
 #define FIRE_DAMAGE_MODIFIER 0.0215 // Higher values result in more external fire damage to the skin. (default 0.0215)
-#define  AIR_DAMAGE_MODIFIER 2.025  // More means less damage from hot air scalding lungs, less = more damage. (default 2.025)
+#define AIR_DAMAGE_MODIFIER  5.0    // More means less damage from hot air scalding lungs, less = more damage. (default 2.025)
+#define MAX_PRESSURE_LUNGS_DAMAGE 10.0 // The maximum amount of damage each tick in extreme pressure environments
 
 // Organ defines.
 #define ORGAN_CUT_AWAY   (1<<0)  // The organ is in the process of being surgically removed.
