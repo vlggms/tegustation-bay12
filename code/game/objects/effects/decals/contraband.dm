@@ -85,10 +85,12 @@
 	var/poster_type = null
 	var/random_poster_type = /decl/poster
 	var/ruined = FALSE
+	var/normal_name = "poster"
 
 /obj/structure/sign/poster/New(newloc, placement_dir = null, give_poster_type = poster_type)
 	. = ..()
 
+	SetName(normal_name) // "Random poster" simply helps with mapping, so we need to reset name on init
 	poster_type = give_poster_type
 	if(!poster_type)
 		var/list/valid_types = list()
