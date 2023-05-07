@@ -134,6 +134,7 @@
 	exhale_type = species.exhale_type ? species.exhale_type : GAS_CO2
 
 // Exposure to extreme pressures can damage lungs
+// Keep in mind that this only triggers on "successful" breath, so, once per exposure to the environment
 /obj/item/organ/internal/lungs/proc/check_rupturing(breath_pressure)
 	if(isnull(last_int_pressure))
 		last_int_pressure = breath_pressure
@@ -147,7 +148,7 @@
 	if(int_pressure_diff <= max_pressure_diff || ext_pressure_diff <= max_pressure_diff)
 		return
 	// 0 pressure for humans would have ~100 diff, so, maximum damage regardless
-	var/lung_damage = min(max(int_pressure_diff, ext_pressure_diff) * 0.1, MAX_PRESSURE_LUNGS_DAMAGE)
+	var/lung_damage = min(max(int_pressure_diff, ext_pressure_diff) * 0.2, MAX_PRESSURE_LUNGS_DAMAGE)
 	lung_damage *= BP_IS_ROBOTIC(src) ? 0.75 : 1 //Robotic lungs receive less damage
 	take_general_damage(lung_damage)
 
