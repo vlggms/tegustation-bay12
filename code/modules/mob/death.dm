@@ -92,4 +92,6 @@
 	if(SSticker.mode)
 		SSticker.mode.check_win()
 	to_chat(src,"<span class='deadsay'>[show_dead_message]</span>")
+	SEND_SIGNAL(src, COMSIG_MOB_DEATH, gibbed)
+	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_MOB_DEATH, src, gibbed)
 	return 1

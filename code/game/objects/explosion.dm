@@ -1,6 +1,6 @@
 //TODO: Flash range does nothing currently
 
-proc/explosion(turf/epicenter, devastation_range, heavy_impact_range, light_impact_range, flash_range, adminlog = 1, z_transfer = UP|DOWN, shaped)
+/proc/explosion(turf/epicenter, devastation_range, heavy_impact_range, light_impact_range, flash_range, adminlog = 1, z_transfer = UP|DOWN, shaped)
 	var/multi_z_scalar = 0.35
 	UNLINT(src = null)	//so we don't abort once src is deleted
 	spawn(0)
@@ -79,6 +79,8 @@ proc/explosion(turf/epicenter, devastation_range, heavy_impact_range, light_impa
 						AM.ex_act(dist)
 
 		sleep(8)
+
+	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_EXPLOSION, epicenter, devastation_range, heavy_impact_range, light_impact_range, flash_range)
 
 	return 1
 
