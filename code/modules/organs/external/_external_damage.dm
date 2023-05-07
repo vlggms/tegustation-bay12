@@ -372,25 +372,25 @@ obj/item/organ/external/take_general_damage(var/amount, var/silent = FALSE)
 		return TRUE
 
 	// Sharp/Edgy weapons with enough BRUTE damage
-	if(edge_eligible && brute >= max_damage * DROPLIMB_THRESHOLD_EDGE)
+	if(edge_eligible && brute + (spillover * DROPLIMB_SPILLOVER_MULT) >= max_damage * DROPLIMB_THRESHOLD_EDGE)
 		if(prob(brute))
 			droplimb(0, DROPLIMB_EDGE)
 			return TRUE
 
 	// Overly high BURN damage
-	else if(burn >= max_damage * DROPLIMB_THRESHOLD_DESTROY_BURN)
+	else if(burn + (spillover * DROPLIMB_SPILLOVER_MULT) >= max_damage * DROPLIMB_THRESHOLD_DESTROY_BURN)
 		if(prob(burn * 0.3))
 			droplimb(0, DROPLIMB_BURN)
 			return TRUE
 
 	// Overly high BRUTE damage
-	else if(brute >= max_damage * DROPLIMB_THRESHOLD_DESTROY_BRUTE)
+	else if(brute + (spillover * DROPLIMB_SPILLOVER_MULT) >= max_damage * DROPLIMB_THRESHOLD_DESTROY_BRUTE)
 		if(prob(brute))
 			droplimb(0, DROPLIMB_BLUNT)
 			return TRUE
 
 	// Not as high brute damage
-	else if(brute >= max_damage * DROPLIMB_THRESHOLD_TEAROFF)
-		if(prob(brute * 0.3))
+	else if(brute + (spillover * DROPLIMB_SPILLOVER_MULT) >= max_damage * DROPLIMB_THRESHOLD_TEAROFF)
+		if(prob(brute * 0.2))
 			droplimb(0, DROPLIMB_EDGE)
 			return TRUE
