@@ -371,6 +371,10 @@ obj/item/organ/external/take_general_damage(var/amount, var/silent = FALSE)
 			droplimb(0, edge_eligible ? DROPLIMB_EDGE : DROPLIMB_BLUNT)
 		return TRUE
 
+	// Broken bones make it easier to dismember via brute damage
+	if(status & ORGAN_BROKEN)
+		brute *= 1.25
+
 	// Sharp/Edgy weapons with enough BRUTE damage
 	if(edge_eligible && brute + (spillover * DROPLIMB_SPILLOVER_MULT) >= max_damage * DROPLIMB_THRESHOLD_EDGE)
 		if(prob(brute))
