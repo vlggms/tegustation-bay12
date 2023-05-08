@@ -386,7 +386,8 @@ var/list/admin_verbs_mentors = list(
 /client/proc/admin_ghost()
 	set category = "Admin"
 	set name = "Aghost"
-	if(!holder)	return
+	if(!check_rights(R_ADMIN|R_MOD, TRUE))
+		return
 	if(isghost(mob))
 		var/mob/observer/ghost/ghost = mob
 		ghost.reenter_corpse()
@@ -413,21 +414,27 @@ var/list/admin_verbs_mentors = list(
 	set name = "Invisimin"
 	set category = "Admin"
 	set desc = "Toggles ghost-like invisibility (Don't abuse this)"
-	if(holder && mob)
-		if(mob.invisibility == INVISIBILITY_OBSERVER)
-			mob.set_invisibility(initial(mob.invisibility))
-			to_chat(mob, "<span class='danger'>Invisimin off. Invisibility reset.</span>")
-			mob.alpha = max(mob.alpha + 100, 255)
-		else
-			mob.set_invisibility(INVISIBILITY_OBSERVER)
-			to_chat(mob, "<span class='notice'>Invisimin on. You are now as invisible as a ghost.</span>")
-			mob.alpha = max(mob.alpha - 100, 0)
+	if(!check_rights(R_ADMIN|R_MOD, TRUE) || !mob)
+		return
+
+	if(isghost(mob))
+		to_chat(mob, SPAN_DANGER("Invisimin will not work for a ghost mob."))
+		return
+
+	if(mob.invisibility == INVISIBILITY_OBSERVER)
+		mob.set_invisibility(initial(mob.invisibility))
+		to_chat(mob, SPAN_DANGER("Invisimin off. Invisibility reset."))
+		mob.alpha = max(mob.alpha + 100, 255)
+	else
+		mob.set_invisibility(INVISIBILITY_OBSERVER)
+		to_chat(mob, SPAN_DANGER("Invisimin on. You are now as invisible as a ghost."))
+		mob.alpha = max(mob.alpha - 100, 0)
 
 
 /client/proc/player_panel()
 	set name = "Player Panel"
 	set category = "Admin"
-	if(holder)
+	if(check_rights(R_ADMIN|R_MOD, FALSE))
 		holder.player_panel()
 	SSstatistics.add_field_details("admin_verb","PPN") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	return
@@ -435,7 +442,7 @@ var/list/admin_verbs_mentors = list(
 /client/proc/check_antagonists()
 	set name = "Check Antagonists"
 	set category = "Admin"
-	if(holder)
+	if(check_rights(R_INVESTIGATE, FALSE))
 		holder.check_antagonists()
 		log_admin("[key_name(usr)] checked antagonists.")	//for tsar~
 	SSstatistics.add_field_details("admin_verb","CHA") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -444,7 +451,7 @@ var/list/admin_verbs_mentors = list(
 /client/proc/jobbans()
 	set name = "Display Job bans"
 	set category = "Admin"
-	if(holder)
+	if(check_rights(R_INVESTIGATE, FALSE))
 		if(config.ban_legacy_system)
 			holder.Jobbans()
 		else
@@ -455,7 +462,7 @@ var/list/admin_verbs_mentors = list(
 /client/proc/unban_panel()
 	set name = "Unban Panel"
 	set category = "Admin"
-	if(holder)
+	if(check_rights(R_ADMIN, FALSE))
 		if(config.ban_legacy_system)
 			holder.unbanpanel()
 		else
@@ -466,7 +473,7 @@ var/list/admin_verbs_mentors = list(
 /client/proc/game_panel()
 	set name = "Game Panel"
 	set category = "Admin"
-	if(holder)
+	if(check_rights(R_ADMIN|R_MOD, FALSE))
 		holder.Game()
 	SSstatistics.add_field_details("admin_verb","GP") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	return
@@ -474,7 +481,7 @@ var/list/admin_verbs_mentors = list(
 /client/proc/secrets()
 	set name = "Secrets"
 	set category = "Admin"
-	if (holder)
+	if(check_rights(R_ADMIN|R_MOD, FALSE))
 		holder.Secrets()
 	SSstatistics.add_field_details("admin_verb","S") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	return
@@ -482,7 +489,8 @@ var/list/admin_verbs_mentors = list(
 /client/proc/colorooc()
 	set category = "Fun"
 	set name = "OOC Text Color"
-	if(!holder)	return
+	if(!check_rights(R_ADMIN|R_MOD, FALSE))
+		return
 	var/response = alert(src, "Please choose a distinct color that is easy to read and doesn't mix with all the other chat and radio frequency colors.", "Change own OOC color", "Pick new color", "Reset to default", "Cancel")
 	if(response == "Pick new color")
 		prefs.ooccolor = input(src, "Please select your OOC colour.", "OOC colour") as color
@@ -497,17 +505,21 @@ var/list/admin_verbs_mentors = list(
 #define AUTOBANTIME 10
 
 /client/proc/warn(warned_ckey)
-	if(!check_rights(R_ADMIN))	return
+	if(!check_rights(R_ADMIN))
+		return
 
-	if(!warned_ckey || !istext(warned_ckey))	return
+	if(!warned_ckey || !istext(warned_ckey))
+		return
 	if(warned_ckey in admin_datums)
 		to_chat(usr, "<font color='red'>Error: warn(): You can't warn admins.</font>")
 		return
 
 	var/datum/preferences/D
 	var/client/C = GLOB.ckey_directory[warned_ckey]
-	if(C)	D = C.prefs
-	else	D = SScharacter_setup.preferences_datums[warned_ckey]
+	if(C)
+		D = C.prefs
+	else
+		D = SScharacter_setup.preferences_datums[warned_ckey]
 
 	if(!D)
 		to_chat(src, "<font color='red'>Error: warn(): No such ckey found.</font>")
@@ -540,6 +552,9 @@ var/list/admin_verbs_mentors = list(
 	set category = "Special Verbs"
 	set name = "Drop Bomb"
 	set desc = "Cause an explosion of varying strength at your location."
+
+	if(!check_rights(R_FUN))
+		return
 
 	var/turf/epicenter = mob.loc
 	var/list/choices = list("Small Bomb", "Medium Bomb", "Big Bomb", "Custom Bomb")
@@ -585,6 +600,7 @@ var/list/admin_verbs_mentors = list(
 	set category = "Special Verbs"
 	set name = "oSay"
 	set desc = "Display a message to everyone who can hear the target"
+
 	if(mob.control_object)
 		if(!msg)
 			return
@@ -619,7 +635,8 @@ var/list/admin_verbs_mentors = list(
 /client/proc/toggle_log_hrefs()
 	set name = "Toggle href logging"
 	set category = "Server"
-	if(!holder)	return
+	if(!check_rights(R_SERVER))
+		return
 	if(config)
 		if(config.log_hrefs)
 			config.log_hrefs = 0
@@ -631,17 +648,19 @@ var/list/admin_verbs_mentors = list(
 /client/proc/check_ai_laws()
 	set name = "Check AI Laws"
 	set category = "Admin"
-	if(holder)
+	if(check_rights(R_INVESTIGATE))
 		src.holder.output_ai_laws()
 
 /client/proc/rename_silicon()
 	set name = "Rename Silicon"
 	set category = "Admin"
 
-	if(!check_rights(R_ADMIN)) return
+	if(!check_rights(R_ADMIN))
+		return
 
 	var/mob/living/silicon/S = input("Select silicon.", "Rename Silicon.") as null|anything in GLOB.silicon_mob_list
-	if(!S) return
+	if(!S)
+		return
 
 	var/new_name = sanitizeSafe(input(src, "Enter new name. Leave blank or as is to cancel.", "[S.real_name] - Enter new silicon name", S.real_name))
 	if(new_name && new_name != S.real_name)
@@ -668,7 +687,8 @@ var/list/admin_verbs_mentors = list(
 	set desc = "Allows you to change the mob appearance"
 	set category = "Admin"
 
-	if(!check_rights(R_FUN)) return
+	if(!check_rights(R_FUN))
+		return
 
 	var/mob/living/carbon/human/H = input("Select mob.", "Change Mob Appearance - Admin") as null|anything in GLOB.human_mob_list
 	if(!H) return
@@ -682,7 +702,8 @@ var/list/admin_verbs_mentors = list(
 	set desc = "Allows the mob to change its appearance"
 	set category = "Admin"
 
-	if(!check_rights(R_FUN)) return
+	if(!check_rights(R_FUN))
+		return
 
 	var/mob/living/carbon/human/H = input("Select mob.", "Change Mob Appearance - Self") as null|anything in GLOB.human_mob_list
 	if(!H) return
@@ -705,7 +726,8 @@ var/list/admin_verbs_mentors = list(
 	set desc = "Sets the security level"
 	set category = "Admin"
 
-	if(!check_rights(R_ADMIN))	return
+	if(!check_rights(R_ADMIN))
+		return
 
 	var/decl/security_state/security_state = decls_repository.get_decl(GLOB.using_map.security_state)
 
@@ -731,7 +753,8 @@ var/list/admin_verbs_mentors = list(
 	set name = "Edit Appearance"
 	set category = "Fun"
 
-	if(!check_rights(R_FUN))	return
+	if(!check_rights(R_FUN))
+		return
 
 	var/mob/living/carbon/human/M = input("Select mob.", "Edit Appearance") as null|anything in GLOB.human_mob_list
 
@@ -798,14 +821,15 @@ var/list/admin_verbs_mentors = list(
 /client/proc/playernotes()
 	set name = "Show Player Info"
 	set category = "Admin"
-	if(holder)
+	if(check_rights(R_INVESTIGATE, FALSE))
 		holder.PlayerNotes()
 	return
 
 /client/proc/free_slot_submap()
 	set name = "Free Job Slot (Submap)"
 	set category = "Admin"
-	if(!holder) return
+	if(!check_rights(R_ADMIN, FALSE))
+		return
 
 	var/list/jobs = list()
 	for(var/thing in SSmapping.submaps)
@@ -829,25 +853,29 @@ var/list/admin_verbs_mentors = list(
 /client/proc/free_slot_crew()
 	set name = "Free Job Slot (Crew)"
 	set category = "Admin"
-	if(holder)
-		var/list/jobs = list()
-		for (var/datum/job/J in SSjobs.primary_job_datums)
-			if(!J.is_position_available())
-				jobs[J.title] = J
-		if (!jobs.len)
-			to_chat(usr, "There are no fully staffed jobs.")
-			return
-		var/job_title = input("Please select job slot to free", "Free job slot")  as null|anything in jobs
-		var/datum/job/job = jobs[job_title]
-		if(job && !job.is_position_available())
-			job.make_position_available()
-			message_admins("A job slot for [job_title] has been opened by [key_name_admin(usr)]")
-			return
+	if(!check_rights(R_ADMIN, FALSE))
+		return
+
+	var/list/jobs = list()
+	for (var/datum/job/J in SSjobs.primary_job_datums)
+		if(!J.is_position_available())
+			jobs[J.title] = J
+	if (!jobs.len)
+		to_chat(usr, "There are no fully staffed jobs.")
+		return
+	var/job_title = input("Please select job slot to free", "Free job slot")  as null|anything in jobs
+	var/datum/job/job = jobs[job_title]
+	if(job && !job.is_position_available())
+		job.make_position_available()
+		message_admins("A job slot for [job_title] has been opened by [key_name_admin(usr)]")
+		return
 
 /client/proc/toggleghostwriters()
 	set name = "Toggle ghost writers"
 	set category = "Server"
-	if(!holder)	return
+	if(!check_rights(R_FUN, FALSE))
+		return
+
 	if(config)
 		if(config.cult_ghostwriter)
 			config.cult_ghostwriter = 0
@@ -861,7 +889,9 @@ var/list/admin_verbs_mentors = list(
 /client/proc/toggledrones()
 	set name = "Toggle maintenance drones"
 	set category = "Server"
-	if(!holder)	return
+	if(!check_rights(R_ADMIN, FALSE))
+		return
+
 	if(config)
 		if(config.allow_drone_spawn)
 			config.allow_drone_spawn = 0
@@ -878,6 +908,9 @@ var/list/admin_verbs_mentors = list(
 	set name = "Man Up"
 	set desc = "Tells mob to man up and deal with it."
 
+	if(!check_rights(R_FUN))
+		return
+
 	to_chat(T, "<span class='notice'><b><font size=3>Man up and deal with it.</font></b></span>")
 	to_chat(T, "<span class='notice'>Move on.</span>")
 
@@ -887,6 +920,9 @@ var/list/admin_verbs_mentors = list(
 	set category = "Fun"
 	set name = "Man Up Global"
 	set desc = "Tells everyone to man up and deal with it."
+
+	if(!check_rights(R_FUN))
+		return
 
 	for (var/mob/T as mob in SSmobs.mob_list)
 		to_chat(T, "<br><center><span class='notice'><b><font size=4>Man up.<br> Deal with it.</font></b><br>Move on.</span></center><br>")
@@ -898,8 +934,13 @@ var/list/admin_verbs_mentors = list(
 	set category = "Fun"
 	set name = "Give Spell"
 	set desc = "Gives a spell to a mob."
+
+	if(!check_rights(R_FUN))
+		return
+
 	var/datum/spell/S = input("Choose the spell to give to that guy", "ABRAKADABRA") as null|anything in spells
-	if(!S) return
+	if(!S)
+		return
 	T.add_spell(new S)
 	SSstatistics.add_field_details("admin_verb","GS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	log_and_message_admins("gave [key_name(T)] the spell [S].")

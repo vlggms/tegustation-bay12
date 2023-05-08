@@ -8,26 +8,30 @@ var/global/floorIsLava = 0
 	msg = "<span class=\"log_message\"><span class=\"prefix\">ADMIN LOG:</span> <span class=\"message\">[msg]</span></span>"
 	log_adminwarn(msg)
 	for(var/client/C in GLOB.admins)
-		if(R_ADMIN & C.holder.rights)
+		if(check_rights(R_ADMIN, FALSE, C))
 			to_chat(C, msg)
+
 /proc/message_staff(var/msg)
 	msg = "<span class=\"log_message\"><span class=\"prefix\">STAFF LOG:</span> <span class=\"message\">[msg]</span></span>"
 	log_adminwarn(msg)
 	for(var/client/C in GLOB.admins)
-		if(C && C.holder && (R_INVESTIGATE & C.holder.rights))
+		if(check_rights(R_INVESTIGATE, FALSE, C))
 			to_chat(C, msg)
+
 /proc/msg_admin_attack(var/text) //Toggleable Attack Messages
 	log_attack(text)
 	var/rendered = "<span class=\"log_message\"><span class=\"prefix\">ATTACK:</span> <span class=\"message\">[text]</span></span>"
 	for(var/client/C in GLOB.admins)
-		if(check_rights(R_INVESTIGATE, 0, C))
+		if(check_rights(R_INVESTIGATE, FALSE, C))
 			if(C.get_preference_value(/datum/client_preference/staff/show_attack_logs) == GLOB.PREF_SHOW)
 				var/msg = rendered
 				to_chat(C, msg)
+
 /proc/admin_notice(var/message, var/rights)
 	for(var/mob/M in SSmobs.mob_list)
 		if(check_rights(rights, 0, M))
 			to_chat(M, message)
+
 ///////////////////////////////////////////////////////////////////////////////////////////////Panels
 
 /datum/admins/proc/show_player_panel(var/mob/M in SSmobs.mob_list)
@@ -933,6 +937,7 @@ var/global/floorIsLava = 0
 	set category = "Server"
 	set desc="Toggle admin spawning"
 	set name="Toggle Spawn"
+
 	config.allow_admin_spawning = !(config.allow_admin_spawning)
 	log_and_message_admins("toggled admin item spawning to [config.allow_admin_spawning].")
 	SSstatistics.add_field_details("admin_verb","TAS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -941,6 +946,7 @@ var/global/floorIsLava = 0
 	set category = "Server"
 	set desc="Toggle admin revives"
 	set name="Toggle Revive"
+
 	config.allow_admin_rev = !(config.allow_admin_rev)
 	log_and_message_admins("toggled reviving to [config.allow_admin_rev].")
 	SSstatistics.add_field_details("admin_verb","TAR") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -949,9 +955,13 @@ var/global/floorIsLava = 0
 	set category = "Server"
 	set desc="Reboots the server post haste"
 	set name="Immediate Reboot"
-	if(!usr.client.holder)	return
+
+	if(!check_rights(R_SERVER, FALSE, usr))
+		return
+
 	if( alert("Reboot server?",,"Yes","No") == "No")
 		return
+
 	to_world("<span class='danger'>Rebooting world!</span> <span class='notice'>Initiated by [usr.key]!</span>")
 	log_admin("[key_name(usr)] initiated an immediate reboot.")
 
@@ -1424,25 +1434,27 @@ var/global/floorIsLava = 0
 	set name = "Toggle Paralyze"
 	set desc = "Toggles paralyze state, which stuns, blinds and mutes the victim."
 
+	if(!check_rights(R_ADMIN))
+		return
+
 	var/msg
 
 	if(!isliving(H))
 		return
 
-	if(check_rights(R_INVESTIGATE))
-		if (!H.admin_paralyzed)
-			H.paralysis = 8000
-			H.admin_paralyzed = TRUE
-			msg = "has paralyzed [key_name(H)]."
-			H.visible_message(SPAN_DEBUG("OOC: \The [H] has been paralyzed by a staff member. Please hold all interactions with them until staff have finished with them."))
-			to_chat(H, SPAN_DEBUG("OOC: You have been paralyzed by a staff member. Please refer to your currently open admin help ticket or, if you don't have one, admin help for assistance."))
-		else
-			H.paralysis = 0
-			H.admin_paralyzed = FALSE
-			msg = "has unparalyzed [key_name(H)]."
-			H.visible_message(SPAN_DEBUG("OOC: \The [H] has been released from paralysis by staff. You may resume interactions with them."))
-			to_chat(H, SPAN_DEBUG("OOC: You have been released from paralysis by staff and can return to your game."))
-		log_and_message_staff(msg)
+	if(!H.admin_paralyzed)
+		H.paralysis = 8000
+		H.admin_paralyzed = TRUE
+		msg = "has paralyzed [key_name(H)]."
+		H.visible_message(SPAN_DEBUG("OOC: \The [H] has been paralyzed by a staff member. Please hold all interactions with them until staff have finished with them."))
+		to_chat(H, SPAN_DEBUG("OOC: You have been paralyzed by a staff member. Please refer to your currently open admin help ticket or, if you don't have one, admin help for assistance."))
+	else
+		H.paralysis = 0
+		H.admin_paralyzed = FALSE
+		msg = "has unparalyzed [key_name(H)]."
+		H.visible_message(SPAN_DEBUG("OOC: \The [H] has been released from paralysis by staff. You may resume interactions with them."))
+		to_chat(H, SPAN_DEBUG("OOC: You have been released from paralysis by staff and can return to your game."))
+	log_and_message_staff(msg)
 
 
 /datum/admins/proc/sendFax()

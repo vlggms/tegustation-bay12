@@ -16,12 +16,12 @@
 	if(!.)
 		return
 
-	if(!C.holder)
+	if(check_rights(R_INVESTIGATE))
 		if(isghost(C.mob))
 			to_chat(src, SPAN_WARNING("You cannot use [name] while ghosting/observing!"))
 			return FALSE
 		if(!(C.mob?.mind?.special_role))
-			to_chat(C, SPAN_DANGER("You must be an antag to use [name]."))
+			to_chat(C, SPAN_DANGER("You must be an antagonist to use [name]."))
 			return FALSE
 
 
