@@ -934,13 +934,6 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/space)
-"fr" = (
-/obj/machinery/atmospherics/pipe/simple/visible/black,
-/obj/machinery/door/blast/regular{
-	id_tag = "tegflush"
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/intrepid/department/engineering/engine_room)
 "fz" = (
 /obj/machinery/computer/telecomms/server{
 	dir = 4
@@ -1855,15 +1848,8 @@
 /turf/simulated/floor/wood,
 /area/intrepid/department/command/commandquarters/psiadvisor)
 "kQ" = (
-/obj/machinery/atmospherics/pipe/simple/visible/black,
 /obj/machinery/door/blast/regular{
 	id_tag = "tegflush"
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/blue{
-	dir = 4
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/intrepid/department/engineering/engine_room)
@@ -2081,8 +2067,8 @@
 	icon_state = "1-8"
 	},
 /obj/machinery/power/sensor{
-	name_tag = "Substation - Top Deck Grid";
-	name = "Substation - Top Deck Grid"
+	name = "Substation - Top Deck Grid";
+	name_tag = "Substation - Top Deck Grid"
 	},
 /obj/structure/cable/green{
 	d1 = 2;
@@ -2202,10 +2188,10 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external/bolted_open{
+	frequency = 1379;
 	icon_state = "open";
 	id_tag = "tcomm_inner";
-	name = "Telecommunications Secure Access";
-	frequency = 1379
+	name = "Telecommunications Secure Access"
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/tcommsat)
@@ -3725,10 +3711,10 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/power/sensor{
-	name_tag = "R-UST Production Grid";
 	id_tag = "R-UST Production Grid";
-	tag = "R-UST Production Grid";
-	name = "R-UST Production Grid"
+	name = "R-UST Production Grid";
+	name_tag = "R-UST Production Grid";
+	tag = "R-UST Production Grid"
 	},
 /obj/structure/cable{
 	icon_state = "0-2"
@@ -3908,9 +3894,9 @@
 /area/intrepid/misc/maint/upper)
 "xX" = (
 /obj/machinery/door/airlock/external/bolted{
+	frequency = 1379;
 	id_tag = "tcomm_outer";
-	name = "Telecommunications Secure Access";
-	frequency = 1379
+	name = "Telecommunications Secure Access"
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -3993,10 +3979,10 @@
 /area/intrepid/department/engineering/engine_room)
 "yM" = (
 /obj/machinery/door/airlock/external/bolted_open{
+	frequency = 1379;
 	icon_state = "open";
 	id_tag = "tcomm_inner";
-	name = "Telecommunications Secure Access";
-	frequency = 1379
+	name = "Telecommunications Secure Access"
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/tcommsat)
@@ -4187,6 +4173,7 @@
 /area/tcommsat)
 "zX" = (
 /obj/machinery/atmospherics/unary/vent_pump/tank{
+	dir = 8;
 	external_pressure_bound = 0;
 	external_pressure_bound_default = 0;
 	icon_state = "map_vent_in";
@@ -4197,8 +4184,7 @@
 	pressure_checks = 2;
 	pressure_checks_default = 2;
 	pump_direction = 0;
-	use_power = 1;
-	dir = 8
+	use_power = 1
 	},
 /turf/simulated/floor/reinforced/n20,
 /area/intrepid/department/engineering/atmos)
@@ -4524,10 +4510,10 @@
 /area/intrepid/misc/maint/upper)
 "CV" = (
 /obj/machinery/door/airlock/external/bolted_open{
+	frequency = 1379;
 	icon_state = "open";
 	id_tag = "tcomm_inner";
-	name = "Telecommunications Secure Access";
-	frequency = 1379
+	name = "Telecommunications Secure Access"
 	},
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -4788,6 +4774,12 @@
 /obj/effect/wallframe_spawn/reinforced_phoron/hull,
 /turf/simulated/floor,
 /area/intrepid/department/command/obstructionfielddisperser)
+"Fx" = (
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper)
 "FE" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -5245,6 +5237,7 @@
 /area/space)
 "Ir" = (
 /obj/machinery/atmospherics/unary/vent_pump/tank{
+	dir = 8;
 	external_pressure_bound = 0;
 	external_pressure_bound_default = 0;
 	icon_state = "map_vent_in";
@@ -5255,8 +5248,7 @@
 	pressure_checks = 2;
 	pressure_checks_default = 2;
 	pump_direction = 0;
-	use_power = 1;
-	dir = 8
+	use_power = 1
 	},
 /turf/simulated/floor/reinforced/carbon_dioxide,
 /area/intrepid/department/engineering/atmos)
@@ -5366,10 +5358,10 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external/bolted_open{
+	frequency = 1379;
 	icon_state = "open";
 	id_tag = "tcomm_inner";
-	name = "Telecommunications Secure Access";
-	frequency = 1379
+	name = "Telecommunications Secure Access"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -5514,12 +5506,12 @@
 	dir = 1
 	},
 /obj/machinery/computer/air_control{
+	dir = 8;
 	input_tag = "air_in";
 	name = "Air Supply Control";
 	output_tag = "air_out";
 	sensor_name = "Air Supply";
-	sensor_tag = "air_sensor";
-	dir = 8
+	sensor_tag = "air_sensor"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/engineering/atmos)
@@ -6320,10 +6312,10 @@
 	dir = 4
 	},
 /obj/machinery/power/sensor{
-	name_tag = "Supermatter Production Grid";
 	id_tag = "Supermatter Production Grid";
-	tag = "Supermatter Production Grid";
-	name = "Supermatter Production Grid"
+	name = "Supermatter Production Grid";
+	name_tag = "Supermatter Production Grid";
+	tag = "Supermatter Production Grid"
 	},
 /obj/structure/cable{
 	d2 = 4;
@@ -30637,7 +30629,7 @@ rS
 Ut
 RG
 CK
-fr
+kQ
 kQ
 Iv
 uJ
@@ -32031,9 +32023,9 @@ vS
 vS
 vS
 Sw
-lJ
+Fx
 tE
-lJ
+Fx
 qy
 vS
 vS
