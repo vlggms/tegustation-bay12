@@ -1,3 +1,6 @@
+generate_system_name()
+	return "[pick("Libitina", "Grenze", "Terminus", "Ruhm", "Fomalhaut")] [rand(1, 99)]"
+
 /datum/map/intrepid/setup_map()
 	..()
 	system_name = generate_system_name()
