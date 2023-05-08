@@ -9,7 +9,7 @@
 
 // creates a new object and deletes itself
 /obj/random/Initialize()
-	..()
+	. = ..()
 	call(src, spawn_method)()
 	return INITIALIZE_HINT_QDEL
 
@@ -23,7 +23,7 @@
 
 	var/build_path = pickweight(spawn_choices())
 
-	if(!isatom(build_path))
+	if(isnull(build_path))
 		return
 
 	var/atom/A = new build_path(src.loc)
