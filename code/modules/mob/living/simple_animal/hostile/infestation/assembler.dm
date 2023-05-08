@@ -38,7 +38,6 @@
 		/mob/living/simple_animal/hostile/infestation/spitter = 8,
 		/mob/living/simple_animal/hostile/infestation/eviscerator = 12,
 		/mob/living/simple_animal/hostile/infestation/assembler = 16,
-		/mob/living/simple_animal/hostile/infestation/rhino = 20,
 		)
 	/// Not actually the limit, but the point where it will forcefully spawn larva without waiting for time
 	var/nutrient_max = 25
@@ -114,6 +113,7 @@
 	visible_message(SPAN_WARNING("[src] consumes \the [O]."))
 	qdel(O)
 	nutrient_stored += 1
+	larva_time = world.time + 5 SECONDS
 
 /mob/living/simple_animal/hostile/infestation/assembler/proc/ConsumeDead(mob/living/L)
 	if(ishuman(L))

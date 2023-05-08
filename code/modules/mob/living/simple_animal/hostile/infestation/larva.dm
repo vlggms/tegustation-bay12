@@ -32,8 +32,7 @@
 		/mob/living/simple_animal/hostile/infestation/broodling = 30 SECONDS,
 		/mob/living/simple_animal/hostile/infestation/spitter = 45 SECONDS,
 		/mob/living/simple_animal/hostile/infestation/eviscerator = 60 SECONDS,
-		/mob/living/simple_animal/hostile/infestation/assembler = 90 SECONDS,
-		/mob/living/simple_animal/hostile/infestation/rhino = 120 SECONDS,
+		/mob/living/simple_animal/hostile/infestation/assembler = 75 SECONDS,
 		)
 	ignore_combat = TRUE
 
@@ -92,6 +91,10 @@
 	can_flee = FALSE
 
 /datum/ai_holder/simple_animal/infestation/larva/implanter/list_targets()
+	var/mob/living/simple_animal/hostile/infestation/larva/implanter/L = holder
+	if(L.transformation_time != null) // Already implanted once
+		return
+
 	var/list/humans = list()
 	for(var/mob/living/carbon/human/H in view(vision_range, holder))
 		humans += H
@@ -103,12 +106,6 @@
 	transformation_time = null // We only evolve after implanting ourselves
 
 /mob/living/simple_animal/hostile/infestation/larva/implanter/attack_target(atom/A)
-	if(!ishuman(A))
-		return
-
-	if(transformation_time != null) // Already implanted once
-		return
-
 	var/mob/living/carbon/human/H = A
 	var/list/valid_organs = list()
 	for(var/obj/item/organ/external/O in H.organs)
@@ -129,3 +126,7 @@
 	target_organ.implants += src
 	transformation_time = world.time + rand(120 SECONDS, 240 SECONDS)
 	ai_holder.speak_chance = 0
+
+/mob/living/simple_animal/hostile/infestation/larva/implanter/BecomeEgg()
+	. = ..()
+	transformation_time = world.time + rand(5 SECONDS, 10 SECONDS)
