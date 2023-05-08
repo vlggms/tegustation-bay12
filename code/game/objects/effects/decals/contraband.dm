@@ -147,7 +147,7 @@
 
 /obj/structure/sign/poster/proc/set_poster(poster_type)
 	var/decl/poster/design = decls_repository.get_decl(poster_type)
-	SetName("[initial(name)] - [design.name]")
+	SetName("[normal_name] - [design.name]")
 	desc = "[initial(desc)] [design.desc]"
 	icon_state = design.icon_state
 
