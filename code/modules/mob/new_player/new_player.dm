@@ -152,9 +152,9 @@
 		if(GAME_STATE != RUNLEVEL_GAME)
 			to_chat(usr, SPAN_WARNING("The round has either not started yet or already ended."))
 			return
-		if (!client.holder)
+		if(!check_rights(R_ADMIN|R_MOD, FALSE))
 			var/dsdiff = config.respawn_menu_delay MINUTES - (world.time - respawned_time)
-			if (dsdiff > 0)
+			if(dsdiff > 0)
 				to_chat(usr, SPAN_WARNING("You must wait [time2text(dsdiff, "mm:ss")] before rejoining."))
 				return
 		LateChoices() //show the latejoin job selection menu

@@ -162,7 +162,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		announce_ghost_joinleave(ghostize(1))
 	else
 		var/response
-		if(src.client && src.client.holder)
+		if(src.client && check_rights(R_ADMIN|R_MOD, FALSE, src))
 			response = alert(src, "You have the ability to Admin-Ghost. The regular Ghost verb will announce your presence to dead chat. Both variants will allow you to return to your body using 'aghost'.\n\nWhat do you wish to do?", "Are you sure you want to ghost?", "Ghost", "Admin Ghost", "Stay in body")
 			if(response == "Admin Ghost")
 				if(!src.client)
@@ -533,7 +533,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		return 0
 
 	var/timedifference = world.time - timeofdeath
-	if(!client.holder && respawn_time && timeofdeath && timedifference < respawn_time MINUTES)
+	if(!check_rights(R_INVESTIGATE, FALSE, client) && respawn_time && timeofdeath && timedifference < respawn_time MINUTES)
 		var/timedifference_text = time2text(respawn_time MINUTES - timedifference,"mm:ss")
 		to_chat(src, "<span class='warning'>You must have been dead for [respawn_time] minute\s to respawn. You have [timedifference_text] left.</span>")
 		return 0
