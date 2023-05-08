@@ -1233,7 +1233,7 @@ obj/item/organ/external/proc/remove_clamps()
 			// let actual implants still inside know they're no longer implanted
 			if(istype(I, /obj/item/implant))
 				var/obj/item/implant/imp_device = I
-				imp_device.removed()
+				imp_device.ImplantRemoval()
 		else
 			implants.Remove(implant)
 			implant.forceMove(get_turf(src))
