@@ -930,7 +930,7 @@
 /mob/proc/embedded_needs_process()
 	return (embedded.len > 0)
 
-/mob/proc/remove_implant(var/obj/item/implant, var/surgical_removal = FALSE)
+/mob/proc/remove_implant(var/atom/movable/implant, var/surgical_removal = FALSE)
 	if(!LAZYLEN(get_visible_implants(0))) //Yanking out last object - removing verb.
 		verbs -= /mob/proc/yank_out_object
 	for(var/obj/item/O in pinned)
@@ -938,12 +938,16 @@
 			pinned -= O
 		if(!pinned.len)
 			anchored = FALSE
-	implant.dropInto(loc)
-	implant.add_blood(src)
-	implant.update_icon()
-	if(istype(implant,/obj/item/implant))
-		var/obj/item/implant/imp = implant
-		imp.removed()
+	if(isitem(implant))
+		var/obj/item/I = implant
+		I.dropInto(loc)
+		I.add_blood(src)
+		I.update_icon()
+		if(istype(implant, /obj/item/implant))
+			var/obj/item/implant/imp = implant
+			imp.removed()
+	else
+		implant.forceMove(loc) // Just move under the mob
 	. = TRUE
 
 /mob/living/silicon/robot/remove_implant(var/obj/item/implant, var/surgical_removal = FALSE)
