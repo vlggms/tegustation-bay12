@@ -1,0 +1,5 @@
+author: Tsurupeta & MACIEKBAKI
+delete-after: true
+changes:
+  - admin: Fixed mentor perms
+  - admin: Mentors no longer reply to themselves when replying to a mentorhelp.
