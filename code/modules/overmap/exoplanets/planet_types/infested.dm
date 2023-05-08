@@ -19,7 +19,7 @@
 		/mob/living/simple_animal/hostile/infestation/spitter = 3,
 		/mob/living/simple_animal/hostile/infestation/assembler = 3,
 		/mob/living/simple_animal/hostile/infestation/rhino = 2,
-		/mob/living/simple_animal/hostile/infestation/larva/implanter = 1,
+		/mob/living/simple_animal/hostile/infestation/larva/implant/implanter = 1,
 		)
 
 /obj/effect/overmap/visitable/sector/exoplanet/infested/generate_map()
