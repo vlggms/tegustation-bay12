@@ -198,7 +198,7 @@
 
 // Helper procs for building detailed log lines
 /datum/proc/get_log_info_line()
-	return "[src] ([type]) ([any2ref(src)])"
+	return "[src] ([type]) ([REF(src)])"
 
 /area/get_log_info_line()
 	return "[..()] ([isnum(z) ? "[x],[y],[z]" : "0,0,0"])"

@@ -1327,6 +1327,21 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 	chosen = matches[chosen]
 	return chosen
 
+/**
+\ref behaviour got changed in 512 so this is necesary to replicate old behaviour.
+If it ever becomes necesary to get a more performant REF(), this lies here in wait:
+```
+#define REF(thing) (thing && istype(thing, /datum) && (thing:datum_flags & DF_USE_TAG) && thing:tag ? "[thing:tag]" : "\ref[thing]")
+```
+*/
+/proc/REF(datum/input)
+	if(istype(input) && (input.datum_flags & DF_USE_TAG))
+		if(input.tag)
+			return "\[[url_encode(input.tag)]\]"
+		crash_with("A ref was requested of an object with DF_USE_TAG set but no tag: [input]")
+		input.datum_flags &= ~DF_USE_TAG
+	return "\ref[input]"
+
 // Misc. ported from TG
 
 #define UNTIL(X) while(!(X)) stoplag()
