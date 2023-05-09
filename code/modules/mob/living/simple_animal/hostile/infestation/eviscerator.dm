@@ -6,7 +6,6 @@
 	icon_living = "eviscerator"
 	icon_dead = "eviscerator_dead"
 	mob_size = MOB_MEDIUM
-	move_to_delay = 3.5
 	default_pixel_x = -8
 	pixel_x = -8
 
@@ -15,9 +14,8 @@
 	health = 300
 	maxHealth = 300
 
-	move_to_delay = 3.5
+	movement_cooldown = 3.5
 	movement_sound = 'sound/simple_mob/abominable_infestation/eviscerator/step.ogg'
-	movement_shake_radius = 2
 
 	meat_type = /obj/item/reagent_containers/food/snacks/abominationmeat
 	meat_amount = 6
@@ -33,14 +31,20 @@
 		'sound/simple_mob/abominable_infestation/eviscerator/death_2.ogg',
 		)
 
+	transformation_types = list(
+		/mob/living/simple_animal/hostile/infestation/rhino = 150 SECONDS,
+		)
+
+/obj/item/natural_weapon/claws/strong/eviscerator
+	armor_penetration = 10
+	hitsound = 'sound/simple_mob/abominable_infestation/eviscerator/attack.ogg'
+
 /datum/ai_holder/simple_animal/infestation/eviscerator
-	hostile = TRUE
-	retaliate = TRUE
 	returns_home = FALSE
 	home_low_priority = TRUE
 	speak_chance = 1
 	wander = TRUE
-	base_wander_delay = 20
+	base_wander_delay = 5
 	var/list/aggro_sounds = list(
 		'sound/simple_mob/abominable_infestation/eviscerator/aggro_1.ogg',
 		'sound/simple_mob/abominable_infestation/eviscerator/aggro_2.ogg',
@@ -51,3 +55,7 @@
 	. = ..()
 	if(. && prob(30))
 		playsound(holder, pick(aggro_sounds), rand(35,75), TRUE)
+
+/mob/living/simple_animal/hostile/infestation/eviscerator/Initialize()
+	. = ..()
+	transformation_time = world.time + rand(120 SECONDS, 240 SECONDS)

@@ -11,12 +11,15 @@
 	rock_colors = list(COLOR_ASTEROID_ROCK, COLOR_GRAY80, COLOR_BROWN)
 	plant_colors = list("#f5426f","#c72a51","#cc1d48","#99156f","#8c268b", "RANDOM")
 	map_generators = list(/datum/random_map/noise/exoplanet/infested, /datum/random_map/noise/ore/rich)
-	habitability_distribution = list(HABITABILITY_IDEAL = 5, HABITABILITY_OKAY = 75, HABITABILITY_BAD = 20)
+	habitability_distribution = list(HABITABILITY_IDEAL = 10, HABITABILITY_OKAY = 80, HABITABILITY_BAD = 10)
 	flora_diversity = 15
 	fauna_types = list(
-		/mob/living/simple_animal/hostile/infestation/broodling,
-		/mob/living/simple_animal/hostile/infestation/eviscerator,
-		/mob/living/simple_animal/hostile/infestation/assembler,
+		/mob/living/simple_animal/hostile/infestation/broodling = 7,
+		/mob/living/simple_animal/hostile/infestation/eviscerator = 5,
+		/mob/living/simple_animal/hostile/infestation/spitter = 3,
+		/mob/living/simple_animal/hostile/infestation/assembler = 3,
+		/mob/living/simple_animal/hostile/infestation/rhino = 2,
+		/mob/living/simple_animal/hostile/infestation/larva/implant/implanter = 1,
 		)
 
 /obj/effect/overmap/visitable/sector/exoplanet/infested/generate_map()
@@ -34,7 +37,11 @@
 	return "#9c3d51"
 
 /obj/effect/overmap/visitable/sector/exoplanet/infested/adapt_animal(mob/living/simple_animal/A, setname = TRUE)
-	return
+	if(!istype(A, /mob/living/simple_animal/hostile/infestation))
+		return ..()
+	// Planet-spawned abominations do not evolve normally
+	var/mob/living/simple_animal/hostile/infestation/abom = A
+	abom.transformation_time = null
 
 /obj/effect/overmap/visitable/sector/exoplanet/infested/adapt_seed(datum/seed/S)
 	..()
@@ -74,5 +81,5 @@
 	smoothing_iterations = 2
 	land_type = /turf/simulated/floor/exoplanet/flesh
 
-	flora_prob = 5
-	fauna_prob = 15
+	flora_prob = 10
+	fauna_prob = 20

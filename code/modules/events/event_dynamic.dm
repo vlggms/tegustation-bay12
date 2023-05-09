@@ -97,6 +97,7 @@ var/list/event_last_fired = list()
 	active_with_role["Medical"] = 0
 	active_with_role["Security"] = 0
 	active_with_role["Scientist"] = 0
+	active_with_role["Exploration"] = 0
 	active_with_role["AI"] = 0
 	active_with_role["Robot"] = 0
 	active_with_role["Janitor"] = 0
@@ -131,6 +132,9 @@ var/list/event_last_fired = list()
 
 		if(M.mind.assigned_role in SSjobs.titles_by_department(SCI))
 			active_with_role["Scientist"]++
+
+		if(M.mind.assigned_role in SSjobs.titles_by_department(EXP))
+			active_with_role["Exploration"]++
 
 		if(M.mind.assigned_role == "AI")
 			active_with_role["AI"]++

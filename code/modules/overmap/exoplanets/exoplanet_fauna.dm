@@ -76,7 +76,7 @@
 
 /obj/effect/landmark/exoplanet_spawn/proc/do_spawn(obj/effect/overmap/visitable/sector/exoplanet/planet)
 	if (LAZYLEN(planet.fauna_types))
-		var/beastie = pick(planet.fauna_types)
+		var/beastie = pickweight(planet.fauna_types)
 		var/mob/M = new beastie(get_turf(src))
 		planet.adapt_animal(M)
 		planet.track_animal(M)

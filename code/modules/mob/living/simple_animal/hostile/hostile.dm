@@ -7,7 +7,6 @@
 	var/rapid = 0
 	var/sa_accuracy = 85 //base chance to hit out of 100
 	var/fire_desc = "fires" //"X fire_desc at Y!"
-	var/move_to_delay = 4 //delay for the automated movement.
 	var/break_stuff_probability = 10
 	var/destroy_surroundings = 1
 	a_intent = I_HURT

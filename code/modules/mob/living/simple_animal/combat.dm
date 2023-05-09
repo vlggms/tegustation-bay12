@@ -63,6 +63,10 @@
 //The actual top-level ranged attack proc
 /mob/living/simple_animal/proc/shoot_target(atom/A)
 	set waitfor = FALSE
+
+	if(!projectiletype)
+		return
+
 	setClickCooldown(GetRangedCooldown())
 
 	if(needs_reload)
@@ -121,10 +125,14 @@
 		casing.expend()
 		casing.pixel_x = rand(-10, 10)
 		casing.pixel_y = rand(-10, 10)
+		if(casing_disappears)
+			casing.mouse_opacity = 0 // So people don't pick it up
+			animate(casing, alpha = 0, time = casing_disappears)
+			QDEL_IN(casing, casing_disappears)
 
-	// If the projectile has its own sound, use it.
-	// Otherwise default to the mob's firing sound.
-	playsound(src, P.fire_sound ? P.fire_sound : projectilesound, 80, 1)
+	// If mob has set projectilesound - use it
+	// Otherwise use the one projectile has set to it
+	playsound(src, projectilesound ? projectilesound : P.fire_sound, 80, 1)
 
 	// For some reason there isn't an argument for accuracy, so access the projectile directly instead.
 	// Also, placing dispersion here instead of in forced_spread will randomize the chosen angle between dispersion and -dispersion in fire() instead of having to do that here.

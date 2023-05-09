@@ -46,7 +46,7 @@
 /mob/living/simple_animal/hostile/commanded/nanomachine/proc/move_to_heal()
 	if(!target_mob)
 		return 0
-	walk_to(src,target_mob,1,move_to_delay)
+	walk_to(src,target_mob,1,movement_cooldown)
 	if(Adjacent(target_mob))
 		stance = COMMANDED_HEALING
 

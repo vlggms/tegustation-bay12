@@ -39,7 +39,6 @@
 	health = 10
 	maxHealth = 10
 	movement_cooldown = 2
-	move_to_delay = 0
 	density = FALSE
 	min_gas = list(GAS_METHYL_BROMIDE = 5)
 	mob_size = MOB_MINISCULE

@@ -5,7 +5,7 @@
 	icon_living = "broodling"
 	icon_dead = "broodling_dead"
 	mob_size = MOB_SMALL
-	move_to_delay = 2
+	movement_cooldown = 2
 
 	natural_weapon = /obj/item/natural_weapon/claws/broodling
 	melee_attack_delay = 0
@@ -24,6 +24,12 @@
 	say_list_type = /datum/say_list/infestation_broodling
 	death_sounds = list('sound/simple_mob/abominable_infestation/broodling/death.ogg')
 
+/obj/item/natural_weapon/claws/broodling
+	force = 7
+	armor_penetration = 10
+	hitsound = 'sound/weapons/slashmiss.ogg'
+	attack_cooldown = 2
+
 /datum/say_list/infestation_broodling
 	emote_hear = list("hisses", "attempts to bark", "breathes heavily", "gurgles")
 	emote_see = list("jumps from place to place")
@@ -38,13 +44,11 @@
 		)
 
 /datum/ai_holder/simple_animal/infestation/broodling
-	hostile = TRUE
-	retaliate = TRUE
 	returns_home = FALSE
 	home_low_priority = TRUE
 	speak_chance = 3
 	wander = TRUE
-	base_wander_delay = 2
+	base_wander_delay = 1
 
 /datum/ai_holder/simple_animal/infestation/broodling/post_melee_attack(atom/A)
 	if(holder.Adjacent(A))

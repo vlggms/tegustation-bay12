@@ -13,7 +13,7 @@
 	layer = LYING_MOB_LAYER
 	speak_emote = list("gurgles")
 	pass_flags = PASS_FLAG_TABLE | PASS_FLAG_GRILLE
-	move_to_delay = 1.5
+	movement_cooldown = 1.5
 
 	health = 20
 	maxHealth = 20
@@ -32,8 +32,9 @@
 		/mob/living/simple_animal/hostile/infestation/broodling = 30 SECONDS,
 		/mob/living/simple_animal/hostile/infestation/spitter = 45 SECONDS,
 		/mob/living/simple_animal/hostile/infestation/eviscerator = 60 SECONDS,
-		/mob/living/simple_animal/hostile/infestation/assembler = 90 SECONDS,
+		/mob/living/simple_animal/hostile/infestation/assembler = 75 SECONDS,
 		)
+	ignore_combat = TRUE
 
 /datum/say_list/infestation_larva
 	emote_hear = list("gurgles", "hisses", "attempts to make a sound")
@@ -63,11 +64,6 @@
 	. = ..()
 	transformation_time = world.time + rand(60 SECONDS, 90 SECONDS)
 
-// Implanted subtype of larva transforms much faster
-/mob/living/simple_animal/hostile/infestation/larva/implant/BecomeEgg()
-	. = ..()
-	transformation_time = world.time + rand(5 SECONDS, 10 SECONDS)
-
 // Neutral faction and slightly different color
 /mob/living/simple_animal/hostile/infestation/larva/friendly
 	faction = "neutral"
@@ -78,8 +74,17 @@
 		/mob/living/simple_animal/hostile/infestation/assembler = 120 SECONDS,
 		)
 
-// Larva that will rush to humans and implant into them
-/mob/living/simple_animal/hostile/infestation/larva/implanter
+// Implanted subtype of larva transforms much faster
+/mob/living/simple_animal/hostile/infestation/larva/implant/BecomeEgg()
+	. = ..()
+	transformation_time = world.time + rand(5 SECONDS, 10 SECONDS)
+
+/mob/living/simple_animal/hostile/infestation/larva/implant/ImplantRemoval()
+	playsound(src, pick(say_list.emote_hear_sounds), 50, TRUE)
+	transformation_time = world.time + rand(10 SECONDS, 15 SECONDS)
+
+// Aggressive larva that will rush to humans and implant into them
+/mob/living/simple_animal/hostile/infestation/larva/implant/implanter
 	icon_state = "larva_implanter"
 	icon_living = "larva_implanter"
 	ai_holder_type = /datum/ai_holder/simple_animal/infestation/larva/implanter
@@ -90,20 +95,21 @@
 	can_flee = FALSE
 
 /datum/ai_holder/simple_animal/infestation/larva/implanter/list_targets()
+	var/mob/living/simple_animal/hostile/infestation/larva/implant/implanter/L = holder
+	if(L.transformation_time != null) // Already implanted once
+		return
+
 	var/list/humans = list()
 	for(var/mob/living/carbon/human/H in view(vision_range, holder))
 		humans += H
 
 	return humans
 
-/mob/living/simple_animal/hostile/infestation/larva/implanter/Initialize()
+/mob/living/simple_animal/hostile/infestation/larva/implant/implanter/Initialize()
 	. = ..()
 	transformation_time = null // We only evolve after implanting ourselves
 
-/mob/living/simple_animal/hostile/infestation/larva/implanter/attack_target(atom/A)
-	if(!ishuman(A))
-		return
-
+/mob/living/simple_animal/hostile/infestation/larva/implant/implanter/attack_target(atom/A)
 	var/mob/living/carbon/human/H = A
 	var/list/valid_organs = list()
 	for(var/obj/item/organ/external/O in H.organs)

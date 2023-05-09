@@ -5,11 +5,13 @@
 	icon_living = "spitter"
 	icon_dead = "spitter_dead"
 	mob_size = MOB_SMALL
-	move_to_delay = 3
+	movement_cooldown = 3
 
 	natural_weapon = /obj/item/natural_weapon/bite/abomination_spitter
 
 	base_attack_cooldown = 1 SECONDS
+	ranged_attack_cooldown = 3 SECONDS
+
 	ranged = TRUE
 	projectiletype = /obj/item/projectile/energy/acid_spit
 	projectilesound = 'sound/weapons/alien_spit.ogg'
@@ -29,6 +31,9 @@
 	say_list_type = /datum/say_list/infestation_spitter
 	death_sounds = list('sound/simple_mob/abominable_infestation/spitter/death.ogg')
 
+/obj/item/natural_weapon/bite/abomination_spitter
+	hitsound = 'sound/simple_mob/abominable_infestation/spitter/attack.ogg'
+
 /datum/say_list/infestation_spitter
 	emote_hear = list("gurgles")
 	emote_see = list("looks around", "wriggles around")
@@ -43,8 +48,6 @@
 		)
 
 /datum/ai_holder/simple_animal/infestation/spitter
-	hostile = TRUE
-	retaliate = TRUE
 	returns_home = FALSE
 	home_low_priority = TRUE
 	speak_chance = 2

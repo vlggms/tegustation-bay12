@@ -42,7 +42,6 @@
 	icon_state = "hive_executioner_move"
 	icon_living = "hive_executioner_move"
 	icon_dead = "hive_executioner_dead"
-	move_to_delay = 5
 	movement_cooldown = 4
 	health = 280
 	maxHealth = 280
@@ -81,6 +80,7 @@
 	flick("hive_executioner_attacking", src)
 
 	return ..()
+
 /obj/item/natural_weapon/defender_blades
 	name = "blades"
 	attack_verb = list("eviscerated")
@@ -95,7 +95,6 @@
 	sleep(rand(transformation_delay_min, transformation_delay_max))
 	anchored = FALSE
 	movement_cooldown = 3
-	move_to_delay = 8
 	. = FALSE
 
 	//Immediately find a target so that we're not useless for 1 Life() tick!

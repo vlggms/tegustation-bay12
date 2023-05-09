@@ -43,6 +43,7 @@
 	reload_time = 2 SECONDS
 	reload_sound = 'sound/weapons/guns/interaction/batrifle_magin.ogg'
 	casingtype = /obj/item/ammo_casing/rifle
+	casing_disappears = 5 SECONDS
 	loot_list = list(
 		/obj/effect/landmark/corpse/riot_officer = 1,
 		/obj/item/gun/projectile/automatic/assault_rifle = 1,

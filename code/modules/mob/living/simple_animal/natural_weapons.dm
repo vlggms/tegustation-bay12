@@ -31,9 +31,6 @@
 	attack_verb = list("nibbled")
 	hitsound = null
 
-/obj/item/natural_weapon/bite/abomination_spitter
-	hitsound = 'sound/simple_mob/abominable_infestation/spitter/attack.ogg'
-
 /obj/item/natural_weapon/bite/medium
 	force = 20
 
@@ -47,16 +44,8 @@
 	sharp = TRUE
 	edge = TRUE
 
-/obj/item/natural_weapon/claws/broodling
-	force = 4
-	hitsound = 'sound/weapons/slashmiss.ogg'
-	attack_cooldown = 2
-
 /obj/item/natural_weapon/claws/strong
 	force = 25
-
-/obj/item/natural_weapon/claws/strong/eviscerator
-	hitsound = 'sound/simple_mob/abominable_infestation/eviscerator/attack.ogg'
 
 /obj/item/natural_weapon/claws/weak
 	force = 5

@@ -6,16 +6,15 @@
 	icon_living = "assembler"
 	icon_dead = "assembler_dead"
 	mob_size = MOB_MEDIUM
-	move_to_delay = 3.5
 	default_pixel_x = -8
 	pixel_x = -8
 
-	natural_weapon = /obj/item/natural_weapon/claws
+	natural_weapon = /obj/item/natural_weapon/assembler
 
 	health = 200
 	maxHealth = 200
 
-	move_to_delay = 5
+	movement_cooldown = 4
 
 	meat_type = /obj/item/reagent_containers/food/snacks/abominationmeat
 	meat_amount = 8
@@ -41,13 +40,20 @@
 		/mob/living/simple_animal/hostile/infestation/assembler = 16,
 		)
 	/// Not actually the limit, but the point where it will forcefully spawn larva without waiting for time
-	var/nutrient_max = 20
-	/// World time by which we will spawn an larva if we have no target
+	var/nutrient_max = 25
+	/// World time by which we will spawn a larva if we have no target
 	var/larva_time
 
+/obj/item/natural_weapon/assembler
+	name = "sharp tentacle"
+	attack_verb = list("stabbed", "pierced")
+	force = 20
+	armor_penetration = 10
+	hitsound = 'sound/weapons/rapidslice.ogg'
+	sharp = TRUE
+	edge = TRUE
+
 /datum/ai_holder/simple_animal/infestation/assembler
-	hostile = TRUE
-	retaliate = TRUE
 	cooperative = FALSE
 	mauling = TRUE
 	handle_corpse = TRUE
@@ -87,6 +93,9 @@
 		return
 
 /mob/living/simple_animal/hostile/infestation/assembler/attack_target(atom/A)
+	return UnarmedAttack(A)
+
+/mob/living/simple_animal/hostile/infestation/assembler/UnarmedAttack(atom/A)
 	if(istype(A, /obj/item/organ))
 		ConsumeOrgan(A)
 		ai_holder.target = null
@@ -104,6 +113,7 @@
 	visible_message(SPAN_WARNING("[src] consumes \the [O]."))
 	qdel(O)
 	nutrient_stored += 1
+	larva_time = world.time + 5 SECONDS
 
 /mob/living/simple_animal/hostile/infestation/assembler/proc/ConsumeDead(mob/living/L)
 	if(ishuman(L))
@@ -190,5 +200,5 @@
 	L.color = color
 	L.faction = faction
 	playsound(L, 'sound/simple_mob/abominable_infestation/larva/spawn.ogg', rand(35, 50), TRUE)
-	visible_message(SPAN_WARNING("[src] assembles new [L]!"))
+	visible_message(SPAN_WARNING("[src] assembles a new [L.name]!"))
 	nutrient_stored -= larva_types[target_type]

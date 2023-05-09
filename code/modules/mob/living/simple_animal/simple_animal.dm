@@ -53,7 +53,10 @@
 	var/projectilesound				// The sound I make when I do it
 	var/projectile_accuracy = 0		// Accuracy modifier to add onto the bullet when its fired.
 	var/projectile_dispersion = 0	// How many degrees to vary when I do it.
+	/// Type of a casing to spawn alongside with projectile.
 	var/casingtype
+	/// If not 0, casing will self-delete after set amount of time in this variable
+	var/casing_disappears = 0
 
 	// Reloading settings, part of ranged code
 	var/needs_reload = FALSE							// If TRUE, mob needs to reload occasionally
@@ -194,13 +197,25 @@
 	if(!.)
 		return
 	drop_loot()
+	if(QDELETED(src)) // Gibbed/dusted/otherwise gone
+		return
 	icon_state = icon_dead
 	update_icon()
 	density = FALSE
 	adjustBruteLoss(maxHealth) //Make sure dey dead.
-	walk_to(src,0)
+	walk_to(src, 0)
 	if(LAZYLEN(death_sounds))
 		playsound(src, pick(death_sounds), 50, TRUE)
+
+// Reset icon on revival
+/mob/living/simple_animal/rejuvenate()
+	var/was_dead = stat == DEAD
+	. = ..()
+	if(was_dead && stat != DEAD)
+		icon_state = icon_living
+		switch_from_dead_to_living_mob_list()
+		set_stat(CONSCIOUS)
+		set_density(1)
 
 /mob/living/simple_animal/proc/drop_loot()
 	if(!loot_list.len)
@@ -336,7 +351,10 @@
 		if(turn_sound && dir != old_dir)
 			playsound(src, turn_sound, 50, 1)
 		else if(movement_sound && old_turf != get_turf(src)) // Playing both sounds at the same time generally sounds bad.
-			playsound(src, movement_sound, 50, 1)
+			PlayMovementSound()
+
+/mob/living/simple_animal/proc/PlayMovementSound()
+	playsound(src, movement_sound, 50, 1)
 
 /mob/living/simple_animal/movement_delay()
 	. = movement_cooldown
@@ -350,8 +368,6 @@
 		if(. <= 0)
 			. = 1
 		. *= purge
-
-	 . += ..()
 
 /mob/living/simple_animal/get_inventory_slot(obj/item/I)
 	return -1
