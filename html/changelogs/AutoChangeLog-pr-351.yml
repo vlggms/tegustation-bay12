@@ -1,0 +1,12 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: Modified sprites of abominable infestation mobs. Provided by InsightfulParasite.
+  - tweak: Rhino caste of abominations was added. It is essentially a tank that may
+      charge at you if angered enough.
+  - tweak: Abominable infestation is now also in moderate events, albeit with less
+      larvas spawned.
+  - tweak: Certain events will consider exploration jobs when deciding the chance
+      to roll them.
+  - admin: Creating command report now allows you to choose a sound, if you want a
+      custom one.
