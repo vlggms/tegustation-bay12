@@ -604,11 +604,12 @@
 /turf/simulated/floor/ascent/tiled,
 /area/ship/ascent_caulship)
 "bD" = (
-/obj/effect/submap_landmark/spawnpoint/ascent_caulship,
 /obj/machinery/sleeper/ascent{
 	dir = 1;
 	icon_state = "sleeper_0"
 	},
+/obj/effect/submap_landmark/spawnpoint/ascent_caulship,
+/obj/effect/submap_landmark/spawnpoint/ascent_caulship/monarch_queen,
 /turf/simulated/floor/ascent/tiled,
 /area/ship/ascent_caulship)
 "bE" = (
@@ -1072,14 +1073,22 @@
 	dir = 8
 	},
 /obj/structure/table/rack/dark,
-/obj/item/gun/energy/particle/small,
-/obj/item/gun/energy/particle/small,
 /obj/machinery/atmospherics/pipe/simple/visible/supply{
 	dir = 2;
 	icon_state = "intact-supply"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
 /obj/item/tank/jetpack/ascent,
+/obj/item/tank/jetpack/ascent,
+/obj/item/tank/jetpack/ascent,
+/obj/item/tank/jetpack/ascent,
+/obj/item/tank/jetpack/ascent,
+/obj/item/tank/jetpack/ascent,
+/obj/item/tank/jetpack/ascent,
+/obj/item/gun/energy/particle/small,
+/obj/item/gun/energy/particle/small,
+/obj/item/gun/energy/particle/small,
+/obj/item/gun/energy/particle,
 /turf/simulated/floor/ascent,
 /area/ship/ascent_caulship)
 "cC" = (
@@ -1205,8 +1214,6 @@
 	icon_state = "1-4"
 	},
 /obj/structure/table/rack/dark,
-/obj/item/rig/mantid/gyne/seed,
-/obj/item/rig/mantid/seed,
 /obj/machinery/atmospherics/pipe/simple/visible/supply{
 	dir = 5;
 	icon_state = "intact-supply"
@@ -1215,6 +1222,12 @@
 	dir = 5;
 	icon_state = "intact-scrubbers"
 	},
+/obj/item/rig/mantid/gyne/seed,
+/obj/item/rig/mantid/seed,
+/obj/item/rig/mantid/nabber/queen/seed,
+/obj/item/rig/mantid/nabber/seed,
+/obj/item/rig/mantid/nabber/seed,
+/obj/item/rig/mantid/nabber,
 /turf/simulated/floor/ascent,
 /area/ship/ascent_caulship)
 "cO" = (
@@ -1476,6 +1489,14 @@
 "Xe" = (
 /obj/effect/catwalk_plated/ascent,
 /turf/simulated/floor/ascent,
+/area/ship/ascent_caulship)
+"XZ" = (
+/obj/machinery/sleeper/ascent{
+	dir = 1;
+	icon_state = "sleeper_0"
+	},
+/obj/effect/submap_landmark/spawnpoint/ascent_caulship/monarch_worker,
+/turf/simulated/floor/ascent/tiled,
 /area/ship/ascent_caulship)
 
 (1,1,1) = {"
@@ -20165,7 +20186,7 @@ bK
 bP
 cW
 aF
-bE
+XZ
 ai
 bS
 aa
