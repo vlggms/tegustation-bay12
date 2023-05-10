@@ -59,7 +59,6 @@
 	// The abilities operate on timers, so we must fire them once at the start
 	addtimer(CALLBACK(src, .proc/HealMobs), healing_mobs_cooldown)
 	addtimer(CALLBACK(src, .proc/ConvertTurfs), convert_turfs_cooldown)
-	ConvertTurfs()
 	if(!looping_sound)
 		return
 	sound_id = "[type]_[sequential_id(type)]"
