@@ -3,29 +3,26 @@
 	desc = "A lumpy, gooey egg with a thin crystalline exterior."
 	icon = 'icons/obj/ascent.dmi'
 	icon_state = "egg_single"
-	var/moved = FALSE
 
 /obj/item/kharmaan_egg/Initialize()
 	. = ..()
 	if(prob(25))
-		new /mob/living/simple_animal/hostile/retaliate/alate_nymph(get_turf(src))
-		name = "crystalline eggshell"
-		icon_state = "egg_broken"
-		desc += " This one is broken and empty."
-	else if(!moved)
-		icon_state = pick("egg0", "egg1", "egg2")
+		HatchEgg()
 	else
-		icon_state = "egg_single"
+		icon_state = pick("egg0", "egg1", "egg2")
 
 /obj/item/kharmaan_egg/Move()
 	. = ..()
-	if(. && !moved)
-		moved = TRUE
-		update_icon()
-
-/obj/item/kharmaan_egg/on_update_icon()
-	if(icon_state != "egg_broken" && icon_state != "egg_single" && moved)
+	if(. && icon_state != "egg_single")
 		icon_state = "egg_single"
+
+/obj/item/kharmaan_egg/proc/HatchEgg()
+	if(icon_state == "egg_broken")
+		return
+	new /mob/living/simple_animal/hostile/retaliate/alate_nymph(get_turf(src))
+	name = "crystalline eggshell"
+	desc += " This one is broken and empty."
+	icon_state = "egg_broken"
 
 /mob/living/simple_animal/hostile/retaliate/alate_nymph
 	name = "alate nymph"
@@ -46,8 +43,10 @@
 	pass_flags = PASS_FLAG_TABLE
 	natural_weapon = /obj/item/natural_weapon/bite
 	faction = "kharmaani"
-	var/global/list/friendly_species = list(SPECIES_MANTID_ALATE, SPECIES_MANTID_GYNE, SPECIES_MONARCH_QUEEN, SPECIES_MONARCH_WORKER)
 	ai_holder_type = /datum/ai_holder/simple_animal/retaliate/alate_nymph
+	var/global/list/friendly_species = list(SPECIES_MANTID_ALATE, SPECIES_MANTID_GYNE, SPECIES_MONARCH_QUEEN, SPECIES_MONARCH_WORKER)
+	/// If TRUE - any ghost can click on it to play as it
+	var/possessable = FALSE
 
 /datum/ai_holder/simple_animal/retaliate/alate_nymph/list_targets()
 	. = list()
@@ -61,8 +60,32 @@
 				continue
 		. += M
 
-/mob/living/simple_animal/hostile/retaliate/alate_nymph/get_scooped(var/mob/living/carbon/grabber)
+/mob/living/simple_animal/hostile/retaliate/alate_nymph/Initialize()
+	. = ..()
+	add_language(LANGUAGE_MANTID_NONVOCAL)
+	add_language(LANGUAGE_MANTID_VOCAL)
+
+/mob/living/simple_animal/hostile/retaliate/alate_nymph/get_scooped(mob/living/carbon/grabber)
 	if(!(grabber.species.get_bodytype() in friendly_species))
 		to_chat(grabber, SPAN_WARNING("\The [src] wriggles out of your hands before you can pick it up!"))
 		return
-	else return ..()
+	else
+		return ..()
+
+/mob/living/simple_animal/hostile/retaliate/alate_nymph/attack_ghost(mob/observer/ghost/user)
+	. = ..()
+	if(ckey || !possessable)
+		return
+	if(alert(user, "Do you wish to play as [src]?",, "Yes", "No") != "Yes")
+		return
+	if(ckey) // Someone was faster
+		to_chat(user, SPAN_WARNING("Someone is already in control of [src]!"))
+		return
+	if(!possessable) // Admin changed their mind, maybe?
+		to_chat(user, SPAN_WARNING("Admins forbid anyone to play as [src] while you were thinking!"))
+		return
+	PossessByGhost(user)
+
+/mob/living/simple_animal/hostile/retaliate/alate_nymph/proc/PossessByGhost(mob/observer/ghost/user)
+	ckey = user.ckey
+	qdel(user)
