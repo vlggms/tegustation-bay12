@@ -47,7 +47,7 @@
 /obj/item/natural_weapon/assembler
 	name = "sharp tentacle"
 	attack_verb = list("stabbed", "pierced")
-	force = 20
+	force = 15
 	armor_penetration = 10
 	hitsound = 'sound/weapons/rapidslice.ogg'
 	sharp = TRUE

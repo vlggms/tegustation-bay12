@@ -36,6 +36,7 @@
 		)
 
 /obj/item/natural_weapon/claws/strong/eviscerator
+	force = 20
 	armor_penetration = 10
 	hitsound = 'sound/simple_mob/abominable_infestation/eviscerator/attack.ogg'
 

@@ -11,13 +11,12 @@
 
 	natural_weapon = /obj/item/natural_weapon/hooves/rhino
 
-	health = 1000
-	maxHealth = 1000
-	resistance = 15
+	health = 850
+	maxHealth = 850
+	resistance = 12
 
 	movement_cooldown = 5
 	movement_sound = 'sound/simple_mob/abominable_infestation/rhino/step.ogg'
-	movement_shake_radius = 3
 
 	meat_type = /obj/item/reagent_containers/food/snacks/abominationmeat
 	meat_amount = 6
@@ -37,7 +36,7 @@
 	var/enraged_movement_sound = 'sound/simple_mob/abominable_infestation/rhino/step_angry.ogg'
 
 /obj/item/natural_weapon/hooves/rhino
-	force = 50
+	force = 40
 	armor_penetration = 10
 	hitsound = 'sound/weapons/heavysmash.ogg'
 
