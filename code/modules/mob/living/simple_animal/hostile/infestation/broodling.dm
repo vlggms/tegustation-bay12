@@ -10,8 +10,8 @@
 	natural_weapon = /obj/item/natural_weapon/claws/broodling
 	melee_attack_delay = 0
 
-	health = 100
-	maxHealth = 100
+	health = 70
+	maxHealth = 70
 
 	meat_type = /obj/item/reagent_containers/food/snacks/abominationmeat
 	meat_amount = 2
@@ -25,7 +25,7 @@
 	death_sounds = list('sound/simple_mob/abominable_infestation/broodling/death.ogg')
 
 /obj/item/natural_weapon/claws/broodling
-	force = 7
+	force = 6
 	armor_penetration = 10
 	hitsound = 'sound/weapons/slashmiss.ogg'
 	attack_cooldown = 2

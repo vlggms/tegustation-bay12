@@ -17,8 +17,8 @@
 	projectilesound = 'sound/weapons/alien_spit.ogg'
 	fire_desc = "spits acid"
 
-	health = 150
-	maxHealth = 150
+	health = 100
+	maxHealth = 100
 
 	meat_type = /obj/item/reagent_containers/food/snacks/abominationmeat
 	meat_amount = 4
@@ -32,6 +32,7 @@
 	death_sounds = list('sound/simple_mob/abominable_infestation/spitter/death.ogg')
 
 /obj/item/natural_weapon/bite/abomination_spitter
+	force = 6
 	hitsound = 'sound/simple_mob/abominable_infestation/spitter/attack.ogg'
 
 /datum/say_list/infestation_spitter

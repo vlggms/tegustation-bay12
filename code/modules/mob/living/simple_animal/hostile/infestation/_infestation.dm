@@ -72,7 +72,7 @@
 	ai_holder = null
 	say_list = null
 	death_sounds = list()
-	maxHealth = max(200, maxHealth * 2)
+	maxHealth = clamp(maxHealth * 2, 100, 2000)
 	health = maxHealth
 	if(isnull(transformation_target_type) && LAZYLEN(transformation_types))
 		transformation_target_type = pick(transformation_types)
