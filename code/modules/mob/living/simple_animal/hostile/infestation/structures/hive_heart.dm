@@ -81,13 +81,13 @@
 		for(var/i = 1 to 10)
 			if(QDELETED(src))
 				return
-			AbilityEffect()
+			AbilityEffect(50 + i*10)
 			if(prob(i * 4))
 				new /obj/effect/gibspawner/human(get_turf(src))
 			sleep(20 - i * 2)
 		for(var/ii = 1 to 5)
 			new /obj/effect/gibspawner/human(get_turf(src))
-		playsound(src, 'sound/simple_mob/abominable_infestation/heart_death.ogg', 75, TRUE, 24, 3)
+		playsound(src, 'sound/simple_mob/abominable_infestation/heart_death.ogg', 125, TRUE, 24, 3)
 		visible_message(SPAN_DANGER("\The [src] explodes in a shower of gore!"))
 		QDEL_NULL(src) // "But why QDEL_NULL? Bwuhuhu" because some moron might delete it in the middle of sick animation
 
@@ -151,7 +151,7 @@
 		var/turf/simulated/floor/F = pick(valid_turfs)
 		F.set_flooring(decls_repository.get_decl(/decl/flooring/flesh/infested))
 
-/obj/effect/hive_heart/proc/AbilityEffect()
-	playsound(src, 'sound/effects/heartbeat_low.ogg', 75, TRUE, 24)
+/obj/effect/hive_heart/proc/AbilityEffect(sound_volume = 75)
+	playsound(src, 'sound/effects/heartbeat_low.ogg', sound_volume, TRUE, 24)
 	var/obj/effect/temp_visual/decoy/D = new(get_turf(src), 0, src, 10)
 	animate(D, transform = matrix()*1.5, alpha = 0, time = 10, easing = SINE_EASING)
