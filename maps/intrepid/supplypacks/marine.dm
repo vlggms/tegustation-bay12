@@ -1,12 +1,53 @@
 /decl/hierarchy/supply_pack/marine
 	name = "Marine Corps"
 
-/decl/hierarchy/supply_pack/marine/bullpupammo
-	name = "Ammunition - military rifle"
-	contains = list(/obj/item/ammo_magazine/mil_rifle = 4)
-	cost = 60
+// Weapons and ammo
+/decl/hierarchy/supply_pack/marine/assault_rifle
+	name = "Weapons - Assault rifle"
+	contains = list(/obj/item/gun/projectile/automatic/assault_rifle = 1)
+	cost = 200
 	containertype = /obj/structure/closet/crate/secure/weapon
-	containername = "military rifle ammunition crate"
+	containername = "assault rifle crate"
+	access = access_marine
+
+/decl/hierarchy/supply_pack/marine/assault_ammo
+	name = "Ammunition - Assault rifle"
+	contains = list(/obj/item/ammo_magazine/rifle = 4)
+	cost = 80
+	containertype = /obj/structure/closet/crate/secure/weapon
+	containername = "assault rifle ammunition crate"
+	access = access_marine
+
+/decl/hierarchy/supply_pack/marine/bullpup_rifle
+	name = "Weapons - Bullpup assault rifle"
+	contains = list(/obj/item/gun/projectile/automatic/bullpup_rifle = 1)
+	cost = 100
+	containertype = /obj/structure/closet/crate/secure/weapon
+	containername = "bullpup assault rifle crate"
+	access = access_marine
+
+/decl/hierarchy/supply_pack/marine/bullpup_ammo
+	name = "Ammunition - Bullpup assault rifle"
+	contains = list(/obj/item/ammo_magazine/mil_rifle = 4)
+	cost = 40
+	containertype = /obj/structure/closet/crate/secure/weapon
+	containername = "bullpup assault rifle ammunition crate"
+	access = access_marine
+
+/decl/hierarchy/supply_pack/marine/pistol
+	name = "Weapons - Military pistol"
+	contains = list(/obj/item/gun/projectile/pistol/military/alt = 1)
+	cost = 80
+	containertype = /obj/structure/closet/crate/secure/weapon
+	containername = "military pistol crate"
+	access = access_marine
+
+/decl/hierarchy/supply_pack/marine/pistol_ammo
+	name = "Ammunition - Military pistol"
+	contains = list(/obj/item/ammo_magazine/pistol/double = 4)
+	cost = 20
+	containertype = /obj/structure/closet/crate/secure/weapon
+	containername = "military pistol ammunition crate"
 	access = access_marine
 
 /decl/hierarchy/supply_pack/marine/frags
@@ -24,3 +65,32 @@
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "explosive weaponry crate"
 	access = access_marine
+
+// Colony building stuff
+/decl/hierarchy/supply_pack/marine/colony_kit
+	name = "Equipment - Colonization kit"
+	contains = list(
+		/obj/item/stock_parts/circuitboard/smes,
+		/obj/item/stock_parts/smes_coil,
+		/obj/item/rcd = 2,
+		/obj/item/rcd_ammo/large = 10,
+		/obj/item/storage/belt/utility/full = 3,
+		/obj/item/storage/toolbox/electrical = 2,
+		/obj/item/clothing/gloves/insulated = 2,
+		/obj/item/cell/high = 5,
+		/obj/item/solar_assembly = 14,
+		/obj/item/stock_parts/circuitboard/solar_control,
+		/obj/item/tracker_electronics,
+		/obj/item/stock_parts/circuitboard/telecomms/receiver,
+		/obj/item/stock_parts/circuitboard/telecomms/hub,
+		/obj/item/stock_parts/circuitboard/telecomms/bus,
+		/obj/item/stock_parts/circuitboard/telecomms/processor,
+		/obj/item/stock_parts/circuitboard/telecomms/server,
+		/obj/item/stock_parts/circuitboard/telecomms/broadcaster,
+		/obj/item/stack/material/steel/fifty = 6,
+		/obj/item/stack/material/aluminium/fifty = 6,
+		/obj/item/stack/material/glass/reinforced/fifty = 6,
+		)
+	cost = 300
+	containertype = /obj/structure/largecrate
+	containername = "colonization kit"

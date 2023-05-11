@@ -42,7 +42,7 @@
 	icon = 'icons/obj/guns/military_pistol2.dmi'
 	icon_state = "military-alt"
 	safety_icon = "safety"
-	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 2, TECH_ESOTERIC = 8)
+	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 3, TECH_ESOTERIC = 2)
 	fire_delay = 5
 
 /obj/item/gun/projectile/pistol/sec
