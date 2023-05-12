@@ -47,7 +47,7 @@
 	)
 
 	initial_restricted_waypoints = list(
-		"Independent Light Corvette" = list("nav_hangar_obs")
+		"Independent Light Corvette" = list("nav_hangar_obs_shuttle")
 	)
 
 /obj/effect/overmap/visitable/ship/landable/obs_shuttle
@@ -68,6 +68,10 @@
 /obj/effect/shuttle_landmark/obs_shuttle/one
 	name = "ILC Proton Docked"
 	landmark_tag = "nav_hangar_obs_shuttle"
+
+/obj/effect/shuttle_landmark/obs_shuttle/two
+	name = "East of the Asteroid"
+	landmark_tag = "nav_obs_1"
 
 /obj/effect/submap_landmark/joinable_submap/obs_shuttle
 	name = "ILC Proton"
