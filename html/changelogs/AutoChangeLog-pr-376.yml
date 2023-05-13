@@ -1,0 +1,5 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: HUD screen "overlays"(meson, science and NVG googles) are slightly more
+      transparent.
