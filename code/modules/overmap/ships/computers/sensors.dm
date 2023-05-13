@@ -7,6 +7,7 @@
 	silicon_restriction = STATUS_UPDATE
 	machine_name = "sensors console"
 	machine_desc = "Used to activate, monitor, and configure a spaceship's sensors. Higher range means higher temperature; dangerously high temperatures may fry the delicate equipment."
+	health_max = 100
 	var/obj/machinery/shipsensors/sensors
 	var/print_language = LANGUAGE_HUMAN_EURO
 	var/list/last_scan
@@ -115,8 +116,9 @@
 			LAZYSET(last_scan, "location", "[O.x],[O.y]")
 			LAZYSET(last_scan, "name", "[O]")
 			to_chat(user, SPAN_NOTICE("Successfully scanned [O]."))
-		else
-			to_chat(user, SPAN_WARNING("Could not get a scan!"))
+			return TOPIC_HANDLED
+
+		to_chat(user, SPAN_WARNING("Could not get a scan from \the [O]!"))
 		return TOPIC_HANDLED
 
 	if (href_list["print"])
@@ -140,10 +142,13 @@
 	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "sensors"
 	anchored = TRUE
+	density = TRUE
+	construct_state = /decl/machine_construction/default/panel_closed
 	var/max_health = 200
 	var/health = 200
 	var/critical_heat = 50 // sparks and takes damage when active & above this heat
 	var/heat_reduction = 1.5 // mitigates this much heat per tick
+	var/heat_reduction_minimum = 1.5 //minimum amount of heat mitigation unupgraded
 	var/heat = 0
 	var/range = 1
 	idle_power_usage = 5000
@@ -178,25 +183,36 @@
 	return 1
 
 /obj/machinery/shipsensors/on_update_icon()
-	if(use_power)
+	overlays.Cut()
+	if(health <= 0)
+		icon_state = "sensors_broken"
+	else if(use_power)
 		icon_state = "sensors"
 	else
 		icon_state = "sensors_off"
 
+	if(panel_open)
+		overlays += "sensors_panel"
+	return ..()
+
 /obj/machinery/shipsensors/examine(mob/user)
 	. = ..()
 	if(health <= 0)
-		to_chat(user, "\The [src] is wrecked.")
+		to_chat(user, SPAN_DANGER("\The [src] is wrecked."))
 	else if(health < max_health * 0.25)
-		to_chat(user, "<span class='danger'>\The [src] looks like it's about to break!</span>")
+		to_chat(user, SPAN_DANGER("\The [src] looks like it's about to break!"))
 	else if(health < max_health * 0.5)
-		to_chat(user, "<span class='danger'>\The [src] looks seriously damaged!</span>")
+		to_chat(user, SPAN_WARNING("\The [src] looks seriously damaged!"))
 	else if(health < max_health * 0.75)
-		to_chat(user, "\The [src] shows signs of damage!")
+		to_chat(user, SPAN_WARNING("\The [src] shows signs of damage!"))
 
-/obj/machinery/shipsensors/bullet_act(var/obj/item/projectile/Proj)
+/obj/machinery/shipsensors/bullet_act(obj/item/projectile/Proj)
 	take_damage(Proj.get_structure_damage())
 	..()
+
+/obj/machinery/shipsensors/RefreshParts()
+	..()
+	heat_reduction = clamp(total_component_rating_of_type(/obj/item/stock_parts/manipulator), heat_reduction_minimum, 5)
 
 /obj/machinery/shipsensors/proc/toggle()
 	if(!use_power && (health == 0 || !in_vacuum()))
@@ -244,5 +260,25 @@
 		toggle()
 
 /obj/machinery/shipsensors/weak
-	heat_reduction = 0.2
+	name = "miniature sensors suite"
 	desc = "Miniturized gravity scanner with various other sensors, used to detect irregularities in surrounding space. Can only run in vacuum to protect delicate quantum BS elements."
+	heat_reduction_minimum = 0.2
+
+/obj/item/stock_parts/circuitboard/shipsensors
+	name = T_BOARD("sensor suite")
+	board_type = "machine"
+	icon_state = "mcontroller"
+	build_path = /obj/machinery/shipsensors
+	origin_tech = list(TECH_POWER = 3, TECH_ENGINEERING = 5, TECH_BLUESPACE = 3)
+	req_components = list(
+							/obj/item/stock_parts/subspace/ansible = 1,
+							/obj/item/stock_parts/subspace/filter = 1,
+							/obj/item/stock_parts/subspace/treatment = 1,
+							/obj/item/stock_parts/manipulator = 3)
+	additional_spawn_components = list(
+		/obj/item/stock_parts/power/apc/buildable = 1
+	)
+
+/obj/item/stock_parts/circuitboard/shipsensors/weak
+	name = T_BOARD("miniature sensor suite")
+	build_path = /obj/machinery/shipsensors/weak

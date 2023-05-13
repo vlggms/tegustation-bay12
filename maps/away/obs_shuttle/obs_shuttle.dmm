@@ -3150,6 +3150,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel_grid,
 /area/obs_shuttle/primaryhall)
+"UJ" = (
+/obj/machinery/radio_beacon,
+/turf/simulated/floor/tiled/techfloor,
+/area/obs_shuttle/bridge)
 "UO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -9065,7 +9069,7 @@ gw
 jL
 ox
 ox
-uq
+UJ
 dS
 yC
 Fw

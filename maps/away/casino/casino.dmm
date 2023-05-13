@@ -5683,6 +5683,10 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/casino/casino_cutter)
+"PI" = (
+/obj/machinery/radio_beacon,
+/turf/simulated/floor/tiled,
+/area/casino/casino_bridge)
 "Qb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -10169,7 +10173,7 @@ aa
 aa
 aa
 an
-ap
+PI
 ap
 ap
 aF

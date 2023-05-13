@@ -541,6 +541,11 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan,
+/obj/machinery/radio_beacon{
+	activation_cooldown_time = 200;
+	color = "PURPLE";
+	name = "communication bluespace beacon"
+	},
 /turf/simulated/floor/ascent,
 /area/ship/ascent_caulship)
 "bx" = (

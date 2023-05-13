@@ -397,6 +397,7 @@
 	dir = 1;
 	icon_state = "techfloor_hole_right"
 	},
+/obj/machinery/radio_beacon,
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/colony/command)
 "bc" = (
