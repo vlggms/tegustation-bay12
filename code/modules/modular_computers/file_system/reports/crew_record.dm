@@ -122,13 +122,12 @@ GLOBAL_VAR_INIT(arrest_security_status, "Arrest")
 
 /datum/computer_file/report/crew_record/proc/GeneratePhotos(mob/living/carbon/human/H)
 	if(istype(H))
+		uncropped_photo_front = getFlatIcon(H, SOUTH, always_use_defdir = 1)
 		var/obj/item/card/id/id = H.GetIdCard()
-		if(id && istype(id))
+		if(istype(id) && id.front && id.side)
 			photo_front = id.front
-			uncropped_photo_front = getFlatIcon(H, SOUTH, always_use_defdir = 1)
 			photo_side = id.side
 		else
-			uncropped_photo_front = getFlatIcon(H, SOUTH, always_use_defdir = 1)
 			photo_front = uncropped_photo_front.Crop(9, 18, 23, 32)
 			photo_side = getFlatIcon(H, WEST, always_use_defdir = 1)
 			photo_side.Crop(9, 18, 23, 32)
@@ -178,7 +177,7 @@ GLOBAL_VAR_INIT(arrest_security_status, "Arrest")
 /proc/get_crewmember_record(name)
 	name = sanitize(name)
 	for(var/datum/computer_file/report/crew_record/CR in GLOB.all_crew_records)
-		if(CR.get_name() == name)
+		if(sanitize(CR.get_name()) == name)
 			return CR
 	return null
 
