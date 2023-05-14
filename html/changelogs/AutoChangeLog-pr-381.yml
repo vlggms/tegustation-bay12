@@ -1,0 +1,6 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - balance: Railguns don't slow you down as much now.
+  - balance: The rod projectile now deals less damage.
+  - balance: Automatic railguns(anti-vehicle) deal much more damage.
