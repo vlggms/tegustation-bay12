@@ -4,7 +4,7 @@
 	icon_state = "rod"
 	damage = 55
 	penetrating = 5
-	armor_penetration = 85
+	armor_penetration = 65
 	penetration_modifier = 1.1
 	fire_sound = 'sound/weapons/railgun.ogg'
 	distance_falloff = 1
@@ -12,8 +12,14 @@
 /obj/item/projectile/bullet/magnetic/slug
 	name = "slug"
 	icon_state = "gauss_silenced"
-	stun = 1
 	damage = 75
+	armor_penetration = 90
+
+// Used by those "automatic" railguns
+/obj/item/projectile/bullet/magnetic/slug/super
+	name = "anti-tank slug"
+	icon_state = "gauss"
+	damage = 150
 	armor_penetration = 90
 
 /obj/item/projectile/bullet/magnetic/flechette
