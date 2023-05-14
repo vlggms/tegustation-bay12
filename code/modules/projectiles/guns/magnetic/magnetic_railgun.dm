@@ -13,32 +13,30 @@
 	w_class = ITEM_SIZE_HUGE
 	slot_flags = SLOT_BACK
 	loaded = /obj/item/rcd_ammo/large // ~30 shots
-	combustion = 1
-	bulk = GUN_BULK_RIFLE + 3
+	bulk = GUN_BULK_RIFLE + 1
 
 	cell = /obj/item/cell/hyper
 	capacitor = /obj/item/stock_parts/capacitor/adv
 	gun_unreliable = 0
-	var/slowdown_held = 3
-	var/slowdown_worn = 2
+	var/slowdown_held = 1
+	var/slowdown_worn = 0.5
 
 /obj/item/gun/magnetic/railgun/Initialize()
-	slowdown_per_slot[slot_l_hand] =  slowdown_held
-	slowdown_per_slot[slot_r_hand] =  slowdown_held
-	slowdown_per_slot[slot_back] =    slowdown_worn
-	slowdown_per_slot[slot_belt] =    slowdown_worn
-	slowdown_per_slot[slot_s_store] = slowdown_worn
-
 	. = ..()
+	slowdown_per_slot[slot_l_hand] = slowdown_held
+	slowdown_per_slot[slot_r_hand] = slowdown_held
+	slowdown_per_slot[slot_back] = slowdown_worn
+	slowdown_per_slot[slot_belt] = slowdown_worn
+	slowdown_per_slot[slot_s_store] = slowdown_worn
 
 // Not going to check type repeatedly, if you code or varedit
 // load_type and get runtime errors, don't come crying to me.
-/obj/item/gun/magnetic/railgun/show_ammo(var/mob/user)
+/obj/item/gun/magnetic/railgun/show_ammo(mob/user)
 	var/obj/item/rcd_ammo/ammo = loaded
-	if (ammo)
-		to_chat(user, "<span class='notice'>There are [ammo.remaining] shot\s remaining in \the [loaded].</span>")
+	if(ammo)
+		to_chat(user, SPAN_NOTICE("There are [ammo.remaining] shot\s remaining in \the [loaded]."))
 	else
-		to_chat(user, "<span class='notice'>There is nothing loaded.</span>")
+		to_chat(user, SPAN_NOTICE("There is nothing loaded."))
 
 /obj/item/gun/magnetic/railgun/check_ammo()
 	var/obj/item/rcd_ammo/ammo = loaded
@@ -55,19 +53,19 @@
 /obj/item/gun/magnetic/railgun/proc/out_of_ammo()
 	qdel(loaded)
 	loaded = null
-	visible_message("<span class='warning'>\The [src] beeps and ejects its empty cartridge.</span>")
+	visible_message(SPAN_WARNING("\The [src] beeps and ejects its empty cartridge."))
 
 /obj/item/gun/magnetic/railgun/mmi
 	desc = "The Mars Military Industries MI-72 Comet. A man-portable mass driver for squad support, anti-armour and destruction of fortifications and emplacements."
 	icon = 'icons/obj/guns/railgun_old.dmi'
 	icon_state = "old_railgun"
 
-/obj/item/gun/magnetic/railgun/tcc // Oppa! Should only be available to TCC shock troops or high-budget mercs.
+// Whoever named it "advanced" should be lynched. It fires literal rods and is much weaker
+/obj/item/gun/magnetic/railgun/tcc
 	name = "advanced railgun"
 	desc = "The HelTek Arms HR-22 Hammerhead. A man-portable helical rail cannon; favorite weapon of Terran shock troops and anti-tank personnel."
 	icon = 'icons/obj/guns/railgun_adv.dmi'
 	icon_state = "railgun-tcc"
-	removable_components = TRUE // Railgunners are expected to be able to completely disassemble and reassemble their weapons in the field. But we don't have that mechanic, so the cell and capacitor will do.
 
 	cell = /obj/item/cell/hyper // Standard power
 	capacitor = /obj/item/stock_parts/capacitor/adv // 6-8 shots
@@ -78,12 +76,14 @@
 	projectile_type = /obj/item/projectile/bullet/magnetic
 	load_sheet_max = 6 // Fewer shots per "magazine", but more abundant than matter cartridges.
 	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 3, TECH_MAGNET = 5)
-	slowdown_worn = 3 // Little slower when worn
+	slowdown_worn = 1.5 // Little slower when worn
 
-/obj/item/gun/magnetic/railgun/tcc/show_ammo(var/mob/user)
+/obj/item/gun/magnetic/railgun/tcc/show_ammo(mob/user)
 	var/obj/item/stack/material/rods/ammo = loaded
 	if(istype(ammo))
-		to_chat(user, "<span class='notice'>It has [ammo.amount] shots loaded.</span>")
+		to_chat(user, SPAN_NOTICE("It has [ammo.amount] shots loaded."))
+	else
+		to_chat(user, SPAN_NOTICE("There is nothing loaded."))
 
 /obj/item/gun/magnetic/railgun/tcc/check_ammo()
 	var/obj/item/stack/material/rods/ammo = loaded
@@ -94,7 +94,7 @@
 	loaded = null
 	spawn(3)
 		playsound(src.loc, 'sound/machines/twobeep.ogg', 50, 1)
-	visible_message("<span class='warning'>\The [src] beeps, before clanging as the ammunition bank resets.</span>")
+	visible_message(SPAN_WARNING("\The [src] beeps, before clanging as the ammunition bank resets."))
 
 /obj/item/gun/magnetic/railgun/tcc/use_ammo()
 	var/obj/item/stack/material/rods/ammo = loaded
@@ -102,34 +102,33 @@
 	if(!istype(ammo))
 		out_of_ammo()
 
-/obj/item/gun/magnetic/railgun/automatic // Adminspawn only, this shit is absurd.
+// Adminspawn only, this shit is absurd.
+/obj/item/gun/magnetic/railgun/automatic
 	name = "\improper LMRA autocannon"
-	desc = "The HelTek Arms LMRA-14A Meteor. Originally a vehicle-mounted turret weapon used by the Confederation in the Gaia Conflict for anti-vehicular operations, the fact that it was made man-portable is mindboggling in itself."
+	desc = "The HelTek Arms LMRA-14A Meteor. Originally a vehicle-mounted turret weapon used by the Terran Government in the Gaia Conflict for anti-vehicular operations, the fact that it was made man-portable is mindboggling in itself."
 	icon = 'icons/obj/guns/railgun_heavy.dmi'
 	icon_state = "heavy_railgun"
-	removable_components = FALSE // Absolutely not. This has an infinity cell.
 
-	cell = /obj/item/cell/infinite
 	capacitor = /obj/item/stock_parts/capacitor/super
+	projectile_type = /obj/item/projectile/bullet/magnetic/slug/super
 
 	fire_delay =  8
-	slowdown_held = 4
-
-	slowdown_worn = 3
+	slowdown_held = 3
+	slowdown_worn = 2
 
 	slot_flags = SLOT_BACK
 	w_class = ITEM_SIZE_NO_CONTAINER
 
 	firemodes = list(
-		list(mode_name="semiauto",    burst=1, fire_delay=0,    move_delay=null, one_hand_penalty=1, burst_accuracy=null, dispersion=null),
-		list(mode_name="short bursts", burst=3, fire_delay=null, move_delay=5,    one_hand_penalty=2, burst_accuracy=list(0,-1,-1),       dispersion=list(0.0, 0.6, 1.0)),
-		list(mode_name="long bursts",  burst=6, fire_delay=null, move_delay=10,    one_hand_penalty=2, burst_accuracy=list(0,-1,-1,-1,-2), dispersion=list(0.6, 0.6, 1.0, 1.0, 1.2)),
+		list(mode_name="semiauto", burst=1, fire_delay=null, one_hand_penalty=1, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round burst", burst=3, fire_delay=null, one_hand_penalty=2, burst_accuracy=list(0,-1,-1),       dispersion=list(0.0, 0.6, 1.0)),
+		list(mode_name="full auto", burst=1, fire_delay=0, burst_delay=1, one_hand_penalty=3, burst_accuracy=list(0,-1,-2), dispersion=list(0.2, 0.8, 1.2), autofire_enabled=1)
 		)
 
 /obj/item/gun/magnetic/railgun/automatic/examine(mob/user, distance)
 	. = ..()
 	if(distance <= 1)
-		to_chat(user, "<span class='notice'>Someone has scratched <i>Ultima Ratio Regum</i> onto the side of the barrel.</span>")
+		to_chat(user, SPAN_NOTICE("Someone has scratched <i>Ultima Ratio Regum</i> onto the side of the barrel."))
 
 /obj/item/gun/magnetic/railgun/automatic/mmi
 	name = "\improper RHR accelerator"
@@ -161,7 +160,7 @@
 		)
 
 /obj/item/gun/magnetic/railgun/flechette/out_of_ammo()
-	visible_message("<span class='warning'>\The [src] beeps to indicate the magazine is empty.</span>")
+	visible_message(SPAN_WARNING("\The [src] beeps to indicate the magazine is empty."))
 
 
 /obj/item/gun/magnetic/railgun/flechette/skrell
