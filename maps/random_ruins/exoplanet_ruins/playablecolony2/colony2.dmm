@@ -1983,9 +1983,7 @@
 	pixel_x = -24
 	},
 /obj/effect/floor_decal/corner_steel_grid/diagonal,
-/obj/structure/bed/chair/shuttle/white{
-	dir = 4
-	},
+/obj/machinery/radio_beacon,
 /turf/simulated/floor/tiled/techmaint,
 /area/map_template/colony2/ship)
 "Mv" = (

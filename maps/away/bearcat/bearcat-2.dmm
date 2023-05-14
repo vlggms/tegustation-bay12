@@ -5877,6 +5877,10 @@
 	},
 /turf/simulated/floor/airless,
 /area/ship/scrap/maintenance/engine/aft)
+"To" = (
+/obj/machinery/radio_beacon,
+/turf/simulated/floor/bluegrid,
+/area/ship/scrap/comms)
 "Ul" = (
 /obj/effect/paint/brown,
 /turf/simulated/wall/r_wall,
@@ -12562,7 +12566,7 @@ Yv
 Yv
 ed
 ar
-aH
+To
 aO
 aX
 Yv
