@@ -21,6 +21,28 @@
 	ceiling_type = null
 	knockdown = 0
 
+/datum/shuttle/autodock/ferry/intrepidcargo/lift
+	name = "Cargobay Lift"
+	shuttle_area = /area/turbolift/intrepidcargo/lift
+	warmup_time = 3
+	waypoint_station = "nav_intrepidcargo_lift_top"
+	waypoint_offsite = "nav_intrepidcargo_lift_bottom"
+	sound_takeoff = 'sound/effects/lift_heavy_start.ogg'
+	sound_landing = 'sound/effects/lift_heavy_stop.ogg'
+	ceiling_type = null
+	knockdown = 0
+
+/datum/shuttle/autodock/ferry/marine/lift
+	name = "Pandora Hangar Lift"
+	shuttle_area = /area/turbolift/marine/lift
+	warmup_time = 3
+	waypoint_station = "nav_marine_lift_top"
+	waypoint_offsite = "nav_marine_lift_bottom"
+	sound_takeoff = 'sound/effects/lift_heavy_start.ogg'
+	sound_landing = 'sound/effects/lift_heavy_stop.ogg'
+	ceiling_type = null
+	knockdown = 0
+
 //Lift Control Interface objects. (Lift computer)
 /obj/machinery/computer/shuttle_control/lift/port
 	name = "portside lift controls"
@@ -34,6 +56,24 @@
 /obj/machinery/computer/shuttle_control/lift/starboard
 	name = "starboardside lift controls"
 	shuttle_tag = "Starboard Lift"
+	ui_template = "shuttle_control_console_lift.tmpl"
+	icon_state = "tiny"
+	icon_keyboard = "tiny_keyboard"
+	icon_screen = "lift"
+	density = FALSE
+
+/obj/machinery/computer/shuttle_control/lift/intrepidcargo
+	name = "cargo bay lift controls"
+	shuttle_tag = "Cargobay Lift"
+	ui_template = "shuttle_control_console_lift.tmpl"
+	icon_state = "tiny"
+	icon_keyboard = "tiny_keyboard"
+	icon_screen = "lift"
+	density = FALSE
+
+/obj/machinery/computer/shuttle_control/lift/marine
+	name = "pandora hangar lift controls"
+	shuttle_tag = "Pandora Hangar Lift"
 	ui_template = "shuttle_control_console_lift.tmpl"
 	icon_state = "tiny"
 	icon_keyboard = "tiny_keyboard"
@@ -66,4 +106,32 @@
 	landmark_tag = "nav_starboard_lift_bottom"
 	flags = SLANDMARK_FLAG_AUTOSET
 	base_area = /area/intrepid/department/engineering/drone_fabrication
+	base_turf = /turf/simulated/floor/plating
+
+/obj/effect/shuttle_landmark/lift/marine_top
+	name = "Pandora Hangar Upper Deck"
+	landmark_tag = "nav_marine_lift_top"
+	flags = SLANDMARK_FLAG_AUTOSET
+	base_area = /area/intrepid/department/exploration/hangar
+	base_turf = /turf/simulated/floor/plating
+
+/obj/effect/shuttle_landmark/lift/marine_bottom
+	name = "Pandora Hangar Lower Deck"
+	landmark_tag = "nav_marine_lift_bottom"
+	flags = SLANDMARK_FLAG_AUTOSET
+	base_area = /area/intrepid/department/exploration/storage
+	base_turf = /turf/simulated/floor/plating
+
+/obj/effect/shuttle_landmark/lift/intrepidcargo_top
+	name = "Pandora Hangar Upper Deck"
+	landmark_tag = "nav_intrepidcargo_lift_top"
+	flags = SLANDMARK_FLAG_AUTOSET
+	base_area = /area/intrepid/department/cargo/cargostorage
+	base_turf = /turf/simulated/floor/plating
+
+/obj/effect/shuttle_landmark/lift/intrepidcargo_bottom
+	name = "Pandora Hangar Lower Deck"
+	landmark_tag = "nav_intrepidcargo_lift_bottom"
+	flags = SLANDMARK_FLAG_AUTOSET
+	base_area = /area/intrepid/department/cargo/cargostorage
 	base_turf = /turf/simulated/floor/plating

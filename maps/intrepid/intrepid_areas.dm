@@ -34,6 +34,11 @@
 /area/intrepid/misc/maint/upper
 	name = "\improper Upper Maintenance Tunnel"
 
+/area/intrepid/misc/maint/superstructure
+	name = "\improper Intrepid Superstructure"
+	sound_env = LARGE_ENCLOSED
+	icon_state = "dk_yellow"
+
 
 //Intrepid Hallways
 /area/intrepid/misc/hallway
@@ -92,40 +97,40 @@
 
 /area/shuttle/research/cockpit
 	name = "\improper SRV Stardust Cockpit"
-	icon_state = "stardust_bridge"
+	icon_state = "stardust"
 	req_access = list(access_stardust_helm)
 
 /area/shuttle/research/anomalyresearch
 	name = "\improper SRV Stardust Anomaly Labratory"
-	icon_state = "stardust_anomaly"
+	icon_state = "stardust"
 
 /area/shuttle/research/xenoarchlab
 	name = "\improper SRV Stardust Xenoarchology Labratory"
-	icon_state = "stardust_xenoarcheology"
+	icon_state = "stardust"
 
 /area/shuttle/research/xenobiolab
 	name = "\improper SRV Stardust Xenobiology Labratory"
-	icon_state = "stardust_xenobiology"
+	icon_state = "stardust"
 
 /area/shuttle/research/xenofloralab
 	name = "\improper SRV Stardust Xenoflora Labratory"
-	icon_state = "stardust_xenoflora"
+	icon_state = "stardust"
 
 /area/shuttle/research/fabricator
 	name = "\improper SRV Stardust Fabrication Labratory"
-	icon_state = "stardust_fabricator"
+	icon_state = "stardust"
 
 /area/shuttle/research/virology
 	name = "\improper SRV Stardust Virology Labratory"
-	icon_state = "stardust_virology"
+	icon_state = "stardust"
 
 /area/shuttle/research/maint
 	name = "\improper SRV Stardust Maintenance Bay"
-	icon_state = "stardust_maint"
+	icon_state = "stardust"
 
 /area/shuttle/research/hallway
 	name = "\improper SRV Stardust Hallway"
-	icon_state = "stardust_hallway"
+	icon_state = "stardust"
 
 //Intrepid Command
 /area/intrepid/department/command
@@ -137,7 +142,7 @@
 	req_access = list(access_bridge)
 
 /area/intrepid/department/command/bridge
-	name = "\improper SEV Intrepid Bridge"
+	name = "\improper TGLV Intrepid Bridge"
 	icon_state = "bridge"
 	req_access = list(access_bridge)
 
@@ -306,20 +311,40 @@
 
 /area/intrepid/department/cargo/cargobay
 	name = "\improper Cargo Bay"
-	icon_state = "cargobay"
+	icon_state = "cargo"
 	sound_env = LARGE_ENCLOSED
 
 /area/intrepid/department/cargo/cargostorage
 	name = "\improper Cargo Warehouse"
-	icon_state = "warehouse"
+	icon_state = "cargostorage"
 
 //Civillian
 /area/intrepid/department/civillian
 	holomap_color = HOLOMAP_AREACOLOR_CREW
 
-/area/intrepid/department/civillian/dockbay
-	name = "\improper Docking Bay"
-	icon_state = "dockbay"
+/area/intrepid/department/civillian/dockbayone
+	name = "\improper Docking Bay One"
+	icon_state = "dock1"
+
+/area/intrepid/department/civillian/dockbaytwo
+	name = "\improper Docking Bay Two"
+	icon_state = "dock2"
+
+/area/intrepid/department/civillian/dockbaythree
+	name = "\improper Docking Bay Three"
+	icon_state = "dock3"
+
+/area/intrepid/department/civillian/dockbayfour
+	name = "\improper Docking Bay Four"
+	icon_state = "dock4"
+
+/area/intrepid/department/civillian/dockbayfive
+	name = "\improper Docking Bay Five"
+	icon_state = "dock5"
+
+/area/intrepid/department/civillian/dockbaysix
+	name = "\improper Docking Bay Six"
+	icon_state = "dock6"
 
 /area/intrepid/department/civillian/mess
 	name = "\improper Mess Hall"
@@ -434,6 +459,17 @@
 	name = "\improper Starboardside Amidships Lift"
 	icon_state = "shuttle3"
 	base_turf = /turf/simulated/open
+
+/area/turbolift/intrepidcargo/lift
+	name = "\improper Cargo Bay Lift"
+	icon_state = "shuttle3"
+	base_turf = /turf/simulated/open
+
+/area/turbolift/marine/lift
+	name = "\improper Pandora Hangar Lift"
+	icon_state = "shuttle3"
+	base_turf = /turf/simulated/open
+
 
 // Holodecks
 
@@ -572,6 +608,16 @@
 	icon_state = "detective"
 	sound_env = MEDIUM_SOFTFLOOR
 	req_access = list(access_forensics_lockers)
+
+/area/intrepid/department/security/starboarddockingbaysecurity
+	name = "\improper Starboard Docking Bay Checkpoint"
+	icon_state = "security"
+	req_access = list(access_security)
+
+/area/intrepid/department/security/portdockingbaysecurity
+	name = "\improper Port Docking Bay Checkpoint"
+	icon_state = "security"
+	req_access = list(access_security)
 
 // Tcomms
 /area/tcommsat

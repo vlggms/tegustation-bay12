@@ -4859,13 +4859,6 @@
 /obj/effect/paint/black,
 /turf/simulated/floor/plating,
 /area/space)
-"and" = (
-/obj/machinery/door/airlock/centcom{
-	name = "General Access";
-	opacity = 1
-	},
-/turf/simulated/floor/plating,
-/area/space)
 "ane" = (
 /obj/machinery/recharger{
 	pixel_y = 4
@@ -8912,6 +8905,10 @@
 	icon_state = "wood_broken3"
 	},
 /area/holodeck/source_temple)
+"sIV" = (
+/obj/effect/shuttle_landmark/ert/start,
+/turf/simulated/floor/shuttle/red,
+/area/space)
 "sMV" = (
 /obj/machinery/light{
 	dir = 1
@@ -8974,6 +8971,10 @@
 	},
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/holodeck/source_meetinghall)
+"tKk" = (
+/obj/effect/shuttle_landmark/ert/internim,
+/turf/space,
+/area/space)
 "tQu" = (
 /obj/structure/flora/ausbushes/brflowers,
 /obj/effect/floor_decal/spline/plain/grey{
@@ -9414,25 +9415,25 @@ apZ
 apZ
 ala
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
 aab
 aab
 aab
@@ -9616,6 +9617,7 @@ aqa
 apZ
 ala
 aab
+aLL
 aab
 aab
 aab
@@ -9633,8 +9635,7 @@ aab
 aab
 aab
 aab
-aab
-aab
+aLL
 aab
 aab
 aab
@@ -9818,6 +9819,7 @@ aqa
 apZ
 ala
 aab
+aLL
 aab
 aab
 aab
@@ -9835,8 +9837,7 @@ aab
 aab
 aab
 aab
-aab
-aab
+aLL
 aab
 aab
 aab
@@ -10020,6 +10021,7 @@ aqa
 apZ
 ala
 aab
+aLL
 aab
 aab
 aab
@@ -10037,8 +10039,7 @@ aab
 aab
 aab
 aab
-aab
-aab
+aLL
 aab
 aab
 aab
@@ -10222,6 +10223,7 @@ aqa
 apZ
 ala
 aab
+aLL
 aab
 aab
 aab
@@ -10239,8 +10241,7 @@ aab
 aab
 aab
 aab
-aab
-aab
+aLL
 aab
 aab
 aab
@@ -10424,6 +10425,7 @@ aqa
 apZ
 ala
 aab
+aLL
 aab
 aab
 aab
@@ -10441,8 +10443,7 @@ aab
 aab
 aab
 aab
-aab
-aab
+aLL
 aab
 aab
 aab
@@ -10626,6 +10627,7 @@ aqa
 apZ
 ala
 aab
+aLL
 aab
 aab
 aab
@@ -10643,8 +10645,7 @@ aab
 aab
 aab
 aab
-aab
-aab
+aLL
 aab
 aab
 aab
@@ -10828,6 +10829,7 @@ aqa
 apZ
 ala
 aab
+aLL
 aab
 aab
 aab
@@ -10845,8 +10847,7 @@ aab
 aab
 aab
 aab
-aab
-aab
+aLL
 aab
 aab
 aab
@@ -11030,6 +11031,7 @@ aqa
 apZ
 ala
 aab
+aLL
 aab
 aab
 aab
@@ -11047,8 +11049,7 @@ aab
 aab
 aab
 aab
-aab
-aab
+aLL
 aab
 aab
 aab
@@ -11232,6 +11233,7 @@ aqa
 apZ
 ala
 aab
+aLL
 aab
 aab
 aab
@@ -11249,8 +11251,7 @@ aab
 aab
 aab
 aab
-aab
-aab
+aLL
 aab
 aab
 aab
@@ -11434,6 +11435,7 @@ aqa
 apZ
 ala
 aab
+aLL
 aab
 aab
 aab
@@ -11451,8 +11453,7 @@ aab
 aab
 aab
 aab
-aab
-aab
+aLL
 aab
 aab
 aab
@@ -11636,6 +11637,7 @@ aqa
 apZ
 ala
 aab
+aLL
 aab
 aab
 aab
@@ -11644,6 +11646,7 @@ aab
 aab
 aab
 aab
+tKk
 aab
 aab
 aab
@@ -11652,9 +11655,7 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
+aLL
 aab
 aab
 aab
@@ -11838,6 +11839,7 @@ aqa
 apZ
 ala
 aab
+aLL
 aab
 aab
 aab
@@ -11855,8 +11857,7 @@ aab
 aab
 aab
 aab
-aab
-aab
+aLL
 aab
 aab
 aab
@@ -12040,6 +12041,7 @@ aqa
 apZ
 ala
 aab
+aLL
 aab
 aab
 aab
@@ -12057,8 +12059,7 @@ aab
 aab
 aab
 aab
-aab
-aab
+aLL
 aab
 aab
 aab
@@ -12242,6 +12243,7 @@ aqa
 apZ
 ala
 aab
+aLL
 aab
 aab
 aab
@@ -12259,8 +12261,7 @@ aab
 aab
 aab
 aab
-aab
-aab
+aLL
 aab
 aab
 aab
@@ -12444,6 +12445,7 @@ aqa
 apZ
 ala
 aab
+aLL
 aab
 aab
 aab
@@ -12461,8 +12463,7 @@ aab
 aab
 aab
 aab
-aab
-aab
+aLL
 aab
 aab
 aab
@@ -12646,6 +12647,7 @@ aqa
 apZ
 ala
 aab
+aLL
 aab
 aab
 aab
@@ -12663,8 +12665,7 @@ aab
 aab
 aab
 aab
-aab
-aab
+aLL
 aab
 aab
 aab
@@ -12848,6 +12849,7 @@ aqa
 apZ
 ala
 aab
+aLL
 aab
 aab
 aab
@@ -12865,8 +12867,7 @@ aab
 aab
 aab
 aab
-aab
-aab
+aLL
 aab
 aab
 aab
@@ -13050,6 +13051,7 @@ aqa
 apZ
 ala
 aab
+aLL
 aab
 aab
 aab
@@ -13067,8 +13069,7 @@ aab
 aab
 aab
 aab
-aab
-aab
+aLL
 aab
 aab
 aab
@@ -13252,6 +13253,7 @@ aqa
 apZ
 ala
 aab
+aLL
 aab
 aab
 aab
@@ -13269,8 +13271,7 @@ aab
 aab
 aab
 aab
-aab
-aab
+aLL
 aab
 aab
 aab
@@ -13454,6 +13455,7 @@ apZ
 apZ
 ala
 aab
+aLL
 aab
 aab
 aab
@@ -13471,8 +13473,7 @@ aab
 aab
 aab
 aab
-aab
-aab
+aLL
 aab
 aab
 aab
@@ -13656,25 +13657,25 @@ ala
 ala
 ala
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
+aLL
 aab
 aab
 aab
@@ -17125,12 +17126,12 @@ all
 all
 alw
 all
-all
+sIV
 all
 alw
 all
 all
-and
+anB
 ant
 anB
 amR
@@ -30323,41 +30324,41 @@ aab
 aab
 aab
 aab
-aLF
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
-aLL
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -30525,7 +30526,6 @@ aab
 aab
 aab
 aab
-aLF
 aab
 aab
 aab
@@ -30559,7 +30559,8 @@ aab
 aab
 aab
 aab
-aLF
+aab
+aab
 aab
 aab
 aab
@@ -30727,7 +30728,6 @@ aab
 aab
 aab
 aab
-aLF
 aab
 aab
 aab
@@ -30761,7 +30761,8 @@ aab
 aab
 aab
 aab
-aLF
+aab
+aab
 aab
 aab
 aab
@@ -30929,7 +30930,6 @@ aab
 aab
 aab
 aab
-aLF
 aab
 aab
 aab
@@ -30963,7 +30963,8 @@ aab
 aab
 aab
 aab
-aLF
+aab
+aab
 aab
 aab
 aab
@@ -31131,7 +31132,6 @@ aab
 aab
 aab
 aab
-aLF
 aab
 aab
 aab
@@ -31165,7 +31165,8 @@ aab
 aab
 aab
 aab
-aLF
+aab
+aab
 aab
 aab
 aab
@@ -31333,7 +31334,6 @@ aab
 aab
 aab
 aab
-aLF
 aab
 aab
 aab
@@ -31367,7 +31367,8 @@ aab
 aab
 aab
 aab
-aLF
+aab
+aab
 aab
 aab
 aab
@@ -31535,7 +31536,6 @@ aab
 aab
 aab
 aab
-aLF
 aab
 aab
 aab
@@ -31569,7 +31569,8 @@ aab
 aab
 aab
 aab
-aLF
+aab
+aab
 aab
 aab
 aab
@@ -31737,7 +31738,6 @@ aab
 aab
 aab
 aab
-aLF
 aab
 aab
 aab
@@ -31771,7 +31771,8 @@ aab
 aab
 aab
 aab
-aLF
+aab
+aab
 aab
 aab
 aab
@@ -31939,7 +31940,6 @@ aab
 aab
 aab
 aab
-aLF
 aab
 aab
 aab
@@ -31973,7 +31973,8 @@ aab
 aab
 aab
 aab
-aLF
+aab
+aab
 aab
 aab
 aab
@@ -32141,7 +32142,6 @@ aab
 aab
 aab
 aab
-aLF
 aab
 aab
 aab
@@ -32175,7 +32175,8 @@ aab
 aab
 aab
 aab
-aLF
+aab
+aab
 aab
 aab
 aab
@@ -32343,7 +32344,6 @@ aab
 aab
 aab
 aab
-aLF
 aab
 aab
 aab
@@ -32377,7 +32377,8 @@ aab
 aab
 aab
 aab
-aLF
+aab
+aab
 aab
 aab
 aab
@@ -32545,7 +32546,7 @@ aab
 aab
 aab
 aab
-aLF
+aab
 aab
 aab
 aab
@@ -32747,7 +32748,7 @@ aab
 aab
 aab
 aab
-aLF
+aab
 aab
 aab
 aab
@@ -32949,7 +32950,7 @@ aab
 aab
 aab
 aab
-aLF
+aab
 aab
 aab
 aab
@@ -33151,7 +33152,7 @@ aab
 aab
 aab
 aab
-aLF
+aab
 aab
 aab
 aab
