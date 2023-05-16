@@ -1030,8 +1030,8 @@
 /area/intrepid/department/engineering/engine_room/aux)
 "dM" = (
 /obj/machinery/door/blast/regular{
-	name = "Starboard Nacelle Access Blast Door";
-	id_tag = "cargostarboardnacelle"
+	id_tag = "cargostarboardnacelle";
+	name = "Starboard Nacelle Access Blast Door"
 	},
 /turf/simulated/floor,
 /area/space)
@@ -1096,8 +1096,8 @@
 /area/intrepid/department/engineering/engine_room)
 "ef" = (
 /obj/machinery/door/blast/regular{
-	name = "Top Deck Superstructure Maintaince Shaft Blast Door";
-	id_tag = "topdeckmaintshaft2"
+	id_tag = "topdeckmaintshaft2";
+	name = "Top Deck Superstructure Maintaince Shaft Blast Door"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
@@ -2191,8 +2191,8 @@
 	pixel_x = -26
 	},
 /obj/structure/flora/pottedplant/deskleaf{
-	pixel_y = 6;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 6
 	},
 /obj/item/reagent_containers/food/drinks/glass2/coffeecup/foundation{
 	pixel_x = 7
@@ -2823,9 +2823,9 @@
 /area/intrepid/department/civillian/dockbaysix)
 "kD" = (
 /obj/machinery/computer/ship/helm{
+	dir = 4;
 	icon_state = "computer";
-	req_access = list("ACCESS_EXPLO_HELM");
-	dir = 4
+	req_access = list("ACCESS_EXPLO_HELM")
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
@@ -3178,26 +3178,26 @@
 /obj/machinery/button/blast_door{
 	id_tag = "externaldockblastdoor1";
 	name = "Dock 1 External Blast Door button";
-	pixel_y = 6;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = 6
 	},
 /obj/machinery/button/blast_door{
 	id_tag = "internaldockblastdoor1";
 	name = "Dock 1 Internal Blast Door button";
-	pixel_y = -3;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = -3
 	},
 /obj/machinery/button/blast_door{
 	id_tag = "externaldockblastdoor2";
 	name = "Dock 2 External Blast Door button";
-	pixel_y = 6;
-	pixel_x = 4
+	pixel_x = 4;
+	pixel_y = 6
 	},
 /obj/machinery/button/blast_door{
 	id_tag = "internaldockblastdoor2";
 	name = "Dock 2 Internal Blast Door button";
-	pixel_y = -3;
-	pixel_x = 4
+	pixel_x = 4;
+	pixel_y = -3
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/security/starboarddockingbaysecurity)
@@ -3644,9 +3644,9 @@
 "nh" = (
 /obj/machinery/button/blast_door{
 	dir = 4;
-	pixel_x = -25;
 	id_tag = "cargoportnacelle";
-	name = "Port Nacelle Access button"
+	name = "Port Nacelle Access button";
+	pixel_x = -25
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
@@ -4158,6 +4158,9 @@
 /obj/structure/cable/orange{
 	icon_state = "0-8"
 	},
+/obj/machinery/light/spot{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
 "pe" = (
@@ -4409,8 +4412,8 @@
 /area/shuttle/pandora/cockpit)
 "qg" = (
 /obj/structure/crematorium{
-	id = "morgue_furnace";
-	dir = 8
+	dir = 8;
+	id = "morgue_furnace"
 	},
 /obj/machinery/light/small/medbay{
 	dir = 4
@@ -4688,8 +4691,8 @@
 /area/intrepid/department/civillian/dockbaythree)
 "rp" = (
 /obj/machinery/door/blast/regular{
-	name = "Top Deck Superstructure Maintaince Shaft Blast Door";
-	id_tag = "topdeckmaintshaft4"
+	id_tag = "topdeckmaintshaft4";
+	name = "Top Deck Superstructure Maintaince Shaft Blast Door"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/superstructure)
@@ -5371,6 +5374,15 @@
 /obj/effect/paint_stripe/yellow,
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/department/engineering/engine_room)
+"tG" = (
+/obj/structure/table/standard,
+/obj/structure/railing/mapped{
+	dir = 1;
+	icon_state = "railing0-1"
+	},
+/obj/machinery/light/spot,
+/turf/simulated/floor/tiled/techmaint,
+/area/space)
 "tJ" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -5411,9 +5423,9 @@
 /area/intrepid/misc/maint/upper)
 "tO" = (
 /obj/machinery/door/blast/regular{
-	name = "Hangar Superstructure Maintaince Shaft Blast Door";
+	dir = 4;
 	id_tag = "hangarmaintshaft2";
-	dir = 4
+	name = "Hangar Superstructure Maintaince Shaft Blast Door"
 	},
 /turf/simulated/floor,
 /area/intrepid/department/exploration/hangar)
@@ -5514,6 +5526,9 @@
 	dir = 8
 	},
 /obj/structure/catwalk,
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "uc" = (
@@ -6508,6 +6523,7 @@
 /obj/machinery/computer/shuttle_control{
 	dir = 1
 	},
+/obj/machinery/light/spot,
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
 "xg" = (
@@ -6944,9 +6960,9 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/blast/regular{
-	name = "Superstructure Maintaince Shaft Electrical Compartment Blast Door";
+	dir = 4;
 	id_tag = "superstructmaint";
-	dir = 4
+	name = "Superstructure Maintaince Shaft Electrical Compartment Blast Door"
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -7193,6 +7209,9 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/structure/catwalk,
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "zT" = (
@@ -7542,20 +7561,20 @@
 /obj/machinery/button/blast_door{
 	id_tag = "externaldockblastdoor4";
 	name = "Dock 4 External Blast Door button";
-	pixel_y = 6;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = 6
 	},
 /obj/machinery/button/blast_door{
 	id_tag = "internaldockblastdoor4";
 	name = "Dock 4 Internal Blast Door button";
-	pixel_y = -3;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = -3
 	},
 /obj/machinery/button/blast_door{
+	dir = 4;
 	id_tag = "dockshutter";
 	name = "Checkpoint Shutters button";
 	pixel_x = 4;
-	dir = 4;
 	pixel_y = 2
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -7661,6 +7680,13 @@
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room/aux)
+"Bz" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/space)
 "BA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -8267,9 +8293,9 @@
 /area/intrepid/department/engineering/engine_room)
 "DN" = (
 /obj/machinery/door/blast/regular{
-	name = "Supply Hangar Superstructure Maintaince Shaft Blast Door";
+	dir = 4;
 	id_tag = "supplyhangarmaintshaft2";
-	dir = 4
+	name = "Supply Hangar Superstructure Maintaince Shaft Blast Door"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/superstructure)
@@ -8426,8 +8452,8 @@
 /area/intrepid/misc/maint/superstructure)
 "Ew" = (
 /obj/machinery/door/blast/regular{
-	name = "Top Deck Superstructure Maintaince Shaft Blast Door";
-	id_tag = "topdeckmaintshaft3"
+	id_tag = "topdeckmaintshaft3";
+	name = "Top Deck Superstructure Maintaince Shaft Blast Door"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
@@ -8529,8 +8555,8 @@
 /area/intrepid/misc/maint/upper)
 "EK" = (
 /obj/machinery/door/blast/regular{
-	name = "Top Deck Superstructure Maintaince Shaft Blast Door";
-	id_tag = "topdeckmaintshaft5"
+	id_tag = "topdeckmaintshaft5";
+	name = "Top Deck Superstructure Maintaince Shaft Blast Door"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
@@ -9159,9 +9185,9 @@
 /area/intrepid/department/command/commandquarters/psiadvisor)
 "Hi" = (
 /obj/machinery/door/blast/regular{
-	name = "Supply Hangar Superstructure Maintaince Shaft Blast Door";
+	dir = 4;
 	id_tag = "supplyhangarmaintshaft";
-	dir = 4
+	name = "Supply Hangar Superstructure Maintaince Shaft Blast Door"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/superstructure)
@@ -9337,8 +9363,8 @@
 /area/shuttle/pandora/cargo)
 "HS" = (
 /obj/machinery/door/blast/regular{
-	name = "Port Nacelle Access Blast Door";
-	id_tag = "cargoportnacelle"
+	id_tag = "cargoportnacelle";
+	name = "Port Nacelle Access Blast Door"
 	},
 /turf/simulated/floor,
 /area/space)
@@ -9480,6 +9506,9 @@
 /area/intrepid/department/engineering/atmos)
 "Iv" = (
 /obj/machinery/computer/ship/engines,
+/obj/machinery/light/spot{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
 "Iw" = (
@@ -9518,20 +9547,20 @@
 /obj/machinery/button/blast_door{
 	id_tag = "externaldockblastdoor3";
 	name = "Dock 3 External Blast Door button";
-	pixel_y = 6;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = 6
 	},
 /obj/machinery/button/blast_door{
 	id_tag = "internaldockblastdoor3";
 	name = "Dock 3 Internal Blast Door button";
-	pixel_y = -3;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = -3
 	},
 /obj/machinery/button/blast_door{
+	dir = 4;
 	id_tag = "dockshutter1";
 	name = "Checkpoint Shutters button";
 	pixel_x = 4;
-	dir = 4;
 	pixel_y = 2
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -9978,9 +10007,9 @@
 /area/intrepid/department/engineering/portthruster)
 "Kh" = (
 /obj/machinery/door/blast/regular{
-	name = "Port Nacelle Superstructure Maintaince Shaft Blast Door button";
+	dir = 4;
 	id_tag = "portnacellemaintshaft";
-	dir = 4
+	name = "Port Nacelle Superstructure Maintaince Shaft Blast Door button"
 	},
 /turf/simulated/floor/plating,
 /area/intrepid/department/engineering/portthruster)
@@ -11572,9 +11601,9 @@
 /area/intrepid/department/civillian/dockbayfour)
 "PL" = (
 /obj/machinery/door/blast/regular{
-	name = "Starboard Nacelle Superstructure Maintaince Shaft Blast Door button";
 	dir = 4;
-	id_tag = "starboardnacellemaintshaft"
+	id_tag = "starboardnacellemaintshaft";
+	name = "Starboard Nacelle Superstructure Maintaince Shaft Blast Door button"
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/starboardthruster)
@@ -11686,9 +11715,9 @@
 "Qk" = (
 /obj/machinery/button/blast_door{
 	dir = 4;
-	pixel_x = -25;
 	id_tag = "cargostarboardnacelle";
-	name = "Starboard Nacelle Access button"
+	name = "Starboard Nacelle Access button";
+	pixel_x = -25
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
@@ -12030,8 +12059,8 @@
 /area/intrepid/department/civillian/dockbaysix)
 "RD" = (
 /obj/machinery/door/blast/regular{
-	name = "Hangar Superstructure Maintaince Shaft Blast Door";
-	id_tag = "hangarmaintshaft"
+	id_tag = "hangarmaintshaft";
+	name = "Hangar Superstructure Maintaince Shaft Blast Door"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -12061,8 +12090,8 @@
 /area/intrepid/department/civillian/dockbayone)
 "RK" = (
 /obj/machinery/door/blast/regular{
-	name = "Hangar Superstructure Maintaince Shaft Blast Door";
-	id_tag = "hangarmaintshaft4"
+	id_tag = "hangarmaintshaft4";
+	name = "Hangar Superstructure Maintaince Shaft Blast Door"
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -12382,8 +12411,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/ai_status_display{
-	pixel_y = 32;
-	pixel_x = 32
+	pixel_x = 32;
+	pixel_y = 32
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor,
@@ -12582,9 +12611,9 @@
 /area/intrepid/misc/maint/upper)
 "TJ" = (
 /obj/machinery/door/blast/regular{
-	name = "Hangar Superstructure Maintaince Shaft Blast Door";
+	dir = 4;
 	id_tag = "hangarmaintshaft3";
-	dir = 4
+	name = "Hangar Superstructure Maintaince Shaft Blast Door"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/superstructure)
@@ -12994,11 +13023,11 @@
 	pixel_y = -33
 	},
 /obj/machinery/button/blast_door{
+	dir = 1;
 	id_tag = "morgue";
 	name = "Morgue Ejection Blast Door button";
-	pixel_y = -30;
 	pixel_x = -4;
-	dir = 1
+	pixel_y = -30
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -13162,26 +13191,26 @@
 /obj/machinery/button/blast_door{
 	id_tag = "externaldockblastdoor5";
 	name = "Dock 5 External Blast Door button";
-	pixel_y = 6;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = 6
 	},
 /obj/machinery/button/blast_door{
 	id_tag = "internaldockblastdoor5";
 	name = "Dock 5 Internal Blast Door button";
-	pixel_y = -3;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = -3
 	},
 /obj/machinery/button/blast_door{
 	id_tag = "externaldockblastdoor6";
 	name = "Dock 6 External Blast Door button";
-	pixel_y = 6;
-	pixel_x = 4
+	pixel_x = 4;
+	pixel_y = 6
 	},
 /obj/machinery/button/blast_door{
 	id_tag = "internaldockblastdoor6";
 	name = "Dock 6 Internal Blast Door button";
-	pixel_y = -3;
-	pixel_x = 4
+	pixel_x = 4;
+	pixel_y = -3
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/security/portdockingbaysecurity)
@@ -13548,6 +13577,11 @@
 	},
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/misc/maint/superstructure)
+"Xm" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/light/spot,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/space)
 "Xn" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
@@ -13922,8 +13956,8 @@
 /area/eva)
 "YA" = (
 /obj/machinery/door/blast/regular{
-	name = "Top Deck Superstructure Maintaince Shaft Blast Door";
-	id_tag = "topdeckmaintshaft"
+	id_tag = "topdeckmaintshaft";
+	name = "Top Deck Superstructure Maintaince Shaft Blast Door"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/superstructure)
@@ -39880,7 +39914,7 @@ CN
 dS
 II
 Ot
-bD
+tG
 JJ
 Rv
 lJ
@@ -41087,12 +41121,12 @@ uz
 JJ
 Yu
 JJ
-aW
+Bz
 aW
 kb
 xm
 aW
-aW
+Xm
 JJ
 Yu
 JJ

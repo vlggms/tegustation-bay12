@@ -2821,6 +2821,9 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/atmos,
+/obj/machinery/atmospherics/pipe/simple/visible/fuel{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/starboardthruster)
 "cnE" = (
@@ -3005,6 +3008,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/portthruster)
+"cyk" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/exploration/storage)
 "cyZ" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 8
@@ -5590,7 +5597,7 @@
 /obj/machinery/button/blast_door{
 	id_tag = "solarcontrol";
 	name = "Solar Control Access button";
-	pixel_x = 9;
+	pixel_x = -6;
 	pixel_y = 22
 	},
 /turf/simulated/floor,
@@ -6613,6 +6620,13 @@
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/internalportside)
+"fvd" = (
+/obj/machinery/door/blast/shutters{
+	id_tag = "explorationstorage"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/intrepid/department/exploration/storage)
 "fvv" = (
 /obj/effect/floor_decal/corner/b_green/border{
 	dir = 6
@@ -7370,6 +7384,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/center)
+"gdA" = (
+/obj/machinery/door/blast/shutters{
+	id_tag = "explorationstorage"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/intrepid/department/exploration/storage)
 "gdB" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -9946,13 +9967,13 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/cockpit)
 "iAU" = (
+/obj/structure/cable{
+	icon_state = "4-10"
+	},
 /obj/machinery/door/blast/shutters/open{
 	dir = 4;
 	icon_state = "shutter0";
-	id_tag = "solarcontrol2"
-	},
-/obj/structure/cable{
-	icon_state = "4-10"
+	id_tag = "solarcontrol"
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/solarcontrol)
@@ -10580,8 +10601,8 @@
 "iZN" = (
 /obj/structure/table/standard,
 /obj/item/reagent_containers/chem_disp_cartridge/coffee{
-	pixel_y = 9;
-	pixel_x = 7
+	pixel_x = 7;
+	pixel_y = 9
 	},
 /obj/effect/floor_decal/spline/fancy/black{
 	dir = 8
@@ -11042,6 +11063,16 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/internalstarboard)
+"jBm" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/turf/simulated/floor/tiled/steel_grid,
+/area/intrepid/department/exploration/storage)
 "jBI" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -12749,6 +12780,10 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
+"laD" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/exploration/storage)
 "lbP" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -15256,6 +15291,9 @@
 	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/ladder/up,
+/obj/machinery/atmospherics/pipe/zpipe/up/fuel{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/starboardthruster)
 "mWr" = (
@@ -15556,12 +15594,13 @@
 "nhH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	dir = 6
-	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
+	dir = 8;
+	icon_state = "map"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
@@ -18957,9 +18996,6 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/machinery/door/airlock/glass/mining{
 	dir = 4
 	},
@@ -19923,9 +19959,9 @@
 /area/intrepid/department/exploration/storage)
 "qIQ" = (
 /obj/structure/closet/secure_closet/guncabinet{
+	anchored = 1;
 	name = "ammunition cabinet";
-	req_access = list("ACCESS_INTREPID_SQUAD_LEADER");
-	anchored = 1
+	req_access = list("ACCESS_INTREPID_SQUAD_LEADER")
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/ammo_magazine/mil_rifle,
@@ -20095,6 +20131,9 @@
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/fuel{
+	dir = 6
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
@@ -23703,6 +23742,16 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/bridgeofficer)
+"tKe" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/turf/simulated/floor/tiled/steel_grid,
+/area/intrepid/department/exploration/storage)
 "tKm" = (
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/department/command/AI/AICore)
@@ -23755,6 +23804,7 @@
 /obj/effect/floor_decal/corner/paleblue/bordercorner{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/exploration/storage)
 "tMV" = (
@@ -23976,6 +24026,15 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/prison)
+"tUZ" = (
+/obj/machinery/door/blast/shutters{
+	id_tag = "explorationstorage"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/intrepid/department/exploration/storage)
 "tVk" = (
 /turf/simulated/floor/tiled,
 /area/intrepid/department/cargo/cargobay)
@@ -24648,6 +24707,18 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/misc/hallway/starboard)
+"uAC" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/intrepid/department/exploration/storage)
 "uCn" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass/command{
@@ -24956,12 +25027,6 @@
 	},
 /obj/structure/cable/orange{
 	icon_state = "4-8"
-	},
-/obj/machinery/button/blast_door{
-	id_tag = "solarcontrol";
-	name = "Solar Control Access button";
-	pixel_x = 23;
-	pixel_y = 22
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
@@ -25501,6 +25566,7 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 4
 	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/exploration/storage)
 "vmU" = (
@@ -26373,6 +26439,9 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/exploration/storage)
 "vVq" = (
@@ -26561,6 +26630,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 8
 	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/exploration/storage)
 "wfx" = (
@@ -26676,6 +26746,16 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
+"wjJ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/fuel,
+/turf/simulated/floor,
+/area/intrepid/misc/maint/aft)
 "wjY" = (
 /obj/machinery/camera/network/command{
 	c_tag = "Command - Command Hallway Portside";
@@ -26721,6 +26801,7 @@
 /obj/effect/floor_decal/corner/orange/bordercorner{
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/exploration/storage)
 "wmy" = (
@@ -28850,6 +28931,19 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/monitoring)
+"ygk" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/fuel,
+/turf/simulated/floor,
+/area/intrepid/misc/maint/aft)
 "ygV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -55971,9 +56065,9 @@ eDk
 jir
 sUf
 vVf
-inR
-sPq
-rDJ
+tUZ
+ltF
+uAC
 sPq
 yfM
 xWP
@@ -56173,9 +56267,9 @@ bct
 mwJ
 wfs
 wmr
-inR
-sPq
-rJE
+gdA
+cyk
+tKe
 sGt
 yfM
 fNQ
@@ -56577,9 +56671,9 @@ qIQ
 pma
 vmy
 tMO
-inR
-sPq
-rDJ
+fvd
+laD
+jBm
 oVO
 huo
 oVO
@@ -58757,11 +58851,11 @@ gxF
 gxF
 gxF
 qOI
-gxF
-gxF
-gxF
-qGq
-gxF
+wjJ
+wjJ
+wjJ
+ygk
+wjJ
 nhH
 xlR
 jmU
