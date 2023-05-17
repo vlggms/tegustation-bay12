@@ -28605,6 +28605,7 @@
 	dir = 4;
 	icon_state = "railing0-1"
 	},
+/obj/machinery/radio_beacon,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/bridge)
 "xMk" = (
