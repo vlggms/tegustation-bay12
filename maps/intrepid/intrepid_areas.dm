@@ -383,6 +383,17 @@
 	name = "\improper Adherent Maintenence"
 	icon_state = "robotics"
 
+/area/intrepid/department/civilian/safe_room/port
+	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
+
+/area/intrepid/department/civilian/safe_room/port
+	name = "\improper Second Deck Port Safe Room"
+	icon_state = "crew_quarters"
+
+/area/intrepid/department/civilian/safe_room/starboard
+	name = "\improper Second Deck Port Safe Room"
+	icon_state = "crew_quarters"
+
 // Shuttles
 /area/shuttle/transport1/centcom
 	icon_state = "shuttle"

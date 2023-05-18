@@ -379,6 +379,16 @@
 /obj/structure/sign/warning/bomb_range,
 /turf/simulated/floor,
 /area/intrepid/department/command/obstructionfielddisperser)
+"br" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/intrepid/misc/maint/superstructure)
 "bt" = (
 /obj/machinery/computer/modular/preset/cardslot/command{
 	dir = 1;
@@ -740,6 +750,9 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "cB" = (
@@ -981,6 +994,14 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/intrepid/department/civillian/dockbayfour)
+"dB" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled,
+/area/intrepid/misc/maint/superstructure)
 "dE" = (
 /obj/structure/cable/orange{
 	icon_state = "5-6"
@@ -1044,6 +1065,36 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/atmos)
+"dP" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/universal{
+	dir = 4
+	},
+/obj/machinery/cryopod{
+	dir = 1
+	},
+/obj/machinery/computer/cryopod{
+	pixel_y = -27
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/intrepid/misc/maint/superstructure)
+"dQ" = (
+/obj/effect/floor_decal/corner/brown/half{
+	dir = 8;
+	icon_state = "bordercolorhalf"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "5-6"
+	},
+/obj/machinery/camera/network/hangar{
+	c_tag = "Hangar - Starboard Bow Pandora Hangar";
+	dir = 4;
+	network = list("Pandora")
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/intrepid/department/exploration/hangar)
 "dS" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -1076,7 +1127,7 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/second_deck{
-	c_tag = "Second Deck - Dock Airlock";
+	c_tag = "Second Deck - Dock Airlock Five";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -1094,6 +1145,21 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/engineering/engine_room)
+"ee" = (
+/obj/effect/floor_decal/corner/brown/half{
+	dir = 4;
+	icon_state = "bordercolorhalf"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/camera/network/hangar{
+	c_tag = "Hangar - Starboard Quarter Pandora Hangar";
+	dir = 8;
+	network = list("Pandora")
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/intrepid/department/exploration/hangar)
 "ef" = (
 /obj/machinery/door/blast/regular{
 	id_tag = "topdeckmaintshaft2";
@@ -1113,6 +1179,15 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/eva)
+"ek" = (
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper)
 "em" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 6
@@ -1121,11 +1196,13 @@
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/department/engineering/engine_room)
 "eo" = (
-/obj/structure/table/rack,
-/obj/item/storage/box/psiimp,
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/machinery/photocopier/faxmachine{
+	department = "Psi Advisor's Office"
+	},
+/obj/structure/table/standard,
 /turf/simulated/floor/wood,
 /area/intrepid/department/command/commandquarters/psiadvisor)
 "eq" = (
@@ -1185,6 +1262,7 @@
 "eB" = (
 /obj/structure/bed/roller,
 /obj/structure/iv_drip,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/white,
 /area/intrepid/misc/maint/superstructure)
 "eC" = (
@@ -1336,6 +1414,7 @@
 /area/intrepid/department/engineering/engine_room)
 "fc" = (
 /obj/structure/fuel_port,
+/obj/effect/paint/brown,
 /turf/simulated/wall/r_titanium,
 /area/space)
 "fd" = (
@@ -1571,6 +1650,10 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "fX" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/white,
 /area/intrepid/misc/maint/superstructure)
 "fY" = (
@@ -1772,24 +1855,14 @@
 /obj/structure/flora/pottedplant/tropical{
 	pixel_y = 8
 	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/intrepid/misc/maint/superstructure)
 "gD" = (
-/obj/structure/railing/mapped{
-	dir = 4;
-	icon_state = "railing0-1"
-	},
-/obj/structure/railing/mapped{
-	dir = 8;
-	icon_state = "railing0-1"
-	},
-/obj/structure/railing/mapped{
-	dir = 1;
-	icon_state = "railing0-1"
-	},
-/obj/structure/railing/mapped,
-/obj/structure/flora/pottedplant/mysterious{
-	pixel_y = 10
+/obj/machinery/atmospherics/unary/tank/air{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/misc/maint/superstructure)
@@ -2250,7 +2323,7 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/second_deck{
-	c_tag = "Second Deck - Dock Airlock";
+	c_tag = "Second Deck - Dock Airlock Six";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -2625,6 +2698,14 @@
 /obj/effect/wallframe_spawn/reinforced,
 /turf/simulated/floor,
 /area/intrepid/department/security/starboarddockingbaysecurity)
+"jH" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled,
+/area/intrepid/misc/maint/superstructure)
 "jI" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 9;
@@ -3078,7 +3159,7 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/second_deck{
-	c_tag = "Second Deck - Dock Airlock";
+	c_tag = "Second Deck - Dock Airlock Four";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -3201,6 +3282,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/security/starboarddockingbaysecurity)
+"lE" = (
+/obj/structure/closet/radiation,
+/obj/effect/floor_decal/industrial/radiation/fulltile,
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 23
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/intrepid/misc/maint/superstructure)
 "lH" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 6
@@ -3253,6 +3343,10 @@
 /obj/structure/cable/green,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
+"lP" = (
+/obj/effect/paint/silver,
+/turf/simulated/wall/r_titanium,
+/area/space)
 "lQ" = (
 /obj/structure/cable/orange{
 	icon_state = "1-8"
@@ -3760,6 +3854,13 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/fuel,
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper)
+"nD" = (
+/obj/machinery/camera/network/second_deck{
+	c_tag = "Second Deck - Starboard Bow Deck Access";
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
@@ -4354,6 +4455,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "pU" = (
@@ -4386,6 +4490,21 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
+"qb" = (
+/obj/effect/floor_decal/corner/brown/half{
+	dir = 4;
+	icon_state = "bordercolorhalf"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/camera/network/hangar{
+	c_tag = "Hangar - Port Quarter Pandora Hangar";
+	dir = 8;
+	network = list("Pandora")
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/intrepid/department/exploration/hangar)
 "qc" = (
 /obj/structure/bed/chair/shuttle{
 	dir = 1
@@ -4448,6 +4567,14 @@
 	},
 /turf/simulated/wall/r_titanium,
 /area/shuttle/pandora/cargo)
+"qr" = (
+/obj/effect/floor_decal/industrial/custodial/fulltile,
+/obj/structure/closet/l3closet,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/intrepid/misc/maint/superstructure)
 "qs" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/machinery/atmospherics/binary/pump/high_power{
@@ -4524,6 +4651,22 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
+"qG" = (
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/camera/network/second_deck{
+	c_tag = "Second Deck - Starboard Quarter Hallway"
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper)
 "qH" = (
 /obj/machinery/atmospherics/binary/pump/high_power,
 /turf/simulated/floor/tiled/techfloor,
@@ -4577,6 +4720,15 @@
 /area/intrepid/department/civillian/dockbayfive)
 "qT" = (
 /turf/simulated/wall/r_wall/hull,
+/area/intrepid/misc/maint/superstructure)
+"qV" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
 /area/intrepid/misc/maint/superstructure)
 "qW" = (
 /obj/effect/floor_decal/corner/lightgrey/half{
@@ -4748,6 +4900,7 @@
 /area/intrepid/department/engineering/engine_room/aux)
 "rz" = (
 /obj/structure/dispenser/oxygen,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/misc/maint/superstructure)
 "rA" = (
@@ -4812,6 +4965,11 @@
 "rM" = (
 /obj/machinery/door/airlock/highsecurity,
 /obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/misc/maint/superstructure)
 "rP" = (
@@ -4898,11 +5056,6 @@
 /obj/machinery/portable_atmospherics/powered/scrubber/huge,
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
-	},
-/obj/machinery/camera/network/hangar{
-	c_tag = "Hangar - Foreside Pandora Hangar";
-	dir = 4;
-	network = list("Pandora")
 	},
 /obj/effect/floor_decal/corner/red/mono,
 /turf/simulated/floor/tiled/dark/monotile,
@@ -5026,6 +5179,11 @@
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 10
 	},
+/obj/machinery/alarm{
+	frequency = 1439;
+	pixel_y = 23;
+	req_access = list("ACCESS_MERCHANT")
+	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/misc/maint/superstructure)
 "sw" = (
@@ -5122,7 +5280,7 @@
 "sI" = (
 /obj/machinery/vending/snix,
 /obj/machinery/camera/network/second_deck{
-	c_tag = "Second Deck - Docking Lounge"
+	c_tag = "Second Deck - Docking Bay Six"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/civillian/dockbaysix)
@@ -5276,7 +5434,7 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/second_deck{
-	c_tag = "Second Deck - Dock Airlock";
+	c_tag = "Second Deck - Dock Airlock Three";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -5406,6 +5564,21 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/morgue)
+"tL" = (
+/obj/effect/floor_decal/corner/brown/half{
+	dir = 8;
+	icon_state = "bordercolorhalf"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/camera/network/hangar{
+	c_tag = "Hangar - Port Bow Pandora Hangar";
+	dir = 4;
+	network = list("Pandora")
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/intrepid/department/exploration/hangar)
 "tM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -5835,8 +6008,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/civillian/dockbaysix)
 "uS" = (
-/obj/structure/table/rack,
-/obj/item/storage/firstaid/o2,
+/obj/machinery/atmospherics/unary/tank{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/misc/maint/superstructure)
 "uU" = (
@@ -5928,6 +6102,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
@@ -6226,6 +6403,13 @@
 "wi" = (
 /obj/structure/closet/radiation,
 /obj/effect/floor_decal/industrial/radiation/fulltile,
+/obj/machinery/power/apc/high{
+	dir = 4;
+	pixel_x = 23
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/misc/maint/superstructure)
 "wj" = (
@@ -6321,6 +6505,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
@@ -6762,6 +6949,9 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/superstructure)
 "yd" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/universal{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/intrepid/misc/maint/superstructure)
 "yf" = (
@@ -6803,6 +6993,13 @@
 "yo" = (
 /turf/simulated/floor/shuttle/black,
 /area/intrepid/department/engineering/starboardthruster)
+"yp" = (
+/obj/machinery/door/airlock/highsecurity,
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/monotile,
+/area/intrepid/misc/maint/superstructure)
 "yq" = (
 /obj/structure/lattice,
 /obj/structure/railing/mapped{
@@ -6884,6 +7081,18 @@
 "yF" = (
 /obj/structure/table/standard,
 /obj/item/clothing/head/welding,
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper)
+"yG" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/black{
+	dir = 4
+	},
+/obj/machinery/camera/network/second_deck{
+	c_tag = "Second Deck - Port Bow Hallway"
+	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "yH" = (
@@ -7373,6 +7582,23 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/intrepid/department/civillian/dockbayfour)
+"Ax" = (
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/camera/network/second_deck{
+	c_tag = "Second Deck - Port Quarter Hallway";
+	dir = 1
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper)
 "Az" = (
 /obj/structure/railing/mapped,
 /obj/machinery/computer/modular/preset/dock,
@@ -7423,7 +7649,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/pandora/cockpit)
 "AI" = (
-/obj/structure/catwalk,
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
@@ -7433,6 +7658,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "AJ" = (
@@ -7969,6 +8198,18 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/department/command/obstructionfielddisperser)
+"CB" = (
+/obj/effect/floor_decal/industrial/firstaid/fulltile,
+/obj/structure/closet/crate/med_crate/oxyloss,
+/obj/machinery/power/apc/high{
+	dir = 4;
+	pixel_x = 23
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/intrepid/misc/maint/superstructure)
 "CC" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/tiled/steel_grid,
@@ -7990,6 +8231,13 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/intrepid/department/civillian/dockbaythree)
+"CG" = (
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -23
+	},
+/turf/simulated/floor/tiled/white,
+/area/intrepid/misc/maint/superstructure)
 "CH" = (
 /obj/effect/landmark{
 	name = "xeno_spawn";
@@ -8341,6 +8589,14 @@
 /obj/structure/railing/mapped,
 /turf/space,
 /area/space)
+"Eb" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/intrepid/misc/maint/superstructure)
 "Ec" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -8641,11 +8897,17 @@
 "Ff" = (
 /obj/structure/closet/firecloset,
 /obj/effect/floor_decal/industrial/fire/fulltile,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/misc/maint/superstructure)
 "Fg" = (
 /obj/machinery/bodyscanner{
 	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/misc/maint/superstructure)
@@ -9008,6 +9270,9 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/misc/maint/superstructure)
 "GH" = (
@@ -9069,7 +9334,7 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/second_deck{
-	c_tag = "Second Deck - Dock Airlock";
+	c_tag = "Second Deck - Dock Airlock One";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -9396,6 +9661,22 @@
 /obj/structure/flora/pottedplant/deskfern,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/security/starboarddockingbaysecurity)
+"HZ" = (
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/camera/network/second_deck{
+	c_tag = "Second Deck - Starboard Fore Hallway"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper)
 "Ie" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -9518,6 +9799,13 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/department/civillian/dockbaysix)
+"Ix" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/intrepid/misc/maint/superstructure)
 "Iy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 8
@@ -9865,6 +10153,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/tcommsat)
 "JJ" = (
+/obj/effect/paint/brown,
 /turf/simulated/wall/r_titanium,
 /area/space)
 "JK" = (
@@ -10079,6 +10368,7 @@
 	dir = 4;
 	pixel_x = 17
 	},
+/obj/item/storage/box/psiimp,
 /turf/simulated/floor/wood,
 /area/intrepid/department/command/commandquarters/psiadvisor)
 "Kw" = (
@@ -10413,10 +10703,10 @@
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/misc/maint/superstructure)
 "LL" = (
-/obj/machinery/camera/network/second_deck{
-	c_tag = "Second Deck - Docking Lounge"
-	},
 /obj/machinery/constructable_frame/machine_frame,
+/obj/machinery/camera/network/second_deck{
+	c_tag = "Second Deck - Docking Bay Five"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/civillian/dockbayfive)
 "LM" = (
@@ -10488,6 +10778,9 @@
 /area/intrepid/department/civillian/dockbayfour)
 "LW" = (
 /obj/machinery/vending/medical,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/intrepid/misc/maint/superstructure)
 "LX" = (
@@ -10544,7 +10837,7 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/second_deck{
-	c_tag = "Second Deck - Dock Airlock";
+	c_tag = "Second Deck - Dock Airlock Two";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -10561,7 +10854,7 @@
 "Mj" = (
 /obj/machinery/vending/snix,
 /obj/machinery/camera/network/second_deck{
-	c_tag = "Second Deck - Docking Lounge"
+	c_tag = "Second Deck - Docking Bay Four"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/civillian/dockbayfour)
@@ -10820,20 +11113,15 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/engineering/engine_room/aux)
 "Nd" = (
-/obj/effect/floor_decal/corner/brown/half{
-	dir = 4;
-	icon_state = "bordercolorhalf"
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
 	},
-/obj/machinery/camera/network/hangar{
-	c_tag = "Hangar - Aftside Pandora Hangar";
-	dir = 8;
-	network = list("Pandora")
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "2-4"
 	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/dark/monotile,
-/area/intrepid/department/exploration/hangar)
+/turf/simulated/floor/tiled,
+/area/intrepid/misc/maint/superstructure)
 "Ne" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
@@ -10924,6 +11212,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
@@ -11075,6 +11366,10 @@
 /obj/machinery/meter,
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/engineering/atmos)
+"NW" = (
+/obj/effect/paint/red,
+/turf/simulated/wall/r_titanium,
+/area/space)
 "NX" = (
 /obj/structure/cable/green{
 	icon_state = "1-8"
@@ -11100,7 +11395,7 @@
 /area/intrepid/department/civillian/dockbaysix)
 "Ob" = (
 /obj/machinery/camera/network/second_deck{
-	c_tag = "Second Deck - Docking Lounge";
+	c_tag = "Second Deck - Docking Bay One";
 	dir = 1
 	},
 /obj/machinery/constructable_frame/machine_frame,
@@ -11205,6 +11500,9 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/misc/maint/upper)
 "Os" = (
@@ -11293,6 +11591,18 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper)
+"OF" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/black{
+	dir = 4
+	},
+/obj/machinery/camera/network/second_deck{
+	c_tag = "Second Deck - Port Hallway"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
@@ -11621,7 +11931,7 @@
 	dir = 1
 	},
 /obj/machinery/camera/network/second_deck{
-	c_tag = "Second Deck - Docking Lounge";
+	c_tag = "Second Deck - Docking Bay Three";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -11779,6 +12089,16 @@
 /obj/machinery/atmospherics/pipe/simple/visible/black,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
+"Qv" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/machinery/camera/network/second_deck{
+	c_tag = "Second Deck - Starboard Bow Hallway";
+	dir = 1
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper)
 "Qw" = (
 /obj/effect/floor_decal/corner/black/diagonal,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -11846,6 +12166,18 @@
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
+"QE" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/universal{
+	dir = 4
+	},
+/obj/machinery/cryopod{
+	dir = 2
+	},
+/obj/machinery/computer/cryopod{
+	pixel_y = 27
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/intrepid/misc/maint/superstructure)
 "QF" = (
 /obj/effect/wallframe_spawn/reinforced,
 /turf/simulated/floor,
@@ -11875,6 +12207,14 @@
 /obj/machinery/turretid/lethal,
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/department/command/selfdestruct)
+"QO" = (
+/obj/structure/closet/firecloset,
+/obj/effect/floor_decal/industrial/fire/fulltile,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/intrepid/misc/maint/superstructure)
 "QS" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 1;
@@ -11969,6 +12309,10 @@
 "Rh" = (
 /obj/effect/floor_decal/industrial/firstaid/fulltile,
 /obj/structure/closet/crate/med_crate/oxyloss,
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 23
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/misc/maint/superstructure)
 "Rj" = (
@@ -12417,6 +12761,13 @@
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
+"SV" = (
+/obj/machinery/camera/network/second_deck{
+	c_tag = "Second Deck - Port Bow Deck Access";
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper)
 "SX" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 4
@@ -12432,6 +12783,13 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
+"Tb" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/white,
+/area/intrepid/misc/maint/superstructure)
 "Tc" = (
 /obj/structure/lattice,
 /obj/structure/ladder,
@@ -12728,6 +13086,15 @@
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
+"Ui" = (
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper)
 "Ul" = (
 /obj/effect/paint_stripe/blue,
 /turf/simulated/wall/r_wall/prepainted,
@@ -12753,8 +13120,17 @@
 "Uo" = (
 /obj/effect/floor_decal/industrial/custodial/fulltile,
 /obj/structure/closet/l3closet,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/misc/maint/superstructure)
+"Ur" = (
+/obj/machinery/camera/network/second_deck{
+	c_tag = "Second Deck - Port Aft Hallway"
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper)
 "Us" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/fuel{
 	dir = 8
@@ -12802,6 +13178,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/exploration/hangar)
+"Ux" = (
+/obj/machinery/camera/network/second_deck{
+	c_tag = "Second Deck - Starboard Aft Hallway";
+	dir = 1
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper)
 "UA" = (
 /obj/structure/closet/crate/bin,
 /obj/machinery/firealarm{
@@ -13125,7 +13508,29 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/monotile,
+/area/intrepid/misc/maint/superstructure)
+"VD" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/machinery/camera/network/second_deck{
+	c_tag = "Second Deck - Starboard Hallway";
+	dir = 1
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper)
+"VF" = (
+/obj/machinery/bodyscanner{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
 /area/intrepid/misc/maint/superstructure)
 "VG" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
@@ -13251,6 +13656,19 @@
 /obj/effect/paint_stripe/blue,
 /turf/simulated/wall/prepainted,
 /area/intrepid/department/medical/morgue)
+"Wg" = (
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper)
 "Wi" = (
 /obj/effect/floor_decal/corner/brown/half{
 	dir = 8;
@@ -13396,7 +13814,7 @@
 	dir = 1
 	},
 /obj/machinery/camera/network/second_deck{
-	c_tag = "Second Deck - Docking Lounge";
+	c_tag = "Second Deck - Docking Bay Two";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -13496,6 +13914,9 @@
 /area/intrepid/department/civillian/dockbayfour)
 "WV" = (
 /obj/machinery/suit_storage_unit/standard_unit,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/misc/maint/superstructure)
 "WX" = (
@@ -13525,6 +13946,10 @@
 /obj/structure/sign/warning/detailed{
 	dir = 8;
 	pixel_x = 37
+	},
+/obj/machinery/camera/motion{
+	c_tag = "Command - Self Destruct Entrance";
+	network = list("Command")
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/selfdestruct)
@@ -13902,6 +14327,14 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/turbolift/port/lift)
+"Yq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled,
+/area/intrepid/misc/maint/superstructure)
 "Yr" = (
 /obj/machinery/vending/sol{
 	dir = 1
@@ -13923,6 +14356,7 @@
 /obj/machinery/atmospherics/unary/engine{
 	dir = 8
 	},
+/obj/effect/paint/red,
 /turf/simulated/wall/r_titanium,
 /area/space)
 "Yv" = (
@@ -14277,6 +14711,13 @@
 /obj/effect/wallframe_spawn/reinforced,
 /turf/space,
 /area/intrepid/department/command/obstructionfielddisperser)
+"Zz" = (
+/obj/structure/dispenser/oxygen,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/intrepid/misc/maint/superstructure)
 "ZA" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/machinery/atmospherics/pipe/simple/visible/red{
@@ -14300,6 +14741,23 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbayone)
+"ZE" = (
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/camera/network/second_deck{
+	c_tag = "Second Deck - Port Fore Hallway";
+	dir = 1
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper)
 "ZF" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -26167,7 +26625,7 @@ tV
 tV
 tV
 tV
-WV
+QE
 yd
 Wj
 rk
@@ -26211,7 +26669,7 @@ tV
 Wv
 PV
 Ly
-fX
+CG
 tV
 rk
 ni
@@ -26219,7 +26677,7 @@ TR
 as
 Wj
 yd
-WV
+dP
 tV
 tV
 tV
@@ -26369,18 +26827,18 @@ ml
 ml
 tV
 tV
-rz
-yd
+Zz
+Nd
 rM
-yd
-yd
-yd
-yd
-rM
-fX
+br
+Eb
+dB
+Ix
+yp
+Tb
 eB
 eB
-Fg
+VF
 tV
 qT
 UU
@@ -26414,13 +26872,13 @@ Fg
 eB
 eB
 fX
+yp
+Ix
+Yq
+Eb
+br
 rM
-yd
-yd
-yd
-yd
-rM
-yd
+jH
 rz
 tV
 tV
@@ -26572,11 +27030,11 @@ ml
 tV
 tV
 WV
-yd
+qV
 Wj
-Ff
-wi
-Rh
+QO
+lE
+CB
 Uo
 tV
 LW
@@ -26620,9 +27078,9 @@ tV
 Ff
 wi
 Rh
-Uo
+qr
 Wj
-yd
+qV
 WV
 tV
 tV
@@ -27178,7 +27636,7 @@ zv
 UK
 LY
 pR
-IF
+Ui
 lk
 IF
 IF
@@ -27228,7 +27686,7 @@ IF
 IF
 IF
 eW
-IF
+ek
 wy
 pJ
 eb
@@ -27387,7 +27845,7 @@ lJ
 lJ
 lJ
 TI
-lJ
+nD
 lJ
 lJ
 oB
@@ -27425,7 +27883,7 @@ lJ
 lJ
 lJ
 TI
-lJ
+SV
 lJ
 lJ
 tV
@@ -27581,7 +28039,7 @@ qY
 ff
 gn
 LY
-ku
+Wg
 lJ
 EY
 oB
@@ -27633,7 +28091,7 @@ tV
 tV
 EY
 lJ
-ai
+rR
 pJ
 Zp
 jA
@@ -27783,7 +28241,7 @@ gW
 IB
 tu
 LY
-ku
+Wg
 lJ
 EY
 tV
@@ -28187,7 +28645,7 @@ mz
 gJ
 gJ
 LY
-ku
+HZ
 JO
 Xw
 ya
@@ -28441,7 +28899,7 @@ rj
 tV
 wO
 hc
-ai
+ZE
 ZT
 oQ
 UN
@@ -30610,7 +31068,7 @@ ml
 tV
 lJ
 ai
-JO
+Qv
 Nx
 rj
 rj
@@ -30664,7 +31122,7 @@ rj
 rj
 rj
 tV
-hc
+yG
 ai
 lJ
 iJ
@@ -33438,7 +33896,7 @@ ml
 oB
 lJ
 ai
-JO
+VD
 Nx
 rj
 rj
@@ -33492,7 +33950,7 @@ rj
 rj
 rj
 tV
-hc
+OF
 ai
 lJ
 iJ
@@ -36265,7 +36723,7 @@ PR
 nU
 LX
 Na
-ai
+qG
 lJ
 oe
 kg
@@ -36321,7 +36779,7 @@ QY
 Tw
 Pr
 lJ
-ai
+Ax
 LQ
 fa
 jO
@@ -39094,7 +39552,7 @@ wj
 Qi
 Rj
 ku
-lJ
+Ux
 yk
 rJ
 uz
@@ -39148,7 +39606,7 @@ ml
 ml
 ml
 oB
-lJ
+Ur
 Uh
 du
 uR
@@ -40512,8 +40970,8 @@ yk
 yk
 rJ
 uz
-JJ
-JJ
+lP
+lP
 JJ
 JJ
 JJ
@@ -40522,8 +40980,8 @@ BK
 JJ
 JJ
 JJ
-JJ
-JJ
+lP
+lP
 kU
 zR
 Nx
@@ -40714,7 +41172,7 @@ ml
 Nx
 rJ
 uz
-JJ
+lP
 nE
 dM
 Qk
@@ -40725,7 +41183,7 @@ pc
 nh
 HS
 nE
-JJ
+lP
 gP
 zH
 vH
@@ -40752,14 +41210,14 @@ Td
 nH
 Ep
 lv
-Ij
+dQ
 dx
 Ze
 nW
 Wi
 dx
 Ij
-dx
+tL
 JS
 dx
 Ij
@@ -40916,7 +41374,7 @@ ml
 Nx
 tN
 uz
-JJ
+lP
 BL
 JJ
 aW
@@ -40927,7 +41385,7 @@ aW
 aW
 JJ
 BL
-JJ
+lP
 kU
 Pk
 ys
@@ -41118,7 +41576,7 @@ ml
 Nx
 rJ
 uz
-JJ
+NW
 Yu
 JJ
 Bz
@@ -41129,7 +41587,7 @@ aW
 Xm
 JJ
 Yu
-JJ
+NW
 lB
 Um
 dI
@@ -43581,13 +44039,13 @@ Lj
 Dw
 uG
 Dw
-Dw
+ee
 SP
-Nd
 Dw
 Dw
 Dw
 Dw
+qb
 uG
 Dw
 Dw
