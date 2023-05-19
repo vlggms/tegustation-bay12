@@ -173,6 +173,10 @@
 	return ..()
 
 /obj/machinery/scanner_gate/interface_interact(mob/user)
+	interact(user)
+	return TRUE
+
+/obj/machinery/scanner_gate/interact(mob/user)
 	if(locked)
 		to_chat(user, SPAN_WARNING("\The [src]'s control panel is locked!"))
 		return FALSE
@@ -223,6 +227,7 @@
 				if("Full")
 					detect_nutrition = 450
 
+	playsound(loc, 'sound/machines/pda_click.ogg', 25, TRUE)
 	add_fingerprint(usr)
 	updateUsrDialog()
 	return TRUE
