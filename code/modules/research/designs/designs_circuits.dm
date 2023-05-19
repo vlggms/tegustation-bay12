@@ -388,6 +388,13 @@
 	build_path = /obj/item/stock_parts/circuitboard/air_management/injector_control
 	sort_string = "JAAAH"
 
+/datum/design/circuit/scangate
+	name = "scanner gate"
+	id = "scannergate"
+	req_tech = list(TECH_DATA = 2)
+	build_path = /obj/item/stock_parts/circuitboard/scanner_gate
+	sort_string = "JAAAI"
+
 /datum/design/circuit/pacman
 	name = "PACMAN-type generator"
 	id = "pacman"
