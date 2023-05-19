@@ -112,7 +112,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
 "at" = (
 /obj/effect/shuttle_landmark/ninja,
 /turf/space,
@@ -122,7 +122,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white/monotile,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
 "aw" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 5;
@@ -388,7 +388,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
 "bt" = (
 /obj/machinery/computer/modular/preset/cardslot/command{
 	dir = 1;
@@ -447,6 +447,28 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/exploration/hangar)
+"bA" = (
+/obj/structure/railing/mapped{
+	dir = 4;
+	icon_state = "railing0-1"
+	},
+/obj/structure/railing/mapped{
+	dir = 8;
+	icon_state = "railing0-1"
+	},
+/obj/structure/railing/mapped{
+	dir = 1;
+	icon_state = "railing0-1"
+	},
+/obj/structure/railing/mapped,
+/obj/structure/flora/pottedplant/tropical{
+	pixel_y = 8
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/intrepid/department/civillian/safe_room/port)
 "bB" = (
 /obj/structure/railing/mapped,
 /obj/machinery/conveyor{
@@ -548,6 +570,12 @@
 /obj/machinery/power/solar/improved,
 /turf/simulated/floor,
 /area/space)
+"bO" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/intrepid/department/civillian/safe_room/port)
 "bP" = (
 /obj/machinery/atmospherics/binary/pump/high_power{
 	dir = 4
@@ -797,6 +825,11 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/tcommsat)
+"cJ" = (
+/obj/effect/wallframe_spawn/reinforced_phoron/hull,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/plating,
+/area/intrepid/department/civillian/archive)
 "cL" = (
 /obj/effect/floor_decal/corner/brown/half{
 	dir = 4;
@@ -1001,7 +1034,7 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
 "dE" = (
 /obj/structure/cable/orange{
 	icon_state = "5-6"
@@ -1076,7 +1109,7 @@
 	pixel_y = -27
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/port)
 "dQ" = (
 /obj/effect/floor_decal/corner/brown/half{
 	dir = 8;
@@ -1264,7 +1297,7 @@
 /obj/structure/iv_drip,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/white,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
 "eC" = (
 /obj/structure/catwalk,
 /obj/structure/cable{
@@ -1289,7 +1322,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
 "eH" = (
 /obj/structure/railing/mapped,
 /obj/structure/cable/green{
@@ -1313,6 +1346,11 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
+"eL" = (
+/obj/machinery/door/airlock/multi_tile/glass/research,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/intrepid/department/civillian/archive)
 "eM" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
@@ -1488,6 +1526,18 @@
 	},
 /turf/simulated/floor/reinforced/phoron,
 /area/intrepid/department/engineering/atmos)
+"fm" = (
+/obj/structure/bed/chair/office/comfy{
+	dir = 4
+	},
+/obj/structure/bookcase{
+	pixel_y = -32;
+	density = 0;
+	opacity = 0
+	},
+/obj/effect/floor_decal/corner/purple/diagonal,
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/department/civillian/archive)
 "fo" = (
 /turf/simulated/floor/shuttle/black,
 /area/intrepid/department/engineering/portthruster)
@@ -1506,6 +1556,16 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbayfive)
+"ft" = (
+/obj/machinery/door/airlock/highsecurity,
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/intrepid/department/civillian/safe_room/starboard)
 "fu" = (
 /obj/machinery/door/blast/regular/open{
 	icon_state = "pdoor0";
@@ -1515,6 +1575,13 @@
 /obj/effect/paint_stripe/blue,
 /turf/simulated/floor,
 /area/intrepid/department/civillian/dockbayfour)
+"fv" = (
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 23
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/intrepid/department/civillian/dockbayfive)
 "fx" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/effect/paint_stripe/blue,
@@ -1655,7 +1722,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/white,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/port)
 "fY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/meter{
@@ -1721,6 +1788,10 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/pandora/cargo)
+"gk" = (
+/obj/structure/girder,
+/turf/simulated/floor,
+/area/intrepid/misc/hallway/portside)
 "gm" = (
 /obj/effect/paint_stripe/blue,
 /turf/simulated/wall/r_wall/prepainted,
@@ -1739,6 +1810,16 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/engine_room/aux)
+"go" = (
+/obj/structure/railing/mapped{
+	dir = 8;
+	icon_state = "railing0-1"
+	},
+/obj/machinery/camera/network/second_deck{
+	c_tag = "Second Deck - Archive Entrance"
+	},
+/turf/simulated/open,
+/area/intrepid/misc/hallway/portside)
 "gp" = (
 /obj/machinery/light{
 	dir = 8
@@ -1792,6 +1873,10 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/engineering/engine_room)
+"gv" = (
+/obj/machinery/light,
+/turf/simulated/open,
+/area/intrepid/misc/hallway/portside)
 "gw" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -1859,13 +1944,13 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white/monotile,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
 "gD" = (
 /obj/machinery/atmospherics/unary/tank/air{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
 "gF" = (
 /obj/machinery/vending/weeb,
 /turf/simulated/floor/tiled/techfloor,
@@ -2067,6 +2152,20 @@
 /obj/structure/railing/mapped,
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
+"ht" = (
+/obj/structure/ladder,
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/light/small/dystopian{
+	dir = 4
+	},
+/turf/simulated/open,
+/area/intrepid/department/civillian/archive)
 "hu" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 8
@@ -2298,6 +2397,12 @@
 	},
 /turf/simulated/floor/reinforced/hydrogen,
 /area/intrepid/department/engineering/atmos)
+"ia" = (
+/obj/machinery/atmospherics/unary/tank/air{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/intrepid/department/civillian/safe_room/port)
 "ih" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2464,6 +2569,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/engineering/portthruster)
+"iN" = (
+/obj/structure/lattice,
+/turf/simulated/open,
+/area/intrepid/misc/hallway/portside)
 "iO" = (
 /obj/machinery/portable_atmospherics/canister/nitrogen,
 /obj/machinery/atmospherics/unary/vent_pump/tank{
@@ -2603,6 +2712,17 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/pandora/cargo)
+"jl" = (
+/obj/structure/table/standard,
+/obj/structure/bookcase{
+	pixel_y = -32;
+	density = 0;
+	opacity = 0
+	},
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/machinery/light/dystopian,
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/department/civillian/archive)
 "jn" = (
 /obj/machinery/rotating_alarm{
 	dir = 8;
@@ -2690,6 +2810,20 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/pandora/cargo)
+"jF" = (
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/machinery/power/apc{
+	dir = 1;
+	pixel_y = 23
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/department/civillian/archive)
 "jG" = (
 /obj/machinery/door/blast/shutters{
 	id_tag = "dockshutter1"
@@ -2705,7 +2839,7 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/port)
 "jI" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 9;
@@ -2781,6 +2915,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/civillian/dockbaythree)
+"jV" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/intrepid/department/civillian/safe_room/starboard)
 "jW" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -2789,6 +2931,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/maint/upper)
+"jX" = (
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 23
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/intrepid/department/civillian/dockbaysix)
 "kb" = (
 /turf/simulated/floor/tiled/steel_grid,
 /area/space)
@@ -3290,7 +3439,16 @@
 	pixel_x = 23
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
+"lG" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/intrepid/department/civillian/safe_room/port)
 "lH" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 6
@@ -3748,7 +3906,7 @@
 /obj/structure/table/standard,
 /obj/random/single/playing_cards,
 /turf/simulated/floor/tiled,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
 "nl" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	frequency = 1441;
@@ -3923,6 +4081,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/cargo/cargostorage)
+"nR" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 9;
+	icon_state = "intact"
+	},
+/turf/simulated/floor/tiled/white,
+/area/intrepid/department/civillian/safe_room/port)
 "nT" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 4
@@ -4422,6 +4587,12 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbaythree)
+"pI" = (
+/obj/machinery/atmospherics/unary/tank{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/intrepid/department/civillian/safe_room/starboard)
 "pJ" = (
 /obj/machinery/door/blast/shutters{
 	id_tag = "tankaccess";
@@ -4490,6 +4661,13 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
+"qa" = (
+/obj/machinery/suit_storage_unit/standard_unit,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/intrepid/department/civillian/safe_room/port)
 "qb" = (
 /obj/effect/floor_decal/corner/brown/half{
 	dir = 4;
@@ -4550,6 +4728,13 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbaytwo)
+"qk" = (
+/obj/structure/railing/mapped{
+	dir = 4;
+	icon_state = "railing0-1"
+	},
+/turf/simulated/open,
+/area/intrepid/misc/hallway/portside)
 "qm" = (
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -4574,7 +4759,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/port)
 "qs" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/machinery/atmospherics/binary/pump/high_power{
@@ -4729,7 +4914,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
 "qW" = (
 /obj/effect/floor_decal/corner/lightgrey/half{
 	dir = 1
@@ -4761,9 +4946,15 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "rc" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/blue,
-/turf/simulated/wall/r_wall/hull,
-/area/intrepid/misc/maint/superstructure)
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/open,
+/area/intrepid/department/civillian/archive)
 "rd" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -4823,7 +5014,7 @@
 "rk" = (
 /obj/structure/bed/chair,
 /turf/simulated/floor/tiled,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/port)
 "rl" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -4902,7 +5093,7 @@
 /obj/structure/dispenser/oxygen,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/tiled/monotile,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/port)
 "rA" = (
 /obj/machinery/portable_atmospherics/canister/hydrogen,
 /obj/structure/railing/mapped,
@@ -4948,6 +5139,14 @@
 "rH" = (
 /turf/simulated/floor/tiled/monotile,
 /area/tcommsat)
+"rI" = (
+/obj/structure/railing/mapped{
+	dir = 8;
+	icon_state = "railing0-1"
+	},
+/obj/structure/lattice,
+/turf/simulated/open,
+/area/intrepid/misc/hallway/portside)
 "rJ" = (
 /obj/effect/floor_decal/corner/brown/half{
 	dir = 1;
@@ -4955,6 +5154,14 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/misc/maint/upper)
+"rK" = (
+/obj/machinery/door/blast/regular{
+	dir = 4;
+	id_tag = "superstructarchive";
+	name = "Archive Superstructure Maintaince Shaft Blast Door"
+	},
+/turf/simulated/floor/plating,
+/area/intrepid/department/civillian/archive)
 "rL" = (
 /obj/machinery/computer/ship/navigation{
 	dir = 8;
@@ -4971,7 +5178,14 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/port)
+"rO" = (
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 23
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/intrepid/department/civillian/dockbaythree)
 "rP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
@@ -5185,7 +5399,7 @@
 	req_access = list("ACCESS_MERCHANT")
 	},
 /turf/simulated/floor/tiled/white,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
 "sw" = (
 /obj/machinery/door/airlock/external/bolted_open{
 	icon_state = "open"
@@ -5289,7 +5503,11 @@
 	pixel_y = 11
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
+"sL" = (
+/obj/structure/sign/warning/fall,
+/turf/simulated/wall/r_wall/prepainted,
+/area/intrepid/department/civillian/archive)
 "sM" = (
 /obj/structure/closet/secure_closet/psiadvisor{
 	anchored = 1
@@ -5472,6 +5690,9 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
+"ty" = (
+/turf/simulated/wall/r_wall/hull,
+/area/intrepid/department/civillian/archive)
 "tz" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/handrail{
@@ -5746,6 +5967,13 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/security/portdockingbaysecurity)
+"ug" = (
+/obj/structure/table/rack,
+/obj/item/reagent_containers/ivbag/nanoblood,
+/obj/item/reagent_containers/ivbag/nanoblood,
+/obj/item/reagent_containers/glass/beaker/cryoxadone,
+/turf/simulated/floor/tiled/white/monotile,
+/area/intrepid/department/civillian/safe_room/starboard)
 "uh" = (
 /obj/machinery/door/blast/regular{
 	id_tag = "externaldockblastdoor3"
@@ -5927,6 +6155,12 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbayone)
+"uD" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/universal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/intrepid/department/civillian/safe_room/port)
 "uF" = (
 /obj/structure/railing/mapped{
 	dir = 8
@@ -6012,7 +6246,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/port)
 "uU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -6411,7 +6645,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/port)
 "wj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -6439,6 +6673,18 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
+"wo" = (
+/obj/structure/bed/chair/office/comfy{
+	dir = 8
+	},
+/obj/structure/bookcase{
+	pixel_y = -32;
+	density = 0;
+	opacity = 0
+	},
+/obj/effect/floor_decal/corner/purple/diagonal,
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/department/civillian/archive)
 "wp" = (
 /obj/machinery/pipedispenser/disposal,
 /obj/machinery/atmospherics/pipe/manifold/visible/supply,
@@ -6686,6 +6932,9 @@
 	},
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/misc/maint/superstructure)
+"xc" = (
+/turf/simulated/wall/r_wall/hull,
+/area/intrepid/department/civillian/safe_room/starboard)
 "xe" = (
 /obj/machinery/alarm{
 	dir = 8;
@@ -6774,6 +7023,13 @@
 "xr" = (
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/command/commandquarters/psiadvisor)
+"xt" = (
+/obj/machinery/door/airlock/highsecurity,
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/monotile,
+/area/intrepid/department/civillian/safe_room/starboard)
 "xv" = (
 /obj/machinery/atmospherics/portables_connector,
 /turf/simulated/floor/tiled/monotile,
@@ -6948,12 +7204,19 @@
 /obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/superstructure)
+"yb" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/hallway/portside)
 "yd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
 "yf" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
@@ -6980,6 +7243,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/exploration/hangar)
+"yh" = (
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 23
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/intrepid/department/civillian/dockbayfour)
 "yi" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/sleeper{
@@ -6990,6 +7260,13 @@
 "yk" = (
 /turf/simulated/wall/prepainted,
 /area/intrepid/misc/maint/upper)
+"ym" = (
+/obj/machinery/vending/medical,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/intrepid/department/civillian/safe_room/starboard)
 "yo" = (
 /turf/simulated/floor/shuttle/black,
 /area/intrepid/department/engineering/starboardthruster)
@@ -6999,7 +7276,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/monotile,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/port)
 "yq" = (
 /obj/structure/lattice,
 /obj/structure/railing/mapped{
@@ -7072,6 +7349,10 @@
 /obj/effect/wallframe_spawn/reinforced,
 /turf/simulated/floor,
 /area/intrepid/department/civillian/dockbayfour)
+"yC" = (
+/obj/effect/floor_decal/corner/purple/diagonal,
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/department/civillian/archive)
 "yD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
@@ -7264,6 +7545,13 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/misc/maint/upper)
+"zj" = (
+/obj/machinery/computer/modular/preset/library{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple/mono,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/intrepid/department/civillian/archive)
 "zm" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
 	dir = 4
@@ -7381,6 +7669,17 @@
 	},
 /turf/simulated/open,
 /area/intrepid/misc/maint/upper)
+"zF" = (
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4;
+	level = 2
+	},
+/obj/machinery/alarm{
+	pixel_y = 23
+	},
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/department/civillian/archive)
 "zH" = (
 /obj/effect/floor_decal/corner/brown/half,
 /obj/structure/cable/green{
@@ -7512,7 +7811,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white/monotile,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
 "Ag" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -7711,6 +8010,10 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/pandora/cockpit)
+"AR" = (
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled,
+/area/intrepid/department/civillian/safe_room/starboard)
 "AS" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/effect/paint_stripe/blue,
@@ -7735,6 +8038,12 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/portthruster)
+"AV" = (
+/obj/structure/flora/pottedplant/dead{
+	pixel_y = 11
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/intrepid/department/civillian/safe_room/port)
 "AW" = (
 /obj/machinery/power/apc{
 	pixel_y = -23
@@ -7869,6 +8178,11 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/exploration/hangar)
+"Bo" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/plating,
+/area/intrepid/department/civillian/archive)
 "Bq" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
@@ -8198,6 +8512,14 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/department/command/obstructionfielddisperser)
+"Cz" = (
+/turf/simulated/wall/r_wall/prepainted,
+/area/intrepid/department/civillian/archive)
+"CA" = (
+/obj/structure/table/standard,
+/obj/random/single/playing_cards,
+/turf/simulated/floor/tiled,
+/area/intrepid/department/civillian/safe_room/port)
 "CB" = (
 /obj/effect/floor_decal/industrial/firstaid/fulltile,
 /obj/structure/closet/crate/med_crate/oxyloss,
@@ -8209,7 +8531,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
 "CC" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/tiled/steel_grid,
@@ -8237,7 +8559,7 @@
 	pixel_y = -23
 	},
 /turf/simulated/floor/tiled/white,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/port)
 "CH" = (
 /obj/effect/landmark{
 	name = "xeno_spawn";
@@ -8291,6 +8613,15 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/pandora/cockpit)
+"CR" = (
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/intrepid/department/civillian/safe_room/port)
 "CS" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
 	dir = 8
@@ -8399,6 +8730,12 @@
 /obj/effect/floor_decal/corner/white/mono,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/exploration/hangar)
+"Dl" = (
+/obj/machinery/sleeper{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/intrepid/department/civillian/safe_room/port)
 "Do" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -8491,6 +8828,14 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/intrepid/department/engineering/engine_room/aux)
+"DE" = (
+/obj/machinery/button/blast_door{
+	id_tag = "superstructarchive";
+	name = "Superstructure Maintaince Shaft Electrical Compartment Blast Door button";
+	req_access = list("ACCESS_CONSTRUCTION")
+	},
+/turf/simulated/wall/r_wall/prepainted,
+/area/intrepid/department/civillian/archive)
 "DH" = (
 /obj/machinery/suit_storage_unit/engineering,
 /obj/effect/floor_decal/industrial/outline/orange,
@@ -8547,6 +8892,13 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/superstructure)
+"DO" = (
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 23
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/intrepid/department/civillian/dockbaytwo)
 "DP" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 5;
@@ -8596,7 +8948,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/port)
 "Ec" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -8608,6 +8960,12 @@
 	},
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/misc/maint/superstructure)
+"Ed" = (
+/obj/structure/bed/roller,
+/obj/structure/iv_drip,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/white,
+/area/intrepid/department/civillian/safe_room/port)
 "Ee" = (
 /obj/effect/paint/red,
 /obj/structure/fuel_port,
@@ -8697,6 +9055,13 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
+"Er" = (
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/department/civillian/archive)
 "Es" = (
 /obj/structure/sign/terragov,
 /turf/simulated/wall/r_wall/hull,
@@ -8705,7 +9070,7 @@
 /obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor,
 /turf/simulated/floor,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/misc/maint/upper)
 "Ew" = (
 /obj/machinery/door/blast/regular{
 	id_tag = "topdeckmaintshaft3";
@@ -8901,7 +9266,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/port)
 "Fg" = (
 /obj/machinery/bodyscanner{
 	dir = 4
@@ -8910,7 +9275,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/port)
 "Fi" = (
 /turf/simulated/floor/shuttle/black,
 /area/intrepid/department/exploration/hangar)
@@ -8967,6 +9332,26 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
+"Fz" = (
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/department/civillian/archive)
+"FA" = (
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 23
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/intrepid/department/civillian/dockbayone)
 "FB" = (
 /obj/machinery/hologram/holopad/longrange{
 	identifier = "Pandora Cockpit"
@@ -9021,6 +9406,13 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/bluegrid,
 /area/tcommsat)
+"FJ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/intrepid/department/civillian/safe_room/port)
 "FK" = (
 /obj/machinery/light{
 	dir = 1
@@ -9168,6 +9560,14 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room/aux)
+"Gk" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/intrepid/department/civillian/archive)
 "Gl" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -9202,6 +9602,12 @@
 	},
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/department/exploration/hangar)
+"Gu" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/open,
+/area/intrepid/misc/hallway/portside)
 "Gv" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4;
@@ -9274,7 +9680,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
 "GH" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -9423,6 +9829,22 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/civillian/dockbayfour)
+"Hb" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor,
+/area/intrepid/department/civillian/archive)
+"Hc" = (
+/obj/machinery/atmospherics/unary/tank/oxygen{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/intrepid/department/civillian/safe_room/starboard)
+"Hd" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor,
+/area/intrepid/department/civillian/safe_room/port)
 "He" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -9504,6 +9926,10 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
+"Hu" = (
+/obj/effect/wallframe_spawn/reinforced,
+/turf/simulated/floor,
+/area/intrepid/misc/hallway/portside)
 "Hv" = (
 /turf/simulated/floor/reinforced/airless,
 /area/intrepid/department/engineering/atmos)
@@ -9677,6 +10103,12 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
+"Ic" = (
+/obj/machinery/atmospherics/pipe/manifold/visible{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/intrepid/department/civillian/safe_room/starboard)
 "Ie" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -9805,7 +10237,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
 "Iy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 8
@@ -9882,6 +10314,15 @@
 /obj/structure/lattice,
 /turf/space,
 /area/space)
+"IN" = (
+/obj/machinery/libraryscanner,
+/obj/effect/floor_decal/corner/purple/mono,
+/obj/machinery/camera/network/second_deck{
+	c_tag = "Second Deck - Archive";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/intrepid/department/civillian/archive)
 "IP" = (
 /obj/effect/floor_decal/industrial/warning/fulltile,
 /obj/structure/sign/warning/airlock{
@@ -10105,6 +10546,15 @@
 /obj/structure/bed/chair/office,
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/engineering/engine_room)
+"JD" = (
+/obj/machinery/door/firedoor,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/intrepid/department/civillian/archive)
 "JE" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/sign/warning/compressed_gas{
@@ -10235,6 +10685,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/morgue)
+"JZ" = (
+/obj/structure/bookcase/manuals/engineering{
+	pixel_x = 32;
+	density = 0;
+	opacity = 0
+	},
+/obj/effect/floor_decal/corner/purple/mono,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/intrepid/department/civillian/archive)
 "Ka" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -10334,6 +10793,9 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/misc/maint/upper)
+"Km" = (
+/turf/simulated/wall/r_wall/hull,
+/area/intrepid/department/civillian/safe_room/port)
 "Kr" = (
 /obj/machinery/button/blast_door{
 	id_tag = "hangarmaintshaft";
@@ -10450,11 +10912,20 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/civillian/dockbayone)
+"KM" = (
+/obj/machinery/atmospherics/unary/freezer{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/intrepid/department/civillian/safe_room/port)
 "KP" = (
 /obj/effect/paint_stripe/blue,
 /obj/machinery/newscaster/security_unit,
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/department/security/portdockingbaysecurity)
+"KS" = (
+/turf/simulated/wall/r_wall/prepainted,
+/area/intrepid/department/civillian/safe_room/port)
 "KT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 8
@@ -10488,6 +10959,10 @@
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room)
+"Lb" = (
+/obj/structure/girder,
+/turf/simulated/floor/plating,
+/area/intrepid/misc/maint/superstructure)
 "Le" = (
 /obj/machinery/power/smes/buildable/preset/torch/substation_full{
 	RCon_tag = "Substation - Top Deck"
@@ -10621,7 +11096,7 @@
 	icon_state = "intact"
 	},
 /turf/simulated/floor/tiled/white,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
 "LA" = (
 /obj/machinery/door/blast/shutters{
 	id_tag = "eva";
@@ -10782,7 +11257,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white/monotile,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/port)
 "LX" = (
 /obj/structure/closet/firecloset,
 /obj/structure/railing/mapped,
@@ -10922,6 +11397,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/pandora/cockpit)
+"Mw" = (
+/obj/structure/bookcase/manuals/medical{
+	pixel_x = -32;
+	density = 0;
+	opacity = 0
+	},
+/obj/effect/floor_decal/corner/purple/mono,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/intrepid/department/civillian/archive)
 "Mx" = (
 /obj/effect/paint_stripe/blue,
 /obj/machinery/newscaster,
@@ -11121,7 +11605,7 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
 "Ne" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
@@ -11265,6 +11749,12 @@
 "Nx" = (
 /turf/simulated/wall/prepainted,
 /area/intrepid/misc/maint/superstructure)
+"Nz" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/intrepid/department/civillian/safe_room/starboard)
 "NA" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -11504,7 +11994,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/intrepid/misc/maint/upper)
+/area/intrepid/department/civillian/safe_room/starboard)
 "Os" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -11716,6 +12206,10 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbayfour)
+"Pe" = (
+/obj/machinery/door/airlock/multi_tile/glass/research,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/intrepid/department/civillian/archive)
 "Pi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -11977,7 +12471,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/port)
 "PZ" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -12177,7 +12671,7 @@
 	pixel_y = 27
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
 "QF" = (
 /obj/effect/wallframe_spawn/reinforced,
 /turf/simulated/floor,
@@ -12214,7 +12708,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
 "QS" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 1;
@@ -12226,15 +12720,8 @@
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room)
 "QT" = (
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/black,
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor,
-/area/intrepid/misc/maint/upper)
+/turf/simulated/open,
+/area/intrepid/misc/hallway/portside)
 "QW" = (
 /obj/machinery/light,
 /obj/machinery/atmospherics/pipe/simple/visible/green{
@@ -12314,7 +12801,7 @@
 	pixel_x = 23
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/port)
 "Rj" = (
 /obj/effect/paint_stripe/blue,
 /turf/simulated/wall/r_wall/prepainted,
@@ -12360,6 +12847,16 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/engineering/engine_room)
+"Rs" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/intrepid/department/civillian/safe_room/port)
 "Ru" = (
 /obj/effect/floor_decal/corner/yellow/half{
 	dir = 1
@@ -12505,6 +13002,30 @@
 	},
 /turf/simulated/floor/wood,
 /area/intrepid/department/command/commandquarters/psiadvisor)
+"Sa" = (
+/obj/structure/railing/mapped{
+	dir = 8;
+	icon_state = "railing0-1"
+	},
+/turf/simulated/open,
+/area/intrepid/misc/hallway/portside)
+"Sb" = (
+/obj/structure/bookcase/manuals/research_and_development{
+	pixel_x = -32;
+	opacity = 0;
+	density = 0
+	},
+/obj/structure/bookcase{
+	pixel_y = -32;
+	density = 0;
+	opacity = 0
+	},
+/obj/structure/bed/chair/office/comfy{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/purple/mono,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/intrepid/department/civillian/archive)
 "Sd" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
@@ -12526,6 +13047,9 @@
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/eva)
+"Si" = (
+/turf/simulated/wall/r_wall/prepainted,
+/area/intrepid/department/civillian/safe_room/starboard)
 "Sn" = (
 /obj/machinery/light{
 	dir = 8
@@ -12620,6 +13144,23 @@
 /obj/structure/flora/pottedplant/deskfern,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/security/portdockingbaysecurity)
+"SD" = (
+/obj/structure/bookcase/manuals/xenoarchaeology{
+	pixel_x = 32;
+	opacity = 0;
+	density = 0
+	},
+/obj/structure/bookcase{
+	pixel_y = -32;
+	density = 0;
+	opacity = 0
+	},
+/obj/structure/bed/chair/office/comfy{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/purple/mono,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/intrepid/department/civillian/archive)
 "SG" = (
 /obj/structure/closet/firecloset,
 /obj/structure/railing/mapped,
@@ -12789,7 +13330,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/white,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
 "Tc" = (
 /obj/structure/lattice,
 /obj/structure/ladder,
@@ -13022,7 +13563,7 @@
 "TR" = (
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/port)
 "TS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 8
@@ -13069,6 +13610,15 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/misc/maint/upper)
+"Ud" = (
+/obj/structure/ladder,
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/machinery/light/small/dystopian{
+	dir = 8
+	},
+/turf/simulated/open,
+/area/intrepid/department/civillian/archive)
 "Uf" = (
 /obj/structure/railing/mapped,
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
@@ -13124,7 +13674,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
 "Ur" = (
 /obj/machinery/camera/network/second_deck{
 	c_tag = "Second Deck - Port Aft Hallway"
@@ -13185,6 +13735,13 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
+"Uz" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/intrepid/misc/hallway/portside)
 "UA" = (
 /obj/structure/closet/crate/bin,
 /obj/machinery/firealarm{
@@ -13205,7 +13762,12 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white/monotile,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
+"UG" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/turf/simulated/open,
+/area/intrepid/department/civillian/archive)
 "UH" = (
 /obj/structure/flora/pottedplant/floorleaf,
 /obj/machinery/camera/network/security{
@@ -13362,6 +13924,18 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/pandora/cockpit)
+"Vg" = (
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper)
 "Vh" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
@@ -13512,7 +14086,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/port)
 "VD" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -13523,6 +14097,12 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
+"VE" = (
+/obj/machinery/atmospherics/unary/cryo_cell{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/intrepid/department/civillian/safe_room/port)
 "VF" = (
 /obj/machinery/bodyscanner{
 	dir = 4
@@ -13531,7 +14111,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
 "VG" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /turf/simulated/floor/tiled/steel_grid,
@@ -13690,7 +14270,7 @@
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/firedoor,
 /turf/simulated/floor,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
 "Wk" = (
 /obj/machinery/atmospherics/pipe/simple/visible/supply,
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
@@ -13746,7 +14326,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/port)
 "Ww" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -13892,7 +14472,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/port)
 "WR" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -13918,7 +14498,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
 "WX" = (
 /obj/machinery/light{
 	dir = 1
@@ -13976,6 +14556,16 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbayfive)
+"Xe" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	icon_state = "32-2"
+	},
+/obj/machinery/atmospherics/pipe/zpipe/down/scrubbers,
+/obj/machinery/atmospherics/pipe/zpipe/down/supply,
+/turf/simulated/open,
+/area/intrepid/department/civillian/archive)
 "Xg" = (
 /obj/machinery/rotating_alarm{
 	dir = 4;
@@ -14109,6 +14699,10 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/intrepid/department/civillian/dockbaythree)
+"XC" = (
+/obj/structure/bed/chair,
+/turf/simulated/floor/tiled,
+/area/intrepid/department/civillian/safe_room/starboard)
 "XD" = (
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/selfdestruct)
@@ -14212,7 +14806,14 @@
 /obj/item/reagent_containers/ivbag/nanoblood,
 /obj/item/reagent_containers/glass/beaker/cryoxadone,
 /turf/simulated/floor/tiled/white/monotile,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/port)
+"XZ" = (
+/obj/machinery/door/airlock/maintenance,
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper)
 "Ya" = (
 /turf/simulated/floor,
 /area/space)
@@ -14334,7 +14935,7 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/port)
 "Yr" = (
 /obj/machinery/vending/sol{
 	dir = 1
@@ -14452,6 +15053,14 @@
 /obj/effect/shuttle_landmark/merc/deck2,
 /turf/space,
 /area/space)
+"YO" = (
+/obj/structure/railing/mapped{
+	dir = 4;
+	icon_state = "railing0-1"
+	},
+/obj/structure/lattice,
+/turf/simulated/open,
+/area/intrepid/misc/hallway/portside)
 "YP" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -14717,7 +15326,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/monotile,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/starboard)
 "ZA" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/machinery/atmospherics/pipe/simple/visible/red{
@@ -14777,7 +15386,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white/monotile,
-/area/intrepid/misc/maint/superstructure)
+/area/intrepid/department/civillian/safe_room/port)
 "ZI" = (
 /obj/effect/wallframe_spawn/reinforced,
 /turf/simulated/floor,
@@ -26017,22 +26626,22 @@ UU
 UU
 Ya
 Ya
-qT
-qT
-qT
-qT
-qT
-qT
-qT
-qT
-qT
-qT
-qT
-qT
-qT
-qT
-qT
-qT
+xc
+xc
+xc
+xc
+xc
+xc
+xc
+xc
+xc
+xc
+xc
+xc
+xc
+xc
+xc
+xc
 UU
 UU
 UU
@@ -26058,22 +26667,22 @@ UU
 UU
 UU
 UU
-qT
-qT
-qT
-qT
-qT
-qT
-qT
-qT
-qT
-qT
-qT
-qT
-qT
-qT
-qT
-qT
+Km
+Km
+Km
+Km
+Km
+Km
+Km
+Km
+Km
+Km
+Km
+Km
+Km
+Km
+Km
+Km
 Ya
 Ya
 UU
@@ -26219,22 +26828,22 @@ Ya
 Ya
 qT
 qT
-qT
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-qT
+xc
+Si
+Si
+Si
+Si
+Si
+Si
+Si
+Si
+Si
+Si
+Si
+Si
+Si
+Si
+xc
 UU
 UU
 UU
@@ -26260,22 +26869,22 @@ UU
 UU
 UU
 UU
-qT
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-qT
+Km
+KS
+KS
+KS
+KS
+KS
+KS
+KS
+KS
+KS
+KS
+KS
+KS
+KS
+KS
+Km
 qT
 qT
 Ya
@@ -26421,63 +27030,63 @@ qT
 qT
 qT
 tV
-tV
-tV
+Si
+Si
 gD
-uS
+pI
 Wj
 sJ
-WP
-WP
+Nz
+Nz
 sJ
-tV
+Si
 UF
 Af
+Hc
+ug
+Si
+xc
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+Km
+KS
 ZG
+VE
+KM
 XV
-tV
-qT
-UU
-UU
-UU
-UU
-UU
-UU
-UU
-UU
-UU
-UU
-UU
-UU
-UU
-UU
-UU
-UU
-UU
-UU
-UU
-UU
-UU
-UU
-UU
-UU
-UU
-qT
-tV
-ZG
-UF
-Af
-XV
-tV
-sJ
+KS
+AV
 WP
 WP
-sJ
-Wj
+AV
+Hd
 uS
-gD
-tV
-tV
+ia
+KS
+KS
 tV
 qT
 qT
@@ -26623,22 +27232,22 @@ qT
 tV
 tV
 tV
-tV
-tV
+Si
+Si
 QE
 yd
 Wj
-rk
+XC
 ni
-TR
+AR
 as
-tV
+Si
 sv
-PV
+Ic
 Ly
 eF
-tV
-qT
+Si
+xc
 UU
 UU
 UU
@@ -26664,22 +27273,22 @@ UU
 UU
 UU
 UU
-qT
-tV
+Km
+KS
 Wv
 PV
-Ly
+nR
 CG
-tV
+KS
 rk
-ni
+CA
 TR
-as
-Wj
-yd
+bO
+Hd
+uD
 dP
-tV
-tV
+KS
+KS
 tV
 tV
 tV
@@ -26825,22 +27434,22 @@ tV
 tV
 ml
 ml
-tV
-tV
+Si
+Si
 Zz
 Nd
-rM
+ft
 br
-Eb
+jV
 dB
 Ix
-yp
+xt
 Tb
 eB
 eB
 VF
-tV
-qT
+Si
+xc
 UU
 UU
 UU
@@ -26866,22 +27475,22 @@ UU
 UU
 UU
 UU
-qT
-tV
+Km
+KS
 Fg
-eB
-eB
+Ed
+Ed
 fX
 yp
-Ix
+FJ
 Yq
 Eb
-br
+Rs
 rM
 jH
 rz
-tV
-tV
+KS
+KS
 ml
 ml
 tV
@@ -27027,8 +27636,8 @@ ml
 ml
 ml
 ml
-tV
-tV
+Si
+Si
 WV
 qV
 Wj
@@ -27036,13 +27645,13 @@ QO
 lE
 CB
 Uo
-tV
-LW
+Si
+ym
 av
 av
 gC
-tV
-qT
+Si
+xc
 UU
 UU
 UU
@@ -27068,22 +27677,22 @@ UU
 UU
 UU
 UU
-qT
-tV
-gC
-av
-av
+Km
+KS
+bA
+Dl
+Dl
 LW
-tV
+KS
 Ff
 wi
 Rh
 qr
-Wj
-qV
-WV
-tV
-tV
+Hd
+lG
+qa
+KS
+KS
 ml
 ml
 ml
@@ -27229,22 +27838,22 @@ ml
 ml
 ml
 ml
-tV
-tV
-tV
+Si
+Si
+Si
 GF
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-qT
+Si
+Si
+Si
+Si
+Si
+Si
+Si
+Si
+Si
+Si
+Si
+xc
 UU
 UU
 UU
@@ -27270,22 +27879,22 @@ UU
 UU
 UU
 UU
-qT
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-GF
-tV
-tV
-tV
+Km
+KS
+KS
+KS
+KS
+KS
+KS
+KS
+KS
+KS
+KS
+KS
+CR
+KS
+KS
+KS
 ml
 ml
 ml
@@ -27433,20 +28042,20 @@ LY
 LY
 LY
 LY
-oB
+Si
 Or
-oB
-oB
-oB
-oB
-oB
-oB
-oB
-oB
-oB
-oB
-oB
-Ml
+Si
+Si
+Si
+Si
+Si
+Si
+Si
+Si
+Si
+Si
+Si
+xc
 UU
 UU
 UU
@@ -27472,20 +28081,20 @@ UU
 UU
 UU
 UU
-qT
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
+Km
+KS
+KS
+KS
+KS
+KS
+KS
+KS
+KS
+KS
+KS
+KS
 VA
-tV
+KS
 ZT
 ZT
 ZT
@@ -27886,8 +28495,8 @@ TI
 SV
 lJ
 lJ
-tV
-tV
+oB
+oB
 aN
 AI
 fE
@@ -28084,11 +28693,11 @@ tV
 tV
 tV
 tV
-tV
-tV
-tV
-tV
-tV
+oB
+oB
+oB
+oB
+oB
 EY
 lJ
 rR
@@ -28284,13 +28893,13 @@ UU
 qT
 tV
 ml
+ml
 tV
-rj
-rj
-rj
-rj
-rj
-tV
+QT
+iN
+QT
+gk
+oB
 EY
 lJ
 ai
@@ -28486,13 +29095,13 @@ UU
 qT
 tV
 ml
+ml
 tV
-rj
-rj
-rj
-rj
-rj
-tV
+QT
+iN
+QT
+gk
+oB
 EY
 lJ
 ai
@@ -28688,13 +29297,13 @@ UU
 qT
 tV
 ml
+ml
 tV
-rj
-rj
-rj
-rj
-rj
-Eu
+Gu
+iN
+QT
+gk
+oB
 Xw
 xI
 oV
@@ -28889,14 +29498,14 @@ UU
 UU
 qT
 tV
-TM
+Lb
+Lb
 tV
-rj
-rj
-rj
-rj
-rj
-tV
+QT
+iN
+QT
+gk
+oB
 wO
 hc
 ZE
@@ -29092,13 +29701,13 @@ UU
 qT
 tV
 ml
+ml
 tV
-rj
-rj
-rj
-rj
-rj
-tV
+QT
+iN
+QT
+gk
+oB
 wO
 hc
 ai
@@ -29294,13 +29903,13 @@ UU
 qT
 tV
 ml
+ml
 tV
-rj
-rj
-rj
-rj
-rj
-tV
+QT
+iN
+QT
+gk
+oB
 wO
 hc
 ai
@@ -29496,14 +30105,14 @@ UU
 qT
 tV
 ml
+ml
 tV
-rj
-rj
-rj
-rj
-rj
-tV
-tV
+iN
+iN
+iN
+oB
+oB
+oB
 hc
 Ds
 ZT
@@ -29697,15 +30306,15 @@ UU
 UU
 qT
 tV
-TM
+Lb
+Lb
 tV
-rj
-rj
-rj
-rj
-rj
-rj
-tV
+QT
+iN
+QT
+Hu
+lJ
+oB
 hc
 ai
 ZT
@@ -29900,14 +30509,14 @@ UU
 qT
 tV
 ml
+ml
 tV
-rj
-rj
-rj
-rj
-rj
-rj
-tV
+Gu
+iN
+QT
+Hu
+lJ
+oB
 hc
 ai
 ZT
@@ -30102,14 +30711,14 @@ UU
 qT
 tV
 ml
+ml
 tV
-rj
-rj
-rj
-rj
-rj
-rj
-tV
+QT
+iN
+QT
+Hu
+lJ
+oB
 hc
 yf
 PF
@@ -30304,14 +30913,14 @@ UU
 qT
 tV
 ml
+ml
 tV
-rj
-rj
-rj
-rj
-rj
-rj
-tV
+QT
+iN
+QT
+Hu
+lJ
+oB
 gL
 Qu
 hk
@@ -30506,16 +31115,16 @@ UU
 qT
 tV
 FL
+Lb
 tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
-tV
+iN
+iN
+iN
+oB
+XZ
+oB
+oB
+oB
 hc
 ai
 lJ
@@ -30708,16 +31317,16 @@ UU
 qT
 tV
 ml
+ml
 tV
-rj
-rj
-rj
-rj
-rj
-rj
-rj
-rj
-tV
+QT
+iN
+QT
+Hu
+lJ
+lJ
+lJ
+oB
 OB
 ai
 lJ
@@ -30910,17 +31519,17 @@ UU
 qT
 tV
 ml
+ml
 tV
-rj
-rj
-rj
-rj
-rj
-rj
-rj
-rj
-tV
-hc
+QT
+iN
+QT
+Hu
+lJ
+lJ
+lJ
+oB
+yG
 ai
 lJ
 oI
@@ -31112,17 +31721,17 @@ UU
 qT
 tV
 ml
+ml
 tV
-rj
-rj
-rj
-rj
-rj
-rj
-rj
-rj
-tV
-yG
+Gu
+iN
+QT
+Hu
+lJ
+lJ
+lJ
+Eu
+hc
 ai
 lJ
 iJ
@@ -31313,17 +31922,17 @@ UU
 UU
 qT
 tV
-TM
+Lb
+Lb
 tV
-tV
-rj
-rj
-rj
-rj
-rj
-rj
-rj
-tV
+QT
+iN
+QT
+Hu
+lJ
+lJ
+lJ
+oB
 hc
 ai
 lJ
@@ -31518,14 +32127,14 @@ tV
 ml
 ml
 tV
-rj
-rj
-rj
-rj
-rj
-rj
-rj
-tV
+QT
+iN
+QT
+Hu
+lJ
+lJ
+lJ
+oB
 ps
 OJ
 gm
@@ -31720,14 +32329,14 @@ tV
 tV
 ml
 tV
-rj
-rj
-rj
-rj
-rj
-rj
-rj
-tV
+iN
+iN
+iN
+oB
+oB
+XZ
+oB
+oB
 hc
 ai
 Rp
@@ -31922,14 +32531,14 @@ qT
 tV
 ml
 tV
-rj
-rj
-rj
-rj
-rj
-rj
-rj
-tV
+QT
+QT
+iN
+QT
+Hu
+lJ
+lJ
+oB
 OB
 OE
 vG
@@ -32122,16 +32731,16 @@ UU
 UU
 qT
 tV
-TM
+Lb
 tV
-rj
-rj
-rj
-rj
-rj
-rj
-rj
-tV
+iN
+iN
+iN
+iN
+Hu
+lJ
+lJ
+oB
 hc
 ai
 gm
@@ -32326,14 +32935,14 @@ qT
 tV
 ml
 tV
-rj
-rj
-rj
-rj
-rj
-rj
-rj
-tV
+QT
+QT
+iN
+QT
+Hu
+lJ
+lJ
+oB
 hc
 ai
 gm
@@ -32528,14 +33137,14 @@ qT
 tV
 ml
 tV
-rj
-rj
-rj
-rj
-rj
-rj
-rj
 tV
+QT
+iN
+QT
+Hu
+lJ
+lJ
+oB
 hc
 ai
 gm
@@ -32729,15 +33338,15 @@ UU
 qT
 tV
 ml
+ml
 tV
-rj
-rj
-rj
-rj
-rj
-rj
-rj
-tV
+QT
+iN
+QT
+oB
+XZ
+oB
+oB
 hc
 ai
 gm
@@ -32930,16 +33539,16 @@ UU
 UU
 qT
 tV
-TM
+Lb
+Lb
 tV
-rj
-rj
-rj
-rj
-rj
-rj
-rj
-tV
+yb
+yb
+yb
+oB
+lJ
+lJ
+oB
 hc
 ai
 gm
@@ -33133,15 +33742,15 @@ UU
 qT
 tV
 ml
+ml
 tV
-rj
-rj
-rj
-rj
-rj
-rj
-rj
-tV
+QT
+iN
+QT
+oB
+lJ
+lJ
+oB
 OB
 ai
 gm
@@ -33335,15 +33944,15 @@ UU
 qT
 tV
 ml
+ml
 tV
-rj
-rj
-rj
-rj
-rj
-rj
-rj
-tV
+QT
+iN
+gv
+oB
+lJ
+lJ
+oB
 hc
 ai
 gm
@@ -33486,7 +34095,7 @@ Xp
 GP
 uM
 fx
-Pw
+FA
 rY
 uC
 LT
@@ -33537,22 +34146,22 @@ UU
 qT
 tV
 ml
+ml
 tV
-rj
-rj
-rj
-rj
-rj
-rj
-rj
-tV
+QT
+iN
+QT
+oB
+lJ
+lJ
+oB
 hc
 ai
 gm
 dA
 af
 Vx
-NM
+yh
 AS
 aJ
 lo
@@ -33738,16 +34347,16 @@ UU
 UU
 qT
 tV
-FL
+Lb
+Lb
 tV
-rj
-rj
-rj
-rj
-rj
-rj
-rj
-tV
+iN
+iN
+iN
+Cz
+Cz
+Cz
+Cz
 hc
 ai
 gm
@@ -33941,15 +34550,15 @@ UU
 qT
 tV
 ml
+ml
 tV
-rj
-rj
-rj
-rj
-rj
-rj
-rj
-tV
+QT
+iN
+QT
+Hb
+Mw
+Sb
+Cz
 OF
 ai
 lJ
@@ -34143,15 +34752,15 @@ UU
 qT
 tV
 ml
+ml
 tV
-rj
-rj
-rj
-rj
-rj
-rj
-rj
-tV
+Gu
+iN
+QT
+Hb
+yC
+jl
+Cz
 hc
 ai
 lJ
@@ -34342,18 +34951,18 @@ UU
 UU
 UU
 UU
-qT
-tV
-ml
-tV
-rj
-rj
-rj
-rj
-rj
-rj
-rj
-tV
+ty
+Cz
+rK
+DE
+sL
+qk
+YO
+qk
+Cz
+zF
+wo
+Cz
 OB
 ai
 lJ
@@ -34544,18 +35153,18 @@ IL
 IL
 IL
 IL
-rc
-tV
-TM
-tV
-rj
-rj
-rj
-rj
-rj
-rj
-rj
-tV
+cJ
+Bo
+UG
+Ud
+Pe
+UG
+UG
+UG
+eL
+Er
+IN
+Cz
 hc
 ai
 lJ
@@ -34746,18 +35355,18 @@ IL
 yq
 yq
 yq
+cJ
+Bo
+Xe
+ht
+Gk
 rc
-tV
-ml
-tV
-rj
-rj
-rj
-rj
-rj
-rj
-rj
-tV
+rc
+rc
+JD
+Fz
+zj
+Cz
 hc
 ai
 lJ
@@ -34948,18 +35557,18 @@ DX
 wg
 Fv
 Fv
-qT
-tV
-ml
-tV
-rj
-rj
-rj
-rj
-rj
-rj
-rj
-tV
+ty
+Cz
+rK
+DE
+sL
+go
+rI
+Sa
+Cz
+jF
+fm
+Cz
 hc
 ai
 lJ
@@ -35153,15 +35762,15 @@ iF
 tT
 tV
 ml
+ml
 tV
-rj
-rj
-rj
-rj
-rj
-rj
-rj
-tV
+Gu
+iN
+QT
+Hb
+yC
+jl
+Cz
 hc
 ai
 LQ
@@ -35354,16 +35963,16 @@ oB
 bn
 Vs
 tV
-TM
+ml
+ml
 tV
-rj
-rj
-rj
-rj
-rj
-rj
-rj
-tV
+QT
+iN
+QT
+Hb
+JZ
+SD
+Cz
 hc
 ai
 Mx
@@ -35559,13 +36168,13 @@ tV
 tV
 tV
 tV
-tV
-tV
-eU
-tV
-tV
-tV
-tV
+Uz
+Uz
+Uz
+Cz
+Cz
+Cz
+Cz
 OB
 gs
 Fj
@@ -35762,7 +36371,7 @@ Qu
 Qu
 Qu
 Qu
-QT
+Qu
 Qu
 Qu
 Qu
@@ -35964,7 +36573,7 @@ PF
 PF
 PF
 ub
-PF
+Vg
 PF
 PF
 PF
@@ -37122,7 +37731,7 @@ bX
 Mh
 mo
 Tk
-PR
+DO
 sz
 EB
 ld
@@ -37188,7 +37797,7 @@ LQ
 lz
 FU
 fr
-Jk
+fv
 eJ
 pt
 dZ
@@ -40758,7 +41367,7 @@ CS
 tq
 tz
 ro
-Dy
+rO
 Ls
 fh
 XB
@@ -40824,7 +41433,7 @@ du
 NR
 TG
 vJ
-YF
+jX
 tR
 JH
 il

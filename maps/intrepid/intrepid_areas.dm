@@ -383,14 +383,18 @@
 	name = "\improper Adherent Maintenence"
 	icon_state = "robotics"
 
-/area/intrepid/department/civilian/safe_room/port
+/area/intrepid/department/civillian/archive
+	name = "\improper Archive"
+	icon_state = "purple"
+
+/area/intrepid/department/civillian/safe_room/port
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
 
-/area/intrepid/department/civilian/safe_room/port
+/area/intrepid/department/civillian/safe_room/port
 	name = "\improper Second Deck Port Safe Room"
 	icon_state = "crew_quarters"
 
-/area/intrepid/department/civilian/safe_room/starboard
+/area/intrepid/department/civillian/safe_room/starboard
 	name = "\improper Second Deck Port Safe Room"
 	icon_state = "crew_quarters"
 
