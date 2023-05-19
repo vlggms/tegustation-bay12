@@ -32,6 +32,7 @@
 	idle_power_usage = 10
 	construct_state = /decl/machine_construction/default/panel_closed
 	uncreated_component_parts = null
+	stat_immune = NOINPUT
 	anchored = TRUE
 
 	var/scanline_timer
