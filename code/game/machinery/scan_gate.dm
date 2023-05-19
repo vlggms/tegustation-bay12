@@ -106,7 +106,8 @@
 				var/mob/living/carbon/human/H = M
 				var/perpname = H.get_face_name(H.get_id_name())
 				var/datum/computer_file/report/crew_record/R = get_crewmember_record(perpname)
-				if(!R || (R.fields["Criminal Status"] == "Arrest"))
+				var/datum/report_field/options/crew_record/criminalStatus/CS = locate() in R.fields
+				if(!R || !CS || CS.value == "Arrest")
 					beep = TRUE
 		if(SCANGATE_MINDSHIELD)
 			for(var/obj/item/implant/I in M)
