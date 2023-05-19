@@ -60,19 +60,19 @@
 
 /obj/machinery/scanner_gate/attackby(obj/item/W, mob/user, params)
 	var/obj/item/card/id/card = W
-	if(card)
+	if(istype(card))
 		if(locked)
 			if(allowed(user))
 				locked = FALSE
 				req_access = list()
 				to_chat(user, SPAN_NOTICE("You unlock [src]."))
 		else if(!emagged)
-			to_chat(user, SPAN_NOTICE("You lock [src] with [W]."))
-			var/list/access = W.GetAccess()
+			to_chat(user, SPAN_NOTICE("You lock [src] with [card]."))
+			var/list/access = card.GetAccess()
 			req_access = access
 			locked = TRUE
 		else
-			to_chat(user, SPAN_WARNING("You try to lock [src] with [W], but nothing happens."))
+			to_chat(user, SPAN_WARNING("You try to lock [src] with [card], but nothing happens."))
 	else
 		return ..()
 
