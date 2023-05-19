@@ -323,8 +323,8 @@ proc/age2agedescription(age)
 	. = FALSE
 	if(ishuman(A))
 		var/mob/living/carbon/human/H = A
-		if(H.dna && H.dna.species)
-			var/datum/species/S = H.dna.species
+		if(H.species)
+			var/datum/species/S = H.species
 			if(strict && S.type == species_datum)
 				. = TRUE
 			else if(istype(S, species_datum))
