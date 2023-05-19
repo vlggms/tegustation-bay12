@@ -173,7 +173,11 @@
 	return ..()
 
 /obj/machinery/scanner_gate/interface_interact(mob/user)
-	. = ..()
+	if(locked)
+		to_chat(user, SPAN_WARNING("\The [src]'s control panel is locked!"))
+		return FALSE
+
+	usr.set_machine(src)
 	var/dat
 	dat += "<b>Current mode:</b> <A href='byond://?src=[REF(src)];set_mode=1'>[scangate_mode]</A><br>"
 	switch(scangate_mode)
@@ -188,7 +192,7 @@
 	var/datum/browser/popup = new(user, "scan_gate", "Scanner Gate", 300, 400)
 	popup.set_content(dat)
 	popup.open()
-	return
+	return TRUE
 
 /obj/machinery/scanner_gate/Topic(href, href_list)
 	if(..())
