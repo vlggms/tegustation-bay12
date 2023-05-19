@@ -17,16 +17,16 @@
 		/mob/living/silicon/robot/drone
 		)
 
-/obj/structure/plasticflaps/CanPass(atom/A, turf/T)
+/obj/structure/plasticflaps/CanPass(atom/movable/A, turf/T, height=0, air_group=0)
 	if(istype(A) && A.checkpass(PASS_FLAG_GLASS))
 		return prob(60)
 
 	var/obj/structure/bed/B = A
-	if (istype(A, /obj/structure/bed) && B.buckled_mob)//if it's a bed/chair and someone is buckled, it will not pass
-		return 0
+	if(istype(A, /obj/structure/bed) && B.buckled_mob) // If it's a bed/chair and someone is buckled, it will not pass
+		return FALSE
 
-	if(istype(A, /obj/vehicle))	//no vehicles
-		return 0
+	if(istype(A, /obj/vehicle)) // No vehicles
+		return FALSE
 
 	var/mob/living/M = A
 	if(istype(M))
@@ -39,6 +39,12 @@
 
 	return ..()
 
+/obj/structure/plasticflaps/c_airblock(turf/other)
+	#ifdef ZASDBG
+	ASSERT(isturf(other))
+	#endif
+	return (atmos_canpass != CANPASS_ALWAYS) && anchored
+
 /obj/structure/plasticflaps/attackby(obj/item/W, mob/user)
 	if(isCrowbar(W) && !anchored)
 		user.visible_message(SPAN_NOTICE("\The [user] begins deconstructing \the [src]."), SPAN_NOTICE("You start deconstructing \the [src]."))
@@ -48,8 +54,8 @@
 	if(isScrewdriver(W) && anchored)
 		user.visible_message(SPAN_NOTICE("\The [user] begins adjusting \the [src]."), SPAN_NOTICE("You start adjusting \the [src]."))
 		if(user.do_skilled(3 SECONDS, SKILL_CONSTRUCTION, src))
-			atmos_canpass = (atmos_canpass == CANPASS_ALWAYS ? CANPASS_NEVER : CANPASS_ALWAYS)
-			user.visible_message(SPAN_WARNING("\The [user] adjusts \the [src], [atmos_canpass == CANPASS_NEVER ? "preventing" : "allowing"] air flow."))
+			atmos_canpass = (atmos_canpass == CANPASS_ALWAYS ? CANPASS_PROC : CANPASS_ALWAYS)
+			user.visible_message(SPAN_WARNING("\The [user] adjusts \the [src], [atmos_canpass == CANPASS_PROC ? "preventing" : "allowing"] air flow."))
 	else ..()
 
 /obj/structure/plasticflaps/ex_act(severity)
@@ -64,4 +70,4 @@
 				qdel(src)
 
 /obj/structure/plasticflaps/airtight
-	atmos_canpass = CANPASS_NEVER
+	atmos_canpass = CANPASS_PROC
