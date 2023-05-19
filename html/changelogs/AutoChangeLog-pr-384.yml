@@ -1,0 +1,4 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: Vines now use standardized health. They are also a bit more resistant.
