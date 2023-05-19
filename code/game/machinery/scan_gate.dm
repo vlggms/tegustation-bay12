@@ -1,5 +1,5 @@
 #define SCANGATE_NONE 			"Off"
-#define SCANGATE_MINDSHIELD 	"Mindshield"
+#define SCANGATE_MINDSHIELD 	"Loyalty implant"
 #define SCANGATE_GUNS 			"Guns"
 #define SCANGATE_WANTED			"Wanted"
 #define SCANGATE_SPECIES		"Species"
@@ -32,6 +32,7 @@
 	idle_power_usage = 10
 	construct_state = /decl/machine_construction/default/panel_closed
 	uncreated_component_parts = null
+	anchored = TRUE
 
 	var/scanline_timer
 	var/next_beep = 0 //avoids spam
@@ -206,26 +207,22 @@
 
 	if(href_list["set_mode"])
 		var/new_mode = input("Select target species") as null|anything in SCANGATE_ALL_MODES
-		scangate_mode = new_mode
+		if(new_mode in SCANGATE_ALL_MODES)
+			scangate_mode = new_mode
 
 	if(href_list["toggle_reverse"])
 		reverse = !reverse
 
 	if(href_list["set_target_species"])
 		var/new_species = input("Select target species") as null|anything in SCANGATE_ALL_SPECIES
-		detect_species = new_species
+		if(new_species in SCANGATE_ALL_SPECIES)
+			detect_species = new_species
 
 	if(href_list["set_strict_species"])
 		detect_species_strict = !detect_species_strict
 
 	if(href_list["set_target_nutrition"])
-		var/new_nutrition = alert("Select nutrition mode",, "Starving", "Full")
-		if(new_nutrition)
-			switch(new_nutrition)
-				if("Starving")
-					detect_nutrition = 150
-				if("Full")
-					detect_nutrition = 450
+		detect_nutrition = (detect_nutrition == 150 ? 450 : 150)
 
 	playsound(loc, 'sound/machines/pda_click.ogg', 25, TRUE)
 	add_fingerprint(usr)
