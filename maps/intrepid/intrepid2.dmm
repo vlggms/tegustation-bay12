@@ -1874,9 +1874,22 @@
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/engineering/engine_room)
 "gv" = (
-/obj/machinery/light,
-/turf/simulated/open,
-/area/intrepid/misc/hallway/portside)
+/obj/item/storage/toolbox/mechanical,
+/obj/structure/closet/crate/secure/shuttle{
+	name = "loose items storage"
+	},
+/obj/item/tank/hydrogen,
+/obj/item/cell/high,
+/obj/machinery/light/spot{
+	dir = 4;
+	icon_state = "tube_map"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9;
+	icon_state = "intact"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/pandora/cargo)
 "gw" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -4853,7 +4866,9 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "qH" = (
-/obj/machinery/atmospherics/binary/pump/high_power,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/pandora/cargo)
 "qJ" = (
@@ -4877,6 +4892,12 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbaythree)
+"qN" = (
+/obj/machinery/atmospherics/binary/pump/high_power{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/pandora/cargo)
 "qP" = (
 /obj/effect/floor_decal/corner/lightgrey/half{
 	dir = 1
@@ -7205,12 +7226,10 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/superstructure)
 "yb" = (
+/obj/machinery/door/firedoor,
 /obj/effect/wallframe_spawn/reinforced,
-/obj/machinery/door/firedoor{
-	dir = 4
-	},
 /turf/simulated/floor,
-/area/intrepid/misc/hallway/portside)
+/area/intrepid/department/civillian/archive)
 "yd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	dir = 4
@@ -10560,9 +10579,8 @@
 /obj/structure/sign/warning/compressed_gas{
 	pixel_y = 32
 	},
-/obj/machinery/atmospherics/portables_connector,
-/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /obj/structure/railing/mapped,
+/obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/pandora/cargo)
 "JG" = (
@@ -11284,17 +11302,10 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/pandora/cargo)
 "Me" = (
-/obj/item/storage/toolbox/mechanical,
-/obj/structure/closet/crate/secure/shuttle{
-	name = "loose items storage"
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
 	},
-/obj/item/tank/hydrogen,
-/obj/item/cell/high,
-/obj/machinery/light/spot{
-	dir = 4;
-	icon_state = "tube_map"
-	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/pandora/cargo)
 "Mg" = (
 /obj/machinery/porta_turret/stationary,
@@ -12473,12 +12484,12 @@
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/civillian/safe_room/port)
 "PZ" = (
-/obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/railing/mapped,
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/pandora/cargo)
 "Qb" = (
@@ -32733,10 +32744,10 @@ qT
 tV
 Lb
 tV
+QT
+QT
 iN
-iN
-iN
-iN
+QT
 Hu
 lJ
 lJ
@@ -32939,10 +32950,10 @@ QT
 QT
 iN
 QT
-Hu
-lJ
-lJ
-oB
+Cz
+Cz
+Cz
+Cz
 hc
 ai
 gm
@@ -33138,13 +33149,13 @@ tV
 ml
 tV
 tV
-QT
 iN
-QT
-Hu
-lJ
-lJ
-oB
+iN
+iN
+Hb
+Mw
+Sb
+Cz
 hc
 ai
 gm
@@ -33340,13 +33351,13 @@ tV
 ml
 ml
 tV
-QT
+Gu
 iN
 QT
-oB
-XZ
-oB
-oB
+Hb
+yC
+jl
+Cz
 hc
 ai
 gm
@@ -33537,18 +33548,18 @@ UU
 UU
 UU
 UU
-qT
-tV
-Lb
-Lb
-tV
-yb
-yb
-yb
-oB
-lJ
-lJ
-oB
+ty
+Cz
+rK
+DE
+sL
+qk
+YO
+qk
+Cz
+zF
+wo
+Cz
 hc
 ai
 gm
@@ -33739,18 +33750,18 @@ UU
 UU
 UU
 UU
-qT
-tV
-ml
-ml
-tV
-QT
-iN
-QT
-oB
-lJ
-lJ
-oB
+cJ
+Bo
+UG
+Ud
+Pe
+UG
+UG
+UG
+eL
+Er
+IN
+Cz
 OB
 ai
 gm
@@ -33941,18 +33952,18 @@ UU
 UU
 UU
 UU
-qT
-tV
-ml
-ml
-tV
-QT
-iN
-gv
-oB
-lJ
-lJ
-oB
+cJ
+Bo
+Xe
+ht
+Gk
+rc
+rc
+rc
+JD
+Fz
+zj
+Cz
 hc
 ai
 gm
@@ -34143,18 +34154,18 @@ UU
 UU
 UU
 UU
-qT
-tV
-ml
-ml
-tV
-QT
-iN
-QT
-oB
-lJ
-lJ
-oB
+ty
+Cz
+rK
+DE
+sL
+go
+rI
+Sa
+Cz
+jF
+fm
+Cz
 hc
 ai
 gm
@@ -34345,17 +34356,17 @@ UU
 UU
 UU
 UU
-qT
+tT
 tV
-Lb
-Lb
+ml
+ml
 tV
+Gu
 iN
-iN
-iN
-Cz
-Cz
-Cz
+QT
+Hb
+yC
+jl
 Cz
 hc
 ai
@@ -34547,7 +34558,7 @@ UU
 UU
 UU
 UU
-qT
+Vs
 tV
 ml
 ml
@@ -34556,8 +34567,8 @@ QT
 iN
 QT
 Hb
-Mw
-Sb
+JZ
+SD
 Cz
 OF
 ai
@@ -34754,12 +34765,12 @@ tV
 ml
 ml
 tV
-Gu
+QT
 iN
 QT
-Hb
-yC
-jl
+Cz
+Cz
+Cz
 Cz
 hc
 ai
@@ -34951,18 +34962,18 @@ UU
 UU
 UU
 UU
-ty
+qT
+tV
+FL
+FL
+tV
+QT
+iN
+QT
 Cz
-rK
-DE
-sL
-qk
-YO
-qk
-Cz
-zF
-wo
-Cz
+lJ
+lJ
+oB
 OB
 ai
 lJ
@@ -35153,18 +35164,18 @@ IL
 IL
 IL
 IL
-cJ
-Bo
-UG
-Ud
-Pe
-UG
-UG
-UG
-eL
-Er
-IN
-Cz
+qT
+tV
+ml
+ml
+tV
+iN
+iN
+iN
+yb
+lJ
+lJ
+Eu
 hc
 ai
 lJ
@@ -35355,18 +35366,18 @@ IL
 yq
 yq
 yq
-cJ
-Bo
-Xe
-ht
-Gk
-rc
-rc
-rc
-JD
-Fz
-zj
-Cz
+qT
+tV
+FL
+FL
+tV
+QT
+iN
+QT
+yb
+lJ
+lJ
+oB
 hc
 ai
 lJ
@@ -35557,18 +35568,18 @@ DX
 wg
 Fv
 Fv
-ty
-Cz
-rK
-DE
-sL
-go
-rI
-Sa
-Cz
-jF
-fm
-Cz
+qT
+tV
+ml
+ml
+tV
+Gu
+iN
+QT
+yb
+lJ
+lJ
+oB
 hc
 ai
 lJ
@@ -35759,18 +35770,18 @@ Gf
 Gf
 Gf
 iF
-tT
+qT
 tV
 ml
 ml
 tV
-Gu
+QT
 iN
 QT
-Hb
-yC
-jl
-Cz
+yb
+lJ
+lJ
+oB
 hc
 ai
 LQ
@@ -35961,7 +35972,7 @@ oB
 oB
 oB
 bn
-Vs
+tV
 tV
 ml
 ml
@@ -35969,10 +35980,10 @@ tV
 QT
 iN
 QT
-Hb
-JZ
-SD
 Cz
+lJ
+lJ
+oB
 hc
 ai
 Mx
@@ -36172,9 +36183,9 @@ Uz
 Uz
 Uz
 Cz
-Cz
-Cz
-Cz
+oB
+oB
+oB
 OB
 gs
 Fj
@@ -43641,7 +43652,7 @@ AQ
 VZ
 oy
 YG
-vm
+Me
 Cc
 GH
 xh
@@ -43843,7 +43854,7 @@ Ag
 Qy
 ts
 JE
-vm
+qN
 If
 vm
 If
@@ -44045,10 +44056,10 @@ dh
 Jo
 ts
 PZ
-kl
+gv
 xJ
 nA
-Me
+kl
 sQ
 Hq
 st
