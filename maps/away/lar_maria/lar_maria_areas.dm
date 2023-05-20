@@ -1,7 +1,7 @@
 /area/lar_maria
 	icon = 'maps/away/lar_maria/lar_maria_sprites.dmi'
 
-/////////////////////////////Upper level areas
+//I dont know why you would put in effort into making the sprites for the areas.
 /area/lar_maria/solar_control
 	name = "Lar Maria Solar Control Room"
 	icon_state = "solar_control"
@@ -26,9 +26,26 @@
 	name = "Lar Maria Hallway"
 	icon_state = "hallway"
 
+/area/lar_maria/entrance
+	name = "Lar Maria Entrance"
+	icon_state = "lar_entrance"
+
+/area/lar_maria/hangar
+	name = "Lar Maria Hangar"
+	icon_state = "lar_hangar"
+
+
 /area/lar_maria/office
-	name = "Lar Maria Office and Infirmary"
+	name = "Lar Maria Office"
 	icon_state = "office"
+
+/area/lar_maria/infirmary
+	name = "Lar Maria Infirmary"
+	icon_state = "lar_medbay"
+
+/area/lar_maria/control
+	name = "Lar Maria Control Room"
+	icon_state = "lar_control"
 
 /area/lar_maria/mess_hall
 	name = "Lar Maria Mess Hall"
@@ -37,7 +54,7 @@
 /area/lar_maria/dorms
 	name = "Lar Maria Dormitory"
 	icon_state = "dorms"
-/////////////////////////////Lower level areas
+
 /area/lar_maria/cells
 	name = "Lar Maria Holding Area"
 	icon_state = "cells"
@@ -46,9 +63,25 @@
 	name = "Lar Maria Security Wing"
 	icon_state = "sec_wing"
 
+/area/lar_maria/sec_checkpoint_1
+	name = "Lar Maria Security Checkpoint 1"
+	icon_state = "sec_checkpoint_1"
+
+/area/lar_maria/sec_checkpoint_2
+	name = "Lar Maria Security Checkpoint 2"
+	icon_state = "sec_checkpoint_2"
+
+/area/lar_maria/sec_checkpoint_3
+	name = "Lar Maria Security Checkpoint 3"
+	icon_state = "sec_checkpoint_3"
+
 /area/lar_maria/vir_access
 	name = "Lar Maria Virology Access"
 	icon_state = "vir_access"
+
+/area/lar_maria/vir_access2
+	name = "Lar Maria Main Virology Access"
+	icon_state = "vir_access2"
 
 /area/lar_maria/morgue
 	name = "Lar Maria Morgue"
