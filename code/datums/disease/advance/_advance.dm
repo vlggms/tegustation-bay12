@@ -60,10 +60,10 @@
 /datum/disease/advance/StageAct()
 	. = ..()
 	if(!.)
-		return
+		return FALSE
 
 	if(!length(symptoms))
-		return
+		return FALSE
 
 	if(!processing)
 		processing = TRUE
@@ -72,10 +72,9 @@
 				symptom.next_activation = world.time + rand(symptom.symptom_delay_min SECONDS, symptom.symptom_delay_max SECONDS)
 			symptom.on_stage_change(src)
 
-	for(var/s in symptoms)
-		var/datum/symptom/symptom_datum = s
-		symptom_datum.Activate(src)
-
+	for(var/datum/symptom/S in symptoms)
+		S.Activate(src)
+	return TRUE
 
 // Tell symptoms stage changed
 /datum/disease/advance/UpdateStage(new_stage)

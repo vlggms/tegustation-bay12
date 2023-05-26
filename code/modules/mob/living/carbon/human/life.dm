@@ -1001,8 +1001,15 @@
 		var/image/holder2 = hud_list[STATUS_HUD_OOC]
 		if(effectively_dead)
 			holder2.icon_state = "huddead"
-		else if(has_brain_worms())
+		else if(istype(B))
 			holder2.icon_state = "hudbrainworm"
+		else if(LAZYLEN(diseases))
+			var/disease_num
+			for(var/datum/disease/D in diseases)
+				if(D.visibility_flags & HIDDEN_HUD)
+					continue
+				disease_num = max(disease_num, GetDiseaseSeverityValue(D.severity))
+			holder.icon_state = "hudill[disease_num]"
 		else
 			holder2.icon_state = "hudhealthy"
 

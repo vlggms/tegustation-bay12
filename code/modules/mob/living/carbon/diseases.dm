@@ -1,6 +1,5 @@
 /mob/living/carbon/handle_diseases()
-	for(var/thing in diseases)
-		var/datum/disease/D = thing
+	for(var/datum/disease/D in diseases)
 		if(prob(D.infectivity))
 			D.Spread()
 
