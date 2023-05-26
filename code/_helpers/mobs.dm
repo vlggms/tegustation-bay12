@@ -318,3 +318,14 @@ proc/age2agedescription(age)
 	if(damflags & DAM_BIO)
 		res += "bio"
 	return english_list(res)
+
+/proc/is_species(A, species_datum, strict = FALSE)
+	. = FALSE
+	if(ishuman(A))
+		var/mob/living/carbon/human/H = A
+		if(H.species)
+			var/datum/species/S = H.species
+			if(strict && S.type == species_datum)
+				. = TRUE
+			else if(istype(S, species_datum))
+				. = TRUE
