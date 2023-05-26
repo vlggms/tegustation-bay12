@@ -56,7 +56,8 @@
 	SSdisease.active_diseases += D //Add it to the active diseases list, now that it's actually in a mob and being processed.
 
 	D.AfterAdd()
-	//target.med_hud_set_status()
+
+	BITSET(target.hud_updateflag, LIFE_HUD)
 
 	//log_virus("[key_name(target)] was infected by virus: [src.AdminDetails()] at [loc_name(get_turf(target))]")
 

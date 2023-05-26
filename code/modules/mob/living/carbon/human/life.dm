@@ -964,6 +964,16 @@
 		var/image/holder = hud_list[LIFE_HUD]
 		if(effectively_dead)
 			holder.icon_state = "huddead"
+		else if(LAZYLEN(diseases))
+			var/disease_num = 0
+			for(var/datum/disease/D in diseases)
+				if(D.visibility_flags & HIDDEN_HUD)
+					continue
+				disease_num = max(disease_num, GetDiseaseSeverityValue(D.severity))
+			if(!disease_num) // Stealthy diseases
+				holder.icon_state = "hudhealthy"
+			else
+				holder.icon_state = "hudill[disease_num]"
 		else
 			holder.icon_state = "hudhealthy"
 		hud_list[LIFE_HUD] = holder
