@@ -58,6 +58,7 @@
 	D.AfterAdd()
 
 	BITSET(target.hud_updateflag, LIFE_HUD)
+	BITSET(target.hud_updateflag, STATUS_HUD)
 
 	//log_virus("[key_name(target)] was infected by virus: [src.AdminDetails()] at [loc_name(get_turf(target))]")
 

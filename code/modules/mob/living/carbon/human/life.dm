@@ -980,15 +980,21 @@
 
 	if (BITTEST(hud_updateflag, STATUS_HUD) && hud_list[STATUS_HUD] && hud_list[STATUS_HUD_OOC])
 		var/image/holder = hud_list[STATUS_HUD]
+		var/mob/living/simple_animal/borer/B = has_brain_worms()
 		if(effectively_dead)
 			holder.icon_state = "huddead"
-
-		else if(has_brain_worms())
-			var/mob/living/simple_animal/borer/B = has_brain_worms()
-			if(B.controlling)
-				holder.icon_state = "hudbrainworm"
-			else
+		else if(istype(B) && B?.controlling)
+			holder.icon_state = "hudbrainworm"
+		else if(LAZYLEN(diseases))
+			var/disease_num = 0
+			for(var/datum/disease/D in diseases)
+				if(D.visibility_flags & HIDDEN_HUD)
+					continue
+				disease_num = max(disease_num, GetDiseaseSeverityValue(D.severity))
+			if(!disease_num) // Stealthy diseases
 				holder.icon_state = "hudhealthy"
+			else
+				holder.icon_state = "hudill[disease_num]"
 		else
 			holder.icon_state = "hudhealthy"
 
