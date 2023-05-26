@@ -8,6 +8,8 @@
 	var/possible_transfer_amounts = "5;10;15;25;30"
 	var/volume = 30
 	var/label_text
+	var/spawned_disease = null
+	var/disease_amount = 20
 
 /obj/item/reagent_containers/proc/cannot_interact(mob/user)
 	if(!CanPhysicallyInteract(user))
@@ -32,6 +34,10 @@
 
 /obj/item/reagent_containers/New()
 	create_reagents(volume)
+	if(spawned_disease)
+		var/datum/disease/F = new spawned_disease()
+		var/list/data = list("viruses"= list(F))
+		reagents.add_reagent(/datum/reagent/blood, disease_amount, data)
 	..()
 	if(!possible_transfer_amounts)
 		src.verbs -= /obj/item/reagent_containers/verb/set_amount_per_transfer_from_this
