@@ -1,7 +1,7 @@
 /datum/reagent/blood
 	data = new/list(
 		"donor" = null,
-		"viruses"=null,
+		"viruses" = null,
 		"species" = SPECIES_HUMAN,
 		"blood_DNA" = null,
 		"blood_type" = null,
