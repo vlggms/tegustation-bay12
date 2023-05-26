@@ -458,6 +458,10 @@ default behaviour is:
 	// fix all of our organs
 	restore_all_organs()
 
+	// Remove all diseases
+	for(var/datum/disease/D in diseases)
+		qdel(D)
+
 	// remove the character from the list of the dead
 	if(stat == DEAD)
 		switch_from_dead_to_living_mob_list()
