@@ -163,7 +163,8 @@
 
 /datum/disease/proc/RemoveDisease()
 	LAZYREMOVE(affected_mob.diseases, src)	//remove the datum from the list
-	//affected_mob.med_hud_set_status()
+	BITSET(affected_mob.hud_updateflag, LIFE_HUD)
+	BITSET(affected_mob.hud_updateflag, STATUS_HUD)
 	affected_mob = null
 
 /**

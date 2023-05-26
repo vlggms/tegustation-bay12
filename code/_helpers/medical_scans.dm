@@ -265,8 +265,9 @@
 		if(other_reagent)
 			dat += "<tr><td colspan='2'><span class='average'>Warning: Unknown substance detected in subject's blood.</span></td></tr>"
 
+		subdat = null
 		if(scan["diseases"])
-			subdat += "<tr><td><strong>Diseases detected:</strong></td>"
+			dat += "<tr><td><strong>Diseases detected:</strong></td>"
 			for(var/datum/disease/D in scan["diseases"])
 				subdat += "<td>\t[D.agent] - [D.desc]</td>"
 				subdat += "<td>\tStage: [D.stage]/[D.max_stages]</td>"
@@ -276,6 +277,8 @@
 					potential_cures |= initial(R.name)
 				if(LAZYLEN(potential_cures))
 					subdat += "<td>\tCure: [english_list(potential_cures)].</td>"
+		if(subdat)
+			dat += subdat
 
 	else
 		dat += "<tr><td colspan='2'>You see a lot of numbers and abbreviations here, but you have no clue what any of it means.</td></tr>"
