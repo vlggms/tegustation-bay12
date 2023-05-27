@@ -7,7 +7,7 @@
 	cure_text = "Rezadone"
 	cures = list(/datum/reagent/medicine/rezadone)
 	agent = "VMD4-Rage"
-	viable_mobtypes = list(/mob/living/carbon/human, /mob/living/simple_animal/hostile/lar_maria)
+	viable_mobtypes = list(/mob/living/carbon/human)
 	severity = DISEASE_SEVERITY_BIOHAZARD
 	var/first_message_shown = FALSE
 
