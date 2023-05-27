@@ -1,5 +1,5 @@
 /datum/event/disease_outbreak
-	announceWhen = 15
+	announceWhen = 100
 
 	var/virus_type
 	// Affects the maximum amount of symptoms and level of symptoms in advanced diseases
@@ -9,7 +9,7 @@
 	level_seven_announcement()
 
 /datum/event/disease_outbreak/setup()
-	announceWhen = rand(15, 30)
+	announceWhen = rand(100, 250)
 
 /datum/event/disease_outbreak/start()
 	var/advanced_virus = FALSE
