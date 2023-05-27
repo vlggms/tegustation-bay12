@@ -133,25 +133,31 @@
 	poison_types = species.poison_types ? species.poison_types : list(GAS_PHORON = TRUE)
 	exhale_type = species.exhale_type ? species.exhale_type : GAS_CO2
 
-/obj/item/organ/internal/lungs/proc/rupture()
-	var/obj/item/organ/external/parent = owner.get_organ(parent_organ)
-	if(istype(parent))
-		owner.custom_pain("You feel a stabbing pain in your [parent.name]!", 50, affecting = parent)
-	bruise()
-
-//exposure to extreme pressures can rupture lungs
+// Exposure to extreme pressures can damage lungs
+// Keep in mind that this only triggers on "successful" breath, so, once per exposure to the environment
 /obj/item/organ/internal/lungs/proc/check_rupturing(breath_pressure)
 	if(isnull(last_int_pressure))
 		last_int_pressure = breath_pressure
+		return
+	if(is_bruised()) // Already screwed too much
 		return
 	var/datum/gas_mixture/environment = loc.return_air_for_internal_lifeform()
 	var/ext_pressure = environment && environment.return_pressure() // May be null if, say, our owner is in nullspace
 	var/int_pressure_diff = abs(last_int_pressure - breath_pressure)
 	var/ext_pressure_diff = abs(last_ext_pressure - ext_pressure) * owner.get_pressure_weakness(ext_pressure)
-	if(int_pressure_diff > max_pressure_diff && ext_pressure_diff > max_pressure_diff)
-		var/lung_rupture_prob = BP_IS_ROBOTIC(src) ? prob(30) : prob(60) //Robotic lungs are less likely to rupture.
-		if(!is_bruised() && lung_rupture_prob) //only rupture if NOT already ruptured
-			rupture()
+	if(int_pressure_diff <= max_pressure_diff || ext_pressure_diff <= max_pressure_diff)
+		return
+	// 0 pressure for humans would have ~100 diff, so, maximum damage regardless
+	var/lung_damage = min(max(int_pressure_diff, ext_pressure_diff) * 0.2, MAX_PRESSURE_LUNGS_DAMAGE)
+	lung_damage *= BP_IS_ROBOTIC(src) ? 0.75 : 1 //Robotic lungs receive less damage
+	take_general_damage(lung_damage)
+
+// Unused. check_rupturing() now only does damage
+/obj/item/organ/internal/lungs/proc/rupture()
+	var/obj/item/organ/external/parent = owner.get_organ(parent_organ)
+	if(istype(parent))
+		owner.custom_pain("You feel a stabbing pain in your [parent.name]!", 50, affecting = parent)
+	bruise()
 
 /obj/item/organ/internal/lungs/proc/handle_breath(datum/gas_mixture/breath, forced)
 	if(!owner)

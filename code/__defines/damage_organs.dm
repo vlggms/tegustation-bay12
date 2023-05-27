@@ -34,7 +34,8 @@
 #define DAM_BIO       64 // Toxin damage that should be mitigated by biological (i.e. sterile) armor
 
 #define FIRE_DAMAGE_MODIFIER 0.0215 // Higher values result in more external fire damage to the skin. (default 0.0215)
-#define  AIR_DAMAGE_MODIFIER 2.025  // More means less damage from hot air scalding lungs, less = more damage. (default 2.025)
+#define AIR_DAMAGE_MODIFIER  5.0    // More means less damage from hot air scalding lungs, less = more damage. (default 2.025)
+#define MAX_PRESSURE_LUNGS_DAMAGE 20.0 // The maximum amount of damage upon exposure to extreme pressure environments
 
 // Organ defines.
 #define ORGAN_CUT_AWAY   (1<<0)  // The organ is in the process of being surgically removed.
@@ -110,11 +111,14 @@
 #define INTERNAL_ORGAN_DAMAGE_THRESHOLD 30
 
 // Damage thresholds for limb(external organ) dismemberment from various damage sources
-// Those are all multipliers of max_damage of limb itself, so for organ with 100 max health - Edge threshold will be 50.
+// Those are all multipliers of max_damage of limb itself, so for organ with 100 max health - Edge threshold will be 20.
 #define DROPLIMB_THRESHOLD_EDGE 0.2
 #define DROPLIMB_THRESHOLD_TEAROFF 0.4
 #define DROPLIMB_THRESHOLD_DESTROY_BRUTE 0.6
 #define DROPLIMB_THRESHOLD_DESTROY_BURN 0.7
+// Multiplier of spillover damage. The spillover is added to brute/burn in droplimb calculations.
+// 0.1 mult with 100 damage above maximum limb's health will equate to +10 damage in the calculation, simple enough.
+#define DROPLIMB_SPILLOVER_MULT 0.05
 
 #define ORGAN_RECOVERY_THRESHOLD (5 MINUTES)
 

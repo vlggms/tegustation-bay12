@@ -22,7 +22,6 @@
 	var/burn_ratio = 0                 // Ratio of current burn damage to max damage.
 	var/last_dam = -1                  // used in healing/processing calculations.
 	var/pain = 0                       // How much the limb hurts.
-	var/pain_disability_threshold      // Point at which a limb becomes unusable due to pain.
 
 	// A bitfield for a collection of limb behavior flags.
 	var/limb_flags = ORGAN_FLAG_CAN_AMPUTATE | ORGAN_FLAG_CAN_BREAK
@@ -77,6 +76,14 @@
 	// HUD element variable, see organ_icon.dm get_damage_hud_image()
 	var/image/hud_damage_image
 
+	// Damage thresholds
+	/// Point at which a limb becomes unusable due to pain.
+	var/pain_disability_threshold
+	/// Minimum amount of damage to have a chance to sever artery(begin internal bleeding)
+	var/sever_artery_threshold
+	/// Minimum amount of damage required to have a chance to sever tendons upon receiving new wound
+	var/sever_tendon_threshold
+
 /obj/item/organ/external/proc/get_fingerprint()
 
 	if((limb_flags & ORGAN_FLAG_FINGERPRINT) && dna && !is_stump() && !BP_IS_ROBOTIC(src))
@@ -95,7 +102,11 @@
 /obj/item/organ/external/New(mob/living/carbon/holder)
 	..()
 	if(isnull(pain_disability_threshold))
-		pain_disability_threshold = (max_damage * 0.75)
+		pain_disability_threshold = max_damage * 0.75
+	if(isnull(sever_artery_threshold))
+		sever_artery_threshold = max_damage * 0.2
+	if(isnull(sever_tendon_threshold))
+		sever_tendon_threshold = max_damage * 0.15
 	if(owner)
 		replaced(owner)
 		sync_colour_to_human(owner)
@@ -472,9 +483,9 @@ This function completely restores a damaged organ to perfect condition.
 	if(!surgical && (type in list(CUT, PIERCE, BRUISE)) && damage > 15 && local_damage > 30)
 
 		var/internal_damage
-		if(prob(damage) && sever_artery())
+		if(damage >= sever_artery_threshold && prob(damage * 0.5) && sever_artery())
 			internal_damage = TRUE
-		if(prob(ceil(damage/4)) && sever_tendon())
+		if(damage >= sever_tendon_threshold && prob(damage * 0.2) && sever_tendon())
 			internal_damage = TRUE
 		if(internal_damage)
 			owner.custom_pain("You feel something rip in your [name]!", 50, affecting = src)
