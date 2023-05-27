@@ -797,12 +797,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/lar_maria/atmos)
-"bH" = (
-/obj/structure/lattice,
-/obj/structure/lattice,
-/obj/structure/catwalk,
-/turf/space,
-/area/space)
 "bI" = (
 /turf/simulated/wall/r_wall,
 /area/lar_maria/mess_hall)
@@ -5230,6 +5224,9 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/structure/window/basic{
+	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/lar_maria/mess_hall)
@@ -31725,7 +31722,7 @@ gx
 gx
 gx
 gx
-bH
+gx
 qx
 aa
 aa
