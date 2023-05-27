@@ -1,5 +1,5 @@
 #include "lar_maria_areas.dm"
-
+//Thanks to the original creator for the original map, idea and concept!
 /obj/effect/overmap/visitable/sector/lar_maria
 	name = "Lar Maria space station"
 	desc = "Sensors detect an orbital station with low energy profile and sporadic life signs."
@@ -92,8 +92,8 @@
 	name = "\improper security"
 	desc = "Guard dressed at Zeng-Hu Pharmaceuticals uniform."
 	icon_state = "guard_light"
-	maxHealth = 60
-	health = 60
+	maxHealth = 70
+	health = 70
 	harm_intent_damage = 5
 	natural_weapon = /obj/item/melee/baton
 	weapon = /obj/item/melee/baton
@@ -126,8 +126,8 @@
 	name = "\improper virologist"
 	desc = "Virologist dressed at Zeng-Hu Pharmaceuticals uniform."
 	icon_state = "virologist_m"
-	maxHealth = 50
-	health = 50
+	maxHealth = 60
+	health = 60
 	harm_intent_damage = 5
 	corpse = /obj/effect/landmark/corpse/lar_maria/virologist
 
@@ -220,17 +220,25 @@
 	name = "paper note"
 	info = {"<center><b><font color='green'>Zeng-Hu Pharmaceuticals</font></b></center>
 			<center><font color='red'><small>CONFIDENTIAL USE ONLY</small></font></center>
-			<i>On a related note, can we get some more female subjects? There's been some discussion about gender related differences in reactions to some of the chemicals we're working on. Testosterone and shit affecting chemical balances or something, I'm not sure, point is, variety.</i>
+			<i>On a related note, can we get some more female subjects? There's been some discussion about gender related differences in reactions to some of the chemicals we're working on. Testosterone and such affecting chemical balances or something, I'm not sure, point is, variety.</i>
 			"}
 
 /obj/item/paper/lar_maria/note_9
 	name = "paper note"
 	info = "<i><font color='blue'>can we get some fresh carp sometime? Or freshish? Or frozen? I just really want carp, ok? I'm willing to pay for it if so.</font></i>"
 
+/obj/item/paper/lar_maria/note_10
+	name = "paper note"
+	info = "<i><font color='blue'>The screams, the constant screams, I cant take this much longer. I cant take it. The screams. Why wont they stop?</font></i>"
+
+/obj/item/paper/lar_maria/note_11
+	name = "paper note"
+	info = "<i><font color='blue'>There is a cure I know it. If only I had more time. We have done this to ourselves and they knew when it came back to bite us in our ass.</font></i>"
+
 /datum/ai_holder/simple_animal/lar_maria
 	speak_chance = 50
 
 /datum/say_list/lar_maria
-	speak = list("Die!", "Fresh meat!", "Hurr!", "You said help will come!", "I did nothing!", "Eat my fist!", "One for the road!")
-	emote_see = list("cries", "grins insanely", "itches fiercly", "scratches his face", "shakes his fists above his head")
+	speak = list("Die!", "Fresh meat!", "Hurr!", "You said help will come!", "I did nothing!", "Eat my fist!", "One for the road!", "Get over here!")
+	emote_see = list("cries", "grins insanely", "itches fiercly", "scratches their face", "shakes their fists above their head")
 	emote_hear = list("roars", "giggles", "breathes loudly", "mumbles", "yells something unintelligible")
