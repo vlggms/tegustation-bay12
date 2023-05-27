@@ -3908,8 +3908,8 @@
 /turf/simulated/floor/plating,
 /area/lar_maria/cells)
 "qs" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
 	},
 /turf/simulated/floor/carpet/purple,
 /area/lar_maria/dorms)
@@ -4812,6 +4812,9 @@
 /area/lar_maria/dorms)
 "vt" = (
 /obj/random/coin,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
 /turf/simulated/floor/carpet/purple,
 /area/lar_maria/dorms)
 "vx" = (
@@ -5380,6 +5383,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/lar_maria/vir_hallway)
 "yn" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
 /turf/simulated/floor/carpet/purple,
 /area/lar_maria/dorms)
 "yq" = (
@@ -9738,8 +9744,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
 	},
 /turf/simulated/floor/carpet/purple,
 /area/lar_maria/dorms)
