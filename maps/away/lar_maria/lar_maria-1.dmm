@@ -940,12 +940,6 @@
 /obj/structure/lattice,
 /turf/simulated/wall/r_wall,
 /area/lar_maria/sec_checkpoint_3)
-"en" = (
-/obj/structure/lattice,
-/obj/structure/lattice,
-/obj/structure/catwalk,
-/turf/space,
-/area/space)
 "eo" = (
 /turf/simulated/wall/r_wall,
 /area/lar_maria/dorms)
@@ -8572,12 +8566,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/lar_maria/sec_wing)
-"Qz" = (
-/obj/structure/lattice,
-/obj/structure/ladder/up,
-/obj/structure/catwalk,
-/turf/space,
-/area/space)
 "QA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -37532,7 +37520,7 @@ aa
 aa
 aa
 ea
-en
+fs
 aa
 aL
 Jb
@@ -37741,7 +37729,7 @@ tE
 tE
 bO
 eo
-Qz
+fs
 fs
 aa
 aa
@@ -41199,7 +41187,7 @@ aa
 aa
 aa
 ea
-Qz
+fs
 fs
 fs
 fs

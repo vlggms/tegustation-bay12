@@ -1714,11 +1714,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/lar_maria/control)
-"gk" = (
-/obj/structure/lattice,
-/obj/structure/ladder,
-/turf/space,
-/area/space)
 "gl" = (
 /obj/structure/bed/chair/office/light{
 	dir = 1
@@ -2757,6 +2752,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techmaint,
 /area/lar_maria/mess_hall)
 "lv" = (
@@ -3046,10 +3042,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/lar_maria/sec_checkpoint_1)
-"ol" = (
-/obj/machinery/door/firedoor,
-/turf/simulated/open,
-/area/lar_maria/mess_hall)
 "om" = (
 /obj/structure/table/standard,
 /obj/item/device/tape/random,
@@ -5409,11 +5401,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/lar_maria/sec_checkpoint_1)
-"LR" = (
-/obj/structure/lattice,
-/obj/structure/lattice,
-/turf/space,
-/area/space)
 "Ma" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 10
@@ -6785,6 +6772,7 @@
 /obj/structure/disposalpipe/segment/bent{
 	dir = 1
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techmaint,
 /area/lar_maria/mess_hall)
 "Yg" = (
@@ -29692,7 +29680,7 @@ jb
 jb
 jb
 jb
-LR
+jb
 jb
 jb
 jb
@@ -34323,7 +34311,7 @@ aa
 aa
 aa
 aW
-bH
+gx
 gx
 cg
 cg
@@ -34532,7 +34520,7 @@ ad
 ad
 cf
 cf
-gk
+aa
 gx
 aa
 jb
@@ -35159,7 +35147,7 @@ KY
 uX
 zn
 lu
-ol
+eH
 eH
 eH
 eH
@@ -35361,7 +35349,7 @@ Ws
 yB
 yB
 Yf
-ol
+eH
 eH
 eH
 eH
@@ -37990,7 +37978,7 @@ aa
 aW
 gx
 gx
-gk
+aa
 qx
 aa
 aa
