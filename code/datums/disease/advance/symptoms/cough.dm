@@ -40,16 +40,16 @@ BONUS
 /datum/symptom/cough/Start(datum/disease/advance/A)
 	if(!..())
 		return
-	if(A.properties["stealth"] >= 4)
-		suppress_warning = TRUE
-	if(A.properties["transmittable"] >= 7)
-		spread_range = 2
 	if(A.properties["resistance"] >= 11) //strong enough to drop items
 		power = 1.5
 	if(A.properties["resistance"] >= 15) //strong enough to stun (occasionally)
 		power = 2
 	if(A.properties["stage_rate"] >= 6) //cough more often
 		symptom_delay_max = 10
+	if(A.properties["transmittable"] >= 7)
+		spread_range = 2
+	if(A.properties["stealth"] >= 4)
+		suppress_warning = TRUE
 
 /datum/symptom/cough/Activate(datum/disease/advance/A)
 	if(!..())
