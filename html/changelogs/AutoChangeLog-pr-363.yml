@@ -1,0 +1,7 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - balance: High pressure difference no longer instantly ruptures your lungs. Instead,
+      you will be taking continuous organ damage that scales with pressure.
+  - balance: Severing artery or tendons now has a minimum damage requirement when
+      done by normal means. The chance is also slightly lower.
