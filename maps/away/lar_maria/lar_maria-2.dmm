@@ -5274,11 +5274,13 @@
 /turf/simulated/floor/tiled/white,
 /area/lar_maria/entrance)
 "JM" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 25;
+	req_access = newlist()
 	},
-/turf/simulated/floor/tiled,
-/area/lar_maria/sec_checkpoint_1)
+/turf/simulated/wall/r_wall,
+/area/lar_maria/hallway)
 "Ka" = (
 /turf/simulated/floor/plating,
 /area/lar_maria/hangar)
@@ -5381,8 +5383,8 @@
 /turf/simulated/floor/wood,
 /area/lar_maria/office)
 "La" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/lar_maria/sec_checkpoint_1)
@@ -5758,6 +5760,12 @@
 /obj/structure/closet/crate/med_crate/trauma,
 /turf/simulated/floor/tiled/techfloor,
 /area/lar_maria/hangar)
+"Pf" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/lar_maria/sec_checkpoint_1)
 "Pk" = (
 /obj/machinery/computer/modular,
 /turf/simulated/floor/holofloor/carpet,
@@ -24465,7 +24473,7 @@ xb
 xG
 Gw
 lm
-JM
+La
 YL
 Ab
 YJ
@@ -25669,9 +25677,9 @@ gw
 gw
 gw
 gw
-jd
-jd
-jd
+JM
+JM
+JM
 jd
 jd
 jd
@@ -26081,7 +26089,7 @@ is
 iN
 jE
 UG
-La
+Pf
 TA
 DZ
 RF
