@@ -54,11 +54,11 @@ Bonus
 	switch(A.stage)
 		if(1, 2)
 			if(prob(base_message_chance) && !suppress_warning)
-				to_chat(H, SPAN_WARNING("[pick("You're having difficulty breathing.", "Your breathing becomes heavy.")]"))
+				to_chat(H, SPAN_WARNING(pick("You're having difficulty breathing.", "Your breathing becomes heavy.")))
 
 		if(3, 4)
 			if(!suppress_warning)
-				to_chat(H, SPAN_WARNING("[pick("Your windpipe feels like a straw.", "Your breathing becomes tremendously difficult.")]"))
+				to_chat(H, SPAN_WARNING(pick("Your windpipe feels like a straw.", "Your breathing becomes tremendously difficult.")))
 			else
 				to_chat(H, SPAN_WARNING("You feel very [pick("dizzy","woozy","faint")].")) //fake bloodloss messages
 			H.adjustOxyLoss(rand(6, 13))

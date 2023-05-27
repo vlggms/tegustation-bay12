@@ -37,7 +37,7 @@
 			if(prob(25))
 				affected_mob.a_intent_change(I_HURT)
 
-			if(prob(15) && affected_mob.can_eat(null, FALSE) && !restrained() && !stat && !paralysis && !stunned && !sleeping)
+			if(prob(15) && affected_mob.can_eat(null, FALSE) && !affected_mob.restrained() && !affected_mob.stat && !affected_mob.paralysis && !affected_mob.stunned && !affected_mob.sleeping)
 				var/list/potential_targets = list()
 				for(var/mob/living/L in view(1, affected_mob))
 					if(L == affected_mob)
