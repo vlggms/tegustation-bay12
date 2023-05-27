@@ -5260,14 +5260,6 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/white,
 /area/lar_maria/entrance)
-"JM" = (
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 25;
-	req_access = newlist()
-	},
-/turf/simulated/wall/r_wall,
-/area/lar_maria/hallway)
 "Ka" = (
 /turf/simulated/floor/plating,
 /area/lar_maria/hangar)
@@ -25664,9 +25656,9 @@ gw
 gw
 gw
 gw
-JM
-JM
-JM
+jd
+jd
+jd
 jd
 jd
 jd
