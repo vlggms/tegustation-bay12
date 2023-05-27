@@ -266,7 +266,7 @@
 			dat += "<tr><td colspan='2'><span class='average'>Warning: Unknown substance detected in subject's blood.</span></td></tr>"
 
 		subdat = null
-		if(scan["diseases"])
+		if(LAZYLEN(scan["diseases"]))
 			dat += "<tr><td><strong>Diseases detected:</strong></td>"
 			for(var/datum/disease/D in scan["diseases"])
 				subdat += "<td>\t[D.agent] - [D.desc]</td>"

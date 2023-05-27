@@ -199,4 +199,3 @@
 			return 6
 		if(DISEASE_SEVERITY_BIOHAZARD)
 			return 7
-

@@ -37,7 +37,7 @@
 			if(prob(25))
 				affected_mob.a_intent_change(I_HURT)
 
-			if(prob(15) && affected_mob.can_eat(null, FALSE))
+			if(prob(15) && affected_mob.can_eat(null, FALSE) && !restrained() && !stat && !paralysis && !stunned && !sleeping)
 				var/list/potential_targets = list()
 				for(var/mob/living/L in view(1, affected_mob))
 					if(L == affected_mob)
@@ -57,5 +57,5 @@
 			if(prob(5))
 				to_chat(affected_mob, SPAN_DANGER("You feel uncontrollable rage filling you! You want to hurt and destroy!"))
 				affected_mob.visible_message(SPAN_WARNING("[affected_mob] is completely filled with rage!"))
-				if(affected_mob.reagents.get_reagent_amount(/datum/reagent/medicine/stimulant/hyperzine) < 10)
-					affected_mob.reagents.add_reagent(/datum/reagent/medicine/stimulant/hyperzine, 6)
+				if(affected_mob.reagents.get_reagent_amount(/datum/reagent/medicine/stimulant/hyperzine) < 1)
+					affected_mob.reagents.add_reagent(/datum/reagent/medicine/stimulant/hyperzine, 4)
