@@ -50,8 +50,10 @@
 		new weapon(src.loc)
 	visible_message(SPAN_WARNING("Small shining spores float away from dying [src]!"))
 	for(var/mob/living/carbon/human/H in view(2, src))
-		if(H.get_armors_by_zone(null, TOX, DAM_BIO) > ARMOR_BIO_SMALL)
-			continue
+		var/list/armor_list = H.get_armors_by_zone(null, TOX, DAM_BIO)
+		for(var/datum/extension/armor/A in armor_list)
+			if(A.get_value("bio") > ARMOR_BIO_SMALL)
+				continue
 		if(prob(25 + 25 * get_dist(src, H)))
 			continue
 		H.ForceContractDisease(new /datum/disease/rage(), FALSE, TRUE)
