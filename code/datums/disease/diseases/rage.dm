@@ -20,46 +20,42 @@
 		if(1)
 			if(!first_message_shown)
 				first_message_shown = TRUE
-				to_chat(affected_mob, "<span class='danger'>Your muscles start tensing up, and you can feel your pulse rising, throbbing at the back of your head. Your breathing increases, and you feel... angry. An urge wells up inside you. Everything is making you angry, and you want it to <i>pay</i> for it</span>")
+				to_chat(affected_mob, SPAN_DANGER("Your muscles start tensing up, and you can feel your pulse rising, throbbing at the back of your head. Your breathing increases, and you feel... angry. An urge wells up inside you. Everything is making you angry, and you want it to <i>pay</i> for it."))
 				return // As with the old virus nothing really happens at first giving you a chance to adjust your roleplay. Since this is a roleplay server after all.
 
-		if(2, 3)
+		if(2)
 			if(prob(2))
 				affected_mob.emote("mumble")
 			else if(prob(2))
 				affected_mob.emote("cry")
 			else if(prob(1))
-				affected_mob.visible_message("<span class='warning'>[affected_mob] trembles violently!")
+				affected_mob.visible_message(SPAN_WARNING("[affected_mob] trembles violently!"))
 			else if(prob(1))
-				affected_mob.visible_message("<span class='warning'>[affected_mob] breathes heavily!")
+				affected_mob.visible_message(SPAN_WARNING("[affected_mob] breathes heavily!"))
 
 		if(3)
-			var/mob/living/carbon/human/H = affected_mob
-			if(!istype(H))
-				return
-
 			if(prob(25))
-				H.a_intent_change(I_HURT)
+				affected_mob.a_intent_change(I_HURT)
 
-			if(prob(15) && H.can_eat(null, FALSE))
+			if(prob(15) && affected_mob.can_eat(null, FALSE))
 				var/list/potential_targets = list()
-				for(var/mob/living/L in view(1, H))
-					if(L == H)
+				for(var/mob/living/L in view(1, affected_mob))
+					if(L == affected_mob)
 						continue
 					if(L.stat == DEAD)
 						continue
 					potential_targets += L
 				if(LAZYLEN(potential_targets))
 					var/mob/living/target = pick(potential_targets)
-					H.do_attack_animation(target)
-					H.visible_message(SPAN_DANGER("[H] violently bites [target]!"))
-					playsound(H, 'sound/weapons/bite.ogg', 50, TRUE)
+					affected_mob.do_attack_animation(target)
+					affected_mob.visible_message(SPAN_DANGER("[affected_mob] violently bites [target]!"))
+					playsound(affected_mob, 'sound/weapons/bite.ogg', 50, TRUE)
 					target.adjustBruteLoss(rand(8, 16))
 					if(prob(50))
 						target.ForceContractDisease(src)
 
 			if(prob(5))
-				to_chat(H, SPAN_DANGER("You feel uncontrollable rage filling you! You want to hurt and destroy!"))
-				H.visible_message(SPAN_WARNING("[H] is completely filled with rage!"))
-				if(H.reagents.get_reagent_amount(/datum/reagent/medicine/stimulant/hyperzine) < 10)
-					H.reagents.add_reagent(/datum/reagent/medicine/stimulant/hyperzine, 6)
+				to_chat(affected_mob, SPAN_DANGER("You feel uncontrollable rage filling you! You want to hurt and destroy!"))
+				affected_mob.visible_message(SPAN_WARNING("[affected_mob] is completely filled with rage!"))
+				if(affected_mob.reagents.get_reagent_amount(/datum/reagent/medicine/stimulant/hyperzine) < 10)
+					affected_mob.reagents.add_reagent(/datum/reagent/medicine/stimulant/hyperzine, 6)
