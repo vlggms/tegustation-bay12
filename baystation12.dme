@@ -319,6 +319,7 @@
 #include "code\datums\disease\advance\symptoms\cough.dm"
 #include "code\datums\disease\advance\symptoms\sneeze.dm"
 #include "code\datums\disease\diseases\cold9.dm"
+#include "code\datums\disease\diseases\rage.dm"
 #include "code\datums\disease\diseases\transformation_mob.dm"
 #include "code\datums\elements\_elements.dm"
 #include "code\datums\extensions\_defines.dm"

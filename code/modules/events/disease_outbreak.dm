@@ -2,6 +2,7 @@
 	announceWhen = 15
 
 	var/virus_type
+	// Affects the maximum amount of symptoms and level of symptoms in advanced diseases
 	var/max_severity = 3
 
 /datum/event/disease_outbreak/announce()
@@ -17,7 +18,10 @@
 		advanced_virus = TRUE
 
 	if(!virus_type && !advanced_virus)
-		virus_type = pick(/datum/disease/cold, /datum/disease/advance/flu, /datum/disease/advance/cold)
+		if(severity >= EVENT_LEVEL_MAJOR) // Somewhat dangerous non-advanced diseases
+			virus_type = pick(/datum/disease/cold)
+		else
+			virus_type = pick(/datum/disease/advance/flu, /datum/disease/advance/cold)
 
 	for(var/mob/living/carbon/human/H in shuffle(SSmobs.mob_list))
 		var/turf/T = get_turf(H)
