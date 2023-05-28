@@ -2966,12 +2966,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/lar_maria/morgue)
-"ln" = (
-/obj/structure/lattice,
-/obj/structure/catwalk,
-/obj/structure/ladder/up,
-/turf/space,
-/area/space)
 "lo" = (
 /obj/structure/bed,
 /obj/item/bedsheet/blue,
@@ -37806,7 +37800,7 @@ tE
 tE
 bO
 eo
-ln
+fs
 fs
 aa
 aa
@@ -41264,7 +41258,7 @@ aa
 aa
 aa
 ea
-ln
+fs
 fs
 fs
 fs
