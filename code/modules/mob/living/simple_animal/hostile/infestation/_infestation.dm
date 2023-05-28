@@ -13,7 +13,7 @@
 	max_gas = null
 	minbodytemp = 0
 	maxbodytemp = 600 // Temperatures that are too high will kill them
-	status_flags = CANPUSH // Cannot be stunned or otherwise incapacitated
+	status_flags = 0 // Cannot be pushed, stunned or otherwise incapacitated
 	melee_attack_delay = 0
 	/// Reference to structure that effectively controls the colony
 	var/overmind = null
