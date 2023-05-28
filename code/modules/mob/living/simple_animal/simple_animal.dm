@@ -216,6 +216,7 @@
 		switch_from_dead_to_living_mob_list()
 		set_stat(CONSCIOUS)
 		set_density(initial(density))
+		bleed_ticks = 0
 
 /mob/living/simple_animal/proc/drop_loot()
 	if(!loot_list.len)
@@ -306,6 +307,9 @@
 
 /mob/living/simple_animal/is_burnable()
 	return heat_damage_per_tick
+
+/mob/living/simple_animal/HandleLyingDensity()
+	return // Density does not change from resting
 
 /mob/living/simple_animal/proc/adjustBleedTicks(var/amount)
 	if(!can_bleed)
