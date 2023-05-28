@@ -2709,6 +2709,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/lar_maria/sec_checkpoint_1)
+"kY" = (
+/obj/structure/ladder,
+/obj/structure/lattice,
+/turf/simulated/open,
+/area/space)
 "lb" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -31096,7 +31101,7 @@ aa
 aa
 aa
 aa
-aa
+Pr
 Pr
 Pr
 Pr
@@ -34517,7 +34522,7 @@ ad
 ad
 cf
 cf
-aa
+kY
 gx
 aa
 jb
@@ -37975,7 +37980,7 @@ aa
 aW
 gx
 gx
-aa
+kY
 qx
 aa
 aa
