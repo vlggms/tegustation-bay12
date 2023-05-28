@@ -59,6 +59,7 @@
 	playsound(src, 'sound/simple_mob/abominable_infestation/floatfly/fly.ogg', 75, TRUE, 6)
 	visible_message(SPAN_DANGER("\The [src] flies upwards!"))
 	animate(src, pixel_z = 16, time = 5)
+	default_pixel_z = 16
 	addtimer(CALLBACK(src, .proc/EndFlight), fly_duration)
 
 /mob/living/simple_animal/hostile/infestation/floatfly/proc/EndFlight()
@@ -68,6 +69,7 @@
 	density = TRUE
 	visible_message(SPAN_WARNING("\The [src] stops its flight."))
 	animate(src, pixel_z = 0, time = 5)
+	default_pixel_z = 0
 
 /datum/ai_holder/simple_animal/infestation/floatfly
 	returns_home = FALSE

@@ -2,14 +2,9 @@
 	. = ..()
 	if(!.)
 		return FALSE
-	//Health
+
 	if(stat == DEAD)
-		if(health > 0)
-			icon_state = icon_living
-			switch_from_dead_to_living_mob_list()
-			set_stat(CONSCIOUS)
-			set_density(initial(density))
-		return 0
+		return FALSE
 
 	if(health > maxHealth)
 		health = maxHealth
@@ -27,9 +22,6 @@
 	if(can_bleed && bleed_ticks > 0)
 		handle_bleeding()
 
-	if(stat == DEAD)
-		return 1
-
 	if(buckled && can_escape)
 		if(istype(buckled, /obj/effect/energy_net))
 			var/obj/effect/energy_net/Net = buckled
@@ -39,7 +31,7 @@
 		else if(prob(50))
 			visible_message("<span class='warning'>\The [src] struggles against \the [buckled]!</span>")
 
-	return 1
+	return TRUE
 
 
 /mob/living/simple_animal/proc/handle_atmos(var/atmos_suitable = 1)
