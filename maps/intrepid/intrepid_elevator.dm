@@ -113,7 +113,7 @@
 	landmark_tag = "nav_marine_lift_top"
 	flags = SLANDMARK_FLAG_AUTOSET
 	base_area = /area/intrepid/department/exploration/hangar
-	base_turf = /turf/simulated/floor/plating
+	base_turf = /turf/simulated/open
 
 /obj/effect/shuttle_landmark/lift/marine_bottom
 	name = "Pandora Hangar Lower Deck"
@@ -127,7 +127,7 @@
 	landmark_tag = "nav_intrepidcargo_lift_top"
 	flags = SLANDMARK_FLAG_AUTOSET
 	base_area = /area/intrepid/department/cargo/cargostorage
-	base_turf = /turf/simulated/floor/plating
+	base_turf = /turf/simulated/open
 
 /obj/effect/shuttle_landmark/lift/intrepidcargo_bottom
 	name = "Pandora Hangar Lower Deck"
