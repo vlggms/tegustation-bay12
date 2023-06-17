@@ -448,6 +448,9 @@
 /obj/item/clothing/shoes/clown_shoes{
 	pixel_y = -1
 	},
+/obj/item/pen/crayon/rainbow,
+/obj/item/reagent_containers/food/drinks/glass2/coffeecup/rainbow,
+/obj/item/reagent_containers/food/drinks/glass2/coffeecup/tall/rainbow,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
 "awE" = (
@@ -664,6 +667,13 @@
 /obj/machinery/camera/network/command{
 	c_tag = "Command - Chief Medical Officer's Office";
 	dir = 1
+	},
+/obj/machinery/requests_console{
+	pixel_y = -32;
+	department = "Chief Medical Officer";
+	departmentType = 1;
+	name = "Chief Medical Officer's Requests Console";
+	announcementConsole = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/cmo)
@@ -1766,6 +1776,13 @@
 /obj/machinery/camera/network/command{
 	c_tag = "Command - Commanding Officer's Office"
 	},
+/obj/machinery/requests_console{
+	pixel_y = 26;
+	department = "Captain";
+	name = "Captain's Requests Console";
+	announcementConsole = 1;
+	departmentType = 7
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/co)
 "byB" = (
@@ -1985,6 +2002,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
+/obj/machinery/icecream_vat,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/starboard)
 "bNf" = (
@@ -4263,6 +4281,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/engineering/portthruster)
+"dCU" = (
+/obj/machinery/newscaster{
+	pixel_x = -32
+	},
+/turf/simulated/floor/wood/walnut,
+/area/intrepid/department/civillian/mess)
 "dDp" = (
 /obj/machinery/light{
 	dir = 8
@@ -4530,6 +4554,13 @@
 /obj/item/device/megaphone,
 /obj/item/storage/box/headset,
 /obj/item/storage/box/radiokeys,
+/obj/machinery/requests_console{
+	pixel_y = 26;
+	department = "Head of Personnel";
+	name = "Head of Personnel's Requests Console";
+	announcementConsole = 1;
+	departmentType = 7
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/xo)
 "dNC" = (
@@ -5595,14 +5626,17 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/light/dystopian{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/hallway)
 "eAN" = (
 /obj/structure/table/standard,
 /obj/item/reagent_containers/food/drinks/glass2/coffeecup/one,
+/obj/machinery/requests_console{
+	pixel_y = 26;
+	department = "Engineering";
+	departmentType = 3;
+	name = "Engineering Requests Console"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/monitoring)
 "eBc" = (
@@ -6528,6 +6562,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor,
 /area/intrepid/misc/hallway/portside)
 "fpQ" = (
@@ -7148,9 +7183,10 @@
 /turf/simulated/floor,
 /area/intrepid/department/medical/therapy)
 "fRn" = (
-/obj/structure/closet/firecloset,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/dark,
+/obj/machinery/vending/lavatory{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/sleep/bunk)
 "fRQ" = (
 /turf/simulated/wall/r_wall/prepainted,
@@ -9474,6 +9510,14 @@
 /obj/structure/table/marble,
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/civillian/galley)
+"hZB" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/item/device/synthesized_instrument/synthesizer,
+/obj/structure/table/rack,
+/turf/simulated/floor,
+/area/intrepid/misc/maint/starboard)
 "hZV" = (
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
@@ -11041,6 +11085,13 @@
 	c_tag = "Command - Chief Science Officer's Office";
 	dir = 1
 	},
+/obj/machinery/requests_console{
+	pixel_y = -32;
+	department = "Chief Science Officer";
+	departmentType = 6;
+	name = "Chief Science Officer's Requests Console";
+	announcementConsole = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/rd)
 "jtX" = (
@@ -11658,13 +11709,12 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/misc/hallway/center)
 "jRE" = (
-/obj/structure/closet/emcloset,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/camera/network/first_deck{
 	c_tag = "First Deck - Laundry";
 	dir = 4
 	},
-/turf/simulated/floor/tiled/dark,
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/sleep/bunk)
 "jRF" = (
 /obj/machinery/camera/network/research{
@@ -11762,6 +11812,12 @@
 "jYF" = (
 /obj/structure/closet/secure_closet/deckofficer,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/requests_console{
+	pixel_y = -32;
+	department = "Supply";
+	departmentType = 2;
+	name = "Supply Requests Console"
+	},
 /turf/simulated/floor/tiled,
 /area/intrepid/department/cargo/cargobay)
 "jZi" = (
@@ -12073,6 +12129,12 @@
 /obj/machinery/light/yellowish{
 	dir = 8
 	},
+/obj/machinery/requests_console{
+	pixel_y = 26;
+	department = "Bar";
+	departmentType = 4;
+	name = "Bar Requests Console"
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/civillian/bar)
 "kmh" = (
@@ -12264,6 +12326,9 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/starboard)
 "kvv" = (
+/obj/machinery/newscaster{
+	pixel_x = 27
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/sleep/bunk)
 "kwf" = (
@@ -12340,6 +12405,13 @@
 /obj/machinery/camera/network/command{
 	c_tag = "Command - Chief of Security's Office"
 	},
+/obj/machinery/requests_console{
+	pixel_y = 26;
+	department = "Chief Security Officer";
+	name = "Chief Security Officer's Requests Console";
+	announcementConsole = 1;
+	departmentType = 5
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/cos)
 "kyl" = (
@@ -12391,6 +12463,8 @@
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
+/obj/item/device/synthesized_instrument/trumpet,
+/obj/structure/table/rack,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/starboard)
 "kCl" = (
@@ -12684,6 +12758,14 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/intrepid/misc/maint/aft)
+"kPD" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/item/device/synthesized_instrument/violin,
+/obj/structure/table/rack,
+/turf/simulated/floor,
+/area/intrepid/misc/maint/starboard)
 "kQp" = (
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/monotile,
@@ -14281,6 +14363,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor,
 /area/intrepid/misc/hallway/portside)
 "mhv" = (
@@ -14637,6 +14720,12 @@
 /area/intrepid/department/command/commandquarters/cmo)
 "msR" = (
 /obj/machinery/robotic_fabricator,
+/obj/machinery/requests_console{
+	pixel_y = 26;
+	department = "Robotics";
+	departmentType = 3;
+	name = "Robotics Requests Console"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/engineering/assembly/robotics)
 "msY" = (
@@ -15531,7 +15620,9 @@
 /turf/simulated/floor/carpet/purple,
 /area/intrepid/department/command/commandquarters/rd)
 "mYr" = (
-/obj/item/stool,
+/obj/machinery/uniform_vendor{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/sleep/bunk)
 "mZI" = (
@@ -15962,6 +16053,14 @@
 /obj/effect/paint/sun,
 /turf/simulated/floor,
 /area/intrepid/department/exploration/storage)
+"nqT" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/item/device/synthesized_instrument/guitar,
+/obj/structure/table/rack,
+/turf/simulated/floor,
+/area/intrepid/misc/maint/starboard)
 "nrq" = (
 /obj/structure/bed/chair/padded{
 	dir = 4
@@ -16440,6 +16539,7 @@
 	info = "The Intrepid has a unique self destruct system, on the top deck you will find the vault which contains the nuclear activation cylinders. To activate the nuclear self-destruct mechanism, these cylinders must be installed at specific locations around the ship. There are three receptacles on each wing within the exterior maintaince tunnels, locked behind an airlock brace. After installing the cylinders, you may detonate the vessel.";
 	name = "Self-Destructinator 1000 Operation Guide"
 	},
+/obj/item/card/id/captains_spare,
 /turf/simulated/floor/carpet/blue,
 /area/intrepid/department/command/commandquarters/co)
 "nMq" = (
@@ -20357,6 +20457,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/center)
+"qPE" = (
+/obj/effect/wingrille_spawn/reinforced/full,
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/shuttle/research/xenobiolab)
 "qPN" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -21535,6 +21642,13 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/machinery/requests_console{
+	pixel_y = 26;
+	department = "Kitchen";
+	departmentType = 4;
+	name = "Kitchen Requests Console";
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/civillian/galley)
 "rTd" = (
@@ -22206,6 +22320,13 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/window/southright,
+/obj/machinery/requests_console{
+	department = "Bridge";
+	name = "Bridge Requests Console";
+	announcementConsole = 1;
+	departmentType = 7;
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/command/bridge)
 "srQ" = (
@@ -22670,6 +22791,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/newscaster{
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/civillian/hydroponics)
 "sKy" = (
@@ -24059,6 +24183,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/light/dystopian{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/hallway)
 "tNf" = (
@@ -25343,6 +25470,12 @@
 "uNR" = (
 /obj/structure/table/standard,
 /obj/item/reagent_containers/glass/bucket,
+/obj/machinery/requests_console{
+	pixel_y = -32;
+	department = "Hydroponics";
+	departmentType = 4;
+	name = "Hydroponics Requests Console"
+	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/civillian/hydroponics)
 "uOL" = (
@@ -25376,7 +25509,10 @@
 	dir = 1
 	},
 /obj/machinery/requests_console{
-	pixel_y = 26
+	pixel_y = 26;
+	department = "Medical";
+	departmentType = 1;
+	name = "Medical Requests Console"
 	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/treatment)
@@ -26630,9 +26766,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/bridgeofficer)
 "vSi" = (
-/obj/structure/table/standard,
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/machinery/vending/games{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/sleep/bunk)
@@ -27301,6 +27439,12 @@
 "wws" = (
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/misc/maint/aft)
+"wwL" = (
+/obj/machinery/vending/fashionvend{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/crew_quarters/sleep/bunk)
 "wxh" = (
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/department/engineering/portthruster)
@@ -28024,6 +28168,12 @@
 	dir = 9
 	},
 /obj/structure/closet/secure_closet/brigchief,
+/obj/machinery/requests_console{
+	pixel_y = 26;
+	department = "Security";
+	departmentType = 5;
+	name = "Security Requests Console"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/security/bo)
 "wXG" = (
@@ -28648,6 +28798,13 @@
 	},
 /obj/item/rpd,
 /obj/item/device/scanner/gas,
+/obj/machinery/requests_console{
+	pixel_y = -32;
+	department = "Chief Engineer";
+	departmentType = 3;
+	name = "Chief Engineer's Requests Console";
+	announcementConsole = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/ce)
 "xtN" = (
@@ -44489,9 +44646,9 @@ crW
 wMr
 wWw
 wMr
-wMr
-wMr
-wMr
+qPE
+qPE
+qPE
 wMr
 vKU
 kHQ
@@ -45044,7 +45201,7 @@ mkK
 dWI
 iEk
 gcp
-cRN
+dCU
 ddd
 fAO
 ueI
@@ -46453,10 +46610,10 @@ fWe
 fWe
 nff
 hjS
-hjS
+kPD
 kAt
-hjS
-hjS
+nqT
+hZB
 hjS
 aaQ
 ddI
@@ -46482,7 +46639,7 @@ cjD
 cjD
 cjD
 cjD
-cjD
+qkL
 cjD
 cjD
 cjD
@@ -47095,7 +47252,7 @@ cjD
 cjD
 cjD
 cjD
-qkL
+cjD
 cjD
 cjD
 cjD
@@ -48475,7 +48632,7 @@ sQC
 fRn
 vSi
 mYr
-nxK
+wwL
 bHK
 mWV
 kCy

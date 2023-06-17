@@ -4472,6 +4472,10 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/atmos)
+"pl" = (
+/obj/structure/lattice,
+/turf/simulated/wall/r_wall/prepainted,
+/area/intrepid/misc/maint/superstructure)
 "pn" = (
 /obj/effect/floor_decal/corner/blue/half,
 /obj/structure/sign/warning/nosmoking_2{
@@ -6347,6 +6351,10 @@
 /obj/effect/wingrille_spawn/reinforced_phoron/full,
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room/aux)
+"vf" = (
+/obj/structure/table/standard,
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper)
 "vh" = (
 /obj/structure/catwalk,
 /obj/structure/cable/orange{
@@ -7229,7 +7237,7 @@
 /obj/machinery/door/firedoor,
 /obj/effect/wallframe_spawn/reinforced,
 /turf/simulated/floor,
-/area/intrepid/department/civillian/archive)
+/area/intrepid/misc/hallway/portside)
 "yd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	dir = 4
@@ -9947,6 +9955,7 @@
 /area/intrepid/misc/maint/upper)
 "Hu" = (
 /obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor,
 /area/intrepid/misc/hallway/portside)
 "Hv" = (
@@ -12490,6 +12499,7 @@
 	dir = 1
 	},
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/obj/machinery/atmospherics/portables_connector,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/pandora/cargo)
 "Qb" = (
@@ -13136,6 +13146,9 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/pandora/cargo)
+"Sz" = (
+/turf/simulated/wall/r_wall/prepainted,
+/area/intrepid/misc/hallway/portside)
 "SA" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/machinery/camera/network/engine{
@@ -14417,6 +14430,22 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/selfdestruct)
+"WG" = (
+/obj/item/clothing/shoes/mime,
+/obj/item/clothing/mask/gas/mime,
+/obj/item/clothing/under/mime,
+/obj/item/clothing/head/beret,
+/obj/item/toy/figure/mime,
+/obj/item/pen/crayon/mime,
+/obj/item/bedsheet/mime,
+/obj/structure/largecrate{
+	desc = "A hefty wooden crate. Scrawled across the side is 'FORBIDDEN'"
+	},
+/obj/item/reagent_containers/food/snacks/mimeburger,
+/obj/item/clothing/gloves/white,
+/obj/item/clothing/accessory/suspenders,
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper)
 "WH" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/table/rack,
@@ -30324,8 +30353,8 @@ QT
 iN
 QT
 Hu
+vf
 lJ
-oB
 hc
 ai
 ZT
@@ -30526,8 +30555,8 @@ Gu
 iN
 QT
 Hu
+vf
 lJ
-oB
 hc
 ai
 ZT
@@ -30728,8 +30757,8 @@ QT
 iN
 QT
 Hu
+vf
 lJ
-oB
 hc
 yf
 PF
@@ -30926,12 +30955,12 @@ tV
 ml
 ml
 tV
-QT
 iN
-QT
-Hu
-lJ
+iN
+iN
 oB
+oB
+lJ
 gL
 Qu
 hk
@@ -31128,11 +31157,11 @@ tV
 FL
 Lb
 tV
+QT
 iN
-iN
-iN
+QT
+QT
 oB
-XZ
 oB
 oB
 oB
@@ -31330,11 +31359,11 @@ tV
 ml
 ml
 tV
-QT
 iN
-QT
-Hu
-lJ
+iN
+iN
+iN
+oB
 lJ
 lJ
 oB
@@ -31476,7 +31505,7 @@ UU
 Ya
 qT
 tV
-ml
+rj
 ml
 ml
 TM
@@ -31533,10 +31562,10 @@ ml
 ml
 tV
 QT
+QT
 iN
 QT
 Hu
-lJ
 lJ
 lJ
 oB
@@ -31734,11 +31763,11 @@ tV
 ml
 ml
 tV
+tV
 Gu
 iN
 QT
 Hu
-lJ
 lJ
 lJ
 Eu
@@ -31935,12 +31964,12 @@ qT
 tV
 Lb
 Lb
+Lb
 tV
-QT
 iN
-QT
+iN
+iN
 Hu
-lJ
 lJ
 lJ
 oB
@@ -32137,12 +32166,12 @@ qT
 tV
 ml
 ml
+ml
 tV
 QT
 iN
 QT
-Hu
-lJ
+oB
 lJ
 lJ
 oB
@@ -32339,11 +32368,11 @@ qT
 tV
 tV
 ml
-tV
+ml
+pl
+QT
 iN
-iN
-iN
-oB
+QT
 oB
 XZ
 oB
@@ -32541,8 +32570,8 @@ qT
 qT
 tV
 ml
+ml
 tV
-QT
 QT
 iN
 QT
@@ -32743,14 +32772,14 @@ UU
 qT
 tV
 Lb
+Lb
 tV
-QT
 QT
 iN
 QT
 Hu
 lJ
-lJ
+WG
 oB
 hc
 ai
@@ -32945,8 +32974,8 @@ UU
 qT
 tV
 ml
+ml
 tV
-QT
 QT
 iN
 QT
@@ -33147,7 +33176,7 @@ UU
 qT
 tV
 ml
-tV
+ml
 tV
 iN
 iN
@@ -34970,7 +34999,7 @@ tV
 QT
 iN
 QT
-Cz
+Sz
 lJ
 lJ
 oB
@@ -35980,7 +36009,7 @@ tV
 QT
 iN
 QT
-Cz
+Sz
 lJ
 lJ
 oB
@@ -36182,7 +36211,7 @@ tV
 Uz
 Uz
 Uz
-Cz
+Sz
 oB
 oB
 oB
