@@ -318,6 +318,8 @@
 #include "code\datums\disease\advance\symptoms\_symptom.dm"
 #include "code\datums\disease\advance\symptoms\choking.dm"
 #include "code\datums\disease\advance\symptoms\cough.dm"
+#include "code\datums\disease\advance\symptoms\pain.dm"
+#include "code\datums\disease\advance\symptoms\painkiller.dm"
 #include "code\datums\disease\advance\symptoms\sneeze.dm"
 #include "code\datums\disease\advance\symptoms\weight_loss.dm"
 #include "code\datums\disease\diseases\cold9.dm"
