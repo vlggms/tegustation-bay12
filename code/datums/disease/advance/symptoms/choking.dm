@@ -23,13 +23,13 @@ Bonus
 	resistance = -2
 	stage_speed = -2
 	transmittable = -2
-	level = 3
-	severity = 3
+	level = 4
+	severity = 4
 	base_message_chance = 15
 	symptom_delay_min = 10
 	symptom_delay_max = 30
 	threshold_descs = list(
-		"Resistance 10" = "Slwoly damages respiratory organs.",
+		"Resistance 10" = "Slowly damages respiratory organs.",
 		"Stage Speed 8" = "Causes choking more frequently.",
 		"Stealth 4" = "The symptom remains hidden until active."
 	)
@@ -60,8 +60,8 @@ Bonus
 			if(!suppress_warning)
 				to_chat(H, SPAN_WARNING(pick("Your windpipe feels like a straw.", "Your breathing becomes tremendously difficult.")))
 			else
-				to_chat(H, SPAN_WARNING("You feel very [pick("dizzy","woozy","faint")].")) //fake bloodloss messages
-			H.adjustOxyLoss(rand(6, 13))
+				to_chat(H, SPAN_WARNING("You feel very [pick("dizzy","woozy","faint")].")) // Fake bloodloss messages
+			H.adjustOxyLoss(rand(9, 18))
 			H.emote("gasp")
 			if(damage_lungs && prob(10))
 				var/obj/item/organ/internal/I = H.internal_organs_by_name[H.species.breathing_organ]
@@ -73,7 +73,7 @@ Bonus
 
 		if(5)
 			to_chat(H, SPAN_USERDANGER("[pick("You're choking!", "You can't breathe!")]"))
-			H.adjustOxyLoss(rand(10, 18))
+			H.adjustOxyLoss(rand(14, 26))
 			H.emote("gasp")
 			if(damage_lungs && prob(15))
 				var/obj/item/organ/internal/I = H.internal_organs_by_name[H.species.breathing_organ]

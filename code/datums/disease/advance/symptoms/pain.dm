@@ -23,7 +23,7 @@ Bonus
 	resistance = 4
 	stage_speed = 0
 	transmittable = -1
-	level = 4
+	level = 5
 	severity = 4
 	symptom_delay_min = 15
 	symptom_delay_max = 30
@@ -33,14 +33,14 @@ Bonus
 		"Stage Speed 10" = "Stuns the host for a short period of time."
 	)
 	/// Amount of pain done on each custom_pain call. This is multiplied with each stage!
-	var/pain_amount = 12
+	var/pain_amount = 10
 	var/stun_host = FALSE
 
 /datum/symptom/pain/Start(datum/disease/advance/A)
 	if(!..())
 		return
 	if(A.properties["resistance"] >= 10) // More pain
-		pain_amount = 24
+		pain_amount = 20
 	if(A.properties["stealth"] >= 5)
 		suppress_warning = TRUE
 	if(A.properties["stage_rate"] >= 17) // Stuns the host with damage, so long as painkillers don't overpower it
