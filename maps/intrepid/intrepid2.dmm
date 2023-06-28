@@ -790,6 +790,13 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/misc/maint/upper)
+"cD" = (
+/obj/machinery/door/airlock/maintenance,
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/exploration/hangar)
 "cE" = (
 /obj/effect/floor_decal/corner/brown/half,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -1344,6 +1351,9 @@
 /obj/structure/cable/orange{
 	icon_state = "2-4"
 	},
+/obj/structure/closet/crate/secure/shuttle{
+	name = "loose items storage"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
 "eL" = (
@@ -1361,6 +1371,11 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/intrepid/department/engineering/engine_room)
+"eN" = (
+/obj/structure/table/steel,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/intrepid/department/exploration/hangar)
 "eO" = (
 /obj/machinery/computer/modular/preset/engineering{
 	dir = 8
@@ -1597,6 +1612,11 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/tcommsat)
+"fB" = (
+/obj/structure/table/steel,
+/obj/random/maintenance,
+/turf/simulated/floor/plating,
+/area/intrepid/department/exploration/hangar)
 "fC" = (
 /obj/machinery/power/smes/buildable/preset/torch/engine_main{
 	RCon_tag = "R-UST to Substations";
@@ -1760,6 +1780,9 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/morgue)
+"gf" = (
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/exploration/hangar)
 "gg" = (
 /obj/effect/paint_stripe/blue,
 /turf/simulated/wall/prepainted,
@@ -3693,27 +3716,21 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/pandora/cockpit)
 "mr" = (
-/obj/machinery/atmospherics/valve/shutoff/scrubbers,
-/obj/machinery/atmospherics/valve/shutoff/supply,
-/obj/effect/floor_decal/corner/brown/half,
-/obj/effect/floor_decal/industrial/shutoff,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/dark/monotile,
+/obj/structure/girder,
+/turf/simulated/floor/plating,
 /area/intrepid/department/exploration/hangar)
 "mt" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 1
-	},
 /obj/effect/floor_decal/industrial/fire{
 	dir = 1
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/exploration/hangar)
@@ -5161,6 +5178,15 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
+"rG" = (
+/obj/structure/closet/crate,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/turf/simulated/floor/plating,
+/area/intrepid/department/exploration/hangar)
 "rH" = (
 /turf/simulated/floor/tiled/monotile,
 /area/tcommsat)
@@ -6651,6 +6677,15 @@
 /obj/structure/bed/chair/shuttle,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/space)
+"we" = (
+/obj/structure/closet/crate/large,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/turf/simulated/floor/plating,
+/area/intrepid/department/exploration/hangar)
 "wg" = (
 /obj/structure/ladder,
 /turf/simulated/floor/airless,
@@ -7886,7 +7921,7 @@
 /area/intrepid/department/engineering/atmos)
 "Ap" = (
 /turf/simulated/open,
-/area/intrepid/department/exploration/hangar)
+/area/turbolift/marine/lift)
 "Au" = (
 /obj/structure/cable/orange{
 	icon_state = "2-5"
@@ -8242,7 +8277,7 @@
 "Bt" = (
 /obj/effect/shuttle_landmark/lift/marine_top,
 /turf/simulated/open,
-/area/intrepid/department/exploration/hangar)
+/area/turbolift/marine/lift)
 "Bx" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -10988,7 +11023,7 @@
 /area/intrepid/department/engineering/engine_room)
 "Lb" = (
 /obj/structure/girder,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/reinforced,
 /area/intrepid/misc/maint/superstructure)
 "Le" = (
 /obj/machinery/power/smes/buildable/preset/torch/substation_full{
@@ -11452,6 +11487,10 @@
 	},
 /turf/simulated/floor/shuttle/black,
 /area/intrepid/department/exploration/hangar)
+"MC" = (
+/obj/structure/table/steel,
+/turf/simulated/floor/plating,
+/area/intrepid/department/exploration/hangar)
 "MD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -11564,6 +11603,10 @@
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 17
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/exploration/hangar)
@@ -11811,11 +11854,6 @@
 /area/intrepid/department/civillian/dockbayfour)
 "NI" = (
 /obj/effect/floor_decal/corner/brown/half,
-/obj/structure/sign/warning/docking_area{
-	dir = 1;
-	name = "\improper KEEP CLEAR - DO NOT BLOCK";
-	pixel_y = -37
-	},
 /obj/machinery/camera/network/hangar{
 	c_tag = "Hangar - Portside Pandora Hangar";
 	dir = 1;
@@ -13097,16 +13135,8 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/pandora/cockpit)
 "Sq" = (
-/obj/effect/floor_decal/corner/brown/half,
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -24
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/dark/monotile,
-/area/intrepid/department/exploration/hangar)
+/turf/simulated/floor/reinforced,
+/area/intrepid/misc/maint/superstructure)
 "Sr" = (
 /obj/machinery/door/airlock/command,
 /obj/structure/cable/green{
@@ -13424,6 +13454,11 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/department/civillian/dockbaytwo)
+"Tl" = (
+/obj/structure/lattice,
+/obj/structure/ladder,
+/turf/simulated/open,
+/area/intrepid/department/exploration/hangar)
 "Tn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -30700,7 +30735,7 @@ tV
 tV
 ml
 ml
-TM
+Sq
 ml
 ml
 ml
@@ -30768,7 +30803,7 @@ iJ
 ml
 ml
 ml
-TM
+Sq
 ml
 ml
 tV
@@ -30902,7 +30937,7 @@ tV
 ml
 ml
 ml
-TM
+Sq
 ml
 ml
 ml
@@ -30970,7 +31005,7 @@ iJ
 ml
 ml
 ml
-TM
+Sq
 ml
 ml
 ml
@@ -31104,7 +31139,7 @@ tV
 ml
 ml
 ml
-TM
+Sq
 ml
 ml
 ml
@@ -31154,7 +31189,7 @@ UU
 UU
 qT
 tV
-FL
+Lb
 Lb
 tV
 QT
@@ -31172,7 +31207,7 @@ iJ
 ml
 ml
 ml
-TM
+Sq
 ml
 ml
 ml
@@ -31303,13 +31338,13 @@ UU
 Ya
 qT
 tV
-TM
-TM
-TM
+Sq
+Sq
+Sq
 tV
-TM
-TM
-TM
+Sq
+Sq
+Sq
 rp
 lJ
 ai
@@ -31371,13 +31406,13 @@ OB
 ai
 lJ
 ef
-TM
-TM
-TM
+Sq
+Sq
+Sq
 tV
-TM
-TM
-TM
+Sq
+Sq
+Sq
 tV
 qT
 Ya
@@ -31505,10 +31540,10 @@ UU
 Ya
 qT
 tV
-rj
 ml
 ml
-TM
+ml
+Sq
 ml
 ml
 ml
@@ -31576,7 +31611,7 @@ oI
 ml
 ml
 ml
-TM
+Sq
 ml
 ml
 ml
@@ -31710,7 +31745,7 @@ tV
 ml
 ml
 ml
-TM
+Sq
 ml
 ml
 ml
@@ -31778,7 +31813,7 @@ iJ
 ml
 ml
 ml
-TM
+Sq
 ml
 ml
 ml
@@ -31912,7 +31947,7 @@ tV
 ml
 ml
 ml
-TM
+Sq
 ml
 ml
 ml
@@ -31980,7 +32015,7 @@ iJ
 ml
 ml
 ml
-TM
+Sq
 ml
 ml
 ml
@@ -32111,9 +32146,9 @@ UU
 Ya
 qT
 tV
-TM
-TM
-TM
+Lb
+Lb
+Lb
 RH
 RH
 RH
@@ -34538,7 +34573,7 @@ tV
 ml
 ml
 ml
-TM
+Lb
 ml
 ml
 ml
@@ -34606,7 +34641,7 @@ iJ
 ml
 ml
 ml
-TM
+Sq
 ml
 ml
 ml
@@ -34740,7 +34775,7 @@ tV
 ml
 ml
 ml
-TM
+Sq
 ml
 ml
 ml
@@ -34808,7 +34843,7 @@ iJ
 ml
 ml
 ml
-TM
+Sq
 ml
 ml
 ml
@@ -34942,7 +34977,7 @@ tV
 ml
 ml
 ml
-TM
+Sq
 ml
 ml
 ml
@@ -34993,8 +35028,8 @@ UU
 UU
 qT
 tV
-FL
-FL
+Lb
+Lb
 tV
 QT
 iN
@@ -35010,7 +35045,7 @@ Ew
 ml
 ml
 ml
-TM
+Sq
 ml
 ml
 ml
@@ -35144,7 +35179,7 @@ tV
 ml
 ml
 ml
-TM
+Sq
 ml
 ml
 ml
@@ -35212,7 +35247,7 @@ ix
 ml
 ml
 ml
-TM
+Sq
 ml
 ml
 ml
@@ -35346,7 +35381,7 @@ tV
 ml
 ml
 ml
-TM
+Sq
 ml
 ml
 ml
@@ -35397,8 +35432,8 @@ yq
 yq
 qT
 tV
-FL
-FL
+Lb
+Lb
 tV
 QT
 iN
@@ -35414,7 +35449,7 @@ iJ
 ml
 ml
 ml
-TM
+Sq
 ml
 ml
 ml
@@ -35548,7 +35583,7 @@ tV
 ml
 ml
 ml
-TM
+Lb
 ml
 ml
 ml
@@ -35616,7 +35651,7 @@ iJ
 ml
 ml
 ml
-TM
+Sq
 ml
 ml
 ml
@@ -35747,9 +35782,9 @@ UU
 Ya
 qT
 tV
-TM
-TM
-TM
+Lb
+Lb
+Lb
 Na
 Na
 Na
@@ -37590,9 +37625,9 @@ wr
 ss
 vS
 tV
-TM
-TM
-TM
+Sq
+Sq
+Sq
 Nx
 gH
 eH
@@ -38196,9 +38231,9 @@ ZJ
 Uu
 vS
 tV
-TM
-TM
-TM
+Sq
+Sq
+Sq
 Nx
 gH
 eH
@@ -38227,13 +38262,13 @@ SO
 mK
 rm
 iZ
-TM
-TM
-TM
-TM
-TM
-TM
-TM
+Lb
+Lb
+Lb
+Lb
+Lb
+Lb
+Lb
 oB
 lJ
 ai
@@ -38833,13 +38868,13 @@ bv
 rm
 kp
 iZ
-TM
-TM
-TM
-TM
-TM
-TM
-TM
+Lb
+Lb
+Lb
+Lb
+Lb
+Lb
+Lb
 oB
 lJ
 ai
@@ -39439,13 +39474,13 @@ iZ
 iZ
 iZ
 iZ
-TM
-TM
-TM
-TM
-TM
-TM
-TM
+Lb
+Lb
+Lb
+Lb
+Lb
+Lb
+Lb
 oB
 lJ
 ai
@@ -40036,22 +40071,22 @@ ES
 nc
 qP
 nf
-TM
-TM
-TM
-TM
-TM
-TM
-TM
-TM
-TM
-TM
-TM
-TM
-TM
-TM
-TM
-TM
+Lb
+Lb
+Lb
+Lb
+Lb
+Lb
+Lb
+Lb
+Lb
+Lb
+Lb
+Lb
+Lb
+Lb
+Lb
+Lb
 oB
 lJ
 Uh
@@ -40642,22 +40677,22 @@ HO
 HO
 AW
 nf
-TM
-TM
-TM
-TM
-TM
-TM
-TM
-TM
-TM
-TM
-TM
-TM
-TM
-TM
-TM
-TM
+Lb
+Lb
+Lb
+Lb
+Lb
+Lb
+Lb
+Lb
+Lb
+Lb
+Lb
+Lb
+Lb
+Lb
+Lb
+Lb
 oB
 lJ
 Uh
@@ -41248,11 +41283,11 @@ ES
 Sh
 Bk
 nf
-TM
-TM
-TM
-TM
-TM
+Lb
+Lb
+Lb
+Lb
+Lb
 tV
 tV
 tV
@@ -41260,10 +41295,10 @@ tV
 tV
 tV
 tV
-TM
-TM
-TM
-TM
+Lb
+Lb
+Lb
+Lb
 oB
 lJ
 Uh
@@ -41809,13 +41844,13 @@ qT
 tV
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
 Nx
@@ -42011,13 +42046,13 @@ qT
 tV
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
 Nx
@@ -42213,13 +42248,13 @@ qT
 tV
 tV
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
 Nx
@@ -42415,13 +42450,13 @@ qT
 qT
 tV
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
 Nx
@@ -42617,13 +42652,13 @@ gh
 qT
 tV
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
 Nx
@@ -42819,13 +42854,13 @@ Da
 qT
 tV
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
 Nx
@@ -43021,13 +43056,13 @@ Da
 qT
 tV
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
 Nx
@@ -43223,13 +43258,13 @@ Da
 qT
 tV
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
 Nx
@@ -43287,7 +43322,7 @@ vm
 sb
 Lu
 mt
-mr
+vO
 Ap
 Ap
 Ap
@@ -43425,13 +43460,13 @@ Da
 qT
 tV
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
 Nx
@@ -43627,13 +43662,13 @@ Da
 qT
 tV
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
 Nx
@@ -43829,13 +43864,13 @@ Da
 qT
 tV
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
 Nx
@@ -44298,11 +44333,11 @@ fL
 fL
 BG
 Iq
-tV
-ml
-ml
-ml
-ml
+es
+we
+rG
+MC
+mr
 tV
 qT
 Je
@@ -44499,12 +44534,12 @@ vj
 vj
 yg
 Yj
-Sq
-tV
-ml
-ml
-ml
-ml
+vO
+cD
+gf
+Tl
+MC
+mr
 tV
 qT
 NL
@@ -44702,11 +44737,11 @@ Dw
 Lj
 MT
 kM
-tV
-ml
-ml
-ml
-ml
+es
+eN
+fB
+MC
+mr
 tV
 qT
 NL
@@ -44908,7 +44943,7 @@ tV
 tV
 tV
 tV
-ml
+tV
 tV
 qT
 NL
@@ -45045,22 +45080,22 @@ tV
 tV
 tV
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 tV
 qT
 qT
@@ -45092,22 +45127,22 @@ TU
 he
 qT
 tV
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 tV
 tV
@@ -45247,22 +45282,22 @@ Xk
 qT
 tV
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 tV
 qT
 rD
@@ -45294,22 +45329,22 @@ CJ
 CJ
 qT
 tV
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 tV
 qT
@@ -45449,10 +45484,10 @@ NL
 qT
 tV
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 Wo
 Wo
@@ -45461,10 +45496,10 @@ Lw
 Wo
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 tV
 pD
 eC
@@ -45496,10 +45531,10 @@ Bd
 Bd
 Xk
 tV
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
 Ox
@@ -45508,10 +45543,10 @@ Kh
 ez
 Ox
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 tV
 qT
@@ -45651,10 +45686,10 @@ MU
 qT
 tV
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 Wo
 oc
@@ -45663,10 +45698,10 @@ Il
 Wo
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 tV
 Th
 UU
@@ -45698,10 +45733,10 @@ UU
 UU
 Th
 tV
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
 Ox
@@ -45710,10 +45745,10 @@ wP
 Hz
 Ox
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 tV
 qT
@@ -45853,10 +45888,10 @@ MU
 qT
 tV
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 Wo
 yo
@@ -45865,10 +45900,10 @@ yo
 Wo
 ml
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 tV
 Th
 UU
@@ -45900,10 +45935,10 @@ UU
 UU
 Th
 tV
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 ml
 Ox
@@ -45912,10 +45947,10 @@ ol
 fo
 Ox
 ml
-TM
+Lb
 ml
 ml
-TM
+Lb
 ml
 tV
 qT

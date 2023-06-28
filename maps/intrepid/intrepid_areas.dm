@@ -483,8 +483,7 @@
 /area/turbolift/marine/lift
 	name = "\improper Pandora Hangar Lift"
 	icon_state = "shuttle3"
-	base_turf = /turf/simulated/open
-
+	base_turf = /turf/simulated/floor
 
 // Holodecks
 
