@@ -16,18 +16,17 @@
 		/mob/living/simple_animal/friendly/mouse,
 		/mob/living/silicon/robot/drone
 		)
-	var/airtight = 0
 
-/obj/structure/plasticflaps/CanPass(atom/A, turf/T)
+/obj/structure/plasticflaps/CanPass(atom/movable/A, turf/T, height=0, air_group=0)
 	if(istype(A) && A.checkpass(PASS_FLAG_GLASS))
 		return prob(60)
 
 	var/obj/structure/bed/B = A
-	if (istype(A, /obj/structure/bed) && B.buckled_mob)//if it's a bed/chair and someone is buckled, it will not pass
-		return 0
+	if(istype(A, /obj/structure/bed) && B.buckled_mob) // If it's a bed/chair and someone is buckled, it will not pass
+		return FALSE
 
-	if(istype(A, /obj/vehicle))	//no vehicles
-		return 0
+	if(istype(A, /obj/vehicle)) // No vehicles
+		return FALSE
 
 	var/mob/living/M = A
 	if(istype(M))
@@ -40,16 +39,23 @@
 
 	return ..()
 
+/obj/structure/plasticflaps/c_airblock(turf/other)
+	#ifdef ZASDBG
+	ASSERT(isturf(other))
+	#endif
+	return (atmos_canpass != CANPASS_ALWAYS) && anchored
+
 /obj/structure/plasticflaps/attackby(obj/item/W, mob/user)
 	if(isCrowbar(W) && !anchored)
-		user.visible_message("<span class='notice'>\The [user] begins deconstructing \the [src].</span>", "<span class='notice'>You start deconstructing \the [src].</span>")
+		user.visible_message(SPAN_NOTICE("\The [user] begins deconstructing \the [src]."), SPAN_NOTICE("You start deconstructing \the [src]."))
 		if(user.do_skilled(3 SECONDS, SKILL_CONSTRUCTION, src))
-			user.visible_message("<span class='warning'>\The [user] deconstructs \the [src].</span>", "<span class='warning'>You deconstruct \the [src].</span>")
+			user.visible_message(SPAN_WARNING("\The [user] deconstructs \the [src]."), SPAN_WARNING("You deconstruct \the [src]."))
 			qdel(src)
 	if(isScrewdriver(W) && anchored)
-		airtight = !airtight
-		airtight ? become_airtight() : clear_airtight()
-		user.visible_message("<span class='warning'>\The [user] adjusts \the [src], [airtight ? "preventing" : "allowing"] air flow.</span>")
+		user.visible_message(SPAN_NOTICE("\The [user] begins adjusting \the [src]."), SPAN_NOTICE("You start adjusting \the [src]."))
+		if(user.do_skilled(3 SECONDS, SKILL_CONSTRUCTION, src))
+			atmos_canpass = (atmos_canpass == CANPASS_ALWAYS ? CANPASS_PROC : CANPASS_ALWAYS)
+			user.visible_message(SPAN_WARNING("\The [user] adjusts \the [src], [atmos_canpass == CANPASS_PROC ? "preventing" : "allowing"] air flow."))
 	else ..()
 
 /obj/structure/plasticflaps/ex_act(severity)
@@ -63,21 +69,5 @@
 			if (prob(5))
 				qdel(src)
 
-/obj/structure/plasticflaps/Destroy() //lazy hack to set the turf to allow air to pass if it's a simulated floor
-	clear_airtight()
-	. = ..()
-
-/obj/structure/plasticflaps/proc/become_airtight()
-	var/turf/T = get_turf(loc)
-	if(T)
-		T.blocks_air = 1
-
-/obj/structure/plasticflaps/proc/clear_airtight()
-	var/turf/T = get_turf(loc)
-	if(T)
-		if(istype(T, /turf/simulated/floor))
-			T.blocks_air = 0
-
-
-/obj/structure/plasticflaps/airtight // airtight defaults to on
-	airtight = 1
+/obj/structure/plasticflaps/airtight
+	atmos_canpass = CANPASS_PROC
