@@ -1,9 +1,10 @@
-generate_system_name()
+// TODO: Generalize it, somehow. Either move it to map datum proc or config value
+/proc/generate_system_name_intrepid()
 	return "[pick("Libitina", "Grenze", "Terminus", "Ruhm", "Fomalhaut")] [rand(1, 99)]"
 
 /datum/map/intrepid/setup_map()
 	..()
-	system_name = generate_system_name()
+	system_name = generate_system_name_intrepid()
 	minor_announcement = new(new_sound = sound('sound/AI/torch/commandreport.ogg', volume = 45))
 
 /datum/map/intrepid/get_map_info()
