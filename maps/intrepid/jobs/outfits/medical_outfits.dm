@@ -19,6 +19,10 @@
 	uniform = /obj/item/clothing/under/terragov/utility/fleet/medical
 	shoes = /obj/item/clothing/shoes/dutyboots
 
+/decl/hierarchy/outfit/job/intrepid/crew/medical/senior/alien
+	name = OUTFIT_JOB_NAME("Physician - Alien Worker")
+	id_types = list(/obj/item/card/id/intrepid/crew/medical/senior/alien)
+
 /decl/hierarchy/outfit/job/intrepid/crew/medical/contractor/senior
 	name = OUTFIT_JOB_NAME("Physician - Contractor")
 	id_types = list(/obj/item/card/id/intrepid/contractor/medical/senior)
@@ -35,6 +39,10 @@
 	uniform = /obj/item/clothing/under/terragov/utility/fleet/medical
 	shoes = /obj/item/clothing/shoes/dutyboots
 	l_ear = /obj/item/device/radio/headset/headset_corpsman
+
+/decl/hierarchy/outfit/job/intrepid/crew/medical/doctor/alien
+	name = OUTFIT_JOB_NAME("Medical Technician - Alien Worker")
+	id_types = list(/obj/item/card/id/intrepid/crew/medical/alien)
 
 /decl/hierarchy/outfit/job/intrepid/crew/medical/contractor
 	name = OUTFIT_JOB_NAME("Medical Technician - Contractor")
@@ -65,7 +73,7 @@
 	BACKPACK_OVERRIDE_CHEMISTRY
 
 /decl/hierarchy/outfit/job/intrepid/crew/medical/contractor/chemist/alien
-	name = OUTFIT_JOB_NAME("Chemist")
+	name = OUTFIT_JOB_NAME("Chemist - Alien Worker")
 	id_types = list(/obj/item/card/id/intrepid/contractor/chemist/alien)
 
 /decl/hierarchy/outfit/job/intrepid/crew/medical/counselor

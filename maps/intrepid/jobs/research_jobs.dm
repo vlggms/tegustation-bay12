@@ -67,12 +67,14 @@
 
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/research/scientist
 	allowed_branches = list(
-		/datum/mil_branch/terragov,
-		/datum/mil_branch/exploration_division
+		/datum/mil_branch/exploration_division,
+		/datum/mil_branch/terragov = /decl/hierarchy/outfit/job/intrepid/crew/research/scientist/terragov,
+		/datum/mil_branch/worker = /decl/hierarchy/outfit/job/intrepid/crew/research/scientist/alien,
 	)
 	allowed_ranks = list(
 		/datum/mil_rank/ed/o1,
-		/datum/mil_rank/terragov/scientist = /decl/hierarchy/outfit/job/intrepid/passenger/research/scientist/terragov
+		/datum/mil_rank/terragov/scientist,
+		/datum/mil_rank/worker/professional,
 	)
 
 	access = list(

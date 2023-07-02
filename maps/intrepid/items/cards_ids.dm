@@ -106,8 +106,16 @@
 	job_access_type = /datum/job/doctor
 	detail_color = COLOR_PALE_BLUE_GRAY
 
+/obj/item/card/id/intrepid/crew/medical/alien
+	desc = "An identification card issued to the aliens that work within TerraGov."
+	color = ALIEN_ID_COLOR
+
 /obj/item/card/id/intrepid/crew/medical/senior
 	job_access_type = /datum/job/senior_doctor
+
+/obj/item/card/id/intrepid/crew/medical/senior/alien
+	desc = "An identification card issued to the aliens that work within TerraGov."
+	color = ALIEN_ID_COLOR
 
 /obj/item/card/id/intrepid/contractor/medical
 	job_access_type = /datum/job/doctor
@@ -194,6 +202,10 @@
 
 /obj/item/card/id/intrepid/crew/research/scientist
 	job_access_type = /datum/job/scientist
+
+/obj/item/card/id/intrepid/crew/research/scientist/alien
+	desc = "An identification card issued to the aliens that work within TerraGov."
+	color = ALIEN_ID_COLOR
 
 // Marine Corps
 /obj/item/card/id/intrepid/crew/squad_leader

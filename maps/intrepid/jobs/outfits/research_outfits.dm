@@ -23,6 +23,14 @@
 	uniform = /obj/item/clothing/under/terragov/utility/exploration/officer/research
 	id_types = list(/obj/item/card/id/intrepid/crew/research/scientist)
 
+/decl/hierarchy/outfit/job/intrepid/crew/research/scientist/terragov
+	name = OUTFIT_JOB_NAME("Scientist - TerraGov")
+	head = /obj/item/clothing/head/beret/terragov/research
+
+/decl/hierarchy/outfit/job/intrepid/crew/research/scientist/alien
+	name = OUTFIT_JOB_NAME("Scientist - Alien Worker")
+	id_types = list(/obj/item/card/id/intrepid/crew/research/scientist/alien)
+
 /decl/hierarchy/outfit/job/intrepid/passenger/research
 	hierarchy_type = /decl/hierarchy/outfit/job/intrepid/passenger/research
 	l_ear = /obj/item/device/radio/headset/research
@@ -51,10 +59,6 @@
 
 /decl/hierarchy/outfit/job/intrepid/passenger/research/assist/terragov
 	name = OUTFIT_JOB_NAME("Research Assistant")
-	head = /obj/item/clothing/head/beret/terragov/research
-
-/decl/hierarchy/outfit/job/intrepid/passenger/research/scientist/terragov
-	name = OUTFIT_JOB_NAME("Scientist")
 	head = /obj/item/clothing/head/beret/terragov/research
 
 /decl/hierarchy/outfit/job/intrepid/passenger/research/assist/janitor

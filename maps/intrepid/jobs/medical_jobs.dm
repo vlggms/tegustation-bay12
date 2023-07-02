@@ -15,9 +15,11 @@
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/medical/senior
 	allowed_branches = list(
 		/datum/mil_branch/exploration_division,
+		/datum/mil_branch/worker = /decl/hierarchy/outfit/job/intrepid/crew/medical/senior/alien,
 	)
 	allowed_ranks = list(
 		/datum/mil_rank/ed/o1,
+		/datum/mil_rank/worker/professional,
 	)
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
 	                    SKILL_MEDICAL     = SKILL_EXPERIENCED,
@@ -53,10 +55,12 @@
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/medical/doctor
 	allowed_branches = list(
 		/datum/mil_branch/exploration_division,
+		/datum/mil_branch/worker = /decl/hierarchy/outfit/job/intrepid/crew/medical/doctor/alien,
 	)
 	allowed_ranks = list(
 		/datum/mil_rank/ed/e3,
 		/datum/mil_rank/ed/e5,
+		/datum/mil_rank/worker/professional,
 	)
 	min_skill = list(   SKILL_EVA     = SKILL_BASIC,
 	                    SKILL_MEDICAL = SKILL_BASIC,
