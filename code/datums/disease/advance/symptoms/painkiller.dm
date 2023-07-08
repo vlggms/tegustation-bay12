@@ -39,9 +39,9 @@ Bonus
 	if(!..())
 		return
 	if(A.properties["stage_rate"] >= 6)
-		painkiller_count = 10
+		painkiller_type = /datum/reagent/medicine/painkiller/tramadol/disease/two
 	if(A.properties["stage_rate"] >= 12)
-		painkiller_count = 20
+		painkiller_type = /datum/reagent/medicine/painkiller/tramadol/disease/three
 
 /datum/symptom/painkiller/Activate(datum/disease/advance/A)
 	if(!..())
