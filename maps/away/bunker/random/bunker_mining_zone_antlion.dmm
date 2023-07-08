@@ -7,37 +7,90 @@
 "c" = (
 /mob/living/simple_animal/hostile/antlion/mega,
 /turf/simulated/floor/asteroid{
-	initial_gas = list("oxygen" = 21.8366, "nitrogen" = 82.1472)
+	initial_gas = list("oxygen" = 21.8366, "nitrogen" = 82.1472);
+	temperature = 293.15
+	},
+/area/template_noop)
+"l" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/asteroid{
+	initial_gas = list("oxygen" = 21.8366, "nitrogen" = 82.1472);
+	temperature = 293.15
+	},
+/area/template_noop)
+"m" = (
+/mob/living/simple_animal/hostile/antlion,
+/turf/simulated/floor/plating,
+/area/template_noop)
+"p" = (
+/obj/random/projectile,
+/turf/simulated/floor/asteroid{
+	initial_gas = list("oxygen" = 21.8366, "nitrogen" = 82.1472);
+	temperature = 293.15
+	},
+/area/template_noop)
+"t" = (
+/turf/simulated/floor/plating,
+/area/template_noop)
+"x" = (
+/obj/item/material/shard,
+/turf/simulated/floor/asteroid{
+	initial_gas = list("oxygen" = 21.8366, "nitrogen" = 82.1472);
+	temperature = 293.15
 	},
 /area/template_noop)
 "A" = (
 /obj/random/ore,
 /turf/simulated/floor/asteroid{
-	initial_gas = list("oxygen" = 21.8366, "nitrogen" = 82.1472)
+	initial_gas = list("oxygen" = 21.8366, "nitrogen" = 82.1472);
+	temperature = 293.15
 	},
 /area/template_noop)
 "B" = (
 /obj/effect/gibspawner/generic,
 /turf/simulated/floor/asteroid{
-	initial_gas = list("oxygen" = 21.8366, "nitrogen" = 82.1472)
+	initial_gas = list("oxygen" = 21.8366, "nitrogen" = 82.1472);
+	temperature = 293.15
 	},
+/area/template_noop)
+"C" = (
+/obj/machinery/constructable_frame/machine_frame,
+/turf/simulated/floor/plating,
 /area/template_noop)
 "G" = (
 /obj/effect/landmark/corpse/miner,
 /obj/effect/gibspawner/generic,
+/obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/asteroid{
-	initial_gas = list("oxygen" = 21.8366, "nitrogen" = 82.1472)
+	initial_gas = list("oxygen" = 21.8366, "nitrogen" = 82.1472);
+	temperature = 293.15
 	},
 /area/template_noop)
 "H" = (
+/obj/structure/girder,
 /turf/simulated/floor/asteroid{
-	initial_gas = list("oxygen" = 21.8366, "nitrogen" = 82.1472)
+	initial_gas = list("oxygen" = 21.8366, "nitrogen" = 82.1472);
+	temperature = 293.15
 	},
 /area/template_noop)
 "P" = (
 /mob/living/simple_animal/hostile/antlion,
 /turf/simulated/floor/asteroid{
-	initial_gas = list("oxygen" = 21.8366, "nitrogen" = 82.1472)
+	initial_gas = list("oxygen" = 21.8366, "nitrogen" = 82.1472);
+	temperature = 293.15
+	},
+/area/template_noop)
+"Q" = (
+/turf/simulated/floor/asteroid{
+	initial_gas = list("oxygen" = 21.8366, "nitrogen" = 82.1472);
+	temperature = 293.15
+	},
+/area/template_noop)
+"S" = (
+/obj/structure/girder/displaced,
+/turf/simulated/floor/asteroid{
+	initial_gas = list("oxygen" = 21.8366, "nitrogen" = 82.1472);
+	temperature = 293.15
 	},
 /area/template_noop)
 
@@ -47,10 +100,10 @@ a
 a
 a
 a
-H
-H
-H
-H
+Q
+Q
+Q
+Q
 a
 a
 a
@@ -60,272 +113,272 @@ a
 (2,1,1) = {"
 a
 a
-H
-H
+Q
+Q
 P
-H
-H
-H
-H
-H
-H
-H
+Q
+Q
+Q
+Q
+Q
+Q
+Q
 a
 a
 "}
 (3,1,1) = {"
 a
-H
-H
-H
-H
-H
+Q
+Q
+Q
+Q
+Q
 A
-H
-H
-H
-H
-H
-H
+Q
+Q
+Q
+Q
+Q
+Q
 a
 "}
 (4,1,1) = {"
 a
-H
-H
-H
-H
-H
-H
-H
-H
-H
+Q
+Q
+Q
+Q
+Q
+Q
+Q
+Q
+p
 P
-H
-H
-H
+Q
+Q
+Q
 "}
 (5,1,1) = {"
 a
+S
 H
+Q
+Q
+Q
+Q
+Q
+Q
+Q
+Q
+Q
 H
-H
-H
-H
-H
-H
-H
-H
-H
-H
-H
-H
+Q
 "}
 (6,1,1) = {"
 H
-H
+Q
 P
-H
-H
-H
-H
+Q
+l
+Q
+t
 P
-H
-H
-H
-H
+Q
+Q
+Q
+Q
 B
-H
+Q
 "}
 (7,1,1) = {"
-H
-H
-H
-H
-H
+Q
+Q
+Q
+Q
+Q
 A
-H
-H
-H
-H
+Q
+Q
+Q
+Q
 G
 A
-H
-H
+Q
+Q
 "}
 (8,1,1) = {"
-H
-H
-H
-H
-H
-H
-H
-H
-H
-H
-H
-H
-H
-H
+Q
+Q
+Q
+x
+Q
+Q
+Q
+x
+Q
+Q
+Q
+Q
+Q
+l
 "}
 (9,1,1) = {"
-H
+Q
 A
-H
-H
-H
+Q
+t
+Q
 P
-H
-H
-H
+Q
+Q
+Q
 P
-H
-H
+t
+Q
 B
-H
+Q
 "}
 (10,1,1) = {"
-H
-H
-H
-H
-H
-H
-H
-H
-H
-H
-H
-H
+Q
+Q
+Q
+Q
+Q
+Q
+Q
+t
+Q
+x
+Q
+Q
 H
 B
 "}
 (11,1,1) = {"
-H
-H
-H
-H
+Q
+Q
+Q
+x
 c
-H
-H
-P
-H
-H
-H
-H
-H
-H
+Q
+C
+m
+Q
+Q
+Q
+Q
+t
+t
 "}
 (12,1,1) = {"
-H
-H
+Q
+Q
 P
-H
-H
-H
-H
-H
-H
-H
+Q
+Q
+Q
+Q
+Q
+Q
+Q
 P
-H
+Q
 A
-H
+S
 "}
 (13,1,1) = {"
-H
-H
-H
-H
-H
-H
-H
-H
-H
-H
-H
+Q
+Q
+Q
+t
+Q
+Q
+Q
+Q
+l
+x
+Q
 B
 H
 G
 "}
 (14,1,1) = {"
 a
-H
-H
-H
-H
-H
-H
+Q
+Q
+Q
+Q
+x
+x
 A
-H
-H
-H
-H
-H
-H
+t
+Q
+Q
+Q
+Q
+Q
 "}
 (15,1,1) = {"
 a
-H
-H
+S
+Q
 P
-H
-H
-H
-H
-H
-H
+Q
+Q
+Q
+Q
+Q
+Q
 P
-H
+Q
 P
-H
+Q
 "}
 (16,1,1) = {"
 a
-H
-H
-H
-H
-H
-H
-H
-H
-H
-H
-H
-H
+Q
+Q
+Q
+Q
+Q
+Q
+Q
+t
+Q
+Q
+l
+Q
 a
 "}
 (17,1,1) = {"
 a
 a
-H
-H
-H
-H
+Q
+p
+Q
+Q
 H
 P
-H
-H
-H
+Q
+S
+Q
 A
-H
+Q
 a
 "}
 (18,1,1) = {"
 a
 a
-H
+Q
 A
-H
-H
-H
-H
-H
-H
-H
-H
+Q
+Q
+Q
+Q
+Q
+Q
+Q
+Q
 a
 a
 "}
@@ -333,14 +386,14 @@ a
 a
 a
 a
-H
-H
-H
-H
-H
-H
-H
-H
+l
+Q
+Q
+Q
+Q
+Q
+Q
+Q
 a
 a
 a
@@ -352,8 +405,8 @@ a
 a
 a
 a
-H
-H
+Q
+Q
 a
 a
 a

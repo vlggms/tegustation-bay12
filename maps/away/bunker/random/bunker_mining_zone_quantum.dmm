@@ -66,6 +66,7 @@
 /area/abandoned_bunker/bunker/quantum_entry)
 "V" = (
 /obj/machinery/quantumpad{
+	anchored = 1;
 	map_pad_id = "abandoned_bunker_entry";
 	map_pad_link_id = "abandoned_bunker_facility_entry"
 	},

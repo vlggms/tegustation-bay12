@@ -1,0 +1,90 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"c" = (
+/obj/structure/filingcabinet/chestdrawer,
+/turf/simulated/floor/tiled/monotile,
+/area/template_noop)
+"d" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/template_noop)
+"i" = (
+/turf/simulated/floor/tiled/monotile,
+/area/template_noop)
+"k" = (
+/obj/machinery/door/airlock/civilian,
+/turf/simulated/floor/tiled/monotile,
+/area/template_noop)
+"m" = (
+/obj/structure/bed/chair/office/light,
+/turf/simulated/floor/tiled/monotile,
+/area/template_noop)
+"o" = (
+/obj/structure/table/reinforced,
+/obj/item/paper,
+/turf/simulated/floor/tiled/monotile,
+/area/template_noop)
+"G" = (
+/obj/structure/bed,
+/obj/item/bedsheet/purple,
+/turf/simulated/floor/tiled/monotile,
+/area/template_noop)
+"T" = (
+/obj/structure/table/reinforced,
+/obj/item/device/flashlight/lamp{
+	pixel_y = 8
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/template_noop)
+"X" = (
+/obj/structure/table/reinforced,
+/obj/structure/flora/pottedplant/smallcactus{
+	pixel_y = 12
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/template_noop)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+c
+d
+i
+G
+a
+"}
+(3,1,1) = {"
+k
+i
+i
+i
+T
+a
+"}
+(4,1,1) = {"
+a
+X
+i
+m
+o
+a
+"}
+(5,1,1) = {"
+a
+a
+a
+a
+a
+a
+"}

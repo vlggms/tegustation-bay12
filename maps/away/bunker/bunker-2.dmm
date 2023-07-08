@@ -220,12 +220,33 @@
 	},
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker/entrance)
+"hW" = (
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/cyan{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/abandoned_bunker/bunker/entrance)
 "ik" = (
 /obj/structure/bed/chair/wood{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker/entrance)
+"iy" = (
+/obj/structure/closet/secure_closet/security/bunker,
+/obj/effect/floor_decal/corner/red/border{
+	dir = 8
+	},
+/obj/structure/sign/poster{
+	name = "poster - ISC";
+	pixel_x = -32;
+	poster_type = /decl/poster/illegal/independent
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/abandoned_bunker/bunker/entrance_security)
 "jb" = (
 /obj/structure/hygiene/shower{
 	dir = 8
@@ -344,6 +365,7 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 1
 	},
+/mob/living/simple_animal/hostile/riot_officer,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/abandoned_bunker/bunker/entrance_security)
 "od" = (
@@ -498,6 +520,9 @@
 	},
 /obj/structure/table/steel,
 /obj/random/cash,
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker/entrance)
 "tJ" = (
@@ -567,9 +592,6 @@
 /obj/structure/table/woodentable,
 /obj/item/paper_bin,
 /obj/item/pen/blue,
-/obj/machinery/light/small{
-	dir = 8
-	},
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker/entrance)
 "xj" = (
@@ -638,7 +660,6 @@
 /area/abandoned_bunker/bunker/entrance_security)
 "zC" = (
 /obj/machinery/vending/cigarette,
-/obj/effect/floor_decal/corner/beige/border,
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker/entrance)
 "zG" = (
@@ -646,6 +667,10 @@
 	dir = 1;
 	icon_state = "railing0-1"
 	},
+/obj/structure/cable/cyan{
+	icon_state = "16-0"
+	},
+/obj/structure/cable/cyan,
 /turf/simulated/open,
 /area/abandoned_bunker/bunker/entrance)
 "zT" = (
@@ -697,6 +722,9 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/abandoned_bunker/bunker/entrance)
 "Dq" = (
@@ -744,6 +772,13 @@
 /area/abandoned_bunker/bunker/entrance)
 "Fq" = (
 /turf/simulated/wall/r_titanium,
+/area/abandoned_bunker/bunker/entrance)
+"FA" = (
+/obj/effect/floor_decal/corner/beige/border,
+/obj/structure/sign/poster/safety_moth_random{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker/entrance)
 "Gy" = (
 /obj/effect/floor_decal/corner/red/diagonal,
@@ -811,6 +846,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker/entrance)
+"LP" = (
+/mob/living/simple_animal/hostile/riot_officer,
+/turf/simulated/floor/tiled/dark,
+/area/abandoned_bunker/bunker/entrance_security)
 "Mo" = (
 /turf/simulated/floor/tiled/dark/monotile,
 /area/abandoned_bunker/bunker/entrance_security)
@@ -830,6 +869,12 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/abandoned_bunker/bunker/entrance_security)
+"Oa" = (
+/obj/structure/cable/cyan{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/abandoned_bunker/bunker/entrance)
 "Px" = (
 /obj/effect/floor_decal/corner/beige/border{
 	dir = 5
@@ -843,6 +888,12 @@
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/abandoned_bunker/bunker/entrance_security)
+"Qo" = (
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/abandoned_bunker/bunker/entrance)
 "QO" = (
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
@@ -867,6 +918,9 @@
 "RL" = (
 /obj/structure/flora/pottedplant,
 /obj/structure/flora/pottedplant,
+/obj/structure/sign/poster/safety_moth_random{
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker/entrance)
 "RN" = (
@@ -988,6 +1042,14 @@
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/abandoned_bunker/bunker/entrance_security)
+"Xz" = (
+/obj/structure/sign/poster{
+	name = "poster - ISC";
+	pixel_x = -32;
+	poster_type = /decl/poster/illegal/independent
+	},
+/turf/simulated/floor/tiled,
+/area/abandoned_bunker/bunker/entrance)
 "XO" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 10
@@ -1418,7 +1480,7 @@ kU
 cM
 jc
 jc
-jc
+iy
 po
 up
 ys
@@ -1529,7 +1591,7 @@ hj
 hj
 Cg
 kU
-EH
+Oa
 zG
 YY
 EH
@@ -1620,7 +1682,7 @@ ab
 kU
 kU
 fZ
-hj
+LP
 hj
 hj
 hj
@@ -1631,7 +1693,7 @@ hj
 hj
 et
 kU
-EH
+Qo
 YK
 Eh
 EH
@@ -1937,7 +1999,7 @@ fw
 fw
 MC
 Vr
-DK
+hW
 DK
 DK
 bs
@@ -2649,9 +2711,9 @@ zC
 EH
 Ln
 AU
-Iu
+Xz
 Fq
-fc
+FA
 EH
 EH
 mZ

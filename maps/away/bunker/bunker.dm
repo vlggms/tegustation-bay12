@@ -5,7 +5,7 @@
 
 /obj/effect/overmap/visitable/sector/arcticplanet_bunker
 	name = "arctic moon"
-	desc = "Sensor arrays detect a tiny moon with sub-zero surface conditions and sparse flora, possibly seeded from Earth species.<br><br>Topographical scans highlight the profile of a small vessel, located on the western side of a valley surrounded by mineral-rich mountains, broadcasting no callsign or identification codes. Subterranean energy signatures are present and constantly fluctuating, and highly in excess of expected levels.<br><br>The moon has a very long rotational period, with sunrise in an estimated 56 hours."
+	desc = "Sensor arrays detect a tiny moon with sub-zero surface conditions and sparse flora, possibly seeded from Earth species.<br><br>Topographical scans highlight the profile of a small building, located on the south-western side of a valley surrounded by mineral-rich mountains.<br><br>The moon has a very long rotational period, with sunrise in an estimated 56 hours."
 	in_space = 0
 	known = 1
 	icon_state = "globe"
@@ -19,6 +19,7 @@
 /obj/effect/overmap/visitable/sector/arcticplanet_bunker/Initialize()
 	. = ..()
 	name = "[generate_planet_name()], \an [name]"
+	GLOB.number_of_planetoids++
 	var/matrix/M = new
 	M.Turn(90)
 	transform = M

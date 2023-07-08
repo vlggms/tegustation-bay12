@@ -16,6 +16,7 @@
 /obj/effect/overmap/visitable/sector/arcticplanet/Initialize()
 	. = ..()
 	name = "[generate_planet_name()], \an [name]"
+	GLOB.number_of_planetoids++
 	var/matrix/M = new
 	M.Turn(90)
 	transform = M

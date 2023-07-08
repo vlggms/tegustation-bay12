@@ -149,3 +149,8 @@
 	name = "Abandoned Bunker - Mining Zone Quantum Entry"
 	id = "abandoned_bunker_mining_zone_quantum"
 	suffixes = list("bunker_mining_zone_quantum.dmm")
+
+/datum/map_template/ruin/random_room/bunker_mining_zone/abominable_infestation
+	name = "Abandoned Bunker - Mining Zone Abominable Infestation"
+	id = "abandoned_bunker_mining_zone_infestation"
+	suffixes = list("bunker_mining_zone_infestation.dmm")
