@@ -3,10 +3,10 @@
 
 Choking
 
-	Very noticable.
-	Lowers resistance.
+	Noticable.
+	Increases resistance.
 	Decreases stage speed.
-	Decreases transmittablity tremendously.
+	Decreases transmittablity
 	Moderate Level.
 
 Bonus
@@ -19,8 +19,8 @@ Bonus
 /datum/symptom/choking
 	name = "Choking"
 	desc = "The virus causes inflammation of the host's air conduits, leading to intermittent choking."
-	stealth = -3
-	resistance = -2
+	stealth = -2
+	resistance = 1
 	stage_speed = -2
 	transmittable = -2
 	level = 4

@@ -4,9 +4,9 @@
 Necrotizing Fasciitis (AKA Flesh-Eating Disease)
 
 	Very very noticable.
-	Lowers resistance tremendously.
+	Lowers resistance.
 	No changes to stage speed.
-	Decreases transmittablity tremendously.
+	Decreases transmittablity.
 	Fatal Level.
 
 Bonus
@@ -19,9 +19,9 @@ Bonus
 	name = "Necrotizing Fasciitis"
 	desc = "The virus aggressively attacks body cells, necrotizing tissues and organs."
 	stealth = -3
-	resistance = -4
+	resistance = -3
 	stage_speed = 0
-	transmittable = -3
+	transmittable = -2
 	level = 6
 	severity = 5
 	base_message_chance = 50

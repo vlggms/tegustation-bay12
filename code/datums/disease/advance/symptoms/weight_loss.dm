@@ -45,8 +45,10 @@ Bonus
 	var/mob/living/carbon/M = A.affected_mob
 	switch(A.stage)
 		if(1, 2, 3, 4)
+			M.adjust_nutrition(-stage * 3)
 			if(prob(base_message_chance))
 				to_chat(M, "<span class='warning'>[pick("You feel hungry.", "You crave for food.")]</span>")
 		else
-			to_chat(M, "<span class='warning'><i>[pick("So hungry...", "You'd kill someone for a bite of food...", "Hunger cramps seize you...")]</i></span>")
 			M.adjust_nutrition(-100)
+			if(prob(base_message_chance * 2))
+				to_chat(M, "<span class='warning'><i>[pick("So hungry...", "You'd kill someone for a bite of food...", "Hunger cramps seize you...")]</i></span>")

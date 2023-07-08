@@ -3,7 +3,7 @@
 
 Pain Jolts
 
-	Very Noticable.
+	Noticable.
 	Increases resistance.
 	Doesn't increase stage speed.
 	Decreases transmittability.
@@ -53,7 +53,7 @@ Bonus
 	switch(A.stage)
 		if(1, 2)
 			if(!suppress_warning)
-				C.emote(pick("shiver", "sway", "twitch"))
+				C.emote(pick("shiver", "twitch"))
 		else
 			DoPain(A, C)
 

@@ -3,7 +3,7 @@
 
 Pain Inhibitor
 
-	Very Noticable.
+	Slightly hidden.
 	Decreases resistance.
 	Reduces stage speed.
 	Increases transmittability.
@@ -19,7 +19,7 @@ Bonus
 /datum/symptom/painkiller
 	name = "Pain Inhibitor"
 	desc = "The virus produces painkilling chemicals using body natural reserves, thus making it more resistant to pain."
-	stealth = -3
+	stealth = 1
 	resistance = -1
 	stage_speed = -1
 	transmittable = 1

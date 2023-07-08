@@ -3,10 +3,10 @@
 
 Confusion
 
-	Little bit hidden.
+	Hidden.
 	Lowers resistance.
 	Decreases stage speed.
-	Not very transmissibile.
+	Slightly transmissibile.
 	Intense Level.
 
 Bonus
@@ -18,10 +18,10 @@ Bonus
 /datum/symptom/confusion
 	name = "Confusion"
 	desc = "The virus interferes with the proper function of the neural system, leading to bouts of confusion and erratic movement."
-	stealth = 1
+	stealth = 2
 	resistance = -1
 	stage_speed = -3
-	transmittable = 0
+	transmittable = 1
 	level = 4
 	severity = 2
 	base_message_chance = 25

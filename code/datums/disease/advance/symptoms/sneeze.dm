@@ -38,11 +38,11 @@ Bonus
 /datum/symptom/sneeze/Start(datum/disease/advance/A)
 	if(!..())
 		return
-	if(A.properties["transmittable"] >= 9) //longer spread range
+	if(A.properties["transmittable"] >= 9) // Longer spread range
 		spread_range = 6
 	if(A.properties["stealth"] >= 4)
 		suppress_warning = TRUE
-	if(A.properties["stage_rate"] >= 17) //Yep, stage speed 17, not stage speed 7.
+	if(A.properties["stage_rate"] >= 17) // Yep, stage speed 17, not stage speed 7.
 		cartoon_sneezing = TRUE // For a really fun time, distribute a disease with this threshold met while the gravity generator is down
 
 /datum/symptom/sneeze/Activate(datum/disease/advance/A)
@@ -60,6 +60,6 @@ Bonus
 					if(is_A_facing_B(M, L) && DiseaseAirSpreadWalk(get_turf(M), get_turf(L)))
 						L.AirborneContractDisease(A, TRUE)
 			if(cartoon_sneezing) //Yeah, this can fling you around even if you have a space suit helmet on. It's, uh, bluespace snot, yeah.
-				var/sneeze_distance = rand(2,4) //twice as far as a normal baseball bat strike will fling you
+				var/sneeze_distance = rand(2, 4)
 				var/turf/target = get_ranged_target_turf(M, turn(M.dir, 180), sneeze_distance)
-				M.throw_at(target, sneeze_distance, rand(1,4)) //with the wounds update, sneezing at 7 speed was causing peoples bones to spontaneously explode, turning cartoonish sneezing into a nightmarishly lethal GBS 2.0 outbreak
+				M.throw_at(target, sneeze_distance, rand(1, 4))
