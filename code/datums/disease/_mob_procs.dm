@@ -49,11 +49,9 @@
 	return TRUE
 
 /mob/living/carbon/human/CanContractDisease(datum/disease/D)
-	/*
-	if(dna)
-		if(HAS_TRAIT(src, TRAIT_VIRUSIMMUNE) && !D.bypasses_immunity)
+	if(species)
+		if(species.species_flags & SPECIES_FLAG_NO_DISEASE)
 			return FALSE
-	*/
 
 	for(var/thing in D.required_organs)
 		if(!(locate(thing) in organs))
