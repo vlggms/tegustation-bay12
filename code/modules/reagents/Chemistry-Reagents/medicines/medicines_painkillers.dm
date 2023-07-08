@@ -147,7 +147,7 @@
 // Painkillers used by painkilling symptom
 /datum/reagent/medicine/painkiller/tramadol/disease
 	name = "biological painkiller"
-	desc = "A product of a virus, which acts as painkiller."
+	description = "A product of a virus, which acts as painkiller."
 	target_painkiller_strength = 50
 
 /datum/reagent/medicine/painkiller/tramadol/disease/two
