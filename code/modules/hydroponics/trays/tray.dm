@@ -479,7 +479,7 @@
 			if(seed)
 				var/needed_skill = seed.mysterious ? SKILL_TRAINED : SKILL_BASIC
 				if(!user.skill_check(SKILL_BOTANY, needed_skill))
-					health -= rand(40,60)
+					health -= rand(5, 10)
 					check_health(1)
 		else
 			to_chat(user, "<span class='notice'>This plot is completely devoid of weeds. It doesn't need uprooting.</span>")
@@ -545,11 +545,6 @@
 	//Snowflakey, maybe move this to the seed datum
 	health = (istype(S, /obj/item/seeds/cutting) ? round(seed.get_trait(TRAIT_ENDURANCE)/rand(2,5)) : seed.get_trait(TRAIT_ENDURANCE))
 	lastcycle = world.time
-
-	var/needed_skill = seed.mysterious ? SKILL_TRAINED : SKILL_BASIC
-	if(prob(user.skill_fail_chance(SKILL_BOTANY, 40, needed_skill)))
-		dead = 1
-		health = 0
 
 	qdel(S)
 	check_health()
