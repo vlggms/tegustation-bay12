@@ -2,7 +2,7 @@
 
 /obj/item/card/id/intrepid
 	name = "identification card"
-	desc = "An identification card issued to personnel aboard the TGLV Ion."
+	desc = "An identification card issued to personnel aboard the TGLV Intrepid."
 	color = "#d3e3e1"
 	job_access_type = DEFAULT_JOB_TYPE
 
@@ -22,12 +22,12 @@
 
 // Passenger
 /obj/item/card/id/intrepid/passenger
-	desc = "A card issued to passengers aboard the TGLV Ion."
+	desc = "A card issued to passengers aboard the TGLV Intrepid."
 	job_access_type = DEFAULT_JOB_TYPE
 	detail_color = COLOR_PAKISTAN_GREEN
 
 /obj/item/card/id/intrepid/passenger/research
-	desc = "A card issued to civilian personnel aboard the TGLV Ion."
+	desc = "A card issued to civilian personnel aboard the TGLV Intrepid."
 	job_access_type = /datum/job/scientist_assistant
 	detail_color = COLOR_BOTTLE_GREEN
 
@@ -43,7 +43,7 @@
 
 // TerraGov Crew
 /obj/item/card/id/intrepid/crew
-	desc = "An identification card issued to TerraGov crewmembers aboard the TGLV Ion."
+	desc = "An identification card issued to TerraGov crewmembers aboard the TGLV Intrepid."
 	job_access_type = /datum/job/crew
 
 /obj/item/card/id/intrepid/crew/alien
