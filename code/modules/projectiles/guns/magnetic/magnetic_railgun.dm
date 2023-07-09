@@ -18,16 +18,8 @@
 	cell = /obj/item/cell/hyper
 	capacitor = /obj/item/stock_parts/capacitor/adv
 	gun_unreliable = 0
-	var/slowdown_held = 1
-	var/slowdown_worn = 0.5
-
-/obj/item/gun/magnetic/railgun/Initialize()
-	. = ..()
-	slowdown_per_slot[slot_l_hand] = slowdown_held
-	slowdown_per_slot[slot_r_hand] = slowdown_held
-	slowdown_per_slot[slot_back] = slowdown_worn
-	slowdown_per_slot[slot_belt] = slowdown_worn
-	slowdown_per_slot[slot_s_store] = slowdown_worn
+	slowdown_held = 1
+	slowdown_worn = 0.5
 
 // Not going to check type repeatedly, if you code or varedit
 // load_type and get runtime errors, don't come crying to me.

@@ -16,6 +16,8 @@
 	max_shells = 1
 	load_sound = 'sound/weapons/guns/interaction/launcher_reload.ogg'
 
+	slowdown_held = 1
+
 /obj/item/gun/projectile/rocket_launcher/handle_click_empty()
 	. = ..()
 	playsound(loc, 'sound/weapons/gunshot/launcher_empty.ogg', 50, 1)
