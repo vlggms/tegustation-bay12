@@ -1,0 +1,6 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: Failing to craft an object from materials will no longer waste them.
+  - tweak: Surgery steps have lower failure chances and basic steps now require trained
+      medical, instead of experienced.
