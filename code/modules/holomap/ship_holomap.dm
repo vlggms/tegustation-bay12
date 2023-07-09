@@ -102,29 +102,31 @@
 		return TRUE
 
 /obj/machinery/ship_map/proc/startWatching(var/mob/user)
-	if(isliving(user) && anchored && !(stat & (NOPOWER|BROKEN)))
-		if(user.client)
-			holomap_datum.station_map.loc = GLOB.global_hud.holomap  // Put the image on the holomap hud
-			holomap_datum.station_map.alpha = 0 // Set to transparent so we can fade in
-			animate(holomap_datum.station_map, alpha = 255, time = 5, easing = LINEAR_EASING)
-			flick("station_map_activate", src)
-			user.client.screen |= GLOB.global_hud.holomap
-			user.client.images |= holomap_datum.station_map
+	if(!isliving(user) || !anchored || !operable() || !user.client)
+		return FALSE
 
-			watching_mob = user
-			GLOB.moved_event.register(watching_mob, src, /obj/machinery/ship_map/proc/checkPosition)
-			GLOB.destroyed_event.register(watching_mob, src, /obj/machinery/ship_map/proc/stopWatching)
-			update_use_power(POWER_USE_ACTIVE)
+	holomap_datum.station_map.loc = GLOB.global_hud.holomap  // Put the image on the holomap hud
+	holomap_datum.station_map.alpha = 0 // Set to transparent so we can fade in
+	animate(holomap_datum.station_map, alpha = 255, time = 5, easing = LINEAR_EASING)
+	flick("station_map_activate", src)
+	user.client.screen |= GLOB.global_hud.holomap
+	user.client.images |= holomap_datum.station_map
 
-			if(bogus)
-				to_chat(user, SPAN_WARNING("The holomap failed to initialize. This area of space cannot be mapped."))
-			else
-				to_chat(user, SPAN_NOTICE("A hologram of your current location appears before your eyes."))
+	watching_mob = user
+	GLOB.moved_event.register(watching_mob, src, /obj/machinery/ship_map/proc/checkPosition)
+	GLOB.destroyed_event.register(watching_mob, src, /obj/machinery/ship_map/proc/stopWatching)
+	update_use_power(POWER_USE_ACTIVE)
 
-			START_PROCESSING_MACHINE(src, MACHINERY_PROCESS_SELF)
+	if(bogus)
+		to_chat(user, SPAN_WARNING("The holomap failed to initialize. This area of space cannot be mapped."))
+	else
+		to_chat(user, SPAN_NOTICE("A hologram of your current location appears before your eyes."))
+
+	START_PROCESSING_MACHINE(src, MACHINERY_PROCESS_SELF)
+
 
 /obj/machinery/ship_map/Process()
-	if((stat & (NOPOWER|BROKEN)))
+	if(!operable())
 		stopWatching()
 		return PROCESS_KILL
 
