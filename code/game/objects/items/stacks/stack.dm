@@ -128,11 +128,11 @@
 	var/produced = min(quantity*recipe.res_amount, recipe.max_res_amount)
 
 	var/area/A = get_area(user)
-	if (!A.can_modify_area())
+	if(!A.can_modify_area())
 		visible_message("You can't seem to make anything with \the [src] here.")
 		return
 
-	if (!can_use(required))
+	if(!can_use(required))
 		if (produced>1)
 			to_chat(user, "<span class='warning'>You haven't got enough [src] to build \the [produced] [recipe.display_name()]\s!</span>")
 		else
@@ -142,15 +142,16 @@
 	if(!recipe.can_make(user))
 		return
 
-	if (recipe.time)
+	if(recipe.time)
 		to_chat(user, "<span class='notice'>Building [recipe.display_name()] ...</span>")
-		if (!user.do_skilled(recipe.time, SKILL_CONSTRUCTION))
+		if(!user.do_skilled(recipe.time, SKILL_CONSTRUCTION))
 			return
 
-	if (use(required))
-		if(user.skill_fail_prob(SKILL_CONSTRUCTION, 90, recipe.difficulty))
-			to_chat(user, "<span class='warning'>You waste some [name] and fail to build \the [recipe.display_name()]!</span>")
-			return
+	if(user.skill_fail_prob(SKILL_CONSTRUCTION, 50, recipe.difficulty))
+		to_chat(user, SPAN_WARNING("You fail to build [recipe.display_name()]!"))
+		return
+
+	if(use(required))
 		var/atom/O = recipe.spawn_result(user, user.loc, produced)
 		O.add_fingerprint(user)
 

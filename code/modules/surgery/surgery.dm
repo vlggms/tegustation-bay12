@@ -133,7 +133,7 @@ GLOBAL_LIST_INIT(surgery_tool_exception_cache, new)
 
 	var/skill_reqs = get_skill_reqs(user, target, tool, target_zone)
 	for(var/skill in skill_reqs)
-		var/penalty = delicate ? 40 : 20
+		var/penalty = delicate ? 20 : 10
 		. -= max(0, penalty * (skill_reqs[skill] - user.get_skill_value(skill)))
 		if(user.skill_check(skill, SKILL_MASTER))
 			. += 20
@@ -158,7 +158,7 @@ GLOBAL_LIST_INIT(surgery_tool_exception_cache, new)
 			. -= 5
 		else if(locate(/obj/structure/table, T))
 			. -= 10
-		else if(locate(/obj/effect/rune/, T))
+		else if(locate(/obj/effect/rune, T))
 			. -= 10
 	. = max(., 0)
 
