@@ -45,6 +45,11 @@
 	icon_state = "dorms"
 	sound_env = MEDIUM_SOFTFLOOR
 
+/area/abandoned_bunker/bunker/canteen
+	name = "\improper Abandoned Bunker Canteen"
+	icon_state = "canteen"
+	sound_env = MEDIUM_SOFTFLOOR
+
 /area/abandoned_bunker/bunker/engine
 	name = "\improper Abandoned Bunker Engineering"
 	icon_state = "engine"

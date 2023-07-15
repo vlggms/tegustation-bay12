@@ -129,6 +129,21 @@
 	id = "abandoned_bunker_room_south_three"
 	suffixes = list("bunker_room_south_3.dmm")
 
+/* Canteen */
+/obj/effect/spawner/room/bunker_canteen
+	room_width = 12
+	room_height = 10
+	room_type = "abandoned_bunker_canteen"
+
+/datum/map_template/ruin/random_room/bunker_canteen
+	name = "Abandoned Bunker - Canteen Normal"
+	template_width = 12
+	template_height = 10
+	room_type = "abandoned_bunker_canteen"
+	id = "abandoned_bunker_canteen_normal"
+	prefix = "maps/away/bunker/random/"
+	suffixes = list("bunker_canteen_normal.dmm")
+
 /* Mining Large Zone */
 /obj/effect/spawner/room/bunker_mining_zone
 	room_width = 20

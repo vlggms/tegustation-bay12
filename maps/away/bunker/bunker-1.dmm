@@ -16,7 +16,7 @@
 /area/abandoned_bunker/bunker/armory)
 "aD" = (
 /obj/structure/cable/cyan{
-	icon_state = "1-4"
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker/dormitories)
@@ -852,14 +852,11 @@
 /area/abandoned_bunker/bunker)
 "zy" = (
 /obj/machinery/power/apc{
-	dir = 1;
-	pixel_y = 24
-	},
-/obj/machinery/power/terminal{
-	dir = 1
+	dir = 4;
+	pixel_x = 24
 	},
 /obj/structure/cable/cyan{
-	icon_state = "0-2"
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker/dormitories)
@@ -1002,6 +999,9 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/abandoned_bunker/bunker)
+"Dc" = (
+/turf/simulated/floor/tiled,
+/area/abandoned_bunker/bunker/canteen)
 "Di" = (
 /obj/effect/floor_decal/corner/red/half{
 	dir = 8
@@ -1104,6 +1104,14 @@
 /obj/item/clothing/suit/armor/riot,
 /turf/simulated/floor/tiled/dark,
 /area/abandoned_bunker/bunker/armory)
+"Gf" = (
+/obj/machinery/light,
+/obj/effect/floor_decal/corner/red/border,
+/obj/structure/sign/isc{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/dark,
+/area/abandoned_bunker/bunker/security)
 "Gg" = (
 /obj/structure/ore_box,
 /turf/simulated/floor/tiled/dark,
@@ -1142,6 +1150,9 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/abandoned_bunker/bunker)
+"Ht" = (
+/turf/simulated/wall/r_titanium,
+/area/abandoned_bunker/bunker/canteen)
 "Hv" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 5
@@ -1169,12 +1180,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/abandoned_bunker/bunker)
-"If" = (
-/obj/structure/cable/cyan{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled,
-/area/abandoned_bunker/bunker/dormitories)
 "Ig" = (
 /obj/structure/filingcabinet,
 /obj/effect/floor_decal/corner/red/border{
@@ -1536,16 +1541,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/abandoned_bunker/bunker/security)
-"UH" = (
-/obj/structure/cable/cyan{
-	icon_state = "4-8"
-	},
-/obj/machinery/door/airlock/multi_tile/glass/civilian{
-	dir = 4;
-	name = "Canteen"
-	},
-/turf/simulated/floor/tiled,
-/area/abandoned_bunker/bunker/dormitories)
 "UX" = (
 /obj/structure/bed/padded,
 /turf/simulated/floor/tiled,
@@ -1635,6 +1630,10 @@
 "Xa" = (
 /turf/simulated/floor/tiled/dark,
 /area/abandoned_bunker/bunker)
+"Xt" = (
+/obj/effect/spawner/room/bunker_canteen,
+/turf/simulated/wall/r_titanium,
+/area/abandoned_bunker/bunker/security)
 "Xx" = (
 /obj/machinery/computer/teleporter,
 /turf/simulated/floor/tiled/dark,
@@ -1653,12 +1652,6 @@
 "XI" = (
 /turf/simulated/floor/tiled/dark/monotile,
 /area/abandoned_bunker/bunker/quantum_facility)
-"XQ" = (
-/obj/structure/cable/cyan{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled,
-/area/abandoned_bunker/bunker/dormitories)
 "XU" = (
 /obj/machinery/tele_projector{
 	dir = 4
@@ -2808,16 +2801,16 @@ DX
 DX
 DX
 DX
-Jj
-Jj
-Jj
-Jj
-Jj
-Jj
-Jj
-Jj
-Jj
-It
+Ht
+Ht
+Ht
+Ht
+Ht
+Ht
+Ht
+Ht
+Ht
+Xt
 rG
 rG
 rG
@@ -2910,15 +2903,15 @@ DX
 DX
 DX
 DX
-Jj
-Eh
-Eh
-Eh
-Eh
-Eh
-Eh
-Eh
-Eh
+Ht
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
 It
 rG
 rG
@@ -3012,15 +3005,15 @@ DX
 DX
 DX
 DX
-Jj
-Eh
-Eh
-Eh
-Eh
-Eh
-Eh
-Eh
-Eh
+Ht
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
 It
 rG
 rG
@@ -3114,15 +3107,15 @@ DX
 DX
 DX
 DX
-Jj
-Eh
-Eh
-Eh
-Eh
-Eh
-Eh
-Eh
-Eh
+Ht
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
 It
 It
 It
@@ -3216,15 +3209,15 @@ DX
 DX
 DX
 DX
-Jj
-Eh
-Eh
-Eh
-Eh
-Eh
-Eh
-Eh
-Eh
+Ht
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
 It
 rG
 rG
@@ -3318,15 +3311,15 @@ DX
 DX
 DX
 DX
-Jj
-Eh
-Eh
-Eh
-Eh
-Eh
-Eh
-Eh
-Eh
+Ht
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
 It
 rG
 rG
@@ -3420,15 +3413,15 @@ DX
 DX
 DX
 DX
-Jj
-Eh
-Eh
-Eh
-Eh
-Eh
-Eh
-Eh
-Eh
+Ht
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
 It
 rG
 rG
@@ -3522,15 +3515,15 @@ DX
 DX
 DX
 DX
-Jj
-Eh
-Eh
-Eh
-Eh
-Eh
-Eh
-Eh
-Eh
+Ht
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
 It
 It
 It
@@ -3624,15 +3617,15 @@ DX
 DX
 DX
 DX
-Jj
-Eh
-Eh
-Eh
-Eh
-Eh
-Eh
-Eh
-Eh
+Ht
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
 It
 rG
 rG
@@ -3655,7 +3648,7 @@ Hc
 It
 WT
 uB
-Hc
+Gf
 It
 Ds
 BR
@@ -3726,15 +3719,15 @@ DX
 DX
 DX
 DX
-Jj
-zy
-If
-If
-If
-aD
-Eh
-Eh
-Eh
+Ht
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
 It
 rG
 rG
@@ -3828,15 +3821,15 @@ lr
 DX
 DX
 DX
-Jj
-Eh
-Eh
-Eh
-Eh
-XQ
-Eh
-Eh
-Eh
+Ht
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
+Dc
 It
 rG
 rG
@@ -3930,15 +3923,15 @@ lr
 lr
 lr
 lr
-Jj
-Jj
-Jj
-Jj
-Eh
-UH
-Jj
-Jj
-Jj
+Ht
+Ht
+Ht
+Ht
+Dc
+Dc
+Ht
+Ht
+Ht
 It
 It
 It
@@ -4036,7 +4029,7 @@ oI
 oI
 oI
 Nm
-oI
+pi
 Cl
 oI
 oI
@@ -4138,7 +4131,7 @@ Uu
 OH
 Uu
 ba
-Uu
+RL
 Uu
 Uu
 OH
@@ -4240,7 +4233,7 @@ Jj
 Jj
 Jj
 rd
-Eh
+aD
 jE
 Jj
 Jj
@@ -4342,7 +4335,7 @@ Eh
 Eh
 Eh
 Jj
-Eh
+aD
 Eh
 Jj
 Eh
@@ -4444,7 +4437,7 @@ Eh
 Eh
 Eh
 Eh
-Eh
+aD
 Eh
 Eh
 Eh
@@ -4546,7 +4539,7 @@ Eh
 Eh
 Eh
 Jj
-Eh
+aD
 Eh
 Jj
 Eh
@@ -4648,7 +4641,7 @@ Jj
 Jj
 Jj
 rd
-Eh
+aD
 Eh
 Jj
 Jj
@@ -4750,7 +4743,7 @@ Eh
 Eh
 Eh
 Jj
-Eh
+aD
 Eh
 Jj
 Eh
@@ -4852,7 +4845,7 @@ Eh
 Eh
 Eh
 Eh
-Eh
+aD
 Eh
 Eh
 Eh
@@ -4954,7 +4947,7 @@ Eh
 Eh
 Eh
 Jj
-Eh
+aD
 Eh
 Jj
 Eh
@@ -5056,7 +5049,7 @@ Jj
 Jj
 Jj
 rd
-Eh
+aD
 Eh
 Jj
 Jj
@@ -5158,7 +5151,7 @@ Eh
 Eh
 Eh
 Jj
-Eh
+aD
 Eh
 Jj
 Eh
@@ -5260,7 +5253,7 @@ Eh
 Eh
 Eh
 Eh
-Eh
+aD
 Eh
 Eh
 Eh
@@ -5362,7 +5355,7 @@ Eh
 Eh
 Eh
 Jj
-Eh
+aD
 Eh
 Jj
 Eh
@@ -5464,7 +5457,7 @@ Jj
 Jj
 Jj
 rd
-Eh
+aD
 Eh
 Jj
 Jj
@@ -5566,7 +5559,7 @@ Eh
 Eh
 Eh
 Jj
-Eh
+aD
 Eh
 Jj
 Eh
@@ -5668,7 +5661,7 @@ Eh
 Eh
 Eh
 Eh
-Eh
+aD
 Eh
 Eh
 Eh
@@ -5770,7 +5763,7 @@ Eh
 Eh
 Eh
 Jj
-Eh
+aD
 Eh
 Jj
 Eh
@@ -5872,7 +5865,7 @@ Jj
 Jj
 Jj
 rd
-Eh
+aD
 Eh
 Jj
 Jj
@@ -5974,7 +5967,7 @@ Eh
 Eh
 Eh
 Jj
-Eh
+aD
 Eh
 Jj
 Eh
@@ -6076,7 +6069,7 @@ Eh
 Eh
 Eh
 Eh
-Eh
+aD
 Eh
 Eh
 Eh
@@ -6178,7 +6171,7 @@ Eh
 Eh
 Eh
 Jj
-Eh
+zy
 Eh
 Jj
 Eh
