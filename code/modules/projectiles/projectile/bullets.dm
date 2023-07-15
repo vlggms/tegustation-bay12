@@ -239,6 +239,10 @@
 	damage = 14
 	armor_penetration = 85
 
+/obj/item/projectile/bullet/rifle/t18
+	fire_sound = 'sound/weapons/gunshot/t18.ogg'
+	damage = 35
+
 /obj/item/projectile/bullet/rifle/ak47
 	fire_sound = 'sound/weapons/gunshot/ak47.ogg'
 	damage = 30
