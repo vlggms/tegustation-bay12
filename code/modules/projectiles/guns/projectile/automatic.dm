@@ -484,7 +484,7 @@
 	item_state = "t18"
 	w_class = ITEM_SIZE_HUGE
 	force = 10
-	caliber = CALIBER_T18
+	caliber = CALIBER_T12
 	origin_tech = list(TECH_COMBAT = 7, TECH_MATERIAL = 1, TECH_ESOTERIC = 5)
 	slot_flags = SLOT_BACK
 	load_method = MAGAZINE
