@@ -29,11 +29,19 @@
 	},
 /turf/simulated/floor/tiled,
 /area/singularity_ring/inner)
+"cy" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled,
+/area/singularity_ring/outer)
 "cI" = (
 /obj/structure/cable/orange{
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled,
+/area/singularity_ring/outer)
+"de" = (
+/obj/item/ammo_casing/rifle/used,
+/turf/simulated/floor/airless,
 /area/singularity_ring/outer)
 "dg" = (
 /obj/structure/cable/orange{
@@ -41,6 +49,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/singularity_ring/outer)
+"dh" = (
+/obj/structure/girder/displaced,
+/turf/space,
+/area/space)
 "dD" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/orange{
@@ -88,6 +100,12 @@
 /obj/machinery/suit_storage_unit/engineering/alt,
 /turf/simulated/floor/tiled/monotile,
 /area/singularity_ring/inner)
+"es" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/singularity_ring/outer)
 "eE" = (
 /obj/machinery/suit_storage_unit/engineering/alt,
 /turf/simulated/floor/tiled/monotile,
@@ -126,6 +144,11 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/singularity_ring/inner)
+"fm" = (
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/turf/simulated/floor/tiled/dark/airless,
+/area/singularity_ring/inner)
 "fU" = (
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -133,8 +156,13 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/item/stack/tile/mono,
 /turf/simulated/floor/tiled/monotile,
 /area/singularity_ring/inner)
+"fZ" = (
+/obj/item/ammo_casing/rifle/used,
+/turf/simulated/floor/tiled,
+/area/singularity_ring/outer)
 "gj" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -145,7 +173,7 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/tiled/monotile,
+/turf/simulated/floor/plating,
 /area/singularity_ring/inner)
 "gG" = (
 /obj/structure/cable{
@@ -154,14 +182,26 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/effect/landmark/corpse/engineer{
+	brute_loss = 700
+	},
+/obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/monotile,
 /area/singularity_ring/inner)
 "gN" = (
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
 /turf/simulated/floor/tiled/monotile,
 /area/singularity_ring/inner)
+"gS" = (
+/turf/space,
+/area/singularity_ring/outer)
 "ho" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -169,10 +209,10 @@
 /turf/simulated/floor/tiled/monotile,
 /area/singularity_ring/inner)
 "hu" = (
-/obj/structure/cable{
-	icon_state = "1-2"
+/obj/item/stack/cable_coil{
+	amount = 2
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/plating,
 /area/singularity_ring/inner)
 "hB" = (
 /obj/structure/cable/orange{
@@ -225,8 +265,13 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
+/obj/item/stack/tile/floor,
+/turf/simulated/floor/plating,
 /area/singularity_ring/inner)
+"kb" = (
+/obj/structure/inflatable/door,
+/turf/simulated/floor/tiled,
+/area/singularity_ring/outer)
 "kl" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -282,6 +327,9 @@
 	},
 /turf/simulated/floor/tiled,
 /area/singularity_ring/inner)
+"mL" = (
+/turf/simulated/floor/tiled/airless,
+/area/singularity_ring/outer)
 "mM" = (
 /obj/effect/wallframe_spawn/reinforced_phoron,
 /turf/simulated/floor/airless,
@@ -443,6 +491,9 @@
 	initial_gas = null
 	},
 /area/singularity_ring/inner)
+"rf" = (
+/turf/simulated/floor/airless,
+/area/singularity_ring/outer)
 "ro" = (
 /obj/machinery/power/rad_collector{
 	anchored = 1
@@ -492,6 +543,17 @@
 	},
 /turf/simulated/floor/tiled,
 /area/singularity_ring/inner)
+"rP" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/dark,
+/area/singularity_ring/outer)
+"rQ" = (
+/obj/effect/landmark/corpse/engineer{
+	brute_loss = 700
+	},
+/turf/simulated/floor/tiled,
+/area/singularity_ring/outer)
 "rS" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -513,6 +575,11 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/singularity_ring/inner)
+"sF" = (
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/turf/simulated/floor/tiled,
+/area/singularity_ring/inner)
 "tZ" = (
 /obj/machinery/field_generator{
 	anchored = 1;
@@ -523,6 +590,16 @@
 "uH" = (
 /obj/structure/lattice,
 /turf/space,
+/area/singularity_ring/inner)
+"uJ" = (
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/turf/simulated/floor/tiled/dark/monotile{
+	initial_gas = null
+	},
 /area/singularity_ring/inner)
 "vr" = (
 /turf/space,
@@ -535,6 +612,17 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/monotile,
+/area/singularity_ring/inner)
+"vQ" = (
+/obj/structure/girder,
+/turf/space,
+/area/singularity_ring/outer)
+"vR" = (
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/turf/simulated/floor/tiled,
 /area/singularity_ring/inner)
 "wa" = (
 /obj/machinery/portable_atmospherics/canister/air/airlock,
@@ -581,11 +669,20 @@
 	},
 /turf/simulated/floor/tiled,
 /area/singularity_ring/outer)
+"wS" = (
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/turf/simulated/floor/tiled/airless,
+/area/singularity_ring/outer)
 "xj" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/singularity_ring/outer)
+"xy" = (
+/obj/effect/shuttle_landmark/singularity_ring/nav3,
+/turf/space,
+/area/space)
 "xM" = (
 /obj/structure/sign/warning/caution{
 	pixel_x = 32
@@ -600,6 +697,10 @@
 /obj/machinery/suit_storage_unit/engineering/alt,
 /turf/simulated/floor/tiled,
 /area/singularity_ring/inner)
+"xX" = (
+/obj/structure/girder/displaced,
+/turf/space,
+/area/singularity_ring/outer)
 "xZ" = (
 /obj/machinery/power/rad_collector{
 	anchored = 1
@@ -621,9 +722,9 @@
 /turf/simulated/floor/tiled,
 /area/singularity_ring/outer)
 "yo" = (
-/obj/effect/shuttle_landmark/singularity_ring/nav1,
-/turf/space,
-/area/space)
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/airless,
+/area/singularity_ring/outer)
 "yr" = (
 /obj/machinery/light{
 	dir = 1
@@ -645,6 +746,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/singularity_ring/inner)
+"ze" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/singularity_ring/outer)
 "zq" = (
 /obj/machinery/light{
 	dir = 8
@@ -654,6 +761,17 @@
 "zu" = (
 /turf/simulated/floor/airless,
 /area/singularity_ring/inner)
+"zI" = (
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/turf/simulated/floor/tiled,
+/area/singularity_ring/outer)
 "AK" = (
 /obj/machinery/light{
 	dir = 4
@@ -687,9 +805,9 @@
 /turf/simulated/floor/tiled,
 /area/singularity_ring/inner)
 "BS" = (
-/obj/effect/shuttle_landmark/singularity_ring/nav3,
-/turf/space,
-/area/space)
+/obj/structure/inflatable/wall,
+/turf/simulated/floor/tiled,
+/area/singularity_ring/outer)
 "BV" = (
 /obj/machinery/door/airlock/engineering{
 	name = "Inner Ring Entry"
@@ -708,6 +826,20 @@
 "Cc" = (
 /obj/machinery/door/airlock/external/glass,
 /turf/simulated/floor/tiled/dark,
+/area/singularity_ring/inner)
+"Cu" = (
+/obj/machinery/light{
+	icon_state = "tube-construct-stage1";
+	spawn_light_type = null
+	},
+/turf/simulated/floor/tiled,
+/area/singularity_ring/outer)
+"Cv" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/item/ammo_casing/rifle/used,
+/turf/simulated/floor/tiled/dark/airless,
 /area/singularity_ring/inner)
 "CU" = (
 /turf/simulated/floor/tiled/dark,
@@ -744,12 +876,21 @@
 	initial_gas = null
 	},
 /area/singularity_ring/inner)
+"Ek" = (
+/obj/machinery/door/firedoor,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled,
+/area/singularity_ring/outer)
 "FF" = (
 /obj/machinery/the_singularitygen,
 /obj/effect/overmap/visitable/sector/singularity_ring,
 /turf/simulated/floor/airless,
 /area/singularity_ring/inner)
 "FU" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	dir = 8;
+	id_tag = "singuring_pump"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/singularity_ring/outer)
 "Ge" = (
@@ -787,6 +928,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/singularity_ring/inner)
+"GE" = (
+/obj/effect/landmark/corpse/engineer{
+	brute_loss = 700;
+	burn_loss = 500
+	},
+/turf/simulated/floor/airless,
+/area/singularity_ring/outer)
 "GF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -795,6 +943,10 @@
 /area/singularity_ring/outer)
 "GM" = (
 /obj/random/trash,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	dir = 8;
+	id_tag = "singuring_pump"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/singularity_ring/outer)
 "Hb" = (
@@ -822,6 +974,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/singularity_ring/outer)
+"Hw" = (
+/obj/item/stack/tile/floor,
+/turf/simulated/floor/tiled,
+/area/singularity_ring/inner)
 "Hy" = (
 /obj/machinery/power/rad_collector{
 	anchored = 1
@@ -850,6 +1006,14 @@
 	anchored = 1
 	},
 /obj/structure/cable,
+/turf/simulated/floor/tiled/dark/monotile{
+	initial_gas = null
+	},
+/area/singularity_ring/inner)
+"Jv" = (
+/obj/effect/landmark/corpse/engineer/rig{
+	brute_loss = 450
+	},
 /turf/simulated/floor/tiled/dark/monotile{
 	initial_gas = null
 	},
@@ -904,6 +1068,13 @@
 	},
 /turf/simulated/floor/tiled/dark/airless,
 /area/singularity_ring/inner)
+"Lt" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	dir = 4;
+	id_tag = "singuring_pump"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/singularity_ring/outer)
 "Ly" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -929,6 +1100,11 @@
 	},
 /turf/simulated/floor/tiled/dark/airless,
 /area/singularity_ring/inner)
+"MS" = (
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/turf/simulated/floor/airless,
+/area/singularity_ring/outer)
 "Ns" = (
 /obj/machinery/light,
 /turf/simulated/floor/tiled/dark/airless,
@@ -986,6 +1162,21 @@
 	},
 /turf/simulated/floor/tiled,
 /area/singularity_ring/inner)
+"Oz" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/singularity_ring/outer)
+"OB" = (
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube-construct-stage1";
+	spawn_light_type = null
+	},
+/obj/item/ammo_casing/rifle/used,
+/turf/simulated/floor/tiled/airless,
+/area/singularity_ring/outer)
 "ON" = (
 /obj/machinery/airlock_sensor{
 	id_tag = "singuring_sensor";
@@ -1060,6 +1251,14 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/singularity_ring/inner)
+"Sl" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled,
+/area/singularity_ring/inner)
+"Sr" = (
+/obj/structure/lattice,
+/turf/space,
+/area/singularity_ring/outer)
 "Sx" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/toolbox/mechanical{
@@ -1077,6 +1276,10 @@
 /obj/structure/lattice,
 /turf/space,
 /area/space)
+"SP" = (
+/obj/item/ammo_casing/rifle/used,
+/turf/simulated/floor/tiled/airless,
+/area/singularity_ring/outer)
 "ST" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
@@ -1098,6 +1301,19 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
+/turf/simulated/floor/tiled,
+/area/singularity_ring/outer)
+"UB" = (
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/turf/simulated/floor/tiled/dark/monotile{
+	initial_gas = null
+	},
+/area/singularity_ring/inner)
+"UE" = (
+/obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/singularity_ring/outer)
 "UM" = (
@@ -1147,8 +1363,10 @@
 /turf/simulated/wall/r_titanium,
 /area/singularity_ring/outer)
 "Xv" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden,
-/turf/simulated/floor/tiled/dark,
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/turf/simulated/floor/tiled,
 /area/singularity_ring/outer)
 "XD" = (
 /obj/machinery/atmospherics/portables_connector{
@@ -1168,15 +1386,34 @@
 /area/singularity_ring/outer)
 "Ye" = (
 /obj/random/bomb_supply,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	dir = 4;
+	id_tag = "singuring_pump"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/singularity_ring/outer)
+"YJ" = (
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube-construct-stage1";
+	spawn_light_type = null
+	},
+/turf/simulated/floor/tiled,
+/area/singularity_ring/outer)
 "YV" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/singularity_ring/outer)
 "Za" = (
 /obj/structure/lattice,
 /obj/random/voidhelmet,
+/turf/space,
+/area/space)
+"Zf" = (
+/obj/effect/shuttle_landmark/singularity_ring/nav1,
 /turf/space,
 /area/space)
 "Zh" = (
@@ -1198,6 +1435,12 @@
 "Zt" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /turf/simulated/floor/tiled/dark,
+/area/singularity_ring/outer)
+"ZE" = (
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/turf/simulated/floor/airless,
 /area/singularity_ring/outer)
 "ZG" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
@@ -10804,8 +11047,8 @@ BY
 BY
 BY
 BY
-yo
 BY
+Zf
 BY
 BY
 BY
@@ -16448,7 +16691,7 @@ BY
 BY
 BY
 BY
-BY
+dh
 BY
 BY
 BY
@@ -16855,18 +17098,18 @@ BY
 BY
 rT
 rT
+wS
+mL
+BS
 PG
 PG
-PG
-PG
-PG
-PG
-PG
+BS
+cy
 aB
+fZ
 PG
 PG
-PG
-PG
+Xv
 PG
 aB
 PG
@@ -17048,25 +17291,25 @@ BY
 BY
 BY
 BY
+dh
 BY
 BY
 BY
 BY
 BY
-BY
+gS
 rT
-rT
+rf
+yo
+wS
+kb
 PG
 PG
-PG
-PG
-PG
-PG
-PG
+kb
 PG
 aB
 PG
-PG
+fZ
 PG
 PG
 PG
@@ -17255,28 +17498,28 @@ BY
 BY
 BY
 BY
-rT
-rT
+gS
+gS
+rf
+ZE
+mL
+yo
+BS
+YJ
 PG
-PG
-PG
-PG
-PG
-PG
-PG
-PG
+BS
 PG
 aB
 xM
+es
 PG
-PG
-PG
+es
 xM
-aB
+Ek
 PG
 PG
 PG
-PG
+es
 PG
 PG
 PG
@@ -17456,12 +17699,12 @@ BY
 BY
 BY
 BY
-rT
-rT
-PG
-PG
-PG
-PG
+xX
+gS
+gS
+Sr
+de
+de
 rT
 rT
 rT
@@ -17658,11 +17901,11 @@ BY
 BY
 BY
 rT
-rT
-PG
-PG
-PG
-PG
+vQ
+gS
+Sr
+Sr
+rf
 rT
 rT
 BY
@@ -17860,11 +18103,11 @@ BY
 BY
 rT
 rT
-PG
-PG
-PG
-PG
-rT
+rf
+Sr
+Sr
+gS
+gS
 rT
 BY
 BY
@@ -18061,12 +18304,12 @@ BY
 BY
 rT
 rT
-PG
-PG
-PG
-PG
-rT
-rT
+mL
+rf
+rf
+gS
+xX
+gS
 BY
 BY
 BY
@@ -18262,16 +18505,16 @@ BY
 BY
 rT
 rT
-PG
-PG
-PG
-PG
+SP
+SP
+mL
+GE
 rT
 rT
 BY
 BY
 BY
-BY
+dh
 BY
 BY
 SK
@@ -18461,12 +18704,12 @@ BY
 BY
 BY
 BY
+gS
 rT
-rT
-PG
-PG
-PG
-PG
+rf
+mL
+mL
+OB
 rT
 rT
 BY
@@ -18496,7 +18739,7 @@ BY
 BY
 rT
 rT
-PG
+es
 PG
 PG
 PG
@@ -18662,18 +18905,18 @@ BY
 BY
 BY
 BY
-rT
-rT
-PG
-PG
-PG
-PG
+gS
+gS
+Sr
+rf
+rf
+mL
 rT
 rT
 SK
 BY
 BY
-BY
+dh
 BY
 BY
 nO
@@ -18863,12 +19106,12 @@ BY
 BY
 BY
 BY
-rT
-rT
-PG
-PG
-PG
-PG
+xX
+gS
+Sr
+Sr
+Sr
+rf
 rT
 rT
 SK
@@ -19066,11 +19309,11 @@ BY
 BY
 rT
 rT
-PG
-PG
-PG
-PG
-rT
+Sr
+Sr
+Sr
+Sr
+gS
 rT
 BY
 BY
@@ -19267,12 +19510,12 @@ BY
 BY
 rT
 rT
-PG
-PG
-PG
-PG
-rT
-rT
+de
+rf
+Sr
+Sr
+gS
+gS
 BY
 BY
 BY
@@ -19468,15 +19711,15 @@ BY
 BY
 BY
 rT
-PG
-PG
-PG
-PG
-rT
-rT
+yo
+mL
+MS
+rf
+xX
+xX
 BY
 BY
-BY
+dh
 BY
 BY
 SK
@@ -19670,9 +19913,9 @@ BY
 BY
 BY
 rT
-PG
-PG
-PG
+BS
+kb
+BS
 rT
 rT
 BY
@@ -19689,7 +19932,7 @@ ok
 nO
 nO
 oc
-nQ
+UB
 oc
 oc
 nO
@@ -19894,7 +20137,7 @@ oc
 nQ
 oc
 oc
-zq
+Cv
 oc
 zq
 oc
@@ -20076,7 +20319,7 @@ BY
 rT
 PG
 PG
-PG
+Cu
 rT
 BY
 BY
@@ -20118,7 +20361,7 @@ BY
 BY
 BY
 rT
-PG
+ze
 PG
 PG
 rT
@@ -20278,7 +20521,7 @@ BY
 rT
 PG
 PG
-PG
+cy
 rT
 BY
 BY
@@ -20295,7 +20538,7 @@ oc
 pF
 qm
 oc
-nQ
+uJ
 nQ
 nQ
 nQ
@@ -20305,7 +20548,7 @@ nQ
 nQ
 nQ
 oc
-oc
+fm
 pF
 oc
 nO
@@ -20478,9 +20721,9 @@ BY
 BY
 BY
 rT
-PG
-PG
-PG
+BS
+kb
+BS
 rT
 SK
 SK
@@ -20497,7 +20740,7 @@ oc
 pF
 oc
 nQ
-nQ
+Jv
 wk
 xZ
 xZ
@@ -21053,7 +21296,7 @@ BY
 BY
 BY
 BY
-aY
+BY
 BY
 BY
 BY
@@ -21084,7 +21327,7 @@ BY
 BY
 BY
 rT
-PG
+Xv
 PG
 PG
 rT
@@ -21135,7 +21378,7 @@ xj
 Ye
 Zh
 ON
-FU
+Lt
 xj
 BY
 BY
@@ -21255,7 +21498,7 @@ BY
 BY
 BY
 BY
-BY
+aY
 BY
 BY
 BY
@@ -21288,7 +21531,7 @@ BY
 rT
 PG
 PG
-PG
+Xv
 rT
 BY
 BY
@@ -21296,7 +21539,7 @@ nO
 eo
 fd
 fU
-bO
+Hw
 jW
 nO
 nO
@@ -21334,10 +21577,10 @@ PG
 PG
 GF
 Wc
-FU
 DO
 DO
-FU
+DO
+DO
 wb
 BY
 BY
@@ -21490,7 +21733,7 @@ BY
 rT
 bw
 cI
-PG
+UE
 rT
 SK
 SK
@@ -21532,14 +21775,14 @@ nO
 BY
 BY
 rT
-PG
+ze
 PG
 UM
 WR
 YV
 Zt
-Xv
-FU
+Zt
+rP
 rT
 AX
 BY
@@ -21738,10 +21981,10 @@ PG
 PG
 GF
 Wc
-FU
 DO
 DO
-FU
+DO
+DO
 Hs
 BY
 BY
@@ -21902,7 +22145,7 @@ nO
 eo
 fd
 gN
-bO
+Sl
 jU
 ly
 nO
@@ -21937,7 +22180,7 @@ BY
 BY
 rT
 PG
-PG
+zI
 GF
 xj
 FU
@@ -22508,7 +22751,7 @@ nO
 nO
 nO
 nO
-bO
+vR
 iM
 nO
 nO
@@ -22542,7 +22785,7 @@ BY
 BY
 BY
 rT
-PG
+rQ
 PG
 VD
 XK
@@ -22904,7 +23147,7 @@ BY
 rT
 PG
 dg
-PG
+UE
 rT
 BY
 BY
@@ -22915,7 +23158,7 @@ nO
 nO
 bO
 my
-bO
+sF
 nO
 nO
 qc
@@ -22946,7 +23189,7 @@ BY
 BY
 BY
 rT
-PG
+ze
 PG
 PG
 rT
@@ -24526,7 +24769,7 @@ rT
 PG
 dL
 PG
-PG
+Oz
 rT
 rT
 BY
@@ -24556,7 +24799,7 @@ BY
 BY
 rT
 rT
-PG
+Oz
 PG
 PG
 PG
@@ -25746,21 +25989,21 @@ dL
 PG
 PG
 PG
-PG
+Oz
 PG
 PG
 PG
 aB
 ym
-PG
+Oz
 dg
-PG
+Oz
 Ix
 aB
 PG
 PG
 PG
-PG
+Oz
 PG
 PG
 PG
@@ -31206,8 +31449,8 @@ BY
 BY
 BY
 BY
-BS
 BY
+xy
 BY
 BY
 BY

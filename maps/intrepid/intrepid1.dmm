@@ -669,11 +669,11 @@
 	dir = 1
 	},
 /obj/machinery/requests_console{
-	pixel_y = -32;
+	announcementConsole = 1;
 	department = "Chief Medical Officer";
 	departmentType = 1;
 	name = "Chief Medical Officer's Requests Console";
-	announcementConsole = 1
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/cmo)
@@ -1786,11 +1786,11 @@
 	c_tag = "Command - Commanding Officer's Office"
 	},
 /obj/machinery/requests_console{
-	pixel_y = 26;
-	department = "Captain";
-	name = "Captain's Requests Console";
 	announcementConsole = 1;
-	departmentType = 7
+	department = "Captain";
+	departmentType = 7;
+	name = "Captain's Requests Console";
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/co)
@@ -4097,6 +4097,7 @@
 "dtU" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/computer/shuttle_control/lift/marine,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/exploration/storage)
 "duu" = (
@@ -4615,11 +4616,11 @@
 /obj/item/storage/box/headset,
 /obj/item/storage/box/radiokeys,
 /obj/machinery/requests_console{
-	pixel_y = 26;
-	department = "Head of Personnel";
-	name = "Head of Personnel's Requests Console";
 	announcementConsole = 1;
-	departmentType = 7
+	department = "Head of Personnel";
+	departmentType = 7;
+	name = "Head of Personnel's Requests Console";
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/xo)
@@ -5693,10 +5694,10 @@
 /obj/structure/table/standard,
 /obj/item/reagent_containers/food/drinks/glass2/coffeecup/one,
 /obj/machinery/requests_console{
-	pixel_y = 26;
 	department = "Engineering";
 	departmentType = 3;
-	name = "Engineering Requests Console"
+	name = "Engineering Requests Console";
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/monitoring)
@@ -11181,11 +11182,11 @@
 	dir = 1
 	},
 /obj/machinery/requests_console{
-	pixel_y = -32;
+	announcementConsole = 1;
 	department = "Chief Science Officer";
 	departmentType = 6;
 	name = "Chief Science Officer's Requests Console";
-	announcementConsole = 1
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/rd)
@@ -11921,10 +11922,10 @@
 /obj/structure/closet/secure_closet/deckofficer,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/requests_console{
-	pixel_y = -32;
 	department = "Supply";
 	departmentType = 2;
-	name = "Supply Requests Console"
+	name = "Supply Requests Console";
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled,
 /area/intrepid/department/cargo/cargobay)
@@ -12238,10 +12239,10 @@
 	dir = 8
 	},
 /obj/machinery/requests_console{
-	pixel_y = 26;
 	department = "Bar";
 	departmentType = 4;
-	name = "Bar Requests Console"
+	name = "Bar Requests Console";
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/civillian/bar)
@@ -12513,11 +12514,11 @@
 	c_tag = "Command - Chief of Security's Office"
 	},
 /obj/machinery/requests_console{
-	pixel_y = 26;
-	department = "Chief Security Officer";
-	name = "Chief Security Officer's Requests Console";
 	announcementConsole = 1;
-	departmentType = 5
+	department = "Chief Security Officer";
+	departmentType = 5;
+	name = "Chief Security Officer's Requests Console";
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/cos)
@@ -14847,10 +14848,10 @@
 "msR" = (
 /obj/machinery/robotic_fabricator,
 /obj/machinery/requests_console{
-	pixel_y = 26;
 	department = "Robotics";
 	departmentType = 3;
-	name = "Robotics Requests Console"
+	name = "Robotics Requests Console";
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/engineering/assembly/robotics)
@@ -21829,11 +21830,11 @@
 	dir = 8
 	},
 /obj/machinery/requests_console{
-	pixel_y = 26;
 	department = "Kitchen";
 	departmentType = 4;
 	name = "Kitchen Requests Console";
-	pixel_x = -32
+	pixel_x = -32;
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/civillian/galley)
@@ -22516,10 +22517,10 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/window/southright,
 /obj/machinery/requests_console{
-	department = "Bridge";
-	name = "Bridge Requests Console";
 	announcementConsole = 1;
+	department = "Bridge";
 	departmentType = 7;
+	name = "Bridge Requests Console";
 	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/dark/monotile,
@@ -25694,10 +25695,10 @@
 /obj/structure/table/standard,
 /obj/item/reagent_containers/glass/bucket,
 /obj/machinery/requests_console{
-	pixel_y = -32;
 	department = "Hydroponics";
 	departmentType = 4;
-	name = "Hydroponics Requests Console"
+	name = "Hydroponics Requests Console";
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/civillian/hydroponics)
@@ -25732,10 +25733,10 @@
 	dir = 1
 	},
 /obj/machinery/requests_console{
-	pixel_y = 26;
 	department = "Medical";
 	departmentType = 1;
-	name = "Medical Requests Console"
+	name = "Medical Requests Console";
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/treatment)
@@ -28402,10 +28403,10 @@
 	},
 /obj/structure/closet/secure_closet/brigchief,
 /obj/machinery/requests_console{
-	pixel_y = 26;
 	department = "Security";
 	departmentType = 5;
-	name = "Security Requests Console"
+	name = "Security Requests Console";
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/security/bo)
@@ -29045,11 +29046,11 @@
 /obj/item/rpd,
 /obj/item/device/scanner/gas,
 /obj/machinery/requests_console{
-	pixel_y = -32;
+	announcementConsole = 1;
 	department = "Chief Engineer";
 	departmentType = 3;
 	name = "Chief Engineer's Requests Console";
-	announcementConsole = 1
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/ce)

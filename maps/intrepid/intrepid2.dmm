@@ -1546,9 +1546,9 @@
 	dir = 4
 	},
 /obj/structure/bookcase{
-	pixel_y = -32;
 	density = 0;
-	opacity = 0
+	opacity = 0;
+	pixel_y = -32
 	},
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/dark,
@@ -2751,9 +2751,9 @@
 "jl" = (
 /obj/structure/table/standard,
 /obj/structure/bookcase{
-	pixel_y = -32;
 	density = 0;
-	opacity = 0
+	opacity = 0;
+	pixel_y = -32
 	},
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/machinery/light/dystopian,
@@ -6742,9 +6742,9 @@
 	dir = 8
 	},
 /obj/structure/bookcase{
-	pixel_y = -32;
 	density = 0;
-	opacity = 0
+	opacity = 0;
+	pixel_y = -32
 	},
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/dark,
@@ -7921,7 +7921,7 @@
 /area/intrepid/department/engineering/atmos)
 "Ap" = (
 /turf/simulated/open,
-/area/turbolift/marine/lift)
+/area/intrepid/department/exploration/hangar)
 "Au" = (
 /obj/structure/cable/orange{
 	icon_state = "2-5"
@@ -8277,7 +8277,7 @@
 "Bt" = (
 /obj/effect/shuttle_landmark/lift/marine_top,
 /turf/simulated/open,
-/area/turbolift/marine/lift)
+/area/intrepid/department/exploration/hangar)
 "Bx" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -9352,6 +9352,14 @@
 /obj/machinery/atmospherics/valve/shutoff/supply,
 /turf/simulated/floor/tiled/steel_grid,
 /area/intrepid/department/civillian/dockbayfive)
+"Fk" = (
+/obj/effect/floor_decal/corner/brown/half,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/computer/shuttle_control/lift/marine,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/intrepid/department/exploration/hangar)
 "Fl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
 /obj/structure/cable/green{
@@ -10749,9 +10757,9 @@
 /area/intrepid/department/medical/morgue)
 "JZ" = (
 /obj/structure/bookcase/manuals/engineering{
-	pixel_x = 32;
 	density = 0;
-	opacity = 0
+	opacity = 0;
+	pixel_x = 32
 	},
 /obj/effect/floor_decal/corner/purple/mono,
 /turf/simulated/floor/tiled/dark/monotile,
@@ -11454,9 +11462,9 @@
 /area/shuttle/pandora/cockpit)
 "Mw" = (
 /obj/structure/bookcase/manuals/medical{
-	pixel_x = -32;
 	density = 0;
-	opacity = 0
+	opacity = 0;
+	pixel_x = -32
 	},
 /obj/effect/floor_decal/corner/purple/mono,
 /turf/simulated/floor/tiled/dark/monotile,
@@ -13070,14 +13078,14 @@
 /area/intrepid/misc/hallway/portside)
 "Sb" = (
 /obj/structure/bookcase/manuals/research_and_development{
-	pixel_x = -32;
+	density = 0;
 	opacity = 0;
-	density = 0
+	pixel_x = -32
 	},
 /obj/structure/bookcase{
-	pixel_y = -32;
 	density = 0;
-	opacity = 0
+	opacity = 0;
+	pixel_y = -32
 	},
 /obj/structure/bed/chair/office/comfy{
 	dir = 4
@@ -13200,14 +13208,14 @@
 /area/intrepid/department/security/portdockingbaysecurity)
 "SD" = (
 /obj/structure/bookcase/manuals/xenoarchaeology{
-	pixel_x = 32;
+	density = 0;
 	opacity = 0;
-	density = 0
+	pixel_x = 32
 	},
 /obj/structure/bookcase{
-	pixel_y = -32;
 	density = 0;
-	opacity = 0
+	opacity = 0;
+	pixel_y = -32
 	},
 /obj/structure/bed/chair/office/comfy{
 	dir = 8
@@ -43322,7 +43330,7 @@ vm
 sb
 Lu
 mt
-vO
+Fk
 Ap
 Ap
 Ap
