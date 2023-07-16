@@ -718,3 +718,62 @@
 	if(ishuman(M) && prob(2))
 		var/mob/living/carbon/human/H = M
 		H.vomit(2, 2, rand(2 SECONDS, 4 SECONDS))
+
+// Gottheit - VERY addictive drug that essentially makes you a god. Take it once and there's no coming back.
+/datum/reagent/gottheit
+	name = "Gottheit"
+	description = "An impossibly powerful medicine, which is just as impossibly addictive."
+	taste_description = "pleasantly burning acid"
+	taste_mult = 5
+	reagent_state = LIQUID
+	color = COLOR_YELLOW
+	value = 50
+	addiction_types = list(/datum/addiction/gottheit = 200) // Near instant addiction
+
+/datum/reagent/gottheit/affect_blood(mob/living/carbon/M, alien, removed)
+	if(alien == IS_DIONA)
+		return
+
+	// Heal all conventional damage types
+	M.adjustCloneLoss(-40 * removed)
+	M.adjustOxyLoss(-10 * removed)
+	M.heal_organ_damage(40 * removed, 40 * removed)
+	M.adjustToxLoss(-40 * removed)
+
+	// Some useful chem effects, including painkilling
+	M.add_chemical_effect(CE_PAINKILLER, 200)
+	M.add_chemical_effect(CE_SPEEDBOOST, 1)
+
+	// Reduce bad effects
+	M.drowsyness = max(M.drowsyness - 50, 0)
+	M.adjust_hallucination(-50)
+	M.AdjustParalysis(-10)
+	M.AdjustStunned(-10)
+	M.AdjustWeakened(-10)
+
+	// Super low doses won't do cool stuff
+	var/dosage = M.chem_doses[type]
+	if(dosage < 2)
+		return
+
+	// Heal organs
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		for(var/obj/item/organ/internal/I in H.internal_organs)
+			if(!BP_IS_ROBOTIC(I))
+				I.heal_damage(20 * removed)
+		for(var/obj/item/organ/external/E in H.organs)
+			if(E.status & ORGAN_ARTERY_CUT)
+				E.status &= ~ORGAN_ARTERY_CUT
+			if(E.status & ORGAN_TENDON_CUT)
+				E.status &= ~ORGAN_TENDON_CUT
+			if(E.status & ORGAN_BLEEDING)
+				E.status &= ~ORGAN_BLEEDING
+			if(E.status & ORGAN_BROKEN)
+				E.status &= ~ORGAN_BROKEN
+			if(E.status & ORGAN_DEAD)
+				E.status &= ~ORGAN_DEAD
+
+	// Remove all diseases
+	for(var/datum/disease/D in M.diseases)
+		qdel(D)
