@@ -218,7 +218,7 @@
 		set_density(1)
 
 /mob/living/simple_animal/proc/drop_loot()
-	if(!loot_list.len)
+	if(!LAZYLEN(loot_list))
 		return
 	for(var/drop in loot_list)
 		for(var/i in 1 to max(1, loot_list[drop]))

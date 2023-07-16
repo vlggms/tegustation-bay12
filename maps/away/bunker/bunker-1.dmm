@@ -43,6 +43,10 @@
 /obj/structure/barricade,
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker)
+"bb" = (
+/obj/machinery/portable_atmospherics/hydroponics/ascent,
+/turf/simulated/floor/ascent,
+/area/abandoned_bunker/bunker/quantum_facility)
 "bf" = (
 /turf/simulated/floor/tiled/dark/monotile,
 /area/abandoned_bunker/bunker/armory)
@@ -104,9 +108,6 @@
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker)
 "dg" = (
-/obj/machinery/light{
-	dir = 1
-	},
 /obj/machinery/power/apc/hyper{
 	dir = 1;
 	pixel_y = 24
@@ -122,6 +123,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker/engine)
+"dm" = (
+/obj/structure/table/glass/pglass,
+/obj/item/mop/advanced/ascent,
+/obj/item/storage/bag/trash/purple/ascent,
+/turf/simulated/floor/ascent,
+/area/abandoned_bunker/bunker/quantum_facility)
 "dn" = (
 /obj/structure/railing/mapped{
 	dir = 4
@@ -134,6 +141,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker/security)
+"du" = (
+/obj/structure/barricade,
+/turf/simulated/floor/tiled/dark,
+/area/abandoned_bunker/bunker/quantum_facility)
+"dD" = (
+/obj/machinery/light/ascent,
+/turf/simulated/floor/ascent,
+/area/abandoned_bunker/bunker/quantum_facility)
 "dI" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 4
@@ -148,6 +163,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker/engine)
+"ek" = (
+/obj/effect/landmark/corpse/riot_officer{
+	brute_loss = 1000
+	},
+/turf/simulated/floor/ascent,
+/area/abandoned_bunker/bunker/quantum_facility)
 "eF" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -157,9 +178,21 @@
 	},
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker/security)
+"eH" = (
+/obj/machinery/light/ascent{
+	dir = 4
+	},
+/turf/simulated/floor/ascent/tiled,
+/area/abandoned_bunker/bunker/quantum_facility)
 "eL" = (
 /turf/simulated/wall/ocp_wall,
 /area/abandoned_bunker/bunker/quantum_entry)
+"eV" = (
+/obj/machinery/computer/operating{
+	dir = 4
+	},
+/turf/simulated/floor/ascent/tiled,
+/area/abandoned_bunker/bunker/quantum_facility)
 "eX" = (
 /obj/machinery/door/airlock/security{
 	name = "Security Department"
@@ -182,6 +215,13 @@
 /mob/living/simple_animal/hostile/riot_officer/baton,
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker)
+"ff" = (
+/obj/machinery/portable_atmospherics/hydroponics/ascent,
+/obj/machinery/light/ascent{
+	dir = 1
+	},
+/turf/simulated/floor/ascent,
+/area/abandoned_bunker/bunker/quantum_facility)
 "fg" = (
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
@@ -197,6 +237,14 @@
 "fC" = (
 /obj/machinery/tele_pad,
 /turf/simulated/floor/tiled/dark,
+/area/abandoned_bunker/bunker/quantum_facility)
+"fS" = (
+/obj/structure/closet/crate/freezer/meat/ascent,
+/turf/simulated/floor/ascent,
+/area/abandoned_bunker/bunker/quantum_facility)
+"fU" = (
+/obj/structure/barricade,
+/turf/simulated/floor/ascent,
 /area/abandoned_bunker/bunker/quantum_facility)
 "gs" = (
 /obj/structure/hygiene/shower{
@@ -227,6 +275,9 @@
 /obj/structure/cable/cyan{
 	icon_state = "2-8"
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/abandoned_bunker/bunker/quantum_facility)
 "hc" = (
@@ -234,6 +285,12 @@
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/dark,
 /area/abandoned_bunker/bunker/security)
+"hB" = (
+/obj/structure/hygiene/shower/ascent{
+	pixel_y = 24
+	},
+/turf/simulated/floor/ascent,
+/area/abandoned_bunker/bunker/quantum_facility)
 "hQ" = (
 /obj/structure/flora/pottedplant/bamboo,
 /turf/simulated/floor/tiled,
@@ -267,10 +324,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker/dormitories)
+"iq" = (
+/turf/simulated/floor/ascent/tiled,
+/area/abandoned_bunker/bunker/quantum_facility)
 "iy" = (
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker)
+"iI" = (
+/turf/simulated/wall/r_wall/ascent,
+/area/abandoned_bunker/bunker/quantum_facility)
 "iJ" = (
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
@@ -293,10 +356,22 @@
 	},
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker/dormitories)
+"jI" = (
+/obj/machinery/light/ascent{
+	dir = 1
+	},
+/turf/simulated/floor/ascent,
+/area/abandoned_bunker/bunker/quantum_facility)
 "jM" = (
 /obj/structure/flora/pottedplant/aquatic,
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker/security)
+"jU" = (
+/obj/machinery/light/ascent{
+	dir = 8
+	},
+/turf/simulated/floor/ascent/tiled,
+/area/abandoned_bunker/bunker/quantum_facility)
 "kI" = (
 /obj/structure/cable/cyan{
 	icon_state = "1-8"
@@ -341,9 +416,20 @@
 	},
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker/security)
+"lU" = (
+/obj/effect/landmark/corpse/riot_officer{
+	brute_loss = 500
+	},
+/turf/simulated/floor/tiled/dark,
+/area/abandoned_bunker/bunker/quantum_facility)
 "lX" = (
 /turf/simulated/floor/greengrid,
 /area/abandoned_bunker/bunker/quantum_entry)
+"lY" = (
+/obj/structure/table/steel,
+/obj/item/storage/toolbox/mechanical,
+/turf/simulated/floor/tiled/dark,
+/area/abandoned_bunker/bunker/quantum_facility)
 "mu" = (
 /obj/machinery/light{
 	dir = 1
@@ -381,6 +467,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker)
+"nc" = (
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/research{
+	name = "Power Storage"
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/abandoned_bunker/bunker/quantum_facility)
 "nq" = (
 /obj/structure/cable/cyan{
 	icon_state = "1-8"
@@ -415,6 +510,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker)
+"pK" = (
+/obj/structure/reagent_dispensers/water_cooler/ascent,
+/turf/simulated/floor/ascent,
+/area/abandoned_bunker/bunker/quantum_facility)
 "pL" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
@@ -431,6 +530,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/abandoned_bunker/bunker/security)
+"pO" = (
+/mob/living/simple_animal/hostile/ascent_alate/ranged,
+/turf/simulated/floor/ascent,
+/area/abandoned_bunker/bunker/quantum_facility)
 "pQ" = (
 /obj/structure/closet/secure_closet/security/bunker,
 /obj/effect/floor_decal/corner/red/border{
@@ -470,6 +573,10 @@
 "qL" = (
 /turf/simulated/floor/tiled/monotile,
 /area/abandoned_bunker/bunker)
+"qN" = (
+/obj/machinery/recharge_station/ascent,
+/turf/simulated/floor/ascent,
+/area/abandoned_bunker/bunker/quantum_facility)
 "qW" = (
 /obj/structure/cable/cyan{
 	icon_state = "1-4"
@@ -514,6 +621,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/abandoned_bunker/bunker/security)
+"rx" = (
+/obj/machinery/sleeper/ascent{
+	dir = 4
+	},
+/turf/simulated/floor/ascent,
+/area/abandoned_bunker/bunker/quantum_facility)
 "rG" = (
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker/security)
@@ -659,6 +772,10 @@
 /obj/effect/spawner/room/bunker_dorm_room_south,
 /turf/simulated/wall/r_titanium,
 /area/abandoned_bunker/bunker/dormitories)
+"uA" = (
+/obj/machinery/cryopod/ascent_spawn,
+/turf/simulated/floor/ascent,
+/area/abandoned_bunker/bunker/quantum_facility)
 "uB" = (
 /turf/simulated/floor/tiled/dark/monotile,
 /area/abandoned_bunker/bunker/security)
@@ -670,6 +787,10 @@
 /obj/random/projectile,
 /turf/simulated/floor/tiled/dark,
 /area/abandoned_bunker/bunker/armory)
+"uH" = (
+/obj/structure/barricade,
+/turf/simulated/floor/ascent/tiled,
+/area/abandoned_bunker/bunker/quantum_facility)
 "uT" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 9
@@ -680,6 +801,12 @@
 /mob/living/simple_animal/hostile/riot_officer/baton,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/abandoned_bunker/bunker/security)
+"uY" = (
+/obj/structure/table/glass/pglass,
+/obj/item/storage/firstaid/surgery,
+/obj/item/material/knife/kitchen/cleaver/ascent,
+/turf/simulated/floor/ascent/tiled,
+/area/abandoned_bunker/bunker/quantum_facility)
 "vb" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 1
@@ -701,6 +828,10 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/abandoned_bunker/bunker)
+"vG" = (
+/obj/machinery/door/airlock/ascent,
+/turf/simulated/floor/ascent/tiled,
+/area/abandoned_bunker/bunker/quantum_facility)
 "vO" = (
 /obj/effect/floor_decal/corner/red/three_quarters,
 /obj/structure/table/rack,
@@ -750,6 +881,18 @@
 /obj/item/clothing/shoes/jackboots,
 /turf/simulated/floor/tiled/dark,
 /area/abandoned_bunker/bunker/armory)
+"xy" = (
+/obj/structure/mopbucket/ascent,
+/turf/simulated/floor/ascent,
+/area/abandoned_bunker/bunker/quantum_facility)
+"xB" = (
+/obj/structure/table/steel,
+/obj/item/storage/belt/utility/full{
+	pixel_y = 8
+	},
+/obj/item/storage/belt/utility/full,
+/turf/simulated/floor/tiled/dark,
+/area/abandoned_bunker/bunker/quantum_facility)
 "xE" = (
 /obj/structure/bed/chair/padded/beige,
 /turf/simulated/floor/tiled,
@@ -763,6 +906,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/abandoned_bunker/bunker/security)
+"xP" = (
+/mob/living/simple_animal/hostile/ascent_alate,
+/turf/simulated/floor/ascent,
+/area/abandoned_bunker/bunker/quantum_facility)
 "xS" = (
 /obj/random/trash,
 /obj/effect/floor_decal/corner/white/border,
@@ -842,7 +989,8 @@
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker/dormitories)
 "zo" = (
-/turf/unsimulated/mineral,
+/obj/structure/barricade,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/abandoned_bunker/bunker/quantum_facility)
 "zx" = (
 /obj/structure/bed/chair/wood{
@@ -870,6 +1018,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker/dormitories)
+"Ab" = (
+/obj/item/organ/internal/voicebox/nabber/ascent,
+/obj/structure/table/glass/pglass,
+/turf/simulated/floor/ascent,
+/area/abandoned_bunker/bunker/quantum_facility)
 "Ai" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 6
@@ -1092,6 +1245,16 @@
 	temperature = 293.15
 	},
 /area/abandoned_bunker/underground)
+"EU" = (
+/obj/machinery/light/ascent{
+	dir = 8
+	},
+/turf/simulated/floor/ascent,
+/area/abandoned_bunker/bunker/quantum_facility)
+"Fr" = (
+/mob/living/simple_animal/hostile/ascent_alate,
+/turf/simulated/floor/ascent/tiled,
+/area/abandoned_bunker/bunker/quantum_facility)
 "FC" = (
 /obj/effect/floor_decal/corner/red/half{
 	dir = 4
@@ -1104,6 +1267,13 @@
 /obj/item/clothing/suit/armor/riot,
 /turf/simulated/floor/tiled/dark,
 /area/abandoned_bunker/bunker/armory)
+"FI" = (
+/obj/machinery/optable/ascent,
+/obj/effect/landmark/corpse/doctor{
+	brute_loss = 50000
+	},
+/turf/simulated/floor/ascent/tiled,
+/area/abandoned_bunker/bunker/quantum_facility)
 "Gf" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/corner/red/border,
@@ -1217,6 +1387,11 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/abandoned_bunker/bunker/security)
+"IM" = (
+/obj/machinery/portable_atmospherics/hydroponics/ascent,
+/obj/machinery/light/ascent,
+/turf/simulated/floor/ascent,
+/area/abandoned_bunker/bunker/quantum_facility)
 "Jg" = (
 /obj/machinery/power/smes/buildable,
 /obj/structure/cable/cyan{
@@ -1315,6 +1490,21 @@
 /obj/random/trash,
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker)
+"LY" = (
+/obj/structure/hygiene/shower/ascent{
+	dir = 1
+	},
+/turf/simulated/floor/ascent,
+/area/abandoned_bunker/bunker/quantum_facility)
+"Ma" = (
+/obj/effect/landmark/corpse/riot_officer{
+	brute_loss = 1000
+	},
+/obj/machinery/light/ascent{
+	dir = 8
+	},
+/turf/simulated/floor/ascent,
+/area/abandoned_bunker/bunker/quantum_facility)
 "Mu" = (
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
@@ -1630,6 +1820,13 @@
 "Xa" = (
 /turf/simulated/floor/tiled/dark,
 /area/abandoned_bunker/bunker)
+"Xf" = (
+/obj/structure/hygiene/sink/ascent{
+	dir = 8;
+	pixel_x = -12
+	},
+/turf/simulated/floor/ascent/tiled,
+/area/abandoned_bunker/bunker/quantum_facility)
 "Xt" = (
 /obj/effect/spawner/room/bunker_canteen,
 /turf/simulated/wall/r_titanium,
@@ -1651,6 +1848,10 @@
 /area/abandoned_bunker/bunker/security)
 "XI" = (
 /turf/simulated/floor/tiled/dark/monotile,
+/area/abandoned_bunker/bunker/quantum_facility)
+"XJ" = (
+/mob/living/simple_animal/hostile/ascent_alate/ranged,
+/turf/simulated/floor/ascent/tiled,
 /area/abandoned_bunker/bunker/quantum_facility)
 "XU" = (
 /obj/machinery/tele_projector{
@@ -1691,6 +1892,12 @@
 /area/abandoned_bunker/bunker/quantum_facility)
 "YQ" = (
 /obj/structure/table/steel,
+/obj/item/storage/toolbox/electrical,
+/turf/simulated/floor/tiled/dark,
+/area/abandoned_bunker/bunker/quantum_facility)
+"YZ" = (
+/obj/structure/table/steel,
+/obj/item/tableflag,
 /turf/simulated/floor/tiled/dark,
 /area/abandoned_bunker/bunker/quantum_facility)
 "Zt" = (
@@ -1699,6 +1906,9 @@
 	},
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker)
+"ZD" = (
+/turf/simulated/floor/ascent,
+/area/abandoned_bunker/bunker/quantum_facility)
 "ZF" = (
 /obj/structure/table/steel,
 /obj/item/airlock_electronics,
@@ -1718,6 +1928,11 @@
 	temperature = 293.15
 	},
 /area/abandoned_bunker/underground)
+"ZV" = (
+/obj/structure/reagent_dispensers/water_cooler/ascent,
+/obj/machinery/light/ascent,
+/turf/simulated/floor/ascent,
+/area/abandoned_bunker/bunker/quantum_facility)
 
 (1,1,1) = {"
 cO
@@ -8254,6 +8469,11 @@ PL
 PL
 PL
 PL
+DX
+DX
+DX
+DX
+DX
 PL
 PL
 PL
@@ -8264,16 +8484,11 @@ PL
 PL
 PL
 PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
+DX
+DX
+DX
+DX
+DX
 PL
 PL
 PL
@@ -8356,6 +8571,11 @@ PL
 PL
 PL
 PL
+DX
+DX
+DX
+DX
+DX
 PL
 PL
 PL
@@ -8366,16 +8586,11 @@ PL
 PL
 PL
 PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
+DX
+DX
+DX
+DX
+DX
 PL
 PL
 PL
@@ -8458,26 +8673,26 @@ PL
 PL
 PL
 PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
+vX
+du
+zo
+du
+vX
+iI
+iI
+iI
+iI
+iI
+iI
+iI
+iI
+iI
+iI
+iI
+fU
+uH
+fU
+iI
 PL
 PL
 PL
@@ -8560,26 +8775,26 @@ PL
 PL
 PL
 PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
+vX
+Wl
+XI
+Wl
+vX
+uA
+iq
+jU
+iq
+iI
+qN
+rx
+rx
+rx
+qN
+iI
+ZD
+iq
+ZD
+iI
 PL
 PL
 PL
@@ -8662,26 +8877,26 @@ PL
 PL
 PL
 PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
+vX
+Wl
+XI
+Wl
+vX
+uA
+iq
+iq
+iq
+iI
+jI
+ZD
+ZD
+ZD
+dD
+iI
+ZD
+iq
+ZD
+iI
 PL
 PL
 PL
@@ -8765,25 +8980,25 @@ vX
 vX
 vX
 vX
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
+Wl
+XI
+xZ
+vX
+uA
+iq
+iq
+iq
+iI
+hB
+pO
+ZD
+ZD
+LY
+iI
+jI
+iq
+ZD
+iI
 PL
 PL
 PL
@@ -8867,25 +9082,25 @@ Au
 Au
 Au
 vX
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
+Wl
+XI
+Wl
+vX
+uA
+iq
+eH
+iq
+vG
+iq
+iq
+iq
+iq
+iq
+vG
+iq
+iq
+ZD
+iI
 PL
 PL
 PL
@@ -8969,25 +9184,25 @@ fg
 fg
 fg
 vX
+Wl
+XI
+Wl
 vX
-vX
-vX
-vX
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
+iI
+vG
+iI
+iI
+iI
+hB
+ZD
+ZD
+ZD
+LY
+iI
+jI
+iq
+ZD
+iI
 PL
 PL
 PL
@@ -9072,24 +9287,24 @@ se
 Nf
 vX
 Wl
-Wl
+XI
 Wl
 vX
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
+bb
+iq
+Xf
+pK
+iI
+jI
+ZD
+ZD
+xP
+dD
+iI
+ZD
+iq
+ZD
+iI
 PL
 PL
 PL
@@ -9172,26 +9387,26 @@ vX
 dg
 GE
 rs
-GE
+nc
 Ej
 XI
 Wl
 vX
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
+ff
+iq
+iq
+ZV
+iI
+fS
+fS
+fS
+fS
+fS
+iI
+ZD
+iq
+ZD
+iI
 PL
 PL
 PL
@@ -9272,28 +9487,28 @@ PL
 PL
 vX
 YQ
-YQ
-YQ
+lY
+xB
 vX
 fg
 XI
 Wl
 vX
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
+bb
+iq
+iq
+bb
+iI
+iI
+iI
+iI
+iI
+iI
+iI
+ZD
+iq
+ZD
+iI
 PL
 PL
 PL
@@ -9379,23 +9594,23 @@ vX
 vX
 fg
 XI
-xZ
+Wl
 vX
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
+bb
+iq
+iq
+bb
+iI
+ZD
+ZD
+EU
+ZD
+ZD
+iI
+ZD
+Fr
+ZD
+iI
 PL
 PL
 PL
@@ -9477,27 +9692,27 @@ PL
 vX
 Xx
 Wl
-YQ
+YZ
 vX
 fg
 XI
-Wl
+xZ
 vX
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
+bb
+iq
+iq
+bb
+iI
+ZD
+uY
+FI
+eV
+ZD
+iI
+ZD
+iq
+ZD
+iI
 PL
 PL
 PL
@@ -9585,21 +9800,21 @@ mP
 XI
 Wl
 vX
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
+ff
+iq
+XJ
+IM
+iI
+ZD
+iq
+Fr
+iq
+ZD
+iI
+jI
+iq
+ZD
+iI
 PL
 PL
 PL
@@ -9687,21 +9902,21 @@ fg
 XI
 Wl
 vX
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
+bb
+iq
+iq
+bb
+iI
+dm
+xy
+iq
+ZD
+Ab
+iI
+ZD
+iq
+ZD
+iI
 PL
 PL
 PL
@@ -9792,18 +10007,18 @@ vX
 vX
 vX
 vX
-vX
-vX
-vX
-vX
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
+iI
+iI
+iI
+iI
+vG
+iI
+iI
+iI
+ZD
+iq
+ZD
+iI
 PL
 PL
 PL
@@ -9895,17 +10110,17 @@ Wl
 Wl
 hV
 Wl
-Wl
-Wl
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
+du
+du
+Ma
+iq
+EU
+ek
+ZD
+ZD
+iq
+ZD
+iI
 PL
 PL
 PL
@@ -9999,15 +10214,15 @@ XI
 XI
 zo
 zo
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
+iq
+iq
+iq
+iq
+iq
+iq
+iq
+ZD
+iI
 PL
 PL
 PL
@@ -10097,19 +10312,19 @@ Wl
 Wl
 Wl
 Wl
+lU
 Wl
-Wl
-Wl
-zo
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
+du
+du
+ZD
+ZD
+ek
+ZD
+ZD
+ZD
+ZD
+ZD
+iI
 PL
 PL
 PL
@@ -10201,17 +10416,17 @@ vX
 vX
 vX
 vX
-vX
-vX
-vX
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
+iI
+iI
+iI
+iI
+iI
+iI
+iI
+iI
+iI
+iI
+iI
 PL
 PL
 PL

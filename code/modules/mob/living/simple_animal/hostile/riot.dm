@@ -9,7 +9,7 @@
 	response_help = "pokes"
 	response_disarm = "shoves"
 	response_harm = "hits"
-	movement_cooldown = 4
+	movement_cooldown = 3
 	maxHealth = 200
 	health = 200
 	harm_intent_damage = 5
@@ -29,9 +29,9 @@
 	check_delete()
 
 /mob/living/simple_animal/hostile/riot_officer/baton
+	desc = "A human in heavy riot armor. They are wielding a stun baton."
 	icon_state = "riot_baton"
 	icon_living = "riot_baton"
-	desc = "A human in heavy riot armor. They are wielding a stun baton."
 	natural_weapon = /obj/item/melee/baton
 	loot_list = list(
 		/obj/effect/landmark/corpse/riot_officer = 1,
@@ -39,9 +39,10 @@
 		)
 
 /mob/living/simple_animal/hostile/riot_officer/baton/shield
+	desc = "A human in heavy riot armor. They are wielding a stun baton and a riot shield."
 	icon_state = "riot_baton_shield"
 	icon_living = "riot_baton_shield"
-	desc = "A human in heavy riot armor. They are wielding a stun baton and a riot shield."
+	movement_cooldown = 3.5
 	maxHealth = 400
 	health = 400
 	loot_list = list(
@@ -54,13 +55,14 @@
 	desc = "A human in heavy riot armor. They are wielding an assault rifle."
 	icon_state = "riot_rifle_wielded"
 	icon_living = "riot_rifle_wielded"
+	movement_cooldown = 4
 	ranged = TRUE
-	ranged_attack_cooldown = DEFAULT_ATTACK_COOLDOWN * 2
+	ranged_attack_cooldown = DEFAULT_ATTACK_COOLDOWN * 3
 	ranged_burst_count = 4
-	ranged_burst_delay = 1.5
+	ranged_burst_delay = 2
 	projectiletype = /obj/item/projectile/bullet/rifle/m16
 	projectilesound = 'sound/weapons/gunshot/m16.ogg'
-	projectile_dispersion = 5
+	projectile_dispersion = 8
 
 	needs_reload = TRUE
 	reload_max = 25

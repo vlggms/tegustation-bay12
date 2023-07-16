@@ -8,6 +8,9 @@
 /area/template_noop)
 "e" = (
 /obj/structure/reagent_dispensers/water_cooler,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/template_noop)
 "f" = (
@@ -27,27 +30,7 @@
 "j" = (
 /turf/simulated/floor/tiled,
 /area/template_noop)
-"k" = (
-/obj/structure/table/woodentable,
-/obj/item/reagent_containers/food/snacks/canned/caviar,
-/turf/simulated/floor/tiled/monotile,
-/area/template_noop)
-"n" = (
-/obj/structure/table/woodentable,
-/obj/item/reagent_containers/food/snacks/canned/beef{
-	pixel_y = 6
-	},
-/obj/item/material/kitchen/utensil/fork{
-	pixel_x = 10
-	},
-/turf/simulated/floor/tiled/monotile,
-/area/template_noop)
 "o" = (
-/turf/simulated/floor/tiled/monotile,
-/area/template_noop)
-"p" = (
-/obj/structure/table/woodentable,
-/obj/item/reagent_containers/food/snacks/canned/tomato,
 /turf/simulated/floor/tiled/monotile,
 /area/template_noop)
 "q" = (
@@ -60,9 +43,18 @@
 /obj/structure/flora/pottedplant/decorative,
 /turf/simulated/floor/tiled,
 /area/template_noop)
+"x" = (
+/obj/structure/bed/chair/wood{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/template_noop)
 "y" = (
 /obj/structure/cable/cyan{
 	icon_state = "1-4"
+	},
+/obj/structure/bed/chair/wood{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/template_noop)
@@ -71,9 +63,7 @@
 /turf/simulated/floor/tiled,
 /area/template_noop)
 "C" = (
-/obj/structure/bed/chair/wood{
-	dir = 1
-	},
+/obj/structure/bed/chair/wood,
 /turf/simulated/floor/tiled/monotile,
 /area/template_noop)
 "D" = (
@@ -92,6 +82,13 @@
 /area/template_noop)
 "I" = (
 /obj/structure/table/standard,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/template_noop)
+"J" = (
+/obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/template_noop)
 "K" = (
@@ -115,13 +112,23 @@
 /turf/simulated/floor/tiled/monotile,
 /area/template_noop)
 "Q" = (
-/obj/structure/bed/chair/wood{
-	dir = 8
-	},
+/obj/structure/table/woodentable,
+/obj/item/reagent_containers/food/snacks/canned/caviar,
+/turf/simulated/floor/tiled/monotile,
+/area/template_noop)
+"S" = (
+/obj/structure/table/woodentable,
+/obj/item/reagent_containers/food/snacks/canned/tomato,
 /turf/simulated/floor/tiled/monotile,
 /area/template_noop)
 "T" = (
-/obj/structure/bed/chair/wood,
+/obj/structure/table/woodentable,
+/obj/item/reagent_containers/food/snacks/canned/beef{
+	pixel_y = 6
+	},
+/obj/item/material/kitchen/utensil/fork{
+	pixel_x = 10
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/template_noop)
 "U" = (
@@ -137,16 +144,22 @@
 /obj/structure/flora/pottedplant/aquatic,
 /turf/simulated/floor/tiled,
 /area/template_noop)
+"W" = (
+/obj/structure/table/woodentable,
+/obj/item/reagent_containers/food/snacks/canned/spinach{
+	pixel_x = 5;
+	pixel_y = 3
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/template_noop)
 "X" = (
 /obj/structure/table/standard,
 /obj/random/accessory,
 /turf/simulated/floor/tiled,
 /area/template_noop)
 "Y" = (
-/obj/structure/table/woodentable,
-/obj/item/reagent_containers/food/snacks/canned/spinach{
-	pixel_x = 5;
-	pixel_y = 3
+/obj/structure/bed/chair/wood{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/template_noop)
@@ -181,8 +194,8 @@ b
 o
 o
 o
-o
 L
+o
 o
 j
 a
@@ -192,11 +205,11 @@ a
 I
 o
 o
-o
-T
-n
 C
-j
+T
+Y
+o
+J
 a
 "}
 (5,1,1) = {"
@@ -204,10 +217,10 @@ a
 H
 o
 o
-o
-T
-k
 C
+Q
+Y
+o
 j
 a
 "}
@@ -217,8 +230,8 @@ U
 o
 o
 o
+x
 o
-Q
 o
 j
 a
@@ -229,8 +242,8 @@ z
 o
 o
 o
-o
 L
+o
 o
 j
 a
@@ -240,10 +253,10 @@ a
 X
 o
 o
-o
-T
-p
 C
+S
+Y
+o
 j
 a
 "}
@@ -252,11 +265,11 @@ a
 e
 o
 o
-o
-T
-Y
 C
-j
+W
+Y
+o
+J
 a
 "}
 (10,1,1) = {"
@@ -266,7 +279,7 @@ D
 D
 D
 y
-Q
+o
 o
 j
 a

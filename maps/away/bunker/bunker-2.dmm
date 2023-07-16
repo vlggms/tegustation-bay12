@@ -296,7 +296,9 @@
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker/entrance)
 "ma" = (
-/obj/effect/landmark/corpse/miner,
+/obj/effect/landmark/corpse/miner{
+	brute_loss = 1200
+	},
 /obj/effect/gibspawner/generic,
 /turf/simulated/floor/exoplanet/snow{
 	temperature = 240
@@ -344,6 +346,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker/entrance)
+"nr" = (
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/turf/simulated/floor/exoplanet/snow{
+	temperature = 240
+	},
+/area/abandoned_bunker/ground)
 "nz" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 4
@@ -699,6 +709,22 @@
 	},
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker/entrance)
+"By" = (
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/turf/simulated/floor/exoplanet/snow{
+	temperature = 240
+	},
+/area/abandoned_bunker/ground)
+"BT" = (
+/obj/item/ammo_casing/rifle/used,
+/obj/item/ammo_casing/rifle/used,
+/turf/simulated/floor/exoplanet/snow{
+	temperature = 240
+	},
+/area/abandoned_bunker/ground)
 "BU" = (
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 4
@@ -2393,7 +2419,7 @@ WV
 WV
 WV
 WV
-WV
+nr
 WV
 WV
 WV
@@ -2493,8 +2519,8 @@ WV
 WV
 ah
 WV
-WV
-WV
+BT
+nr
 WV
 ai
 WV
@@ -2697,7 +2723,7 @@ WV
 cd
 WV
 WV
-WV
+By
 WV
 WV
 WV
