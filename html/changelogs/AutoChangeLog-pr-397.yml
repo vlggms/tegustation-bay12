@@ -1,0 +1,8 @@
+author: Kryson, Qustinnus, EgorDinamit
+delete-after: true
+changes:
+  - rscadd: You may now become addicted to certain drugs if you've been taking them
+      for long enough. Becoming addicted is done by gaining addiction points from
+      doing drugs in a specific category; If you become addicted, you can stop being
+      addicted by lowering your addiction points until it reaches a low enough value(i.e.
+      by not taking drugs). Most addictions will have withdraval effects, however.
