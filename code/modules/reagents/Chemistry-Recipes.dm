@@ -249,6 +249,12 @@
 	required_reagents = list(/datum/reagent/medicine/inaprovaline = 1, /datum/reagent/medicine/bicaridine = 1, /datum/reagent/iron = 1)
 	result_amount = 3
 
+/datum/chemical_reaction/ossarepantes
+	name = "Ossarepantes"
+	result = /datum/reagent/medicine/ossarepantes
+	required_reagents = list(/datum/reagent/medicine/inaprovaline = 1, /datum/reagent/drink/milk = 1, /datum/reagent/radium = 1)
+	result_amount = 3
+
 /datum/chemical_reaction/hyperzine
 	name = "Hyperzine"
 	result = /datum/reagent/medicine/stimulant/hyperzine
