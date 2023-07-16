@@ -31,6 +31,8 @@
 			return global.Master;
 		if("OOClog")
 			return global.OOClog;
+		if("SSaddiction")
+			return global.SSaddiction;
 		if("SSai")
 			return global.SSai;
 		if("SSaifast")
@@ -920,6 +922,8 @@
 			global.Master=newval;
 		if("OOClog")
 			global.OOClog=newval;
+		if("SSaddiction")
+			global.SSaddiction=newval;
 		if("SSai")
 			global.SSai=newval;
 		if("SSaifast")
@@ -1793,6 +1797,7 @@
 	"LIGHTING_CORNER_DIAGONAL",
 	"Master",
 	"OOClog",
+	"SSaddiction",
 	"SSai",
 	"SSaifast",
 	"SSair",
