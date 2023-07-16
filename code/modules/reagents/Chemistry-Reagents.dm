@@ -62,6 +62,9 @@
 
 	var/should_admin_log = FALSE
 
+	/// Assoc list with key type of addiction this reagent feeds, and value amount of addiction points added per unit of reagent metabolzied (which means * REM every life())
+	var/list/addiction_types = null
+
 /datum/reagent/New(var/datum/reagents/holder)
 	if(!istype(holder))
 		CRASH("Invalid reagents holder: [log_info_line(holder)]")
@@ -97,6 +100,9 @@
 		var/overdose_threshold = overdose * (flags & IGNORE_MOB_SIZE? 1 : MOB_MEDIUM/M.mob_size)
 		if(volume > overdose_threshold)
 			overdose(M, alien)
+
+	for(var/addiction in addiction_types)
+		M.AddAddictionPoints(addiction, addiction_types[addiction] * REM)
 
 	//determine the metabolism rate
 	var/removed = metabolism
