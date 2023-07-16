@@ -57,7 +57,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 	slowdown = 9
 	blood_color = "#700f0f"
 	death_message = "writhes and twitches before falling motionless."
-	species_flags = SPECIES_FLAG_NO_PAIN | SPECIES_FLAG_NO_SCAN
+	species_flags = SPECIES_FLAG_NO_PAIN | SPECIES_FLAG_NO_SCAN | SPECIES_FLAG_NO_DISEASE
 	spawn_flags = SPECIES_IS_RESTRICTED
 	brute_mod = 1.5
 	burn_mod = 3.5 //Vulnerable to fire

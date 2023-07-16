@@ -69,6 +69,8 @@
 			return global.SSdbcore;
 		if("SSdcs")
 			return global.SSdcs;
+		if("SSdisease")
+			return global.SSdisease;
 		if("SSdisposals")
 			return global.SSdisposals;
 		if("SSevac")
@@ -956,6 +958,8 @@
 			global.SSdbcore=newval;
 		if("SSdcs")
 			global.SSdcs=newval;
+		if("SSdisease")
+			global.SSdisease=newval;
 		if("SSdisposals")
 			global.SSdisposals=newval;
 		if("SSevac")
@@ -1808,6 +1812,7 @@
 	"SScustomitems",
 	"SSdbcore",
 	"SSdcs",
+	"SSdisease",
 	"SSdisposals",
 	"SSevac",
 	"SSevent",

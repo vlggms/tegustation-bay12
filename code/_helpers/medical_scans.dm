@@ -101,6 +101,14 @@
 		scan["blind"] = TRUE
 	if(H.sdisabilities & NEARSIGHTED)
 		scan["nearsight"] = TRUE
+
+	scan["diseases"] = list()
+
+	for(var/datum/disease/D in H.diseases)
+		if(D.visibility_flags & HIDDEN_ADVSCANNER)
+			continue
+		scan["diseases"] += D
+
 	return scan
 
 /proc/display_medical_data_header(var/list/scan, skill_level = SKILL_DEFAULT)
@@ -238,21 +246,12 @@
 
 		subdat = null
 		//Immune System
-		/*
-			<tr><td colspan='2'><center>Antibody levels and immune system performance are at 100% of baseline.</center></td></tr>
-			<tr><td colspan='2'><span class='bad'><center>Viral Pathogen detected in blood stream.</center></span></td></tr>
-			<tr><td colspan='2'><span class='bad'><center>Large growth detected in frontal lobe, possibly cancerous.</center></span></td></tr>
-		*/
 		dat += "<tr><td colspan = '2'>Antibody levels and immune system perfomance are at [scan["immune_system"]*100]% of baseline.</td></tr>"
 
 		if(scan["worms"])
 			dat += "<tr><td colspan='2'><span class='bad'><center>Large growth detected in frontal lobe, possibly cancerous.</center></span></td></tr>"
 
 		//Reagent scan
-		/*
-			<tr><td colspan='2'>Beneficial reagents detected in subject's bloodstream:</td></tr>
-			<tr><td colspan='2'>10u dexalin plus</td></tr>
-		*/
 		var/other_reagent = FALSE
 
 		for(var/list/R in scan["reagents"])
@@ -266,10 +265,21 @@
 		if(other_reagent)
 			dat += "<tr><td colspan='2'><span class='average'>Warning: Unknown substance detected in subject's blood.</span></td></tr>"
 
-	//summary for the medically disinclined.
-	/*
-			<tr><td colspan='2'>You see a lot of numbers and abbreviations here, but you have no clue what any of this means.</td></tr>
-	*/
+		subdat = null
+		if(LAZYLEN(scan["diseases"]))
+			dat += "<tr><td><strong>Diseases detected:</strong></td>"
+			for(var/datum/disease/D in scan["diseases"])
+				subdat += "<td>\t[D.agent] - [D.desc]</td>"
+				subdat += "<td>\tStage: [D.stage]/[D.max_stages]</td>"
+				var/list/potential_cures = list()
+				for(var/cure in D.cures)
+					var/datum/reagent/R = cure
+					potential_cures |= initial(R.name)
+				if(LAZYLEN(potential_cures))
+					subdat += "<td>\tCure: [english_list(potential_cures)].</td>"
+		if(subdat)
+			dat += subdat
+
 	else
 		dat += "<tr><td colspan='2'>You see a lot of numbers and abbreviations here, but you have no clue what any of it means.</td></tr>"
 

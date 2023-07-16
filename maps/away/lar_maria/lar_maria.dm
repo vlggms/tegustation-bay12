@@ -48,7 +48,19 @@
 		new corpse (src.loc)
 	if (weapon)
 		new weapon(src.loc)
-	visible_message("<span class='warning'>Small shining spores float away from dying [src]!</span>")
+	visible_message(SPAN_WARNING("Small shining spores float away from dying [src]!"))
+	for(var/mob/living/carbon/human/H in view(2, src))
+		var/datum/disease/rage/D = new()
+		if(!CanContractDisease(D))
+			qdel(D)
+			continue
+		var/list/armor_list = H.get_armors_by_zone(null, TOX, DAM_BIO)
+		for(var/datum/extension/armor/A in armor_list)
+			if(A.get_value("bio") > ARMOR_BIO_SMALL)
+				continue
+		if(prob(25 + 25 * get_dist(src, H)))
+			continue
+		H.ForceContractDisease(D, FALSE, TRUE)
 	qdel(src)
 
 /mob/living/simple_animal/hostile/lar_maria/test_subject

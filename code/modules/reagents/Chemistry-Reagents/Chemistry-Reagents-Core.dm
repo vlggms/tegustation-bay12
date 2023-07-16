@@ -1,6 +1,7 @@
 /datum/reagent/blood
 	data = new/list(
 		"donor" = null,
+		"viruses" = null,
 		"species" = SPECIES_HUMAN,
 		"blood_DNA" = null,
 		"blood_type" = null,
@@ -29,13 +30,13 @@
 	heating_point = 318
 	heating_message = "coagulates and clumps together."
 
-/datum/reagent/blood/initialize_data(var/newdata)
+/datum/reagent/blood/initialize_data(newdata)
 	..()
 	if(data && data["blood_colour"])
 		color = data["blood_colour"]
 	return
 
-/datum/reagent/blood/proc/sync_to(var/mob/living/carbon/C)
+/datum/reagent/blood/proc/sync_to(mob/living/carbon/C)
 	data = C.get_blood_data()
 	color = data["blood_colour"]
 
@@ -43,7 +44,7 @@
 	var/t = data.Copy()
 	return t
 
-/datum/reagent/blood/touch_turf(var/turf/simulated/T)
+/datum/reagent/blood/touch_turf(turf/simulated/T)
 	if(!istype(T) || volume < 3)
 		return
 	var/weakref/W = data["donor"]
@@ -58,22 +59,58 @@
 		if(B)
 			B.blood_DNA["UNKNOWN DNA STRUCTURE"] = "X*"
 
-/datum/reagent/blood/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/blood/affect_ingest(mob/living/carbon/M, alien, removed)
 
 	if(M.chem_doses[type] > 5)
 		M.adjustToxLoss(removed)
 	if(M.chem_doses[type] > 15)
 		M.adjustToxLoss(removed)
 
-/datum/reagent/blood/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
-	if(ishuman(M))
-		var/mob/living/carbon/human/H = M
-		if(H.isSynthetic())
-			return
+/datum/reagent/blood/affect_touch(mob/living/carbon/M, alien, removed)
+	if(data && data["viruses"])
+		for(var/thing in data["viruses"])
+			var/datum/disease/strain = thing
 
-/datum/reagent/blood/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+			if((strain.spread_flags & DISEASE_SPREAD_SPECIAL) || (strain.spread_flags & DISEASE_SPREAD_NON_CONTAGIOUS))
+				continue
+
+			if(strain.spread_flags & DISEASE_SPREAD_CONTACT_FLUIDS)
+				M.ContactContractDisease(strain)
+
+/datum/reagent/blood/affect_blood(mob/living/carbon/M, alien, removed)
 	M.inject_blood(src, volume)
 	remove_self(volume)
+	if(data && data["viruses"])
+		for(var/thing in data["viruses"])
+			var/datum/disease/strain = thing
+
+			if((strain.spread_flags & DISEASE_SPREAD_SPECIAL) || (strain.spread_flags & DISEASE_SPREAD_NON_CONTAGIOUS))
+				continue
+
+			M.ForceContractDisease(strain)
+
+/datum/reagent/blood/mix_data(mix_data, new_amount)
+	if(data && mix_data)
+		if(data["viruses"] || mix_data["viruses"])
+
+			var/list/mix1 = data["viruses"]
+			var/list/mix2 = mix_data["viruses"]
+
+			// Stop issues with the list changing during mixing.
+			var/list/to_mix = list()
+
+			for(var/datum/disease/advance/AD in mix1)
+				to_mix += AD
+			for(var/datum/disease/advance/AD in mix2)
+				to_mix += AD
+
+			var/datum/disease/advance/AD = AdvanceMix(to_mix)
+			if(AD)
+				var/list/preserve = list(AD)
+				for(var/D in data["viruses"])
+					if(!istype(D, /datum/disease/advance))
+						preserve += D
+				data["viruses"] = preserve
 
 // Water!
 #define WATER_LATENT_HEAT 9500 // How much heat is removed when applied to a hot turf, in J/unit (9500 makes 120 u of water roughly equivalent to 2L
