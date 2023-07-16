@@ -35,11 +35,11 @@
 	movement_cooldown = 4
 
 	ranged = TRUE
-	ranged_attack_cooldown = DEFAULT_ATTACK_COOLDOWN * 4
+	ranged_attack_cooldown = DEFAULT_ATTACK_COOLDOWN * 3
 	ranged_burst_count = 3
-	ranged_burst_delay = 3
+	ranged_burst_delay = 2.5
 	projectiletype = /obj/item/projectile/beam/particle
-	projectile_dispersion = 8
+	projectile_dispersion = 1
 
 	loot_list = list(
 		/obj/effect/landmark/corpse/ascent_alate/armor = 1,

@@ -62,7 +62,7 @@
 	ranged_burst_delay = 2
 	projectiletype = /obj/item/projectile/bullet/rifle/m16
 	projectilesound = 'sound/weapons/gunshot/m16.ogg'
-	projectile_dispersion = 8
+	projectile_dispersion = 2
 
 	needs_reload = TRUE
 	reload_max = 25
