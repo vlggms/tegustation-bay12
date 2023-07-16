@@ -25,7 +25,7 @@
 	LAZYSET(victim.active_addictions, type, 1) // Start at first cycle.
 	log_game("[key_name(victim)] has become addicted to [name].")
 
-/// Called when you lose addiction poitns somehow. Takes a mind as argument and sees if you lost the addiction
+/// Called when you lose addiction points somehow. Takes a mind as argument and sees if you lost the addiction
 /datum/addiction/proc/OnLoseAddictionPoints(mob/living/carbon/victim)
 	var/current_addiction_point_amount = victim.addiction_points[type]
 	if(!LAZYACCESS(victim.active_addictions, type)) // Not addicted
@@ -42,13 +42,11 @@
 
 /datum/addiction/proc/ProcessAddiction(mob/living/carbon/victim, delta_time = 2)
 	var/current_addiction_cycle = LAZYACCESS(victim.active_addictions, type) // If this is null, we're not addicted
-	var/on_drug_of_this_addiction = FALSE
 	for(var/datum/reagent/possible_drug as anything in victim.reagents.reagent_list) // Go through the drugs in our system
 		for(var/addiction in possible_drug.addiction_types) // And check all of their addiction types
 			if(addiction == type && possible_drug.volume >= MIN_ADDICTION_REAGENT_AMOUNT) // If one of them matches, and we have enough of it in our system, we're not losing addiction
 				if(current_addiction_cycle)
 					LAZYSET(victim.active_addictions, type, 1) // Keeps withdrawal at first cycle.
-				on_drug_of_this_addiction = TRUE
 				return
 
 	var/withdrawal_stage
@@ -62,9 +60,8 @@
 		else
 			withdrawal_stage = 0
 
-	if(!on_drug_of_this_addiction)
-		if(victim.RemoveAddictionPoints(type, addiction_loss_per_stage[withdrawal_stage + 1] * delta_time)) // If true was returned, we lost the addiction!
-			return
+	if(victim.RemoveAddictionPoints(type, addiction_loss_per_stage[withdrawal_stage + 1] * delta_time)) // If true was returned, we lost the addiction!
+		return
 
 	if(!current_addiction_cycle) // Dont do the effects if were not on drugs
 		return FALSE
