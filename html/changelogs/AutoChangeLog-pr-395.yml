@@ -1,0 +1,5 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - rscadd: 'Added T18 carbine: A more mobile version of T12.'
+  - balance: T12, rocket launcher and L6 have slight movement slowdown when in hands.
