@@ -14,6 +14,7 @@
 	health = 850
 	maxHealth = 850
 	resistance = 12
+	maxbodytemp = 1200 // Can survive harsh environments
 
 	movement_cooldown = 5
 	movement_sound = 'sound/simple_mob/abominable_infestation/rhino/step.ogg'

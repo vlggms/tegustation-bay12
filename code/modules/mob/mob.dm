@@ -784,12 +784,7 @@
 	else
 		lying = incapacitated(INCAPACITATION_KNOCKDOWN)
 
-	if(lying)
-		set_density(0)
-		if(l_hand) unEquip(l_hand)
-		if(r_hand) unEquip(r_hand)
-	else
-		set_density(initial(density))
+	HandleLyingDensity()
 	reset_layer()
 
 	for(var/obj/item/grab/G in grabbed_by)
@@ -804,6 +799,15 @@
 		regenerate_icons()
 	else if( lying != lying_prev )
 		update_icons()
+
+// Simply handles density
+/mob/proc/HandleLyingDensity()
+	if(lying)
+		set_density(0)
+		if(l_hand) unEquip(l_hand)
+		if(r_hand) unEquip(r_hand)
+	else
+		set_density(initial(density))
 
 /mob/proc/reset_layer()
 	if(lying)

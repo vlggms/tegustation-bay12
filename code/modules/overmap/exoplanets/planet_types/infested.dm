@@ -16,9 +16,10 @@
 	fauna_types = list(
 		/mob/living/simple_animal/hostile/infestation/broodling = 7,
 		/mob/living/simple_animal/hostile/infestation/eviscerator = 5,
+		/mob/living/simple_animal/hostile/infestation/floatfly = 4,
 		/mob/living/simple_animal/hostile/infestation/spitter = 3,
 		/mob/living/simple_animal/hostile/infestation/assembler = 3,
-		/mob/living/simple_animal/hostile/infestation/rhino = 2,
+		/mob/living/simple_animal/hostile/infestation/rhino = 1,
 		/mob/living/simple_animal/hostile/infestation/larva/implant/implanter = 1,
 		)
 

@@ -46,7 +46,7 @@
 		for(var/addiction in possible_drug.addiction_types) // And check all of their addiction types
 			if(addiction == type && possible_drug.volume >= MIN_ADDICTION_REAGENT_AMOUNT) // If one of them matches, and we have enough of it in our system, we're not losing addiction
 				if(current_addiction_cycle)
-					LAZYSET(victim.active_addictions, type, 1) // Keeps withdrawal at first cycle.
+					LAZYSET(victim.active_addictions, type, 1) // Keeps withdrawal inactive for a while
 				return
 
 	var/withdrawal_stage
