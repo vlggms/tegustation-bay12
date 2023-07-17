@@ -271,6 +271,8 @@
 	mag_remove_sound = 'sound/weapons/guns/interaction/lmg_magout.ogg'
 	can_special_reload = FALSE
 
+	slowdown_held = 1
+
 	//LMG, better sustained fire accuracy than assault rifles (comparable to SMG), higer move delay and one-handing penalty
 	//No single-shot or 3-round-burst modes since using this weapon should come at a cost to flexibility.
 	firemodes = list(
@@ -414,6 +416,8 @@
 	mag_insert_sound = 'sound/weapons/guns/interaction/ltrifle_magin.ogg'
 	mag_remove_sound = 'sound/weapons/guns/interaction/ltrifle_magout.ogg'
 
+	slowdown_held = 0.5
+
 	firemodes = list(
 		list(mode_name="semi auto",      burst=1,    fire_delay=null, one_hand_penalty=8,  burst_accuracy=null, dispersion=null),
 		list(mode_name="3-round bursts", burst=3,    fire_delay=null, burst_delay=1.4,     one_hand_penalty=9,  burst_accuracy=list(0,-1),    dispersion=list(0.0, 0.4, 0.8)),
@@ -472,3 +476,43 @@
 		item_state = "ak47-empty"
 		wielded_item_state = "ak47-wielded-empty"
 
+/obj/item/gun/projectile/automatic/t18
+	name = "T18 carbine"
+	desc = "The T-18 carbine is one of the standard rifles produced by the Terran Government. It's commonly used by people who prefer greater mobility in combat, like scouts and other light infantry."
+	icon = 'icons/obj/guns/t18.dmi'
+	icon_state = "t18"
+	item_state = "t18"
+	w_class = ITEM_SIZE_HUGE
+	force = 10
+	caliber = CALIBER_T12
+	origin_tech = list(TECH_COMBAT = 7, TECH_MATERIAL = 1, TECH_ESOTERIC = 5)
+	slot_flags = SLOT_BACK
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/t18
+	allowed_magazines = /obj/item/ammo_magazine/t18
+	one_hand_penalty = 10
+	accuracy_power = 5
+	bulk = GUN_BULK_RIFLE
+	wielded_item_state = "t18-wielded"
+	mag_insert_sound = 'sound/weapons/guns/interaction/ltrifle_magin.ogg'
+	mag_remove_sound = 'sound/weapons/guns/interaction/ltrifle_magout.ogg'
+
+	firemodes = list(
+		list(mode_name="semi auto",      burst=1,    fire_delay=null, one_hand_penalty=10,  burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3,    fire_delay=null, burst_delay=1.2,     one_hand_penalty=12,  burst_accuracy=list(-1,-2),    dispersion=list(0.2, 0.6, 0.8)),
+		list(mode_name="full auto",      burst=1,    fire_delay=0,    burst_delay=0.5,     one_hand_penalty=15, burst_accuracy=list(-1,-2,-3), dispersion=list(0.3, 0.7, 0.9), autofire_enabled=1)
+		)
+
+/obj/item/gun/projectile/automatic/t18/on_update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "t18"
+		item_state = "t18"
+		wielded_item_state = "t18-wielded"
+	else
+		icon_state = "t18-empty"
+		item_state = "t18-empty"
+		wielded_item_state = "t18-wielded-empty"
+
+/obj/item/gun/projectile/automatic/t18/empty
+	magazine_type = null

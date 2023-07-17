@@ -189,6 +189,10 @@
 	caliber = CALIBER_T12
 	projectile_type = /obj/item/projectile/bullet/rifle/t12
 
+/obj/item/ammo_casing/rifle/t18
+	caliber = CALIBER_T12
+	projectile_type = /obj/item/projectile/bullet/rifle/t18
+
 /obj/item/ammo_casing/rifle/ak47
 	caliber = CALIBER_AK47
 	projectile_type = /obj/item/projectile/bullet/rifle/ak47

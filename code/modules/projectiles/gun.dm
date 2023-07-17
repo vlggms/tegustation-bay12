@@ -107,6 +107,9 @@
 	var/mob/autofiring_by
 	var/autofiring_timer
 
+	var/slowdown_held = 0
+	var/slowdown_worn = 0
+
 /obj/item/gun/Initialize()
 	. = ..()
 	for(var/i in 1 to firemodes.len)
@@ -117,6 +120,12 @@
 
 	if(scope_zoom)
 		verbs += /obj/item/gun/proc/scope
+
+	slowdown_per_slot[slot_l_hand] = slowdown_held
+	slowdown_per_slot[slot_r_hand] = slowdown_held
+	slowdown_per_slot[slot_back] = slowdown_worn
+	slowdown_per_slot[slot_belt] = slowdown_worn
+	slowdown_per_slot[slot_s_store] = slowdown_worn
 
 /obj/item/gun/Destroy()
 	// autofire timer is automatically cleaned up

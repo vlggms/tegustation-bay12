@@ -341,6 +341,16 @@
 	max_ammo = 50
 	multiple_sprites = 1
 
+/obj/item/ammo_magazine/t18
+	name = "T18 magazine"
+	icon_state = "t18"
+	mag_type = MAGAZINE
+	caliber = CALIBER_T12
+	matter = list(MATERIAL_STEEL = 1800)
+	ammo_type = /obj/item/ammo_casing/rifle/t18
+	max_ammo = 30
+	multiple_sprites = 1
+
 /obj/item/ammo_magazine/ak47
 	name = "AK47 magazine"
 	icon_state = "ak47"
