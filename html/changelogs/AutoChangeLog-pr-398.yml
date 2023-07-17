@@ -1,0 +1,11 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - rscadd: Added several new chemical reagents.
+  - rscadd: 'Ossarepantes(Bicaridine, Milk, Radium at 50C): Mends broken bones while
+      dealing high brute damage and inflicting pain.'
+  - rscadd: 'Mensvir(Mindbreaker toxin, Crystallizing agent, Gold at 40C): A drug
+      that only works on psionic users. Somewhat addictive.'
+  - tweak: Added recipe for Serotrotium(Ethanol, Sugar, Lithium at 40C) and updated
+      it to have some beneficial effects.
+  - tweak: Most drugs are now addicting. This includes psionic reagents.
