@@ -23226,15 +23226,6 @@
 	req_access = list("ACCESS_INTREPID_SQUAD_LEADER")
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/ammo_magazine/mil_rifle,
-/obj/item/ammo_magazine/mil_rifle,
-/obj/item/ammo_magazine/mil_rifle,
-/obj/item/ammo_magazine/mil_rifle,
-/obj/item/ammo_magazine/mil_rifle,
-/obj/item/ammo_magazine/mil_rifle,
-/obj/item/ammo_magazine/mil_rifle,
-/obj/item/ammo_magazine/mil_rifle,
-/obj/item/ammo_magazine/mil_rifle,
 /obj/machinery/firealarm{
 	pixel_y = 15
 	},
@@ -23242,6 +23233,21 @@
 	dir = 8;
 	pixel_x = -17
 	},
+/obj/item/ammo_magazine/t18,
+/obj/item/ammo_magazine/t18,
+/obj/item/ammo_magazine/t18,
+/obj/item/ammo_magazine/t18,
+/obj/item/ammo_magazine/t18,
+/obj/item/ammo_magazine/t18,
+/obj/item/ammo_magazine/t18,
+/obj/item/ammo_magazine/t18,
+/obj/item/ammo_magazine/t18,
+/obj/item/ammo_magazine/t18,
+/obj/item/ammo_magazine/t18,
+/obj/item/ammo_magazine/t18,
+/obj/item/ammo_magazine/t18,
+/obj/item/ammo_magazine/t18,
+/obj/item/ammo_magazine/t18,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/exploration/storage)
 "sUl" = (

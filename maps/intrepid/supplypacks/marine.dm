@@ -18,6 +18,22 @@
 	containername = "assault rifle ammunition crate"
 	access = access_marine
 
+/decl/hierarchy/supply_pack/marine/t18_rifle
+	name = "Weapons - T18 scout rifle"
+	contains = list(/obj/item/gun/projectile/automatic/t18 = 1)
+	cost = 120
+	containertype = /obj/structure/closet/crate/secure/weapon
+	containername = "T18 scout rifle crate"
+	access = access_marine
+
+/decl/hierarchy/supply_pack/marine/t18_ammo
+	name = "Ammunition - T18 scout rifle"
+	contains = list(/obj/item/ammo_magazine/t18 = 4)
+	cost = 50
+	containertype = /obj/structure/closet/crate/secure/weapon
+	containername = "T18 scout rifle ammunition crate"
+	access = access_marine
+
 /decl/hierarchy/supply_pack/marine/bullpup_rifle
 	name = "Weapons - Bullpup assault rifle"
 	contains = list(/obj/item/gun/projectile/automatic/bullpup_rifle = 1)
@@ -34,10 +50,34 @@
 	containername = "bullpup assault rifle ammunition crate"
 	access = access_marine
 
+/decl/hierarchy/supply_pack/marine/ak47_rifle
+	name = "Weapons - AK47 rifle"
+	contains = list(/obj/item/gun/projectile/automatic/ak47 = 1)
+	cost = 80
+	containertype = /obj/structure/closet/crate/secure/weapon
+	containername = "bullpup assault rifle crate"
+	access = access_marine
+
+/decl/hierarchy/supply_pack/marine/ak47_ammo
+	name = "Ammunition - AK47 rifle"
+	contains = list(/obj/item/ammo_magazine/ak47 = 4)
+	cost = 30
+	containertype = /obj/structure/closet/crate/secure/weapon
+	containername = "AK47 rifle ammunition crate"
+	access = access_marine
+
+/decl/hierarchy/supply_pack/marine/ak47_ammo_extended
+	name = "Ammunition - AK47 rifle (extended)"
+	contains = list(/obj/item/ammo_magazine/ak47/ext = 4)
+	cost = 40
+	containertype = /obj/structure/closet/crate/secure/weapon
+	containername = "AK47 rifle extended ammunition crate"
+	access = access_marine
+
 /decl/hierarchy/supply_pack/marine/pistol
 	name = "Weapons - Military pistol"
 	contains = list(/obj/item/gun/projectile/pistol/military/alt = 1)
-	cost = 80
+	cost = 60
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "military pistol crate"
 	access = access_marine
@@ -45,7 +85,7 @@
 /decl/hierarchy/supply_pack/marine/pistol_ammo
 	name = "Ammunition - Military pistol"
 	contains = list(/obj/item/ammo_magazine/pistol/double = 4)
-	cost = 20
+	cost = 10
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "military pistol ammunition crate"
 	access = access_marine

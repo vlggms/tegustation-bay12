@@ -46,8 +46,8 @@
 
 /obj/structure/closet/secure_closet/squad_leader/WillContain()
 	return list(
-		/obj/item/gun/projectile/automatic/bullpup_rifle,
-		/obj/item/ammo_magazine/mil_rifle = 3,
+		/obj/item/gun/projectile/automatic/t18,
+		/obj/item/ammo_magazine/t18 = 3,
 		/obj/item/gun/projectile/pistol/military/alt,
 		/obj/item/ammo_magazine/pistol/double = 3,
 		/obj/item/grenade/frag,
@@ -86,8 +86,8 @@
 
 /obj/structure/closet/secure_closet/marine/WillContain()
 	return list(
-		/obj/item/gun/projectile/automatic/bullpup_rifle,
-		/obj/item/ammo_magazine/mil_rifle = 3,
+		/obj/item/gun/projectile/automatic/t18,
+		/obj/item/ammo_magazine/t18 = 3,
 		/obj/item/grenade/frag,
 		/obj/item/storage/belt/holster/security/tactical,
 		/obj/item/clothing/suit/space/void/marine/prepared,
@@ -120,8 +120,8 @@
 
 /obj/structure/closet/secure_closet/combat_medic/WillContain()
 	return list(
-		/obj/item/gun/projectile/automatic/bullpup_rifle,
-		/obj/item/ammo_magazine/mil_rifle = 3,
+		/obj/item/gun/projectile/automatic/t18,
+		/obj/item/ammo_magazine/t18 = 3,
 		/obj/item/grenade/frag,
 		/obj/item/storage/belt/holster/security/tactical,
 		/obj/item/clothing/suit/space/void/marine/prepared,
@@ -157,8 +157,8 @@
 
 /obj/structure/closet/secure_closet/combat_engi/WillContain()
 	return list(
-		/obj/item/gun/projectile/automatic/bullpup_rifle,
-		/obj/item/ammo_magazine/mil_rifle = 3,
+		/obj/item/gun/projectile/automatic/t18,
+		/obj/item/ammo_magazine/t18 = 3,
 		/obj/item/grenade/frag,
 		/obj/item/storage/belt/holster/security/tactical,
 		/obj/item/clothing/suit/space/void/marine/prepared,
