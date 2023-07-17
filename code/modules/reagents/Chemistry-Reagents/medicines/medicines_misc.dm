@@ -21,18 +21,20 @@
 	value = 3.1
 
 /datum/reagent/medicine/ethylredoxrazine/affect_blood(mob/living/carbon/M, alien, removed)
-	if (alien == IS_DIONA)
+	if(alien == IS_DIONA)
 		return
-	M.dizziness = 0
-	M.drowsyness = 0
-	M.stuttering = 0
-	M.confused = 0
-	var/datum/reagents/ingested = M.get_ingested_reagents()
-	if (ingested)
-		for (var/datum/reagent/R in ingested.reagent_list)
-			if (istype(R, /datum/reagent/ethanol))
-				M.chem_doses[R.type] = max(M.chem_doses[R.type] - removed * 5, 0)
 
+	M.dizziness = max(M.dizziness - 10, 0)
+	M.drowsyness = max(M.drowsyness - 10, 0)
+	M.stuttering = max(M.stuttering - 10, 0)
+	M.confused = max(M.confused - 10, 0)
+	var/datum/reagents/ingested = M.get_ingested_reagents()
+	if(ingested)
+		for(var/datum/reagent/R in ingested.reagent_list)
+			if(istype(R, /datum/reagent/ethanol))
+				M.chem_doses[R.type] = max(M.chem_doses[R.type] - removed * 5, 0)
+	// Helps with alcohol addiction slightly
+	M.RemoveAddictionPoints(/datum/addiction/alcohol, removed * 3)
 
 
 /datum/reagent/medicine/imidazoline
