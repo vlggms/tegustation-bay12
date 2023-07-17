@@ -137,6 +137,14 @@
 	minimum_temperature = 50 CELSIUS
 	maximum_temperature = (50 CELSIUS) + 100
 
+/datum/chemical_reaction/serotrotium
+	name = "Serotrotium"
+	result = /datum/reagent/serotrotium
+	required_reagents = list(/datum/reagent/ethanol = 1, /datum/reagent/sugar = 1, /datum/reagent/lithium = 1)
+	result_amount = 3
+	minimum_temperature = 40 CELSIUS
+	maximum_temperature = (40 CELSIUS) + 100
+
 /datum/chemical_reaction/pacid
 	name = "Polytrinic acid"
 	result = /datum/reagent/acid/polytrinic
@@ -248,6 +256,14 @@
 	result = /datum/reagent/medicine/meraline
 	required_reagents = list(/datum/reagent/medicine/inaprovaline = 1, /datum/reagent/medicine/bicaridine = 1, /datum/reagent/iron = 1)
 	result_amount = 3
+
+/datum/chemical_reaction/ossarepantes
+	name = "Ossarepantes"
+	result = /datum/reagent/medicine/ossarepantes
+	required_reagents = list(/datum/reagent/medicine/bicaridine = 1, /datum/reagent/drink/milk = 1, /datum/reagent/radium = 1)
+	result_amount = 3
+	minimum_temperature = 50 CELSIUS
+	maximum_temperature = (50 CELSIUS) + 100
 
 /datum/chemical_reaction/hyperzine
 	name = "Hyperzine"
@@ -2333,6 +2349,13 @@
 		/datum/reagent/medicine/cryogenic/nanite_fluid = 10,
 		/datum/reagent/gold = 10
 	)
+
+/datum/chemical_reaction/mensvir
+	name = "Mensvir"
+	result = /datum/reagent/mensvir
+	result_amount = 1
+	minimum_temperature = 40 CELSIUS
+	required_reagents = list(/datum/reagent/mindbreaker_toxin = 1, /datum/reagent/crystallizing_agent = 1, /datum/reagent/gold = 1)
 
 // tea expansion pack content - black tea drinks
 /datum/chemical_reaction/icetea

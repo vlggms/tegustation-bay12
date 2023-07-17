@@ -13,6 +13,7 @@
 	overdose = REAGENTS_OVERDOSE
 	value = 2.8
 	should_admin_log = TRUE
+	addiction_types = list(/datum/addiction/hallucinogens = 2)
 
 /datum/reagent/space_drugs/affect_blood(mob/living/carbon/M, alien, removed)
 	if (alien == IS_DIONA)
@@ -41,12 +42,16 @@
 	metabolism = REM * 0.25
 	overdose = REAGENTS_OVERDOSE
 	value = 2.5
+	addiction_types = list(/datum/addiction/hallucinogens = 2)
 
 /datum/reagent/serotrotium/affect_blood(mob/living/carbon/M, alien, removed)
-	if (alien == IS_DIONA)
+	if(alien == IS_DIONA)
 		return
-	if (prob(7))
-		M.emote(pick("twitch", "drool", "moan", "gasp"))
+	M.adjustToxLoss(2 * removed)
+	M.add_chemical_effect(CE_SPEEDBOOST, 0.3)
+	M.add_chemical_effect(CE_MIND, 1)
+	if(prob(7))
+		M.emote(pick("twitch", "drool", "moan", "smile", "laugh"))
 	return
 
 
@@ -61,6 +66,7 @@
 	overdose = REAGENTS_OVERDOSE
 	value = 0.6
 	should_admin_log = TRUE
+	addiction_types = list(/datum/addiction/hallucinogens = 5)
 
 /datum/reagent/mindbreaker_toxin/affect_blood(mob/living/carbon/M, alien, removed)
 	if (alien == IS_DIONA)
@@ -130,6 +136,7 @@
 	metabolism = REM
 	overdose = 25
 	should_admin_log = TRUE
+	addiction_types = list(/datum/addiction/psionics = 5)
 
 	// M A X I M U M C H E E S E
 	var/global/list/dose_messages = list(
@@ -199,6 +206,7 @@
 	color = "#d0ff00"
 	metabolism = 1
 	overdose = 5
+	addiction_types = list(/datum/addiction/psionics = 20) // You usually only take small amount
 
 	var/global/list/dose_messages = list(
 		"Your name is called. It is your time.",
@@ -237,3 +245,20 @@
 		H.seizure()
 	if(prob(10))
 		to_chat(M, SPAN_DANGER("<font size = [rand(3,4)]>[pick(overdose_messages)]</font>"))
+
+/datum/reagent/mensvir
+	name = "Mensvir"
+	taste_description = "brain liquid"
+	description = "A somewhat expensive hallucinogenic drug used by psionic users to either get high or keep addictions in check. Has several benefits, but it is still addictive."
+	reagent_state = LIQUID
+	color = "#d5f29d"
+	addiction_types = list(/datum/addiction/psionics = 2, /datum/addiction/hallucinogens = 1)
+
+/datum/reagent/mensvir/affect_blood(mob/living/carbon/M, alien, removed)
+	if(!M.psi) // Sorry, elitist drug
+		return
+
+	M.hallucination(5, 25)
+	M.add_chemical_effect(CE_PULSE, 1)
+	M.add_chemical_effect(CE_THIRDEYE, 1)
+	M.psi.stamina = min(M.psi.max_stamina, M.psi.stamina + 1)
