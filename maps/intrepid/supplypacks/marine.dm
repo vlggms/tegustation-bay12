@@ -68,7 +68,7 @@
 
 /decl/hierarchy/supply_pack/marine/ak47_ammo_extended
 	name = "Ammunition - AK47 rifle (extended)"
-	contains = list(/obj/item/ammo_magazine/ak47/ext = 4)
+	contains = list(/obj/item/ammo_magazine/ak47/extended = 4)
 	cost = 40
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "AK47 rifle extended ammunition crate"
