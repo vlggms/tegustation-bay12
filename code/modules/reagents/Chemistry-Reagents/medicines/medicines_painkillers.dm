@@ -16,7 +16,7 @@
 
 /datum/reagent/medicine/painkiller/New()
 	if(is_opiate)
-		addiction_types = list(/datum/addiction/opiate = max(0.5, 0.025 * target_painkiller_strength))
+		addiction_types = list(/datum/addiction/opiate = max(0.5, 0.15 * target_painkiller_strength))
 	return ..()
 
 /datum/reagent/medicine/painkiller/affect_blood(mob/living/carbon/M, alien, removed)

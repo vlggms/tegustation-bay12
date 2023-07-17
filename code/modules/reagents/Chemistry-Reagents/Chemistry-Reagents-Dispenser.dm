@@ -122,7 +122,7 @@
 	value = DISPENSER_REAGENT_VALUE
 
 /datum/reagent/ethanol/New()
-	addiction_types = list(/datum/addiction/alcohol = max(0.5, 15 / strength)) // Higher strength is somehow weaker, go figure
+	addiction_types = list(/datum/addiction/alcohol = max(0.5, 50 / strength)) // Higher strength is somehow weaker, go figure
 	return ..()
 
 /datum/reagent/ethanol/touch_mob(var/mob/living/L, var/amount)

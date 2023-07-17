@@ -42,9 +42,10 @@
 
 /datum/addiction/proc/ProcessAddiction(mob/living/carbon/victim, delta_time = 2)
 	var/current_addiction_cycle = LAZYACCESS(victim.active_addictions, type) // If this is null, we're not addicted
-	for(var/datum/reagent/possible_drug as anything in victim.reagents.reagent_list) // Go through the drugs in our system
-		for(var/addiction in possible_drug.addiction_types) // And check all of their addiction types
-			if(addiction == type && possible_drug.volume >= MIN_ADDICTION_REAGENT_AMOUNT) // If one of them matches, and we have enough of it in our system, we're not losing addiction
+	for(var/drug_type in victim.chem_doses) // Go through the drugs in our system
+		var/datum/reagent/R = GLOB.chemical_reagents_list[drug_type]
+		for(var/addiction in R.addiction_types) // And check all of their addiction types
+			if(addiction == type && victim.chem_doses[drug_type] >= MIN_ADDICTION_REAGENT_AMOUNT) // If one of them matches, and we have enough of it in our system, we're not losing addiction
 				if(current_addiction_cycle)
 					LAZYSET(victim.active_addictions, type, 1) // Keeps withdrawal inactive for a while
 				return
