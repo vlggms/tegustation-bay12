@@ -252,8 +252,10 @@
 /datum/chemical_reaction/ossarepantes
 	name = "Ossarepantes"
 	result = /datum/reagent/medicine/ossarepantes
-	required_reagents = list(/datum/reagent/medicine/inaprovaline = 1, /datum/reagent/drink/milk = 1, /datum/reagent/radium = 1)
+	required_reagents = list(/datum/reagent/medicine/bicaridine = 1, /datum/reagent/drink/milk = 1, /datum/reagent/radium = 1)
 	result_amount = 3
+	minimum_temperature = 50 CELSIUS
+	maximum_temperature = (50 CELSIUS) + 100
 
 /datum/chemical_reaction/hyperzine
 	name = "Hyperzine"
