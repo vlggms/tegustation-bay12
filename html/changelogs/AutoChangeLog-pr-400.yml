@@ -1,0 +1,5 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: Added ISC to human factions in character preferences.
+  - tweak: Added Taur to human home planets in character preferences.
