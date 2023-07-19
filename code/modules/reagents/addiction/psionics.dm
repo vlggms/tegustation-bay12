@@ -1,6 +1,6 @@
 // Psionics
 /datum/addiction/psionics
-	name = "psionics"
+	name = "Psionics"
 	withdrawal_stage_messages = list("My mind aches.", "My mind wants more power...", "My head will explode! I need more power!")
 
 /datum/addiction/psionics/WithdrawalStage1Process(mob/living/carbon/victim, delta_time)

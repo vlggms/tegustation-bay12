@@ -1,6 +1,6 @@
 /// Opiates
 /datum/addiction/opiate
-	name = "opiate"
+	name = "Opiates"
 	withdrawal_stage_messages = list("I feel aches in my bodies..", "I need some pain relief...", "It aches all over...I need some opiates!")
 
 /datum/addiction/opiate/WithdrawalStage1Process(mob/living/carbon/victim, delta_time)

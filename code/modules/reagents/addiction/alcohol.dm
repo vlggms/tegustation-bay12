@@ -1,6 +1,6 @@
 /// Alcohol
 /datum/addiction/alcohol
-	name = "alcohol"
+	name = "Alcohol"
 	withdrawal_stage_messages = list("I could use a drink...", "Maybe the bar is still open?..", "God I need a drink!")
 
 /datum/addiction/alcohol/WithdrawalStage1Process(mob/living/carbon/victim, delta_time)
