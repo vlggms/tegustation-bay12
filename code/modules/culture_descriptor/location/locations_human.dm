@@ -129,7 +129,7 @@
 	capital = "Ameranth"
 	distance = "22 light years"
 	economic_power = 1.2
-	ruling_body = "Terran Government"
+	ruling_body = FACTION_TERRAGOV
 	secondary_langs = list(LANGUAGE_SPACER)
 
 /decl/cultural_info/location/human/new_earth
@@ -141,7 +141,7 @@
 	capital = "Liabon"
 	distance = "25 light years"
 	economic_power = 1.1
-	ruling_body = "Terran Government"
+	ruling_body = FACTION_TERRAGOV
 	secondary_langs = list(LANGUAGE_SPACER)
 
 /decl/cultural_info/location/human/tersten
@@ -256,3 +256,16 @@
 	capital = "Labortown"
 	economic_power = 0.8
 	ruling_body = "Magnitka"
+
+/decl/cultural_info/location/human/taur
+	name = HOME_SYSTEM_TAUR
+	distance = "64 light years"
+	description = "Taur is an independent planet within Independent Space Confederation in Aontacht star system. It is the only habitable planet within its system. \
+	Taur is a lush planet with cold and rainy climate, focused on development of new technologies and heavy weaponry. \
+	The history of the planet, and Aontacht system as a whole, is nearly a legend within the ISC; Being the founder and first member of the confederation, \
+	it was governor of Aontacht star system that pushed for creating of then a temporary military alliance of independent states, which then became the confederation. \
+	Relying heavily on what was employed during Imperial era, the government of Taur is composed of governor and the senate, both being chosen by the citizens of the star system, \
+	though it is widely known that those elections may be less than perfect, with military playing large role in the political life of the planet."
+	capital = "Saoradh"
+	economic_power = 1.3
+	ruling_body = FACTION_ISC
