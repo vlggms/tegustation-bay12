@@ -3,6 +3,8 @@
 /datum/addiction/gottheit
 	name = "gottheit"
 	withdrawal_stage_messages = list("I need to feel it again...", "The gottheit... The divine essense... I NEED IT NOW!!", "I AM ABOUT TO DIE, I NEED GOTTHEIT!!!")
+	// Might as well make sure you don't die if you have enough of it
+	addiction_relief_treshold = 0.1
 
 /datum/addiction/gottheit/WithdrawalStage1Process(mob/living/carbon/victim, delta_time)
 	. = ..()

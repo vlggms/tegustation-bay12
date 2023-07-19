@@ -97,7 +97,7 @@ obj/item/clothing/mask/chewable/Destroy()
 	type_butt = /obj/item/trash/cigbutt/spitgum
 /obj/item/clothing/mask/chewable/tobacco/nico/New()
 	..()
-	reagents.add_reagent(/datum/reagent/medicine/fluff/nicotine, 2)
+	reagents.add_reagent(/datum/reagent/nicotine, 2)
 	color = reagents.get_color()
 
 /obj/item/clothing/mask/chewable/candy

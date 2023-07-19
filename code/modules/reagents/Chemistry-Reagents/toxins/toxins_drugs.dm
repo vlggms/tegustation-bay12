@@ -31,7 +31,36 @@
 			M.emote(pick("twitch", "drool", "moan", "giggle"))
 	M.add_chemical_effect(CE_PULSE, -1)
 
+/datum/reagent/nicotine
+	name = "Nicotine"
+	description = "A sickly yellow liquid sourced from tobacco leaves. Stimulates and relaxes the mind and body."
+	taste_description = "peppery bitterness"
+	color = "#efebaa"
+	overdose = REAGENTS_OVERDOSE / 6
+	data = 0
+	value = 2
+	addiction_types = list(/datum/addiction/nicotine = 10)
 
+/datum/reagent/nicotine/affect_blood(mob/living/carbon/M, alien, removed)
+	if (alien == IS_DIONA)
+		return
+	if (prob(volume * 20))
+		M.add_chemical_effect(CE_PULSE, 1)
+	if (volume <= 0.02 && M.chem_doses[type] >= 0.05 && world.time > data + ANTIDEPRESSANT_MESSAGE_DELAY * 0.3)
+		data = world.time
+		to_chat(M, SPAN_WARNING("You feel antsy, your concentration wavers..."))
+	else
+		if (world.time > data + ANTIDEPRESSANT_MESSAGE_DELAY * 0.3)
+			data = world.time
+			to_chat(M, SPAN_NOTICE("You feel invigorated and calm."))
+
+/datum/reagent/nicotine/overdose(mob/living/carbon/M, alien)
+	..()
+	M.add_chemical_effect(CE_PULSE, 2)
+	var/obj/item/organ/internal/lungs/L = M.internal_organs_by_name[BP_LUNGS]
+	if(istype(L) && !L.is_bruised(L))
+		var/lung_damage = min(0.2, L.min_broken_damage - L.damage)
+		L.take_general_damage(lung_damage)
 
 /datum/reagent/serotrotium
 	name = "Serotrotium"
