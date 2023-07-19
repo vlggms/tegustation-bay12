@@ -3,7 +3,7 @@
 	description = "The Sol Central Government, commonly referred to as SolGov or the SCG, is a federal republic \
 	composed of numerous human member states spanning many systems.\
 	Based in the Sol System and with most seats of Government on Olympus, Mars,\
-	the SCG governs the majority of human space. Currently engaged in a cold war with the Confederation of Gilgamesh \
+	the SCG governs the majority of human space. Currently engaged in a cold civil war with the Terran Government and Independent Space Confederation. \
 	Its primary governing bodies are the Assemblies which are led by an Assembly-elected secretary general. \
 	Member states have a great degree of freedom in their actions, though the SCG manages sapient rights, \
 	domestic security, economic policy, and diplomacy for humanity as a whole. The SCG's population is diverse \
@@ -45,6 +45,16 @@
 	and each would rephrase 'progress of humanity' as they see fit, ranging from a more peaceful approach of co-existence with non-hostile alien \
 	civilizations to much more extreme sides of eternal war with everyone who isn't a part of TerraGov. Despite this, the senate is considered a stable \
 	entity due to every faction being somewhat restricted by the constitution. "
+	subversive_potential = 25
+
+/decl/cultural_info/faction/isc
+	name = FACTION_ISC
+	description = "The Independent Space Confederation, commonly referred to as ISC, is the third most powerful human union in the universe. \
+	ISC is not a united government, as the name implies, but rather a union of multiple independent states with a common goal of protecting \
+	their independency from TerraGov and SolGov. Formed from a temporary military alliance during civil war age, the confederation \
+	is a house to diverse caste of various planets and systems, ranging from most humane democracies all the way to militaristic dictatorships. \
+	When people mention the Confederation as united force, it is more of than than not about its joint command. \
+	Head quarters are located on lush planet Taur in Aontacht system, its founder and first member state."
 	subversive_potential = 50
 
 /decl/cultural_info/faction/remote
