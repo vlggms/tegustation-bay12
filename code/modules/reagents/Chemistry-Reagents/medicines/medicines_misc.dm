@@ -34,7 +34,7 @@
 			if(istype(R, /datum/reagent/ethanol))
 				M.chem_doses[R.type] = max(M.chem_doses[R.type] - removed * 5, 0)
 	// Helps with alcohol addiction slightly
-	M.RemoveAddictionPoints(/datum/addiction/alcohol, removed * 3)
+	M.RemoveAddictionPoints(/datum/addiction/alcohol, removed * 5)
 
 /datum/reagent/medicine/naltrexone
 	name = "Naltrexone"
@@ -46,7 +46,7 @@
 	var/list/affected_addictions = list(
 		/datum/addiction/alcohol = 3,
 		/datum/addiction/opiate = 3,
-		/datum/addiction/hallucinogens = 2,
+		/datum/addiction/hallucinogens = 3,
 		)
 
 /datum/reagent/medicine/naltrexone/affect_blood(mob/living/carbon/M, alien, removed)
@@ -61,7 +61,7 @@
 	// With liver damage, it will worsen it
 	var/obj/item/organ/internal/liver/L = M.internal_organs_by_name[BP_LIVER]
 	if(istype(L) && L.damage >= 5)
-		L.take_general_damage(min(1, L.damage * 0.02))
+		L.take_general_damage(min(2, L.damage * 0.1))
 	// At small doses, acts as minor painkiller
 	if(volume <= 5)
 		M.add_chemical_effect(CE_PAINKILLER, 10)
@@ -92,7 +92,7 @@
 	// Slightly helps fix blurry vision
 	M.eye_blurry = max(M.eye_blurry - 2, 0)
 	// Helps with nicotine addiction
-	M.RemoveAddictionPoints(/datum/addiction/nicotine, removed * 4)
+	M.RemoveAddictionPoints(/datum/addiction/nicotine, removed * 5)
 
 /datum/reagent/medicine/imidazoline
 	name = "Imidazoline"
