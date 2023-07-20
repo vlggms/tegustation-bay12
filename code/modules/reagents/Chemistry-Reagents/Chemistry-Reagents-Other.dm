@@ -778,7 +778,7 @@
 			if(E.status & ORGAN_BROKEN)
 				E.status &= ~ORGAN_BROKEN
 			if(E.status & ORGAN_DEAD)
-				E.status &= ~ORGAN_DEAD
+				E.revive()
 
 	// Remove all diseases
 	for(var/datum/disease/D in M.diseases)
