@@ -764,6 +764,8 @@
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		for(var/obj/item/organ/internal/I in H.internal_organs)
+			if((I.status & ORGAN_DEAD) && prob(25))
+				I.revive()
 			if(!BP_IS_ROBOTIC(I))
 				I.heal_damage(20 * removed)
 		for(var/obj/item/organ/external/E in H.organs)
