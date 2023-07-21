@@ -129,7 +129,7 @@
 		var/datum/disease/advance/A = SSdisease.archive_diseases[id]
 		if(!A || !A.mutable)
 			return
-		var/new_name = sanitize(html_encode(input(usr,"Name:","Enter new name","")), allow_numbers = TRUE)
+		var/new_name = sanitize(html_encode(input(usr,"Name:","Enter new name","")), 64)
 		if(!new_name)
 			return
 		A.AssignName(new_name)
