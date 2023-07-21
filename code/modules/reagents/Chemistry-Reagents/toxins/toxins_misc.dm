@@ -182,6 +182,6 @@
 	name = "Formaldehyde"
 	description = "Formaldehyde, on its own, is a fairly weak toxin. It contains trace amounts of Histamine, very rarely making it decay into Histamine."
 	reagent_state = LIQUID
-	color = "#B4004B"
+	color = "#b4004b"
 	metabolism = 0.5 * REM
 	strength = 1

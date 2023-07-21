@@ -60,11 +60,20 @@
 			B.blood_DNA["UNKNOWN DNA STRUCTURE"] = "X*"
 
 /datum/reagent/blood/affect_ingest(mob/living/carbon/M, alien, removed)
-
 	if(M.chem_doses[type] > 5)
 		M.adjustToxLoss(removed)
 	if(M.chem_doses[type] > 15)
 		M.adjustToxLoss(removed)
+
+	if(data && data["viruses"])
+		for(var/thing in data["viruses"])
+			var/datum/disease/strain = thing
+
+			if((strain.spread_flags & DISEASE_SPREAD_SPECIAL) || (strain.spread_flags & DISEASE_SPREAD_NON_CONTAGIOUS))
+				continue
+
+			if(strain.spread_flags & DISEASE_SPREAD_CONTACT_FLUIDS)
+				M.ContactContractDisease(strain)
 
 /datum/reagent/blood/affect_touch(mob/living/carbon/M, alien, removed)
 	if(data && data["viruses"])
