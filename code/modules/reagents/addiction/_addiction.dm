@@ -10,6 +10,8 @@
 	var/list/withdrawal_stage_messages = list()
 	/// Rates at which you lose addiction (in units/second) if you are not on the drug at that time per stage
 	var/addiction_loss_per_stage = list(0.5, 0.5, 1, 1.5)
+	/// Amount of drugs you need in your system to be satisfied
+	var/addiction_relief_treshold = MIN_ADDICTION_REAGENT_AMOUNT
 
 /// Called when you gain addiction points somehow. Takes a carbon mob as argument and sees if you gained the addiction
 /datum/addiction/proc/OnGainAddictionPoints(mob/living/carbon/victim)
@@ -42,9 +44,10 @@
 
 /datum/addiction/proc/ProcessAddiction(mob/living/carbon/victim, delta_time = 2)
 	var/current_addiction_cycle = LAZYACCESS(victim.active_addictions, type) // If this is null, we're not addicted
-	for(var/datum/reagent/possible_drug as anything in victim.reagents.reagent_list) // Go through the drugs in our system
-		for(var/addiction in possible_drug.addiction_types) // And check all of their addiction types
-			if(addiction == type && possible_drug.volume >= MIN_ADDICTION_REAGENT_AMOUNT) // If one of them matches, and we have enough of it in our system, we're not losing addiction
+	for(var/drug_type in victim.chem_doses) // Go through the drugs in our system
+		var/datum/reagent/R = GLOB.chemical_reagents_list[drug_type]
+		for(var/addiction in R.addiction_types) // And check all of their addiction types
+			if(addiction == type && victim.chem_doses[drug_type] >= addiction_relief_treshold) // If one of them matches, and we have enough of it in our system, we're not losing addiction
 				if(current_addiction_cycle)
 					LAZYSET(victim.active_addictions, type, 1) // Keeps withdrawal inactive for a while
 				return

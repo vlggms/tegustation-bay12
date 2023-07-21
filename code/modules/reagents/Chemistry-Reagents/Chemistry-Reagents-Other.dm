@@ -728,20 +728,24 @@
 	reagent_state = LIQUID
 	color = COLOR_YELLOW
 	value = 50
-	addiction_types = list(/datum/addiction/gottheit = 200) // Near instant addiction
+	metabolism = 0.1
+	addiction_types = list(/datum/addiction/gottheit = 600) // Near instant addiction
 
-/datum/reagent/gottheit/affect_blood(mob/living/carbon/M, alien, removed)
+/datum/reagent/gottheit/affect_blood(mob/living/carbon/human/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 
 	// Heal all conventional damage types
 	M.adjustCloneLoss(-40 * removed)
-	M.adjustOxyLoss(-10 * removed)
-	M.heal_organ_damage(40 * removed, 40 * removed)
-	M.adjustToxLoss(-40 * removed)
+	M.adjustOxyLoss(-40 * removed)
+	M.heal_organ_damage(80 * removed, 80 * removed)
+	M.adjustToxLoss(-80 * removed)
+
+	// Restore blood
+	M.regenerate_blood(8 * removed)
 
 	// Some useful chem effects, including painkilling
-	M.add_chemical_effect(CE_PAINKILLER, 200)
+	M.add_chemical_effect(CE_PAINKILLER, 400)
 	M.add_chemical_effect(CE_SPEEDBOOST, 1)
 
 	// Reduce bad effects
@@ -760,6 +764,8 @@
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		for(var/obj/item/organ/internal/I in H.internal_organs)
+			if((I.status & ORGAN_DEAD) && prob(25))
+				I.revive()
 			if(!BP_IS_ROBOTIC(I))
 				I.heal_damage(20 * removed)
 		for(var/obj/item/organ/external/E in H.organs)
@@ -772,7 +778,7 @@
 			if(E.status & ORGAN_BROKEN)
 				E.status &= ~ORGAN_BROKEN
 			if(E.status & ORGAN_DEAD)
-				E.status &= ~ORGAN_DEAD
+				E.revive()
 
 	// Remove all diseases
 	for(var/datum/disease/D in M.diseases)

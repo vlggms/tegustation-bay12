@@ -333,6 +333,18 @@
 	required_reagents = list(/datum/reagent/acetone = 1, /datum/reagent/medicine/dylovene = 1, /datum/reagent/carbon = 1)
 	result_amount = 3
 
+/datum/chemical_reaction/naltrexone
+	name = "Naltrexone"
+	result = /datum/reagent/medicine/naltrexone
+	required_reagents = list(/datum/reagent/medicine/fluff/methylphenidate = 1, /datum/reagent/sugar = 1, /datum/reagent/carbon = 1)
+	result_amount = 3
+
+/datum/chemical_reaction/varenicline
+	name = "Varenicline"
+	result = /datum/reagent/medicine/varenicline
+	required_reagents = list(/datum/reagent/acetone = 1, /datum/reagent/phosphorus = 1, /datum/reagent/sodium = 1)
+	result_amount = 3
+
 /datum/chemical_reaction/soporific
 	name = "Soporific"
 	result = /datum/reagent/soporific

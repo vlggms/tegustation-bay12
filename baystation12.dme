@@ -2904,6 +2904,7 @@
 #include "code\modules\reagents\addiction\alcohol.dm"
 #include "code\modules\reagents\addiction\gottheit.dm"
 #include "code\modules\reagents\addiction\hallucinogens.dm"
+#include "code\modules\reagents\addiction\nicotine.dm"
 #include "code\modules\reagents\addiction\opiate.dm"
 #include "code\modules\reagents\addiction\psionics.dm"
 #include "code\modules\reagents\Chemistry-Reagents\Chemistry-Reagents-Core.dm"
