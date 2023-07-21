@@ -8,7 +8,7 @@
 
 /datum/reagent/unstable_mutagen/mutagen_virus_food
 	name = "mutagenic agar"
-	color = "#a3C00f" // rgb: 163,192,15
+	color = "#a3c00f" // rgb: 163,192,15
 	taste_description = "sourness"
 
 /datum/reagent/unstable_mutagen/mutagen_virus_food/sugar
@@ -24,11 +24,11 @@
 
 /datum/reagent/toxin/phoron/phoron_virus_food/weak
 	name = "weakened virus phoron"
-	color = "#a28Ca5" // rgb: 206,195,198
+	color = "#a28ca5" // rgb: 206,195,198
 
 /datum/reagent/medicine/stimulant/synaptizine/synaptizine_virus_food
 	name = "virus rations"
-	color = "#D18aa5" // rgb: 209,138,165
+	color = "#d18aa5" // rgb: 209,138,165
 	taste_description = "bitterness"
 
 /datum/reagent/uranium/uranium_virus_food
@@ -38,7 +38,7 @@
 
 /datum/reagent/uranium/uranium_virus_food/unstable
 	name = "unstable uranium gel"
-	color = "#2FF2cb" // rgb: 47,242,203
+	color = "#2ff2cb" // rgb: 47,242,203
 
 /datum/reagent/uranium/uranium_virus_food/stable
 	name = "stable uranium gel"

@@ -60,6 +60,10 @@
 	else
 		return ..()
 
+/obj/machinery/computer/pandemic/interface_interact(user)
+	interact(user)
+	return TRUE
+
 /obj/machinery/computer/pandemic/interact(mob/user)
 	user.set_machine(src)
 	if(!istype(beaker))
@@ -97,6 +101,11 @@
 			dat += "<span style='color: #FF7777>\The [src] cannot detect any visible diseases.</span>"
 	else
 		dat += "<span style='color: #FF0000>The beaker does not contain blood!</span>"
+	var/datum/browser/popup = new(user, "pandemic_computer", "Pan.D.E.M.I.C. 2200 console", 400, 600)
+	popup.set_content(dat)
+	popup.open()
+	onclose(user, "pandemic_computer")
+	return
 
 /obj/machinery/computer/pandemic/OnTopic(href, href_list)
 	if(href_list["choose_symptom"])
