@@ -25,8 +25,8 @@ Bonus
 	level = 6
 	severity = 5
 	base_message_chance = 50
-	symptom_delay_min = 15
-	symptom_delay_max = 60
+	symptom_delay_min = 20
+	symptom_delay_max = 30
 	threshold_descs = list(
 		"Resistance 12" = "Symptom's activation delay decreases.",
 		"Stage Speed 16" = "The amount of damage done by necrosis increases drastically.",
@@ -36,7 +36,8 @@ Bonus
 	if(!..())
 		return
 	if(A.properties["resistance"] >= 12) // Faster activation
-		symptom_delay_max = 40
+		symptom_delay_min = 10
+		symptom_delay_max = 20
 	if(A.properties["stage_rate"] >= 16) // More damage
 		power = 2
 

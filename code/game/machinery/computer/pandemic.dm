@@ -76,15 +76,25 @@
 		if(LAZYLEN(disease_data))
 			for(var/list/D in disease_data)
 				dat += "<b>Disease #[D["index"]]: [D["name"]]</b><br>"
+				if(D["can_rename"])
+					dat += "<A href='byond://?src=[REF(src)];rename_disease=[D["index"]]'><b>[D["name"]]</b></a><br>"
 				dat += "[D["desc"]]"
 				dat += "Spread: [D["spread"]]<br>"
 				dat += "Cure: [D["cure"]]<br>"
-				dat += "<hr>"
+
 				if(D["is_adv"])
+					// Current stats
+					dat += "<hr>"
+					dat += "- Stealth: [D["stealth"]]<br>"
+					dat += "- Resistance: [D["resistance"]]<br>"
+					dat += "- Stage Speed: [D["stage_speed"]]<br>"
+					dat += "- Transmission: [D["transmission"]]<br>"
+					dat += "<hr>"
+					// Symptoms
 					dat += "Symptoms:<br>"
 					for(var/list/S in D["symptoms"])
 						if(S["name"] == selected_symptom)
-							dat += "<b>[S["name"]][S["neutered"] ? " (NEUTERED)" : ""]</b><br>"
+							dat += "<A href='byond://?src=[REF(src)];choose_symptom=none'><b>[S["name"]]</b></a><br>"
 							dat += "[S["desc"]]<br>"
 							dat += "- Level: [S["level"]]<br>"
 							dat += "- Stealth: [S["stealth"]]<br>"
@@ -95,8 +105,10 @@
 								dat += "Thresholds:<br>"
 								for(var/threshold in S["threshold_desc"])
 									dat += "[threshold] - [S["threshold_desc"][threshold]]<br>"
-
-						dat += "<A href='byond://?src=[REF(src)];choose_symptom=[S["name"]]'>[S["name"]]</a>[S["neutered"] ? " (NEUTERED)" : ""]<br>"
+						else
+							dat += "<A href='byond://?src=[REF(src)];choose_symptom=[S["name"]]'>[S["name"]]</a><br>"
+				else
+					dat += "<hr>"
 		else
 			dat += "<span style='color: #FF7777>\The [src] cannot detect any visible diseases.</span>"
 	else
@@ -110,6 +122,17 @@
 /obj/machinery/computer/pandemic/OnTopic(href, href_list)
 	if(href_list["choose_symptom"])
 		selected_symptom = href_list["choose_symptom"]
+		updateDialog()
+		return TOPIC_HANDLED
+	if(href_list["rename_disease"])
+		var/id = GetVirusIdByIndex(text2num(href_list["rename_disease"]))
+		var/datum/disease/advance/A = SSdisease.archive_diseases[id]
+		if(!A || !A.mutable)
+			return
+		var/new_name = sanitize(html_encode(input(usr,"Name:","Enter new name","")), allow_numbers = TRUE)
+		if(!new_name)
+			return
+		A.AssignName(new_name)
 		updateDialog()
 		return TOPIC_HANDLED
 
