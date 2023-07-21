@@ -2977,6 +2977,7 @@
 #include "code\modules\reagents\reagent_containers\food\snacks\sweets.dm"
 #include "code\modules\reagents\reagent_containers\glass\bottle.dm"
 #include "code\modules\reagents\reagent_containers\glass\bottle\robot.dm"
+#include "code\modules\reagents\recipes\virology.dm"
 #include "code\modules\recycling\conveyor2.dm"
 #include "code\modules\recycling\disposal-construction.dm"
 #include "code\modules\recycling\disposal.dm"
