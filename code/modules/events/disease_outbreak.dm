@@ -23,6 +23,12 @@
 		else
 			virus_type = pick(/datum/disease/advance/flu, /datum/disease/advance/cold)
 
+	var/datum/disease/D
+	if(!advanced_virus)
+		D = new virus_type()
+	else
+		D = new /datum/disease/advance/random(max_severity, max_severity)
+
 	for(var/mob/living/carbon/human/H in shuffle(SSmobs.mob_list))
 		var/turf/T = get_turf(H)
 		if(!T)
@@ -36,12 +42,9 @@
 		// don't infect someone that already has a disease
 		if(LAZYLEN(H.diseases))
 			continue
+		if(!H.CanContractDisease(D))
+			continue
 
-		var/datum/disease/D
-		if(!advanced_virus)
-			D = new virus_type()
-		else
-			D = new /datum/disease/advance/random(max_severity, max_severity)
 		H.ForceContractDisease(D, FALSE, TRUE)
 
 		if(advanced_virus)
@@ -51,4 +54,7 @@
 				name_symptoms += S.name
 			message_admins("An event has triggered a random advanced virus outbreak on [key_name_admin(H)]! It has these symptoms: [english_list(name_symptoms)]")
 			log_game("An event has triggered a random advanced virus outbreak on [key_name(H)]! It has these symptoms: [english_list(name_symptoms)]")
+		else
+			message_admins("An event has triggered a virus outbreak on [key_name_admin(H)]! Disease type is: [D.type]")
+			log_game("An event has triggered a virus outbreak on [key_name(H)]! Disease type is: [D.type]")
 		break
