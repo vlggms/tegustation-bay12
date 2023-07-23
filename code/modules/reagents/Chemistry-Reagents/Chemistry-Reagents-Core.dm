@@ -2,6 +2,7 @@
 	data = new/list(
 		"donor" = null,
 		"viruses" = null,
+		"resistances"=null,
 		"species" = SPECIES_HUMAN,
 		"blood_DNA" = null,
 		"blood_type" = null,
