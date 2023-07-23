@@ -6,7 +6,13 @@
 	return FALSE
 
 /mob/living/proc/CanContractDisease(datum/disease/D)
+	if(status_flags & GODMODE)
+		return FALSE
+
 	if(stat == DEAD && !D.process_dead)
+		return FALSE
+
+	if(isSynthetic())
 		return FALSE
 
 	if(D.GetDiseaseID() in disease_resistances)
