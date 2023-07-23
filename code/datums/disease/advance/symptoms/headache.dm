@@ -57,6 +57,5 @@ BONUS
 	if(power >= 2 && A.stage >= 4)
 		M.custom_pain(SPAN_DANGER(pick("Your head hurts a lot.", "Your head pounds incessantly.")), 25, affecting = my_head)
 	if(power >= 3 && A.stage >= 5)
-		to_chat(M, "<span class='userdanger'>[]</span>")
 		M.custom_pain(SPAN_USERDANGER(pick("Your head hurts!", "You feel a burning knife inside your brain!", "A wave of pain fills your head!")), 50, affecting = my_head)
 		M.Stun(35)

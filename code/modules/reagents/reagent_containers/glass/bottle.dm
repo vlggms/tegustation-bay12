@@ -381,7 +381,7 @@
 	var/max_severity = 2
 
 /obj/item/reagent_containers/glass/bottle/virus_random/SpawnDisease()
-	return new spawned_disease(max_severity, max_severity)
+	return new spawned_disease(max_symptoms, max_severity)
 
 /obj/item/reagent_containers/glass/bottle/virus_random/medium
 	max_severity = 6

@@ -25,8 +25,8 @@ Bonus
 	level = 2
 	severity = 2
 	base_message_chance = 20
-	symptom_delay_min = 10
-	symptom_delay_max = 30
+	symptom_delay_min = 5
+	symptom_delay_max = 10
 	var/unsafe = FALSE //over the heat threshold
 	threshold_descs = list(
 		"Resistance 5" = "Increases fever intensity, fever can overheat and harm the host.",
@@ -46,10 +46,11 @@ Bonus
 	if(!..())
 		return
 	var/mob/living/carbon/human/H = A.affected_mob
-	if(!unsafe || A.stage < 4)
-		to_chat(H, SPAN_WARNING("[pick("You feel hot.", "You feel like you're burning.")]"))
-	else
-		to_chat(H, SPAN_USERDANGER("[pick("You feel too hot.", "You feel like your blood is boiling.")]"))
+	if(prob(base_message_chance))
+		if(!unsafe || A.stage < 4)
+			to_chat(H, SPAN_WARNING("[pick("You feel hot.", "You feel like you're burning.")]"))
+		else
+			to_chat(H, SPAN_USERDANGER("[pick("You feel too hot.", "You feel like your blood is boiling.")]"))
 	SetBodyTemp(H, A)
 
 /**
@@ -64,4 +65,4 @@ Bonus
 	var/change_limit = H.species.heat_level_2
 	if(unsafe) // when unsafe the fever can go to the heat_level_3
 		change_limit += H.species.heat_level_3
-	H.bodytemperature = min(H.bodytemperature + 5 * power, change_limit)
+	H.bodytemperature = min(H.bodytemperature + 15 * power, change_limit)
