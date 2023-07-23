@@ -111,9 +111,9 @@
 					dat += "<hr>"
 		var/list/vaccine_data = GetResistanceData(B)
 		if(LAZYLEN(vaccine_data))
-			dat += "Antibodies detected for the following diseases:"
+			dat += "Antibodies detected for the following diseases:<br>"
 			for(var/V in vaccine_data)
-				dat += "- <A href='byond://?src=[REF(src)];create_vaccine_bottle=[V["index"]]'>[V["name"]]</a><br>"
+				dat += "- <A href='byond://?src=[REF(src)];create_vaccine_bottle=[V["id"]]'>[V["name"]]</a><br>"
 		if(!LAZYLEN(disease_data) && !LAZYLEN(vaccine_data))
 			to_chat(user, SPAN_WARNING("\The [src] cannot detect any visible diseases or antibodies."))
 	else
