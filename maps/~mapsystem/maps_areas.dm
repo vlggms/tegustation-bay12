@@ -1,4 +1,6 @@
 /datum/map
+	/// Used by is_maint_area() proc
+	var/maintenance_area = /area/maintenance
 	/*
 		Areas where crew members are considered to have safely left the station.
 		Defaults to all area types on the admin levels if left empty

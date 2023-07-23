@@ -1,4 +1,5 @@
 /datum/map/intrepid
+	maintenance_area = /area/intrepid/misc/maint
 
 	base_floor_type = /turf/simulated/floor/reinforced/airless
 	base_floor_area = /area/space

@@ -107,7 +107,7 @@
 	. = !is_area_with_turf(A)
 
 /proc/is_maint_area(var/area/A)
-	. = istype(A,/area/maintenance)
+	. = istype(A,GLOB.using_map.maintenance_area)
 
 /proc/is_not_maint_area(var/area/A)
 	. = !is_maint_area(A)
