@@ -35,7 +35,7 @@
 /obj/item/reagent_containers/New()
 	create_reagents(volume)
 	if(spawned_disease)
-		var/datum/disease/F = new spawned_disease()
+		var/datum/disease/F = SpawnDisease()
 		var/list/data = list("viruses"= list(F))
 		reagents.add_reagent(/datum/reagent/blood, disease_amount, data)
 	..()
@@ -252,3 +252,7 @@
 		for(var/datum/reagent/R in reagents.reagent_list)
 			R.ex_act(src, severity)
 	..()
+
+// In case we need to somehow modify what exactly happens to it
+/obj/item/reagent_containers/proc/SpawnDisease()
+	return new spawned_disease()
