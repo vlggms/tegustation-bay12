@@ -110,9 +110,9 @@
 				else
 					dat += "<hr>"
 		else
-			dat += "<span style='color: #FF7777>\The [src] cannot detect any visible diseases.</span>"
+			to_chat(user, SPAN_WARNING("\The [src] cannot detect any visible diseases."))
 	else
-		dat += "<span style='color: #FF0000>The beaker does not contain blood!</span>"
+		to_chat(user, SPAN_WARNING("\The beaker does not contain blood!"))
 	var/datum/browser/popup = new(user, "pandemic_computer", "Pan.D.E.M.I.C. 2200 console", 400, 600)
 	popup.set_content(dat)
 	popup.open()
