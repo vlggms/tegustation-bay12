@@ -18,10 +18,14 @@
 		advanced_virus = TRUE
 
 	if(!virus_type && !advanced_virus)
-		if(severity >= EVENT_LEVEL_MAJOR) // Somewhat dangerous non-advanced diseases
-			virus_type = pick(/datum/disease/cold)
-		else
-			virus_type = pick(/datum/disease/advance/flu, /datum/disease/advance/cold)
+		switch(severity)
+			if(EVENT_LEVEL_MAJOR) // TODO: Somewhat dangerous non-advanced diseases
+				// virus_type = pick()
+				advanced_virus = TRUE
+			if(EVENT_LEVEL_MODERATE)
+				virus_type = pick(/datum/disease/cold)
+			if(EVENT_LEVEL_MUNDANE)
+				virus_type = pick(/datum/disease/advance/flu, /datum/disease/advance/cold)
 
 	var/datum/disease/D
 	if(!advanced_virus)

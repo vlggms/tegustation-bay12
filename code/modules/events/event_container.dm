@@ -149,7 +149,8 @@ var/global/list/severity_to_string = list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Disposals Explosion",			/datum/event/disposals_explosion,	20,		list(ASSIGNMENT_ENGINEER = 40)),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Brain Expansion",				/datum/event/brain_expansion,		20,		list(ASSIGNMENT_SCIENTIST = 20)),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Mail Delivery",					/datum/event/mail,					0,		list(ASSIGNMENT_ANY = 5), 1),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Whale Migration",				/datum/event/whale_migration,		10)
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Whale Migration",				/datum/event/whale_migration,		10),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Disease Outbreak",				/datum/event/disease_outbreak,		40,		list(ASSIGNMENT_MEDICAL = 20, ASSIGNMENT_SCIENCE = 10)),
 	)
 
 /datum/event_container/moderate

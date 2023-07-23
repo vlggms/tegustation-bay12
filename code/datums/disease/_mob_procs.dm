@@ -25,7 +25,7 @@
 
 /mob/living/carbon/human/CanSpreadAirborneDisease()
 	return !((head && ((head.item_flags & ITEM_FLAG_AIRTIGHT) || (head.body_parts_covered & FACE))) || \
-		(wear_mask && ((wear_mask.item_flags & ITEM_FLAG_AIRTIGHT) || (wear_mask.body_parts_covered & FACE))))
+			(wear_mask && ((wear_mask.item_flags & ITEM_FLAG_AIRTIGHT) || (wear_mask.body_parts_covered & FACE))))
 
 /mob/living/proc/ContactContractDisease(datum/disease/D)
 	if(!CanContractDisease(D))
@@ -95,7 +95,7 @@
 		D.TryInfect(src)
 
 /mob/living/proc/AirborneContractDisease(datum/disease/D, force_spread)
-	if( ((D.spread_flags & DISEASE_SPREAD_AIRBORNE) || force_spread) && prob((50*D.permeability_mod) - 1))
+	if(((D.spread_flags & DISEASE_SPREAD_AIRBORNE) || force_spread) && CanSpreadAirborneDisease() && prob((50*D.permeability_mod) - 1))
 		ForceContractDisease(D)
 
 //Proc to use when you 100% want to try to infect someone (ignoreing protective clothing and such), as long as they aren't immune
