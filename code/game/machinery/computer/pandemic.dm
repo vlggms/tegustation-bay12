@@ -9,7 +9,7 @@
 	machine_name = "PanD.E.M.I.C 2200 console"
 	machine_desc = "PanD.E.M.I.C 2200 console is used to display ."
 
-	var/wait
+	var/vaccine_cooldown
 	var/selected_symptom
 	var/obj/item/reagent_containers/beaker
 
@@ -109,8 +109,13 @@
 							dat += "<A href='byond://?src=[REF(src)];choose_symptom=[S["name"]]'>[S["name"]]</a><br>"
 				else
 					dat += "<hr>"
-		else
-			to_chat(user, SPAN_WARNING("\The [src] cannot detect any visible diseases."))
+		var/list/vaccine_data = GetResistanceData(B)
+		if(LAZYLEN(vaccine_data))
+			dat += "Antibodies detected for the following diseases:"
+			for(var/V in vaccine_data)
+				dat += "- <A href='byond://?src=[REF(src)];create_vaccine_bottle=[V["index"]]'>[V["name"]]</a><br>"
+		if(!LAZYLEN(disease_data) && !LAZYLEN(vaccine_data))
+			to_chat(user, SPAN_WARNING("\The [src] cannot detect any visible diseases or antibodies."))
 	else
 		to_chat(user, SPAN_WARNING("\The beaker does not contain blood!"))
 	var/datum/browser/popup = new(user, "pandemic_computer", "Pan.D.E.M.I.C. 2200 console", 400, 600)
@@ -134,6 +139,18 @@
 			return
 		A.AssignName(new_name)
 		updateDialog()
+		return TOPIC_HANDLED
+	if(href_list["create_vaccine_bottle"])
+		if(vaccine_cooldown > world.time)
+			to_chat(usr, SPAN_WARNING("The vaccine bottle cannot be manufactered yet. Try again later."))
+			return TOPIC_REFRESH
+		var/id = href_list["create_vaccine_bottle"]
+		var/datum/disease/D = SSdisease.archive_diseases[id]
+		var/obj/item/reagent_containers/glass/bottle/B = new(get_turf(src))
+		B.name = "[D.name] vaccine bottle"
+		B.reagents.add_reagent(/datum/reagent/vaccine, 15, list(id))
+		vaccine_cooldown = world.time + 30 SECONDS
+		playsound(src, 'sound/machines/ping.ogg', 30, TRUE)
 		return TOPIC_HANDLED
 
 /obj/machinery/computer/pandemic/proc/GetByIndex(thing, index)
@@ -210,11 +227,6 @@
 			this["name"] = D.name
 
 		. += list(this)
-
-/obj/machinery/computer/pandemic/proc/ResetReplicatorCooldown()
-	wait = FALSE
-	update_icon()
-	playsound(src, 'sound/machines/ping.ogg', 30, TRUE)
 
 /obj/machinery/computer/pandemic/proc/EjectBeaker()
 	if(beaker)

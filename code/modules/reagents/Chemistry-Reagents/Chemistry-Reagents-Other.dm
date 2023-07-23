@@ -783,3 +783,24 @@
 	// Remove all diseases
 	for(var/datum/disease/D in M.diseases)
 		qdel(D)
+
+/datum/reagent/vaccine
+	//data must contain virus type
+	name = "Vaccine"
+	color = "#C81040" // rgb: 200, 16, 64
+	taste_description = "slime"
+
+/datum/reagent/vaccine/affect_blood(mob/living/carbon/M, alien, removed)
+	. = ..()
+	if(!islist(data))
+		return
+
+	for(var/thing in M.diseases)
+		var/datum/disease/infection = thing
+		if(infection.GetDiseaseID() in data)
+			infection.Cure()
+	LAZYOR(M.disease_resistances, data)
+
+/datum/reagent/vaccine/mix_data(list/newdata, newamount)
+	if(istype(newdata))
+		src.data |= newdata.Copy()
