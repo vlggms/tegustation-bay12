@@ -48,9 +48,9 @@ Bonus
 	var/mob/living/carbon/human/H = A.affected_mob
 	if(prob(base_message_chance))
 		if(!unsafe || A.stage < 4)
-			to_chat(H, SPAN_WARNING("[pick("You feel hot.", "You feel like you're burning.")]"))
+			to_chat(H, SPAN_WARNING(pick("You feel hot.", "You feel like you're burning.")))
 		else
-			to_chat(H, SPAN_USERDANGER("[pick("You feel too hot.", "You feel like your blood is boiling.")]"))
+			to_chat(H, SPAN_USERDANGER(pick("You feel too hot.", "You feel like your blood is boiling.")))
 	SetBodyTemp(H, A)
 
 /**
