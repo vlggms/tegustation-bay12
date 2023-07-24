@@ -24,7 +24,7 @@ Bonus
 	transmittable = 2
 	level = 2
 	severity = 2
-	base_message_chance = 20
+	base_message_chance = 10
 	symptom_delay_min = 5
 	symptom_delay_max = 10
 	var/unsafe = FALSE //over the heat threshold
@@ -65,4 +65,4 @@ Bonus
 	var/change_limit = H.species.heat_level_2
 	if(unsafe) // when unsafe the fever can go to the heat_level_3
 		change_limit += H.species.heat_level_3
-	H.bodytemperature = min(H.bodytemperature + 15 * power, change_limit)
+	H.bodytemperature = min(H.bodytemperature + 5 * power * A.stage, change_limit)

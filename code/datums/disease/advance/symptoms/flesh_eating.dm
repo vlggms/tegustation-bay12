@@ -54,6 +54,6 @@ Bonus
 			FleshEat(C, A)
 
 /datum/symptom/flesh_eating/proc/FleshEat(mob/living/carbon/C, datum/disease/advance/A)
-	var/get_damage = rand(10, 15) * power
+	var/get_damage = rand(10, 15) * power * max(1, A.stage - 3.5)
 	C.take_overall_damage(get_damage)
 	return TRUE

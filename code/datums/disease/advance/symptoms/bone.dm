@@ -22,7 +22,7 @@ Bonus
 	resistance = 2
 	stage_speed = -3
 	transmittable = -2
-	level = 5
+	level = 6
 	severity = 4
 	base_message_chance = 30
 	symptom_delay_min = 35
@@ -58,7 +58,7 @@ Bonus
 			for(var/obj/item/organ/external/E in H.organs)
 				if(E.status & ORGAN_BROKEN)
 					continue
-				if(!random_break && E.get_damage() < E.min_broken_damage)
+				if(!random_break && E.get_damage() < E.min_broken_damage * 0.5)
 					continue
 				available_organs += E
 			if(!LAZYLEN(available_organs))
