@@ -104,14 +104,13 @@
 							if(LAZYLEN(S["threshold_desc"]))
 								dat += "Thresholds:<br>"
 								for(var/threshold in S["threshold_desc"])
-									dat += "[threshold] - [S["threshold_desc"][threshold]]<br>"
+									dat += "- [threshold]: [S["threshold_desc"][threshold]]<br>"
 						else
 							dat += "<A href='byond://?src=[REF(src)];choose_symptom=[S["name"]]'>[S["name"]]</a><br>"
-				else
-					dat += "<hr>"
+				dat += "<hr>"
 		var/list/vaccine_data = GetResistanceData(B)
 		if(LAZYLEN(vaccine_data))
-			dat += "Antibodies detected for the following diseases:<br>"
+			dat += "<b>Antibodies detected for the following diseases:</b><br>"
 			for(var/V in vaccine_data)
 				dat += "- <A href='byond://?src=[REF(src)];create_vaccine_bottle=[V["id"]]'>[V["name"]]</a><br>"
 		if(!LAZYLEN(disease_data) && !LAZYLEN(vaccine_data))
