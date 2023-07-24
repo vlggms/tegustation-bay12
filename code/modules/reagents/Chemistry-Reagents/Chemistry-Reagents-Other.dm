@@ -787,7 +787,7 @@
 /datum/reagent/vaccine
 	//data must contain virus type
 	name = "Vaccine"
-	color = "#C81040" // rgb: 200, 16, 64
+	color = "#c81040" // rgb: 200, 16, 64
 	taste_description = "slime"
 
 /datum/reagent/vaccine/affect_blood(mob/living/carbon/M, alien, removed)
