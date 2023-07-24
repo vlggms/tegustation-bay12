@@ -12,7 +12,6 @@
 	var/passive_message = "" //random message to infected but not actively healing people
 	threshold_descs = list(
 		"Stage Speed 6" = "Doubles healing speed.",
-		"Stealth 4" = "Healing will no longer be visible to onlookers.",
 	)
 
 /datum/symptom/heal/Start(datum/disease/advance/A)
@@ -124,13 +123,13 @@
 	if(!M.getBruteLoss() && !M.getFireLoss())
 		return FALSE
 
-	if(M.fire_stacks < 0)
+	if(M.fire_stacks > 0)
 		M.adjust_fire_stacks(round(-1 / absorption_coeff))
 		. += power
-	if(M.reagents.has_reagent(/datum/reagent/water/holywater, needs_metabolizing = FALSE))
+	if(M.reagents.has_reagent(/datum/reagent/water/holywater, 0.5 * absorption_coeff))
 		M.reagents.remove_reagent(/datum/reagent/water/holywater, 0.5 * absorption_coeff)
 		. += power * 0.75
-	else if(M.reagents.has_reagent(/datum/reagent/water, needs_metabolizing = FALSE))
+	else if(M.reagents.has_reagent(/datum/reagent/water, 0.5 * absorption_coeff))
 		M.reagents.remove_reagent(/datum/reagent/water, 0.5 * absorption_coeff)
 		. += power * 0.5
 
