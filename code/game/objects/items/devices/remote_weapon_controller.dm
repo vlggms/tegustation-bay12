@@ -13,10 +13,11 @@
 	if(!istype(A, /obj/machinery/remote_weapon))
 		return ..()
 	linked_weapon = A
+	GLOB.destroyed_event.register(linked_weapon, src, /obj/item/device/remote_weapon_controller/proc/ClearLink)
 	to_chat(user, SPAN_NOTICE("\The [src] has been successfuly linked to [linked_weapon]."))
 
 /obj/item/device/remote_weapon_controller/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
-	if(!istype(target, /obj/machinery/remote_weapon)) // Resolve attackby handles this part
+	if(istype(target, /obj/machinery/remote_weapon)) // Resolve attackby handles this part
 		return
 	if(!istype(linked_weapon))
 		to_chat(user, SPAN_WARNING("\The [src] is not linked to any machine."))
@@ -31,3 +32,7 @@
 			return
 	linked_weapon.PerformAbility(src, T)
 	to_chat(user, SPAN_NOTICE("\The [src] received positive code from the activation attempt."))
+
+// Called if machine we're linked to gets destroyed
+/obj/item/device/remote_weapon_controller/proc/ClearLink()
+	linked_weapon = null
