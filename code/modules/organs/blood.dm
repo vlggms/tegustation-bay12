@@ -205,6 +205,7 @@
 	data["viruses"] = list()
 	for(var/datum/disease/D in diseases)
 		data["viruses"] += D.Copy()
+	data["resistances"] += disease_resistances.Copy()
 	data["blood_DNA"] = dna.unique_enzymes
 	data["blood_type"] = dna.b_type
 	data["species"] = species.name

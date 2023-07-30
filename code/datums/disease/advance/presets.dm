@@ -1,6 +1,8 @@
 //Randomly generated Disease, for virus crates and events
 /datum/disease/advance/random
 	name = "Experimental Disease"
+	desc = "An naturally formed variant of an engineered disease which can contain a multitude of symptoms."
+	form = "Mutated Advance Disease"
 	copy_type = /datum/disease/advance
 
 /datum/disease/advance/random/New(max_symptoms, max_level = 8)

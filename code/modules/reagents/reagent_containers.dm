@@ -35,9 +35,10 @@
 /obj/item/reagent_containers/New()
 	create_reagents(volume)
 	if(spawned_disease)
-		var/datum/disease/F = new spawned_disease()
+		var/datum/disease/F = SpawnDisease()
 		var/list/data = list("viruses"= list(F))
 		reagents.add_reagent(/datum/reagent/blood, disease_amount, data)
+		update_icon()
 	..()
 	if(!possible_transfer_amounts)
 		src.verbs -= /obj/item/reagent_containers/verb/set_amount_per_transfer_from_this
@@ -252,3 +253,7 @@
 		for(var/datum/reagent/R in reagents.reagent_list)
 			R.ex_act(src, severity)
 	..()
+
+// In case we need to somehow modify what exactly happens to it
+/obj/item/reagent_containers/proc/SpawnDisease()
+	return new spawned_disease()

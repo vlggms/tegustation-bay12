@@ -2,6 +2,7 @@
 	data = new/list(
 		"donor" = null,
 		"viruses" = null,
+		"resistances"=null,
 		"species" = SPECIES_HUMAN,
 		"blood_DNA" = null,
 		"blood_type" = null,
@@ -60,11 +61,20 @@
 			B.blood_DNA["UNKNOWN DNA STRUCTURE"] = "X*"
 
 /datum/reagent/blood/affect_ingest(mob/living/carbon/M, alien, removed)
-
 	if(M.chem_doses[type] > 5)
 		M.adjustToxLoss(removed)
 	if(M.chem_doses[type] > 15)
 		M.adjustToxLoss(removed)
+
+	if(data && data["viruses"])
+		for(var/thing in data["viruses"])
+			var/datum/disease/strain = thing
+
+			if((strain.spread_flags & DISEASE_SPREAD_SPECIAL) || (strain.spread_flags & DISEASE_SPREAD_NON_CONTAGIOUS))
+				continue
+
+			if(strain.spread_flags & DISEASE_SPREAD_CONTACT_FLUIDS)
+				M.ContactContractDisease(strain)
 
 /datum/reagent/blood/affect_touch(mob/living/carbon/M, alien, removed)
 	if(data && data["viruses"])
@@ -111,6 +121,13 @@
 					if(!istype(D, /datum/disease/advance))
 						preserve += D
 				data["viruses"] = preserve
+
+/datum/reagent/blood/proc/GetDiseases()
+	. = list()
+	if(data && data["viruses"])
+		for(var/thing in data["viruses"])
+			var/datum/disease/D = thing
+			. += D
 
 // Water!
 #define WATER_LATENT_HEAT 9500 // How much heat is removed when applied to a hot turf, in J/unit (9500 makes 120 u of water roughly equivalent to 2L

@@ -1004,12 +1004,12 @@
 		else if(istype(B))
 			holder2.icon_state = "hudbrainworm"
 		else if(LAZYLEN(diseases))
-			var/disease_num
+			var/disease_num = 0
 			for(var/datum/disease/D in diseases)
 				if(D.visibility_flags & HIDDEN_HUD)
 					continue
 				disease_num = max(disease_num, GetDiseaseSeverityValue(D.severity))
-			holder.icon_state = "hudill[disease_num]"
+			holder2.icon_state = "hudill[disease_num]"
 		else
 			holder2.icon_state = "hudhealthy"
 
