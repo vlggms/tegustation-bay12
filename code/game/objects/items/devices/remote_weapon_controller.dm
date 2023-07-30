@@ -33,6 +33,11 @@
 	linked_weapon.PerformAbility(src, T)
 	to_chat(user, SPAN_NOTICE("\The [src] received positive code from the activation attempt."))
 
+/obj/item/device/remote_weapon_controller/examine(mob/user, distance)
+	. = ..()
+	if(distance <= 0 && istype(linked_weapon))
+		to_chat(user, SPAN_NOTICE("It is connected to [linked_weapon]."))
+
 // Called if machine we're linked to gets destroyed
 /obj/item/device/remote_weapon_controller/proc/ClearLink()
 	linked_weapon = null
