@@ -138,7 +138,7 @@
 		access_tox, access_tox_storage, access_emergency_storage, access_teleporter, access_bridge, access_rd,
 		access_research, access_mining, access_mining_office, access_mining_station, access_xenobiology, access_aquila,
 		access_RC_announce, access_keycard_auth, access_xenoarch, access_sec_guard, access_heads,
-		access_expedition_shuttle, access_guppy, access_hangar, access_stardust, access_stardust_helm, access_guppy_helm,
+		access_expedition_shuttle, access_guppy, access_hangar, access_stardust, access_virology, access_stardust_helm, access_guppy_helm,
 		access_squad_leader, access_marine, access_eva, access_terragov_crew,
 		access_expedition_shuttle, access_expedition_shuttle_helm, access_maint_tunnels, access_terra_fax, access_radio_comm,
 		access_radio_sci, access_radio_exp, access_medical, access_chemistry
