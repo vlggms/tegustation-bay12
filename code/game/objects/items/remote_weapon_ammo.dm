@@ -53,14 +53,11 @@
 	playsound(target, 'sound/weapons/mortar_long_whistle.ogg', 100, TRUE, 4)
 	sleep(7)
 	playsound(target, 'sound/weapons/gunship_laser.ogg', 200, TRUE, 12, ignore_pressure = TRUE)
-	var/list/prev_range = list()
-	for(var/i = 1 to fire_range)
-		var/list/curr_range = spiral_range_turfs(i, target) - prev_range
-		for(var/turf/T in curr_range)
+	for(var/i = 0 to fire_range)
+		for(var/turf/T in spiral_range_turfs(i, target) - spiral_range_turfs(i-1, target))
 			var/obj/effect/fake_fire/bluespace/bfire = new(T)
 			bfire.lifetime = fire_duration
 			bfire.firelevel = fire_damage
-		prev_range = curr_range
 		sleep(0.5)
 	return ..()
 
