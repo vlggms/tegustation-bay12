@@ -102,28 +102,29 @@
 	req_access = list(access_stardust_helm)
 
 /area/shuttle/research/anomalyresearch
-	name = "\improper SRV Stardust Anomaly Labratory"
+	name = "\improper SRV Stardust Anomaly Laboratory"
 	icon_state = "stardust"
 
 /area/shuttle/research/xenoarchlab
-	name = "\improper SRV Stardust Xenoarchology Labratory"
+	name = "\improper SRV Stardust Xenoarchology Laboratory"
 	icon_state = "stardust"
 
 /area/shuttle/research/xenobiolab
-	name = "\improper SRV Stardust Xenobiology Labratory"
+	name = "\improper SRV Stardust Xenobiology Laboratory"
 	icon_state = "stardust"
 
 /area/shuttle/research/xenofloralab
-	name = "\improper SRV Stardust Xenoflora Labratory"
+	name = "\improper SRV Stardust Xenoflora Laboratory"
 	icon_state = "stardust"
 
 /area/shuttle/research/fabricator
-	name = "\improper SRV Stardust Fabrication Labratory"
+	name = "\improper SRV Stardust Fabrication Laboratory"
 	icon_state = "stardust"
 
 /area/shuttle/research/virology
-	name = "\improper SRV Stardust Virology Labratory"
+	name = "\improper SRV Stardust Virology Laboratory"
 	icon_state = "stardust"
+	req_access = list(access_stardust, access_virology)
 
 /area/shuttle/research/maint
 	name = "\improper SRV Stardust Maintenance Bay"

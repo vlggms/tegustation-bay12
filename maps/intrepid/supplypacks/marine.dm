@@ -55,7 +55,7 @@
 	contains = list(/obj/item/gun/projectile/automatic/ak47 = 1)
 	cost = 80
 	containertype = /obj/structure/closet/crate/secure/weapon
-	containername = "bullpup assault rifle crate"
+	containername = "AK47 rifle crate"
 	access = access_marine
 
 /decl/hierarchy/supply_pack/marine/ak47_ammo

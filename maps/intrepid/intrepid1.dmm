@@ -885,7 +885,13 @@
 "aRt" = (
 /obj/effect/floor_decal/corner/green/diagonal,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/virology/analyser_off,
+/obj/structure/table/standard,
+/obj/item/storage/box/beakers{
+	pixel_y = 6
+	},
+/obj/item/storage/box/beakers,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/virology)
 "aRH" = (
@@ -4066,11 +4072,6 @@
 /area/intrepid/misc/hallway/starboard)
 "dtc" = (
 /obj/effect/floor_decal/corner/green/diagonal,
-/obj/structure/table/standard,
-/obj/item/storage/box/monkeycubes,
-/obj/item/storage/box/monkeycubes/farwacubes,
-/obj/item/storage/box/monkeycubes/neaeracubes,
-/obj/item/storage/box/monkeycubes/stokcubes,
 /obj/machinery/power/apc{
 	dir = 8;
 	pixel_x = -23
@@ -4080,6 +4081,7 @@
 	pixel_y = -23
 	},
 /obj/structure/cable/green,
+/obj/machinery/chem_master,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/virology)
 "dtl" = (
@@ -13355,9 +13357,25 @@
 "llX" = (
 /obj/effect/floor_decal/corner/green/diagonal,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/virology/iso,
 /obj/machinery/camera/network/research{
 	c_tag = "Stardust - Virology Laboratory"
+	},
+/obj/structure/reagent_dispensers/virus_food{
+	pixel_y = 32
+	},
+/obj/structure/table/standard,
+/obj/item/storage/box/syringes{
+	pixel_x = 3;
+	pixel_y = 9
+	},
+/obj/item/reagent_containers/dropper{
+	pixel_y = -6
+	},
+/obj/item/reagent_containers/dropper{
+	pixel_y = -6
+	},
+/obj/item/reagent_containers/dropper{
+	pixel_y = -6
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/virology)
@@ -13566,6 +13584,8 @@
 /obj/item/storage/box/freezer,
 /obj/item/storage/box/beakers/insulated,
 /obj/item/storage/box/beakers,
+/obj/item/storage/box/pillbottles,
+/obj/item/storage/box/pillbottles,
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/chemistry)
 "lrW" = (
@@ -14013,11 +14033,11 @@
 "lMw" = (
 /obj/effect/floor_decal/corner/green/diagonal,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/virology/centrifuge,
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/machinery/light/dystopian{
 	dir = 1
 	},
+/obj/machinery/computer/pandemic,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/virology)
 "lNF" = (
@@ -16332,7 +16352,8 @@
 /area/intrepid/misc/maint/aft)
 "nwu" = (
 /obj/effect/floor_decal/corner/green/diagonal,
-/obj/structure/virology/incubator_off,
+/obj/machinery/reagentgrinder,
+/obj/item/stack/material/phoron/ten,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/virology)
 "nwP" = (
@@ -19592,11 +19613,10 @@
 /area/intrepid/misc/hallway/portside)
 "qcf" = (
 /obj/effect/floor_decal/corner/green/diagonal,
-/obj/structure/table/standard,
-/obj/item/storage/box/freezer,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/machinery/chemical_dispenser/full,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/virology)
 "qcB" = (
