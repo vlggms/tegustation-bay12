@@ -4,9 +4,15 @@
 /turf/simulated/wall/r_titanium,
 /area/abandoned_bunker/bunker/security)
 "av" = (
-/obj/effect/floor_decal/corner/yellow/border,
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+	},
+/obj/structure/sign/directions/security{
+	dir = 8;
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled,
-/area/abandoned_bunker/bunker/engine)
+/area/abandoned_bunker/bunker)
 "aB" = (
 /obj/machinery/door/airlock/vault,
 /obj/structure/cable/cyan{
@@ -74,26 +80,12 @@
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker/dormitories)
 "cr" = (
-/obj/effect/floor_decal/corner/yellow/border{
-	dir = 5
+/obj/structure/sign/directions/engineering{
+	dir = 4;
+	pixel_x = 32
 	},
 /turf/simulated/floor/tiled,
-/area/abandoned_bunker/bunker/engine)
-"cA" = (
-/obj/effect/floor_decal/corner/yellow/border{
-	dir = 1
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/abandoned_bunker/bunker/engine)
-"cJ" = (
-/obj/effect/floor_decal/corner/yellow/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/abandoned_bunker/bunker/engine)
+/area/abandoned_bunker/bunker)
 "cO" = (
 /turf/unsimulated/mineral{
 	temperature = 233
@@ -117,12 +109,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/abandoned_bunker/bunker/quantum_facility)
-"di" = (
-/obj/structure/cable/cyan{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled,
-/area/abandoned_bunker/bunker/engine)
 "dm" = (
 /obj/structure/table/glass/pglass,
 /obj/item/mop/advanced/ascent,
@@ -157,12 +143,6 @@
 /obj/random/clipboard,
 /turf/simulated/floor/tiled/dark,
 /area/abandoned_bunker/bunker/security)
-"dZ" = (
-/obj/effect/floor_decal/corner/yellow/border{
-	dir = 10
-	},
-/turf/simulated/floor/tiled,
-/area/abandoned_bunker/bunker/engine)
 "ek" = (
 /obj/effect/landmark/corpse/riot_officer{
 	brute_loss = 1000
@@ -476,12 +456,6 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/abandoned_bunker/bunker/quantum_facility)
-"nq" = (
-/obj/structure/cable/cyan{
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/tiled,
-/area/abandoned_bunker/bunker/engine)
 "nB" = (
 /obj/effect/floor_decal/corner/red/three_quarters{
 	dir = 1
@@ -550,15 +524,6 @@
 /obj/random/energy,
 /turf/simulated/floor/tiled/dark,
 /area/abandoned_bunker/bunker/armory)
-"qs" = (
-/obj/machinery/door/airlock/engineering{
-	name = "Engineering Department"
-	},
-/obj/structure/cable/cyan{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled,
-/area/abandoned_bunker/bunker/engine)
 "qw" = (
 /obj/machinery/quantumpad{
 	anchored = 1;
@@ -727,15 +692,6 @@
 /obj/random/handgun,
 /turf/simulated/floor/tiled/dark,
 /area/abandoned_bunker/bunker/armory)
-"tM" = (
-/obj/effect/floor_decal/corner/yellow/border{
-	dir = 4
-	},
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/abandoned_bunker/bunker/engine)
 "tN" = (
 /obj/effect/floor_decal/corner/red/half{
 	dir = 4
@@ -791,12 +747,6 @@
 /obj/structure/barricade,
 /turf/simulated/floor/ascent/tiled,
 /area/abandoned_bunker/bunker/quantum_facility)
-"uT" = (
-/obj/effect/floor_decal/corner/yellow/border{
-	dir = 9
-	},
-/turf/simulated/floor/tiled,
-/area/abandoned_bunker/bunker/engine)
 "uW" = (
 /mob/living/simple_animal/hostile/riot_officer/baton,
 /turf/simulated/floor/tiled/dark/monotile,
@@ -1023,12 +973,6 @@
 /obj/structure/table/glass/pglass,
 /turf/simulated/floor/ascent,
 /area/abandoned_bunker/bunker/quantum_facility)
-"Ai" = (
-/obj/effect/floor_decal/corner/yellow/border{
-	dir = 6
-	},
-/turf/simulated/floor/tiled,
-/area/abandoned_bunker/bunker/engine)
 "Au" = (
 /obj/machinery/power/smes/buildable/max_cap_in_out{
 	charge = 5e+006
@@ -1072,15 +1016,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/abandoned_bunker/bunker)
-"Bl" = (
-/obj/effect/floor_decal/corner/yellow/border{
-	dir = 8
-	},
-/obj/structure/cable/cyan{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled,
-/area/abandoned_bunker/bunker/engine)
 "Bm" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -1176,12 +1111,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker)
-"Dx" = (
-/obj/effect/floor_decal/corner/yellow/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/abandoned_bunker/bunker/engine)
 "DA" = (
 /obj/machinery/suit_storage_unit/mining/alt,
 /turf/simulated/floor/tiled/dark,
@@ -1206,22 +1135,6 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/abandoned_bunker/bunker/quantum_facility)
-"El" = (
-/obj/effect/floor_decal/corner/yellow/border{
-	dir = 1
-	},
-/obj/machinery/power/apc{
-	dir = 1;
-	pixel_y = 24
-	},
-/obj/machinery/power/terminal{
-	dir = 1
-	},
-/obj/structure/cable/cyan{
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/tiled,
-/area/abandoned_bunker/bunker/engine)
 "Em" = (
 /obj/structure/closet/crate/trashcart,
 /obj/random/trash,
@@ -1456,11 +1369,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/abandoned_bunker/bunker/security)
-"Lt" = (
-/obj/effect/floor_decal/corner/yellow/border,
-/obj/machinery/light,
-/turf/simulated/floor/tiled,
-/area/abandoned_bunker/bunker/engine)
 "Lw" = (
 /obj/structure/closet/emcloset,
 /obj/effect/floor_decal/corner/yellow/border,
@@ -1583,15 +1491,6 @@
 /obj/effect/floor_decal/corner/red/border,
 /turf/simulated/floor/tiled/dark,
 /area/abandoned_bunker/bunker/security)
-"Pp" = (
-/obj/effect/floor_decal/corner/yellow/border{
-	dir = 8
-	},
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/abandoned_bunker/bunker/engine)
 "PF" = (
 /turf/simulated/wall/r_titanium,
 /area/abandoned_bunker/bunker/armory)
@@ -1770,6 +1669,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker)
+"VF" = (
+/obj/effect/spawner/room/bunker_engineering,
+/turf/simulated/wall/r_titanium,
+/area/abandoned_bunker/bunker/storage)
 "Wb" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 6
@@ -1780,12 +1683,6 @@
 "Wl" = (
 /turf/simulated/floor/tiled/dark,
 /area/abandoned_bunker/bunker/quantum_facility)
-"Wr" = (
-/obj/effect/floor_decal/corner/yellow/border{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/abandoned_bunker/bunker/engine)
 "WL" = (
 /obj/structure/stairs/west,
 /turf/simulated/floor/tiled/monotile,
@@ -1869,12 +1766,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/abandoned_bunker/bunker/security)
-"Ys" = (
-/obj/effect/floor_decal/corner/yellow/bordercorner{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/abandoned_bunker/bunker/engine)
 "Yy" = (
 /obj/effect/floor_decal/corner/white/bordercorner{
 	dir = 8
@@ -4254,7 +4145,7 @@ oI
 oI
 oI
 oI
-oI
+av
 eY
 oI
 oI
@@ -4362,7 +4253,7 @@ Uu
 Uu
 Uu
 OH
-Uu
+cr
 RL
 Uu
 Uu
@@ -4465,14 +4356,14 @@ Jj
 lr
 Iu
 Iu
-qs
+Dj
 Iu
 aX
 aX
 aX
 aX
 Cq
-aX
+VF
 aX
 aX
 LF
@@ -4566,9 +4457,9 @@ Tm
 Jj
 DX
 Iu
-uT
-Bl
-dZ
+Dj
+Dj
+Dj
 aX
 Cq
 Cq
@@ -4668,9 +4559,9 @@ Hz
 Jj
 DX
 Iu
-Dx
-di
-av
+Dj
+Dj
+Dj
 aX
 Cq
 Cq
@@ -4770,9 +4661,9 @@ Rb
 Jj
 DX
 Iu
-Dx
-di
-av
+Dj
+Dj
+Dj
 aX
 Cq
 Cq
@@ -4872,9 +4763,9 @@ cm
 Jj
 DX
 Iu
-cA
-di
-av
+Dj
+Dj
+Dj
 aX
 Cq
 Cq
@@ -4974,9 +4865,9 @@ xS
 Jj
 DX
 Iu
-Dx
-di
-av
+Dj
+Dj
+Dj
 aX
 Cq
 Cq
@@ -5076,9 +4967,9 @@ Em
 Jj
 DX
 Iu
-Dx
-di
-av
+Dj
+Dj
+Dj
 aX
 Cq
 Cq
@@ -5178,9 +5069,9 @@ Jj
 Jj
 DX
 Iu
-Dx
-di
-av
+Dj
+Dj
+Dj
 aX
 Cq
 Cq
@@ -5280,9 +5171,9 @@ Jj
 DX
 DX
 Iu
-Dx
-di
-av
+Dj
+Dj
+Dj
 aX
 aX
 aX
@@ -5382,14 +5273,14 @@ Jj
 DX
 DX
 Iu
-Dx
-di
-Ys
-Wr
-Wr
-Pp
-Wr
-dZ
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
 Iu
 DX
 DX
@@ -5484,14 +5375,14 @@ Jj
 DX
 DX
 Iu
-cA
-di
 Dj
 Dj
 Dj
 Dj
 Dj
-av
+Dj
+Dj
+Dj
 Iu
 DX
 DX
@@ -5586,14 +5477,14 @@ Jj
 DX
 DX
 Iu
-Dx
-di
 Dj
 Dj
 Dj
 Dj
 Dj
-av
+Dj
+Dj
+Dj
 Iu
 DX
 DX
@@ -5688,14 +5579,14 @@ DX
 DX
 DX
 Iu
-El
-nq
 Dj
 Dj
 Dj
 Dj
 Dj
-av
+Dj
+Dj
+Dj
 Iu
 DX
 DX
@@ -5790,14 +5681,14 @@ DX
 DX
 DX
 Iu
-Dx
 Dj
 Dj
 Dj
 Dj
 Dj
 Dj
-Lt
+Dj
+Dj
 Iu
 DX
 DX
@@ -5892,14 +5783,14 @@ DX
 DX
 DX
 Iu
-cr
-cJ
-tM
-cJ
-cJ
-cJ
-cJ
-Ai
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
+Dj
 Iu
 DX
 DX

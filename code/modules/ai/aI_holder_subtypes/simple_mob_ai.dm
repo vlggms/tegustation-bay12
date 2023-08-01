@@ -191,5 +191,4 @@
 		holder.face_atom(A)
 
 /datum/ai_holder/simple_animal/humanoid/hostile/violent
-	conserve_ammo = FALSE
 	mauling = TRUE

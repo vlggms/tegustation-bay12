@@ -50,6 +50,26 @@
 	id = "abandoned_bunker_sec_cafe_feast"
 	suffixes = list("bunker_sec_cafe_feast.dmm")
 
+/* Bunker Engineering */
+/obj/effect/spawner/room/bunker_engineering
+	room_width = 16
+	room_height = 10
+	room_type = "abandoned_bunker_engineering"
+
+/datum/map_template/ruin/random_room/bunker_engineering
+	name = "Abandoned Bunker - Engineering Normal"
+	template_width = 16
+	template_height = 10
+	room_type = "abandoned_bunker_engineering"
+	id = "abandoned_bunker_engineering_normal"
+	prefix = "maps/away/bunker/random/"
+	suffixes = list("bunker_engineering_normal.dmm")
+
+/datum/map_template/ruin/random_room/bunker_engineering/infested
+	name = "Abandoned Bunker - Engineering Infested"
+	id = "abandoned_bunker_engineering_infested"
+	suffixes = list("bunker_engineering_infested.dmm")
+
 /* Bunker Storage */
 /obj/effect/spawner/room/bunker_storage
 	room_width = 9

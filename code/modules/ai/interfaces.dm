@@ -49,6 +49,8 @@
 	return can_special_attack(A) && should_special_attack(A) // Just because we can doesn't mean we should.
 
 /mob/living/proc/ISay(message)
+	// To handle some dynamic values
+	message = replacetext(message, "%AREA", get_area(src))
 	return say(message)
 
 /mob/living/proc/IIsAlly(mob/living/L)
