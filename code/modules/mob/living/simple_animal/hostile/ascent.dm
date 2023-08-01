@@ -39,7 +39,7 @@
 	ranged_burst_count = 3
 	ranged_burst_delay = 2.5
 	projectiletype = /obj/item/projectile/beam/particle
-	projectile_dispersion = 1
+	projectile_dispersion = 0.75
 
 	loot_list = list(
 		/obj/effect/landmark/corpse/ascent_alate/armor = 1,
