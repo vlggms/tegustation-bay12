@@ -87,6 +87,8 @@
 	if(current_viewing_message)
 		data["message_current"] = current_viewing_message
 
+	data["cross_enabled"] = LAZYLEN(config.cross_servers)
+
 	var/list/processed_evac_options = list()
 	if(!isnull(evacuation_controller))
 		for (var/datum/evacuation_option/EO in evacuation_controller.available_evac_options())
@@ -257,6 +259,24 @@
 			. = TRUE
 			if(is_autenthicated(user) && ntn_comm)
 				post_status("toggle_alert_border")
+		if("cross_comms")
+			. = TRUE
+			if(is_autenthicated(user))
+				var/list/payload = list()
+				var/network_name = config.cross_comms_network
+				if(network_name)
+					payload["network"] = network_name
+
+				var/destination = input(usr, "Pick destination.", "Priority Announcement") in (config.cross_servers + "all")
+				if(!destination || !can_still_topic())
+					return 1
+
+				var/message = input(usr, "Please write a message to announce to the destination.", "Priority Announcement") as null|message
+				if(!message || !can_still_topic())
+					return 1
+
+				send2otherserver(station_name(), message, "Comms_Console", destination == "all" ? null : list(destination), additional_data = payload)
+				command_announcement.Announce(message, "Outgoing message to allied station")
 
 #undef STATE_DEFAULT
 #undef STATE_MESSAGELIST
