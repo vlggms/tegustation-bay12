@@ -492,8 +492,12 @@ GLOBAL_DATUM_INIT(temp_reagents_holder, /obj, new)
 	// that could possibly eat up a lot of memory needlessly
 	// if most data lists are read-only.
 	if(trans_data["viruses"])
-		var/list/v = trans_data["viruses"]
-		trans_data["viruses"] = v.Copy()
+		// So, Egor's note time: I have no idea, but I can only imagine that /tg/ modified the list Copy() proc to
+		// also run a Copy() on diseases or something; I am not wasting time replicating it and will resort to this
+		var/list/new_v = list()
+		for(var/datum/disease/D in trans_data["viruses"])
+			new_v |= D.Copy()
+			trans_data["viruses"] = new_v
 
 	return trans_data
 
