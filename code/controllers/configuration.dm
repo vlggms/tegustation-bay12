@@ -861,6 +861,7 @@ var/list/gamemode_cache = list()
 				if("cross_comms_network")
 					config.cross_comms_network = value
 				if("cross_servers")
+					to_chat(world, SPAN_DEBUG(value))
 					config.cross_servers = params2list(value)
 
 	fps = round(fps)

@@ -172,7 +172,7 @@ GLOBAL_VAR_INIT(world_topic_last, world.timeofday)
 		if(config.comms_key != input["key"])
 			return
 		post_comm_message("Incoming message from [input["message_sender"]]", input["message"])
-		minor_announcement.Announce(input["message"], "Incoming message from [input["message_sender"]]")
+		command_announcement.Announce(input["message"], "Incoming message from [input["message_sender"]]")
 
 	if(findtext(T, "News_Report"))
 		var/list/input = params2list(T)
@@ -182,7 +182,7 @@ GLOBAL_VAR_INIT(world_topic_last, world.timeofday)
 		if(config.comms_key != input["key"])
 			return
 		post_comm_message("Breaking Update From [input["message_sender"]]", input["message"])
-		minor_announcement.Announce(input["message"], "Breaking Update From [input["message_sender"]]")
+		command_announcement.Announce(input["message"], "Breaking Update From [input["message_sender"]]")
 
 	/* * * * * * * *
 	* Public Topic Calls
@@ -720,6 +720,7 @@ proc/establish_old_db_connection()
  */
 /proc/send2otherserver(source, msg, type = "Comms_Console", target_servers, list/additional_data = list())
 	if(!config.comms_key)
+		to_chat(usr, SPAN_WARNING("Lacking comms key. Message was not sent."))
 		return
 
 	var/our_id = config.cross_comms_name
@@ -742,6 +743,7 @@ proc/establish_old_db_connection()
 	if (auth)
 		var/comms_key = config.comms_key
 		if(!comms_key)
+			to_chat(usr, SPAN_WARNING("Lacking comms key. Message was not sent."))
 			return
 		message["key"] = comms_key
 	var/list/servers = config.cross_servers
