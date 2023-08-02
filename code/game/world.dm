@@ -161,7 +161,7 @@ GLOBAL_VAR_INIT(world_topic_last, world.timeofday)
 	SET_THROTTLE(3 SECONDS, null)
 
 	/* Cross-Comms stuff */
-	if(findtext(T, "Comms_Console"))
+	if(findtext(T, "Comms_Console") && GLOB.cross_comms_allowed)
 		var/list/input = params2list(T)
 		// Reject comms messages from other servers that are not on our configured network,
 		// if this has been configured. (See CROSS_COMMS_NETWORK in comms.txt)
@@ -176,7 +176,7 @@ GLOBAL_VAR_INIT(world_topic_last, world.timeofday)
 		var/sender_ckey = input["message_sender_ckey"] ? input["message_sender_ckey"] : "Unknown"
 		log_and_message_admins("Comms_Console message received from [input["source"]]; Sender ckey: [sender_ckey].")
 
-	if(findtext(T, "News_Report"))
+	if(findtext(T, "News_Report") && GLOB.cross_comms_allowed)
 		var/list/input = params2list(T)
 		var/configured_network = config.cross_comms_network
 		if(configured_network && configured_network != input["network"])
