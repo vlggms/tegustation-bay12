@@ -265,7 +265,7 @@
 		if("cross_comms")
 			. = TRUE
 			if(is_autenthicated(user))
-				if(GLOB.last_cross_comms_message_time > world.time)
+				if(GLOB.last_cross_comms_message_time + CROSSCOMMS_COOLDOWN > world.time)
 					to_chat(user, SPAN_WARNING("A message was sent too recently! Wait for [round((GLOB.last_cross_comms_message_time - world.time) / 10)] seconds before trying again!"))
 					return 1
 				var/list/payload = list()
@@ -278,13 +278,18 @@
 				if(!destination || !can_still_topic())
 					return 1
 
-				var/message = input(usr, "Please write a message to announce to the destination.", "Priority Announcement") as null|message
+				var/message = trim(html_encode(input(usr, "Please write a message to announce to the destination.", "Priority Announcement") as null|message), MAX_MESSAGE_LEN)
 				if(!message || !can_still_topic())
+					return 1
+
+				// Double check to prevent people from "saving" the window with input to ignore the cooldown
+				if(GLOB.last_cross_comms_message_time + CROSSCOMMS_COOLDOWN > world.time)
+					to_chat(user, SPAN_WARNING("A message was sent too recently! Wait for [round((GLOB.last_cross_comms_message_time - world.time) / 10)] seconds before trying again!"))
 					return 1
 
 				send2otherserver(station_name(), message, "Comms_Console", destination == "all" ? null : list(destination), additional_data = payload)
 				command_announcement.Announce(message, "Outgoing message to allied station")
-				GLOB.last_cross_comms_message_time = world.time + CROSSCOMMS_COOLDOWN
+				GLOB.last_cross_comms_message_time = world.time
 
 #undef STATE_DEFAULT
 #undef STATE_MESSAGELIST
