@@ -3,6 +3,9 @@
 #define STATE_VIEWMESSAGE	3
 #define STATE_STATUSDISPLAY	4
 #define STATE_ALERT_LEVEL	5
+
+#define CROSSCOMMS_COOLDOWN 1 MINUTES
+
 /datum/computer_file/program/comm
 	filename = "comm"
 	filedesc = "Command and Communications Program"
@@ -262,6 +265,9 @@
 		if("cross_comms")
 			. = TRUE
 			if(is_autenthicated(user))
+				if(GLOB.last_cross_comms_message_time > world.time)
+					to_chat(user, SPAN_WARNING("A message was sent too recently! Wait for [round((GLOB.last_cross_comms_message_time - world.time) / 10)] seconds before trying again!"))
+					return 1
 				var/list/payload = list()
 				var/network_name = config.cross_comms_network
 				if(network_name)
