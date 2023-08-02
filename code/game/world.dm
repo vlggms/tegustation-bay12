@@ -176,7 +176,7 @@ GLOBAL_VAR_INIT(world_topic_last, world.timeofday)
 		var/sender_ckey = input["message_sender_ckey"] ? input["message_sender_ckey"] : "Unknown"
 		log_and_message_admins("Comms_Console message received from [input["source"]]; Sender ckey: [sender_ckey].")
 
-	if(findtext(T, "News_Report") && GLOB.cross_comms_allowed)
+	else if(findtext(T, "News_Report") && GLOB.cross_comms_allowed)
 		var/list/input = params2list(T)
 		var/configured_network = config.cross_comms_network
 		if(configured_network && configured_network != input["network"])
