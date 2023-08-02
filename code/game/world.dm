@@ -160,6 +160,30 @@ GLOBAL_VAR_INIT(world_topic_last, world.timeofday)
 	var/base_throttle = max(throttle[1], world.timeofday)
 	SET_THROTTLE(3 SECONDS, null)
 
+	/* Cross-Comms stuff */
+	if(findtext(T, "Comms_Console"))
+		var/list/input = params2list(T)
+		// Reject comms messages from other servers that are not on our configured network,
+		// if this has been configured. (See CROSS_COMMS_NETWORK in comms.txt)
+		var/configured_network = config.cross_comms_network
+		if(configured_network && configured_network != input["network"])
+			return
+		// Check comms key
+		if(config.comms_key != input["key"])
+			return
+		post_comm_message("Incoming message from [input["message_sender"]]", input["message"])
+		minor_announcement.Announce(input["message"], "Incoming message from [input["message_sender"]]")
+
+	if(findtext(T, "News_Report"))
+		var/list/input = params2list(T)
+		var/configured_network = config.cross_comms_network
+		if(configured_network && configured_network != input["network"])
+			return
+		if(config.comms_key != input["key"])
+			return
+		post_comm_message("Breaking Update From [input["message_sender"]]", input["message"])
+		minor_announcement.Announce(input["message"], "Breaking Update From [input["message_sender"]]")
+
 	/* * * * * * * *
 	* Public Topic Calls
 	* The following topic calls are available without a comms secret.
@@ -520,6 +544,7 @@ GLOBAL_VAR_INIT(world_topic_last, world.timeofday)
 	config = new /datum/configuration()
 	config.load("config/config.txt")
 	config.load("config/game_options.txt","game_options")
+	config.load("config/comms.txt", "comms")
 	if (GLOB.using_map?.config_path)
 		config.load(GLOB.using_map.config_path, "using_map")
 	config.load_text("config/motd.txt", "motd")
@@ -681,7 +706,52 @@ proc/establish_old_db_connection()
 	else
 		return 1
 
+// Cross-comms stuff
+
+/**
+ * Sends a message to a set of cross-communications-enabled servers using world topic calls
+ *
+ * Arguments:
+ * * source - Who sent this message
+ * * msg - The message body
+ * * type - The type of message, becomes the topic command under the hood
+ * * target_servers - A collection of servers to send the message to, defined in config
+ * * additional_data - An (optional) associated list of extra parameters and data to send with this world topic call
+ */
+/proc/send2otherserver(source, msg, type = "Comms_Console", target_servers, list/additional_data = list())
+	if(!config.comms_key)
+		return
+
+	var/our_id = config.cross_comms_name
+	additional_data["message_sender"] = source
+	additional_data["message"] = msg
+	additional_data["source"] = "([our_id])"
+	additional_data += type
+
+	var/list/servers = config.cross_servers
+	for(var/I in servers)
+		if(I == our_id) //No sending to ourselves
+			continue
+		if(target_servers && !(I in target_servers))
+			continue
+		world.send_cross_comms(I, additional_data)
+
+/// Sends a message to a given cross comms server by name (by name for security).
+/world/proc/send_cross_comms(server_name, list/message, auth = TRUE)
+	set waitfor = FALSE
+	if (auth)
+		var/comms_key = config.comms_key
+		if(!comms_key)
+			return
+		message["key"] = comms_key
+	var/list/servers = config.cross_servers
+	var/server_url = servers[server_name]
+	if (!server_url)
+		CRASH("Invalid cross comms config: [server_name]")
+	world.Export("[server_url]?[list2params(message)]")
+
 #undef RECOMMENDED_VERSION
 #undef FAILED_DB_CONNECTION_CUTOFF
 #undef THROTTLE_MAX_BURST
 #undef SET_THROTTLE
+// Cross-comms stuff
