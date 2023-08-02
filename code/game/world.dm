@@ -185,8 +185,6 @@ GLOBAL_VAR_INIT(world_topic_last, world.timeofday)
 			return
 		post_comm_message("Breaking Update From [input["message_sender"]]", input["message"])
 		command_announcement.Announce(input["message"], "Breaking Update From [input["message_sender"]]")
-		var/sender_ckey = input["message_sender_ckey"] ? input["message_sender_ckey"] : "Unknown"
-		log_and_message_admins("Comms_Console message received from [input["source"]]; Sender ckey: [sender_ckey].")
 
 	/* * * * * * * *
 	* Public Topic Calls

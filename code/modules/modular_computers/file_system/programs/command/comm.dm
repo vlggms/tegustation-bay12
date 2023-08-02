@@ -284,6 +284,7 @@
 
 				send2otherserver(station_name(), message, "Comms_Console", destination == "all" ? null : list(destination), additional_data = payload)
 				command_announcement.Announce(message, "Outgoing message to allied station")
+				GLOB.last_cross_comms_message_time = world.time + CROSSCOMMS_COOLDOWN
 
 #undef STATE_DEFAULT
 #undef STATE_MESSAGELIST
