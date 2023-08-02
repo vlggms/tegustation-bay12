@@ -272,6 +272,7 @@
 				var/network_name = config.cross_comms_network
 				if(network_name)
 					payload["network"] = network_name
+				payload["message_sender_ckey"] = user.ckey
 
 				var/destination = input(usr, "Pick destination.", "Priority Announcement") in (config.cross_servers + "all")
 				if(!destination || !can_still_topic())
