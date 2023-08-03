@@ -730,7 +730,8 @@ proc/establish_old_db_connection()
 	additional_data["message"] = msg
 	additional_data["source"] = "([our_id])"
 	if(!additional_data["message_sender_ckey"])
-		additional_data["message_sender_ckey"] = usr.ckey
+		var/sender_ckey = usr ? usr.ckey : "server itself"
+		additional_data["message_sender_ckey"] = sender_ckey
 	additional_data += type
 
 	var/list/servers = config.cross_servers
