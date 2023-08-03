@@ -511,28 +511,18 @@ Helpers
 /datum/controller/subsystem/ticker/proc/send_news_report()
 	var/news_message
 	var/news_source = "[GLOB.using_map.company_name] News"
-	var/emergency_reason = evacuation_controller.emergency_evacuation
 	switch(news_report)
 		if(SHIP_BLUESPACEJUMP)
-			if(emergency_reason)
-				news_message = "[station_name()] has performed a routine bluespace jump to next sector following this command report:\n\n[emergency_reason]"
-			else
-				news_message = "The crew of [station_name()] has performed a routine bluespace jump after completing their tasks. There is no additional data."
+			news_message = "The crew of [station_name()] has performed a routine bluespace jump after completing their tasks. There is no additional data."
 
 		if(SHIP_ABANDONED)
-			if(emergency_reason)
-				news_message = "[station_name()] had to be abandoned by its crew after transmitting the following distress beacon:\n\n[emergency_reason]"
-			else
-				news_message = "[station_name()] has been abandoned due to unknown reasons.\n\n\
+			news_message = "[station_name()] has been abandoned due to unknown reasons.\n\n\
 					[pick("Experts speculate that [station_name()] is now home to the infestation.", \
 					"The officials claim that [station_name()] has been rendered inoperable by enemy combatants.", \
 					"[GLOB.using_map.company_short] representatives are yet to address the issue and reasons behind it.")]."
 
 		if(SHIP_EVACUATED)
-			if(emergency_reason)
-				news_message = "[station_name()] has been evacuated after transmitting the following distress beacon:\n\n[emergency_reason]"
-			else
-				news_message = "The crew of [station_name()] has been evacuated amid unconfirmed reports of enemy activity."
+			news_message = "The crew of [station_name()] has been evacuated amid unconfirmed reports of enemy activity."
 
 		if(SHIP_DESTROYED_NUKE)
 			news_message = "We would like to reassure all employees that the reports of a nuclear explosion on [station_name()] are, in fact, a hoax. Have a secure day!"
