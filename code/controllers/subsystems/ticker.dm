@@ -34,6 +34,8 @@ SUBSYSTEM_DEF(ticker)
 	///Set to TRUE when an admin forcibly ends round.
 	var/forced_end = FALSE
 
+	var/news_report
+
 /datum/controller/subsystem/ticker/Initialize()
 	to_world("<span class='info'><B>Welcome to the pre-game lobby!</B></span>")
 	to_world("Please, setup your character and select ready. Game will start in [round(pregame_timeleft/10)] seconds")
@@ -505,3 +507,77 @@ Helpers
 		bypass_gamemode_vote = 1
 	Master.SetRunLevel(RUNLEVEL_SETUP)
 	return 1
+
+/datum/controller/subsystem/ticker/proc/send_news_report()
+	var/news_message
+	var/news_source = "[GLOB.using_map.company_name] News"
+	var/emergency_reason = evacuation_controller.emergency_evacuation
+	switch(news_report)
+		if(SHIP_BLUESPACEJUMP)
+			if(emergency_reason)
+				news_message = "[station_name()] has performed a routine bluespace jump to next sector following this command report:\n\n[emergency_reason]"
+			else
+				news_message = "The crew of [station_name()] has performed a routine bluespace jump after completing their tasks. There is no additional data."
+
+		if(SHIP_ABANDONED)
+			if(emergency_reason)
+				news_message = "[station_name()] had to be abandoned by its crew after transmitting the following distress beacon:\n\n[emergency_reason]"
+			else
+				news_message = "[station_name()] has been abandoned due to unknown reasons.\n\n\
+					[pick("Experts speculate that [station_name()] is now home to the infestation.", \
+					"The officials claim that [station_name()] has been rendered inoperable by enemy combatants.", \
+					"[GLOB.using_map.company_short] representatives are yet to address the issue and reasons behind it.")]."
+
+		if(SHIP_EVACUATED)
+			if(emergency_reason)
+				news_message = "[station_name()] has been evacuated after transmitting the following distress beacon:\n\n[emergency_reason]"
+			else
+				news_message = "The crew of [station_name()] has been evacuated amid unconfirmed reports of enemy activity."
+
+		if(SHIP_DESTROYED_NUKE)
+			news_message = "We would like to reassure all employees that the reports of a nuclear explosion on [station_name()] are, in fact, a hoax. Have a secure day!"
+
+		if(SHIP_DESTROYED_SELF_DESTRUCT)
+			news_message = "Unconfirmed reports claim that [station_name()] has been destroyed with a self-destruct mechanism. [GLOB.using_map.company_short] officials have dispatched a rescue team to search for any potential survivors."
+
+		if(SHIP_SUPERMATTER_CASCADE)
+			news_message = "A galaxy-wide electromagnetic pulse has been detected originating from [station_name()]'s sector.\n\
+			[GLOB.using_map.company_name] officials claim that the sector has been \"erased\" by a bluespace rift.\n\
+			It is suspected that there is no survivors."
+
+		// Nuke ops
+		if(SHIP_NUKEOPS_CREW_VICTORY_SUPERMAJOR)
+			news_message = "Repairs are undergoing on [station_name()] after a decisive victory of the crew against elite [syndicate_name()] operatives. All personnel is currently enjoying a week-long paid vacation for their heroic efforts."
+
+		if(SHIP_NUKEOPS_CREW_VICTORY_MAJOR)
+			news_message = "An attack on [station_name()] orchestrated by \the [syndicate_name()] has been successfuly repelled by the crew. All personnel is currently enjoying a week-long paid vacation for their efforts."
+
+		if(SHIP_NUKEOPS_CREW_VICTORY_MINOR)
+			news_message = "Officials of \the [GLOB.using_map.company_name] report that several insurgents attempted an attack on [station_name()], but ended up getting caught in their own explosion on a completely unrelated [pick("trader ship", "alien vessel", "abandoned station", "floating asteroid")].\n\n\
+				The [GLOB.using_map.company_short] representative claimed that \"They couldn't stop laughing for 5 minutes upon hearing the news\"."
+
+		if(SHIP_NUKEOPS_CREW_VICTORY_MINOR_2)
+			news_message = "A raid on [station_name()] performed by \the [syndicate_name()] mercenaries took a wild turn as the so-called \"elite operatives\" destroyed a completely unrelated [pick("trader ship", "alien vessel", "abandoned station", "floating asteroid")] using their device."
+
+		if(SHIP_NUKEOPS_TOTAL_ANNIHILATION)
+			news_message = "News report from [GLOB.using_map.company_name] have confirmed that [station_name()] has been destroyed in a nuclear explosion\n\n\
+				Scouting vessels later found an abandoned ship belonging to \the [syndicate_name()]. There were no survivors found from either side of the conflict."
+
+		if(SHIP_NUKEOPS_MERCENARY_VICTORY_MINOR)
+			news_message = "An attack on [station_name()] orchestrated by \the [syndicate_name()] has been successfuly repelled by the crew, with all enemy combatants being discovered dead.\n\n\
+				The officials refused to address the rumors of [station_name()]'s 'nuclear authentication disk' being found later by \the [pick(syndicate_name(), "Independent Space Confederation", "Sol Central Government", "unknown alien fleet", "Vox pirates")]." // TODO: Add list of enemies for map datum
+
+		if(SHIP_NUKEOPS_MERCENARY_VICTORY_MINOR_2)
+			news_message = "A swift raid on [station_name()] performed by \the [syndicate_name()] claimed several lives of the crew aboard it, with the enemy combatants leaving the scene as fast as they arrived.\n\n\
+				The officials claim that the operatives did not manage to permanently damage \the [station_name()], but an item of 'extreme value' has been stolen."
+
+		if(SHIP_NUKEOPS_MERCENARY_VICTORY_MAJOR)
+			news_message = "Multiple news outlets report an unexpected destruction of [station_name()] in the middle of [GLOB.using_map.company_short] space.\n\n\
+				The officials refused to address the rumors of it being related to recent hostilities with \the [pick(syndicate_name(), "Independent Space Confederation", "Sol Central Government")]." // Same as above, make a list of enemies for map datum
+
+	if(news_message)
+		var/list/payload = list()
+		var/network_name = config.cross_comms_network
+		if(network_name)
+			payload["network"] = network_name
+		send2otherserver(news_source, news_message, "News_Report", additional_data = payload)
