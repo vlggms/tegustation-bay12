@@ -46,7 +46,7 @@
 		return
 	return PerformAbility(A)
 
-/mob/living/simple_animal/hostile/apostle/white_night/death(gibbed, deathmessage = "falls to their knees.", show_dead_message)
+/mob/living/simple_animal/hostile/apostle/death(gibbed, deathmessage = "falls to their knees.", show_dead_message)
 	return ..()
 
 /mob/living/simple_animal/hostile/apostle/gib()
