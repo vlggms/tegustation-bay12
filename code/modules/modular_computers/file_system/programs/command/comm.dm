@@ -266,7 +266,7 @@
 			. = TRUE
 			if(is_autenthicated(user))
 				if(GLOB.last_cross_comms_message_time + CROSSCOMMS_COOLDOWN > world.time)
-					to_chat(user, SPAN_WARNING("A message was sent too recently! Wait for [round((GLOB.last_cross_comms_message_time - world.time) / 10)] seconds before trying again!"))
+					to_chat(user, SPAN_WARNING("A message was sent too recently! Wait for [round((GLOB.last_cross_comms_message_time + CROSSCOMMS_COOLDOWN - world.time) / 10)] seconds before trying again!"))
 					return 1
 				var/list/payload = list()
 				var/network_name = config.cross_comms_network
@@ -284,7 +284,7 @@
 
 				// Double check to prevent people from "saving" the window with input to ignore the cooldown
 				if(GLOB.last_cross_comms_message_time + CROSSCOMMS_COOLDOWN > world.time)
-					to_chat(user, SPAN_WARNING("A message was sent too recently! Wait for [round((GLOB.last_cross_comms_message_time - world.time) / 10)] seconds before trying again!"))
+					to_chat(user, SPAN_WARNING("A message was sent too recently! Wait for [round((GLOB.last_cross_comms_message_time + CROSSCOMMS_COOLDOWN - world.time) / 10)] seconds before trying again!"))
 					return 1
 
 				send2otherserver(station_name(), message, "Comms_Console", destination == "all" ? null : list(destination), additional_data = payload)
