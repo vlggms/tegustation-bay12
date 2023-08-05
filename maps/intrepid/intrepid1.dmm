@@ -19874,10 +19874,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/bunk)
-"qkL" = (
-/obj/effect/shuttle_landmark/merchant/out,
-/turf/space,
-/area/space)
 "qkQ" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -46912,7 +46908,7 @@ cjD
 cjD
 cjD
 cjD
-qkL
+cjD
 cjD
 cjD
 cjD

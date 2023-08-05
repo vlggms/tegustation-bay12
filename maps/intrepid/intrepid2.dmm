@@ -3235,12 +3235,13 @@
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/engineering/engine_room)
 "lb" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/structure/handrail{
-	dir = 4
+/obj/machinery/door/blast/regular/open{
+	icon_state = "pdoor0";
+	id_tag = "internaldockblastdoor3"
 	},
-/obj/structure/plushie/carp,
-/turf/simulated/floor/tiled/monotile,
+/obj/effect/wallframe_spawn/reinforced,
+/obj/effect/paint_stripe/blue,
+/turf/simulated/floor,
 /area/intrepid/department/civillian/dockbaythree)
 "lc" = (
 /obj/effect/wingrille_spawn/reinforced_phoron/full,
@@ -4919,6 +4920,17 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/pandora/cargo)
+"qO" = (
+/obj/machinery/door/airlock/external/glass/bolted{
+	frequency = 1331;
+	id_tag = "merchant_shuttle_station_outer_airlock"
+	},
+/obj/effect/floor_decal/industrial/warning/fulltile,
+/obj/machinery/door/blast/regular{
+	id_tag = "externaldockblastdoor3"
+	},
+/turf/simulated/floor/tiled/dark/airless,
+/area/intrepid/department/civillian/dockbaythree)
 "qP" = (
 /obj/effect/floor_decal/corner/lightgrey/half{
 	dir = 1
@@ -5066,14 +5078,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/tcommsat)
 "ro" = (
-/obj/effect/wallframe_spawn/reinforced,
-/obj/effect/paint_stripe/blue,
-/obj/machinery/door/blast/regular/open{
-	icon_state = "pdoor0";
-	id_tag = "internaldockblastdoor3"
-	},
-/turf/simulated/floor,
-/area/intrepid/department/civillian/dockbaythree)
+/obj/effect/shuttle_landmark/merchant/out,
+/turf/space,
+/area/space)
 "rp" = (
 /obj/machinery/door/blast/regular{
 	id_tag = "topdeckmaintshaft4";
@@ -5678,9 +5685,18 @@
 /turf/simulated/floor,
 /area/space)
 "tm" = (
-/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/door/airlock/external/bolted_open{
+	frequency = 1331;
+	icon_state = "open";
+	id_tag = "merchant_shuttle_station_airlock"
+	},
+/obj/effect/floor_decal/industrial/warning/fulltile,
 /obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/floor/tiled/monotile,
+/obj/machinery/door/blast/regular/open{
+	icon_state = "pdoor0";
+	id_tag = "internaldockblastdoor3"
+	},
+/turf/simulated/floor/tiled/dark/airless,
 /area/intrepid/department/civillian/dockbaythree)
 "tn" = (
 /obj/effect/catwalk_plated,
@@ -5699,15 +5715,11 @@
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room)
 "tq" = (
-/obj/machinery/camera/network/second_deck{
-	c_tag = "Second Deck - Dock Airlock Three";
+/obj/effect/floor_decal/industrial/warning,
+/obj/structure/handrail{
 	dir = 8
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	dir = 8;
-	id_tag = "merchant_shuttle_station_pump"
-	},
-/turf/simulated/floor/tiled/steel_grid,
+/turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/civillian/dockbaythree)
 "ts" = (
 /obj/effect/paint/sun,
@@ -5746,11 +5758,13 @@
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/department/civillian/archive)
 "tz" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/structure/handrail{
-	dir = 8
+/obj/effect/wallframe_spawn/reinforced,
+/obj/effect/paint_stripe/blue,
+/obj/machinery/door/blast/regular/open{
+	icon_state = "pdoor0";
+	id_tag = "internaldockblastdoor3"
 	},
-/turf/simulated/floor/tiled/monotile,
+/turf/simulated/floor,
 /area/intrepid/department/civillian/dockbaythree)
 "tA" = (
 /obj/structure/cable{
@@ -6026,13 +6040,6 @@
 /obj/item/reagent_containers/glass/beaker/cryoxadone,
 /turf/simulated/floor/tiled/white/monotile,
 /area/intrepid/department/civillian/safe_room/starboard)
-"uh" = (
-/obj/machinery/door/blast/regular{
-	id_tag = "externaldockblastdoor3"
-	},
-/obj/effect/wallframe_spawn/reinforced,
-/turf/simulated/floor,
-/area/intrepid/department/civillian/dockbaythree)
 "ui" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -6042,15 +6049,10 @@
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room)
 "uj" = (
-/obj/machinery/door/airlock/external/glass/bolted{
-	frequency = 1331;
-	id_tag = "merchant_shuttle_station_outer_airlock"
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "merchant_shuttle_station_pump"
 	},
-/obj/effect/floor_decal/industrial/warning/fulltile,
-/obj/machinery/door/blast/regular{
-	id_tag = "externaldockblastdoor3"
-	},
-/turf/simulated/floor/tiled/dark/airless,
+/turf/simulated/floor/tiled/steel_grid,
 /area/intrepid/department/civillian/dockbaythree)
 "uk" = (
 /obj/structure/cable{
@@ -6192,13 +6194,14 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/intrepid/department/civillian/dockbaythree)
 "uB" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
+/obj/machinery/light{
+	dir = 4
 	},
-/obj/structure/handrail{
-	dir = 8
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	dir = 8;
+	id_tag = "merchant_shuttle_station_pump"
 	},
-/turf/simulated/floor/tiled/monotile,
+/turf/simulated/floor/tiled/steel_grid,
 /area/intrepid/department/civillian/dockbaythree)
 "uC" = (
 /obj/machinery/vending/wallmed1{
@@ -7143,8 +7146,9 @@
 /turf/simulated/floor,
 /area/intrepid/department/civillian/dockbayfour)
 "xH" = (
-/obj/machinery/atmospherics/pipe/manifold4w/hidden,
-/turf/simulated/floor/tiled/steel_grid,
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/civillian/dockbaythree)
 "xI" = (
 /obj/structure/cable/orange{
@@ -7455,13 +7459,22 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/security/portdockingbaysecurity)
 "yI" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	dir = 4;
+	id_tag = "merchant_shuttle_station_pump"
 	},
-/obj/structure/handrail{
-	dir = 4
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	dir = 4;
+	frequency = 1331;
+	id_tag = "merchant_shuttle_station_dock";
+	pixel_x = -24;
+	req_access = list("ACCESS_EXTERNAL");
+	tag_airpump = "merchant_shuttle_station_pump";
+	tag_chamber_sensor = "merchant_shuttle_station_sensor";
+	tag_exterior_door = "merchant_shuttle_station_outer_airlock";
+	tag_interior_door = "merchant_shuttle_station_airlock"
 	},
-/turf/simulated/floor/tiled/monotile,
+/turf/simulated/floor/tiled/steel_grid,
 /area/intrepid/department/civillian/dockbaythree)
 "yL" = (
 /obj/machinery/door/blast/shutters{
@@ -8613,12 +8626,6 @@
 /obj/effect/paint_stripe/yellow,
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/department/engineering/atmos)
-"CF" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/intrepid/department/civillian/dockbaythree)
 "CG" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -8689,12 +8696,16 @@
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/civillian/safe_room/port)
 "CS" = (
-/obj/machinery/light{
-	dir = 4
+/obj/machinery/camera/network/second_deck{
+	c_tag = "Second Deck - Dock Airlock Three";
+	dir = 8
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
 	dir = 8;
 	id_tag = "merchant_shuttle_station_pump"
+	},
+/obj/structure/handrail{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/intrepid/department/civillian/dockbaythree)
@@ -8758,27 +8769,12 @@
 /turf/simulated/floor,
 /area/space)
 "Db" = (
-/obj/machinery/door/airlock/external/bolted_open{
-	frequency = 1331;
-	icon_state = "open";
-	id_tag = "merchant_shuttle_station_airlock"
-	},
-/obj/effect/floor_decal/industrial/warning/fulltile,
 /obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/machinery/door/blast/regular/open{
-	icon_state = "pdoor0";
-	id_tag = "internaldockblastdoor3"
-	},
-/turf/simulated/floor/tiled/dark/airless,
+/turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbaythree)
 "De" = (
-/obj/machinery/door/blast/regular/open{
-	icon_state = "pdoor0";
-	id_tag = "internaldockblastdoor3"
-	},
-/obj/effect/wallframe_spawn/reinforced,
-/obj/effect/paint_stripe/blue,
-/turf/simulated/floor,
+/obj/structure/sign/terragov,
+/turf/simulated/wall/r_wall/hull,
 /area/intrepid/department/civillian/dockbaythree)
 "Dg" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
@@ -8806,10 +8802,8 @@
 /turf/simulated/floor/tiled/white/monotile,
 /area/intrepid/department/civillian/safe_room/port)
 "Do" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/monotile,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden,
+/turf/simulated/floor/tiled/steel_grid,
 /area/intrepid/department/civillian/dockbaythree)
 "Dp" = (
 /obj/machinery/door/firedoor,
@@ -9131,10 +9125,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/civillian/archive)
-"Es" = (
-/obj/structure/sign/terragov,
-/turf/simulated/wall/r_wall/hull,
-/area/intrepid/department/civillian/dockbaythree)
 "Eu" = (
 /obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor,
@@ -11754,20 +11744,18 @@
 /turf/simulated/floor,
 /area/intrepid/department/civillian/dockbayfive)
 "No" = (
+/obj/machinery/airlock_sensor{
+	frequency = 1331;
+	id_tag = "merchant_shuttle_station_sensor";
+	master_tag = null;
+	pixel_x = -32
+	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
 	dir = 4;
 	id_tag = "merchant_shuttle_station_pump"
 	},
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	dir = 4;
-	frequency = 1331;
-	id_tag = "merchant_shuttle_station_dock";
-	pixel_x = -24;
-	req_access = list("ACCESS_EXTERNAL");
-	tag_airpump = "merchant_shuttle_station_pump";
-	tag_chamber_sensor = "merchant_shuttle_station_sensor";
-	tag_exterior_door = "merchant_shuttle_station_outer_airlock";
-	tag_interior_door = "merchant_shuttle_station_airlock"
+/obj/structure/handrail{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/intrepid/department/civillian/dockbaythree)
@@ -11799,17 +11787,12 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper)
 "Nr" = (
-/obj/machinery/airlock_sensor{
-	frequency = 1331;
-	id_tag = "merchant_shuttle_station_sensor";
-	master_tag = null;
-	pixel_x = -32
+/obj/effect/floor_decal/industrial/warning,
+/obj/structure/handrail{
+	dir = 4
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	dir = 4;
-	id_tag = "merchant_shuttle_station_pump"
-	},
-/turf/simulated/floor/tiled/steel_grid,
+/obj/structure/plushie/carp,
+/turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/civillian/dockbaythree)
 "Ns" = (
 /obj/structure/cable/green{
@@ -13451,11 +13434,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/civillian/dockbaytwo)
 "Tf" = (
-/obj/effect/wallframe_spawn/reinforced,
-/obj/machinery/door/blast/regular{
-	id_tag = "externaldockblastdoor3"
-	},
-/turf/simulated/floor,
+/turf/simulated/wall/r_wall/hull,
 /area/intrepid/department/civillian/dockbaythree)
 "Th" = (
 /obj/structure/cable{
@@ -13856,6 +13835,12 @@
 	},
 /turf/simulated/floor/shuttle/black,
 /area/intrepid/department/engineering/portthruster)
+"UE" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/intrepid/department/civillian/dockbaythree)
 "UF" = (
 /obj/machinery/atmospherics/unary/cryo_cell{
 	dir = 4
@@ -40870,7 +40855,7 @@ UU
 UU
 UU
 Ya
-Es
+Tf
 Rj
 Rj
 Rj
@@ -41070,14 +41055,14 @@ UU
 UU
 UU
 UU
-UU
-Ya
-uh
+De
+Tf
+Tf
 yI
 No
 Nr
 lb
-De
+Dy
 ul
 Dy
 qM
@@ -41271,12 +41256,12 @@ UU
 UU
 UU
 UU
-UU
-UU
-Ya
+ro
+qO
+UE
 uj
 Do
-CF
+Do
 xH
 tm
 Db
@@ -41474,14 +41459,14 @@ UU
 UU
 UU
 UU
-UU
-Ya
+De
+Tf
 Tf
 uB
 CS
 tq
 tz
-ro
+Dy
 rO
 Ls
 fh
@@ -41678,7 +41663,7 @@ UU
 UU
 UU
 Ya
-Es
+Tf
 Rj
 Rj
 Rj
