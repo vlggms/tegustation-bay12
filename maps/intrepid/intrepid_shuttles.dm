@@ -57,10 +57,16 @@
 	name = "First Deck"
 	landmark_tag = "nav_stardust_start"
 	docking_controller = "stardust_shuttle_dock_airlock"
+	base_area = /area/intrepid/misc/maint/portside
+	base_turf = /turf/simulated/floor/plating
 
 /obj/effect/shuttle_landmark/stardust/out
 	name = "Space near the ship"
 	landmark_tag = "nav_stardust_out"
+
+/obj/machinery/computer/shuttle_control/research
+	name = "research shuttle control console"
+	shuttle_tag = "Stardust"
 
 // Pandora
 /datum/shuttle/autodock/overmap/exploration_shuttle
@@ -116,7 +122,7 @@
 /obj/effect/shuttle_landmark/merchant/out
 	name = "Docking Bay"
 	landmark_tag = "nav_merchant_out"
-	//docking_controller = "merchant_shuttle_station_dock"
+	docking_controller = "merchant_shuttle_station_dock"
 
 // Other
 /obj/effect/shuttle_landmark/merc/deck1

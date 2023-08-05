@@ -6041,7 +6041,10 @@
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room)
 "uj" = (
-/obj/machinery/door/airlock/external/glass/bolted,
+/obj/machinery/door/airlock/external/glass/bolted{
+	frequency = 1331;
+	id_tag = "merchant_shuttle_station_outer_airlock"
+	},
 /obj/effect/floor_decal/industrial/warning/fulltile,
 /obj/machinery/door/blast/regular{
 	id_tag = "externaldockblastdoor3"
@@ -8754,7 +8757,9 @@
 /area/space)
 "Db" = (
 /obj/machinery/door/airlock/external/bolted_open{
-	icon_state = "open"
+	frequency = 1331;
+	icon_state = "open";
+	id_tag = "merchant_shuttle_station_airlock"
 	},
 /obj/effect/floor_decal/industrial/warning/fulltile,
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -11746,6 +11751,20 @@
 /obj/effect/wallframe_spawn/reinforced,
 /turf/simulated/floor,
 /area/intrepid/department/civillian/dockbayfive)
+"No" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	dir = 4
+	},
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	dir = 4;
+	frequency = 1331;
+	id_tag = "merchant_shuttle_station_dock";
+	pixel_x = -24;
+	tag_exterior_door = "merchant_shuttle_station_outer_airlock";
+	tag_interior_door = "merchant_shuttle_station_airlock"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/intrepid/department/civillian/dockbaythree)
 "Np" = (
 /obj/machinery/camera/network/engineering{
 	c_tag = "Engineering - Starboard Fuel Nacelle";
@@ -25471,7 +25490,7 @@ UU
 UU
 UU
 UU
-UU
+ua
 UU
 UU
 UU
@@ -41042,7 +41061,7 @@ UU
 Ya
 uh
 yI
-Nr
+No
 Nr
 lb
 De
@@ -41234,7 +41253,7 @@ UU
 UU
 UU
 UU
-ua
+UU
 UU
 UU
 UU

@@ -25,8 +25,8 @@
 	name = "Cargobay Lift"
 	shuttle_area = /area/turbolift/intrepidcargo/lift
 	warmup_time = 3
-	waypoint_station = "intrepidcargo_lift_top"
-	waypoint_offsite = "intrepidcargo_lift_bottom"
+	waypoint_station = "nav_intrepidcargo_lift_top"
+	waypoint_offsite = "nav_intrepidcargo_lift_bottom"
 	sound_takeoff = 'sound/effects/lift_heavy_start.ogg'
 	sound_landing = 'sound/effects/lift_heavy_stop.ogg'
 	ceiling_type = null
@@ -36,8 +36,8 @@
 	name = "Pandora Hangar Lift"
 	shuttle_area = /area/turbolift/marine/lift
 	warmup_time = 3
-	waypoint_station = "nav_marine_bottom"
-	waypoint_offsite = "nav_marine_top"
+	waypoint_station = "nav_marine_lift_bottom"
+	waypoint_offsite = "nav_marine_lift_top"
 	sound_takeoff = 'sound/effects/lift_heavy_start.ogg'
 	sound_landing = 'sound/effects/lift_heavy_stop.ogg'
 	ceiling_type = null
