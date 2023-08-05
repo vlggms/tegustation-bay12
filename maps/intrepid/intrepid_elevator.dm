@@ -44,44 +44,33 @@
 	knockdown = 0
 
 //Lift Control Interface objects. (Lift computer)
-/obj/machinery/computer/shuttle_control/lift/port
-	name = "portside lift controls"
-	shuttle_tag = "Port Lift"
+/obj/machinery/computer/shuttle_control/lift
 	ui_template = "shuttle_control_console_lift.tmpl"
 	icon_state = "tiny"
 	icon_keyboard = "tiny_keyboard"
 	icon_screen = "lift"
 	density = FALSE
+
+/obj/machinery/computer/shuttle_control/lift/port
+	name = "portside lift controls"
+	shuttle_tag = "Port Lift"
 
 /obj/machinery/computer/shuttle_control/lift/starboard
 	name = "starboardside lift controls"
 	shuttle_tag = "Starboard Lift"
-	ui_template = "shuttle_control_console_lift.tmpl"
-	icon_state = "tiny"
-	icon_keyboard = "tiny_keyboard"
-	icon_screen = "lift"
-	density = FALSE
 
 /obj/machinery/computer/shuttle_control/lift/intrepidcargo
 	name = "cargo bay lift controls"
 	shuttle_tag = "Cargobay Lift"
-	ui_template = "shuttle_control_console_lift.tmpl"
-	icon_state = "tiny"
-	icon_keyboard = "tiny_keyboard"
-	icon_screen = "lift"
-	density = FALSE
 
 /obj/machinery/computer/shuttle_control/lift/marine
 	name = "pandora hangar lift controls"
 	shuttle_tag = "Pandora Hangar Lift"
-	ui_template = "shuttle_control_console_lift.tmpl"
-	icon_state = "tiny"
-	icon_keyboard = "tiny_keyboard"
-	icon_screen = "lift"
-	density = FALSE
 
 
-//Landmarks for those lifts. (So they know where to go)
+// Landmarks for those lifts. (So they know where to go)
+// Egor's note: SLANDMARK_FLAG_AUTOSET flag makes base_area and base_turf set automatically to what is in there
+// DO NOT USE IT ON LANDMARKS WHERE SHUTTLE IS INITIALLY AT, IT WILL BREAK IT ALL
 /obj/effect/shuttle_landmark/lift/port_top
 	name = "Port Lift Top Deck"
 	landmark_tag = "nav_port_lift_top"
@@ -118,7 +107,6 @@
 /obj/effect/shuttle_landmark/lift/marine_bottom
 	name = "Pandora Hangar Lower Deck"
 	landmark_tag = "nav_marine_lift_bottom"
-	flags = SLANDMARK_FLAG_AUTOSET
 	base_area = /area/intrepid/department/exploration/storage
 	base_turf = /turf/simulated/floor/plating
 
@@ -132,6 +120,5 @@
 /obj/effect/shuttle_landmark/lift/intrepidcargo_bottom
 	name = "Intrepid Cargo Lower Deck"
 	landmark_tag = "nav_intrepidcargo_lift_bottom"
-	flags = SLANDMARK_FLAG_AUTOSET
 	base_area = /area/intrepid/department/cargo/cargostorage
 	base_turf = /turf/simulated/floor/plating
