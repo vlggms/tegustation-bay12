@@ -55,12 +55,13 @@
 	if (weapon)
 		new weapon(src.loc)
 	visible_message(SPAN_WARNING("Small shining spores float away from dying [src]!"))
-	for(var/mob/living/carbon/human/H in view(3, src))
+	var/turf/my_turf = get_turf(src)
+	for(var/mob/living/carbon/human/H in view(3, my_turf))
 		var/datum/disease/rage/D = new()
 		if(!CanContractDisease(D))
 			qdel(D)
 			continue
-		if(prob(26 * get_dist(src, H)))
+		if(prob(26 * get_dist(my_turf, H)))
 			qdel(D)
 			continue
 		H.ForceContractDisease(D, FALSE, TRUE)
