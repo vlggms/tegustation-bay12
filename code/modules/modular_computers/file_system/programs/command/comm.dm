@@ -278,7 +278,7 @@
 				if(!destination || !can_still_topic())
 					return 1
 
-				var/message = sanitize(input(usr, "Please write a message to announce to the destination.", "Priority Announcement") as null|message, encode = FALSE)
+				var/message = reject_bad_text(sanitize(input(usr, "Please write a message to announce to the destination.", "Priority Announcement") as null|message, encode = FALSE, extra = FALSE), MAX_MESSAGE_LEN)
 				if(!message || !can_still_topic())
 					return 1
 
