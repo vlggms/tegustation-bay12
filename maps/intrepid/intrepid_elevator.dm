@@ -25,8 +25,8 @@
 	name = "Cargobay Lift"
 	shuttle_area = /area/turbolift/intrepidcargo/lift
 	warmup_time = 3
-	waypoint_station = "nav_intrepidcargo_lift_top"
-	waypoint_offsite = "nav_intrepidcargo_lift_bottom"
+	waypoint_station = "nav_intrepidcargo_lift_bottom"
+	waypoint_offsite = "nav_intrepidcargo_lift_top"
 	sound_takeoff = 'sound/effects/lift_heavy_start.ogg'
 	sound_landing = 'sound/effects/lift_heavy_stop.ogg'
 	ceiling_type = null
