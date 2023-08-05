@@ -25,7 +25,7 @@
 /obj/effect/landmark/corpse/lar_maria/AdditionalEffects(mob/living/carbon/human/H)
 	. = ..()
 	var/datum/disease/rage/D = new()
-	H.ForceContractDisease(D, FALSE, TRUE)
+	D.TryInfect(H, FALSE)
 
 /mob/living/simple_animal/hostile/lar_maria
 	name = "Lar Maria hostile mob"
@@ -55,18 +55,13 @@
 	if (weapon)
 		new weapon(src.loc)
 	visible_message(SPAN_WARNING("Small shining spores float away from dying [src]!"))
-	for(var/mob/living/carbon/human/H in view(2, src))
+	for(var/mob/living/carbon/human/H in view(3, src))
 		var/datum/disease/rage/D = new()
 		if(!CanContractDisease(D))
 			qdel(D)
 			continue
-		var/list/armor_list = H.get_armors_by_zone(null, TOX, DAM_BIO)
-		var/armor_prob = 0
-		for(var/datum/extension/armor/A in armor_list)
-			if(A.get_value("bio") < ARMOR_BIO_SMALL)
-				continue
-			armor_prob += round(A.get_value("bio") * 0.2)
-		if(prob(25 * get_dist(src, H) + armor_prob))
+		if(prob(26 * get_dist(src, H)))
+			qdel(D)
 			continue
 		H.ForceContractDisease(D, FALSE, TRUE)
 	qdel(src)
