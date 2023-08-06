@@ -72,7 +72,7 @@
 		if(prob(cure_chance))
 			UpdateStage(max(stage - 1, 1))
 
-		if(disease_flags & CURABLE && prob(cure_chance))
+		if(stage <= 1 && disease_flags & CURABLE && prob(cure_chance))
 			Cure()
 			return FALSE
 
