@@ -23243,9 +23243,6 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/firealarm{
-	pixel_y = 15
-	},
-/obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -17
 	},
@@ -28698,6 +28695,7 @@
 	dir = 8;
 	pixel_y = -22
 	},
+/obj/prefab/hand_teleporter,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/command/teleporter)
 "xhL" = (

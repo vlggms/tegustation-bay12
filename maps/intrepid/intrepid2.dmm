@@ -4922,8 +4922,8 @@
 /area/shuttle/pandora/cargo)
 "qO" = (
 /obj/machinery/door/airlock/external/glass/bolted{
-	frequency = 1331;
-	id_tag = "merchant_shuttle_station_outer_airlock"
+	frequency = 1380;
+	id_tag = "merchant_shuttle_station_exterior"
 	},
 /obj/effect/floor_decal/industrial/warning/fulltile,
 /obj/machinery/door/blast/regular{
@@ -5686,9 +5686,9 @@
 /area/space)
 "tm" = (
 /obj/machinery/door/airlock/external/bolted_open{
-	frequency = 1331;
+	frequency = 1380;
 	icon_state = "open";
-	id_tag = "merchant_shuttle_station_airlock"
+	id_tag = "merchant_shuttle_station_interior"
 	},
 /obj/effect/floor_decal/industrial/warning/fulltile,
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -6194,12 +6194,12 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/intrepid/department/civillian/dockbaythree)
 "uB" = (
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
 	dir = 8;
 	id_tag = "merchant_shuttle_station_pump"
+	},
+/obj/structure/handrail{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/intrepid/department/civillian/dockbaythree)
@@ -7474,6 +7474,9 @@
 	tag_exterior_door = "merchant_shuttle_station_outer_airlock";
 	tag_interior_door = "merchant_shuttle_station_airlock"
 	},
+/obj/structure/handrail{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/intrepid/department/civillian/dockbaythree)
 "yL" = (
@@ -8704,8 +8707,8 @@
 	dir = 8;
 	id_tag = "merchant_shuttle_station_pump"
 	},
-/obj/structure/handrail{
-	dir = 8
+/obj/machinery/light{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/intrepid/department/civillian/dockbaythree)
@@ -11745,17 +11748,13 @@
 /area/intrepid/department/civillian/dockbayfive)
 "No" = (
 /obj/machinery/airlock_sensor{
-	frequency = 1331;
+	frequency = 1380;
 	id_tag = "merchant_shuttle_station_sensor";
-	master_tag = null;
 	pixel_x = -32
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
 	dir = 4;
 	id_tag = "merchant_shuttle_station_pump"
-	},
-/obj/structure/handrail{
-	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/intrepid/department/civillian/dockbaythree)
