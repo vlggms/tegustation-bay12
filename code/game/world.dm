@@ -761,4 +761,3 @@ proc/establish_old_db_connection()
 #undef FAILED_DB_CONNECTION_CUTOFF
 #undef THROTTLE_MAX_BURST
 #undef SET_THROTTLE
-// Cross-comms stuff
