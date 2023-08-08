@@ -46,6 +46,7 @@
 
 /obj/structure/closet/secure_closet/squad_leader/WillContain()
 	return list(
+		/obj/item/device/remote_weapon_controller,
 		/obj/item/gun/projectile/automatic/t18,
 		/obj/item/ammo_magazine/t18 = 3,
 		/obj/item/gun/projectile/pistol/military/alt,

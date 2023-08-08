@@ -20452,10 +20452,23 @@
 /area/turbolift/marine/lift)
 "qHx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/table/standard,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/structure/closet/crate/secure/weapon{
+	name = "bluespace ammunition crate";
+	req_access = list("ACCESS_INTREPID_SQUAD_LEADER")
+	},
+/obj/item/remote_weapon_ammo/explosive/low,
+/obj/item/remote_weapon_ammo/explosive/low,
+/obj/item/remote_weapon_ammo/explosive/low,
+/obj/item/remote_weapon_ammo/explosive/low,
+/obj/item/remote_weapon_ammo/explosive/low,
+/obj/item/remote_weapon_ammo/bluespace_fire,
+/obj/item/remote_weapon_ammo/bluespace_fire,
+/obj/item/remote_weapon_ammo/bluespace_fire,
+/obj/item/remote_weapon_ammo/bluespace_fire,
+/obj/item/remote_weapon_ammo/bluespace_fire,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/exploration/storage)
 "qIQ" = (

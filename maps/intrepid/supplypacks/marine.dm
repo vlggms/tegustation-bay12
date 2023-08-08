@@ -106,6 +106,39 @@
 	containername = "explosive weaponry crate"
 	access = access_marine
 
+/decl/hierarchy/supply_pack/marine/bluespace_he
+	name = "Ammunition - Bluespace HE rockets (x3)"
+	contains = list(/obj/item/remote_weapon_ammo/explosive = 3)
+	cost = 90
+	containertype = /obj/structure/closet/crate/secure/weapon
+	containername = "bluespace ammunition crate"
+	access = access_marine
+
+/decl/hierarchy/supply_pack/marine/bluespace_le
+	name = "Ammunition - Bluespace LE rockets (x3)"
+	contains = list(/obj/item/remote_weapon_ammo/explosive/low = 3)
+	cost = 60
+	containertype = /obj/structure/closet/crate/secure/weapon
+	containername = "bluespace ammunition crate"
+	access = access_marine
+
+/decl/hierarchy/supply_pack/marine/bluespace_fire
+	name = "Ammunition - Bluespace fire rockets (x3)"
+	contains = list(/obj/item/remote_weapon_ammo/bluespace_fire = 3)
+	cost = 60
+	containertype = /obj/structure/closet/crate/secure/weapon
+	containername = "bluespace ammunition crate"
+	access = access_marine
+
+/decl/hierarchy/supply_pack/marine/bluespace_infernum
+	name = "Ammunition - Bluespace infernum rockets (x3)"
+	contains = list(/obj/item/remote_weapon_ammo/bluespace_fire/infernum = 3)
+	cost = 300
+	containertype = /obj/structure/closet/crate/secure/weapon
+	containername = "bluespace ammunition crate"
+	access = access_marine
+	hidden = TRUE
+
 // Colony building stuff
 /decl/hierarchy/supply_pack/marine/colony_kit
 	name = "Equipment - Colonization kit"
