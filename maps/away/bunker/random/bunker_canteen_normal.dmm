@@ -1,0 +1,310 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/wall/r_titanium,
+/area/template_noop)
+"b" = (
+/obj/machinery/vending/cola,
+/turf/simulated/floor/tiled,
+/area/template_noop)
+"e" = (
+/obj/structure/reagent_dispensers/water_cooler,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/template_noop)
+"f" = (
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/multi_tile/glass/civilian{
+	dir = 4;
+	name = "Canteen"
+	},
+/turf/simulated/floor/tiled,
+/area/template_noop)
+"g" = (
+/obj/structure/flora/pottedplant/drooping,
+/turf/simulated/floor/tiled,
+/area/template_noop)
+"j" = (
+/turf/simulated/floor/tiled,
+/area/template_noop)
+"o" = (
+/turf/simulated/floor/tiled/monotile,
+/area/template_noop)
+"q" = (
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/template_noop)
+"w" = (
+/obj/structure/flora/pottedplant/decorative,
+/turf/simulated/floor/tiled,
+/area/template_noop)
+"x" = (
+/obj/structure/bed/chair/wood{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/template_noop)
+"y" = (
+/obj/structure/cable/cyan{
+	icon_state = "1-4"
+	},
+/obj/structure/bed/chair/wood{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/template_noop)
+"z" = (
+/obj/machinery/vending/snack,
+/turf/simulated/floor/tiled,
+/area/template_noop)
+"C" = (
+/obj/structure/bed/chair/wood,
+/turf/simulated/floor/tiled/monotile,
+/area/template_noop)
+"D" = (
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/template_noop)
+"G" = (
+/obj/structure/flora/pottedplant,
+/turf/simulated/floor/tiled,
+/area/template_noop)
+"H" = (
+/obj/machinery/vending/hotfood,
+/turf/simulated/floor/tiled,
+/area/template_noop)
+"I" = (
+/obj/structure/table/standard,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/template_noop)
+"J" = (
+/obj/machinery/light,
+/turf/simulated/floor/tiled,
+/area/template_noop)
+"K" = (
+/obj/machinery/power/apc{
+	dir = 1;
+	pixel_y = 24
+	},
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/obj/structure/cable/cyan{
+	icon_state = "0-2"
+	},
+/obj/machinery/vending/mredispenser,
+/turf/simulated/floor/tiled,
+/area/template_noop)
+"L" = (
+/obj/structure/bed/chair/wood{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/template_noop)
+"Q" = (
+/obj/structure/table/woodentable,
+/obj/item/reagent_containers/food/snacks/canned/caviar,
+/turf/simulated/floor/tiled/monotile,
+/area/template_noop)
+"S" = (
+/obj/structure/table/woodentable,
+/obj/item/reagent_containers/food/snacks/canned/tomato,
+/turf/simulated/floor/tiled/monotile,
+/area/template_noop)
+"T" = (
+/obj/structure/table/woodentable,
+/obj/item/reagent_containers/food/snacks/canned/beef{
+	pixel_y = 6
+	},
+/obj/item/material/kitchen/utensil/fork{
+	pixel_x = 10
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/template_noop)
+"U" = (
+/obj/structure/table/standard,
+/obj/random/mre,
+/obj/random/mre,
+/obj/item/material/kitchen/utensil/spoon{
+	pixel_x = -11
+	},
+/turf/simulated/floor/tiled,
+/area/template_noop)
+"V" = (
+/obj/structure/flora/pottedplant/aquatic,
+/turf/simulated/floor/tiled,
+/area/template_noop)
+"W" = (
+/obj/structure/table/woodentable,
+/obj/item/reagent_containers/food/snacks/canned/spinach{
+	pixel_x = 5;
+	pixel_y = 3
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/template_noop)
+"X" = (
+/obj/structure/table/standard,
+/obj/random/accessory,
+/turf/simulated/floor/tiled,
+/area/template_noop)
+"Y" = (
+/obj/structure/bed/chair/wood{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/template_noop)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+w
+j
+j
+j
+j
+j
+j
+G
+a
+"}
+(3,1,1) = {"
+a
+b
+o
+o
+o
+L
+o
+o
+j
+a
+"}
+(4,1,1) = {"
+a
+I
+o
+o
+C
+T
+Y
+o
+J
+a
+"}
+(5,1,1) = {"
+a
+H
+o
+o
+C
+Q
+Y
+o
+j
+a
+"}
+(6,1,1) = {"
+a
+U
+o
+o
+o
+x
+o
+o
+j
+a
+"}
+(7,1,1) = {"
+a
+z
+o
+o
+o
+L
+o
+o
+j
+a
+"}
+(8,1,1) = {"
+a
+X
+o
+o
+C
+S
+Y
+o
+j
+a
+"}
+(9,1,1) = {"
+a
+e
+o
+o
+C
+W
+Y
+o
+J
+a
+"}
+(10,1,1) = {"
+a
+K
+D
+D
+D
+y
+o
+o
+j
+a
+"}
+(11,1,1) = {"
+a
+g
+j
+j
+j
+q
+j
+j
+V
+a
+"}
+(12,1,1) = {"
+a
+a
+a
+a
+j
+f
+a
+a
+a
+a
+"}

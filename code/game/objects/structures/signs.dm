@@ -496,6 +496,13 @@
 /obj/structure/sign/double/terragovflag/right
 	icon_state = "terragovflag-right"
 
+// Independent Space Confederation
+/obj/structure/sign/isc
+	name = "\improper Independent Space Confederation Seal"
+	desc = "A sign which signifies who this vessel belongs to."
+	icon = 'icons/obj/isc_decals.dmi'
+	icon_state = "iscseal"
+
 // Miscellaneous
 /obj/structure/sign/obs
 	name = "\improper Order of the Black Sun Seal"

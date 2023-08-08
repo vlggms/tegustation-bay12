@@ -50,6 +50,26 @@
 	id = "abandoned_bunker_sec_cafe_feast"
 	suffixes = list("bunker_sec_cafe_feast.dmm")
 
+/* Bunker Engineering */
+/obj/effect/spawner/room/bunker_engineering
+	room_width = 16
+	room_height = 10
+	room_type = "abandoned_bunker_engineering"
+
+/datum/map_template/ruin/random_room/bunker_engineering
+	name = "Abandoned Bunker - Engineering Normal"
+	template_width = 16
+	template_height = 10
+	room_type = "abandoned_bunker_engineering"
+	id = "abandoned_bunker_engineering_normal"
+	prefix = "maps/away/bunker/random/"
+	suffixes = list("bunker_engineering_normal.dmm")
+
+/datum/map_template/ruin/random_room/bunker_engineering/infested
+	name = "Abandoned Bunker - Engineering Infested"
+	id = "abandoned_bunker_engineering_infested"
+	suffixes = list("bunker_engineering_infested.dmm")
+
 /* Bunker Storage */
 /obj/effect/spawner/room/bunker_storage
 	room_width = 9
@@ -129,6 +149,21 @@
 	id = "abandoned_bunker_room_south_three"
 	suffixes = list("bunker_room_south_3.dmm")
 
+/* Canteen */
+/obj/effect/spawner/room/bunker_canteen
+	room_width = 12
+	room_height = 10
+	room_type = "abandoned_bunker_canteen"
+
+/datum/map_template/ruin/random_room/bunker_canteen
+	name = "Abandoned Bunker - Canteen Normal"
+	template_width = 12
+	template_height = 10
+	room_type = "abandoned_bunker_canteen"
+	id = "abandoned_bunker_canteen_normal"
+	prefix = "maps/away/bunker/random/"
+	suffixes = list("bunker_canteen_normal.dmm")
+
 /* Mining Large Zone */
 /obj/effect/spawner/room/bunker_mining_zone
 	room_width = 20
@@ -149,3 +184,8 @@
 	name = "Abandoned Bunker - Mining Zone Quantum Entry"
 	id = "abandoned_bunker_mining_zone_quantum"
 	suffixes = list("bunker_mining_zone_quantum.dmm")
+
+/datum/map_template/ruin/random_room/bunker_mining_zone/abominable_infestation
+	name = "Abandoned Bunker - Mining Zone Abominable Infestation"
+	id = "abandoned_bunker_mining_zone_infestation"
+	suffixes = list("bunker_mining_zone_infestation.dmm")

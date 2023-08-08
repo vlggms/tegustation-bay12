@@ -48,6 +48,7 @@
 				set_stance(STANCE_APPROACH)
 				if (holder.say_list)
 					holder.ISay(pick(holder.say_list.say_escalate))
+					PlayMobSound(holder.say_list.speak_sounds)
 			else
 				return // Wait a bit.
 
@@ -125,7 +126,7 @@
 // Simply plays a sound chosen out of a list
 /datum/ai_holder/proc/PlayMobSound(list/potential_sounds)
 	if(LAZYLEN(potential_sounds))
-		var/result = pickweight(holder.say_list.emote_see_sounds)
+		var/result = pickweight(potential_sounds)
 		if(result != null)
 			playsound(holder, result, 50, 1)
 
@@ -145,3 +146,4 @@
 	if (speak_to)
 		holder.face_atom(speak_to)
 	holder.ISay(message)
+	PlayMobSound(holder.say_list.speak_sounds)

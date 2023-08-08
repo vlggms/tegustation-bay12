@@ -175,3 +175,11 @@
 /obj/effect/landmark/corpse/riot_officer
 	name = "Riot Officer"
 	corpse_outfits = list(/decl/hierarchy/outfit/job/security/officer/armored/riot)
+
+/obj/effect/landmark/corpse/ascent_alate
+	name = "Ascent Alate"
+	species = list(SPECIES_MANTID_ALATE)
+
+/obj/effect/landmark/corpse/ascent_alate/armor
+	name = "Ascent Alate - Armor"
+	corpse_outfits = list(/decl/hierarchy/outfit/job/ascent/voidsuit)
