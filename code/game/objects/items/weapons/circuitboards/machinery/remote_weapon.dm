@@ -10,3 +10,7 @@
 /obj/item/stock_parts/circuitboard/remote_weapon/explosive
 	name = T_BOARD("explosive remote weapon")
 	build_path = /obj/machinery/remote_weapon/explosive
+
+/obj/item/stock_parts/circuitboard/remote_weapon/loadable
+	name = T_BOARD("bluespace rocket launcher")
+	build_path = /obj/machinery/remote_weapon/loadable
