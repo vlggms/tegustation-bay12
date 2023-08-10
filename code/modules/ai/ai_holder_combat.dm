@@ -12,6 +12,8 @@
 
 	var/prying = FALSE                      // True when the mob is trying to force open a door.
 
+	var/max_attack_range = 7
+
 	var/list/valid_obstacles_by_priority = list(/obj/structure/window,
 												/obj/structure/closet,
 												/obj/machinery/door/window,
@@ -173,7 +175,7 @@
 
 // Can be used to conditionally do a ranged or melee attack.
 /datum/ai_holder/proc/max_range(atom/movable/AM)
-	return holder.ICheckRangedAttack(AM) ? 7 : 1
+	return holder.ICheckRangedAttack(AM) ? max_attack_range : 1
 
 // Goes to the target, to attack them.
 // Called when in STANCE_APPROACH.
