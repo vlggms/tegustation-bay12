@@ -22,7 +22,7 @@
 	dock_target = "escape_pod_" + #NUMBER; \
 	arming_controller = "escape_pod_"+ #NUMBER +"_berth"; \
 	waypoint_station = "escape_pod_"+ #NUMBER +"_start"; \
-	landmark_transition = "escape_pod_"+ #NUMBER +"_internim"; \
+	landmark_transition = "escape_pod_"+ #NUMBER +"_transit"; \
 	waypoint_offsite = "escape_pod_"+ #NUMBER +"_out"; \
 } \
 /obj/effect/shuttle_landmark/escape_pod/start/pod##NUMBER { \
@@ -30,10 +30,10 @@
 	docking_controller = "escape_pod_"+ #NUMBER +"_berth"; \
 } \
 /obj/effect/shuttle_landmark/escape_pod/out/pod##NUMBER { \
-	landmark_tag = "escape_pod_"+ #NUMBER +"_internim"; \
+	landmark_tag = "escape_pod_"+ #NUMBER +"_out"; \
 } \
 /obj/effect/shuttle_landmark/escape_pod/transit/pod##NUMBER { \
-	landmark_tag = "escape_pod_"+ #NUMBER +"_out"; \
+	landmark_tag = "escape_pod_"+ #NUMBER +"_transit"; \
 }
 
 INTREPID_ESCAPE_POD(1)
