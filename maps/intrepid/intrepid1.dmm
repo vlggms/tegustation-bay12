@@ -147,6 +147,11 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/meetingroom)
+"ahH" = (
+/obj/effect/paint/sun,
+/obj/machinery/atmospherics/pipe/simple/hidden/universal,
+/turf/simulated/wall/r_titanium,
+/area/shuttle/escape_pod3/station)
 "aio" = (
 /obj/machinery/power/smes/buildable/preset/torch/substation_full{
 	RCon_tag = "Substation - Starboard"
@@ -1805,6 +1810,10 @@
 /obj/effect/wallframe_spawn/no_grille,
 /turf/simulated/floor,
 /area/intrepid/misc/hallway/center)
+"bzF" = (
+/obj/effect/wallframe_spawn/reinforced,
+/turf/simulated/floor,
+/area/shuttle/escape_pod3/station)
 "bzZ" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -2153,7 +2162,7 @@
 	name = "Escape Pod Two"
 	},
 /turf/simulated/floor/tiled/white/monotile,
-/area/space)
+/area/shuttle/escape_pod2/station)
 "bSo" = (
 /obj/machinery/access_button{
 	command = "cycle_exterior";
@@ -3407,7 +3416,7 @@
 	pixel_y = -30
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/shuttle/escape_pod2/station)
 "cNv" = (
 /obj/structure/disposalpipe/junction{
 	dir = 4
@@ -3583,7 +3592,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/shuttle/escape_pod3/station)
 "cXn" = (
 /obj/machinery/hologram/holopad/longrange,
 /turf/simulated/floor/tiled/dark,
@@ -4159,6 +4168,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/center)
+"dwm" = (
+/obj/effect/paint/sun,
+/turf/simulated/wall/r_titanium,
+/area/shuttle/escape_pod2/station)
 "dww" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -4309,6 +4322,11 @@
 /obj/effect/wallframe_spawn/reinforced_phoron/hull,
 /turf/simulated/floor,
 /area/intrepid/department/command/commandquarters/tgs)
+"dBy" = (
+/obj/effect/paint/sun,
+/obj/structure/shuttle/engine/propulsion,
+/turf/simulated/wall/r_titanium,
+/area/shuttle/escape_pod2/station)
 "dBz" = (
 /obj/machinery/computer/modular{
 	dir = 1
@@ -5098,7 +5116,7 @@
 /obj/effect/decal/cleanable/cobweb2,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/shuttle/escape_pod2/station)
 "ebF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -5181,6 +5199,11 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/monitoring)
+"egf" = (
+/obj/machinery/cryopod,
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled/white,
+/area/shuttle/escape_pod2/station)
 "ehe" = (
 /obj/machinery/computer/modular/preset/cardslot/command{
 	dir = 4;
@@ -5392,7 +5415,7 @@
 	pixel_y = 18
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/shuttle/escape_pod3/station)
 "emO" = (
 /obj/structure/railing/mapped{
 	dir = 1;
@@ -6516,7 +6539,7 @@
 /obj/effect/paint/sun,
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
 /turf/simulated/wall/r_titanium,
-/area/space)
+/area/shuttle/escape_pod1/station)
 "flv" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/steel_grid,
@@ -6695,7 +6718,7 @@
 	pixel_y = -30
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/shuttle/escape_pod1/station)
 "ftx" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -7999,7 +8022,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/shuttle/escape_pod3/station)
 "gCv" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
@@ -8137,6 +8160,11 @@
 /obj/machinery/hologram/holopad/longrange,
 /turf/simulated/floor/tiled/white,
 /area/intrepid/misc/hallway/portside)
+"gFv" = (
+/obj/machinery/cryopod,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/white,
+/area/shuttle/escape_pod3/station)
 "gFC" = (
 /obj/machinery/mech_recharger,
 /turf/simulated/floor/reinforced,
@@ -8207,6 +8235,10 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/civillian/bar)
+"gIO" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/white,
+/area/shuttle/escape_pod3/station)
 "gJm" = (
 /obj/machinery/camera/network/first_deck{
 	c_tag = "First Deck - Port Wing Tip 2";
@@ -8266,6 +8298,12 @@
 /obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor,
 /area/intrepid/department/exploration/storage)
+"gLJ" = (
+/obj/machinery/cryopod{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/shuttle/escape_pod3/station)
 "gMd" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -8300,7 +8338,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/shuttle/escape_pod1/station)
 "gOZ" = (
 /obj/structure/railing/mapped{
 	dir = 1;
@@ -10058,7 +10096,7 @@
 	},
 /obj/effect/decal/cleanable/cobweb,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/shuttle/escape_pod1/station)
 "iqb" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -10250,7 +10288,7 @@
 	icon_state = "heater"
 	},
 /turf/simulated/wall/r_titanium,
-/area/space)
+/area/shuttle/escape_pod3/station)
 "iBV" = (
 /obj/structure/flora/pottedplant/floorleaf,
 /obj/effect/floor_decal/corner/blue{
@@ -11144,7 +11182,7 @@
 	name = "Escape Pod Computer"
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/shuttle/escape_pod2/station)
 "jqG" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/crate/trashcart,
@@ -11545,6 +11583,10 @@
 /obj/machinery/portable_atmospherics/canister/empty,
 /turf/simulated/floor,
 /area/shuttle/research/maint)
+"jHD" = (
+/obj/effect/wallframe_spawn/reinforced,
+/turf/simulated/floor,
+/area/shuttle/escape_pod2/station)
 "jHK" = (
 /obj/structure/hygiene/toilet{
 	pixel_y = 13
@@ -12762,7 +12804,7 @@
 /obj/effect/paint/sun,
 /obj/structure/shuttle/engine/propulsion,
 /turf/simulated/wall/r_titanium,
-/area/space)
+/area/shuttle/escape_pod1/station)
 "kKO" = (
 /obj/machinery/igniter{
 	id_tag = "portsparker"
@@ -13060,7 +13102,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/spiderling_remains,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/shuttle/escape_pod3/station)
 "kXp" = (
 /obj/machinery/atmospherics/valve/shutoff/supply,
 /obj/machinery/atmospherics/valve/shutoff/scrubbers,
@@ -13959,7 +14001,7 @@
 	icon_state = "railing0-1"
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/shuttle/escape_pod1/station)
 "lIn" = (
 /obj/structure/table/standard,
 /obj/machinery/recharger,
@@ -14778,8 +14820,9 @@
 	id_tag = "escape_pod_3_door";
 	name = "Escape Pod Three"
 	},
+/obj/effect/shuttle_landmark/escape_pod/start/pod3,
 /turf/simulated/floor/tiled/white/monotile,
-/area/space)
+/area/shuttle/escape_pod3/station)
 "mnY" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 10
@@ -15314,6 +15357,17 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
+"mIA" = (
+/obj/machinery/portable_atmospherics/canister/empty,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
+	},
+/obj/structure/railing/mapped{
+	dir = 8;
+	icon_state = "railing0-1"
+	},
+/turf/simulated/floor/tiled/white,
+/area/shuttle/escape_pod2/station)
 "mIM" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -15566,6 +15620,13 @@
 /obj/machinery/meter,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/internalportside)
+"mSr" = (
+/obj/machinery/r_n_d/server{
+	machine_name = "\improper escape pod computer";
+	name = "Escape Pod Computer"
+	},
+/turf/simulated/floor/tiled/white,
+/area/shuttle/escape_pod3/station)
 "mSL" = (
 /obj/structure/closet/crate/plastic,
 /obj/item/reagent_containers/ivbag/blood/OMinus,
@@ -15944,7 +16005,7 @@
 "ngB" = (
 /obj/effect/wallframe_spawn/reinforced,
 /turf/simulated/floor,
-/area/space)
+/area/shuttle/escape_pod1/station)
 "ngE" = (
 /obj/machinery/door/firedoor{
 	dir = 4
@@ -17615,7 +17676,7 @@
 	},
 /obj/effect/decal/cleanable/cobweb,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/shuttle/escape_pod1/station)
 "oDD" = (
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
@@ -18012,7 +18073,7 @@
 	icon_state = "railing0-1"
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/shuttle/escape_pod2/station)
 "oSp" = (
 /obj/machinery/atmospherics/unary/engine{
 	dir = 8
@@ -18078,7 +18139,7 @@
 /obj/machinery/cryopod,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/shuttle/escape_pod1/station)
 "oVm" = (
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 4
@@ -19374,6 +19435,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/assembly/chargebay)
+"pSU" = (
+/obj/machinery/door/airlock/external/escapepod{
+	id_tag = "escape_pod_1_door";
+	name = "Escape Pod One"
+	},
+/obj/effect/shuttle_landmark/escape_pod/start/pod1,
+/turf/simulated/floor/tiled/white/monotile,
+/area/shuttle/escape_pod1/station)
 "pSV" = (
 /obj/machinery/door/firedoor,
 /obj/effect/wallframe_spawn/reinforced,
@@ -19414,7 +19483,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/shuttle/escape_pod2/station)
 "pUK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -19577,6 +19646,11 @@
 /obj/structure/flora/pottedplant/floorleaf,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/command/meetingroom)
+"qbh" = (
+/obj/effect/paint/sun,
+/obj/machinery/atmospherics/pipe/simple/hidden/universal,
+/turf/simulated/wall/r_titanium,
+/area/shuttle/escape_pod2/station)
 "qbD" = (
 /obj/effect/floor_decal/corner/research/border{
 	dir = 8
@@ -19775,7 +19849,7 @@
 "qgh" = (
 /obj/effect/paint/sun,
 /turf/simulated/wall/r_titanium,
-/area/space)
+/area/shuttle/escape_pod1/station)
 "qgr" = (
 /obj/structure/catwalk,
 /obj/structure/railing/mapped{
@@ -19809,6 +19883,10 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/command/bridge)
+"qhG" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/white,
+/area/shuttle/escape_pod2/station)
 "qiB" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -20170,6 +20248,10 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/internalportside)
+"qxB" = (
+/obj/effect/paint/sun,
+/turf/simulated/wall/r_titanium,
+/area/shuttle/escape_pod3/station)
 "qxC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -20471,6 +20553,13 @@
 /obj/item/remote_weapon_ammo/bluespace_fire,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/exploration/storage)
+"qHD" = (
+/obj/machinery/door/airlock/external/escapepod{
+	id_tag = "escape_pod_3_door";
+	name = "Escape Pod Three"
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/shuttle/escape_pod3/station)
 "qIQ" = (
 /obj/effect/floor_decal/corner/red/mono,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -20526,7 +20615,7 @@
 /area/intrepid/department/security/bo)
 "qLh" = (
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/shuttle/escape_pod1/station)
 "qMi" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 9
@@ -20642,7 +20731,7 @@
 	name = "Escape Pod One"
 	},
 /turf/simulated/floor/tiled/white/monotile,
-/area/space)
+/area/shuttle/escape_pod1/station)
 "qOQ" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -21847,6 +21936,14 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/cos)
+"rQR" = (
+/obj/machinery/door/airlock/external/escapepod{
+	id_tag = "escape_pod_2_door";
+	name = "Escape Pod Two"
+	},
+/obj/effect/shuttle_landmark/escape_pod/start/pod2,
+/turf/simulated/floor/tiled/white/monotile,
+/area/shuttle/escape_pod2/station)
 "rRk" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -22563,6 +22660,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/computerlab)
+"srU" = (
+/obj/machinery/cryopod,
+/turf/simulated/floor/tiled/white,
+/area/shuttle/escape_pod2/station)
 "ssf" = (
 /obj/machinery/door/firedoor,
 /obj/effect/wallframe_spawn/reinforced,
@@ -23073,7 +23174,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/shuttle/escape_pod1/station)
 "sNN" = (
 /obj/machinery/papershredder,
 /obj/item/device/radio/intercom{
@@ -25321,7 +25422,7 @@
 "uxz" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/shuttle/escape_pod1/station)
 "uxC" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/orange{
@@ -25404,7 +25505,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/shuttle/escape_pod2/station)
 "uDy" = (
 /obj/machinery/organ_printer/robot,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -25541,7 +25642,7 @@
 	icon_state = "railing0-1"
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/shuttle/escape_pod3/station)
 "uHa" = (
 /turf/simulated/wall/prepainted,
 /area/intrepid/department/civillian/computerlab)
@@ -26179,7 +26280,7 @@
 /obj/machinery/cryopod,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/shuttle/escape_pod1/station)
 "vkG" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -26786,7 +26887,7 @@
 	icon_state = "railing0-1"
 	},
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/shuttle/escape_pod1/station)
 "vHI" = (
 /obj/effect/floor_decal/corner/research/border{
 	dir = 1
@@ -27939,7 +28040,7 @@
 	dir = 1
 	},
 /turf/simulated/wall/r_titanium,
-/area/space)
+/area/shuttle/escape_pod3/station)
 "wHl" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -28486,6 +28587,14 @@
 /obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/internalportside)
+"wYX" = (
+/obj/machinery/atmospherics/unary/tank/air,
+/obj/structure/railing/mapped{
+	dir = 4;
+	icon_state = "railing0-1"
+	},
+/turf/simulated/floor/tiled/white,
+/area/shuttle/escape_pod3/station)
 "wZj" = (
 /obj/structure/cable/orange{
 	icon_state = "2-8"
@@ -29319,6 +29428,9 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
 /area/security/prison)
+"xJX" = (
+/turf/simulated/floor/tiled/white,
+/area/shuttle/escape_pod2/station)
 "xJY" = (
 /obj/effect/floor_decal/corner/blue/three_quarters{
 	dir = 8
@@ -29408,7 +29520,7 @@
 "xNZ" = (
 /obj/machinery/cryopod,
 /turf/simulated/floor/tiled/white,
-/area/space)
+/area/shuttle/escape_pod1/station)
 "xOH" = (
 /obj/machinery/papershredder,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -51730,7 +51842,7 @@ uxz
 ftq
 qOJ
 uxz
-qOJ
+pSU
 wmy
 eIn
 sOj
@@ -53138,13 +53250,13 @@ cjD
 cjD
 cjD
 cjD
-ngB
-ngB
-qgh
-qgh
-qgh
-qgh
-kKr
+jHD
+jHD
+dwm
+dwm
+dwm
+dwm
+dBy
 aQj
 aTz
 eRv
@@ -53220,11 +53332,11 @@ bQZ
 kVn
 wGX
 iBb
-qgh
-qgh
-qgh
-ngB
-ngB
+qxB
+qxB
+qxB
+bzF
+bzF
 cjD
 cjD
 cjD
@@ -53339,14 +53451,14 @@ cjD
 cjD
 cjD
 cjD
-ngB
-ngB
+jHD
+jHD
 uDs
 uDs
 pUb
-fkV
+qbh
 oRV
-qgh
+dwm
 aQj
 tjT
 cGM
@@ -53420,14 +53532,14 @@ cZl
 ncK
 ekt
 kVn
-qgh
-lHu
-fkV
+qxB
+wYX
+ahH
 cWd
-gOO
-gOO
-ngB
-ngB
+gLJ
+gLJ
+bzF
+bzF
 cjD
 cjD
 cjD
@@ -53541,14 +53653,14 @@ cjD
 cjD
 cjD
 cjD
-ngB
+jHD
 jpU
-qLh
-uxz
+xJX
+qhG
 cMX
 bRG
-qLh
-bRG
+xJX
+rQR
 fvN
 jBI
 eRv
@@ -53623,13 +53735,13 @@ ncK
 jze
 osS
 mnR
-uxz
-mnR
+gIO
+qHD
 emL
 kXj
-uxz
-jpU
-ngB
+gIO
+mSr
+bzF
 cjD
 cjD
 cjD
@@ -53743,14 +53855,14 @@ cjD
 cjD
 cjD
 cjD
-ngB
-ngB
+jHD
+jHD
 ebt
-xNZ
-oTP
-fkV
-vHs
-qgh
+srU
+egf
+qbh
+mIA
+dwm
 aQj
 nDj
 goA
@@ -53824,14 +53936,14 @@ ncK
 ncK
 hbr
 kVn
-qgh
+qxB
 uGX
-fkV
+ahH
 gCj
-vkx
-vkx
-ngB
-ngB
+gFv
+gFv
+bzF
+bzF
 cjD
 cjD
 cjD
@@ -53946,13 +54058,13 @@ cjD
 cjD
 cjD
 cjD
-ngB
-ngB
-qgh
-qgh
-qgh
-qgh
-kKr
+jHD
+jHD
+dwm
+dwm
+dwm
+dwm
+dBy
 wQU
 kEF
 hnh
@@ -54028,11 +54140,11 @@ qBp
 wQU
 wGX
 iBb
-qgh
-qgh
-qgh
-ngB
-ngB
+qxB
+qxB
+qxB
+bzF
+bzF
 cjD
 cjD
 cjD

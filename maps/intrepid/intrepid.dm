@@ -7,6 +7,7 @@
 	#include "intrepid_events.dm"
 	#include "intrepid_overmap.dm"
 	#include "intrepid_presets.dm"
+	#include "intrepid_procs.dm"
 	#include "intrepid_radio.dm"
 	#include "intrepid_ranks.dm"
 	#include "intrepid_setup.dm"

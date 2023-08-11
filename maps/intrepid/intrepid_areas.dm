@@ -650,6 +650,9 @@
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
 /*** CentCom ***/
+/area/centcom/evac
+	name = "\improper Centcom Emergency Shuttle"
+
 // Actors Guild
 /area/acting
 	name = "\improper Centcom Acting Guild"
@@ -690,3 +693,39 @@
 /area/tdome/tdomeobserve
 	name = "\improper Thunderdome (Observer.)"
 	icon_state = "purple"
+
+/area/shuttle/escape_pod1/station
+	holomap_color = HOLOMAP_AREACOLOR_ESCAPE
+	name = "Escape Pod One"
+	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
+
+/area/shuttle/escape_pod2/station
+	holomap_color = HOLOMAP_AREACOLOR_ESCAPE
+	name = "Escape Pod Two"
+	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
+
+/area/shuttle/escape_pod3/station
+	holomap_color = HOLOMAP_AREACOLOR_ESCAPE
+	name = "Escape Pod Three"
+	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
+
+/area/shuttle/escape_pod4/station
+	holomap_color = HOLOMAP_AREACOLOR_ESCAPE
+	name = "Escape Pod Four"
+	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
+
+/area/shuttle/escape_pod1/centcom
+	icon_state = "shuttle"
+	req_access = list(access_cent_general)
+
+/area/shuttle/escape_pod2/centcom
+	icon_state = "shuttle"
+	req_access = list(access_cent_general)
+
+/area/shuttle/escape_pod3/centcom
+	icon_state = "shuttle"
+	req_access = list(access_cent_general)
+
+/area/shuttle/escape_pod4/centcom
+	icon_state = "shuttle"
+	req_access = list(access_cent_general)

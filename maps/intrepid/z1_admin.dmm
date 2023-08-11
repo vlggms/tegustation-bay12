@@ -13,38 +13,44 @@
 /turf/space,
 /area/shuttle/syndicate_elite/mothership)
 "aae" = (
-/turf/simulated/wall/r_titanium,
-/area/space)
+/turf/space,
+/area/shuttle/escape_pod1/centcom)
 "aaf" = (
+/turf/space,
+/area/shuttle/escape_pod2/centcom)
+"aag" = (
+/turf/simulated/wall/r_titanium,
+/area/centcom/evac)
+"aah" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 1;
 	icon_state = "propulsion_r"
 	},
 /turf/space,
-/area/space)
-"aag" = (
+/area/centcom/evac)
+"aai" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 1;
 	icon_state = "propulsion"
 	},
 /turf/space,
-/area/space)
-"aah" = (
+/area/centcom/evac)
+"aaj" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 1;
 	icon_state = "propulsion_l"
 	},
 /turf/space,
-/area/space)
-"aai" = (
+/area/centcom/evac)
+"aak" = (
 /obj/structure/window/reinforced/crescent,
 /obj/structure/shuttle/engine/heater{
 	dir = 1;
 	icon_state = "heater"
 	},
 /turf/unsimulated/floor/plating,
-/area/space)
-"aaj" = (
+/area/centcom/evac)
+"aal" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
 	icon_state = "closed";
@@ -56,8 +62,8 @@
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor2"
 	},
-/area/space)
-"aak" = (
+/area/centcom/evac)
+"aam" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
 	icon_state = "closed";
@@ -69,40 +75,19 @@
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor2"
 	},
-/area/space)
-"aal" = (
-/obj/machinery/portable_atmospherics/powered/pump,
-/turf/unsimulated/floor/plating,
-/area/space)
-"aam" = (
-/obj/machinery/portable_atmospherics/canister/oxygen,
-/turf/unsimulated/floor/plating,
-/area/space)
+/area/centcom/evac)
 "aan" = (
-/turf/simulated/floor/plating,
-/turf/simulated/wall/r_titanium,
+/turf/space,
+/turf/space,
 /area/space)
 "aao" = (
-/obj/structure/closet/emcloset,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
-/area/space)
+/obj/machinery/portable_atmospherics/powered/pump,
+/turf/unsimulated/floor/plating,
+/area/centcom/evac)
 "aap" = (
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "escape_pod_1_recovery";
-	pixel_x = 25;
-	pixel_y = 30;
-	req_access = list(list("ACCESS_EXTERNAL","ACCESS_TORCH_CREW"));
-	tag_door = "escape_pod_1_recovery_hatch"
-	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor2"
-	},
-/area/space)
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/unsimulated/floor/plating,
+/area/centcom/evac)
 "aaq" = (
 /obj/structure/window/reinforced/crescent{
 	dir = 4
@@ -206,6 +191,27 @@
 /turf/unsimulated/wall,
 /area/space)
 "aaL" = (
+/obj/structure/closet/emcloset,
+/turf/unsimulated/floor{
+	icon = 'icons/turf/shuttle.dmi';
+	icon_state = "floor"
+	},
+/area/centcom/evac)
+"aaM" = (
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1380;
+	id_tag = "escape_pod_1_recovery";
+	pixel_x = 25;
+	pixel_y = 30;
+	req_access = list(list("ACCESS_EXTERNAL","ACCESS_TORCH_CREW"));
+	tag_door = "escape_pod_1_recovery_hatch"
+	},
+/turf/unsimulated/floor{
+	icon = 'icons/turf/shuttle.dmi';
+	icon_state = "floor2"
+	},
+/area/centcom/evac)
+"aaN" = (
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/toxin{
 	pixel_x = -2;
@@ -216,8 +222,8 @@
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor"
 	},
-/area/space)
-"aaM" = (
+/area/centcom/evac)
+"aaO" = (
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/fire,
 /obj/item/storage/firstaid/fire{
@@ -228,8 +234,8 @@
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor"
 	},
-/area/space)
-"aaN" = (
+/area/centcom/evac)
+"aaP" = (
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/regular{
 	pixel_x = 2;
@@ -243,25 +249,7 @@
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor"
 	},
-/area/space)
-"aaO" = (
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "escape_pod_2_recovery";
-	pixel_x = -25;
-	pixel_y = 30;
-	req_access = list(list("ACCESS_EXTERNAL","ACCESS_TORCH_CREW"));
-	tag_door = "escape_pod_2_recovery_hatch"
-	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor2"
-	},
-/area/space)
-"aaP" = (
-/obj/machinery/portable_atmospherics/powered/scrubber,
-/turf/unsimulated/floor/plating,
-/area/space)
+/area/centcom/evac)
 "aaQ" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/holofloor/desert,
@@ -308,13 +296,31 @@
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_emptycourt)
 "aba" = (
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1380;
+	id_tag = "escape_pod_2_recovery";
+	pixel_x = -25;
+	pixel_y = 30;
+	req_access = list(list("ACCESS_EXTERNAL","ACCESS_TORCH_CREW"));
+	tag_door = "escape_pod_2_recovery_hatch"
+	},
+/turf/unsimulated/floor{
+	icon = 'icons/turf/shuttle.dmi';
+	icon_state = "floor2"
+	},
+/area/centcom/evac)
+"abb" = (
+/obj/machinery/portable_atmospherics/powered/scrubber,
+/turf/unsimulated/floor/plating,
+/area/centcom/evac)
+"abc" = (
 /obj/machinery/vending/engineering,
 /turf/unsimulated/floor/plating,
-/area/space)
-"abb" = (
+/area/centcom/evac)
+"abd" = (
 /turf/unsimulated/floor/plating,
-/area/space)
-"abc" = (
+/area/centcom/evac)
+"abe" = (
 /obj/machinery/vending/wallmed1{
 	name = "Emergency NanoMed";
 	pixel_x = -30;
@@ -324,26 +330,13 @@
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor"
 	},
-/area/space)
-"abd" = (
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
-/area/space)
-"abe" = (
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor2"
-	},
-/area/space)
+/area/centcom/evac)
 "abf" = (
-/obj/item/stool,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor"
 	},
-/area/space)
+/area/centcom/evac)
 "abg" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/holofloor/grass,
@@ -409,6 +402,19 @@
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/holodeck/source_emptycourt)
 "abo" = (
+/turf/unsimulated/floor{
+	icon = 'icons/turf/shuttle.dmi';
+	icon_state = "floor2"
+	},
+/area/centcom/evac)
+"abp" = (
+/obj/item/stool,
+/turf/unsimulated/floor{
+	icon = 'icons/turf/shuttle.dmi';
+	icon_state = "floor"
+	},
+/area/centcom/evac)
+"abq" = (
 /obj/machinery/vending/wallmed1{
 	name = "Emergency NanoMed";
 	pixel_x = 30;
@@ -418,40 +424,40 @@
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor"
 	},
-/area/space)
-"abp" = (
+/area/centcom/evac)
+"abr" = (
 /obj/machinery/door/airlock/hatch/maintenance,
 /turf/simulated/floor/plating,
-/area/space)
-"abq" = (
+/area/centcom/evac)
+"abs" = (
 /obj/machinery/vending/cigarette,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor"
 	},
-/area/space)
-"abr" = (
+/area/centcom/evac)
+"abt" = (
 /obj/structure/bed/chair,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor"
 	},
-/area/space)
-"abs" = (
+/area/centcom/evac)
+"abu" = (
 /obj/machinery/vending/cola,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor"
 	},
-/area/space)
-"abt" = (
+/area/centcom/evac)
+"abv" = (
 /obj/structure/table/standard,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor"
 	},
-/area/space)
-"abu" = (
+/area/centcom/evac)
+"abw" = (
 /obj/structure/bed/chair{
 	dir = 4
 	},
@@ -459,8 +465,8 @@
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor"
 	},
-/area/space)
-"abv" = (
+/area/centcom/evac)
+"abx" = (
 /obj/structure/bed/chair{
 	dir = 8
 	},
@@ -468,58 +474,25 @@
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor"
 	},
-/area/space)
-"abw" = (
+/area/centcom/evac)
+"aby" = (
 /obj/machinery/vending/snack,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor"
 	},
-/area/space)
-"abx" = (
+/area/centcom/evac)
+"abz" = (
+/turf/space,
+/area/shuttle/escape_pod4/centcom)
+"abA" = (
 /obj/structure/table/standard,
 /obj/item/hand_labeler,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor"
 	},
-/area/space)
-"aby" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1380;
-	icon_state = "closed";
-	id_tag = "escape_pod_5_recovery_hatch";
-	locked = 1;
-	name = "Recovery Shuttle Dock"
-	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor2"
-	},
-/area/space)
-"abz" = (
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "escape_pod_5_recovery";
-	pixel_x = -25;
-	pixel_y = 25;
-	req_access = list(list("ACCESS_EXTERNAL","ACCESS_TORCH_CREW"));
-	tag_door = "escape_pod_5_recovery_hatch"
-	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor2"
-	},
-/area/space)
-"abA" = (
-/obj/structure/bed/chair{
-	dir = 1
-	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
-/area/space)
+/area/centcom/evac)
 "abB" = (
 /obj/structure/flora/ausbushes/palebush,
 /turf/simulated/floor/holofloor/grass,
@@ -624,6 +597,45 @@
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_courtroom)
 "abM" = (
+/turf/space,
+/area/shuttle/escape_pod3/centcom)
+"abN" = (
+/obj/machinery/door/airlock/external{
+	frequency = 1380;
+	icon_state = "closed";
+	id_tag = "escape_pod_5_recovery_hatch";
+	locked = 1;
+	name = "Recovery Shuttle Dock"
+	},
+/turf/unsimulated/floor{
+	icon = 'icons/turf/shuttle.dmi';
+	icon_state = "floor2"
+	},
+/area/centcom/evac)
+"abO" = (
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1380;
+	id_tag = "escape_pod_5_recovery";
+	pixel_x = -25;
+	pixel_y = 25;
+	req_access = list(list("ACCESS_EXTERNAL","ACCESS_TORCH_CREW"));
+	tag_door = "escape_pod_5_recovery_hatch"
+	},
+/turf/unsimulated/floor{
+	icon = 'icons/turf/shuttle.dmi';
+	icon_state = "floor2"
+	},
+/area/centcom/evac)
+"abP" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/unsimulated/floor{
+	icon = 'icons/turf/shuttle.dmi';
+	icon_state = "floor"
+	},
+/area/centcom/evac)
+"abQ" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	frequency = 1380;
 	id_tag = "escape_pod_3_recovery";
@@ -636,8 +648,8 @@
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor2"
 	},
-/area/space)
-"abN" = (
+/area/centcom/evac)
+"abR" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
 	icon_state = "closed";
@@ -649,29 +661,48 @@
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor2"
 	},
-/area/space)
-"abO" = (
+/area/centcom/evac)
+"abS" = (
 /obj/machinery/vending/coffee,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor"
 	},
-/area/space)
-"abP" = (
+/area/centcom/evac)
+"abT" = (
 /obj/machinery/computer/arcade,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor"
 	},
-/area/space)
-"abQ" = (
+/area/centcom/evac)
+"abU" = (
+/obj/structure/bed,
+/turf/unsimulated/floor/plating,
+/area/centcom/holding)
+"abV" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/carpet/brown,
+/area/merchant_station)
+"abW" = (
+/obj/effect/decal/cleanable/cobweb2,
+/turf/unsimulated/floor/plating,
+/area/centcom/holding)
+"abX" = (
+/obj/effect/decal/cleanable/blood,
+/turf/unsimulated/floor/plating,
+/area/centcom/holding)
+"abY" = (
 /obj/structure/closet/secure_closet/personal/patient,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor3"
 	},
-/area/space)
-"abR" = (
+/area/centcom/evac)
+"abZ" = (
 /obj/item/storage/firstaid/regular{
 	pixel_x = 2;
 	pixel_y = 6
@@ -684,101 +715,52 @@
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor3"
 	},
-/area/space)
-"abS" = (
+/area/centcom/evac)
+"aca" = (
 /obj/structure/window/shuttle{
 	icon_state = "window2"
 	},
 /obj/structure/grille,
 /turf/simulated/floor/plating,
-/area/space)
-"abT" = (
-/obj/structure/grille,
-/obj/structure/window/shuttle,
+/area/centcom/evac)
+"acb" = (
+/obj/effect/wallframe_spawn/reinforced/titanium,
 /turf/simulated/floor/plating,
-/area/space)
-"abU" = (
-/obj/structure/bed,
-/turf/unsimulated/floor/plating,
-/area/space)
-"abV" = (
-/obj/structure/bed/chair/comfy/black{
-	dir = 4
-	},
-/obj/structure/window/reinforced,
-/turf/simulated/floor/carpet/brown,
-/area/merchant_station)
-"abW" = (
-/obj/effect/decal/cleanable/cobweb2,
-/turf/unsimulated/floor/plating,
-/area/space)
-"abX" = (
-/obj/effect/decal/cleanable/blood,
-/turf/unsimulated/floor/plating,
-/area/space)
-"abY" = (
-/obj/structure/window/shuttle,
-/obj/structure/grille,
-/turf/simulated/floor/plating,
-/area/space)
-"abZ" = (
+/area/centcom/evac)
+"acc" = (
 /turf/unsimulated/floor{
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor3"
 	},
-/area/space)
-"aca" = (
+/area/centcom/evac)
+"acd" = (
 /obj/structure/window/shuttle{
 	icon_state = "window1"
 	},
 /obj/structure/grille,
 /turf/simulated/floor/plating,
-/area/space)
-"acb" = (
+/area/centcom/evac)
+"ace" = (
+/obj/effect/landmark{
+	name = "prisonwarp"
+	},
+/turf/unsimulated/floor/plating,
+/area/centcom/holding)
+"acf" = (
 /obj/structure/table/reinforced,
 /obj/item/paper_bin,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor4"
 	},
-/area/space)
-"acc" = (
-/obj/structure/table/reinforced,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor4"
-	},
-/area/space)
-"acd" = (
-/obj/structure/table/reinforced,
-/obj/item/pen,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor4"
-	},
-/area/space)
-"ace" = (
-/obj/effect/landmark{
-	name = "prisonwarp"
-	},
-/turf/unsimulated/floor/plating,
-/area/space)
-"acf" = (
-/obj/machinery/sleeper,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor3"
-	},
-/area/space)
+/area/centcom/evac)
 "acg" = (
-/obj/machinery/door/airlock/hatch{
-	name = "Infirmary"
-	},
+/obj/structure/table/reinforced,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor3"
+	icon_state = "floor4"
 	},
-/area/space)
+/area/centcom/evac)
 "ach" = (
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_theatre)
@@ -871,14 +853,38 @@
 /area/holodeck/source_courtroom)
 "acr" = (
 /obj/structure/table/reinforced,
+/obj/item/pen,
+/turf/unsimulated/floor{
+	icon = 'icons/turf/shuttle.dmi';
+	icon_state = "floor4"
+	},
+/area/centcom/evac)
+"acs" = (
+/obj/machinery/sleeper,
+/turf/unsimulated/floor{
+	icon = 'icons/turf/shuttle.dmi';
+	icon_state = "floor3"
+	},
+/area/centcom/evac)
+"act" = (
+/obj/machinery/door/airlock/hatch{
+	name = "Infirmary"
+	},
+/turf/unsimulated/floor{
+	icon = 'icons/turf/shuttle.dmi';
+	icon_state = "floor3"
+	},
+/area/centcom/evac)
+"acu" = (
+/obj/structure/table/reinforced,
 /obj/random/clipboard,
 /obj/item/stamp,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor4"
 	},
-/area/space)
-"acs" = (
+/area/centcom/evac)
+"acv" = (
 /obj/structure/bed/chair{
 	dir = 1
 	},
@@ -886,8 +892,8 @@
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor4"
 	},
-/area/space)
-"act" = (
+/area/centcom/evac)
+"acw" = (
 /obj/structure/bed/chair{
 	dir = 4
 	},
@@ -895,8 +901,8 @@
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor4"
 	},
-/area/space)
-"acu" = (
+/area/centcom/evac)
+"acx" = (
 /obj/machinery/computer/modular/preset/cardslot/command{
 	dir = 8;
 	icon_state = "console"
@@ -905,8 +911,13 @@
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor4"
 	},
-/area/space)
-"acv" = (
+/area/centcom/evac)
+"acy" = (
+/obj/structure/bed,
+/obj/effect/decal/cleanable/cobweb,
+/turf/unsimulated/floor/plating,
+/area/centcom/holding)
+"acz" = (
 /obj/machinery/vending/wallmed1{
 	name = "Emergency NanoMed";
 	pixel_x = -30;
@@ -916,14 +927,18 @@
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor3"
 	},
-/area/space)
-"acw" = (
+/area/centcom/evac)
+"acA" = (
 /turf/unsimulated/floor{
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor4"
 	},
-/area/space)
-"acx" = (
+/area/centcom/evac)
+"acB" = (
+/obj/effect/decal/cleanable/blood,
+/turf/unsimulated/wall,
+/area/centcom/holding)
+"acC" = (
 /obj/machinery/computer/modular/preset/security{
 	dir = 8;
 	icon_state = "console"
@@ -932,13 +947,8 @@
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor4"
 	},
-/area/space)
-"acy" = (
-/obj/structure/bed,
-/obj/effect/decal/cleanable/cobweb,
-/turf/unsimulated/floor/plating,
-/area/space)
-"acz" = (
+/area/centcom/evac)
+"acD" = (
 /obj/machinery/door/window/northright{
 	base_state = "right";
 	dir = 4;
@@ -949,8 +959,8 @@
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor4"
 	},
-/area/space)
-"acA" = (
+/area/centcom/evac)
+"acE" = (
 /obj/structure/table/standard,
 /obj/item/storage/box/handcuffs,
 /obj/item/device/flash,
@@ -958,12 +968,8 @@
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor4"
 	},
-/area/space)
-"acB" = (
-/obj/effect/decal/cleanable/blood,
-/turf/unsimulated/wall,
-/area/space)
-"acC" = (
+/area/centcom/evac)
+"acF" = (
 /obj/machinery/door/airlock/hatch{
 	name = "Cockpit"
 	},
@@ -971,8 +977,8 @@
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor2"
 	},
-/area/space)
-"acD" = (
+/area/centcom/evac)
+"acG" = (
 /obj/machinery/computer/crew{
 	dir = 4;
 	icon_state = "computer"
@@ -981,8 +987,8 @@
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor"
 	},
-/area/space)
-"acE" = (
+/area/centcom/evac)
+"acH" = (
 /obj/structure/bed/chair{
 	dir = 4;
 	name = "Defense"
@@ -991,39 +997,39 @@
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor"
 	},
-/area/space)
-"acF" = (
+/area/centcom/evac)
+"acI" = (
 /obj/structure/table/reinforced,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor"
 	},
-/area/space)
-"acG" = (
+/area/centcom/evac)
+"acJ" = (
 /obj/item/device/radio/off,
 /obj/structure/table/reinforced,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor"
 	},
-/area/space)
-"acH" = (
+/area/centcom/evac)
+"acK" = (
 /obj/item/storage/lockbox,
 /obj/structure/table/reinforced,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor"
 	},
-/area/space)
-"acI" = (
+/area/centcom/evac)
+"acL" = (
 /obj/item/stamp/captain,
 /obj/structure/table/reinforced,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor"
 	},
-/area/space)
-"acJ" = (
+/area/centcom/evac)
+"acM" = (
 /obj/machinery/computer/shuttle{
 	dir = 1;
 	icon_state = "computer"
@@ -1032,28 +1038,7 @@
 	icon = 'icons/turf/shuttle.dmi';
 	icon_state = "floor"
 	},
-/area/space)
-"acK" = (
-/obj/random/clipboard,
-/obj/item/pen,
-/obj/structure/table/reinforced,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
-/area/space)
-"acL" = (
-/obj/item/paper_bin,
-/obj/structure/table/reinforced,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
-/area/space)
-"acM" = (
-/obj/effect/wallframe_spawn/reinforced/titanium,
-/turf/unsimulated/floor/plating,
-/area/space)
+/area/centcom/evac)
 "acN" = (
 /turf/simulated/wall/prepainted,
 /area/merchant_station)
@@ -6219,10 +6204,10 @@
 "asR" = (
 /turf/unsimulated/wall{
 	desc = "That looks like it doesn't open easily.";
+	dir = 4;
 	icon = 'icons/obj/doors/rapid_pdoor.dmi';
 	icon_state = "pdoor1";
-	name = "Shuttle Bay Blast Door";
-	dir = 4
+	name = "Shuttle Bay Blast Door"
 	},
 /area/centcom)
 "atX" = (
@@ -6926,12 +6911,12 @@
 	dir = 8
 	},
 /obj/structure/sign/directions/infirmary{
-	pixel_y = -6;
-	dir = 4
+	dir = 4;
+	pixel_y = -6
 	},
 /obj/structure/sign/directions/janitor{
-	pixel_y = 7;
-	dir = 4
+	dir = 4;
+	pixel_y = 7
 	},
 /turf/unsimulated/wall,
 /area/centcom)
@@ -8169,6 +8154,9 @@
 "efq" = (
 /turf/simulated/floor/holofloor/concrete,
 /area/holodeck/source_cafe)
+"esx" = (
+/turf/unsimulated/wall,
+/area/centcom/holding)
 "etB" = (
 /obj/machinery/button/blast_door{
 	id_tag = "syndicate_elite_mech_room";
@@ -8183,6 +8171,9 @@
 "euY" = (
 /turf/simulated/wall/wood,
 /area/holodeck/source_cafe)
+"exn" = (
+/turf/unsimulated/floor/plating,
+/area/centcom/holding)
 "eyC" = (
 /turf/simulated/floor/plating,
 /area/shuttle/cargodrone)
@@ -8674,6 +8665,15 @@
 	icon_state = "dark"
 	},
 /area/syndicate_elite_squad)
+"nXk" = (
+/obj/random/clipboard,
+/obj/item/pen,
+/obj/structure/table/reinforced,
+/turf/unsimulated/floor{
+	icon = 'icons/turf/shuttle.dmi';
+	icon_state = "floor"
+	},
+/area/centcom/evac)
 "occ" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 6;
@@ -8856,6 +8856,10 @@
 "rzY" = (
 /turf/unsimulated/wall,
 /area/tdome)
+"rHp" = (
+/obj/effect/wallframe_spawn/reinforced/titanium,
+/turf/unsimulated/floor/plating,
+/area/centcom/evac)
 "rHP" = (
 /obj/effect/floor_decal/corner/blue/three_quarters{
 	dir = 8
@@ -9071,6 +9075,14 @@
 	icon_state = "wood_broken2"
 	},
 /area/holodeck/source_temple)
+"vws" = (
+/obj/item/paper_bin,
+/obj/structure/table/reinforced,
+/turf/unsimulated/floor{
+	icon = 'icons/turf/shuttle.dmi';
+	icon_state = "floor"
+	},
+/area/centcom/evac)
 "vzG" = (
 /turf/unsimulated/floor{
 	icon_state = "lino"
@@ -14233,11 +14245,11 @@ aab
 aab
 aab
 aab
-aae
-aae
-aae
-aae
-aae
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -14435,12 +14447,12 @@ aab
 aab
 aab
 aab
-aaf
-aai
-aal
-abb
+aab
+aab
+aab
+aab
 aan
-aae
+aab
 aab
 aab
 aab
@@ -14637,12 +14649,12 @@ aab
 aab
 aab
 aab
-aag
-aai
-aam
-abb
-abb
-aae
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -14839,23 +14851,23 @@ aab
 aab
 aab
 aab
-aah
-aai
+aab
+aab
 aan
-aae
-abp
-aae
-aae
-aae
-aby
-aae
-aae
-aae
-abY
-aae
-aae
-aae
-aae
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -15041,23 +15053,23 @@ aab
 aab
 aab
 aab
-aae
-aae
-aae
-abc
-abe
-abq
-abt
-abx
-abz
-aao
-aae
-abQ
-abZ
-acf
-acv
-acf
-aae
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -15244,26 +15256,26 @@ aab
 aab
 aab
 aab
-aae
-aao
-abd
-abe
-abd
-abf
-abd
-abe
-abO
-aae
-abQ
-abZ
-abZ
-abZ
-abZ
-aae
-aae
-aae
-aae
-aae
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -15446,26 +15458,26 @@ aab
 aab
 aab
 aab
-aaj
-aap
-abe
-abe
-abe
-abe
-abe
-abe
-abe
-aae
-abR
-abZ
-abZ
-abZ
-abZ
-aae
-acD
-acF
-acH
-acM
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -15648,26 +15660,26 @@ aab
 aab
 aab
 aab
-aae
-aaL
-abd
-abe
-abd
-abu
-abu
-abd
-abe
-aae
-abS
-aca
-acg
-abS
-aca
-aae
-abv
-abd
-acI
-acM
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -15850,26 +15862,26 @@ aab
 aab
 aab
 aab
-aae
-aaM
-abf
-abe
-abr
-abt
-abt
-abA
-abe
-abe
-abe
-abe
-abe
-abe
-abe
-acC
-abe
-abr
-acJ
-acM
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -16052,26 +16064,26 @@ aab
 aab
 aab
 aab
-aae
-aaN
-abd
-abe
-abr
-abt
-abt
-abA
-abe
-abd
-abd
-acb
-acr
-acc
-acz
-aae
-acE
-abd
-acK
-acM
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -16254,26 +16266,26 @@ aab
 aab
 aab
 aab
-aak
-aaO
-abe
-abe
-abd
-abv
-abv
-abd
-abe
-abe
-abe
-acc
-acs
-acw
-acw
-aae
-abd
-acG
-acL
-acM
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -16456,26 +16468,26 @@ aab
 aab
 aab
 aab
-aae
-aao
-abd
-abe
-abe
-abe
-abe
-abe
-abe
-abe
-abe
-acd
-act
-acw
-acw
-aae
-aae
-aae
-aae
-aae
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -16657,23 +16669,23 @@ aab
 aab
 aab
 aab
-aae
-aae
-aae
-abo
-abe
-abs
-abw
-aao
-abM
-abd
-abP
-abd
-acc
-acu
-acx
-acA
-aae
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -16859,23 +16871,23 @@ aab
 aab
 aab
 aab
-aaf
-aai
+aab
+aab
 aan
-aae
-abp
-aae
-aae
-aae
-abN
-aae
-aae
-abT
-aae
-aae
-aae
-aae
-aae
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -17061,12 +17073,12 @@ aab
 aab
 aab
 aab
-aag
-aai
-aaP
-abb
-abb
-aae
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -17263,12 +17275,12 @@ aab
 aab
 aab
 aab
-aah
-aai
-aba
-abb
+aab
+aab
+aab
+aab
 aan
-aae
+aab
 aab
 aab
 aab
@@ -17465,11 +17477,11 @@ aab
 aab
 aab
 aab
-aae
-aae
-aae
-aae
-aae
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -18687,13 +18699,13 @@ aad
 aad
 aad
 rpk
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+esx
+esx
+esx
+esx
+esx
+esx
+esx
 aab
 aab
 aab
@@ -18889,13 +18901,13 @@ aad
 aad
 aab
 rpk
-aaa
+esx
 abU
 ace
-aaa
+esx
 abU
 ace
-aaa
+esx
 aab
 aab
 aab
@@ -19091,13 +19103,13 @@ rpk
 rpk
 rpk
 rpk
-aaa
-abb
+esx
+exn
 abX
-aaa
-abb
-abb
-aaa
+esx
+exn
+exn
+esx
 aab
 aab
 aab
@@ -19293,13 +19305,13 @@ kEf
 kEf
 kEf
 rpk
-aaa
-aaa
-aaa
-aaa
-aaa
+esx
+esx
+esx
+esx
+esx
 acB
-aaa
+esx
 aab
 aab
 aab
@@ -19495,13 +19507,13 @@ kEf
 kEf
 kEf
 rpk
-aaa
+esx
 abU
 ace
-aaa
+esx
 abU
 ace
-aaa
+esx
 aab
 aab
 aab
@@ -19697,13 +19709,13 @@ cjX
 cjX
 cjX
 rpk
-aaa
+esx
 abW
-abb
-aaa
-abb
-abb
-aaa
+exn
+esx
+exn
+exn
+esx
 aab
 aab
 aab
@@ -19899,13 +19911,13 @@ kEf
 kEf
 kEf
 rpk
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+esx
+esx
+esx
+esx
+esx
+esx
+esx
 aab
 aab
 aab
@@ -20101,13 +20113,13 @@ rpk
 rpk
 rpk
 rpk
-aaa
+esx
 abU
 ace
-aaa
+esx
 acy
 ace
-aaa
+esx
 aab
 aab
 aab
@@ -20303,13 +20315,13 @@ szh
 kEf
 szh
 rpk
-aaa
+esx
 abX
-abb
-aaa
-abb
-abb
-aaa
+exn
+esx
+exn
+exn
+esx
 aab
 aab
 aab
@@ -20505,13 +20517,13 @@ kEf
 kEf
 kEf
 rpk
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+esx
+esx
+esx
+esx
+esx
+esx
+esx
 aab
 aab
 aab
@@ -20707,13 +20719,13 @@ kEf
 kEf
 kEf
 rpk
-aaa
+esx
 abU
 ace
-aaa
+esx
 abU
 ace
-aaa
+esx
 aab
 aab
 aab
@@ -20909,13 +20921,13 @@ kEf
 kEf
 kEf
 rpk
-aaa
-abb
-abb
-aaa
+esx
+exn
+exn
+esx
 abX
-abb
-aaa
+exn
+esx
 aab
 aab
 aab
@@ -21111,13 +21123,13 @@ rpk
 rpk
 rpk
 rpk
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+esx
+esx
+esx
+esx
+esx
+esx
+esx
 aab
 aab
 aab
@@ -38763,9 +38775,9 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
+abz
+abz
+abz
 aab
 aab
 aab
@@ -38958,16 +38970,16 @@ aab
 aab
 aab
 aab
+aag
+aag
+aag
+aag
+aag
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+abz
+abz
+abz
 aab
 aab
 aab
@@ -39160,16 +39172,16 @@ aab
 aab
 aab
 aab
+aah
+aak
+aao
+abd
+aag
+aag
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+abz
+abz
+abz
 aab
 aab
 aab
@@ -39362,16 +39374,16 @@ aab
 aab
 aab
 aab
+aai
+aak
+aap
+abd
+abd
+aag
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+abz
+abz
+abz
 aab
 aab
 aab
@@ -39564,23 +39576,23 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aaj
+aak
+aag
+aag
+abr
+aag
+aag
+aag
+abN
+aag
+aag
+aag
+acb
+aag
+aag
+aag
+aag
 aab
 aab
 aab
@@ -39766,23 +39778,23 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aag
+aag
+aag
+abe
+abo
+abs
+abv
+abA
+abO
+aaL
+aag
+abY
+acc
+acs
+acz
+acs
+aag
 aab
 aab
 aab
@@ -39965,30 +39977,30 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
+aae
+aae
+aae
+aag
+aaL
+abf
+abo
+abf
+abp
+abf
+abo
+abS
+aag
+abY
+acc
+acc
+acc
+acc
+aag
+aag
+aag
+aag
+aag
 aab
 aab
 aab
@@ -40167,30 +40179,30 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
+aae
+aae
+aae
+aal
+aaM
+abo
+abo
+abo
+abo
+abo
+abo
+abo
+aag
+abZ
+acc
+acc
+acc
+acc
+aag
+acG
+acI
+acK
+rHp
 aab
 aab
 aab
@@ -40369,30 +40381,30 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
+aae
+aae
+aae
+aag
+aaN
+abf
+abo
+abf
+abw
+abw
+abf
+abo
+aag
+aca
+acd
+act
+aca
+acd
+aag
+abx
+abf
+acL
+rHp
 aab
 aab
 aab
@@ -40575,26 +40587,26 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aag
+aaO
+abp
+abo
+abt
+abv
+abv
+abP
+abo
+abo
+abo
+abo
+abo
+abo
+abo
+acF
+abo
+abt
+acM
+rHp
 aab
 aab
 aab
@@ -40773,30 +40785,30 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aaf
+aaf
+aaf
+aaf
+aag
+aaP
+abf
+abo
+abt
+abv
+abv
+abP
+abo
+abf
+abf
+acf
+acu
+acg
+acD
+aag
+acH
+abf
+nXk
+rHp
 aab
 aab
 aab
@@ -40975,30 +40987,30 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aaf
+aaf
+aaf
+aaf
+aam
+aba
+abo
+abo
+abf
+abx
+abx
+abf
+abo
+abo
+abo
+acg
+acv
+acA
+acA
+aag
+abf
+acJ
+vws
+rHp
 aab
 aab
 aab
@@ -41177,30 +41189,30 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aaf
+aaf
+aaf
+aaf
+aag
+aaL
+abf
+abo
+abo
+abo
+abo
+abo
+abo
+abo
+abo
+acr
+acw
+acA
+acA
+aag
+aag
+aag
+aag
+aag
 aab
 aab
 aab
@@ -41382,23 +41394,23 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aag
+aag
+aag
+abq
+abo
+abu
+aby
+aaL
+abQ
+abf
+abT
+abf
+acg
+acx
+acC
+acE
+aag
 aab
 aab
 aab
@@ -41584,23 +41596,23 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aah
+aak
+aag
+aag
+abr
+aag
+aag
+aag
+abR
+aag
+aag
+acb
+aag
+aag
+aag
+aag
+aag
 aab
 aab
 aab
@@ -41786,16 +41798,16 @@ aab
 aab
 aab
 aab
+aai
+aak
+abb
+abd
+abd
+aag
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+abM
+abM
+abM
 aab
 aab
 aab
@@ -41988,16 +42000,16 @@ aab
 aab
 aab
 aab
+aaj
+aak
+abc
+abd
+aag
+aag
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+abM
+abM
+abM
 aab
 aab
 aab
@@ -42190,16 +42202,16 @@ aab
 aab
 aab
 aab
+aag
+aag
+aag
+aag
+aag
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+abM
+abM
+abM
 aab
 aab
 aab
@@ -42399,9 +42411,9 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
+abM
+abM
+abM
 aab
 aab
 aab

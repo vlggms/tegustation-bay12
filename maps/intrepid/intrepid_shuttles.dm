@@ -1,3 +1,46 @@
+//Some helpers because so much copypasta for pods
+/datum/shuttle/autodock/ferry/escape_pod/intrepidpod
+	category = /datum/shuttle/autodock/ferry/escape_pod/intrepidpod
+	sound_takeoff = 'sound/effects/rocket.ogg'
+	sound_landing = 'sound/effects/rocket_backwards.ogg'
+	warmup_time = 10
+
+/obj/effect/shuttle_landmark/escape_pod/start
+	name = "Docked"
+
+/obj/effect/shuttle_landmark/escape_pod/transit
+	name = "In transit"
+
+/obj/effect/shuttle_landmark/escape_pod/out
+	name = "Escaped"
+
+//Pods
+#define INTREPID_ESCAPE_POD(NUMBER) \
+/datum/shuttle/autodock/ferry/escape_pod/intrepidhpod/escape_pod##NUMBER { \
+	shuttle_area = /area/shuttle/escape_pod##NUMBER/station; \
+	name = "Escape Pod " + #NUMBER; \
+	dock_target = "escape_pod_" + #NUMBER; \
+	arming_controller = "escape_pod_"+ #NUMBER +"_berth"; \
+	waypoint_station = "escape_pod_"+ #NUMBER +"_start"; \
+	landmark_transition = "escape_pod_"+ #NUMBER +"_internim"; \
+	waypoint_offsite = "escape_pod_"+ #NUMBER +"_out"; \
+} \
+/obj/effect/shuttle_landmark/escape_pod/start/pod##NUMBER { \
+	landmark_tag = "escape_pod_"+ #NUMBER +"_start"; \
+	docking_controller = "escape_pod_"+ #NUMBER +"_berth"; \
+} \
+/obj/effect/shuttle_landmark/escape_pod/out/pod##NUMBER { \
+	landmark_tag = "escape_pod_"+ #NUMBER +"_internim"; \
+} \
+/obj/effect/shuttle_landmark/escape_pod/transit/pod##NUMBER { \
+	landmark_tag = "escape_pod_"+ #NUMBER +"_out"; \
+}
+
+INTREPID_ESCAPE_POD(1)
+INTREPID_ESCAPE_POD(2)
+INTREPID_ESCAPE_POD(3)
+INTREPID_ESCAPE_POD(4)
+
 /obj/effect/shuttle_landmark/lower_level
 	name = "Lower Level Dock"
 	landmark_tag = "nav_example_station"
