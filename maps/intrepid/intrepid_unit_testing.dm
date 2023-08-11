@@ -6,8 +6,7 @@
 		/area/shuttle/escape = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/shuttle/merchant = NO_SCRUBBER|NO_APC,
 		/area/shuttle/research = 0,
-		/area/shuttle/escape_pod1/station = NO_SCRUBBER|NO_APC|NO_VENT,
-		/area/shuttle/escape_pod2/station = NO_SCRUBBER|NO_APC|NO_VENT,
-		/area/shuttle/escape_pod3/station = NO_SCRUBBER|NO_APC|NO_VENT,
-		/area/shuttle/escape_pod4/station = NO_SCRUBBER|NO_APC|NO_VENT,
+		/area/shuttle/escape_pod1 = NO_SCRUBBER|NO_APC|NO_VENT,
+		/area/shuttle/escape_pod2 = NO_SCRUBBER|NO_APC|NO_VENT,
+		/area/shuttle/escape_pod3 = NO_SCRUBBER|NO_APC|NO_VENT,
 	)
