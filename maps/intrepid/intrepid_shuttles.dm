@@ -3,7 +3,7 @@
 	category = /datum/shuttle/autodock/ferry/escape_pod/intrepidpod
 	sound_takeoff = 'sound/effects/rocket.ogg'
 	sound_landing = 'sound/effects/rocket_backwards.ogg'
-	warmup_time = 10
+	warmup_time = 5
 
 /obj/effect/shuttle_landmark/escape_pod/start
 	name = "Docked"
@@ -31,6 +31,7 @@
 } \
 /obj/effect/shuttle_landmark/escape_pod/out/pod##NUMBER { \
 	landmark_tag = "escape_pod_"+ #NUMBER +"_out"; \
+	docking_controller = "escape_pod_"+ #NUMBER +"_recovery"; \
 } \
 /obj/effect/shuttle_landmark/escape_pod/transit/pod##NUMBER { \
 	landmark_tag = "escape_pod_"+ #NUMBER +"_transit"; \
