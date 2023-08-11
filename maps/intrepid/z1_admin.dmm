@@ -175,7 +175,7 @@
 	locked = 1;
 	name = "Recovery Shuttle Dock"
 	},
-/turf/space,
+/turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
 "aaM" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
@@ -197,7 +197,7 @@
 	locked = 1;
 	name = "Recovery Shuttle Dock"
 	},
-/turf/space,
+/turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
 "aaQ" = (
 /obj/structure/flora/ausbushes/fullgrass,
@@ -252,7 +252,7 @@
 	locked = 1;
 	name = "Recovery Shuttle Dock"
 	},
-/turf/space,
+/turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
 "abb" = (
 /obj/machinery/light{
@@ -8008,6 +8008,11 @@
 	icon_state = "lino"
 	},
 /area/tdome/tdomeobserve)
+"hhT" = (
+/obj/structure/closet/emcloset,
+/obj/machinery/light/small,
+/turf/simulated/floor/shuttle/yellow,
+/area/centcom/evac)
 "hjL" = (
 /turf/unsimulated/wall,
 /area/acting/stage)
@@ -8231,6 +8236,10 @@
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/simulated/floor/holofloor/grass,
 /area/holodeck/source_plaza)
+"low" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/shuttle/yellow,
+/area/centcom/evac)
 "lwD" = (
 /obj/structure/bed/chair/wood{
 	dir = 1;
@@ -8337,6 +8346,13 @@
 	icon_state = "vault"
 	},
 /area/tdome/tdome2)
+"mJB" = (
+/obj/structure/closet/emcloset,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/shuttle/yellow,
+/area/centcom/evac)
 "mRm" = (
 /turf/simulated/floor/holofloor/beach/sand{
 	icon_state = "desert1"
@@ -8480,6 +8496,12 @@
 	},
 /turf/simulated/floor/holofloor/lino,
 /area/holodeck/source_meetinghall)
+"pen" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/shuttle/yellow,
+/area/centcom/evac)
 "pgJ" = (
 /obj/structure/holostool,
 /turf/simulated/floor/holofloor/tiled/stone,
@@ -8669,7 +8691,7 @@
 	locked = 1;
 	name = "Recovery Shuttle Dock"
 	},
-/turf/space,
+/turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
 "sGJ" = (
 /obj/structure/holostool,
@@ -17472,9 +17494,9 @@ aab
 aab
 aab
 aah
-aak
+mJB
 aal
-aak
+hhT
 aah
 aab
 aab
@@ -18684,9 +18706,9 @@ aab
 aab
 aab
 aah
-aal
+pen
 aai
-aal
+low
 aah
 aab
 aab

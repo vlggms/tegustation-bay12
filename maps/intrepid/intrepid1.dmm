@@ -3585,11 +3585,11 @@
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/department/command/bridgeofficer)
 "cWd" = (
-/obj/machinery/cryopod{
-	dir = 4
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
+	},
+/obj/structure/bed/chair/shuttle/black{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/escape_pod3/station)
@@ -5112,9 +5112,11 @@
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/department/engineering/primarythruster)
 "ebt" = (
-/obj/machinery/cryopod,
 /obj/effect/decal/cleanable/cobweb2,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair/shuttle/black{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/escape_pod2/station)
 "ebF" = (
@@ -5200,8 +5202,10 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/monitoring)
 "egf" = (
-/obj/machinery/cryopod,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/bed/chair/shuttle/black{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/escape_pod2/station)
 "ehe" = (
@@ -8017,10 +8021,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/civillian/janitor)
 "gCj" = (
-/obj/machinery/cryopod,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
+	},
+/obj/structure/bed/chair/shuttle/black{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/escape_pod3/station)
@@ -8162,8 +8168,10 @@
 /turf/simulated/floor/tiled/white,
 /area/intrepid/misc/hallway/portside)
 "gFv" = (
-/obj/machinery/cryopod,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair/shuttle/black{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/escape_pod3/station)
 "gFC" = (
@@ -8300,7 +8308,7 @@
 /turf/simulated/floor,
 /area/intrepid/department/exploration/storage)
 "gLJ" = (
-/obj/machinery/cryopod{
+/obj/structure/bed/chair/shuttle/black{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -8335,7 +8343,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/civillian/galley)
 "gOO" = (
-/obj/machinery/cryopod{
+/obj/structure/bed/chair/shuttle/black{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -10092,10 +10100,10 @@
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/department/command/commandquarters/rd)
 "ipU" = (
-/obj/machinery/cryopod{
+/obj/effect/decal/cleanable/cobweb,
+/obj/structure/bed/chair/shuttle/black{
 	dir = 4
 	},
-/obj/effect/decal/cleanable/cobweb,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/escape_pod1/station)
 "iqb" = (
@@ -18151,8 +18159,10 @@
 /turf/simulated/floor,
 /area/intrepid/department/security/locker)
 "oTP" = (
-/obj/machinery/cryopod,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/bed/chair/shuttle/black{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/escape_pod1/station)
 "oVm" = (
@@ -19492,11 +19502,11 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
 "pUb" = (
-/obj/machinery/cryopod{
-	dir = 4
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/structure/bed/chair/shuttle/black{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/escape_pod2/station)
 "pUK" = (
@@ -22676,7 +22686,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/computerlab)
 "srU" = (
-/obj/machinery/cryopod,
+/obj/structure/bed/chair/shuttle/black{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/escape_pod2/station)
 "ssf" = (
@@ -23184,10 +23196,10 @@
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/misc/maint/portside)
 "sNn" = (
-/obj/machinery/cryopod{
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/structure/bed/chair/shuttle/black{
 	dir = 4
 	},
-/obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/escape_pod1/station)
 "sNN" = (
@@ -25516,10 +25528,10 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
 "uDs" = (
-/obj/machinery/cryopod{
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair/shuttle/black{
 	dir = 4
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/escape_pod2/station)
 "uDy" = (
@@ -26293,8 +26305,10 @@
 /turf/simulated/floor/tiled,
 /area/intrepid/misc/hallway/starboard)
 "vkx" = (
-/obj/machinery/cryopod,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair/shuttle/black{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/escape_pod1/station)
 "vkG" = (
@@ -29537,7 +29551,9 @@
 /turf/simulated/floor/tiled,
 /area/intrepid/misc/hallway/portside)
 "xNZ" = (
-/obj/machinery/cryopod,
+/obj/structure/bed/chair/shuttle/black{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/escape_pod1/station)
 "xOH" = (
