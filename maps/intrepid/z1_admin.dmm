@@ -13,57 +13,25 @@
 /turf/space,
 /area/shuttle/syndicate_elite/mothership)
 "aae" = (
+/obj/effect/step_trigger/thrower{
+	affect_ghosts = 1;
+	direction = 2;
+	name = "thrower_throwdown";
+	tiles = 0
+	},
 /turf/space,
-/area/shuttle/escape_pod1/centcom)
+/area/space)
 "aaf" = (
 /turf/space,
 /area/shuttle/escape_pod2/centcom)
 "aag" = (
+/obj/effect/shuttle_landmark/escape_pod/out/pod2,
+/turf/space,
+/area/shuttle/escape_pod2/centcom)
+"aah" = (
 /turf/simulated/wall/r_titanium,
 /area/centcom/evac)
-"aah" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 1;
-	icon_state = "propulsion_r"
-	},
-/turf/space,
-/area/centcom/evac)
 "aai" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 1;
-	icon_state = "propulsion"
-	},
-/turf/space,
-/area/centcom/evac)
-"aaj" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 1;
-	icon_state = "propulsion_l"
-	},
-/turf/space,
-/area/centcom/evac)
-"aak" = (
-/obj/structure/window/reinforced/crescent,
-/obj/structure/shuttle/engine/heater{
-	dir = 1;
-	icon_state = "heater"
-	},
-/turf/unsimulated/floor/plating,
-/area/centcom/evac)
-"aal" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1380;
-	icon_state = "closed";
-	id_tag = "escape_pod_1_recovery_hatch";
-	locked = 1;
-	name = "Recovery Shuttle Dock"
-	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor2"
-	},
-/area/centcom/evac)
-"aam" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
 	icon_state = "closed";
@@ -71,23 +39,41 @@
 	locked = 1;
 	name = "Recovery Shuttle Dock"
 	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor2"
+/turf/simulated/floor/shuttle/blue,
+/area/centcom/evac)
+"aaj" = (
+/obj/machinery/vending/cola,
+/turf/simulated/floor/shuttle/yellow,
+/area/centcom/evac)
+"aak" = (
+/obj/machinery/vending/snack,
+/turf/simulated/floor/shuttle/yellow,
+/area/centcom/evac)
+"aal" = (
+/turf/simulated/floor/shuttle/yellow,
+/area/centcom/evac)
+"aam" = (
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1380;
+	id_tag = "escape_pod_2_recovery";
+	pixel_x = 28;
+	pixel_y = 30;
+	req_access = list(list("ACCESS_EXTERNAL","ACCESS_INTREPID_CREW"));
+	tag_door = "escape_pod_2_recovery_hatch"
 	},
+/turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
 "aan" = (
 /turf/space,
 /turf/space,
 /area/space)
 "aao" = (
-/obj/machinery/portable_atmospherics/powered/pump,
-/turf/unsimulated/floor/plating,
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/shuttle/yellow,
 /area/centcom/evac)
 "aap" = (
-/obj/machinery/portable_atmospherics/canister/oxygen,
-/turf/unsimulated/floor/plating,
-/area/centcom/evac)
+/turf/space,
+/area/shuttle/escape_pod1/centcom)
 "aaq" = (
 /obj/structure/window/reinforced/crescent{
 	dir = 4
@@ -191,64 +177,28 @@
 /turf/unsimulated/wall,
 /area/space)
 "aaL" = (
-/obj/structure/closet/emcloset,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
+/turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
 "aaM" = (
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "escape_pod_1_recovery";
-	pixel_x = 25;
-	pixel_y = 30;
-	req_access = list(list("ACCESS_EXTERNAL","ACCESS_TORCH_CREW"));
-	tag_door = "escape_pod_1_recovery_hatch"
-	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor2"
-	},
-/area/centcom/evac)
+/turf/space,
+/area/shuttle/escape_pod3/centcom)
 "aaN" = (
-/obj/structure/table/standard,
-/obj/item/storage/firstaid/toxin{
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/obj/item/storage/firstaid/toxin,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
+/obj/structure/bed/chair,
+/turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
 "aaO" = (
-/obj/structure/table/standard,
-/obj/item/storage/firstaid/fire,
-/obj/item/storage/firstaid/fire{
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
-/area/centcom/evac)
+/obj/effect/shuttle_landmark/escape_pod/out/pod1,
+/turf/space,
+/area/shuttle/escape_pod1/centcom)
 "aaP" = (
-/obj/structure/table/standard,
-/obj/item/storage/firstaid/regular{
-	pixel_x = 2;
-	pixel_y = 0
+/obj/machinery/door/airlock/external{
+	frequency = 1380;
+	icon_state = "closed";
+	id_tag = "escape_pod_1_recovery_hatch";
+	locked = 1;
+	name = "Recovery Shuttle Dock"
 	},
-/obj/item/storage/firstaid/regular{
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
+/turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
 "aaQ" = (
 /obj/structure/flora/ausbushes/fullgrass,
@@ -298,44 +248,50 @@
 "aba" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	frequency = 1380;
-	id_tag = "escape_pod_2_recovery";
-	pixel_x = -25;
-	pixel_y = 30;
+	id_tag = "escape_pod_1_recovery";
+	pixel_x = -28;
+	pixel_y = 20;
 	req_access = list(list("ACCESS_EXTERNAL","ACCESS_TORCH_CREW"));
-	tag_door = "escape_pod_2_recovery_hatch"
+	tag_door = "escape_pod_1_recovery_hatch"
 	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor2"
-	},
+/turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
 "abb" = (
-/obj/machinery/portable_atmospherics/powered/scrubber,
-/turf/unsimulated/floor/plating,
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
 "abc" = (
-/obj/machinery/vending/engineering,
-/turf/unsimulated/floor/plating,
+/obj/structure/table/standard,
+/turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
 "abd" = (
-/turf/unsimulated/floor/plating,
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
 "abe" = (
-/obj/machinery/vending/wallmed1{
-	name = "Emergency NanoMed";
-	pixel_x = -30;
-	pixel_y = 0
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1380;
+	id_tag = "escape_pod_3_recovery";
+	pixel_x = 28;
+	pixel_y = -30;
+	req_access = list(list("ACCESS_EXTERNAL","ACCESS_INTREPID_CREW"));
+	tag_door = "escape_pod_3_recovery_hatch"
 	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
+/turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
 "abf" = (
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
+/obj/machinery/door/airlock/external{
+	frequency = 1380;
+	icon_state = "closed";
+	id_tag = "escape_pod_3_recovery_hatch";
+	locked = 1;
+	name = "Recovery Shuttle Dock"
 	},
+/turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
 "abg" = (
 /obj/structure/flora/ausbushes/fullgrass,
@@ -402,96 +358,77 @@
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/holodeck/source_emptycourt)
 "abo" = (
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor2"
-	},
-/area/centcom/evac)
+/obj/effect/shuttle_landmark/escape_pod/out/pod3,
+/turf/space,
+/area/shuttle/escape_pod3/centcom)
 "abp" = (
-/obj/item/stool,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
+/obj/structure/table/standard,
+/obj/random/clipboard,
+/obj/item/pen,
+/turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
 "abq" = (
-/obj/machinery/vending/wallmed1{
-	name = "Emergency NanoMed";
-	pixel_x = 30;
-	pixel_y = 0
-	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
+/obj/structure/table/standard,
+/obj/item/paper_bin,
+/turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
 "abr" = (
-/obj/machinery/door/airlock/hatch/maintenance,
-/turf/simulated/floor/plating,
+/obj/structure/table/standard,
+/obj/item/storage/firstaid/toxin{
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/item/storage/firstaid/toxin,
+/turf/simulated/floor/shuttle/yellow,
 /area/centcom/evac)
 "abs" = (
-/obj/machinery/vending/cigarette,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
+/obj/structure/table/standard,
+/obj/item/storage/firstaid/fire,
+/obj/item/storage/firstaid/fire{
+	pixel_x = -2;
+	pixel_y = 4
 	},
+/turf/simulated/floor/shuttle/yellow,
 /area/centcom/evac)
 "abt" = (
-/obj/structure/bed/chair,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
+/obj/structure/table/standard,
+/obj/item/storage/firstaid/regular{
+	pixel_x = 2;
+	pixel_y = 0
 	},
+/obj/item/storage/firstaid/regular{
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/turf/simulated/floor/shuttle/yellow,
 /area/centcom/evac)
 "abu" = (
-/obj/machinery/vending/cola,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
+/obj/machinery/door/airlock/highsecurity,
+/turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
 "abv" = (
-/obj/structure/table/standard,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
+/obj/structure/table/reinforced,
+/obj/item/handcuffs,
+/turf/simulated/floor/shuttle/red,
 /area/centcom/evac)
 "abw" = (
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
+/obj/structure/bed/padded,
+/turf/simulated/floor/shuttle/red,
 /area/centcom/evac)
 "abx" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
+/turf/simulated/floor/shuttle/red,
 /area/centcom/evac)
 "aby" = (
-/obj/machinery/vending/snack,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
+/obj/effect/wallframe_spawn/reinforced/titanium,
+/turf/unsimulated/floor/plating,
 /area/centcom/evac)
 "abz" = (
-/turf/space,
-/area/shuttle/escape_pod4/centcom)
+/obj/machinery/sleeper,
+/turf/simulated/floor/shuttle/white,
+/area/centcom/evac)
 "abA" = (
-/obj/structure/table/standard,
-/obj/item/hand_labeler,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
+/obj/structure/table/reinforced,
+/turf/simulated/floor/shuttle/red,
 /area/centcom/evac)
 "abB" = (
 /obj/structure/flora/ausbushes/palebush,
@@ -597,84 +534,41 @@
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_courtroom)
 "abM" = (
-/turf/space,
-/area/shuttle/escape_pod3/centcom)
+/turf/simulated/floor/shuttle/white,
+/area/centcom/evac)
 "abN" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1380;
-	icon_state = "closed";
-	id_tag = "escape_pod_5_recovery_hatch";
-	locked = 1;
-	name = "Recovery Shuttle Dock"
-	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor2"
-	},
+/obj/machinery/door/airlock/glass/security,
+/turf/simulated/floor/shuttle/red,
 /area/centcom/evac)
 "abO" = (
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "escape_pod_5_recovery";
-	pixel_x = -25;
-	pixel_y = 25;
-	req_access = list(list("ACCESS_EXTERNAL","ACCESS_TORCH_CREW"));
-	tag_door = "escape_pod_5_recovery_hatch"
-	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor2"
-	},
+/obj/machinery/door/airlock/glass/medical,
+/turf/simulated/floor/shuttle/white,
 /area/centcom/evac)
 "abP" = (
-/obj/structure/bed/chair{
-	dir = 1
+/obj/machinery/body_scanconsole{
+	dir = 4
 	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
+/turf/simulated/floor/shuttle/white,
 /area/centcom/evac)
 "abQ" = (
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "escape_pod_3_recovery";
-	pixel_x = 25;
-	pixel_y = -25;
-	req_access = list(list("ACCESS_EXTERNAL","ACCESS_TORCH_CREW"));
-	tag_door = "escape_pod_3_recovery_hatch"
+/obj/machinery/bodyscanner{
+	dir = 4
 	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor2"
-	},
+/turf/simulated/floor/shuttle/white,
 /area/centcom/evac)
 "abR" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1380;
-	icon_state = "closed";
-	id_tag = "escape_pod_3_recovery_hatch";
-	locked = 1;
-	name = "Recovery Shuttle Dock"
-	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor2"
-	},
+/obj/structure/iv_drip,
+/obj/item/reagent_containers/ivbag/blood/OMinus,
+/turf/simulated/floor/shuttle/white,
 /area/centcom/evac)
 "abS" = (
-/obj/machinery/vending/coffee,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
+/obj/structure/table/reinforced,
+/obj/item/storage/firstaid/surgery,
+/turf/simulated/floor/shuttle/white,
 /area/centcom/evac)
 "abT" = (
-/obj/machinery/computer/arcade,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
+/obj/machinery/optable,
+/turf/simulated/floor/shuttle/white,
 /area/centcom/evac)
 "abU" = (
 /obj/structure/bed,
@@ -696,49 +590,36 @@
 /turf/unsimulated/floor/plating,
 /area/centcom/holding)
 "abY" = (
-/obj/structure/closet/secure_closet/personal/patient,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor3"
+/obj/machinery/computer/operating{
+	dir = 1
 	},
+/turf/simulated/floor/shuttle/white,
 /area/centcom/evac)
 "abZ" = (
-/obj/item/storage/firstaid/regular{
-	pixel_x = 2;
-	pixel_y = 6
+/obj/machinery/door/airlock/hatch{
+	name = "Cockpit"
 	},
-/obj/item/storage/firstaid/regular{
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor3"
-	},
+/turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
 "aca" = (
-/obj/structure/window/shuttle{
-	icon_state = "window2"
-	},
-/obj/structure/grille,
-/turf/simulated/floor/plating,
+/obj/structure/table/reinforced,
+/turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
 "acb" = (
-/obj/effect/wallframe_spawn/reinforced/titanium,
-/turf/simulated/floor/plating,
+/obj/structure/table/reinforced,
+/obj/item/device/radio/off,
+/turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
 "acc" = (
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor3"
+/obj/machinery/computer/crew{
+	dir = 1
 	},
+/turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
 "acd" = (
-/obj/structure/window/shuttle{
-	icon_state = "window1"
-	},
-/obj/structure/grille,
-/turf/simulated/floor/plating,
+/obj/structure/table/reinforced,
+/obj/item/stamp/boss,
+/turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
 "ace" = (
 /obj/effect/landmark{
@@ -747,19 +628,17 @@
 /turf/unsimulated/floor/plating,
 /area/centcom/holding)
 "acf" = (
-/obj/structure/table/reinforced,
-/obj/item/paper_bin,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor4"
+/obj/machinery/computer/shuttle{
+	dir = 1;
+	icon_state = "computer"
 	},
+/turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
 "acg" = (
 /obj/structure/table/reinforced,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor4"
-	},
+/obj/random/clipboard,
+/obj/item/pen,
+/turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
 "ach" = (
 /turf/simulated/floor/holofloor/tiled,
@@ -852,193 +731,25 @@
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_courtroom)
 "acr" = (
-/obj/structure/table/reinforced,
-/obj/item/pen,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor4"
-	},
-/area/centcom/evac)
-"acs" = (
-/obj/machinery/sleeper,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor3"
-	},
-/area/centcom/evac)
-"act" = (
-/obj/machinery/door/airlock/hatch{
-	name = "Infirmary"
-	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor3"
-	},
-/area/centcom/evac)
-"acu" = (
-/obj/structure/table/reinforced,
-/obj/random/clipboard,
-/obj/item/stamp,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor4"
-	},
-/area/centcom/evac)
-"acv" = (
-/obj/structure/bed/chair{
+/obj/machinery/computer/station_alert{
 	dir = 1
 	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor4"
-	},
+/turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
-"acw" = (
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor4"
-	},
-/area/centcom/evac)
-"acx" = (
-/obj/machinery/computer/modular/preset/cardslot/command{
-	dir = 8;
-	icon_state = "console"
-	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor4"
-	},
+"acs" = (
+/obj/structure/table/reinforced,
+/obj/item/paper_bin,
+/turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
 "acy" = (
 /obj/structure/bed,
 /obj/effect/decal/cleanable/cobweb,
 /turf/unsimulated/floor/plating,
 /area/centcom/holding)
-"acz" = (
-/obj/machinery/vending/wallmed1{
-	name = "Emergency NanoMed";
-	pixel_x = -30;
-	pixel_y = 0
-	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor3"
-	},
-/area/centcom/evac)
-"acA" = (
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor4"
-	},
-/area/centcom/evac)
 "acB" = (
 /obj/effect/decal/cleanable/blood,
 /turf/unsimulated/wall,
 /area/centcom/holding)
-"acC" = (
-/obj/machinery/computer/modular/preset/security{
-	dir = 8;
-	icon_state = "console"
-	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor4"
-	},
-/area/centcom/evac)
-"acD" = (
-/obj/machinery/door/window/northright{
-	base_state = "right";
-	dir = 4;
-	icon_state = "right";
-	name = "Security Desk"
-	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor4"
-	},
-/area/centcom/evac)
-"acE" = (
-/obj/structure/table/standard,
-/obj/item/storage/box/handcuffs,
-/obj/item/device/flash,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor4"
-	},
-/area/centcom/evac)
-"acF" = (
-/obj/machinery/door/airlock/hatch{
-	name = "Cockpit"
-	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor2"
-	},
-/area/centcom/evac)
-"acG" = (
-/obj/machinery/computer/crew{
-	dir = 4;
-	icon_state = "computer"
-	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
-/area/centcom/evac)
-"acH" = (
-/obj/structure/bed/chair{
-	dir = 4;
-	name = "Defense"
-	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
-/area/centcom/evac)
-"acI" = (
-/obj/structure/table/reinforced,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
-/area/centcom/evac)
-"acJ" = (
-/obj/item/device/radio/off,
-/obj/structure/table/reinforced,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
-/area/centcom/evac)
-"acK" = (
-/obj/item/storage/lockbox,
-/obj/structure/table/reinforced,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
-/area/centcom/evac)
-"acL" = (
-/obj/item/stamp/captain,
-/obj/structure/table/reinforced,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
-/area/centcom/evac)
-"acM" = (
-/obj/machinery/computer/shuttle{
-	dir = 1;
-	icon_state = "computer"
-	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
-/area/centcom/evac)
 "acN" = (
 /turf/simulated/wall/prepainted,
 /area/merchant_station)
@@ -8665,15 +8376,6 @@
 	icon_state = "dark"
 	},
 /area/syndicate_elite_squad)
-"nXk" = (
-/obj/random/clipboard,
-/obj/item/pen,
-/obj/structure/table/reinforced,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
-/area/centcom/evac)
 "occ" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 6;
@@ -8856,10 +8558,6 @@
 "rzY" = (
 /turf/unsimulated/wall,
 /area/tdome)
-"rHp" = (
-/obj/effect/wallframe_spawn/reinforced/titanium,
-/turf/unsimulated/floor/plating,
-/area/centcom/evac)
 "rHP" = (
 /obj/effect/floor_decal/corner/blue/three_quarters{
 	dir = 8
@@ -9075,14 +8773,6 @@
 	icon_state = "wood_broken2"
 	},
 /area/holodeck/source_temple)
-"vws" = (
-/obj/item/paper_bin,
-/obj/structure/table/reinforced,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/shuttle.dmi';
-	icon_state = "floor"
-	},
-/area/centcom/evac)
 "vzG" = (
 /turf/unsimulated/floor{
 	icon_state = "lino"
@@ -15274,37 +14964,37 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
 aab
 aab
 aab
@@ -15476,6 +15166,7 @@ aab
 aab
 aab
 aab
+aae
 aab
 aab
 aab
@@ -15505,8 +15196,7 @@ aab
 aab
 aab
 aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -15678,6 +15368,23 @@ aab
 aab
 aab
 aab
+aae
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aap
+aap
+aap
+aap
+aap
 aab
 aab
 aab
@@ -15691,24 +15398,7 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -15880,6 +15570,23 @@ aab
 aab
 aab
 aab
+aae
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aap
+aap
+aap
+aap
+aap
 aab
 aab
 aab
@@ -15893,24 +15600,7 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -16082,6 +15772,23 @@ aab
 aab
 aab
 aab
+aae
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aap
+aap
+aap
+aap
+aap
 aab
 aab
 aab
@@ -16095,24 +15802,7 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -16284,6 +15974,23 @@ aab
 aab
 aab
 aab
+aae
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aap
+aap
+aap
+aap
+aap
 aab
 aab
 aab
@@ -16297,24 +16004,7 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -16486,6 +16176,23 @@ aab
 aab
 aab
 aab
+aae
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aap
+aap
+aap
+aap
+aap
 aab
 aab
 aab
@@ -16499,24 +16206,7 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -16688,6 +16378,23 @@ aab
 aab
 aab
 aab
+aae
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aap
+aap
+aap
+aap
+aap
 aab
 aab
 aab
@@ -16701,24 +16408,7 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -16890,6 +16580,23 @@ aab
 aab
 aab
 aab
+aae
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aap
+aap
+aap
+aap
+aap
 aab
 aab
 aab
@@ -16903,24 +16610,7 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -17092,6 +16782,23 @@ aab
 aab
 aab
 aab
+aae
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aap
+aap
+aaO
+aap
+aap
 aab
 aab
 aab
@@ -17105,24 +16812,7 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -17294,6 +16984,7 @@ aab
 aab
 aab
 aab
+aae
 aab
 aab
 aab
@@ -17303,28 +16994,27 @@ aab
 aab
 aab
 aab
+aah
+aah
+aah
+aah
+aaP
+aah
+aah
+aah
+aah
+aah
+aby
+aby
+aby
+aah
+aah
 aab
 aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -17496,6 +17186,7 @@ aab
 aab
 aab
 aab
+aae
 aab
 aab
 aab
@@ -17505,28 +17196,27 @@ aab
 aab
 aab
 aab
+aah
+aaj
+aal
+aal
+aba
+aal
+aal
+abr
+aah
+abv
+abA
+abv
+abA
+abv
+aah
+aby
+aby
+aby
+aby
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -17698,6 +17388,7 @@ aab
 aab
 aab
 aab
+aae
 aab
 aab
 aab
@@ -17707,28 +17398,27 @@ aab
 aab
 aab
 aab
+aah
+aak
+aaL
+aaL
+aaL
+aaL
+aaL
+abs
+aah
+abw
+abx
+abw
+abx
+abw
+aah
+aca
+aca
+aca
+aby
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -17900,37 +17590,37 @@ aab
 aab
 aab
 aab
+aae
 aab
+aaf
+aaf
+aaf
+aaf
+aaf
+aaf
+aaf
+aaf
+aah
+aal
+aaL
+aaL
+abb
+aaL
+aaL
+abt
+aah
+abx
+abx
+abx
+abx
+abx
+aah
+aaL
+aaN
+acc
+aby
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -18102,37 +17792,37 @@ aab
 aab
 aab
 aab
+aae
 aab
+aaf
+aaf
+aaf
+aaf
+aaf
+aaf
+aaf
+aaf
+aah
+aal
+aaL
+aaN
+abc
+abp
+aaL
+aal
+aah
+aby
+aby
+abN
+aby
+aby
+aah
+aaL
+aaL
+acd
+aby
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -18304,37 +17994,37 @@ aab
 aab
 aab
 aab
+aae
 aab
+aaf
+aaf
+aaf
+aaf
+aaf
+aaf
+aaf
+aag
+aai
+aam
+aaL
+aaN
+abc
+aaL
+aaL
+aaL
+abu
+aaL
+aaL
+aaL
+aaL
+aaL
+abZ
+aaL
+aaN
+acf
+aby
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -18506,37 +18196,37 @@ aab
 aab
 aab
 aab
+aae
 aab
+aaf
+aaf
+aaf
+aaf
+aaf
+aaf
+aaf
+aaf
+aah
+aal
+aaL
+aaN
+abc
+abq
+aaL
+aal
+aah
+aby
+aby
+abO
+aby
+aby
+aah
+aaL
+aaL
+acg
+aby
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -18708,37 +18398,37 @@ esx
 esx
 aab
 aab
+aae
 aab
+aaf
+aaf
+aaf
+aaf
+aaf
+aaf
+aaf
+aaf
+aah
+aal
+aaL
+aaL
+abd
+aaL
+aaL
+aal
+aah
+abz
+abM
+abM
+abM
+abS
+aah
+aaL
+aaN
+acr
+aby
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -18910,6 +18600,7 @@ ace
 esx
 aab
 aab
+aae
 aab
 aab
 aab
@@ -18919,28 +18610,27 @@ aab
 aab
 aab
 aab
+aah
+aal
+aaL
+aaL
+aaL
+aaL
+aaL
+aal
+aah
+abz
+abM
+abP
+abM
+abT
+aah
+acb
+aca
+acs
+aby
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -19112,6 +18802,7 @@ exn
 esx
 aab
 aab
+aae
 aab
 aab
 aab
@@ -19121,28 +18812,27 @@ aab
 aab
 aab
 aab
+aah
+aao
+aao
+aao
+abe
+aao
+aao
+aao
+aah
+abz
+abM
+abQ
+abR
+abY
+aah
+aby
+aby
+aby
+aby
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -19314,6 +19004,7 @@ acB
 esx
 aab
 aab
+aae
 aab
 aab
 aab
@@ -19323,28 +19014,27 @@ aab
 aab
 aab
 aab
+aah
+aah
+aah
+aah
+abf
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
+aah
 aab
 aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -19516,6 +19206,23 @@ ace
 esx
 aab
 aab
+aae
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aaM
+aaM
+abo
+aaM
+aaM
 aab
 aab
 aab
@@ -19529,24 +19236,7 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -19718,6 +19408,23 @@ exn
 esx
 aab
 aab
+aae
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aaM
+aaM
+aaM
+aaM
+aaM
 aab
 aab
 aab
@@ -19731,24 +19438,7 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -19920,6 +19610,23 @@ esx
 esx
 aab
 aab
+aae
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aaM
+aaM
+aaM
+aaM
+aaM
 aab
 aab
 aab
@@ -19933,24 +19640,7 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -20122,6 +19812,23 @@ ace
 esx
 aab
 aab
+aae
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aaM
+aaM
+aaM
+aaM
+aaM
 aab
 aab
 aab
@@ -20135,24 +19842,7 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -20324,6 +20014,23 @@ exn
 esx
 aab
 aab
+aae
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aaM
+aaM
+aaM
+aaM
+aaM
 aab
 aab
 aab
@@ -20337,24 +20044,7 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -20526,6 +20216,23 @@ esx
 esx
 aab
 aab
+aae
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aaM
+aaM
+aaM
+aaM
+aaM
 aab
 aab
 aab
@@ -20539,24 +20246,7 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -20728,6 +20418,23 @@ ace
 esx
 aab
 aab
+aae
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aaM
+aaM
+aaM
+aaM
+aaM
 aab
 aab
 aab
@@ -20741,24 +20448,7 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -20930,6 +20620,23 @@ exn
 esx
 aab
 aab
+aae
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aaM
+aaM
+aaM
+aaM
+aaM
 aab
 aab
 aab
@@ -20943,24 +20650,7 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -21132,6 +20822,7 @@ esx
 esx
 aab
 aab
+aae
 aab
 aab
 aab
@@ -21161,8 +20852,7 @@ aab
 aab
 aab
 aab
-aab
-aab
+aae
 aab
 aab
 aab
@@ -21334,37 +21024,37 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
+aae
 aab
 aab
 aab
@@ -38775,9 +38465,9 @@ aab
 aab
 aab
 aab
-abz
-abz
-abz
+aab
+aab
+aab
 aab
 aab
 aab
@@ -38970,16 +38660,16 @@ aab
 aab
 aab
 aab
-aag
-aag
-aag
-aag
-aag
 aab
 aab
-abz
-abz
-abz
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -39172,16 +38862,16 @@ aab
 aab
 aab
 aab
-aah
-aak
-aao
-abd
-aag
-aag
 aab
-abz
-abz
-abz
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -39374,16 +39064,16 @@ aab
 aab
 aab
 aab
-aai
-aak
-aap
-abd
-abd
-aag
 aab
-abz
-abz
-abz
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -39576,23 +39266,23 @@ aab
 aab
 aab
 aab
-aaj
-aak
-aag
-aag
-abr
-aag
-aag
-aag
-abN
-aag
-aag
-aag
-acb
-aag
-aag
-aag
-aag
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -39778,23 +39468,23 @@ aab
 aab
 aab
 aab
-aag
-aag
-aag
-abe
-abo
-abs
-abv
-abA
-abO
-aaL
-aag
-abY
-acc
-acs
-acz
-acs
-aag
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -39977,30 +39667,30 @@ aab
 aab
 aab
 aab
-aae
-aae
-aae
-aae
-aag
-aaL
-abf
-abo
-abf
-abp
-abf
-abo
-abS
-aag
-abY
-acc
-acc
-acc
-acc
-aag
-aag
-aag
-aag
-aag
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -40179,30 +39869,30 @@ aab
 aab
 aab
 aab
-aae
-aae
-aae
-aae
-aal
-aaM
-abo
-abo
-abo
-abo
-abo
-abo
-abo
-aag
-abZ
-acc
-acc
-acc
-acc
-aag
-acG
-acI
-acK
-rHp
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -40381,30 +40071,30 @@ aab
 aab
 aab
 aab
-aae
-aae
-aae
-aae
-aag
-aaN
-abf
-abo
-abf
-abw
-abw
-abf
-abo
-aag
-aca
-acd
-act
-aca
-acd
-aag
-abx
-abf
-acL
-rHp
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -40587,26 +40277,26 @@ aab
 aab
 aab
 aab
-aag
-aaO
-abp
-abo
-abt
-abv
-abv
-abP
-abo
-abo
-abo
-abo
-abo
-abo
-abo
-acF
-abo
-abt
-acM
-rHp
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -40785,30 +40475,30 @@ aab
 aab
 aab
 aab
-aaf
-aaf
-aaf
-aaf
-aag
-aaP
-abf
-abo
-abt
-abv
-abv
-abP
-abo
-abf
-abf
-acf
-acu
-acg
-acD
-aag
-acH
-abf
-nXk
-rHp
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -40987,30 +40677,30 @@ aab
 aab
 aab
 aab
-aaf
-aaf
-aaf
-aaf
-aam
-aba
-abo
-abo
-abf
-abx
-abx
-abf
-abo
-abo
-abo
-acg
-acv
-acA
-acA
-aag
-abf
-acJ
-vws
-rHp
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -41189,30 +40879,30 @@ aab
 aab
 aab
 aab
-aaf
-aaf
-aaf
-aaf
-aag
-aaL
-abf
-abo
-abo
-abo
-abo
-abo
-abo
-abo
-abo
-acr
-acw
-acA
-acA
-aag
-aag
-aag
-aag
-aag
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -41394,23 +41084,23 @@ aab
 aab
 aab
 aab
-aag
-aag
-aag
-abq
-abo
-abu
-aby
-aaL
-abQ
-abf
-abT
-abf
-acg
-acx
-acC
-acE
-aag
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -41596,23 +41286,23 @@ aab
 aab
 aab
 aab
-aah
-aak
-aag
-aag
-abr
-aag
-aag
-aag
-abR
-aag
-aag
-acb
-aag
-aag
-aag
-aag
-aag
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -41798,16 +41488,16 @@ aab
 aab
 aab
 aab
-aai
-aak
-abb
-abd
-abd
-aag
 aab
-abM
-abM
-abM
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -42000,16 +41690,16 @@ aab
 aab
 aab
 aab
-aaj
-aak
-abc
-abd
-aag
-aag
 aab
-abM
-abM
-abM
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -42202,16 +41892,16 @@ aab
 aab
 aab
 aab
-aag
-aag
-aag
-aag
-aag
 aab
 aab
-abM
-abM
-abM
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 aab
 aab
 aab
@@ -42411,9 +42101,9 @@ aab
 aab
 aab
 aab
-abM
-abM
-abM
+aab
+aab
+aab
 aab
 aab
 aab

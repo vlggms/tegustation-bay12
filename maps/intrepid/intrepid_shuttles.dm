@@ -39,7 +39,6 @@
 INTREPID_ESCAPE_POD(1)
 INTREPID_ESCAPE_POD(2)
 INTREPID_ESCAPE_POD(3)
-INTREPID_ESCAPE_POD(4)
 
 /obj/effect/shuttle_landmark/lower_level
 	name = "Lower Level Dock"
