@@ -5344,8 +5344,9 @@
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
 	dir = 1;
 	frequency = 1380;
+	id_tag = "escape_pod_3_berth";
 	pixel_y = -25;
-	tag_door = "escape_pod_3_berth"
+	tag_door = "escape_pod_3_hatch"
 	},
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -6813,7 +6814,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external/escapepod{
-	id_tag = "escape_pod_2_berth";
+	id_tag = "escape_pod_2_hatch";
 	name = "Escape Pod Two"
 	},
 /turf/simulated/floor,
@@ -17389,8 +17390,9 @@
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
 	frequency = 1380;
+	id_tag = "escape_pod_1_berth";
 	pixel_y = 15;
-	tag_door = "escape_pod_1_berth"
+	tag_door = "escape_pod_1_hatch"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/starboard)
@@ -17449,7 +17451,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external/escapepod{
-	id_tag = "escape_pod_3_berth";
+	id_tag = "escape_pod_3_hatch";
 	name = "Escape Pod Three"
 	},
 /turf/simulated/floor,
@@ -23845,8 +23847,9 @@
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
 	frequency = 1380;
+	id_tag = "escape_pod_2_berth";
 	pixel_y = 15;
-	tag_door = "escape_pod_2_berth"
+	tag_door = "escape_pod_2_hatch"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/starboard)
@@ -27597,7 +27600,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external/escapepod{
-	id_tag = "escape_pod_1_berth";
+	id_tag = "escape_pod_1_hatch";
 	name = "Escape Pod One"
 	},
 /turf/simulated/floor,
