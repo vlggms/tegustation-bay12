@@ -14004,6 +14004,9 @@
 	dir = 4;
 	icon_state = "railing0-1"
 	},
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/escape_pod1/station)
 "lIn" = (
