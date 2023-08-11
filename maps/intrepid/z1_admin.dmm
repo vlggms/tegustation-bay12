@@ -568,6 +568,7 @@
 /area/centcom/evac)
 "abT" = (
 /obj/machinery/optable,
+/obj/machinery/light,
 /turf/simulated/floor/shuttle/white,
 /area/centcom/evac)
 "abU" = (
@@ -7759,6 +7760,11 @@
 	icon_state = "vault"
 	},
 /area/tdome/tdome2)
+"cyu" = (
+/obj/structure/bed/padded,
+/obj/machinery/light,
+/turf/simulated/floor/shuttle/red,
+/area/centcom/evac)
 "cCV" = (
 /obj/machinery/hologram/holopad/longrange,
 /turf/simulated/floor/carpet/blue,
@@ -7975,6 +7981,12 @@
 	icon_state = "wood_broken4"
 	},
 /area/holodeck/source_temple)
+"gHX" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/shuttle/yellow,
+/area/centcom/evac)
 "gKj" = (
 /obj/machinery/door/airlock/command{
 	name = "Thunderdome"
@@ -8067,6 +8079,12 @@
 	icon_state = "white"
 	},
 /area/tdome)
+"jdS" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/shuttle/blue,
+/area/centcom/evac)
 "jed" = (
 /obj/effect/floor_decal/beach{
 	dir = 1;
@@ -8587,6 +8605,13 @@
 	icon_state = "vault"
 	},
 /area/tdome/tdome2)
+"sfb" = (
+/obj/machinery/sleeper,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/shuttle/white,
+/area/centcom/evac)
 "skD" = (
 /obj/effect/floor_decal/beach{
 	dir = 8;
@@ -8601,6 +8626,13 @@
 	icon_state = "dark"
 	},
 /area/syndicate_elite_squad)
+"sAm" = (
+/obj/structure/closet/emcloset,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/shuttle/yellow,
+/area/centcom/evac)
 "sGJ" = (
 /obj/structure/holostool,
 /turf/simulated/floor/holofloor/wood{
@@ -8879,6 +8911,13 @@
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/holofloor/beach/sand,
 /area/holodeck/source_volleyball)
+"yhu" = (
+/obj/structure/bed/padded,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/shuttle/red,
+/area/centcom/evac)
 
 (1,1,1) = {"
 ala
@@ -17198,11 +17237,11 @@ aab
 aab
 aah
 aaj
-aal
+gHX
 aal
 aba
 aal
-aal
+gHX
 abr
 aah
 abv
@@ -17407,11 +17446,11 @@ aaL
 aaL
 abs
 aah
-abw
+yhu
 abx
 abw
 abx
-abw
+cyu
 aah
 aca
 aca
@@ -17615,7 +17654,7 @@ abx
 abx
 abx
 aah
-aaL
+jdS
 aaN
 acc
 aby
@@ -18423,7 +18462,7 @@ abM
 abM
 abS
 aah
-aaL
+jdS
 aaN
 acr
 aby
@@ -18619,7 +18658,7 @@ aaL
 aaL
 aal
 aah
-abz
+sfb
 abM
 abP
 abM
@@ -18814,11 +18853,11 @@ aab
 aab
 aah
 aao
-aao
+sAm
 aao
 abe
 aao
-aao
+sAm
 aao
 aah
 abz
