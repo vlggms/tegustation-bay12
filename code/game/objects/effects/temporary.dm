@@ -80,3 +80,11 @@
 		appearance = mimiced_atom.appearance
 		set_dir(setdir)
 		mouse_opacity = 0
+
+// Used in place of old /obj/effect/temporary where applicable.
+// Do not use it for new stuff, please
+/obj/effect/temp_visual/temporary/Initialize(mapload, new_dur = 5, new_icon = null, new_icon_state = null)
+	duration = new_dur
+	icon = new_icon
+	icon_state = new_icon_state
+	return ..()
