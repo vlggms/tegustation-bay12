@@ -1,0 +1,5 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: Singularity generator will play a small effect before actually creating
+      the singularity.
