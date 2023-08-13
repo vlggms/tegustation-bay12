@@ -23,6 +23,7 @@
 	var/hide_from_reports = FALSE
 
 	var/has_distress_beacon
+	var/free_landing = FALSE // Whether or not shuttles can land in arbitrary places within the sector's z-levels.
 
 /obj/effect/overmap/visitable/Initialize()
 	. = ..()
