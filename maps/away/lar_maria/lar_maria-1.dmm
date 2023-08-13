@@ -746,14 +746,10 @@
 /turf/simulated/floor/tiled/white,
 /area/lar_maria/vir_access2)
 "cZ" = (
-/obj/machinery/door/airlock/multi_tile/virology{
-	dir = 4
-	},
-/obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/steel_ridged,
+/turf/simulated/wall/r_wall,
 /area/lar_maria/vir_hallway)
 "db" = (
 /turf/simulated/floor/plating,
@@ -780,10 +776,6 @@
 /obj/item/wrench,
 /turf/simulated/floor/plating,
 /area/lar_maria/vir_hallway)
-"df" = (
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/tiled/techfloor,
-/area/lar_maria/cells)
 "di" = (
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/structure/closet/l3closet/janitor,
@@ -882,6 +874,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/lar_maria/cells)
+"dU" = (
+/obj/structure/closet/crate/freezer,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/window/brigdoor/northleft,
+/obj/item/reagent_containers/glass/bottle/rage,
+/turf/simulated/floor/tiled/freezer,
+/area/lar_maria/vir_aux)
 "ea" = (
 /obj/structure/railing/mapped,
 /turf/space,
@@ -952,13 +953,13 @@
 /turf/simulated/floor/airless,
 /area/lar_maria/dorms)
 "er" = (
-/obj/machinery/door/airlock/multi_tile/virology,
+/obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular/open{
 	dir = 4;
 	icon_state = "pdoor0";
 	id_tag = "Cells_dock_BD"
 	},
-/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/security,
 /turf/simulated/floor/tiled/techfloor,
 /area/lar_maria/cells)
 "es" = (
@@ -1117,6 +1118,7 @@
 /obj/machinery/door/window/brigdoor/northleft{
 	dir = 4
 	},
+/obj/item/reagent_containers/glass/bottle/virus_random/medium,
 /turf/simulated/floor/tiled/freezer,
 /area/lar_maria/vir_main)
 "eW" = (
@@ -1716,6 +1718,7 @@
 /obj/structure/table/glass,
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/item/storage/box/syringes,
+/obj/item/reagent_containers/glass/bottle/rage,
 /turf/simulated/floor/tiled/white,
 /area/lar_maria/vir_aux)
 "hi" = (
@@ -1797,14 +1800,16 @@
 /turf/simulated/floor/tiled/white,
 /area/lar_maria/vir_hallway)
 "hv" = (
-/obj/machinery/door/blast/regular/open{
-	dir = 2;
-	icon_state = "pdoor0";
-	id_tag = "VirAccessBD"
+/obj/structure/closet/crate/freezer,
+/obj/structure/window/reinforced{
+	dir = 1
 	},
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/tiled/steel_ridged,
-/area/lar_maria/vir_access)
+/obj/machinery/door/window/brigdoor/northleft{
+	dir = 4
+	},
+/obj/item/reagent_containers/glass/bottle/rage,
+/turf/simulated/floor/tiled/freezer,
+/area/lar_maria/vir_main)
 "hw" = (
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 8
@@ -1942,15 +1947,6 @@
 /turf/simulated/floor/plating,
 /area/lar_maria/vir_hallway)
 "hI" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	pixel_x = 0
-	},
-/obj/machinery/door/airlock/multi_tile/virology{
-	dir = 4
-	},
 /obj/machinery/door/blast/regular/open{
 	dir = 2;
 	icon_state = "pdoor0";
@@ -1965,6 +1961,13 @@
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/door/airlock/virology,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_x = 0
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/lar_maria/vir_access)
@@ -2030,9 +2033,6 @@
 /turf/simulated/floor/tiled/white,
 /area/lar_maria/vir_access)
 "hM" = (
-/obj/machinery/door/airlock/multi_tile/virology{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -2049,6 +2049,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/door/airlock/virology,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/lar_maria/vir_access)
 "hN" = (
@@ -2610,6 +2611,13 @@
 	},
 /turf/simulated/floor/wood/walnut,
 /area/lar_maria/dorms)
+"je" = (
+/obj/effect/floor_decal/corner/lime{
+	dir = 6
+	},
+/mob/living/simple_animal/hostile/lar_maria/guard/ranged,
+/turf/simulated/floor/tiled/white,
+/area/lar_maria/vir_hallway)
 "jj" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/structure/flora/pottedplant/decorative,
@@ -2753,7 +2761,6 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/multi_tile/virology,
 /obj/machinery/door/blast/regular/open{
 	dir = 2;
 	icon_state = "pdoor0";
@@ -2761,6 +2768,7 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/virology,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/lar_maria/vir_hallway)
 "kl" = (
@@ -2886,8 +2894,20 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/security,
 /turf/simulated/floor/tiled/techfloor,
 /area/lar_maria/cells)
+"kU" = (
+/obj/structure/closet/crate/freezer,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/window/brigdoor/northleft{
+	dir = 2
+	},
+/obj/item/reagent_containers/glass/bottle/rage,
+/turf/simulated/floor/tiled/freezer,
+/area/lar_maria/vir_aux)
 "kW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -2918,6 +2938,8 @@
 "ld" = (
 /obj/structure/table/glass,
 /obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/item/reagent_containers/glass/bottle/virus_food,
+/obj/item/reagent_containers/glass/bottle/rage,
 /turf/simulated/floor/tiled/white,
 /area/lar_maria/vir_main)
 "le" = (
@@ -3042,6 +3064,12 @@
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/white,
 /area/lar_maria/vir_access)
+"lK" = (
+/obj/structure/closet/emcloset,
+/obj/effect/floor_decal/techfloor,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/simulated/floor/tiled/dark,
+/area/lar_maria/vir_main)
 "lM" = (
 /obj/machinery/atmospherics/omni/mixer{
 	active_power_usage = 7500;
@@ -3354,6 +3382,17 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/lar_maria/sec_checkpoint_3)
+"nh" = (
+/obj/structure/closet/crate/freezer,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/window/brigdoor/northleft{
+	dir = 4
+	},
+/obj/item/reagent_containers/glass/bottle/virus_random/medium,
+/turf/simulated/floor/tiled/freezer,
+/area/lar_maria/vir_main)
 "np" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/effect/floor_decal/techfloor{
@@ -3502,6 +3541,7 @@
 	pixel_x = 0
 	},
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/virology,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/lar_maria/vir_hallway)
 "nW" = (
@@ -3741,6 +3781,7 @@
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/item/reagent_containers/syringe,
 /obj/item/reagent_containers/syringe,
+/obj/item/reagent_containers/glass/bottle/virus_food,
 /turf/simulated/floor/tiled/white,
 /area/lar_maria/vir_aux)
 "pl" = (
@@ -4690,6 +4731,15 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/lar_maria/dorms)
+"uy" = (
+/obj/structure/closet/crate/freezer,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/window/brigdoor/northleft,
+/obj/item/reagent_containers/glass/bottle/virus_random/high,
+/turf/simulated/floor/tiled/freezer,
+/area/lar_maria/vir_aux)
 "uz" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
@@ -4719,7 +4769,7 @@
 /turf/simulated/floor/plating,
 /area/lar_maria/morgue)
 "uG" = (
-/obj/structure/virology/console_broken,
+/obj/machinery/computer/pandemic,
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/lar_maria/vir_main)
@@ -5418,6 +5468,20 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/lar_maria/vir_hallway)
+"ym" = (
+/obj/structure/closet/crate/freezer,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/window/brigdoor/northleft{
+	dir = 2
+	},
+/obj/item/reagent_containers/glass/bottle/virus_random/medium,
+/turf/simulated/floor/tiled/freezer,
+/area/lar_maria/vir_aux)
 "yn" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -5464,8 +5528,8 @@
 /turf/simulated/floor/tiled/freezer,
 /area/lar_maria/sec_checkpoint_3)
 "yB" = (
-/obj/machinery/door/airlock/multi_tile/virology,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/security,
 /turf/simulated/floor/tiled/techfloor,
 /area/lar_maria/cells)
 "yC" = (
@@ -5788,9 +5852,18 @@
 /turf/simulated/floor/tiled/white,
 /area/lar_maria/vir_main)
 "At" = (
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/tiled/steel_ridged,
-/area/lar_maria/vir_access)
+/obj/structure/closet/crate/freezer,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/window/brigdoor/northleft{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/lar_maria/vir_main)
 "Au" = (
 /obj/effect/decal/cleanable/blood/drip,
 /turf/simulated/floor/tiled/dark,
@@ -6159,12 +6232,14 @@
 "CB" = (
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/security,
 /turf/simulated/floor/tiled/techfloor,
 /area/lar_maria/cells)
 "CG" = (
 /obj/structure/window/reinforced,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/computer/pandemic,
 /turf/simulated/floor/tiled,
 /area/lar_maria/vir_aux)
 "CH" = (
@@ -6377,6 +6452,7 @@
 /obj/machinery/door/window/brigdoor/northleft{
 	dir = 4
 	},
+/obj/item/reagent_containers/glass/bottle/rage,
 /turf/simulated/floor/tiled/freezer,
 /area/lar_maria/vir_main)
 "DZ" = (
@@ -6671,6 +6747,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/virology,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/lar_maria/vir_access2)
 "Fw" = (
@@ -6689,6 +6766,17 @@
 /obj/structure/disposalpipe/segment/bent,
 /turf/simulated/floor/plating,
 /area/lar_maria/morgue)
+"Fy" = (
+/obj/structure/closet/crate/freezer,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/window/brigdoor/northleft{
+	dir = 2
+	},
+/obj/item/reagent_containers/glass/bottle/virus_random/high,
+/turf/simulated/floor/tiled/freezer,
+/area/lar_maria/vir_aux)
 "FB" = (
 /obj/structure/table/rack,
 /obj/random/toolbox,
@@ -7573,6 +7661,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/item/reagent_containers/glass/bottle/virus_random/high,
 /turf/simulated/floor/tiled/freezer,
 /area/lar_maria/vir_main)
 "Kg" = (
@@ -7586,6 +7675,7 @@
 /obj/machinery/door/window/brigdoor/northleft{
 	dir = 2
 	},
+/obj/item/reagent_containers/glass/bottle/virus_random/high,
 /turf/simulated/floor/tiled/freezer,
 /area/lar_maria/vir_aux)
 "Kl" = (
@@ -8000,6 +8090,7 @@
 	id_tag = "VirAccessBD"
 	},
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/virology,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/lar_maria/vir_hallway)
 "MG" = (
@@ -8097,6 +8188,10 @@
 /obj/item/toy/eightball,
 /turf/simulated/floor/wood/walnut,
 /area/lar_maria/dorms)
+"Nk" = (
+/obj/machinery/door/window/brigdoor/northleft,
+/turf/simulated/floor/tiled/dark,
+/area/lar_maria/sec_wing)
 "No" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -8221,6 +8316,20 @@
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/wood,
 /area/lar_maria/vir_main)
+"Oe" = (
+/obj/structure/closet/crate/freezer,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/window/brigdoor/northleft{
+	dir = 2
+	},
+/obj/item/reagent_containers/glass/bottle/virus_random/high,
+/turf/simulated/floor/tiled/freezer,
+/area/lar_maria/vir_aux)
 "Og" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -8273,6 +8382,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/item/reagent_containers/glass/bottle/virus_random/medium,
 /turf/simulated/floor/tiled/freezer,
 /area/lar_maria/vir_main)
 "Os" = (
@@ -8716,6 +8826,7 @@
 /obj/machinery/door/window/brigdoor/northleft{
 	dir = 2
 	},
+/obj/item/reagent_containers/glass/bottle/rage,
 /turf/simulated/floor/tiled/freezer,
 /area/lar_maria/vir_aux)
 "Rr" = (
@@ -9007,7 +9118,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/lar_maria/sec_wing)
 "Tm" = (
-/obj/machinery/door/airlock/multi_tile/security,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
@@ -9016,6 +9126,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/security,
 /turf/simulated/floor/tiled/techfloor,
 /area/lar_maria/cells)
 "Tn" = (
@@ -9200,8 +9311,8 @@
 /turf/simulated/floor/tiled,
 /area/lar_maria/vir_aux)
 "UI" = (
-/obj/machinery/door/airlock/multi_tile/virology,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/virology,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/lar_maria/vir_access2)
 "UJ" = (
@@ -9213,7 +9324,7 @@
 	dir = 8;
 	icon_state = "techfloor_edges"
 	},
-/obj/structure/virology/centrifuge_broken,
+/obj/machinery/computer/pandemic,
 /turf/simulated/floor/tiled/dark,
 /area/lar_maria/vir_aux)
 "UO" = (
@@ -25060,9 +25171,9 @@ aa
 cX
 cX
 DX
+nh
 Wh
-Wh
-Wh
+hv
 cX
 lp
 us
@@ -25870,7 +25981,7 @@ cX
 lC
 mh
 Ka
-eV
+At
 cX
 OR
 sV
@@ -27726,7 +27837,7 @@ te
 qX
 et
 vk
-YL
+Nk
 YL
 YL
 Tl
@@ -28316,7 +28427,7 @@ rx
 kT
 eH
 QE
-df
+yB
 fN
 fN
 fN
@@ -28901,7 +29012,7 @@ aa
 aa
 Cw
 cX
-cX
+lK
 lp
 Ba
 pr
@@ -29103,7 +29214,7 @@ aa
 aa
 Cw
 cX
-cX
+lK
 QS
 Ba
 pr
@@ -30528,7 +30639,7 @@ lb
 hH
 wX
 oY
-wX
+je
 Og
 jA
 GW
@@ -31353,7 +31464,7 @@ FB
 gH
 gJ
 gz
-hv
+gz
 hI
 gz
 gz
@@ -32363,7 +32474,7 @@ gz
 gz
 gz
 gz
-At
+gz
 hM
 gz
 gz
@@ -33577,7 +33688,7 @@ YE
 ho
 Ro
 hR
-KL
+uy
 iw
 DJ
 iJ
@@ -33775,9 +33886,9 @@ ga
 gi
 iw
 iw
-YE
+kU
 hS
-Ro
+Oe
 hS
 KL
 iw
@@ -33977,11 +34088,11 @@ gb
 gi
 iw
 iw
-YE
+Fy
 hS
-Ro
+ym
 hS
-KL
+dU
 iw
 Pl
 Tv
