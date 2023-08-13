@@ -98,6 +98,9 @@
 	update_action_buttons()
 	update_mouse_pointer()
 
+	if(machine)
+		machine.on_user_login(src)
+
 /mob/living/carbon/Login()
 	. = ..()
 	if(internals && internal)
