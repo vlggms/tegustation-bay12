@@ -7,6 +7,7 @@ GLOBAL_VAR_INIT(number_of_planetoids, 0)
 	icon_state = "globe"
 	in_space = FALSE
 	known = TRUE
+	free_landing = TRUE
 	var/area/planetary_area
 	var/list/seeds = list()
 	var/list/fauna_types = list()		// possible types of mobs to spawn
