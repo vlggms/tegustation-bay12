@@ -1,0 +1,4 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - rscadd: Master level pilots can now land at any location on the planets.
