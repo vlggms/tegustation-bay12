@@ -10,7 +10,7 @@
 	throw_speed = 1
 	throw_range = 2
 	volume = 1000
-	possible_transfer_amounts = "0.15;0.25;0.5;1;1.5"
+	possible_transfer_amounts = "0.1;0.25;0.5;1;1.5"
 	amount_per_transfer_from_this = 1
 	var/mob/living/carbon/human/attached = null
 
@@ -65,6 +65,11 @@
 	if(!ishuman(over_object))
 		return
 	HookUp(over_object, usr)
+
+/obj/item/reagent_containers/chemtank/standard_dispenser_refill(mob/user, obj/structure/reagent_dispensers/target)
+	if(!..())
+		return
+	queue_icon_update()
 
 /obj/item/reagent_containers/chemtank/standard_pour_into(mob/user, atom/target)
 	to_chat(user, SPAN_WARNING("Reagents from [src] cannot be transfered!"))
