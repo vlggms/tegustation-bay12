@@ -22,6 +22,7 @@
 		/mob/living/simple_animal/hostile/infestation/rhino = 1,
 		/mob/living/simple_animal/hostile/infestation/larva/implant/implanter = 1,
 		)
+	spawn_weight = 25 // Very dangerous and very rich with ores
 
 /obj/effect/overmap/visitable/sector/exoplanet/infested/generate_map()
 	if(prob(50))

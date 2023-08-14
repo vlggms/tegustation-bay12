@@ -75,6 +75,9 @@ GLOBAL_VAR_INIT(number_of_planetoids, 0)
 	/// Name of the group/government that claimed this planet first
 	var/claim = null
 
+	/// Decides how often this planet will be picked for generation
+	var/spawn_weight = 100
+
 /obj/effect/overmap/visitable/sector/exoplanet/proc/generate_habitability()
 	if (isnum(habitability_distribution))
 		habitability_class = habitability_distribution
