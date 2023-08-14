@@ -455,16 +455,16 @@ GLOBAL_VAR_INIT(world_topic_last, world.timeofday)
 #undef SET_THROTTLE
 
 /world/Reboot(var/reason)
-	/*spawn(0)
-		sound_to(world, sound(pick('sound/AI/newroundsexy.ogg','sound/misc/apcdestroyed.ogg','sound/misc/bangindonk.ogg')))// random end sounds!! - LastyBatsy
+	if(LAZYLEN(GLOB.using_map.reboot_sound))
+		sound_to(world, sound(pick(GLOB.using_map.reboot_sound)))
 
-		*/
 	TgsReboot()
 
 	Master.Shutdown()
 
 	var/datum/chatOutput/co
 	for(var/client/C in GLOB.clients)
+		show_blurb(C, 900, "Round is restarting...", 30, "CENTER,CENTER", "font-family: 'Fixedsys'; -dm-text-outline: 1 black; font-size: 14px; text-align:center;", FALSE)
 		co = C.chatOutput
 		if(co)
 			co.ehjax_send(data = "roundrestart")
