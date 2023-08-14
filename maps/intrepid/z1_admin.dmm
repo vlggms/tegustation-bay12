@@ -442,10 +442,6 @@
 	},
 /turf/simulated/floor/shuttle/yellow,
 /area/centcom/evac)
-"abA" = (
-/obj/machinery/door/airlock/highsecurity,
-/turf/simulated/floor/shuttle/blue,
-/area/centcom/evac)
 "abB" = (
 /obj/structure/flora/ausbushes/palebush,
 /turf/simulated/floor/holofloor/grass,
@@ -751,9 +747,7 @@
 /turf/simulated/floor/shuttle/white,
 /area/centcom/evac)
 "acs" = (
-/obj/machinery/door/airlock/hatch{
-	name = "Cockpit"
-	},
+/obj/machinery/door/airlock/glass/command,
 /turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
 "acy" = (
@@ -7776,6 +7770,8 @@
 /area/tdome/tdome2)
 "cyu" = (
 /obj/structure/table/reinforced,
+/obj/random/handgun,
+/obj/random/handgun,
 /turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
 "cCV" = (
@@ -8008,6 +8004,10 @@
 	icon_state = "lino"
 	},
 /area/tdome/tdomeobserve)
+"hhC" = (
+/obj/machinery/door/airlock/glass/civilian,
+/turf/simulated/floor/shuttle/blue,
+/area/centcom/evac)
 "hhT" = (
 /obj/structure/closet/emcloset,
 /obj/machinery/light/small,
@@ -8226,6 +8226,11 @@
 /obj/effect/shuttle_landmark/supply/centcom,
 /turf/simulated/floor/plating,
 /area/shuttle/cargodrone)
+"laG" = (
+/obj/structure/table/standard,
+/obj/random/documents,
+/turf/simulated/floor/shuttle/blue,
+/area/centcom/evac)
 "leo" = (
 /obj/structure/table/reinforced,
 /obj/item/paper_bin,
@@ -8404,6 +8409,11 @@
 	icon_state = "vault"
 	},
 /area/tdome/tdome2)
+"nGo" = (
+/obj/structure/table/reinforced,
+/obj/random/contraband,
+/turf/simulated/floor/shuttle/blue,
+/area/centcom/evac)
 "nJl" = (
 /obj/structure/bed/chair/wood{
 	dir = 8;
@@ -8496,6 +8506,11 @@
 	},
 /turf/simulated/floor/holofloor/lino,
 /area/holodeck/source_meetinghall)
+"oZZ" = (
+/obj/structure/table/reinforced,
+/obj/random/energy,
+/turf/simulated/floor/shuttle/blue,
+/area/centcom/evac)
 "pen" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -8553,6 +8568,11 @@
 	},
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_cafe)
+"qgB" = (
+/obj/structure/table/reinforced,
+/obj/random/drinkbottle,
+/turf/simulated/floor/shuttle/blue,
+/area/centcom/evac)
 "qir" = (
 /obj/effect/floor_decal/stoneborder/corner,
 /turf/simulated/floor/holofloor/beach/water,
@@ -8881,6 +8901,11 @@
 /obj/effect/overlay/palmtree_r,
 /turf/simulated/floor/holofloor/beach/sand,
 /area/holodeck/source_temple)
+"vVF" = (
+/obj/structure/table/standard,
+/obj/random/firstaid,
+/turf/simulated/floor/shuttle/blue,
+/area/centcom/evac)
 "wda" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /obj/structure/flora/ausbushes/brflowers,
@@ -19717,7 +19742,7 @@ aah
 aah
 aah
 aah
-aai
+hhC
 aah
 aah
 aah
@@ -20133,8 +20158,8 @@ abO
 acd
 aah
 cyu
-cyu
-cyu
+nGo
+oZZ
 aaM
 aab
 aab
@@ -20525,7 +20550,7 @@ aah
 aal
 aai
 abo
-abq
+laG
 abu
 aai
 aal
@@ -20731,7 +20756,7 @@ abq
 aai
 aai
 aai
-abA
+acs
 aai
 aai
 aai
@@ -20929,7 +20954,7 @@ aah
 aal
 aai
 abo
-abq
+vVF
 abv
 aai
 aal
@@ -21345,7 +21370,7 @@ abS
 acg
 aah
 jdS
-cyu
+qgB
 leo
 aaM
 aab
