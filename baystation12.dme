@@ -930,6 +930,7 @@
 #include "code\game\objects\items\blueprints.dm"
 #include "code\game\objects\items\bodybag.dm"
 #include "code\game\objects\items\buttons.dm"
+#include "code\game\objects\items\chemtank.dm"
 #include "code\game\objects\items\contraband.dm"
 #include "code\game\objects\items\crayons.dm"
 #include "code\game\objects\items\cryobag.dm"
