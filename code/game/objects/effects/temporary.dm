@@ -88,3 +88,21 @@
 	icon = new_icon
 	icon_state = new_icon_state
 	return ..()
+
+/obj/effect/temp_visual/cig_smoke
+	name = "smoke"
+	icon_state = "smallsmoke"
+	icon = 'icons/effects/effects.dmi'
+	opacity = FALSE
+	anchored = TRUE
+	mouse_opacity = FALSE
+	layer = ABOVE_HUMAN_LAYER
+
+	duration = 3 SECONDS
+
+/obj/effect/temp_visual/cig_smoke/Initialize()
+	. = ..()
+	set_dir(pick(GLOB.cardinal))
+	pixel_x = rand(-12, 12)
+	pixel_y = rand(0, 16)
+	animate(src, alpha = 0, pixel_x = pixel_x + rand(-6, 6), pixel_y = pixel_y + 12, duration, easing = EASE_IN)
