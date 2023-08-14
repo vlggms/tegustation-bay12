@@ -9,7 +9,7 @@
 	throw_speed = 1
 	throw_range = 2
 	volume = 1000
-	possible_transfer_amounts = "1;2;3"
+	possible_transfer_amounts = "0.25;0.5;1;1.5"
 	amount_per_transfer_from_this = 1
 	var/mob/living/carbon/human/attached = null
 
@@ -101,6 +101,7 @@
 	desc = "A chemical tank supplied with a hefty amount of gottheit, a revolution in the art of combat pioneered by Ayin Kalon, \
 			a well-known member of Terran fleet. The idea of hooking up soldiers on this drug is a source of debates \
 			for many reasons, including morality, legality and logistics."
+	possible_transfer_amounts = "0.25;0.5;1;1.5"
 
 /obj/item/reagent_containers/chemtank/gottheit/New()
 	..()
