@@ -303,3 +303,24 @@
 	author = "A Drop A Day"
 	license = /decl/license/cc_by_sa_4_0
 	url = "https://ghyti.bandcamp.com/"
+
+/decl/audio/track/brave_space_explorers
+	source = 'sound/music/BraveSpaceExplorers.ogg'
+	title = "Brave Space Explorers"
+	author = "Alexandr Zhelanov"
+	license = /decl/license/cc_by_4_0
+	url = "https://opengameart.org/content/brave-space-explorers"
+
+/decl/audio/track/singularity_calm
+	source = 'sound/music/singularity_calm.ogg'
+	title = "Singularity - Calm"
+	author = "Vitalezzz"
+	license = /decl/license/cc_by_4_0
+	url = "https://opengameart.org/content/singularity-0"
+
+/decl/audio/track/m31
+	source = 'sound/music/M31.ogg'
+	title = "M31"
+	author = "Yubatake"
+	license = /decl/license/cc_by_3_0
+	url = "https://opengameart.org/content/m31"
