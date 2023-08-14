@@ -400,6 +400,7 @@
 	flags = TURF_ACID_IMMUNE | TURF_REMOVE_CROWBAR
 	remove_timer = 60
 	can_engrave = FALSE
+	footstep_type = /decl/footsteps/mud
 
 /decl/flooring/flesh/infested
 	name = "pulsating flesh"

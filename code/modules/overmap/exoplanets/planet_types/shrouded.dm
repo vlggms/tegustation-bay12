@@ -18,7 +18,7 @@
 					   /mob/living/simple_animal/hostile/retaliate/jelly/alt,
 					   /mob/living/simple_animal/hostile/retaliate/beast/shantak/alt,
 					   /mob/living/simple_animal/hostile/leech)
-
+	spawn_weight = 50
 
 /obj/effect/overmap/visitable/sector/exoplanet/shrouded/generate_atmosphere()
 	..()
