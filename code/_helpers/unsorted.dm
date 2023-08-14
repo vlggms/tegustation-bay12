@@ -1243,7 +1243,7 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 	else
 		step(user.pulling, get_dir(user.pulling.loc, A))
 
-/proc/show_blurb(client/C, duration, blurb_text, fade_time = 5)
+/proc/show_blurb(client/C, duration, blurb_text, fade_time = 5, our_loc = "LEFT+1,BOTTOM+2")
 	set waitfor = 0
 
 	if(!C)
@@ -1259,7 +1259,7 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 	T.layer = FLOAT_LAYER
 	T.plane = HUD_PLANE
 	T.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
-	T.screen_loc = "LEFT+1,BOTTOM+2"
+	T.screen_loc = our_loc
 
 	C.screen += T
 	animate(T, alpha = 255, time = 10)
@@ -1275,9 +1275,9 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 	C.screen -= T
 	qdel(T)
 
-/proc/show_global_blurb(duration, blurb_text, fade_time = 5) // Shows a blurb to every living player
+/proc/show_global_blurb(duration, blurb_text, fade_time = 5, our_loc = "LEFT+1,BOTTOM+2") // Shows a blurb to every living player
 	for(var/mob/M in GLOB.player_list)
-		show_blurb(M.client, duration, blurb_text, fade_time)
+		show_blurb(M.client, duration, blurb_text, fade_time, our_loc)
 
 /proc/flash_color(mob_or_client, flash_color="#960000", flash_time=20)
 	var/client/C
