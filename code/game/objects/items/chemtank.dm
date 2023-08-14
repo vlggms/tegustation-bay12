@@ -4,6 +4,7 @@
 	icon = 'icons/obj/chemtank.dmi'
 	icon_state = "chemtank"
 	origin_tech = list(TECH_BIO = 4)
+	atom_flags = ATOM_FLAG_NO_TEMP_CHANGE | ATOM_FLAG_OPEN_CONTAINER
 	slot_flags = SLOT_BACK
 	w_class = ITEM_SIZE_LARGE
 	throw_speed = 1
