@@ -464,7 +464,7 @@ GLOBAL_VAR_INIT(world_topic_last, world.timeofday)
 
 	var/datum/chatOutput/co
 	for(var/client/C in GLOB.clients)
-		show_blurb(C, 900, "Round is restarting...", 30, "CENTER,CENTER", FALSE)
+		show_blurb(C, 900, "Round is restarting...", 30, "CENTER,CENTER", "font-family: 'Fixedsys'; -dm-text-outline: 1 black; font-size: 14px; text-align:center;", FALSE)
 		co = C.chatOutput
 		if(co)
 			co.ehjax_send(data = "roundrestart")

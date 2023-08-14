@@ -1243,13 +1243,13 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 	else
 		step(user.pulling, get_dir(user.pulling.loc, A))
 
-/proc/show_blurb(client/C, duration, blurb_text, fade_time = 5, our_loc = "LEFT+1,BOTTOM+2", typeout = TRUE)
+/proc/show_blurb(client/C, duration, blurb_text, fade_time = 5, our_loc = "LEFT+1,BOTTOM+2", our_style = "font-family: 'Fixedsys'; -dm-text-outline: 1 black; font-size: 11px;", typeout = TRUE)
 	set waitfor = 0
 
 	if(!C)
 		return
 
-	var/style = "font-family: 'Fixedsys'; -dm-text-outline: 1 black; font-size: 11px;"
+	var/style = our_style
 	var/text = blurb_text
 	text = uppertext(text)
 
@@ -1278,9 +1278,9 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 	C.screen -= T
 	qdel(T)
 
-/proc/show_global_blurb(duration, blurb_text, fade_time = 5, our_loc = "LEFT+1,BOTTOM+2", typeout = TRUE) // Shows a blurb to every living player
+/proc/show_global_blurb(duration, blurb_text, fade_time = 5, our_loc = "LEFT+1,BOTTOM+2", our_style = "font-family: 'Fixedsys'; -dm-text-outline: 1 black; font-size: 11px;", typeout = TRUE) // Shows a blurb to every living player
 	for(var/mob/M in GLOB.player_list)
-		show_blurb(M.client, duration, blurb_text, fade_time, our_loc, typeout)
+		show_blurb(M.client, duration, blurb_text, fade_time, our_loc, our_style, typeout)
 
 /proc/flash_color(mob_or_client, flash_color="#960000", flash_time=20)
 	var/client/C
