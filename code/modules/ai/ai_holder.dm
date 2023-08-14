@@ -156,6 +156,7 @@
 
 /// 'Tactical' processes such as moving a step, meleeing an enemy, firing a projectile, and other fairly cheap actions that need to happen quickly.
 /datum/ai_holder/proc/handle_tactics()
+	set waitfor = FALSE
 	if (holder.key && !autopilot)
 		return
 	handle_special_tactic()
@@ -197,6 +198,7 @@
 
 /// This is called every half a second.
 /datum/ai_holder/proc/handle_stance_tactical()
+	set waitfor = FALSE
 	ai_log("========= Fast Process Beginning ==========", AI_LOG_TRACE) // This is to make it easier visually to disinguish between 'blocks' of what a tick did.
 	ai_log("handle_stance_tactical() : Called.", AI_LOG_TRACE)
 
@@ -276,6 +278,7 @@
 
 /// This is called every two seconds.
 /datum/ai_holder/proc/handle_stance_strategical()
+	set waitfor = FALSE
 	ai_log("++++++++++ Slow Process Beginning ++++++++++", AI_LOG_TRACE)
 	ai_log("handle_stance_strategical() : Called.", AI_LOG_TRACE)
 

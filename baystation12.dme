@@ -293,7 +293,6 @@
 #include "code\datums\sun.dm"
 #include "code\datums\tgs_event_handler.dm"
 #include "code\datums\weakref.dm"
-#include "code\datums\ai\ai.dm"
 #include "code\datums\ai\ai_holo.dm"
 #include "code\datums\appearances\appearance_data.dm"
 #include "code\datums\appearances\appearance_manager.dm"
