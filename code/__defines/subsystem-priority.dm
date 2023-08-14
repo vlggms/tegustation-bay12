@@ -8,7 +8,6 @@
 // SS_TICKER
 #define SS_PRIORITY_OVERLAY        100 // Applies overlays. May cause overlay pop-in if it gets behind.
 #define SS_PRIORITY_TIMER          20
-#define SS_PRIORITY_ICON_UPDATE    20  // Queued icon updates. Mostly used by APCs and tables.
 
 // Normal
 #define SS_PRIORITY_TICKER         100 // Gameticker.
@@ -19,6 +18,7 @@
 #define SS_PRIORITY_CHEMISTRY      60  // Multi-tick chemical reactions.
 #define SS_PRIORITY_SPACEDRIFT     45  // Drifting things
 #define SS_PRIORITY_CHAT           40  // Chat
+#define SS_PRIORITY_ICON_UPDATE    20  // Queued icon updates. Mostly used by APCs and tables.
 #define SS_PRIORITY_INPUT          20  // Input things.
 #define SS_PRIORITY_ALARM          20  // Alarm processing.
 #define SS_PRIORITY_EVENT          20  // Event processing and queue handling.
