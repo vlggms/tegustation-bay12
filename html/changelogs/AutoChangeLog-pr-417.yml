@@ -1,0 +1,7 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: Round-end credits music is separate from the credits themselves. This is
+      tied to lobby music preference.
+  - tweak: Round restart sounds reimplemented. Additionally, there'll be a text blurb
+      when round restarts.
