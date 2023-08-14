@@ -9555,12 +9555,12 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/portside)
 "hTN" = (
-/obj/machinery/door/airlock/glass/civilian{
-	name = "Cargo Bay"
-	},
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/airlock/glass/mining{
+	name = "Cargo Bay"
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/cargo/cargobay)
 "hUf" = (
@@ -11083,7 +11083,7 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/recharger/wallcharger{
 	dir = 4;
-	pixel_x = -19
+	pixel_x = -22
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/exploration/storage)
@@ -27254,7 +27254,7 @@
 /obj/structure/closet/secure_closet/combat_engi,
 /obj/machinery/recharger/wallcharger{
 	dir = 4;
-	pixel_x = -19
+	pixel_x = -22
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/exploration/storage)
