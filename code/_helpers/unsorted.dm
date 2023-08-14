@@ -1243,7 +1243,7 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 	else
 		step(user.pulling, get_dir(user.pulling.loc, A))
 
-/proc/show_blurb(client/C, duration, blurb_text, fade_time = 5, our_loc = "LEFT+1,BOTTOM+2")
+/proc/show_blurb(client/C, duration, blurb_text, fade_time = 5, our_loc = "LEFT+1,BOTTOM+2", typeout = TRUE)
 	set waitfor = 0
 
 	if(!C)
@@ -1263,9 +1263,12 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 
 	C.screen += T
 	animate(T, alpha = 255, time = 10)
-	for(var/i = 1 to length(text)+1)
-		T.maptext = "<span style=\"[style]\">[copytext(text,1,i)] </span>"
-		sleep(1)
+	if(typeout)
+		for(var/i = 1 to length(text)+1)
+			T.maptext = "<span style=\"[style]\">[copytext(text,1,i)] </span>"
+			sleep(1)
+	else
+		T.maptext = "<span style=\"[style]\">[text] </span>"
 
 	addtimer(CALLBACK(GLOBAL_PROC, .proc/fade_blurb, C, T, fade_time), duration)
 
@@ -1275,9 +1278,9 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 	C.screen -= T
 	qdel(T)
 
-/proc/show_global_blurb(duration, blurb_text, fade_time = 5, our_loc = "LEFT+1,BOTTOM+2") // Shows a blurb to every living player
+/proc/show_global_blurb(duration, blurb_text, fade_time = 5, our_loc = "LEFT+1,BOTTOM+2", typeout = TRUE) // Shows a blurb to every living player
 	for(var/mob/M in GLOB.player_list)
-		show_blurb(M.client, duration, blurb_text, fade_time, our_loc)
+		show_blurb(M.client, duration, blurb_text, fade_time, our_loc, typeout)
 
 /proc/flash_color(mob_or_client, flash_color="#960000", flash_time=20)
 	var/client/C
