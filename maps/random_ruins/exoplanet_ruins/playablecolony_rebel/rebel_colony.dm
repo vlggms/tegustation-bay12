@@ -4,7 +4,7 @@
 /datum/map_template/ruin/exoplanet/rebel_colony
 	name = "rebel colony"
 	id = "rebel_colony"
-	description = "a recently established Terran colony meant to operate as a prison world. Contact with its supervisor was lost few weeks ago."
+	description = "A recently established Terran colony meant to operate as a prison world. Contact with its supervisor was lost few weeks ago."
 	suffixes = list("playablecolony_rebel/rebel_colony.dmm")
 	spawn_cost = 3
 	player_cost = 5
@@ -25,7 +25,7 @@
 	)
 
 /datum/submap/rebel_colony/sync_cell(obj/effect/overmap/visitable/cell)
-	cell.has_distress_beacon = name
+	cell.has_distress_beacon = "established colony on [cell.name]"
 
 /* Access */
 /var/const/access_rebelcolony = "ACCESS_REBELCOLONY"
