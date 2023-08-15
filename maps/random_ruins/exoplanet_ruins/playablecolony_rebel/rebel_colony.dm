@@ -5,7 +5,7 @@
 	name = "rebel colony"
 	id = "rebel_colony"
 	description = "a recently established Terran colony meant to operate as a prison world. Contact with its supervisor was lost few weeks ago."
-	suffixes = list("playablecolony_rebel/colony_rebel.dmm")
+	suffixes = list("playablecolony_rebel/rebel_colony.dmm")
 	spawn_cost = 3
 	player_cost = 5
 	template_flags = TEMPLATE_FLAG_CLEAR_CONTENTS | TEMPLATE_FLAG_NO_RUINS | TEMPLATE_FLAG_NO_RADS
