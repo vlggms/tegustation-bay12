@@ -34,6 +34,9 @@
 
 	// Not all of them require checking, see below
 	var/list/modifiers = params2list(params)
+	if(modifiers["ctrl"] && modifiers["alt"])
+		pointed(A)
+		return
 	if(modifiers["alt"])
 		// I'd rather call ..() but who knows what will break if we do that
 		var/datum/extension/on_click/alt = get_extension(A, /datum/extension/on_click/alt)
@@ -46,9 +49,6 @@
 	if(modifiers["shift"])
 		examinate(A)
 		return
-	if(modifiers["ctrl"] && modifiers["alt"])
-		pointed(A)
-		return 1
 	A.attack_ghost(src)
 
 // Oh by the way this didn't work with old click code which is why clicking shit didn't spam you
