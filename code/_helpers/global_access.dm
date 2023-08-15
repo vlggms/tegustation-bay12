@@ -455,8 +455,8 @@
 			return global.forced_ambiance_list;
 		if("fruit_icon_cache")
 			return global.fruit_icon_cache;
-		if("fusion_reactions")
-			return global.fusion_reactions;
+		if("all_reactions")
+			return global.all_reactions;
 		if("game_id")
 			return global.game_id;
 		if("gamemode_cache")
@@ -889,7 +889,7 @@
 			return global.z_levels;
 		if("zone_blocked")
 			return global.zone_blocked;
-		
+
 /proc/writeglobal(which, newval)
 	switch(which)
 		if("ANTAG_FREQS")
@@ -1168,6 +1168,8 @@
 			global.all_money_accounts=newval;
 		if("all_objectives")
 			global.all_objectives=newval;
+		if("all_reactions")
+			global.all_reactions=newval;
 		if("all_robolimbs")
 			global.all_robolimbs=newval;
 		if("all_species")
@@ -1346,8 +1348,6 @@
 			global.forced_ambiance_list=newval;
 		if("fruit_icon_cache")
 			global.fruit_icon_cache=newval;
-		if("fusion_reactions")
-			global.fusion_reactions=newval;
 		if("game_id")
 			global.game_id=newval;
 		if("gamemode_cache")
@@ -1780,7 +1780,7 @@
 			global.z_levels=newval;
 		if("zone_blocked")
 			global.zone_blocked=newval;
-		
+
 /var/list/_all_globals=list(
 	"ANTAG_FREQS",
 	"AWAY_FREQS_ASSIGNED",
