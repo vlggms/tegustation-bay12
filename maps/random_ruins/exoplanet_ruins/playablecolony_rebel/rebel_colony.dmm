@@ -492,6 +492,12 @@
 /obj/item/ammo_casing/pistol/used,
 /obj/effect/decal/cleanable/blood/drip,
 /obj/effect/decal/cleanable/blood/drip,
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/map_template/rebel_colony/command)
 "jg" = (
@@ -703,10 +709,10 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/map_template/rebel_colony/airlock)
 "ls" = (
-/obj/machinery/door/airlock/multi_tile/glass/command{
-	name = "Command Suites";
-	req_access = list()
+/obj/machinery/door/airlock/glass/command{
+	name = "Command Suites"
 	},
+/obj/effect/floor_decal/corner/blue/full,
 /turf/simulated/floor/tiled/techmaint,
 /area/map_template/rebel_colony/command)
 "lv" = (
@@ -775,6 +781,9 @@
 "mB" = (
 /obj/item/ammo_casing/pistol/used,
 /obj/effect/decal/cleanable/blood/drip,
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/map_template/rebel_colony/command)
 "mF" = (
@@ -1007,6 +1016,9 @@
 /obj/item/ammo_casing/pistol/used,
 /obj/structure/closet/hydrant{
 	pixel_x = 32
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/map_template/rebel_colony/command)
@@ -1243,6 +1255,9 @@
 /obj/structure/closet/hydrant{
 	pixel_x = -32
 	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/map_template/rebel_colony/command)
 "vI" = (
@@ -1263,6 +1278,9 @@
 /area/map_template/rebel_colony/messhall)
 "vS" = (
 /obj/structure/closet/firecloset,
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/map_template/rebel_colony/command)
 "wg" = (
@@ -1534,6 +1552,16 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/map_template/rebel_colony/medbay)
+"Cv" = (
+/obj/item/ammo_casing/pistol/used,
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/map_template/rebel_colony/command)
 "CA" = (
 /obj/machinery/light,
 /turf/simulated/floor/carpet/blue2,
@@ -1699,6 +1727,9 @@
 /obj/item/ammo_casing/pistol/used,
 /obj/item/ammo_casing/pistol/used,
 /obj/effect/decal/cleanable/blood/drip,
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/map_template/rebel_colony/command)
 "Ff" = (
@@ -1822,6 +1853,9 @@
 "HG" = (
 /obj/effect/decal/cleanable/blood/drip,
 /obj/item/ammo_casing/pistol/used,
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/map_template/rebel_colony/command)
 "HH" = (
@@ -2399,6 +2433,9 @@
 	dir = 4
 	},
 /obj/structure/closet/toolcloset,
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/map_template/rebel_colony/command)
 "UI" = (
@@ -3800,11 +3837,11 @@ CJ
 CJ
 ZP
 ls
-SC
+Cv
 mB
 Fe
 vG
-SC
+QW
 HG
 vS
 OL
@@ -3861,13 +3898,13 @@ XE
 XE
 XE
 ur
-XE
+ls
 jf
-SC
-XE
+WU
+SX
 sg
-XE
-SC
+SX
+WU
 UD
 OL
 zl
