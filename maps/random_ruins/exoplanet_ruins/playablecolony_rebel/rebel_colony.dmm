@@ -367,7 +367,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/rebel_colony/engineering)
 "gX" = (
-/obj/structure/closet/hydrant,
 /obj/structure/cable{
 	d2 = 2;
 	icon_state = "0-2";
@@ -597,6 +596,9 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/structure/closet/hydrant{
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/rebel_colony/engineering)
 "kl" = (
@@ -689,6 +691,17 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/rebel_colony/engineering)
+"lq" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+	dir = 4;
+	id_tag = "rebel_colony_pump_out_internal";
+	power_rating = 25000
+	},
+/obj/structure/hygiene/shower{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/map_template/rebel_colony/airlock)
 "ls" = (
 /obj/machinery/door/airlock/multi_tile/glass/command{
 	name = "Command Suites";
@@ -790,6 +803,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/map_template/rebel_colony/security)
+"nN" = (
+/obj/structure/closet/firecloset,
+/turf/simulated/floor/tiled/dark,
+/area/map_template/rebel_colony/commons)
 "nX" = (
 /obj/structure/table/steel_reinforced,
 /turf/simulated/floor/tiled/techfloor,
@@ -986,6 +1003,13 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/map_template/rebel_colony/security)
+"sg" = (
+/obj/item/ammo_casing/pistol/used,
+/obj/structure/closet/hydrant{
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/map_template/rebel_colony/command)
 "sw" = (
 /obj/effect/decal/cleanable/blood/drip,
 /obj/effect/floor_decal/corner/red/border{
@@ -1215,6 +1239,12 @@
 /obj/effect/floor_decal/corner/red/border,
 /turf/simulated/floor/tiled/dark,
 /area/map_template/rebel_colony/security)
+"vG" = (
+/obj/structure/closet/hydrant{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/map_template/rebel_colony/command)
 "vI" = (
 /obj/machinery/light,
 /obj/effect/decal/cleanable/blood/drip,
@@ -1232,7 +1262,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/map_template/rebel_colony/messhall)
 "vS" = (
-/obj/structure/closet/hydrant,
+/obj/structure/closet/firecloset,
 /turf/simulated/floor/tiled/techmaint,
 /area/map_template/rebel_colony/command)
 "wg" = (
@@ -1533,13 +1563,13 @@
 	pixel_x = 28;
 	pixel_y = 6
 	},
-/obj/machinery/access_button/airlock_exterior{
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/access_button/airlock_interior{
 	frequency = 1380;
 	master_tag = "rebel_colony";
 	pixel_x = 26;
 	pixel_y = -6
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/rebel_colony/airlock)
 "DO" = (
@@ -1580,6 +1610,9 @@
 	id_tag = "rebel_colony_pump_out_internal";
 	power_rating = 25000
 	},
+/obj/structure/hygiene/shower{
+	pixel_y = 20
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/map_template/rebel_colony/airlock)
 "Ej" = (
@@ -1609,7 +1642,7 @@
 	pixel_x = -28;
 	pixel_y = 6
 	},
-/obj/machinery/access_button/airlock_interior{
+/obj/machinery/access_button/airlock_exterior{
 	frequency = 1380;
 	master_tag = "rebel_colony";
 	pixel_x = -28;
@@ -1617,6 +1650,11 @@
 	},
 /turf/simulated/floor/exoplanet/concrete,
 /area/map_template/rebel_colony/airlock)
+"Eu" = (
+/obj/structure/mopbucket,
+/obj/item/mop/advanced,
+/turf/simulated/floor/tiled/dark,
+/area/map_template/rebel_colony/commons)
 "EP" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -1633,6 +1671,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/map_template/rebel_colony/messhall)
+"EW" = (
+/obj/effect/floor_decal/corner/red/border{
+	dir = 1
+	},
+/obj/structure/closet/hydrant{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/dark,
+/area/map_template/rebel_colony/security)
 "EY" = (
 /obj/machinery/light{
 	dir = 8
@@ -1777,6 +1824,12 @@
 /obj/item/ammo_casing/pistol/used,
 /turf/simulated/floor/tiled/techmaint,
 /area/map_template/rebel_colony/command)
+"HH" = (
+/obj/structure/closet/hydrant{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/tcomms)
 "HO" = (
 /obj/machinery/power/apc/high{
 	dir = 4;
@@ -1882,7 +1935,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/rebel_colony/security)
 "KO" = (
-/obj/machinery/portable_atmospherics/canister/air/airlock,
+/obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/tiled/dark,
 /area/map_template/rebel_colony/commons)
 "Lb" = (
@@ -1994,6 +2047,13 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/rebel_colony/airlock)
+"Ot" = (
+/obj/effect/floor_decal/techfloor,
+/obj/structure/closet/hydrant{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/security)
 "Ox" = (
 /obj/item/ammo_casing/pistol/used,
 /turf/simulated/floor/carpet/blue,
@@ -2129,6 +2189,9 @@
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
+	},
+/obj/structure/closet/hydrant{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/map_template/rebel_colony/command)
@@ -3536,7 +3599,7 @@ zx
 zx
 zx
 zx
-qW
+EW
 ix
 ux
 zx
@@ -3722,7 +3785,7 @@ zx
 zx
 zx
 zx
-qW
+EW
 tE
 uS
 zx
@@ -3740,7 +3803,7 @@ ls
 SC
 mB
 Fe
-XE
+vG
 SC
 HG
 vS
@@ -3802,7 +3865,7 @@ XE
 jf
 SC
 XE
-SC
+sg
 XE
 SC
 UD
@@ -3853,7 +3916,7 @@ zx
 OV
 cm
 cm
-Pb
+Ot
 zx
 Xg
 RE
@@ -3908,7 +3971,7 @@ zx
 zx
 zx
 zx
-qW
+EW
 ix
 uY
 zx
@@ -4473,8 +4536,8 @@ FT
 eK
 eK
 EY
-Jp
-Jp
+nN
+Eu
 FT
 hc
 YD
@@ -4710,7 +4773,7 @@ cC
 dn
 zl
 ey
-hi
+HH
 hi
 mv
 ey
@@ -5465,7 +5528,7 @@ zl
 xJ
 Eh
 Ib
-Eh
+lq
 xJ
 zl
 ZS
