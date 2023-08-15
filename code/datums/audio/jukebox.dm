@@ -151,16 +151,12 @@
 
 GLOBAL_LIST_INIT(jukebox_tracks, list(
 	/decl/audio/track/absconditus,
-	/decl/audio/track/ambispace,
 	/decl/audio/track/asfarasitgets,
 	/decl/audio/track/brave_space_explorers,
-	/decl/audio/track/clouds_of_fire,
-	/decl/audio/track/comet_haley,
 	/decl/audio/track/df_theme,
 	/decl/audio/track/digit_one,
 	/decl/audio/track/dilbert,
 	/decl/audio/track/eighties,
-	/decl/audio/track/elevator,
 	/decl/audio/track/elibao,
 	/decl/audio/track/endless_space,
 	/decl/audio/track/floating,
@@ -183,10 +179,8 @@ GLOBAL_LIST_INIT(jukebox_tracks, list(
 	/decl/audio/track/singularity_calm,
 	/decl/audio/track/space_oddity,
 	/decl/audio/track/thunderdome,
-	/decl/audio/track/torch,
 	/decl/audio/track/torn,
 	/decl/audio/track/treacherous_voyage,
-	/decl/audio/track/voidsent,
 	/decl/audio/track/wake,
 	/decl/audio/track/wildencounters
 ))

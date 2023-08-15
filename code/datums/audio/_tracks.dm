@@ -6,27 +6,12 @@
 	license = /decl/license/cc_by_nc_sa_3_0
 	url = "https://bandcamp.zhaytee.net/track/absconditus"
 
-/decl/audio/track/ambispace
-	display = "Beyond"
-	source = 'sound/ambience/ambispace.ogg'
-	title = "Bad Apple!! (slowed down)"
-	author = "Alstroemeria Records"
-	license = /decl/license/grandfathered
-
 /decl/audio/track/asfarasitgets
 	source = 'sound/music/europa/asfarasitgets.ogg'
 	title = "As Far As It Gets"
 	author = "A Drop A Day"
 	license = /decl/license/cc_by_sa_4_0
 	url = "https://ghyti.bandcamp.com/"
-
-/decl/audio/track/businessend
-	source = 'sound/music/businessend.ogg'
-	title = "Business End"
-	author = "Cletus Got Shot"
-	collection = "Unamerican"
-	license = /decl/license/cc_by_nc_sa_3_0
-	url = "https://freemusicarchive.org/music/Cletus_Got_Shot/Unamerican/Cletus_Got_Shot_-_UNAMERICAN_-_09_Business_End"
 
 /decl/audio/track/chasing_time
 	source = 'sound/music/chasing_time.ogg'
@@ -35,28 +20,6 @@
 	collection = "Creative Commons Vol. 1"
 	license = /decl/license/cc_by_nc_sa_3_0
 	url = "http://www.dexterbritain.co.uk"
-
-/decl/audio/track/clouds_of_fire
-	source = 'sound/music/clouds.s3m'
-	title = "Clouds of Fire"
-	author = "Hector/dMk"
-	license = /decl/license/grandfathered
-	url = "https://modarchive.org/index.php?request=view_by_moduleid&query=73980"
-
-/decl/audio/track/cloudsofneptune
-	source = 'sound/music/Clouds_of_Neptune.ogg'
-	title = "Clouds of Neptune"
-	author = "Dukica99"
-	license = /decl/license/cc_by_4_0
-	url = "https://soundcloud.com/user-472035237/clouds-of-neptune"
-
-/decl/audio/track/comet_haley
-	source = 'sound/music/comet_haley.ogg'
-	title = "Comet Halley"
-	author = "Stellardrone"
-	collection = "Light Years"
-	license = /decl/license/cc_by_3_0
-	url = "http://freemusicarchive.org/music/Stellardrone/Light_Years_1227/07_Comet_Halley"
 
 /decl/audio/track/df_theme
 	display = "Asteroids"
@@ -86,14 +49,6 @@
 	author = "A Drop A Day"
 	license = /decl/license/cc_by_sa_4_0
 	url = "https://ghyti.bandcamp.com/"
-
-/decl/audio/track/elevator
-	display = "Please Come Back Any Time"
-	source = 'sound/music/elevatormusic.ogg'
-	title = "Local Forecast (Elevator)"
-	author = "Kevin MacLeod"
-	license = /decl/license/cc_by_3_0
-	url = "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1300012"
 
 /decl/audio/track/elibao
 	source = 'sound/music/elibao.ogg'
@@ -261,13 +216,6 @@
 	license = /decl/license/cc_by_nc_sa_3_0
 	url = "https://www.newgrounds.com/audio/listen/312622"
 
-/decl/audio/track/torch
-	source = 'sound/music/Torch.ogg'
-	title = "Torch: A Light in the Darkness"
-	author = "L. Luke Leimer/LorenLuke"
-	license = /decl/license/cc_by_nc_sa_3_0
-	url = "https://soundcloud.com/luke-leimer/torch-a-light-in-the-darkness"
-
 /decl/audio/track/torn
 	source = 'sound/music/europa/Macamoto_-_05_-_Torn.ogg'
 	title = "Torn"
@@ -282,13 +230,6 @@
 	collection = "Eilean Mor"
 	license = /decl/license/cc_by_nc_3_0
 	url = "http://freemusicarchive.org/music/Jon_Luc_Hefferman/20170730112628534/Treacherous_Voyage"
-
-/decl/audio/track/voidsent
-	source = 'sound/music/voidsent.ogg'
-	title = "Voidsent"
-	author = "Mikazu"
-	license = /decl/license/cc_by_sa_3_0
-	url = "https://soundcloud.com/mikazu-1/baystation-12-voidsent"
 
 /decl/audio/track/wake
 	source = 'sound/music/wake.ogg'
