@@ -96,7 +96,7 @@
 	icon_state = "shipping"
 
 /area/map_template/rebel_colony/tcomms
-	name = "\improper Colony Secure Storage"
+	name = "\improper Colony Telecommunications"
 	icon_state = "C"
 
 // Security
@@ -136,3 +136,7 @@
 	name = "\improper Colony Operations Center"
 	icon_state = "B"
 	req_access = list(access_rebelcolony_command)
+
+/area/map_template/rebel_colony/airlock
+	name = "\improper Colony Primary External Airlock"
+	icon_state = "airlock"

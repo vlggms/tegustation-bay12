@@ -1,5 +1,470 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"aa" = (
+"ab" = (
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/messhall)
+"ac" = (
+/obj/structure/grille,
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"ae" = (
+/obj/structure/kitchenspike,
+/turf/simulated/floor/tiled/freezer,
+/area/map_template/rebel_colony/messhall)
+"aj" = (
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2";
+	pixel_y = 0
+	},
+/obj/machinery/power/tracker,
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"aB" = (
+/obj/structure/kitchenspike,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/map_template/rebel_colony/messhall)
+"aN" = (
+/obj/machinery/power/solar,
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"aS" = (
+/obj/structure/bed/chair/wood{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/messhall)
+"aV" = (
+/obj/structure/table/marble,
+/turf/simulated/floor/tiled/white,
+/area/map_template/rebel_colony/medbay)
+"aZ" = (
+/obj/machinery/bodyscanner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/map_template/rebel_colony/medbay)
+"bx" = (
+/obj/item/device/radio/intercom/map_preset/rebel_colony{
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled/white,
+/area/map_template/rebel_colony/medbay)
+"bP" = (
+/obj/machinery/power/solar,
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"cm" = (
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/security)
+"co" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"ct" = (
+/obj/machinery/power/solar,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"cC" = (
+/obj/machinery/power/solar,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"cT" = (
+/obj/effect/floor_decal/spline/plain/red{
+	dir = 4
+	},
+/obj/item/device/radio/intercom/map_preset/rebel_colony{
+	dir = 8;
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/rebel_colony/security)
+"dn" = (
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"dr" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"ds" = (
+/obj/effect/wallframe_spawn/reinforced_phoron,
+/turf/simulated/floor/plating,
+/area/template_noop)
+"du" = (
+/obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/template_noop)
+"dX" = (
+/turf/simulated/wall/r_wall,
+/area/map_template/rebel_colony/engineering)
+"dY" = (
+/obj/machinery/chem_master,
+/turf/simulated/floor/tiled/white,
+/area/map_template/rebel_colony/medbay)
+"em" = (
+/obj/effect/submap_landmark/joinable_submap/rebel_colony,
+/turf/template_noop,
+/area/template_noop)
+"en" = (
+/obj/effect/wallframe_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/map_template/rebel_colony/engineering)
+"ep" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/map_template/rebel_colony/engineering)
+"ey" = (
+/turf/simulated/wall/r_wall,
+/area/map_template/rebel_colony/tcomms)
+"eG" = (
+/obj/structure/flora/pottedplant/tall,
+/obj/item/ammo_casing/pistol/used,
+/turf/simulated/floor/carpet/red,
+/area/map_template/rebel_colony/command)
+"eK" = (
+/obj/structure/closet/toolcloset,
+/turf/simulated/floor/tiled/dark,
+/area/map_template/rebel_colony/commons)
+"fq" = (
+/obj/structure/hygiene/toilet,
+/obj/effect/floor_decal/spline/plain/red{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/rebel_colony/security)
+"fs" = (
+/obj/structure/closet/crate/freezer,
+/obj/item/storage/box/autoinjectors,
+/obj/item/storage/box/autoinjectors,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/turf/simulated/floor/tiled/white,
+/area/map_template/rebel_colony/medbay)
+"fz" = (
+/obj/structure/hygiene/toilet,
+/obj/effect/floor_decal/spline/plain/red{
+	dir = 9
+	},
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/rebel_colony/security)
+"fD" = (
+/obj/structure/bed,
+/obj/effect/floor_decal/spline/plain/red{
+	dir = 5
+	},
+/obj/effect/submap_landmark/spawnpoint/rebel_hostage_spawn,
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/rebel_colony/security)
+"fP" = (
+/obj/structure/table/steel_reinforced,
+/obj/effect/floor_decal/techfloor{
+	dir = 9;
+	icon_state = "techfloor_edges"
+	},
+/obj/item/gun/projectile/automatic/machine_pistol,
+/obj/item/gun/projectile/automatic/machine_pistol,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/security)
+"gn" = (
+/obj/structure/table/steel_reinforced,
+/obj/effect/floor_decal/techfloor{
+	dir = 1;
+	icon_state = "techfloor_edges"
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/grenade/frag{
+	pixel_x = -6
+	},
+/obj/item/grenade/frag{
+	pixel_x = -6
+	},
+/obj/item/grenade/frag{
+	pixel_x = -6
+	},
+/obj/item/grenade/flashbang{
+	pixel_x = 6
+	},
+/obj/item/grenade/flashbang{
+	pixel_x = 6
+	},
+/obj/item/grenade/flashbang{
+	pixel_x = 6
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/security)
+"gr" = (
+/obj/structure/table/steel_reinforced,
+/obj/effect/floor_decal/techfloor{
+	dir = 5;
+	icon_state = "techfloor_edges"
+	},
+/obj/item/ammo_magazine/machine_pistol,
+/obj/item/ammo_magazine/machine_pistol,
+/obj/item/ammo_magazine/machine_pistol,
+/obj/item/ammo_magazine/machine_pistol,
+/obj/item/ammo_magazine/machine_pistol,
+/obj/item/ammo_magazine/machine_pistol,
+/obj/item/ammo_magazine/machine_pistol,
+/obj/item/ammo_magazine/machine_pistol,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/security)
+"gC" = (
+/obj/machinery/power/smes/buildable/max_cap_in_out,
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2";
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/engineering)
+"gD" = (
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/structure/closet/radiation,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/engineering)
+"gH" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/closet/crate/radiation_gear,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/engineering)
+"gL" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/engineering)
+"gR" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/white,
+/area/map_template/rebel_colony/medbay)
+"gT" = (
+/obj/machinery/power/solar_control/autostart,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/engineering)
+"gW" = (
+/obj/machinery/power/port_gen/pacman/mrs,
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2";
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/engineering)
+"gX" = (
+/obj/structure/closet/hydrant,
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2";
+	pixel_y = 0
+	},
+/obj/machinery/power/apc/high{
+	dir = 1;
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/tcomms)
+"hc" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/commons)
+"hi" = (
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/tcomms)
+"ho" = (
+/obj/effect/wallframe_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/map_template/rebel_colony/tcomms)
+"ht" = (
+/obj/machinery/telecomms/hub/map_preset/rebel_colony,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/map_template/rebel_colony/tcomms)
+"hv" = (
+/obj/item/crowbar/brace_jack,
+/turf/simulated/floor/carpet/orange,
+/area/map_template/rebel_colony/command)
+"hU" = (
+/obj/effect/floor_decal/techfloor,
+/obj/item/device/radio/intercom/map_preset/rebel_colony{
+	dir = 1;
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/security)
+"ib" = (
+/obj/structure/bed/padded,
+/obj/item/bedsheet/captain,
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor/carpet/blue,
+/area/map_template/rebel_colony/command)
+"ie" = (
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/map_template/rebel_colony/tcomms)
+"ik" = (
+/obj/machinery/telecomms/bus/map_preset/rebel_colony,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/map_template/rebel_colony/tcomms)
+"ix" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/rebel_colony/security)
+"iB" = (
+/obj/effect/submap_landmark/spawnpoint/rebel_colonist_spawn,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/security)
+"iF" = (
+/obj/structure/table/marble,
+/obj/item/clothing/accessory/stethoscope,
+/turf/simulated/floor/tiled/freezer,
+/area/map_template/rebel_colony/medbay)
+"iI" = (
+/obj/effect/decal/cleanable/ash,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/map_template/rebel_colony/command)
+"jg" = (
+/obj/machinery/telecomms/broadcaster/map_preset/rebel_colony,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/map_template/rebel_colony/tcomms)
+"jh" = (
+/obj/effect/floor_decal/spline/plain/red{
+	dir = 8
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/rebel_colony/security)
+"jn" = (
+/obj/effect/floor_decal/spline/plain/red{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/device/radio/intercom/map_preset/rebel_colony{
+	dir = 8;
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/rebel_colony/security)
+"jp" = (
+/obj/structure/table/steel_reinforced,
+/obj/effect/floor_decal/techfloor{
+	dir = 4;
+	icon_state = "techfloor_edges"
+	},
+/obj/item/ammo_magazine/smg_top,
+/obj/item/ammo_magazine/smg_top,
+/obj/item/ammo_magazine/smg_top,
+/obj/item/ammo_magazine/smg_top,
+/obj/item/ammo_magazine/smg_top,
+/obj/item/ammo_magazine/smg_top,
+/obj/item/ammo_magazine/smg_top,
+/obj/item/ammo_magazine/smg_top,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/security)
+"jw" = (
 /obj/machinery/power/smes/buildable/max_cap_in_out,
 /obj/structure/cable{
 	d2 = 2;
@@ -11,110 +476,125 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/rebel_colony/engineering)
-"ag" = (
-/obj/machinery/power/apc/high{
-	dir = 1;
-	pixel_y = 24
+"jy" = (
+/obj/machinery/power/terminal{
+	dir = 8
 	},
 /obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2";
-	pixel_y = 0
+	d2 = 4;
+	icon_state = "0-4"
 	},
-/turf/simulated/floor/tiled/techmaint,
-/area/map_template/rebel_colony/command)
-"al" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/map_template/rebel_colony/commons)
-"av" = (
-/obj/effect/decal/cleanable/blood/drip,
-/obj/item/ammo_casing/pistol/used,
-/turf/simulated/floor/carpet/red,
-/area/map_template/rebel_colony/command)
-"aF" = (
-/turf/simulated/floor/tiled/dark/monotile,
-/area/map_template/rebel_colony/security)
-"aS" = (
-/obj/structure/flora/pottedplant/unusual,
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/item/ammo_casing/pistol/used,
-/obj/item/ammo_casing/pistol/used,
-/turf/simulated/floor/carpet/blue,
-/area/map_template/rebel_colony/command)
-"aW" = (
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/engineering)
+"jB" = (
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
 	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/rebel_colony/engineering)
-"ba" = (
-/obj/effect/floor_decal/spline/plain/red{
-	dir = 6
+"jF" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/dark/monotile,
-/area/map_template/rebel_colony/security)
-"bz" = (
-/turf/simulated/wall/r_wall,
-/area/map_template/rebel_colony/messhall)
-"bZ" = (
-/obj/machinery/door/airlock/glass/civilian,
-/turf/simulated/floor/tiled/dark,
-/area/map_template/rebel_colony/commons)
-"cA" = (
-/obj/effect/floor_decal/spline/plain/red{
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/engineering)
+"jK" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/dark/monotile,
-/area/map_template/rebel_colony/security)
-"cF" = (
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/engineering)
+"jX" = (
+/obj/structure/table/marble,
+/obj/item/storage/firstaid/surgery,
+/turf/simulated/floor/tiled/freezer,
+/area/map_template/rebel_colony/medbay)
+"kl" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/tcomms)
+"kp" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/messhall)
+"kq" = (
+/obj/machinery/door/airlock/engineering{
+	name = "Telecommunications"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/tcomms)
+"ky" = (
 /obj/effect/floor_decal/spline/plain/red{
 	dir = 10
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/map_template/rebel_colony/security)
-"cS" = (
-/obj/structure/bed/padded,
-/obj/item/bedsheet/hos,
-/turf/simulated/floor/carpet/red,
-/area/map_template/rebel_colony/command)
-"cT" = (
-/obj/structure/table/standard,
-/obj/machinery/door/window/brigdoor/southleft,
-/obj/machinery/door/window/brigdoor/northleft,
-/obj/structure/window/reinforced{
-	dir = 4
+"kB" = (
+/obj/structure/closet/secure_closet{
+	req_access = list("ACCESS_REBELCOLONY_COMMAND")
 	},
-/obj/item/clothing/head/caphat/hop,
-/turf/simulated/floor/plating,
+/obj/item/card/id/rebel_colony,
+/obj/item/card/id/rebel_colony,
+/obj/item/card/id/rebel_colony/security,
+/obj/item/card/id/rebel_colony/security,
+/obj/item/clothing/under/dress/dress_hop,
+/obj/item/clothing/under/rank/head_of_personnel,
+/turf/simulated/floor/carpet/blue2,
+/area/map_template/rebel_colony/command)
+"kQ" = (
+/obj/effect/floor_decal/spline/plain/red{
+	dir = 6
+	},
+/obj/item/stack/medical/splint/ghetto,
+/obj/effect/decal/cleanable/blood/drip,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/map_template/rebel_colony/security)
-"dt" = (
-/obj/structure/bed/chair/wood{
+"kR" = (
+/obj/structure/table/steel_reinforced,
+/obj/effect/floor_decal/techfloor{
+	dir = 10;
+	icon_state = "techfloor_edges"
+	},
+/obj/item/gun/projectile/automatic/battlerifle,
+/obj/item/gun/projectile/automatic/battlerifle,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/security)
+"kT" = (
+/obj/effect/floor_decal/techfloor/corner,
+/obj/effect/floor_decal/techfloor/corner{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
-/area/map_template/rebel_colony/messhall)
-"dD" = (
-/obj/machinery/light,
-/obj/structure/table/standard,
-/obj/item/material/knife/kitchen{
-	pixel_x = -4
-	},
-/obj/item/material/knife/utility{
-	pixel_x = 4
-	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/techfloor,
 /area/map_template/rebel_colony/security)
-"dE" = (
-/turf/simulated/wall/r_wall/hull,
-/area/space)
-"dF" = (
+"lb" = (
 /obj/structure/table/steel_reinforced,
 /obj/effect/floor_decal/techfloor{
 	dir = 6;
@@ -130,54 +610,62 @@
 /obj/item/ammo_magazine/mil_rifle,
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/rebel_colony/security)
-"dQ" = (
+"lm" = (
+/obj/machinery/power/smes/buildable/max_cap_in_out,
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2";
+	pixel_y = 0
+	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/techmaint,
-/area/map_template/rebel_colony/command)
-"dZ" = (
-/obj/effect/floor_decal/spline/plain/red{
-	dir = 10
-	},
-/obj/effect/decal/cleanable/blood/splatter,
-/turf/simulated/floor/tiled/dark/monotile,
-/area/map_template/rebel_colony/security)
-"em" = (
-/obj/effect/submap_landmark/joinable_submap/rebel_colony,
-/turf/template_noop,
-/area/space)
-"es" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/item/ammo_casing/pistol/used,
-/turf/simulated/floor/carpet/blue,
-/area/map_template/rebel_colony/command)
-"eH" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/turf/simulated/floor/tiled/dark,
-/area/map_template/rebel_colony/security)
-"eK" = (
-/obj/machinery/door/airlock/command{
-	name = "Suite 2"
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/engineering)
+"ls" = (
+/obj/machinery/door/airlock/multi_tile/glass/command{
+	name = "Command Suites";
+	req_access = list()
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/map_template/rebel_colony/command)
-"eM" = (
+"lv" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/engineering)
+"ly" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/engineering)
+"lD" = (
 /obj/effect/decal/cleanable/blood/drip,
 /obj/item/ammo_casing/pistol/used,
-/obj/item/ammo_casing/pistol/used,
-/obj/item/ammo_casing/pistol/used,
-/obj/item/ammo_casing/pistol/used,
-/turf/simulated/floor/carpet/blue,
+/turf/simulated/floor/tiled/techmaint,
 /area/map_template/rebel_colony/command)
-"fc" = (
-/obj/effect/decal/cleanable/ash,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
-/area/map_template/rebel_colony/command)
-"fp" = (
+"lI" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/item/device/radio/intercom/map_preset/rebel_colony{
+	dir = 1;
+	pixel_y = -32
+	},
+/obj/structure/table/steel_reinforced,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/engineering)
+"lL" = (
 /obj/machinery/power/apc/high{
 	dir = 4;
 	pixel_x = 24
@@ -186,246 +674,12 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
-/turf/simulated/floor/tiled/white,
-/area/map_template/rebel_colony/medbay)
-"fu" = (
-/obj/machinery/power/apc/high{
-	dir = 8;
-	pixel_x = -24
-	},
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/map_template/rebel_colony/security)
-"fA" = (
-/obj/structure/hygiene/sink{
-	pixel_y = -16
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/map_template/rebel_colony/medbay)
-"fN" = (
-/obj/machinery/door/airlock/glass/civilian,
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/map_template/rebel_colony/commons)
-"fV" = (
-/obj/structure/closet/secure_closet/freezer/meat,
-/turf/simulated/floor/tiled/freezer,
-/area/map_template/rebel_colony/messhall)
-"gs" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/machinery/computer/modular/preset/security,
-/obj/effect/floor_decal/techfloor{
-	dir = 1;
-	icon_state = "techfloor_edges"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/security)
-"gI" = (
-/obj/effect/floor_decal/spline/plain,
-/turf/simulated/floor/tiled,
-/area/map_template/rebel_colony/messhall)
-"gQ" = (
-/obj/machinery/door/airlock/glass/medical,
-/turf/simulated/floor/tiled/white,
-/area/map_template/rebel_colony/medbay)
-"hc" = (
-/turf/simulated/wall/r_wall,
-/area/map_template/rebel_colony/commons)
-"hf" = (
-/obj/machinery/door/airlock/glass/security{
-	name = "Cell 1"
-	},
-/turf/simulated/floor/tiled/dark/monotile,
-/area/map_template/rebel_colony/security)
-"hk" = (
-/obj/machinery/door/airlock/command{
-	locked = 1;
-	name = "Suite 4"
-	},
-/obj/item/airlock_brace,
-/turf/simulated/floor/tiled/techmaint,
-/area/map_template/rebel_colony/command)
-"hl" = (
 /obj/structure/table/steel_reinforced,
-/obj/effect/floor_decal/techfloor{
-	dir = 9;
-	icon_state = "techfloor_edges"
-	},
-/obj/item/gun/projectile/automatic/machine_pistol,
-/obj/item/gun/projectile/automatic/machine_pistol,
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/security)
-"hq" = (
-/obj/structure/bed/padded,
-/obj/item/bedsheet/captain,
-/obj/effect/decal/cleanable/blood/splatter,
-/turf/simulated/floor/carpet/blue,
-/area/map_template/rebel_colony/command)
-"hu" = (
-/obj/machinery/power/solar_control/autostart,
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
+/obj/item/stack/material/tritium/ten,
+/obj/item/stack/material/tritium/ten,
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/rebel_colony/engineering)
-"hx" = (
-/obj/item/ammo_casing/pistol/used,
-/turf/simulated/floor/carpet/blue,
-/area/map_template/rebel_colony/command)
-"hy" = (
-/obj/machinery/door/airlock/highsecurity,
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/dark/monotile,
-/area/map_template/rebel_colony/security)
-"hH" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/item/ammo_casing/pistol/used,
-/turf/simulated/floor/tiled/techmaint,
-/area/map_template/rebel_colony/command)
-"hP" = (
-/obj/effect/floor_decal/spline/plain,
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/map_template/rebel_colony/messhall)
-"hS" = (
-/obj/machinery/door/airlock/glass/security{
-	name = "Cell 2"
-	},
-/obj/effect/decal/cleanable/blood/drip,
-/turf/simulated/floor/tiled/dark/monotile,
-/area/map_template/rebel_colony/security)
-"hU" = (
-/obj/machinery/computer/modular/preset/security,
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/command)
-"if" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/engineering)
-"iq" = (
-/obj/structure/flora/pottedplant/subterranean,
-/turf/simulated/floor/carpet/orange,
-/area/map_template/rebel_colony/command)
-"ix" = (
-/obj/effect/wallframe_spawn/reinforced,
-/turf/simulated/floor/plating,
-/area/map_template/rebel_colony/security)
-"iM" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/clothing/shoes/terran,
-/obj/item/clothing/shoes/terran,
-/obj/item/clothing/shoes/terran,
-/obj/item/clothing/shoes/terran,
-/obj/item/clothing/shoes/terran,
-/obj/item/clothing/shoes/terran,
-/obj/effect/floor_decal/techfloor,
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/security)
-"iP" = (
-/obj/machinery/sleeper{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white,
-/area/map_template/rebel_colony/medbay)
-"iT" = (
-/obj/structure/table/standard,
-/obj/item/clothing/head/helmet/facecover{
-	pixel_x = -4;
-	pixel_y = -4
-	},
-/obj/item/clothing/head/helmet/facecover{
-	pixel_x = -4;
-	pixel_y = -4
-	},
-/obj/item/clothing/head/helmet/facecover{
-	pixel_x = -4;
-	pixel_y = -4
-	},
-/obj/item/handcuffs{
-	pixel_x = 4;
-	pixel_y = 8
-	},
-/obj/item/handcuffs{
-	pixel_x = 4;
-	pixel_y = 8
-	},
-/obj/item/handcuffs{
-	pixel_x = 4;
-	pixel_y = 8
-	},
-/turf/simulated/floor/tiled/dark,
-/area/map_template/rebel_colony/security)
-"iX" = (
-/obj/machinery/door/airlock/command{
-	name = "Command Center";
-	req_access = list("ACCESS_REBELCOLONY_COMMAND")
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/map_template/rebel_colony/command)
-"iZ" = (
-/obj/machinery/light,
-/obj/effect/decal/cleanable/blood/splatter,
-/turf/simulated/floor/carpet/red,
-/area/map_template/rebel_colony/command)
-"ja" = (
-/obj/structure/table/woodentable,
-/turf/simulated/floor/tiled,
-/area/map_template/rebel_colony/messhall)
-"je" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/clothing/head/helmet/ballistic,
-/obj/item/clothing/head/helmet/ballistic,
-/obj/item/clothing/head/helmet/ballistic,
-/obj/item/clothing/head/helmet/ballistic,
-/obj/item/clothing/head/helmet/ballistic,
-/obj/item/clothing/head/helmet/ballistic,
-/obj/effect/floor_decal/techfloor{
-	dir = 1;
-	icon_state = "techfloor_edges"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/security)
-"jr" = (
-/obj/structure/closet/crate/freezer,
-/obj/item/storage/box/autoinjectors,
-/obj/item/storage/box/autoinjectors,
-/obj/item/storage/firstaid/regular,
-/obj/item/storage/firstaid/regular,
-/turf/simulated/floor/tiled/white,
-/area/map_template/rebel_colony/medbay)
-"jv" = (
+"lT" = (
 /obj/structure/table/marble,
 /obj/machinery/reagent_temperature{
 	pixel_x = -7;
@@ -437,169 +691,28 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/map_template/rebel_colony/medbay)
-"jz" = (
-/obj/machinery/power/port_gen/pacman/mrs,
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2";
-	pixel_y = 0
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/engineering)
-"jG" = (
-/obj/machinery/light,
-/turf/simulated/floor/carpet/blue2,
-/area/map_template/rebel_colony/command)
-"jL" = (
-/obj/structure/closet/secure_closet{
-	req_access = list("ACCESS_REBELCOLONY_COMMAND")
-	},
-/obj/item/card/id/rebel_colony,
-/obj/item/card/id/rebel_colony,
-/obj/item/card/id/rebel_colony/security,
-/obj/item/card/id/rebel_colony/security,
-/obj/item/clothing/under/dress/dress_hop,
-/obj/item/clothing/under/rank/head_of_personnel,
-/turf/simulated/floor/carpet/blue2,
-/area/map_template/rebel_colony/command)
-"jR" = (
-/obj/structure/closet/hydrant,
-/turf/simulated/floor/tiled/techmaint,
-/area/map_template/rebel_colony/command)
-"jV" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/engineering)
-"ko" = (
-/obj/structure/table/steel_reinforced,
-/obj/effect/floor_decal/techfloor{
-	dir = 4;
-	icon_state = "techfloor_edges"
-	},
-/obj/item/ammo_magazine/smg_top,
-/obj/item/ammo_magazine/smg_top,
-/obj/item/ammo_magazine/smg_top,
-/obj/item/ammo_magazine/smg_top,
-/obj/item/ammo_magazine/smg_top,
-/obj/item/ammo_magazine/smg_top,
-/obj/item/ammo_magazine/smg_top,
-/obj/item/ammo_magazine/smg_top,
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/security)
-"kZ" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/modular_computer/laptop,
-/obj/effect/floor_decal/techfloor{
-	dir = 1;
-	icon_state = "techfloor_edges"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/security)
-"le" = (
-/obj/effect/floor_decal/techfloor/corner,
-/obj/effect/floor_decal/techfloor/corner{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/security)
-"lu" = (
-/obj/effect/wallframe_spawn/reinforced,
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/commons)
-"lH" = (
+"mf" = (
 /obj/machinery/light{
-	dir = 4
-	},
-/obj/machinery/bodyscanner{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white,
-/area/map_template/rebel_colony/medbay)
-"lW" = (
-/turf/simulated/floor/carpet/blue2,
-/area/map_template/rebel_colony/command)
-"ma" = (
-/obj/machinery/chem_master,
-/turf/simulated/floor/tiled/white,
-/area/map_template/rebel_colony/medbay)
-"mb" = (
-/obj/structure/closet/secure_closet{
-	req_access = list("ACCESS_REBELCOLONY_COMMAND")
-	},
-/turf/simulated/floor/carpet/orange,
-/area/map_template/rebel_colony/command)
-"mj" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled,
-/area/map_template/rebel_colony/commons)
-"mw" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/paper_bin,
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/command)
-"mY" = (
-/obj/effect/decal/cleanable/ash,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
-/area/space)
-"nc" = (
-/obj/structure/closet/crate/freezer,
-/obj/item/reagent_containers/ivbag/nanoblood,
-/obj/item/reagent_containers/ivbag/nanoblood,
-/obj/item/reagent_containers/ivbag/nanoblood,
-/turf/simulated/floor/tiled/freezer,
-/area/map_template/rebel_colony/medbay)
-"ng" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/turf/simulated/wall/r_wall,
-/area/map_template/rebel_colony/command)
-"nq" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/engineering)
-"nt" = (
-/obj/structure/bed/chair/office/comfy{
 	dir = 1
 	},
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/messhall)
+"mv" = (
+/obj/item/device/radio/intercom/map_preset/rebel_colony{
+	dir = 1;
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/command)
-"nJ" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/turf/simulated/floor/carpet/red,
-/area/map_template/rebel_colony/command)
-"of" = (
+/area/map_template/rebel_colony/tcomms)
+"mF" = (
+/obj/machinery/telecomms/server/map_preset/rebel_colony,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/map_template/rebel_colony/tcomms)
+"mH" = (
+/obj/machinery/telecomms/processor/map_preset/rebel_colony,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/map_template/rebel_colony/tcomms)
+"mJ" = (
 /obj/structure/closet/secure_closet{
 	req_access = list("ACCESS_REBELCOLONY_COMMAND")
 	},
@@ -609,91 +722,184 @@
 /obj/item/clothing/under/hosformalfem,
 /turf/simulated/floor/carpet/red,
 /area/map_template/rebel_colony/command)
-"og" = (
-/obj/machinery/computer/modular/preset/cardslot/command_sec,
+"mQ" = (
+/obj/machinery/telecomms/receiver/map_preset/rebel_colony,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/map_template/rebel_colony/tcomms)
+"ns" = (
+/obj/structure/table/standard,
+/obj/machinery/door/window/brigdoor/southleft,
+/obj/machinery/door/window/brigdoor/northleft,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/map_template/rebel_colony/security)
+"nv" = (
+/obj/structure/bed/chair/wood{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/messhall)
+"nX" = (
+/obj/structure/table/steel_reinforced,
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/rebel_colony/command)
-"on" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 8;
-	icon_state = "techfloor_edges"
-	},
-/obj/structure/closet/secure_closet/security{
-	req_access = list("ACCESS_REBELCOLONY_SECURITY")
-	},
+"og" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/clothing/shoes/terran,
+/obj/item/clothing/shoes/terran,
+/obj/item/clothing/shoes/terran,
+/obj/item/clothing/shoes/terran,
+/obj/item/clothing/shoes/terran,
+/obj/item/clothing/shoes/terran,
+/obj/effect/floor_decal/techfloor,
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/rebel_colony/security)
-"oP" = (
-/obj/effect/decal/cleanable/blood/splatter,
+"op" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/card/id/merchant{
+	desc = "this card can be used to access the Colony's telepad to exchange goods.";
+	name = "trade array access card"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/rebel_colony/command)
-"oQ" = (
-/obj/structure/bed,
-/obj/effect/floor_decal/spline/plain/red{
-	dir = 5
+"ox" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/map_template/rebel_colony/medbay)
+"oy" = (
+/obj/machinery/door/airlock/glass/security{
+	name = "Cell 1"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/map_template/rebel_colony/security)
-"oU" = (
-/obj/structure/table/steel_reinforced,
-/obj/effect/floor_decal/techfloor{
-	dir = 8;
-	icon_state = "techfloor_edges"
+"oF" = (
+/obj/structure/table/standard,
+/obj/machinery/door/window/brigdoor/southleft,
+/obj/machinery/door/window/brigdoor/northleft,
+/obj/structure/window/reinforced{
+	dir = 4
 	},
-/obj/item/gun/projectile/automatic/sec_smg{
-	magazine_type = /obj/item/ammo_magazine/smg_top
+/obj/item/clothing/head/caphat/hop,
+/turf/simulated/floor/plating,
+/area/map_template/rebel_colony/security)
+"oH" = (
+/obj/structure/bed/chair/wood{
+	dir = 8
 	},
-/obj/item/gun/projectile/automatic/sec_smg{
-	magazine_type = /obj/item/ammo_magazine/smg_top
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/messhall)
+"oR" = (
+/obj/machinery/chemical_dispenser/full,
+/turf/simulated/floor/tiled/white,
+/area/map_template/rebel_colony/medbay)
+"pq" = (
+/obj/effect/decal/cleanable/blood/drip,
+/obj/item/ammo_casing/pistol/used,
+/obj/item/ammo_casing/pistol/used,
+/obj/item/ammo_casing/pistol/used,
+/turf/simulated/floor/carpet/red,
+/area/map_template/rebel_colony/command)
+"px" = (
+/obj/structure/iv_drip,
+/turf/simulated/floor/tiled/white,
+/area/map_template/rebel_colony/medbay)
+"pA" = (
+/obj/machinery/door/airlock/glass/security{
+	name = "Cell 2"
+	},
+/obj/effect/decal/cleanable/blood/drip,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/rebel_colony/security)
+"pG" = (
+/obj/item/ammo_casing/pistol/used,
+/obj/item/ammo_casing/pistol/used,
+/obj/item/ammo_casing/pistol/used,
+/obj/item/ammo_casing/pistol/used,
+/turf/simulated/floor/carpet/red,
+/area/map_template/rebel_colony/command)
+"pH" = (
+/obj/machinery/door/airlock/glass/security{
+	name = "Cell 3"
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/rebel_colony/security)
+"pJ" = (
+/obj/effect/wallframe_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/map_template/rebel_colony/security)
+"pK" = (
+/obj/machinery/door/airlock/civilian{
+	name = "Kitchen Storage"
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/map_template/rebel_colony/messhall)
+"pR" = (
+/obj/machinery/door/airlock/glass/security{
+	name = "Armory"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/rebel_colony/security)
-"pl" = (
-/obj/machinery/power/smes/buildable/max_cap_in_out,
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2";
-	pixel_y = 0
+"pW" = (
+/obj/item/ammo_casing/pistol/used,
+/obj/item/ammo_casing/pistol/used,
+/turf/simulated/floor/carpet/blue,
+/area/map_template/rebel_colony/command)
+"qq" = (
+/obj/machinery/door/airlock/engineering{
+	name = "Engineering"
 	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/engineering)
-"pp" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/modular_computer/laptop,
-/obj/effect/floor_decal/techfloor{
-	dir = 5;
-	icon_state = "techfloor_edges"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/security)
-"ps" = (
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/dark/monotile,
-/area/map_template/rebel_colony/commons)
-"pv" = (
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/item/material/shard,
-/turf/simulated/floor/tiled/techmaint,
-/area/map_template/rebel_colony/command)
-"pC" = (
-/turf/simulated/floor/tiled/freezer,
-/area/map_template/rebel_colony/medbay)
-"pJ" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/clothing/head/terran/beret/grey,
-/obj/item/clothing/head/terran/beret/grey,
-/obj/item/clothing/head/terran/beret/grey,
-/obj/item/clothing/head/terran/beret/grey,
-/obj/item/clothing/head/terran/beret/grey,
-/obj/item/clothing/head/terran/beret/grey,
-/obj/effect/floor_decal/techfloor,
 /turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/engineering)
+"qD" = (
+/obj/machinery/door/airlock/engineering{
+	name = "Telecommunications"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/tcomms)
+"qF" = (
+/turf/simulated/floor/tiled/dark,
 /area/map_template/rebel_colony/security)
-"qp" = (
+"qM" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/bodyscanner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/map_template/rebel_colony/medbay)
+"qS" = (
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/rebel_colony/security)
+"qW" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor/tiled/dark,
+/area/map_template/rebel_colony/security)
+"rM" = (
+/obj/effect/decal/cleanable/blood/drip,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/rebel_colony/security)
+"se" = (
+/obj/effect/decal/cleanable/blood/drip,
+/turf/simulated/floor/tiled/dark,
+/area/map_template/rebel_colony/security)
+"sw" = (
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -706,89 +912,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/map_template/rebel_colony/commons)
-"qR" = (
-/obj/structure/table/marble,
-/obj/machinery/chemical_dispenser/bar_alc/full{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/map_template/rebel_colony/messhall)
-"rx" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 1;
-	icon_state = "techfloor_edges"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/security)
-"sh" = (
-/obj/structure/table/marble,
-/obj/item/storage/firstaid/adv,
-/obj/item/storage/box/gloves,
-/turf/simulated/floor/tiled/freezer,
-/area/map_template/rebel_colony/medbay)
-"sv" = (
-/obj/machinery/door/airlock/civilian{
-	name = "Mess Hall";
-	req_access = list("ACCESS_REBELCOLONY")
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled,
-/area/map_template/rebel_colony/messhall)
-"sw" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/clothing/gloves/terran,
-/obj/item/clothing/gloves/terran,
-/obj/item/clothing/gloves/terran,
-/obj/item/clothing/gloves/terran,
-/obj/item/clothing/gloves/terran,
-/obj/item/clothing/gloves/terran,
-/obj/effect/floor_decal/techfloor,
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/security)
-"sK" = (
-/obj/structure/bed/chair/wood{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/map_template/rebel_colony/messhall)
-"sM" = (
-/obj/structure/bed/chair/office/dark{
-	dir = 1
-	},
-/obj/effect/floor_decal/techfloor{
-	dir = 4;
-	icon_state = "techfloor_edges"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/security)
-"sR" = (
-/obj/effect/floor_decal/techfloor,
-/obj/effect/submap_landmark/spawnpoint/rebel_colonist_spawn,
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/security)
-"te" = (
-/obj/machinery/door/airlock/civilian{
-	name = "Kitchen Storage";
-	req_access = list("ACCESS_REBELCOLONY")
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/map_template/rebel_colony/messhall)
-"th" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled,
-/area/map_template/rebel_colony/messhall)
-"ub" = (
+"sB" = (
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -796,414 +920,28 @@
 	},
 /turf/simulated/floor/tiled,
 /area/map_template/rebel_colony/commons)
-"ud" = (
-/obj/structure/table/marble,
-/obj/item/storage/firstaid/surgery,
-/turf/simulated/floor/tiled/freezer,
-/area/map_template/rebel_colony/medbay)
-"um" = (
-/obj/structure/table/steel_reinforced,
-/obj/effect/floor_decal/techfloor{
-	dir = 5;
-	icon_state = "techfloor_edges"
-	},
-/obj/item/ammo_magazine/machine_pistol,
-/obj/item/ammo_magazine/machine_pistol,
-/obj/item/ammo_magazine/machine_pistol,
-/obj/item/ammo_magazine/machine_pistol,
-/obj/item/ammo_magazine/machine_pistol,
-/obj/item/ammo_magazine/machine_pistol,
-/obj/item/ammo_magazine/machine_pistol,
-/obj/item/ammo_magazine/machine_pistol,
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/security)
-"ur" = (
-/obj/item/ammo_casing/pistol/used,
-/obj/item/ammo_casing/pistol/used,
-/obj/item/ammo_casing/pistol/used,
-/obj/item/ammo_casing/pistol/used,
-/turf/simulated/floor/carpet/red,
-/area/map_template/rebel_colony/command)
-"uC" = (
-/obj/structure/table/marble,
-/obj/machinery/light,
-/turf/simulated/floor/tiled/white,
-/area/map_template/rebel_colony/medbay)
-"uQ" = (
-/obj/machinery/radio_beacon{
-	start_with_distress = 1
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/command)
-"uY" = (
-/obj/item/ammo_casing/pistol/used,
-/obj/item/ammo_casing/pistol/used,
-/turf/simulated/floor/tiled/techmaint,
-/area/map_template/rebel_colony/command)
-"uZ" = (
-/obj/machinery/computer/modular/preset/cardslot/command,
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/command)
-"vh" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled,
-/area/map_template/rebel_colony/messhall)
-"vK" = (
-/obj/structure/table/steel_reinforced,
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/command)
-"vZ" = (
-/obj/item/ammo_casing/pistol/used,
-/obj/item/ammo_casing/pistol/used,
-/obj/effect/decal/cleanable/blood/drip,
-/turf/simulated/floor/tiled/techmaint,
-/area/map_template/rebel_colony/command)
-"wf" = (
-/obj/effect/floor_decal/spline/plain/red{
-	dir = 8
-	},
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark/monotile,
-/area/map_template/rebel_colony/security)
-"wx" = (
-/obj/effect/floor_decal/spline/plain,
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/map_template/rebel_colony/messhall)
-"wK" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/white,
-/area/map_template/rebel_colony/medbay)
-"xj" = (
-/obj/structure/kitchenspike,
-/turf/simulated/floor/tiled/freezer,
-/area/map_template/rebel_colony/messhall)
-"xE" = (
-/obj/machinery/light,
-/turf/simulated/floor/tiled,
-/area/map_template/rebel_colony/commons)
-"xV" = (
-/obj/machinery/gibber,
-/turf/simulated/floor/tiled/freezer,
-/area/map_template/rebel_colony/messhall)
-"yQ" = (
-/obj/machinery/power/terminal{
-	dir = 8
-	},
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/engineering)
-"yU" = (
-/obj/machinery/door/airlock/multi_tile/glass/command{
-	name = "Command Suites";
-	req_access = list("ACCESS_REBELCOLONY_COMMAND")
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/map_template/rebel_colony/command)
-"zf" = (
-/obj/machinery/bodyscanner{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white,
-/area/map_template/rebel_colony/medbay)
-"zl" = (
-/obj/structure/bed/chair/office/dark{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/security)
-"zx" = (
-/turf/simulated/wall/r_wall,
-/area/map_template/rebel_colony/security)
-"zB" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 10;
-	icon_state = "techfloor_edges"
-	},
-/obj/structure/closet/secure_closet/security{
-	req_access = list("ACCESS_REBELCOLONY_SECURITY")
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/security)
-"zE" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/carpet/orange,
-/area/map_template/rebel_colony/command)
-"As" = (
-/obj/item/ammo_casing/pistol/used,
-/turf/simulated/floor/carpet/red,
-/area/map_template/rebel_colony/command)
-"Au" = (
-/obj/machinery/merchant_pad,
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/command)
-"Az" = (
-/obj/effect/wallframe_spawn/reinforced,
-/turf/simulated/floor/tiled/white,
-/area/map_template/rebel_colony/medbay)
-"AU" = (
-/obj/structure/table/marble,
-/obj/item/clothing/accessory/stethoscope,
-/turf/simulated/floor/tiled/freezer,
-/area/map_template/rebel_colony/medbay)
-"AX" = (
-/obj/machinery/door/airlock/glass/command{
-	name = "Command Center"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/command)
-"BG" = (
-/obj/machinery/door/airlock/glass/security{
-	name = "Armory"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/security)
-"BK" = (
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/security)
-"BW" = (
-/obj/item/ammo_casing/pistol/used,
-/obj/item/ammo_casing/pistol/used,
-/turf/simulated/floor/carpet/blue,
-/area/map_template/rebel_colony/command)
-"Ct" = (
-/obj/machinery/computer/modular/preset/merchant{
-	dir = 1
-	},
-/obj/machinery/light,
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/command)
-"Cv" = (
+"sH" = (
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled,
-/area/map_template/rebel_colony/commons)
-"CD" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/map_template/rebel_colony/commons)
-"CL" = (
-/obj/structure/table/steel_reinforced,
-/obj/effect/floor_decal/techfloor{
-	dir = 1;
-	icon_state = "techfloor_edges"
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/item/grenade/frag{
-	pixel_x = -6
-	},
-/obj/item/grenade/frag{
-	pixel_x = -6
-	},
-/obj/item/grenade/frag{
-	pixel_x = -6
-	},
-/obj/item/grenade/flashbang{
-	pixel_x = 6
-	},
-/obj/item/grenade/flashbang{
-	pixel_x = 6
-	},
-/obj/item/grenade/flashbang{
-	pixel_x = 6
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/security)
-"DF" = (
-/obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/dark/monotile,
-/area/map_template/rebel_colony/security)
-"DM" = (
-/obj/machinery/light{
-	dir = 1
-	},
 /turf/simulated/floor/tiled,
-/area/map_template/rebel_colony/messhall)
-"Ex" = (
+/area/map_template/rebel_colony/commons)
+"sX" = (
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled,
-/area/map_template/rebel_colony/messhall)
-"EB" = (
-/obj/machinery/power/apc/high{
-	dir = 4;
-	pixel_x = 24
-	},
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/engineering)
-"EL" = (
-/obj/structure/table/steel_reinforced,
-/obj/effect/floor_decal/techfloor{
-	dir = 10;
-	icon_state = "techfloor_edges"
-	},
-/obj/item/gun/projectile/automatic/battlerifle,
-/obj/item/gun/projectile/automatic/battlerifle,
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/security)
-"EN" = (
-/turf/simulated/wall/r_wall,
-/area/map_template/rebel_colony/medbay)
-"Fi" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/item/ammo_casing/pistol/used,
-/obj/effect/decal/cleanable/blood/drip,
-/turf/simulated/floor/tiled/techmaint,
-/area/map_template/rebel_colony/command)
-"FT" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 6;
-	icon_state = "techfloor_edges"
-	},
-/obj/effect/submap_landmark/spawnpoint/rebel_colonist_spawn,
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/security)
-"FY" = (
-/obj/machinery/door/airlock/glass/medical{
-	name = "Medical Bay";
-	req_access = list("ACCESS_REBELCOLONY")
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/white,
-/area/map_template/rebel_colony/medbay)
-"Gn" = (
-/obj/item/ammo_casing/pistol/used,
-/obj/item/ammo_casing/pistol/used,
-/obj/item/ammo_casing/pistol/used,
-/turf/simulated/floor/tiled/techmaint,
-/area/map_template/rebel_colony/command)
-"GK" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/structure/closet/toolcloset,
-/turf/simulated/floor/tiled/techmaint,
-/area/map_template/rebel_colony/command)
-"Hu" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled,
 /area/map_template/rebel_colony/commons)
-"Hw" = (
-/obj/machinery/light,
-/obj/effect/decal/cleanable/blood/splatter,
-/turf/simulated/floor/tiled/dark,
-/area/map_template/rebel_colony/security)
-"HM" = (
-/obj/machinery/chemical_dispenser/full,
-/turf/simulated/floor/tiled/white,
-/area/map_template/rebel_colony/medbay)
-"HP" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/white,
-/area/map_template/rebel_colony/medbay)
-"Il" = (
-/obj/structure/table/marble,
-/turf/simulated/floor/tiled/white,
-/area/map_template/rebel_colony/medbay)
-"Iw" = (
-/turf/simulated/floor/tiled/dark,
-/area/map_template/rebel_colony/security)
-"Ix" = (
-/obj/machinery/power/apc/high{
-	dir = 4;
-	pixel_x = 24
-	},
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/map_template/rebel_colony/commons)
-"IF" = (
-/obj/effect/decal/cleanable/blood/drip,
-/turf/simulated/floor/tiled/dark/monotile,
-/area/map_template/rebel_colony/security)
-"IH" = (
-/turf/simulated/floor/tiled/white,
-/area/map_template/rebel_colony/medbay)
-"IM" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/clothing/suit/armor/bulletproof,
-/obj/item/clothing/suit/armor/bulletproof,
-/obj/item/clothing/suit/armor/bulletproof,
-/obj/item/clothing/suit/armor/bulletproof,
-/obj/item/clothing/suit/armor/bulletproof,
-/obj/item/clothing/suit/armor/bulletproof,
-/obj/effect/floor_decal/techfloor{
-	dir = 1;
-	icon_state = "techfloor_edges"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/security)
-"IP" = (
-/obj/machinery/light,
-/turf/simulated/floor/tiled/dark,
-/area/map_template/rebel_colony/security)
-"IV" = (
-/obj/effect/wallframe_spawn/reinforced,
-/turf/simulated/floor/plating,
-/area/map_template/rebel_colony/command)
-"IZ" = (
+"sY" = (
 /obj/machinery/power/apc/high{
 	dir = 8;
 	pixel_x = -24
@@ -1212,9 +950,170 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
+/turf/simulated/floor/tiled/dark,
+/area/map_template/rebel_colony/security)
+"tj" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/blood/drip,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/rebel_colony/security)
+"ty" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/blood/drip,
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/commons)
+"tE" = (
+/obj/structure/table/standard,
+/obj/item/clothing/head/helmet/facecover{
+	pixel_x = -4;
+	pixel_y = -4
+	},
+/obj/item/clothing/head/helmet/facecover{
+	pixel_x = -4;
+	pixel_y = -4
+	},
+/obj/item/clothing/head/helmet/facecover{
+	pixel_x = -4;
+	pixel_y = -4
+	},
+/obj/item/handcuffs{
+	pixel_x = 4;
+	pixel_y = 8
+	},
+/obj/item/handcuffs{
+	pixel_x = 4;
+	pixel_y = 8
+	},
+/obj/item/handcuffs{
+	pixel_x = 4;
+	pixel_y = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/map_template/rebel_colony/security)
+"tH" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/closet/toolcloset,
+/turf/simulated/floor/tiled/techmaint,
+/area/map_template/rebel_colony/command)
+"tM" = (
+/obj/machinery/light,
+/obj/structure/table/standard,
+/obj/item/material/knife/kitchen{
+	pixel_x = -4
+	},
+/obj/item/material/knife/utility{
+	pixel_x = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/map_template/rebel_colony/security)
+"tQ" = (
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/dark,
+/area/map_template/rebel_colony/security)
+"tT" = (
+/obj/structure/bed/padded,
+/obj/item/bedsheet/hos,
+/turf/simulated/floor/carpet/red,
+/area/map_template/rebel_colony/command)
+"tV" = (
+/obj/item/device/radio/intercom/map_preset/rebel_colony{
+	dir = 4;
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/map_template/rebel_colony/messhall)
+"uk" = (
+/obj/machinery/computer/prisoner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/map_template/rebel_colony/security)
+"un" = (
+/obj/machinery/light,
+/turf/simulated/floor/tiled/dark,
+/area/map_template/rebel_colony/security)
+"up" = (
+/obj/machinery/sleeper{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/map_template/rebel_colony/medbay)
+"ux" = (
+/obj/item/device/radio/intercom/map_preset/rebel_colony{
+	dir = 1;
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/rebel_colony/security)
+"uE" = (
+/obj/machinery/light,
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor/tiled/dark,
+/area/map_template/rebel_colony/security)
+"uP" = (
+/obj/machinery/light,
+/obj/effect/decal/cleanable/blood/drip,
+/turf/simulated/floor/tiled/dark,
+/area/map_template/rebel_colony/security)
+"uS" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/commons)
+"uT" = (
+/obj/effect/decal/cleanable/blood/drip,
+/obj/item/ammo_casing/pistol/used,
+/turf/simulated/floor/carpet/red,
+/area/map_template/rebel_colony/command)
+"uY" = (
+/obj/machinery/light,
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/commons)
+"vt" = (
+/obj/effect/floor_decal/spline/plain,
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/map_template/rebel_colony/messhall)
-"Jp" = (
+"vB" = (
+/obj/effect/decal/cleanable/blood/drip,
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/commons)
+"vI" = (
+/obj/machinery/door/airlock/glass/civilian,
+/turf/simulated/floor/tiled/dark,
+/area/map_template/rebel_colony/commons)
+"vJ" = (
+/turf/simulated/wall/r_wall,
+/area/map_template/rebel_colony/airlock)
+"vM" = (
+/obj/structure/closet/secure_closet/freezer/meat,
+/turf/simulated/floor/tiled/freezer,
+/area/map_template/rebel_colony/messhall)
+"wg" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 9;
 	icon_state = "techfloor_edges"
@@ -1237,11 +1136,348 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/rebel_colony/security)
-"Js" = (
-/obj/structure/closet/secure_closet/freezer/fridge,
+"wh" = (
+/obj/effect/floor_decal/spline/plain,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/messhall)
+"wl" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/techfloor{
+	dir = 1;
+	icon_state = "techfloor_edges"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/security)
+"wD" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/clothing/suit/armor/bulletproof,
+/obj/item/clothing/suit/armor/bulletproof,
+/obj/item/clothing/suit/armor/bulletproof,
+/obj/item/clothing/suit/armor/bulletproof,
+/obj/item/clothing/suit/armor/bulletproof,
+/obj/item/clothing/suit/armor/bulletproof,
+/obj/effect/floor_decal/techfloor{
+	dir = 1;
+	icon_state = "techfloor_edges"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/security)
+"xb" = (
+/obj/structure/table/marble,
+/obj/machinery/chemical_dispenser/bar_alc/full{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/map_template/rebel_colony/messhall)
-"Jy" = (
+"xg" = (
+/obj/structure/table/marble,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/box/gloves,
+/turf/simulated/floor/tiled/freezer,
+/area/map_template/rebel_colony/medbay)
+"xk" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/orange,
+/area/map_template/rebel_colony/command)
+"xF" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/clothing/head/helmet/ballistic,
+/obj/item/clothing/head/helmet/ballistic,
+/obj/item/clothing/head/helmet/ballistic,
+/obj/item/clothing/head/helmet/ballistic,
+/obj/item/clothing/head/helmet/ballistic,
+/obj/item/clothing/head/helmet/ballistic,
+/obj/effect/floor_decal/techfloor{
+	dir = 1;
+	icon_state = "techfloor_edges"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/security)
+"xJ" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/modular_computer/laptop,
+/obj/effect/floor_decal/techfloor{
+	dir = 1;
+	icon_state = "techfloor_edges"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/security)
+"xN" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/computer/modular/preset/security,
+/obj/effect/floor_decal/techfloor{
+	dir = 1;
+	icon_state = "techfloor_edges"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/security)
+"xV" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/commons)
+"yN" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/turf/simulated/floor/tiled/dark,
+/area/map_template/rebel_colony/commons)
+"yP" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/commons)
+"yV" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor/carpet/red,
+/area/map_template/rebel_colony/command)
+"zk" = (
+/obj/structure/flora/pottedplant/subterranean,
+/turf/simulated/floor/carpet/orange,
+/area/map_template/rebel_colony/command)
+"zl" = (
+/turf/simulated/wall/r_wall/hull,
+/area/template_noop)
+"zx" = (
+/turf/simulated/wall/r_wall,
+/area/map_template/rebel_colony/security)
+"zB" = (
+/obj/machinery/portable_atmospherics/canister/air/airlock,
+/obj/machinery/atmospherics/portables_connector,
+/obj/structure/window/reinforced,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/airlock)
+"zF" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/clothing/suit/space/emergency,
+/obj/item/clothing/head/helmet/space/emergency,
+/obj/machinery/door/window/southleft,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/airlock)
+"zV" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+	id_tag = "rebel_colony_pump_out_external"
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/map_template/rebel_colony/airlock)
+"Af" = (
+/obj/structure/table/steel_reinforced,
+/turf/simulated/floor/tiled/dark,
+/area/map_template/rebel_colony/commons)
+"Aj" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/security)
+"Aw" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/airlock)
+"AV" = (
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/airlock)
+"AX" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/map_template/rebel_colony/command)
+"Ba" = (
+/obj/machinery/airlock_sensor/airlock_interior{
+	frequency = 1380;
+	id_tag = "rebel_colony_sensor_interior";
+	pixel_x = 28;
+	pixel_y = 6
+	},
+/obj/machinery/access_button/airlock_exterior{
+	frequency = 1380;
+	master_tag = "rebel_colony";
+	pixel_x = 26;
+	pixel_y = -6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/airlock)
+"Bf" = (
+/obj/machinery/door/airlock/command{
+	name = "Suite 2"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/map_template/rebel_colony/command)
+"Bl" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/commons)
+"Bz" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+	id_tag = "rebel_colony_pump";
+	power_rating = 25000
+	},
+/obj/machinery/airlock_sensor{
+	frequency = 1380;
+	id_tag = "rebel_colony_sensor_chamber";
+	pixel_x = -6;
+	pixel_y = 28
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/map_template/rebel_colony/airlock)
+"BU" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor/tiled/white,
+/area/map_template/rebel_colony/medbay)
+"BV" = (
+/obj/structure/table/marble,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/white,
+/area/map_template/rebel_colony/medbay)
+"Ch" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+	id_tag = "rebel_colony_pump";
+	power_rating = 25000
+	},
+/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
+	cycle_to_external_air = 1;
+	frequency = 1380;
+	id_tag = "rebel_colony";
+	pixel_y = 22;
+	tag_airpump = "rebel_colony_pump";
+	tag_chamber_sensor = "rebel_colony_sensor_chamber";
+	tag_exterior_door = "rebel_colony_exterior_door";
+	tag_exterior_sensor = "rebel_colony_sensor_external";
+	tag_interior_door = "rebel_colony_interior_door";
+	tag_interior_sensor = "rebel_colony_sensor_interior"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/map_template/rebel_colony/airlock)
+"Cj" = (
+/obj/machinery/gibber,
+/turf/simulated/floor/tiled/freezer,
+/area/map_template/rebel_colony/messhall)
+"CG" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+	dir = 4;
+	id_tag = "rebel_colony_pump_out_internal";
+	power_rating = 25000
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/map_template/rebel_colony/airlock)
+"CQ" = (
+/obj/machinery/door/airlock/command{
+	name = "Suite 1"
+	},
+/obj/item/ammo_casing/pistol/used,
+/turf/simulated/floor/tiled/techmaint,
+/area/map_template/rebel_colony/command)
+"CZ" = (
+/obj/structure/table/marble,
+/obj/machinery/microwave,
+/turf/simulated/floor/tiled/freezer,
+/area/map_template/rebel_colony/messhall)
+"Dl" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/wall/r_wall,
+/area/map_template/rebel_colony/airlock)
+"Dn" = (
+/obj/item/device/radio/intercom/map_preset/rebel_colony{
+	dir = 8;
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/messhall)
+"Dt" = (
+/obj/machinery/merchant_pad,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/command)
+"DG" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4
+	},
+/obj/machinery/airlock_sensor/airlock_interior{
+	frequency = 1380;
+	id_tag = "rebel_colony_sensor_exterior";
+	pixel_x = -28;
+	pixel_y = 6
+	},
+/obj/machinery/access_button/airlock_interior{
+	frequency = 1380;
+	master_tag = "rebel_colony";
+	pixel_x = -28;
+	pixel_y = -6
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/map_template/rebel_colony/airlock)
+"DL" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/item/ammo_casing/pistol/used,
+/obj/effect/decal/cleanable/blood/drip,
+/obj/effect/decal/cleanable/blood/drip,
+/turf/simulated/floor/tiled/techmaint,
+/area/map_template/rebel_colony/command)
+"DO" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/blood/drip,
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/commons)
+"DP" = (
+/obj/structure/table/marble,
+/turf/simulated/floor/tiled/freezer,
+/area/map_template/rebel_colony/messhall)
+"Ec" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/closet/toolcloset,
+/turf/simulated/floor/tiled/dark,
+/area/map_template/rebel_colony/commons)
+"Eh" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/rebel_colony/commons)
+"Ej" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/clothing/head/terran/beret/grey,
+/obj/item/clothing/head/terran/beret/grey,
+/obj/item/clothing/head/terran/beret/grey,
+/obj/item/clothing/head/terran/beret/grey,
+/obj/item/clothing/head/terran/beret/grey,
+/obj/item/clothing/head/terran/beret/grey,
+/obj/effect/floor_decal/techfloor,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/security)
+"Ek" = (
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -1249,93 +1485,68 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/map_template/rebel_colony/commons)
-"JB" = (
-/obj/structure/table/standard,
+"Ep" = (
+/obj/machinery/power/apc/high{
+	dir = 4;
+	pixel_x = 24
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/table/steel_reinforced,
 /turf/simulated/floor/tiled/dark,
-/area/map_template/rebel_colony/security)
-"JR" = (
+/area/map_template/rebel_colony/commons)
+"EP" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/commons)
+"EY" = (
+/obj/machinery/door/airlock/glass/civilian,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/airlock)
+"Fa" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5;
+	icon_state = "intact"
+	},
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/airlock)
+"Ff" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/airlock)
+"Fx" = (
+/obj/structure/closet/secure_closet{
+	req_access = list("ACCESS_REBELCOLONY_COMMAND")
+	},
 /turf/simulated/floor/carpet/orange,
 /area/map_template/rebel_colony/command)
-"Kk" = (
-/obj/structure/bed/padded,
-/obj/item/bedsheet/hop,
-/turf/simulated/floor/carpet/blue2,
-/area/map_template/rebel_colony/command)
-"Ku" = (
-/obj/effect/floor_decal/spline/plain/red{
-	dir = 8
-	},
-/obj/machinery/light/small{
-	dir = 8
-	},
-/obj/item/stack/medical/bruise_pack,
-/turf/simulated/floor/tiled/dark/monotile,
-/area/map_template/rebel_colony/security)
-"KC" = (
-/obj/structure/table/marble,
-/turf/simulated/floor/tiled/freezer,
-/area/map_template/rebel_colony/messhall)
-"KG" = (
-/obj/machinery/door/airlock/engineering{
-	name = "Engineering"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
+"FA" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/engineering)
-"KH" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/map_template/rebel_colony/command)
-"KN" = (
-/obj/machinery/door/airlock/command{
-	name = "Suite 1"
-	},
-/obj/item/ammo_casing/pistol/used,
-/turf/simulated/floor/tiled/techmaint,
-/area/map_template/rebel_colony/command)
-"KX" = (
-/obj/effect/decal/cleanable/blood/drip,
-/turf/simulated/floor/tiled/dark,
-/area/map_template/rebel_colony/security)
-"Lh" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 4;
-	icon_state = "techfloor_edges"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/security)
-"Lo" = (
-/obj/machinery/light,
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/item/ammo_casing/pistol/used,
-/turf/simulated/floor/carpet/blue,
-/area/map_template/rebel_colony/command)
-"Lt" = (
-/turf/simulated/floor/tiled/dark,
-/area/map_template/rebel_colony/commons)
-"LC" = (
-/obj/machinery/door/airlock/medical,
-/turf/simulated/floor/tiled/white,
-/area/map_template/rebel_colony/medbay)
-"LL" = (
-/turf/simulated/floor/tiled/freezer,
-/area/map_template/rebel_colony/messhall)
-"LT" = (
-/obj/structure/bed,
-/obj/effect/floor_decal/spline/plain/red{
-	dir = 5
-	},
-/obj/effect/submap_landmark/spawnpoint/rebel_hostage_spawn,
-/obj/effect/decal/cleanable/blood/splatter,
-/turf/simulated/floor/tiled/dark/monotile,
-/area/map_template/rebel_colony/security)
-"Mm" = (
+/area/map_template/rebel_colony/airlock)
+"FI" = (
 /obj/structure/table/marble,
 /obj/item/reagent_containers/glass/beaker/large,
 /obj/item/reagent_containers/glass/beaker/large,
@@ -1343,46 +1554,89 @@
 /obj/item/reagent_containers/glass/beaker/large,
 /turf/simulated/floor/tiled/white,
 /area/map_template/rebel_colony/medbay)
-"Mr" = (
-/obj/structure/bed/chair/comfy/brown,
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/command)
-"MD" = (
-/obj/effect/decal/cleanable/blood/drip,
-/obj/item/ammo_casing/pistol/used,
-/turf/simulated/floor/tiled/techmaint,
-/area/map_template/rebel_colony/command)
-"MI" = (
-/obj/machinery/door/airlock/glass/security{
-	name = "Security"
+"FL" = (
+/obj/machinery/door/airlock/external{
+	frequency = 1380;
+	id_tag = "rebel_colony_interior_door"
 	},
-/turf/simulated/floor/tiled/dark/monotile,
-/area/map_template/rebel_colony/security)
-"Nc" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/map_template/rebel_colony/airlock)
+"FM" = (
+/obj/machinery/atmospherics/pipe/manifold4w/hidden,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/map_template/rebel_colony/airlock)
+"FP" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/wall/r_wall,
+/area/map_template/rebel_colony/command)
+"FT" = (
+/turf/simulated/wall/r_wall,
 /area/map_template/rebel_colony/commons)
-"Ni" = (
+"FU" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/map_template/rebel_colony/airlock)
+"FZ" = (
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/map_template/rebel_colony/airlock)
+"Gf" = (
+/obj/machinery/door/airlock/highsecurity,
 /obj/structure/cable{
-	d1 = 1;
+	d1 = 4;
 	d2 = 8;
-	icon_state = "1-8"
+	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
-/area/map_template/rebel_colony/commons)
-"Nq" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/card/id/merchant{
-	desc = "this card can be used to access the Colony's telepad to exchange goods.";
-	name = "trade array access card"
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/rebel_colony/security)
+"Gh" = (
+/obj/machinery/door/airlock/external{
+	frequency = 1380;
+	id_tag = "rebel_colony_exterior_door";
+	locked = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/map_template/rebel_colony/airlock)
+"Gl" = (
+/obj/machinery/door/airlock/glass/command{
+	name = "Command Center"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/rebel_colony/command)
-"Nz" = (
+"GE" = (
+/obj/machinery/door/airlock/glass/medical{
+	name = "Chemistry"
+	},
+/turf/simulated/floor/tiled/white,
+/area/map_template/rebel_colony/medbay)
+"GK" = (
+/obj/structure/closet/crate/freezer,
+/obj/item/reagent_containers/ivbag/nanoblood,
+/obj/item/reagent_containers/ivbag/nanoblood,
+/obj/item/reagent_containers/ivbag/nanoblood,
+/turf/simulated/floor/tiled/freezer,
+/area/map_template/rebel_colony/medbay)
+"GS" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/effect/gibspawner/human,
+/turf/simulated/floor/exoplanet/concrete,
+/area/map_template/rebel_colony/airlock)
+"GT" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/clothing/gloves/terran,
+/obj/item/clothing/gloves/terran,
+/obj/item/clothing/gloves/terran,
+/obj/item/clothing/gloves/terran,
+/obj/item/clothing/gloves/terran,
+/obj/item/clothing/gloves/terran,
+/obj/effect/floor_decal/techfloor,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/security)
+"Hb" = (
 /obj/structure/table/marble,
 /obj/machinery/chemical_dispenser/bar_coffee/full{
 	dir = 1
@@ -1390,40 +1644,331 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/freezer,
 /area/map_template/rebel_colony/messhall)
-"NC" = (
+"Hd" = (
+/obj/effect/floor_decal/techfloor,
+/obj/machinery/suit_storage_unit/security/alt,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/security)
+"HO" = (
+/obj/machinery/power/apc/high{
+	dir = 4;
+	pixel_x = 24
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/map_template/rebel_colony/medbay)
+"Ib" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 6;
+	icon_state = "techfloor_edges"
+	},
+/obj/machinery/suit_storage_unit/security/alt,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/security)
+"Ic" = (
+/obj/machinery/optable,
+/turf/simulated/floor/tiled/freezer,
+/area/map_template/rebel_colony/medbay)
+"Il" = (
+/turf/simulated/floor/carpet/orange,
+/area/map_template/rebel_colony/command)
+"Iq" = (
+/turf/simulated/floor/tiled/freezer,
+/area/map_template/rebel_colony/medbay)
+"IE" = (
+/turf/simulated/floor/tiled/white,
+/area/map_template/rebel_colony/medbay)
+"IV" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/rebel_colony/commons)
+"IZ" = (
+/obj/structure/hygiene/sink{
+	pixel_y = -16
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/map_template/rebel_colony/medbay)
+"Jp" = (
+/turf/simulated/floor/tiled/dark,
+/area/map_template/rebel_colony/commons)
+"Jv" = (
+/obj/structure/flora/pottedplant/tropical,
+/turf/simulated/floor/carpet/blue2,
+/area/map_template/rebel_colony/command)
+"Jx" = (
+/obj/machinery/portable_atmospherics/canister/air/airlock,
+/turf/simulated/floor/tiled/dark,
+/area/map_template/rebel_colony/commons)
+"JG" = (
+/obj/machinery/power/apc/high{
+	dir = 8;
+	pixel_x = -24
+	},
+/obj/structure/cable,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/airlock)
+"Kc" = (
 /obj/machinery/light{
 	dir = 1
 	},
 /obj/structure/iv_drip,
 /turf/simulated/floor/tiled/freezer,
 /area/map_template/rebel_colony/medbay)
-"NI" = (
+"Kh" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/airlock)
+"Kj" = (
+/obj/machinery/door/airlock/command{
+	name = "Suite 3"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/map_template/rebel_colony/command)
+"Ku" = (
+/obj/effect/wallframe_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/map_template/rebel_colony/airlock)
+"Kz" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+	dir = 1;
+	id_tag = "rebel_colony_pump";
+	power_rating = 25000
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/map_template/rebel_colony/airlock)
+"KD" = (
+/obj/effect/decal/cleanable/blood/drip,
+/obj/item/ammo_casing/pistol/used,
+/obj/item/ammo_casing/pistol/used,
+/turf/simulated/floor/carpet/blue,
+/area/map_template/rebel_colony/command)
+"KH" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/techfloor,
+/obj/machinery/suit_storage_unit/security/alt,
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/rebel_colony/security)
-"NQ" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/toy/figure/hop,
-/turf/simulated/floor/tiled/techfloor,
+"KL" = (
+/obj/machinery/light,
+/turf/simulated/floor/carpet/blue2,
 /area/map_template/rebel_colony/command)
-"NZ" = (
-/obj/structure/flora/pottedplant/tall,
-/obj/item/ammo_casing/pistol/used,
-/turf/simulated/floor/carpet/red,
-/area/map_template/rebel_colony/command)
-"Od" = (
-/obj/machinery/door/airlock/glass/security{
-	name = "Cell 3"
+"KO" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
 	},
-/turf/simulated/floor/tiled/dark/monotile,
+/turf/simulated/floor/plating,
+/area/map_template/rebel_colony/airlock)
+"KU" = (
+/obj/item/device/radio/intercom/map_preset/rebel_colony{
+	dir = 4;
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/white,
+/area/map_template/rebel_colony/medbay)
+"Lb" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/map_template/rebel_colony/airlock)
+"Ld" = (
+/obj/effect/decal/cleanable/blood/drip,
+/obj/item/ammo_casing/pistol/used,
+/obj/item/ammo_casing/pistol/used,
+/obj/item/ammo_casing/pistol/used,
+/obj/item/ammo_casing/pistol/used,
+/turf/simulated/floor/carpet/blue,
+/area/map_template/rebel_colony/command)
+"Lh" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/modular_computer/laptop,
+/obj/effect/floor_decal/techfloor{
+	dir = 5;
+	icon_state = "techfloor_edges"
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/map_template/rebel_colony/security)
-"On" = (
+"LP" = (
 /obj/structure/bed/padded,
 /obj/item/bedsheet/ce,
 /turf/simulated/floor/carpet/orange,
 /area/map_template/rebel_colony/command)
-"OA" = (
+"Md" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/map_template/rebel_colony/commons)
+"Me" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/commons)
+"Mf" = (
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/airlock)
+"Mn" = (
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/airlock)
+"Mu" = (
+/obj/effect/decal/cleanable/ash,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/template_noop)
+"Np" = (
+/obj/structure/dispenser/oxygen,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/airlock)
+"Ns" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/map_template/rebel_colony/airlock)
+"Nu" = (
+/obj/structure/closet/hydrant,
+/turf/simulated/floor/tiled/techmaint,
+/area/map_template/rebel_colony/command)
+"Nx" = (
+/obj/machinery/computer/modular/preset/merchant{
+	dir = 1
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/command)
+"NS" = (
+/obj/machinery/radio_beacon{
+	start_with_distress = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/command)
+"Oe" = (
+/obj/machinery/power/apc/high{
+	dir = 1;
+	pixel_y = 24
+	},
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2";
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/map_template/rebel_colony/command)
+"Ol" = (
+/obj/machinery/door/airlock/glass/civilian,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/map_template/rebel_colony/commons)
+"Oo" = (
+/obj/machinery/reagentgrinder,
+/obj/item/stack/material/phoron/ten,
+/turf/simulated/floor/tiled/white,
+/area/map_template/rebel_colony/medbay)
+"Op" = (
+/obj/machinery/light,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/orange,
+/area/map_template/rebel_colony/command)
+"Ox" = (
+/obj/item/ammo_casing/pistol/used,
+/turf/simulated/floor/carpet/blue,
+/area/map_template/rebel_colony/command)
+"OL" = (
+/turf/simulated/wall/r_wall,
+/area/map_template/rebel_colony/command)
+"OP" = (
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/messhall)
+"OV" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1;
+	icon_state = "techfloor_edges"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/security)
+"Pa" = (
+/obj/structure/bed/padded,
+/obj/item/bedsheet/hop,
+/turf/simulated/floor/carpet/blue2,
+/area/map_template/rebel_colony/command)
+"Pb" = (
+/obj/effect/floor_decal/techfloor,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/security)
+"Pk" = (
+/turf/simulated/floor/carpet/blue2,
+/area/map_template/rebel_colony/command)
+"Po" = (
+/obj/structure/bed/chair/office/comfy{
+	dir = 1
+	},
+/obj/effect/submap_landmark/spawnpoint/rebel_colonist_leader_spawn,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/command)
+"Pt" = (
+/obj/structure/table/steel_reinforced,
+/obj/effect/floor_decal/techfloor{
+	dir = 8;
+	icon_state = "techfloor_edges"
+	},
+/obj/item/gun/projectile/automatic/sec_smg{
+	magazine_type = /obj/item/ammo_magazine/smg_top
+	},
+/obj/item/gun/projectile/automatic/sec_smg{
+	magazine_type = /obj/item/ammo_magazine/smg_top
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/security)
+"PH" = (
+/obj/machinery/computer/modular/preset/cardslot/command,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/command)
+"PL" = (
+/obj/item/ammo_casing/pistol/used,
+/obj/item/ammo_casing/pistol/used,
+/turf/simulated/floor/tiled/techmaint,
+/area/map_template/rebel_colony/command)
+"PM" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/map_template/rebel_colony/command)
+"PN" = (
+/obj/effect/floor_decal/spline/plain/red{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/rebel_colony/security)
+"PT" = (
 /obj/structure/table/marble,
 /obj/machinery/reagent_temperature,
 /obj/item/reagent_containers/food/drinks/shaker{
@@ -1433,116 +1978,190 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/freezer,
 /area/map_template/rebel_colony/messhall)
-"OG" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/storage/belt/security,
-/obj/item/storage/belt/security,
-/obj/item/storage/belt/security,
-/obj/item/storage/belt/security,
-/obj/item/storage/belt/security,
-/obj/item/storage/belt/security,
-/obj/effect/floor_decal/techfloor{
-	dir = 1;
-	icon_state = "techfloor_edges"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/security)
-"OL" = (
-/turf/simulated/wall/r_wall,
-/area/map_template/rebel_colony/command)
-"ON" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
+"PU" = (
+/obj/effect/wallframe_spawn/reinforced,
+/turf/simulated/floor/plating,
 /area/map_template/rebel_colony/commons)
-"OU" = (
-/obj/effect/floor_decal/techfloor,
+"PY" = (
+/obj/machinery/suit_storage_unit/mining,
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/security)
-"OV" = (
+/area/map_template/rebel_colony/commons)
+"Qg" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/toy/figure/hop,
+/obj/item/device/radio/intercom/map_preset/rebel_colony{
+	dir = 4;
+	pixel_x = -24
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/rebel_colony/command)
-"OW" = (
-/obj/structure/table/marble,
-/obj/machinery/microwave,
-/turf/simulated/floor/tiled/freezer,
-/area/map_template/rebel_colony/messhall)
-"OX" = (
-/obj/effect/decal/cleanable/blood/drip,
-/obj/item/ammo_casing/pistol/used,
-/obj/item/ammo_casing/pistol/used,
-/obj/item/ammo_casing/pistol/used,
-/turf/simulated/floor/carpet/red,
-/area/map_template/rebel_colony/command)
-"Pt" = (
+"Qi" = (
+/obj/effect/wallframe_spawn/reinforced,
+/turf/simulated/floor/tiled/white,
+/area/map_template/rebel_colony/medbay)
+"Qq" = (
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/blood/drip,
+/turf/simulated/floor/tiled/techmaint,
+/area/map_template/rebel_colony/command)
+"Qz" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/toy/figure/hos,
+/turf/simulated/floor/carpet/red,
+/area/map_template/rebel_colony/command)
+"QC" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/ammo_casing/pistol/used,
+/turf/simulated/floor/carpet/blue,
+/area/map_template/rebel_colony/command)
+"QH" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/map_template/rebel_colony/command)
+"QR" = (
+/obj/effect/floor_decal/spline/plain/red{
+	dir = 10
+	},
+/obj/effect/decal/cleanable/blood/splatter,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/map_template/rebel_colony/security)
-"Pu" = (
-/obj/machinery/power/smes/buildable/max_cap_in_out,
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2";
-	pixel_y = 0
+"QV" = (
+/obj/machinery/door/airlock/command{
+	name = "Command Center";
+	req_access = list()
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/map_template/rebel_colony/command)
+"QW" = (
+/obj/machinery/door/airlock/glass/civilian{
+	name = "Voidsuit Storage"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/commons)
+"Rs" = (
+/obj/machinery/door/airlock/command{
+	locked = 1;
+	name = "Suite 4"
+	},
+/obj/item/airlock_brace,
+/turf/simulated/floor/tiled/techmaint,
+/area/map_template/rebel_colony/command)
+"Rz" = (
+/obj/structure/closet/secure_closet{
+	req_access = list("ACCESS_REBELCOLONY_COMMAND")
+	},
+/obj/item/clothing/head/caphat/formal,
+/obj/item/clothing/head/caphat/cap,
+/obj/item/clothing/head/caphat,
+/turf/simulated/floor/carpet/blue,
+/area/map_template/rebel_colony/command)
+"RE" = (
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/commons)
+"RG" = (
+/obj/effect/floor_decal/spline/plain/red{
+	dir = 8
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/item/stack/medical/bruise_pack,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/rebel_colony/security)
+"RM" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 1
+	},
+/obj/effect/floor_decal/techfloor{
+	dir = 4;
+	icon_state = "techfloor_edges"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/security)
+"RT" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/commons)
+"Sp" = (
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/engineering)
-"Px" = (
-/turf/simulated/wall/r_wall,
-/area/map_template/rebel_colony/engineering)
-"PC" = (
-/turf/simulated/floor/tiled,
-/area/map_template/rebel_colony/commons)
-"PN" = (
-/obj/machinery/computer/prisoner{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
-/area/map_template/rebel_colony/security)
-"Qn" = (
-/obj/machinery/light,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/carpet/orange,
-/area/map_template/rebel_colony/command)
-"QR" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/effect/floor_decal/techfloor{
-	dir = 1;
-	icon_state = "techfloor_edges"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/security)
-"Rc" = (
-/obj/machinery/door/airlock/command{
-	name = "Suite 3"
-	},
+/turf/simulated/floor/tiled/white,
+/area/map_template/rebel_colony/medbay)
+"Sr" = (
+/obj/machinery/suit_storage_unit/command,
 /turf/simulated/floor/tiled/techmaint,
 /area/map_template/rebel_colony/command)
-"Rk" = (
+"SC" = (
+/obj/structure/bed/chair/comfy/brown,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/command)
+"SX" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/command)
+"Tj" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4;
+	icon_state = "techfloor_edges"
+	},
+/obj/effect/submap_landmark/spawnpoint/rebel_colonist_spawn,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/security)
+"Tn" = (
+/obj/item/ammo_casing/pistol/used,
+/turf/simulated/floor/tiled/techmaint,
+/area/map_template/rebel_colony/command)
+"Ty" = (
+/obj/item/ammo_casing/pistol/used,
+/obj/item/ammo_casing/pistol/used,
+/obj/item/ammo_casing/pistol/used,
+/turf/simulated/floor/tiled/techmaint,
+/area/map_template/rebel_colony/command)
+"Tz" = (
+/obj/machinery/light,
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor/carpet/red,
+/area/map_template/rebel_colony/command)
+"TA" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/commons)
+"TB" = (
 /obj/structure/cable{
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/map_template/rebel_colony/commons)
-"RF" = (
+"TI" = (
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -1555,3927 +2174,3988 @@
 	},
 /turf/simulated/floor/tiled,
 /area/map_template/rebel_colony/commons)
-"RG" = (
-/obj/structure/table/standard,
-/obj/machinery/door/window/brigdoor/southleft,
-/obj/machinery/door/window/brigdoor/northleft,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/map_template/rebel_colony/security)
-"RM" = (
-/obj/effect/floor_decal/techfloor,
-/obj/effect/submap_landmark/spawnpoint/rebel_colonist_leader_spawn,
+"TM" = (
+/obj/machinery/computer/modular/preset/security,
 /turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/security)
-"Sa" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/engineering)
-"SK" = (
-/obj/machinery/door/airlock/glass/civilian,
-/turf/simulated/floor/tiled,
-/area/map_template/rebel_colony/commons)
-"Tj" = (
-/turf/simulated/floor/tiled/techmaint,
 /area/map_template/rebel_colony/command)
-"Tn" = (
-/obj/structure/flora/pottedplant/tropical,
-/turf/simulated/floor/carpet/blue2,
-/area/map_template/rebel_colony/command)
-"Tu" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/tiled/dark/monotile,
-/area/map_template/rebel_colony/commons)
-"UN" = (
-/obj/machinery/reagentgrinder,
-/obj/item/stack/material/phoron/ten,
-/turf/simulated/floor/tiled/white,
-/area/map_template/rebel_colony/medbay)
-"UQ" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/engineering)
-"US" = (
-/obj/structure/hygiene/toilet,
-/obj/effect/floor_decal/spline/plain/red{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/dark/monotile,
-/area/map_template/rebel_colony/security)
-"UY" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark,
-/area/map_template/rebel_colony/commons)
-"Vl" = (
-/obj/machinery/optable,
-/turf/simulated/floor/tiled/freezer,
-/area/map_template/rebel_colony/medbay)
-"VA" = (
-/obj/structure/wall_frame/standard,
-/obj/item/material/shard,
-/turf/simulated/floor/plating,
-/area/map_template/rebel_colony/command)
-"VM" = (
-/obj/machinery/light,
-/obj/effect/decal/cleanable/blood/drip,
-/turf/simulated/floor/tiled/dark,
-/area/map_template/rebel_colony/security)
-"Wj" = (
-/turf/simulated/floor/tiled/dark/monotile,
-/area/map_template/rebel_colony/commons)
-"Wy" = (
-/obj/machinery/light,
-/turf/simulated/floor/tiled/techmaint,
-/area/map_template/rebel_colony/command)
-"WB" = (
-/obj/item/crowbar/brace_jack,
-/turf/simulated/floor/carpet/orange,
-/area/map_template/rebel_colony/command)
-"WM" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/tiled/white,
-/area/map_template/rebel_colony/medbay)
-"WT" = (
-/turf/template_noop,
-/area/space)
-"WV" = (
-/obj/structure/closet/secure_closet{
-	req_access = list("ACCESS_REBELCOLONY_COMMAND")
-	},
-/obj/item/clothing/head/caphat/formal,
-/obj/item/clothing/head/caphat/cap,
-/obj/item/clothing/head/caphat,
-/turf/simulated/floor/carpet/blue,
-/area/map_template/rebel_colony/command)
-"Xj" = (
-/obj/structure/kitchenspike,
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/map_template/rebel_colony/messhall)
-"Xq" = (
-/obj/structure/hygiene/toilet,
-/obj/effect/floor_decal/spline/plain/red{
-	dir = 9
-	},
-/obj/effect/decal/cleanable/blood/splatter,
-/turf/simulated/floor/tiled/dark/monotile,
-/area/map_template/rebel_colony/security)
-"Xr" = (
-/obj/effect/floor_decal/spline/plain/red{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/blood/splatter,
-/turf/simulated/floor/tiled/dark/monotile,
-/area/map_template/rebel_colony/security)
-"XA" = (
-/obj/item/ammo_casing/pistol/used,
-/turf/simulated/floor/tiled/techmaint,
-/area/map_template/rebel_colony/command)
-"XE" = (
-/obj/effect/decal/cleanable/blood/drip,
-/obj/item/ammo_casing/pistol/used,
-/obj/item/ammo_casing/pistol/used,
-/turf/simulated/floor/carpet/blue,
-/area/map_template/rebel_colony/command)
-"XK" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/map_template/rebel_colony/commons)
-"Ya" = (
-/obj/machinery/light,
-/obj/effect/floor_decal/techfloor,
-/obj/effect/submap_landmark/spawnpoint/rebel_colonist_spawn,
-/turf/simulated/floor/tiled/techfloor,
-/area/map_template/rebel_colony/security)
-"YC" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/toy/figure/hos,
-/turf/simulated/floor/carpet/red,
-/area/map_template/rebel_colony/command)
-"YD" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/map_template/rebel_colony/command)
-"YZ" = (
-/obj/structure/iv_drip,
-/turf/simulated/floor/tiled/white,
-/area/map_template/rebel_colony/medbay)
-"Zc" = (
-/obj/effect/floor_decal/spline/plain/red{
-	dir = 6
-	},
-/obj/item/stack/medical/splint/ghetto,
-/turf/simulated/floor/tiled/dark/monotile,
-/area/map_template/rebel_colony/security)
-"ZK" = (
-/turf/simulated/floor/tiled,
-/area/map_template/rebel_colony/messhall)
-"ZR" = (
+"TT" = (
 /obj/machinery/body_scanconsole{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/map_template/rebel_colony/medbay)
-"ZS" = (
-/obj/machinery/sleeper{
-	dir = 4
+"TV" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
 	},
-/obj/machinery/light{
-	dir = 8
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/commons)
+"TY" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/paper_bin,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/command)
+"UP" = (
+/turf/simulated/wall/r_wall,
+/area/map_template/rebel_colony/messhall)
+"Vi" = (
+/obj/structure/wall_frame/standard,
+/obj/item/material/shard,
+/turf/simulated/floor/plating,
+/area/map_template/rebel_colony/command)
+"Vu" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/material/shard,
+/turf/simulated/floor/tiled/techmaint,
+/area/map_template/rebel_colony/command)
+"Vx" = (
+/obj/item/ammo_casing/pistol/used,
+/obj/effect/decal/cleanable/blood/drip,
+/turf/simulated/floor/tiled/techmaint,
+/area/map_template/rebel_colony/command)
+"VA" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/item/ammo_casing/pistol/used,
+/turf/simulated/floor/tiled/techmaint,
+/area/map_template/rebel_colony/command)
+"VD" = (
+/obj/machinery/light,
+/turf/simulated/floor/tiled/techmaint,
+/area/map_template/rebel_colony/command)
+"VO" = (
+/obj/structure/dispenser/oxygen,
+/turf/simulated/floor/tiled/techmaint,
+/area/map_template/rebel_colony/command)
+"VT" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 10;
+	icon_state = "techfloor_edges"
+	},
+/obj/structure/closet/secure_closet/security{
+	req_access = list("ACCESS_REBELCOLONY_SECURITY")
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/security)
+"VX" = (
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/simulated/floor/tiled/techmaint,
+/area/map_template/rebel_colony/command)
+"VY" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor/tiled/freezer,
+/area/map_template/rebel_colony/messhall)
+"Wb" = (
+/obj/structure/closet/secure_closet/freezer/fridge,
+/turf/simulated/floor/tiled/freezer,
+/area/map_template/rebel_colony/messhall)
+"Wr" = (
+/obj/machinery/door/airlock/glass/security{
+	name = "Security"
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/rebel_colony/security)
+"WE" = (
+/obj/machinery/door/airlock/civilian{
+	name = "Mess Hall"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/messhall)
+"WQ" = (
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/command)
+"WU" = (
+/obj/machinery/door/airlock/glass/medical{
+	name = "Medical Bay"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/white,
 /area/map_template/rebel_colony/medbay)
+"WX" = (
+/turf/simulated/wall/r_wall,
+/area/map_template/rebel_colony/medbay)
+"WZ" = (
+/obj/item/ammo_casing/pistol/used,
+/obj/item/ammo_casing/pistol/used,
+/obj/effect/decal/cleanable/blood/drip,
+/turf/simulated/floor/tiled/techmaint,
+/area/map_template/rebel_colony/command)
+"Xb" = (
+/obj/item/ammo_casing/pistol/used,
+/turf/simulated/floor/carpet/red,
+/area/map_template/rebel_colony/command)
+"Xh" = (
+/obj/machinery/light,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/ammo_casing/pistol/used,
+/turf/simulated/floor/carpet/blue,
+/area/map_template/rebel_colony/command)
+"Xj" = (
+/obj/machinery/power/apc/high{
+	dir = 8;
+	pixel_x = -24
+	},
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/messhall)
+"Xu" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/messhall)
+"XA" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/storage/belt/security,
+/obj/item/storage/belt/security,
+/obj/item/storage/belt/security,
+/obj/item/storage/belt/security,
+/obj/item/storage/belt/security,
+/obj/item/storage/belt/security,
+/obj/effect/floor_decal/techfloor{
+	dir = 1;
+	icon_state = "techfloor_edges"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/security)
+"XD" = (
+/obj/machinery/door/airlock/medical{
+	name = "Surgery"
+	},
+/turf/simulated/floor/tiled/white,
+/area/map_template/rebel_colony/medbay)
+"XE" = (
+/turf/simulated/floor/tiled/techmaint,
+/area/map_template/rebel_colony/command)
+"XF" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/messhall)
+"XM" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/messhall)
+"Ya" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/commons)
+"Yr" = (
+/obj/machinery/light,
+/obj/effect/floor_decal/techfloor,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/security)
+"YC" = (
+/obj/effect/wallframe_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/map_template/rebel_colony/command)
+"YD" = (
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/commons)
+"YF" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/messhall)
+"YL" = (
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/rebel_colony/commons)
+"Zb" = (
+/obj/machinery/computer/modular/preset/cardslot/command_sec,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/command)
+"Zc" = (
+/obj/structure/bed,
+/obj/effect/floor_decal/spline/plain/red{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/rebel_colony/security)
+"Zk" = (
+/obj/machinery/sleeper{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/map_template/rebel_colony/medbay)
+"ZM" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8;
+	icon_state = "techfloor_edges"
+	},
+/obj/structure/closet/secure_closet/security{
+	req_access = list("ACCESS_REBELCOLONY_SECURITY")
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/security)
+"ZP" = (
+/obj/structure/flora/pottedplant/unusual,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/item/ammo_casing/pistol/used,
+/obj/item/ammo_casing/pistol/used,
+/turf/simulated/floor/carpet/blue,
+/area/map_template/rebel_colony/command)
+"ZS" = (
+/turf/template_noop,
+/area/template_noop)
+"ZT" = (
+/turf/simulated/floor/tiled/freezer,
+/area/map_template/rebel_colony/messhall)
 
 (1,1,1) = {"
 em
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (2,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (3,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (4,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (5,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (6,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (7,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (8,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (9,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (10,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (11,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (12,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+zl
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+zx
+OL
+OL
+OL
+OL
+OL
+OL
+FP
+FP
+FP
+OL
+OL
+OL
+OL
+OL
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (13,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+zl
+zx
+fq
+jh
+ky
+ns
+qF
+sY
+tE
+zx
+wg
+ZM
+ZM
+VT
+zx
+Zb
+WQ
+Qg
+WQ
+op
+FP
+ib
+QC
+Rz
+OL
+tT
+Qz
+mJ
+OL
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (14,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+zl
+zx
+Zc
+cT
+PN
+oy
+qS
+ix
+tM
+zx
+wl
+cm
+cm
+Yr
+zx
+PH
+Po
+nX
+SC
+Nx
+FP
+QC
+Ld
+QC
+FP
+Xb
+yV
+yV
+OL
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (15,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
-dE
-dE
-dE
-dE
-dE
-dE
-dE
-dE
-dE
-dE
-dE
-dE
-dE
-dE
-dE
-dE
-dE
-dE
-dE
-dE
-dE
-dE
-dE
-dE
-dE
-dE
-dE
-dE
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+zl
+zx
+zx
+zx
+zx
+zx
+qF
+ix
+tQ
+zx
+wD
+cm
+cm
+Ej
+zx
+TM
+WQ
+nX
+WQ
+Dt
+OL
+Ox
+QC
+Xh
+OL
+pG
+uT
+Tz
+OL
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (16,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+zl
 zx
+fz
+RG
+QR
+oF
+qW
+ix
+uk
 zx
+xF
+cm
+cm
+GT
 zx
-zx
-zx
-zx
-zx
-zx
-zx
-zx
-zx
-zx
-zx
-zx
+NS
+WQ
+WQ
+SX
+TY
+FP
+ZP
+pW
+KD
 OL
+eG
+pG
+pq
 OL
-OL
-OL
-OL
-OL
-ng
-ng
-ng
-OL
-OL
-OL
-OL
-OL
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (17,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+zl
 zx
-US
-wf
-cF
-RG
-Iw
-fu
-iT
+fD
+jn
+kQ
+pA
+rM
+ix
+un
 zx
-Jp
-on
-on
-zB
-zx
+XA
+cm
+cm
 og
-OV
-NQ
-OV
-Nq
-ng
-hq
-es
-WV
-OL
-cS
+zx
 YC
-of
+YC
+Gl
+YC
+Vi
+FP
 OL
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+CQ
+OL
+OL
+OL
+Kj
+OL
+OL
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (18,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+zl
 zx
-oQ
-cA
-ba
-hf
-aF
-DF
-dD
 zx
-QR
-BK
-BK
-NI
 zx
-uZ
-nt
-vK
-Mr
-Ct
-ng
-es
-eM
-es
-ng
-As
-nJ
-nJ
+zx
+zx
+qF
+tj
+ux
+zx
+wl
+cm
+cm
+Yr
+zx
+AX
+Tn
+XE
+XE
+Vu
+ls
+Tn
+Vx
+WZ
+XE
+Tn
+lD
+Nu
 OL
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (19,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+zl
 zx
-zx
-zx
-zx
-zx
-Iw
-DF
-JB
-zx
-IM
-BK
-BK
-pJ
-zx
+fq
+jh
+ky
+ns
+qF
+tj
+qF
+Wr
+OV
+cm
+cm
 hU
-OV
-vK
-OV
-Au
+zx
+Tn
+XE
+XE
+XE
+XE
+XE
+DL
+Tn
+XE
+Tn
+XE
+Tn
+tH
 OL
-hx
-es
-Lo
-OL
-ur
-av
-iZ
-OL
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (20,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+zl
 zx
-Xq
-Ku
-dZ
+Zc
 cT
-eH
-DF
 PN
+pH
+rM
+ix
+uE
 zx
-je
-BK
-BK
-sw
+OV
+cm
+cm
+Pb
 zx
-uQ
-OV
-OV
-oP
-mw
-ng
-aS
-BW
 XE
+PL
+Tn
+XE
+Vx
 OL
-NZ
-ur
-OX
 OL
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+Bf
+OL
+OL
+OL
+Rs
+OL
+OL
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (21,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+zl
 zx
-LT
-Xr
-Zc
-hS
-IF
-DF
-IP
 zx
-OG
-BK
-BK
-iM
 zx
-IV
-IV
-AX
-IV
+zx
+zx
+qF
+ix
+qF
+zx
+xJ
+Aj
+cm
+Pb
+zx
+Oe
+PM
 VA
-ng
+Ty
+Tn
 OL
-KN
+Jv
+Pk
+Pk
 OL
+zk
+Il
+Il
 OL
-OL
-Rc
-OL
-OL
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (22,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+zl
 zx
+fP
+Pt
+kR
+pJ
+se
+ix
+qF
 zx
-zx
-zx
-zx
-Iw
-DF
-aF
-zx
-QR
-BK
-BK
-NI
-zx
+xN
+Aj
+iB
 KH
-XA
-Tj
-Tj
-pv
-yU
-XA
-XA
-vZ
-Tj
-XA
-MD
-jR
+zx
+AX
+XE
+Qq
+XE
+VD
 OL
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+Pk
+Pk
+KL
+OL
+hv
+Il
+Op
+OL
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (23,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+zl
 zx
-US
-wf
-cF
-RG
-Iw
-Pt
-Iw
-MI
-rx
-BK
-BK
-OU
+gn
+cm
+kT
+pR
+qF
+ix
+uP
 zx
-XA
-Tj
-Tj
-Tj
-Tj
-Tj
-Fi
-XA
-Tj
-XA
-Tj
-XA
-GK
+xJ
+Aj
+iB
+Hd
+zx
+Sr
+Tn
+QH
+XE
+VO
 OL
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+Pk
+Pk
+Pk
+OL
+Il
+Il
+xk
+iI
+Mu
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (24,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ac
+aN
+dn
+aN
+dn
+aN
+dn
+zl
 zx
-oQ
-cA
-ba
-Od
-IF
-DF
-Hw
+gr
+jp
+lb
+pJ
+qW
+tj
+qF
 zx
-rx
-BK
-BK
+Lh
 RM
+Tj
+Ib
 zx
-Tj
-uY
-XA
-Tj
-XA
+Sr
+XE
+Qq
+Tn
+VX
 OL
+Pa
+Pk
+kB
 OL
-eK
+LP
+xk
+Fx
 OL
-OL
-OL
-hk
-OL
-OL
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+zl
+zl
+zl
+zl
+zl
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (25,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
-zx
-zx
-zx
-zx
-zx
-Iw
-DF
-Iw
-zx
-kZ
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ac
+bP
+dn
+bP
+dn
+bP
+dn
 zl
-BK
-sR
 zx
-ag
-dQ
-hH
-Gn
-XA
+zx
+zx
+zx
+zx
+zx
+Gf
+zx
+zx
+zx
+zx
+zx
+zx
+zx
 OL
-Tn
-lW
-lW
 OL
-iq
-JR
-JR
+QV
 OL
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (26,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
-zx
-hl
-oU
-EL
-ix
-KX
-DF
-Iw
-zx
-gs
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ac
+bP
+dn
+bP
+dn
+bP
+dn
 zl
-BK
+dX
+gC
+jw
+lm
+ep
+sw
+ty
+uS
 Ya
-zx
-KH
-Tj
-YD
-Tj
-Wy
-OL
-lW
-lW
-jG
-OL
-WB
-JR
-Qn
-OL
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+Ya
+Ya
+DO
+Ya
+Ya
+DO
+Ya
+ty
+TA
+UP
+Xj
+nv
+nv
+nv
+vt
+DP
+tV
+ZT
+CZ
+UP
+Wb
+vM
+vM
+UP
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (27,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
-zx
-CL
-BK
-le
-BG
-Iw
-DF
-VM
-zx
-kZ
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ac
+bP
+dn
+bP
+dn
+bP
+dn
 zl
-BK
-sR
-zx
-Tj
-XA
+dX
+gD
+jy
+jy
+dX
+sB
 YD
-Tj
-Tj
-OL
-lW
-lW
-lW
-OL
-JR
-JR
-zE
-fc
-mY
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+YD
+vB
+YD
+Bl
+YD
+YD
+YD
+YD
+YD
+YD
+sB
+UP
+Xu
+kp
+kp
+kp
+ab
+DP
+ZT
+ZT
+PT
+UP
+ZT
+ZT
+VY
+UP
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (28,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
-zx
-um
-ko
-dF
-ix
-eH
-Pt
-Iw
-zx
-pp
-sM
-Lh
-FT
-zx
-Tj
-Tj
+ZS
+ZS
+ZS
+ZS
+ZS
+ac
+ac
+bP
+dn
+bP
+dn
+bP
+dn
+ds
+en
+gH
+jB
+lv
+dX
+sB
 YD
-XA
-Tj
-OL
-Kk
-lW
-jL
-OL
-On
-zE
-mb
-OL
-dE
-dE
-dE
-dE
-dE
-dE
-dE
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+YD
+YD
+xV
+YD
+YD
+YD
+xV
+YD
+YD
+YD
+sB
+UP
+XF
+oH
+oH
+oH
+ab
+DP
+ZT
+ZT
+ZT
+pK
+ZT
+VY
+VY
+UP
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (29,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
-zx
-zx
-zx
-zx
-zx
-zx
-hy
-zx
-zx
-zx
-zx
-zx
-zx
-zx
-OL
-OL
-iX
-OL
-bz
-bz
-bz
-bz
-bz
-bz
-bz
-bz
-bz
-bz
-bz
-bz
-bz
-bz
-bz
-bz
-bz
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ac
+aj
+co
+dr
+co
+dr
+co
+dr
+du
+ep
+gL
+jF
+ly
+qq
+sH
+YD
+YD
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+YD
+YD
+TB
+WE
+XM
+nv
+nv
+nv
+ab
+DP
+ZT
+ZT
+ZT
+UP
+ae
+aB
+Cj
+UP
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (30,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
-Px
-pl
-Pu
-aa
-lu
-qp
-Cv
-Hu
-Hu
-Hu
-Hu
-Hu
-Hu
-Hu
-Hu
-Hu
-Cv
-Nc
-bz
-IZ
-sK
-sK
-sK
-hP
-KC
-LL
-LL
-LL
-OW
-bz
-Js
-Js
-fV
-fV
-bz
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ac
+ac
+ct
+dn
+ct
+dn
+ct
+dn
+ds
+en
+gT
+jF
+lI
+dX
+sB
+YD
+uY
+FT
+eK
+eK
+Ec
+Jp
+Jp
+FT
+hc
+YD
+sB
+UP
+OP
+kp
+kp
+kp
+ab
+DP
+ZT
+ZT
+DP
+UP
+UP
+UP
+UP
+UP
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (31,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
-Px
-yQ
-yQ
-yQ
-hc
-ub
-PC
-PC
-PC
-PC
-PC
-PC
-PC
-PC
-PC
-PC
-PC
-ub
-bz
-th
-ja
-ja
-ja
-gI
-KC
-LL
-LL
-LL
-OA
-bz
-LL
-LL
-LL
-LL
-bz
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ac
+ct
+dn
+ct
+dn
+ct
+dn
+zl
+dX
+gW
+jK
+lL
+dX
+sB
+YD
+YD
+FT
+Jp
+YL
+YL
+YL
+Jp
+FT
+YD
+YD
+sB
+UP
+mf
+oH
+oH
+aS
+ab
+DP
+ZT
+ZT
+Hb
+UP
+zl
+zl
+zl
+zl
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (32,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
-Px
-Sa
-nq
-aW
-hc
-ub
-PC
-PC
-PC
-XK
-PC
-PC
-PC
-XK
-PC
-PC
-PC
-ub
-bz
-vh
-dt
-dt
-dt
-gI
-KC
-LL
-LL
-LL
-LL
-te
-LL
-LL
-LL
-LL
-bz
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ac
+ct
+dn
+ct
+dn
+ct
+dn
+zl
+dX
+dX
+dX
+dX
+dX
+sB
+YD
+YD
+vI
+Jp
+YL
+Eh
+IV
+Md
+Ol
+Ya
+Ya
+TI
+UP
+YF
+OP
+Dn
+OP
+wh
+VY
+ZT
+ZT
+xb
+UP
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (33,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
-Px
-jV
-jV
-UQ
-KG
-Ni
-PC
-PC
-hc
-hc
-hc
-hc
-hc
-hc
-hc
-PC
-PC
-mj
-sv
-Ex
-sK
-sK
-sK
-gI
-KC
-LL
-LL
-LL
-LL
-bz
-xj
-xj
-Xj
-xV
-bz
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ac
+ct
+dn
+ct
+dn
+ct
+dn
+zl
+ey
+gX
+kl
+kl
+qD
+sX
+YD
+YD
+FT
+Jp
+YL
+Ek
+YL
+Jp
+FT
+YD
+YD
+sB
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+UP
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (34,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
-Px
-hu
-jV
-jV
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ac
+cC
+dn
+cC
+dn
+cC
+dn
+zl
+ey
+hi
+hi
+mv
+ey
+YD
+YD
+uY
+FT
+yN
+Af
+Ep
+Jx
+Jx
+FT
 hc
-PC
-PC
-xE
-hc
-Lt
-Lt
-UY
-Lt
-Lt
-hc
-al
-PC
-ub
-bz
-ZK
-ja
-ja
-ja
-gI
-KC
-LL
-LL
-LL
-KC
-bz
-bz
-bz
-bz
-bz
-bz
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+YD
+sB
+WX
+Zk
+aV
+up
+aV
+px
+Qi
+oR
+KU
+aV
+WX
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (35,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
-Px
-jz
-if
-EB
-hc
-PC
-PC
-PC
-hc
-Lt
-Wj
-Wj
-Wj
-Lt
-hc
-PC
-PC
-ub
-bz
-DM
-dt
-dt
-dt
-gI
-KC
-LL
-LL
-LL
-Nz
-bz
-dE
-dE
-dE
-dE
-dE
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ac
+ac
+ac
+ac
+ac
+ac
+ac
+zl
+ey
+hi
+hi
+hi
+ey
+YD
+YD
+YD
+FT
+FT
+FT
+FT
+FT
+FT
+FT
+YD
+YD
+sB
+WX
+bx
+BU
+IE
+IE
+IE
+aV
+IE
+IE
+lT
+WX
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (36,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
-Px
-Px
-Px
-Px
-hc
-PC
-PC
-PC
-bZ
-Lt
-Wj
-Tu
-ps
-CD
-fN
-Hu
-Hu
-RF
-bz
-ZK
-ZK
-ZK
-ZK
-wx
-LL
-LL
-LL
-LL
-qR
-bz
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+zl
+ey
+ho
+kq
+ho
+ey
+YD
+YD
+YD
+YD
+yP
+YD
+EP
+Ya
+Me
+Ya
+Ya
+Ya
+TV
+WU
+Sp
+gR
+IE
+IE
+IE
+Qi
+dY
+IE
+BV
+WX
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (37,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
-dE
-dE
-dE
-dE
-hc
-PC
-PC
-PC
-hc
-Lt
-Wj
-Jy
-Wj
-Lt
-hc
-PC
-PC
-ub
-bz
-bz
-bz
-bz
-bz
-bz
-bz
-bz
-bz
-bz
-bz
-bz
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+zl
+ey
+ht
+ie
+mF
+ey
+YD
+Bl
+YD
+YD
+YD
+YD
+sB
+YD
+YD
+YD
+Bl
+YD
+YD
+WX
+TT
+ox
+TT
+IE
+IE
+Qi
+fs
+IE
+FI
+WX
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (38,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
-hc
-PC
-PC
-xE
-hc
-Lt
-Lt
-Ix
-Lt
-Lt
-hc
-al
-PC
-ub
-EN
-iP
-Il
 ZS
-Il
-YZ
-Az
-HM
-IH
-Il
-EN
-dE
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+zl
+ey
+ie
+ie
+ie
+ey
+YD
+YD
+YD
+YD
+YD
+YD
+sB
+YD
+YD
+YD
+YD
+YD
+YD
+WX
+aZ
+HO
+qM
+IE
+BU
+GE
+IE
+IE
+Oo
+WX
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (39,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
-hc
-PC
-PC
-PC
-hc
-hc
-hc
-hc
-hc
-hc
-hc
-PC
-PC
-ub
-EN
-IH
-IH
-IH
-IH
-IH
-Il
-IH
-IH
-jv
-EN
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+zl
+ey
+ik
+ie
+mH
+ey
+FT
+FT
+FT
+vJ
+vJ
+vJ
+EY
+vJ
+vJ
+vJ
+PU
+QW
+PU
+WX
+WX
+WX
+WX
+XD
+WX
+WX
+WX
+WX
+WX
+WX
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (40,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
-hc
-PC
-PC
-PC
-PC
-ON
-PC
-PC
-PC
-ON
-PC
-PC
-PC
-Rk
-FY
-wK
-WM
-IH
-IH
-IH
-Az
-ma
-IH
-uC
-EN
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+zl
+ey
+jg
+ie
+mQ
+ey
+FT
+FT
+FT
+vJ
+zB
+Aw
+Fa
+JG
+Mf
+vJ
+PY
+RE
+PY
+FT
+zl
+WX
+GK
+Iq
+xg
+WX
+zl
+zl
+zl
+zl
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (41,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
-hc
-PC
-PC
-PC
-PC
-PC
-PC
-PC
-PC
-PC
-PC
-PC
-PC
-PC
-EN
-ZR
-HP
-ZR
-IH
-IH
-Az
-jr
-IH
-Mm
-EN
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+zl
+ey
+ey
+ey
+ey
+ey
+FT
+FT
+FT
+vJ
+zF
+AV
+Ff
+AV
+Mn
+vJ
+PY
+RT
+PY
+FT
+zl
+WX
+Kc
+Iq
+IZ
+WX
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (42,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
-hc
-PC
-PC
-PC
-PC
-PC
-PC
-PC
-PC
-PC
-PC
-PC
-PC
-PC
-EN
-zf
-fp
-lH
-IH
-IH
-gQ
-IH
-IH
-UN
-EN
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+zl
+zl
+zl
+zl
+zl
+ey
+FT
+FT
+FT
+vJ
+zB
+Ba
+FA
+Kh
+Np
+vJ
+FT
+FT
+FT
+FT
+zl
+WX
+iF
+Ic
+jX
+WX
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (43,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
-hc
-hc
-hc
-hc
-hc
-hc
-hc
-SK
-hc
-hc
-hc
-hc
-hc
-hc
-EN
-EN
-EN
-EN
-LC
-EN
-EN
-EN
-EN
-EN
-EN
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+zl
+zl
+zl
+zl
+zl
+vJ
+vJ
+vJ
+FL
+Ku
+vJ
+vJ
+zl
+zl
+zl
+zl
+zl
+WX
+WX
+WX
+WX
+WX
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (44,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-EN
-nc
-pC
-sh
-EN
-dE
-dE
-dE
-dE
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+zl
+zl
+vJ
+Bz
+FM
+Kz
+vJ
+zl
+zl
+ZS
+ZS
+ZS
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (45,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-EN
-NC
-pC
-fA
-EN
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+zl
+vJ
+Ch
+FU
+Kz
+vJ
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (46,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-EN
-AU
-Vl
-ud
-EN
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+zl
+vJ
+CG
+FZ
+CG
+vJ
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (47,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-EN
-EN
-EN
-EN
-EN
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+zl
+vJ
+Dl
+Gh
+KO
+vJ
+zl
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (48,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-dE
-dE
-dE
-dE
-dE
-dE
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+zV
+DG
+GS
+Lb
+Ns
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (49,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (50,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (51,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (52,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (53,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (54,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (55,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (56,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (57,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (58,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (59,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}
 (60,1,1) = {"
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
-WT
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
+ZS
 "}

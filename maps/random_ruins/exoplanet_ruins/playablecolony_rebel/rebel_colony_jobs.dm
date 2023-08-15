@@ -9,6 +9,7 @@
 	total_positions = 3
 	outfit_type = /decl/hierarchy/outfit/job/rebel_colonist
 	is_semi_antagonist = TRUE
+	skill_points = 16
 	max_skill = list(
 		SKILL_BUREAUCRACY = SKILL_BASIC,
 		SKILL_FINANCE = SKILL_BASIC,
@@ -45,7 +46,7 @@
 	total_positions = 1
 	outfit_type = /decl/hierarchy/outfit/job/rebel_colonist/leader
 	is_semi_antagonist = TRUE
-	skill_points = 24
+	skill_points = 20
 	min_skill = list(
 		SKILL_HAULING = SKILL_TRAINED,
 		SKILL_COMBAT = SKILL_TRAINED,
