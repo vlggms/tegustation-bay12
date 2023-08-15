@@ -194,6 +194,9 @@
 	<br><br>---END OF TRANSMISSION---"
 
 /obj/effect/overmap/radio/proc/SetOrigin(obj/effect/overmap/origin)
+	// This check is usually obsolete, but oh well, unit tests...
+	if(!istype(origin))
+		return
 	GLOB.moved_event.register(origin, src, /obj/effect/overmap/radio/proc/Follow)
 	GLOB.destroyed_event.register(origin, src, /datum/proc/qdel_self)
 	forceMove(origin.loc)
