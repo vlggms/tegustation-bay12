@@ -39,7 +39,7 @@
 /obj/machinery/radio_beacon/Initialize()
 	. = ..()
 	if(start_with_distress)
-		ActivateDistress()
+		ActivateDistress(TRUE)
 
 /obj/machinery/radio_beacon/Destroy()
 	QDEL_NULL(signal)
@@ -135,8 +135,8 @@
 	update_use_power(POWER_USE_ACTIVE)
 	update_icon()
 
-/obj/machinery/radio_beacon/proc/ActivateDistress()
-	if(activation_cooldown > world.time)
+/obj/machinery/radio_beacon/proc/ActivateDistress(forced = FALSE)
+	if(!forced && activation_cooldown > world.time)
 		to_chat(usr, SPAN_WARNING("\The [src] cannot be used yet!"))
 		return
 
@@ -145,11 +145,11 @@
 	visible_message(SPAN_WARNING("\The [src] beeps urgently as it whirrs to life, sending out intermittent tones."))
 	playsound(src, 'sound/machines/sensors/newcontact.ogg', 50, TRUE)
 
-	log_and_message_admins("A distress beacon was activated in [get_area(src)] of [O.name].", usr, get_turf(src))
+	if(!forced) // Forced is usually map-loaded stuff
+		log_and_message_admins("A distress beacon was activated in [get_area(src)] of [O.name].", usr, get_turf(src))
+		activation_cooldown = world.time + activation_cooldown_time
 
 	emergency_signal = new()
-
-	activation_cooldown = world.time + activation_cooldown_time
 
 	emergency_signal.SetOrigin(O)
 
