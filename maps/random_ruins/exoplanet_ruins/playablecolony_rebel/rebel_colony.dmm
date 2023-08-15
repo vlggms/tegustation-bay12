@@ -2230,10 +2230,10 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/map_template/rebel_colony/command)
 "Qq" = (
-/obj/machinery/suit_storage_unit/command,
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
 	},
+/obj/machinery/suit_storage_unit/mining/alt,
 /turf/simulated/floor/tiled/techmaint,
 /area/map_template/rebel_colony/command)
 "Qz" = (
@@ -2330,10 +2330,10 @@
 /turf/simulated/floor/tiled/white,
 /area/map_template/rebel_colony/medbay)
 "Sr" = (
-/obj/machinery/suit_storage_unit/command,
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 5
 	},
+/obj/machinery/suit_storage_unit/mining/alt,
 /turf/simulated/floor/tiled/techmaint,
 /area/map_template/rebel_colony/command)
 "SC" = (
