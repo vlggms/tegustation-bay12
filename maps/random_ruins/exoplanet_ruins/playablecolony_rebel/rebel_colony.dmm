@@ -120,14 +120,14 @@
 	dir = 6;
 	icon_state = "techfloor_edges"
 	},
-/obj/item/ammo_magazine/proto_smg,
-/obj/item/ammo_magazine/proto_smg,
-/obj/item/ammo_magazine/proto_smg,
-/obj/item/ammo_magazine/proto_smg,
-/obj/item/ammo_magazine/proto_smg,
-/obj/item/ammo_magazine/proto_smg,
-/obj/item/ammo_magazine/proto_smg,
-/obj/item/ammo_magazine/proto_smg,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
+/obj/item/ammo_magazine/mil_rifle,
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/rebel_colony/security)
 "dQ" = (
@@ -205,6 +205,15 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/map_template/rebel_colony/medbay)
+"fN" = (
+/obj/machinery/door/airlock/glass/civilian,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/map_template/rebel_colony/commons)
 "fV" = (
 /obj/structure/closet/secure_closet/freezer/meat,
 /turf/simulated/floor/tiled/freezer,
@@ -309,6 +318,17 @@
 /obj/machinery/computer/modular/preset/security,
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/rebel_colony/command)
+"if" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/engineering)
 "iq" = (
 /obj/structure/flora/pottedplant/subterranean,
 /turf/simulated/floor/carpet/orange,
@@ -646,6 +666,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/rebel_colony/security)
+"ps" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/rebel_colony/commons)
 "pv" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /obj/item/material/shard,
@@ -976,6 +1004,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/map_template/rebel_colony/commons)
+"CD" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/map_template/rebel_colony/commons)
 "CL" = (
 /obj/structure/table/steel_reinforced,
 /obj/effect/floor_decal/techfloor{
@@ -1044,8 +1080,8 @@
 	dir = 10;
 	icon_state = "techfloor_edges"
 	},
-/obj/item/gun/projectile/automatic/semistrip,
-/obj/item/gun/projectile/automatic/semistrip,
+/obj/item/gun/projectile/automatic/battlerifle,
+/obj/item/gun/projectile/automatic/battlerifle,
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/rebel_colony/security)
 "EN" = (
@@ -1132,6 +1168,10 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/map_template/rebel_colony/commons)
 "IF" = (
@@ -1201,6 +1241,14 @@
 /obj/structure/closet/secure_closet/freezer/fridge,
 /turf/simulated/floor/tiled/freezer,
 /area/map_template/rebel_colony/messhall)
+"Jy" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/rebel_colony/commons)
 "JB" = (
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/dark,
@@ -1436,6 +1484,23 @@
 /obj/effect/decal/cleanable/blood/drip,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/map_template/rebel_colony/security)
+"Pu" = (
+/obj/machinery/power/smes/buildable/max_cap_in_out,
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2";
+	pixel_y = 0
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/rebel_colony/engineering)
 "Px" = (
 /turf/simulated/wall/r_wall,
 /area/map_template/rebel_colony/engineering)
@@ -1477,6 +1542,19 @@
 	},
 /turf/simulated/floor/tiled,
 /area/map_template/rebel_colony/commons)
+"RF" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/commons)
 "RG" = (
 /obj/structure/table/standard,
 /obj/machinery/door/window/brigdoor/southleft,
@@ -1504,6 +1582,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/map_template/rebel_colony/engineering)
+"SK" = (
+/obj/machinery/door/airlock/glass/civilian,
+/turf/simulated/floor/tiled,
+/area/map_template/rebel_colony/commons)
 "Tj" = (
 /turf/simulated/floor/tiled/techmaint,
 /area/map_template/rebel_colony/command)
@@ -1511,6 +1593,14 @@
 /obj/structure/flora/pottedplant/tropical,
 /turf/simulated/floor/carpet/blue2,
 /area/map_template/rebel_colony/command)
+"Tu" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/rebel_colony/commons)
 "UN" = (
 /obj/machinery/reagentgrinder,
 /obj/item/stack/material/phoron/ten,
@@ -3482,7 +3572,7 @@ WT
 dE
 Px
 pl
-aa
+Pu
 aa
 lu
 qp
@@ -3792,7 +3882,7 @@ WT
 dE
 Px
 jz
-aW
+if
 EB
 hc
 PC
@@ -3863,13 +3953,13 @@ PC
 bZ
 Lt
 Wj
-Wj
-Wj
-Lt
-bZ
-PC
-PC
-ub
+Tu
+ps
+CD
+fN
+Hu
+Hu
+RF
 bz
 ZK
 ZK
@@ -3925,7 +4015,7 @@ PC
 hc
 Lt
 Wj
-Wj
+Jy
 Wj
 Lt
 hc
@@ -4297,7 +4387,7 @@ hc
 hc
 hc
 hc
-hc
+SK
 hc
 hc
 hc
