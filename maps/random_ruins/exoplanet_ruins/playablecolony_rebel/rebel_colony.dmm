@@ -432,7 +432,7 @@
 /area/map_template/rebel_colony/command)
 "jL" = (
 /obj/structure/closet/secure_closet{
-	req_access = list(ACCESS_REBELCOLONY_COMMAND)
+	req_access = list("ACCESS_REBELCOLONY_COMMAND")
 	},
 /obj/item/card/id/rebel_colony,
 /obj/item/card/id/rebel_colony,
@@ -513,7 +513,7 @@
 /area/map_template/rebel_colony/medbay)
 "mb" = (
 /obj/structure/closet/secure_closet{
-	req_access = list(ACCESS_REBELCOLONY_COMMAND)
+	req_access = list("ACCESS_REBELCOLONY_COMMAND")
 	},
 /turf/simulated/floor/carpet/orange,
 /area/map_template/rebel_colony/command)
@@ -581,7 +581,7 @@
 /area/map_template/rebel_colony/command)
 "of" = (
 /obj/structure/closet/secure_closet{
-	req_access = list(ACCESS_REBELCOLONY_COMMAND)
+	req_access = list("ACCESS_REBELCOLONY_COMMAND")
 	},
 /obj/item/clothing/head/beret/sec/navy/hos,
 /obj/item/clothing/suit/armor/hos,
@@ -1575,7 +1575,7 @@
 /area/space)
 "WV" = (
 /obj/structure/closet/secure_closet{
-	req_access = list(ACCESS_REBELCOLONY_COMMAND)
+	req_access = list("ACCESS_REBELCOLONY_COMMAND")
 	},
 /obj/item/clothing/head/caphat/formal,
 /obj/item/clothing/head/caphat/cap,
