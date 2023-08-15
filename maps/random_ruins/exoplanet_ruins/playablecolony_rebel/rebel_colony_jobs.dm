@@ -116,7 +116,6 @@
 /decl/hierarchy/outfit/job/rebel_colonist
 	name = OUTFIT_JOB_NAME("Rebel Colonist")
 	id_pda_assignment = "Colonist"
-	hierarchy_type = /decl/hierarchy/outfit/job/rebel_colonist
 	id_types = list(/obj/item/card/id/rebel_colony/security)
 	pda_type = null
 	l_ear = /obj/item/device/radio/headset/map_preset/playablecolony
@@ -131,7 +130,6 @@
 /decl/hierarchy/outfit/job/rebel_hostage
 	name = OUTFIT_JOB_NAME("Rebel Colony Hostage")
 	id_pda_assignment = "Command Advisor"
-	hierarchy_type = /decl/hierarchy/outfit/job/rebel_hostage
 	id_types = null
 	pda_type = null
 	uniform = /obj/item/clothing/under/suit_jacket/corp/nanotrasen
