@@ -6,12 +6,11 @@
 /obj/effect/fusion_em_field
 	name = "electromagnetic field"
 	desc = "A coruscating, barely visible field of energy. It is shaped like a slightly flattened torus."
-	icon = 'icons/obj/machines/power/fusion.dmi'
-	icon_state = "emfield_s1"
 	alpha = 30
 	layer = 4
 	light_color = COLOR_RED
-	color = COLOR_RED
+	plane = EFFECTS_ABOVE_LIGHTING_PLANE
+	particles = new /particles/fusion
 
 	var/size = 1
 	var/energy = 0
@@ -39,9 +38,16 @@
 
 	var/last_range
 	var/last_power
+	var/last_reactants = 0
+
+	var/animating_ripple = FALSE
 
 /obj/effect/fusion_em_field/New(loc, var/obj/machinery/power/fusion_core/new_owned_core)
 	..()
+
+	filters = list(filter(type = "ripple", size = 4, "radius" = 1, "falloff" = 1)
+	, filter(type="outline", size = 2, color =  COLOR_RED)
+	, filter(type="bloom", size=3, offset = 0.5, alpha = 235))
 
 	set_light(light_min_power, light_min_range / 10, light_min_range)
 	last_range = light_min_range
@@ -50,8 +56,12 @@
 	owned_core = new_owned_core
 	if(!owned_core)
 		qdel(src)
+		return
 
-	//create the gimmicky things to handle field collisions
+	// Turn off particles until something calls for it
+	particles.spawning = 0
+
+	// Create the gimmicky things to handle field collisions
 	var/obj/effect/fusion_particle_catcher/catcher
 
 	catcher = new (locate(src.x,src.y,src.z))
@@ -85,6 +95,16 @@
 /obj/effect/fusion_em_field/Initialize()
 	. = ..()
 	addtimer(CALLBACK(src, .proc/update_light_colors), 10 SECONDS, TIMER_LOOP)
+
+/obj/effect/fusion_em_field/Destroy()
+	set_light(0)
+	RadiateAll()
+	QDEL_NULL_LIST(particle_catchers)
+	if(owned_core)
+		owned_core.owned_field = null
+		owned_core = null
+	STOP_PROCESSING(SSobj, src)
+	. = ..()
 
 /obj/effect/fusion_em_field/proc/update_light_colors()
 	var/use_range
@@ -476,20 +496,24 @@
 		for(var/reactant in react_pool)
 			AddParticles(reactant, react_pool[reactant])
 
-/obj/effect/fusion_em_field/Destroy()
-	set_light(0)
-	RadiateAll()
-	QDEL_NULL_LIST(particle_catchers)
-	if(owned_core)
-		owned_core.owned_field = null
-		owned_core = null
-	STOP_PROCESSING(SSobj, src)
-	. = ..()
-
 /obj/effect/fusion_em_field/bullet_act(var/obj/item/projectile/Proj)
 	AddEnergy(Proj.damage)
 	update_icon()
 	return 0
+
+/obj/effect/fusion_em_field/proc/UpdateVisuals()
+	//Take the particle system and edit it
+
+	//size
+	var/radius = ((size-1) / 2) * WORLD_ICON_SIZE
+
+	particles.position = generator("circle", radius - size, radius + size, NORMAL_RAND)
+
+	//Radiation affects drift
+	var/radiationfactor = clamp((radiation * 0.001), 0, 0.5)
+	particles.drift = generator("circle", (0.2 + radiationfactor), NORMAL_RAND)
+
+	particles.spawning = last_reactants * 0.9 + Interpolate(0, 200, clamp(plasma_temperature / 70000, 0, 1))
 
 #undef FUSION_INSTABILITY_DIVISOR
 #undef FUSION_RUPTURE_THRESHOLD
