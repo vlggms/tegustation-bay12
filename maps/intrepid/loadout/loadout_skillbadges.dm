@@ -12,7 +12,7 @@
 /datum/gear/skill/medical_trained
 	display_name = "Advanced First Aid Training badge"
 	path = /obj/item/clothing/accessory/terragov/skillbadge/medical/advanced
-	allowed_skills = list(SKILL_MEDICAL = SKILL_BASIC)
+	allowed_skills = list(SKILL_MEDICAL = SKILL_TRAINED)
 
 // Misc
 /datum/gear/skill/mech
