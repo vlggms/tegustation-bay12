@@ -439,32 +439,32 @@
 			ore.Move(ore_box)
 
 /obj/item/mech_equipment/drill/afterattack(atom/target, mob/living/user, inrange, params)
-	if (!..()) // /obj/item/mech_equipment/afterattack implements a usage guard
+	if(!..()) // /obj/item/mech_equipment/afterattack implements a usage guard
 		return
 
-	if (istype(target, /obj/item/material/drill_head))
+	if(istype(target, /obj/item/material/drill_head))
 		attach_head(target, user)
 		return
 
-	if (!drill_head)
+	if(!drill_head)
 		to_chat(user, SPAN_WARNING("\The [src] doesn't have a head!"))
 		return
 
-	if (ismob(target))
+	if(ismob(target))
 		var/mob/tmob = target
-		if (tmob.unacidable)
+		if(tmob.unacidable)
 			to_chat(user, SPAN_WARNING("\The [target] can't be drilled away."))
 			return
 		else
 			to_chat(tmob, FONT_HUGE(SPAN_DANGER("You're about to get drilled - dodge!")))
 
-	else if (isobj(target))
+	else if(isobj(target))
 		var/obj/tobj = target
-		if (tobj.unacidable)
+		if(tobj.unacidable)
 			to_chat(user, SPAN_WARNING("\The [target] can't be drilled away."))
 			return
 
-	else if (istype(target, /turf/unsimulated))
+	else if(istype(target, /turf/unsimulated))
 		to_chat(user, SPAN_WARNING("\The [target] can't be drilled away."))
 		return
 
@@ -472,7 +472,7 @@
 	mech_cell.use(active_power_use * CELLRATE) //supercall made sure we have one
 
 	var/delay = 3 SECONDS //most things
-	switch (drill_head.material.brute_armor)
+	switch(drill_head.material.brute_armor)
 		if (15 to INFINITY) delay = 0.5 SECONDS //voxalloy on a good roll
 		if (10 to 15) delay = 1 SECOND //titanium, diamond
 		if (5 to 10) delay = 2 SECONDS //plasteel, steel
@@ -484,13 +484,26 @@
 		blind_message = SPAN_WARNING("You hear a large motor whirring.")
 	)
 
-	if (!do_after(owner, delay, target, DO_DEFAULT & ~DO_USER_CAN_TURN))
+	var/obj/particle_emitter/sparks/EM
+	if(istype(target, /turf/simulated/mineral))
+		EM = new/obj/particle_emitter/sparks/debris(get_turf(target), delay, target.color)
+	else
+		EM = new(get_turf(target), delay)
+
+	EM.set_dir(reverse_direction(owner.dir))
+
+	if(!do_after(owner, delay, target, DO_DEFAULT & ~DO_USER_CAN_TURN))
+		if(EM)
+			EM.particles.spawning = FALSE
 		return
 
-	if (src != owner.selected_system)
+	if(EM)
+		EM.particles.spawning = FALSE
+
+	if(src != owner.selected_system)
 		to_chat(user, SPAN_WARNING("You must keep \the [src] selected to use it."))
 		return
-	if (drill_head.durability <= 0)
+	if(drill_head.durability <= 0)
 		drill_head.shatter()
 		drill_head = null
 		return
