@@ -34,13 +34,7 @@
 	return TRUE
 
 /obj/item/clothing/attackby(obj/item/I, mob/user)
-	if (istype(I, /obj/item/clothing/accessory))
-		if (can_attach_accessory(I, user) && user.unEquip(I))
-			attach_accessory(user, I)
-		return
-	if (length(accessories))
-		for (var/obj/item/clothing/accessory/A in accessories)
-			A.attackby(I, user)
+	if(attempt_attach_accessory(I, user))
 		return
 	..()
 
@@ -110,6 +104,18 @@
 		src.verbs |= /obj/item/clothing/proc/removetie_verb
 	update_accessory_slowdown()
 	update_clothing_icon()
+
+/obj/item/clothing/proc/attempt_attach_accessory(obj/item/I, mob/user)
+	if (!istype(I, /obj/item/clothing/accessory))
+		return FALSE
+	if (can_attach_accessory(I, user) && user.unEquip(I))
+		attach_accessory(user, I)
+		return TRUE
+	if (length(accessories))
+		for (var/obj/item/clothing/accessory/A in accessories)
+			if (A.attempt_attach_accessory(I, user))
+				return TRUE
+	return FALSE
 
 /obj/item/clothing/proc/remove_accessory(mob/user, obj/item/clothing/accessory/A)
 	if(!A || !(A in accessories))
