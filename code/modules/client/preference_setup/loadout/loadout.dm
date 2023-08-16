@@ -237,12 +237,13 @@ var/list/gear_datums = list()
 
 			entry += "[english_list(skill_checks)]</i>"
 
-		if(allowed && G.minimum_character_age)
+		if(allowed && LAZYLEN(G.minimum_character_age))
 			var/datum/species/S = all_species[pref.species]
 			var/min_age = G.minimum_character_age[S.get_bodytype()]
 			if(LAZYACCESS(G.minimum_character_age, S.get_bodytype()) && (pref.age < min_age))
 				allowed = FALSE
 
+			entry += "<br><i>"
 			if(allowed)
 				entry += "<font color=55cc55>Character's age higher than [min_age].</font>"
 			else
