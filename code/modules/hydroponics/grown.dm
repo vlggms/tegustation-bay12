@@ -157,9 +157,7 @@
 			playsound(src.loc, 'sound/misc/slip.ogg', 50, 1, -3)
 			M.Weaken(3)
 			seed.thrown_at(src,M)
-			sleep(-1)
-			if(src) qdel(src)
-			return
+			qdel(src)
 
 /obj/item/reagent_containers/food/snacks/grown/throw_impact(atom/hit_atom)
 	if(seed) seed.thrown_at(src,hit_atom)
