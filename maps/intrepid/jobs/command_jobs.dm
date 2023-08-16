@@ -468,6 +468,6 @@
 			<br><hr><br>\
 			You are psionically awakened, and you are the first and only exposure most of the crew will \
 			have to the mentally gifted. Your main responsibility is advising the Commanding Officer on \
-			psionic matters, and helping freshly awakened psions discover and control their abilities, and \
-			overseeing them, or suppress it if they wish to do so. You must report any violent psions to the \
+			psionic matters, helping freshly awakened psions discover and control their abilities, and \
+			overseeing them, or suppressing it if they wish to do so. You must report any violent psions to the \
 			appropriate personnel to take care of them. Avoid direct confrontation with them as much as possible."

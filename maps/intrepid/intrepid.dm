@@ -51,6 +51,7 @@
 	#include "items/clothing/terragov-accessory.dm"
 	#include "items/clothing/terragov-armor.dm"
 	#include "items/clothing/terragov-head.dm"
+	#include "items/clothing/terragov-skillbadges.dm"
 	#include "items/clothing/terragov-suit.dm"
 	#include "items/clothing/terragov-under.dm"
 
@@ -79,7 +80,10 @@
 
 	#include "loadout/_defines.dm"
 	#include "loadout/loadout_accessories.dm"
+	#include "loadout/loadout_eyes.dm"
+	#include "loadout/loadout_medals.dm"
 	#include "loadout/loadout_misc.dm"
+	#include "loadout/loadout_skillbadges.dm"
 	#include "loadout/loadout_xeno.dm"
 	#include "loadout/~defines.dm"
 

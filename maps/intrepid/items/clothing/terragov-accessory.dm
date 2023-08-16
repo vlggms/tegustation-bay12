@@ -15,58 +15,81 @@ medals
 
 /obj/item/clothing/accessory/medal/terragov/iron/star
 	name = "iron star medal"
-	desc = "An iron star awarded to members of the TG for meritorious achievement or service in a combat zone."
+	desc = "An iron star awarded to members of the TerraGov for meritorious achievement or service in a combat zone."
 	icon_state = "iron_star"
 
 /obj/item/clothing/accessory/medal/terragov/iron/terra
 	name = "\improper Terran expeditionary medal"
-	desc = "An iron medal awarded to members of the TG for service outside of the borders of the Terran Government."
+	desc = "An iron medal awarded to members of the TerraGov for service outside of the borders of the Terran Government."
 	icon_state = "iron_sol"
 
 /obj/item/clothing/accessory/medal/terragov/bronze/heart
 	name = "bronze heart medal"
-	desc = "A bronze heart awarded to members of the TG for injury or death in the line of duty."
+	desc = "A bronze heart awarded to members of the TerraGov for injury or death in the line of duty."
 	icon_state = "bronze_heart"
 
 /obj/item/clothing/accessory/medal/terragov/bronze/terra
 	name = "\improper Terran defensive operations medal"
-	desc = "A bronze medal awarded for members of the TG for service defending the border regions."
+	desc = "A bronze medal awarded for members of the TerraGov for service defending the border regions."
 	icon_state = "bronze_sol"
 
 /obj/item/clothing/accessory/medal/terragov/silver/sword
 	name = "combat action medal"
-	desc = "A silver medal awarded to members of the TG for honorable service while under enemy fire."
+	desc = "A silver medal awarded to members of the TerraGov for honorable service while under enemy fire."
 	icon_state = "silver_sword"
 
 /obj/item/clothing/accessory/medal/terragov/silver/terra
 	name = "\improper Terran valor medal"
-	desc = "A silver medal awarded for members of the TG for acts of exceptional valor."
+	desc = "A silver medal awarded for members of the TerraGov for acts of exceptional valor."
 	icon_state = "silver_sol"
 
 /obj/item/clothing/accessory/medal/terragov/gold/star
 	name = "gold star medal"
-	desc = "A gold star awarded to members of the TG for acts of heroism in a combat zone."
+	desc = "A gold star awarded to members of the TerraGov for acts of heroism in a combat zone."
 	icon_state = "gold_star"
 
+/obj/item/clothing/accessory/medal/terragov/gold/star/terran_independence
+	name = "Terran Independence medal"
+	desc = "A gold star awarded to Terran veterans of Imperial Dissolution war during the early days of TerraGov for unquestionable loyalty and outstanding combat performance against pro-imperial forces."
+
+/obj/item/clothing/accessory/medal/terragov/gold/sword
+	name = "gold sword medal"
+	desc = "A gold medal awarded to members of the TerraGov for outstanding combat performance."
+	icon_state = "gold_sword"
+
+/obj/item/clothing/accessory/medal/terragov/gold/sword/isc_attack
+	name = "Confederation front service medal"
+	desc = "A gold medal awarded to Terran veterans of Imperial Dissolution war for outstanding combat performance in capturing independent colonies and subsequent defense against Independent Space Confederation."
+
 /obj/item/clothing/accessory/medal/terragov/gold/sun
-	name = "solar service medal"
-	desc = "A gold medal awarded to members of the TG by the Secretary General for significant contributions to the Terran Government."
+	name = "\improper Terran service medal"
+	desc = "A gold medal awarded to members of the TerraGov by the Secretary General for significant contributions to the Terran Government."
 	icon_state = "gold_sun"
 
+/obj/item/clothing/accessory/medal/terragov/gold/sun/sol_defense
+	name = "Sol front service medal"
+	desc = "A gold medal awarded to Terran veterans of Imperial Dissolution war who participated in defense of Terran sectors against SCG's most aggressive attacks."
+
 /obj/item/clothing/accessory/medal/terragov/gold/crest
-	name = "solar honor medal"
+	name = "gold crest medal"
 	desc = "A gold medal awarded to members of the Defense Forces by the Secretary General for personal acts of valor and heroism above and beyond the call of duty."
 	icon_state = "gold_crest"
 
 /obj/item/clothing/accessory/medal/terragov/gold/terra
-	name = "\improper Terran sapientarian medal"
-	desc = "A gold medal awarded for members of the TG for significant contributions to sapient rights."
+	name = "\improper Terran gold medal"
+	desc = "A gold medal awarded for members of the TerraGov for significant contributions to the betterment of humanity."
 	icon_state = "gold_sol"
 
 /obj/item/clothing/accessory/medal/terragov/heart
 	name = "medical medal"
-	desc = "A white heart emblazoned with a red cross awarded to members of the TG for service as a medical professional in a combat zone."
+	desc = "A white heart emblazoned with a red cross awarded to members of the TerraGov for service as a medical professional in a combat zone."
 	icon_state = "white_heart"
+
+// ISC medals
+/obj/item/clothing/accessory/medal/terragov/silver/isc
+	name = "alliance medal"
+	desc = "A silver medal issued to citizens and military personnel of Independent Space Confederation for actions aimed towards uniting the member states."
+	icon_state = "silver_isc"
 
 /obj/item/clothing/accessory/terragov
 	var/check_codex_val = FACTION_FLEET
