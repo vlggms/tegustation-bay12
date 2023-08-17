@@ -60,5 +60,4 @@
 		list(/proc/is_not_space_area),
 		list(/proc/not_turf_contains_dense_objects, /proc/IsTurfAtmosSafe),
 		zlevels[1])
-	)
 	do_teleport(target, T)

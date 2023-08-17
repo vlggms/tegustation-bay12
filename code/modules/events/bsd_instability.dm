@@ -76,9 +76,9 @@
 				z_level = pick(affecting_z)
 			)
 			var/effect_state = pick("cyan_sparkles", "blue_electricity_constant", "shieldsparkles", "empdisabled")
-			var/obj/effect/temporary/temp_effect = new (turf, 1 SECONDS, 'icons/effects/effects.dmi', effect_state)
+			var/obj/effect/temp_visual/temporary/temp_effect = new (turf, 1 SECONDS, 'icons/effects/effects.dmi', effect_state)
 			temp_effect.set_light(1, 1, 2, 3, COLOR_CYAN_BLUE)
-			if(prob(mob_spawn_chance) && length(mobs) < maximum_mobs && !turf.is_dense())
+			if(prob(mob_spawn_chance) && length(mobs) < maximum_mobs && !turf.density)
 				turf.visible_message(SPAN_DANGER("A sudden burst of energy gives birth to some sort of ghost-like entity!"))
 				playsound(turf, "sound/effects/supermatter.ogg", 75, TRUE)
 				var/mob/living/simple_animal/hostile/bluespace/bluespace_ghost = new (turf)
@@ -91,7 +91,7 @@
 		zlevels = affecting_z
 	)
 	for(var/obj/machinery/bluespacedrive/drive in drives)
-		addtimer(new Callback(drive, /obj/machinery/bluespacedrive/proc/do_pulse), 20 SECONDS)
+		addtimer(CALLBACK(drive, /obj/machinery/bluespacedrive/proc/do_pulse), 20 SECONDS)
 	for(var/mob/mob in GLOB.player_list)
 		if(istype(mob, /mob/new_player))
 			continue
@@ -110,7 +110,7 @@
 		drive.set_light(1, 5, 15, 10, COLOR_CYAN)
 		for(var/turf/simulated/floor/floor in range(turf_conversion_range, drive))
 			if(istype(floor.flooring, /decl/flooring/bluespace))
-				floor.set_flooring(GET_DECL(initial(floor.flooring)))
+				floor.set_flooring(decls_repository.get_decl(initial(floor.flooring)))
 	for(var/obj/structure/stairs/stair in stairs)
 		stair.bluespace_affected = FALSE
 	for(var/obj/structure/ladder/ladder in ladders)

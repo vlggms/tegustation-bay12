@@ -148,7 +148,7 @@
 		else
 			to_chat(user, SPAN_DANGER("Its unstable field is cracking and shifting dangerously, revealing the core inside briefly!"))
 
-	if (instability_event_active && !damage_percentage)
+	if(instability_event_active)
 		to_chat(user, SPAN_WARNING("The core seems to be pulsing and lashing out at the contaiment field, as if trying to break free."))
 
 
@@ -176,7 +176,6 @@
 		living.ear_deaf = max(living.ear_deaf, 15)
 	if(!change_turf)
 		return
-	var/deck/flooring/bluespace/bluespace = GET_DECL(/decl/flooring/bluespace)
 	for(var/turf/simulated/floor/floor in range(range, src))
 		if(prob(25))
 			continue
@@ -205,10 +204,10 @@
 	..()
 	START_PROCESSING(SSfastprocess, src)
 	var/list/zlevels = GetConnectedZlevels(z)
-	for (var/mob/living/L as anything in GLOB.alive_mobs)
-		if (!(L.z in zlevels))
+	for(var/mob/living/L as anything in GLOB.living_mob_list_)
+		if(!(L.z in zlevels))
 			continue
-		if (istype(L, /mob/living/exosuit))
+		if(istype(L, /mob/living/exosuit))
 			continue
 		mobs_to_switch += L
 
@@ -229,7 +228,7 @@
 	if (TICK_CHECK)
 		return TRUE
 	if (radius <= 20)
-		new /obj/effect/temporary (turf, 0.2 SECONDS, 'icons/effects/effects.dmi', "cyan_sparkles")
+		new /obj/effect/temp_visual/temporary (turf, 0.2 SECONDS, 'icons/effects/effects.dmi', "cyan_sparkles")
 	var/obj/machinery/light/light = locate() in turf
 	if (light && prob(20))
 		light.broken()
