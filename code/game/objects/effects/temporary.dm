@@ -116,7 +116,7 @@
 	layer = 4
 	duration = 3 SECONDS
 
-/obj/effect/ftl/temp_visual/Initialize()
+/obj/effect/temp_visual/ftl/Initialize()
 	. = ..()
 	var/matrix/M1 = matrix()
 	M1.Scale(2, 2)

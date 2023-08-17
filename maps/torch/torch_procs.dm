@@ -76,6 +76,6 @@
 
 /datum/map/torch/ship_jump()
 	for(var/obj/effect/overmap/visitable/ship/torch/torch)
-		new /obj/effect/ftl (get_turf(torch))
+		new /obj/effect/temp_visual/ftl (get_turf(torch))
 		animate(torch, alpha = 0, color = COLOR_BLUE, time = 1 SECONDS)
 		QDEL_IN(torch, (1 SECONDS))
