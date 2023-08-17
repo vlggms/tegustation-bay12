@@ -239,3 +239,8 @@
 	breathed_product = /datum/reagent/carbon_monoxide
 	symbol_html = "CO"
 	symbol = "CO"
+
+/decl/xgm_gas/heat
+	id = GAS_HEAT
+	name = "heat"
+	tile_color = COLOR_WHITE
