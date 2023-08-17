@@ -82,7 +82,12 @@
 	icon_state = "dark"
 	plane = OPENTURF_MAX_PLANE
 	layer = MIMICED_LIGHTING_LAYER
-	color = "#0000004b"
+	blend_mode = BLEND_MULTIPLY
+	color = list(
+		SHADOWER_DARKENING_FACTOR, 0, 0,
+		0, SHADOWER_DARKENING_FACTOR, 0,
+		0, 0, SHADOWER_DARKENING_FACTOR
+	)
 
 /atom/movable/openspace/multiplier/Destroy()
 	var/turf/myturf = loc
@@ -140,7 +145,7 @@
 	plane = OPENTURF_MAX_PLANE
 	var/atom/movable/associated_atom
 	var/depth
-	var/queued = FALSE
+	var/queued = 0
 	var/destruction_timer
 	var/mimiced_type
 	var/original_z

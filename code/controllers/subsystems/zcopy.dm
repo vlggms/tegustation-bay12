@@ -164,7 +164,7 @@ SUBSYSTEM_DEF(zcopy)
 			if (no_mc_tick)
 				CHECK_TICK
 			else if (MC_TICK_CHECK)
-				return
+				break
 			continue
 
 		if (!T.shadower)	// If we don't have a shadower yet, something has gone horribly wrong.
@@ -341,7 +341,7 @@ SUBSYSTEM_DEF(zcopy)
 		OO.plane = OPENTURF_MAX_PLANE - OO.depth
 
 		OO.opacity = FALSE
-		OO.queued = FALSE
+		OO.queued = 0
 
 		if (OO.bound_overlay)	// If we have a bound overlay, queue it too.
 			OO.update_above()
