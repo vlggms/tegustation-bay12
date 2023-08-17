@@ -73,3 +73,9 @@
 		desc += "There were <b>no survivors</b>, <b>[offship_players] off-ship players</b>, (<b>[ghosts] ghosts</b>)."
 
 	return desc
+
+/datum/map/torch/ship_jump()
+	for(var/obj/effect/overmap/visitable/ship/torch/torch)
+		new /obj/effect/ftl (get_turf(torch))
+		animate(torch, alpha = 0, color = COLOR_BLUE, time = 1 SECONDS)
+		QDEL_IN(torch, (1 SECONDS))
