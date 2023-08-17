@@ -397,7 +397,7 @@ SUBSYSTEM_DEF(jobs)
 					permitted = 0
 
 				if(!permitted)
-					to_chat(H, "<span class='warning'>Your current species, job, branch, skills or whitelist status does not permit you to spawn with [thing]!</span>")
+					to_chat(H, "<span class='warning'>Your current species, job, branch, skills, age or whitelist status does not permit you to spawn with [thing]!</span>")
 					continue
 
 				if(!G.slot || G.slot == slot_tie || (G.slot in loadout_taken_slots) || !G.spawn_on_mob(H, H.client.prefs.Gear()[G.display_name]))
