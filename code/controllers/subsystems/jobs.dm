@@ -388,6 +388,11 @@ SUBSYSTEM_DEF(jobs)
 						if(!H.skill_check(required,G.allowed_skills[required]))
 							permitted = 0
 
+				if(permitted && LAZYLEN(G.minimum_character_age))
+					var/min_age = G.minimum_character_age[H.species.get_bodytype()]
+					if(LAZYACCESS(G.minimum_character_age, H.species.get_bodytype()) && (H.age < min_age))
+						permitted = FALSE
+
 				if(G.whitelisted && (!(H.species.name in G.whitelisted)))
 					permitted = 0
 
