@@ -13,7 +13,6 @@
 	screen_loc = "CENTER"
 	plane = LOWEST_PLANE
 	blend_mode = BLEND_OVERLAY
-	mouse_opacity = MOUSE_OPACITY_UNCLICKABLE
 
 	/// The compositing renderer this renderer belongs to.
 	var/group = RENDER_GROUP_FINAL
@@ -123,6 +122,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/renderer)
 	appearance_flags = PLANE_MASTER | NO_CLIENT_COLOR
 	blend_mode = BLEND_MULTIPLY
 	color = list(null, null, null, "#0000", "#000f")
+	mouse_opacity = MOUSE_OPACITY_UNCLICKABLE
 
 
 /atom/movable/renderer/space
@@ -163,7 +163,6 @@ GLOBAL_LIST_EMPTY(zmimic_renderers)
 	name = "Game"
 	group = RENDER_GROUP_SCENE
 	plane = DEFAULT_PLANE
-	mouse_opacity = MOUSE_OPACITY_NORMAL
 
 
 /// Draws observers; ghosts, camera eyes, etc.
@@ -171,7 +170,6 @@ GLOBAL_LIST_EMPTY(zmimic_renderers)
 	name = "Observers"
 	group = RENDER_GROUP_SCENE
 	plane = OBSERVER_PLANE
-	mouse_opacity = MOUSE_OPACITY_NORMAL
 
 
 /// Draws darkness effects.
@@ -188,6 +186,7 @@ GLOBAL_LIST_EMPTY(zmimic_renderers)
 		 0,  0,  0,  0, // A
 		 1,  1,  1,  1  // Mapping
 	)
+	mouse_opacity = MOUSE_OPACITY_UNCLICKABLE
 
 
 /// Draws visuals that should not be affected by darkness.
@@ -202,6 +201,7 @@ GLOBAL_LIST_EMPTY(zmimic_renderers)
 	name = "Screen Effects"
 	group = RENDER_GROUP_SCENE
 	plane = FULLSCREEN_PLANE
+	mouse_opacity = MOUSE_OPACITY_UNCLICKABLE
 
 
 /// Draws user interface elements.
@@ -209,7 +209,6 @@ GLOBAL_LIST_EMPTY(zmimic_renderers)
 	name = "Interface"
 	group = RENDER_GROUP_SCREEN
 	plane = HUD_PLANE
-	mouse_opacity = MOUSE_OPACITY_NORMAL
 
 
 /* *
@@ -227,7 +226,6 @@ GLOBAL_LIST_EMPTY(zmimic_renderers)
 	name = "Scene Group"
 	group = RENDER_GROUP_FINAL
 	plane = RENDER_GROUP_SCENE
-	mouse_opacity = MOUSE_OPACITY_NORMAL
 
 
 /// Render group for stuff OUTSIDE the typical game context - UI, full screen effects, etc.
@@ -235,7 +233,6 @@ GLOBAL_LIST_EMPTY(zmimic_renderers)
 	name = "Screen Group"
 	group = RENDER_GROUP_FINAL
 	plane = RENDER_GROUP_SCREEN
-	mouse_opacity = MOUSE_OPACITY_NORMAL
 
 
 /// Render group for final compositing before user display.
@@ -243,7 +240,6 @@ GLOBAL_LIST_EMPTY(zmimic_renderers)
 	name = "Final Group"
 	group = RENDER_GROUP_NONE
 	plane = RENDER_GROUP_FINAL
-	mouse_opacity = MOUSE_OPACITY_NORMAL
 
 
 /* *
@@ -262,6 +258,7 @@ GLOBAL_LIST_EMPTY(zmimic_renderers)
 	group = RENDER_GROUP_NONE
 	plane = WARP_EFFECT_PLANE
 	render_target_name = "*warp"
+	mouse_opacity = MOUSE_OPACITY_UNCLICKABLE
 
 
 /// Adds the warp effect to the game rendering group
