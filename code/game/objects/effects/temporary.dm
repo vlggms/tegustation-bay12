@@ -106,3 +106,23 @@
 	pixel_x = rand(-12, 12)
 	pixel_y = rand(0, 16)
 	animate(src, alpha = 0, pixel_x = pixel_x + rand(-6, 6), pixel_y = pixel_y + 12, duration, easing = EASE_IN)
+
+/obj/effect/temp_visual/ftl
+	icon = 'icons/obj/singularity.dmi'
+	icon_state = "singularity_s1"
+	blend_mode = BLEND_MULTIPLY
+	mouse_opacity = 0
+	alpha = 0
+	layer = 4
+	duration = 3 SECONDS
+
+/obj/effect/temp_visual/ftl/Initialize()
+	. = ..()
+	var/matrix/M1 = matrix()
+	M1.Scale(2, 2)
+	transform.Scale(0, 0)
+	var/matrix/M2 = transform
+	filters += filter(type="blur", size = 2)
+	animate(src, transform = M1, alpha = 192, time = 0.5 SECONDS)
+	animate(time = 2 SECONDS)
+	animate(transform = M2, alpha = 0, time = 0.5 SECONDS)

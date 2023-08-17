@@ -9,12 +9,6 @@ GLOBAL_LIST_INIT(bitflags, list(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 204
 #define DF_ISPROCESSING (1<<2)
 
 // Flag Utils
-#define GET_FLAGS(field, mask)      ((field) & (mask))
-#define HAS_FLAGS(field, mask)      (((field) & (mask)) == (mask))
-#define SET_FLAGS(field, mask)      ((field) |= (mask))
-#define CLEAR_FLAGS(field, mask)    ((field) &= ~(mask))
-#define FLIP_FLAGS(field, mask)     ((field) ^= (mask))
-
 #define CLOSET_HAS_LOCK  1
 #define CLOSET_CAN_BE_WELDED 2
 

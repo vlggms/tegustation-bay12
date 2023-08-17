@@ -177,6 +177,7 @@ var/global/list/severity_to_string = list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Toilet Flooding",						/datum/event/toilet_clog/flood,			20, 	list(ASSIGNMENT_JANITOR = 20)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Drone Uprising",						/datum/event/rogue_maint_drones,		25,		list(ASSIGNMENT_ENGINEER = 30, ASSIGNMENT_SECURITY = 20)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Disease Outbreak",						/datum/event/disease_outbreak,			25,		list(ASSIGNMENT_MEDICAL = 20, ASSIGNMENT_SCIENCE = 10)),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Bluespace Drive Instability",			/datum/event/bsd_instability,			50,		list(ASSIGNMENT_ENGINEER = 10)),
 	)
 
 /datum/event_container/major
@@ -191,6 +192,7 @@ var/global/list/severity_to_string = list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT
 		new /datum/event_meta/no_overmap(EVENT_LEVEL_MAJOR, "Electrical Storm",		/datum/event/electrical_storm, 		0,	list(ASSIGNMENT_ENGINEER = 10, ASSIGNMENT_JANITOR = 5)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Drone Revolution",				/datum/event/rogue_maint_drones,	0,	list(ASSIGNMENT_ENGINEER = 10, ASSIGNMENT_MEDICAL = 10, ASSIGNMENT_SECURITY = 20, ASSIGNMENT_EXPLORATION = 15)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Disease Outbreak",				/datum/event/disease_outbreak,		0,	list(ASSIGNMENT_MEDICAL = 20, ASSIGNMENT_SCIENCE = 10)),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Bluespace Drive Instability",		/datum/event/bsd_instability,		0,list(ASSIGNMENT_ENGINEER = 10, ASSIGNMENT_ANY = 5), 1),
 	)
 
 /datum/event_container/exo
