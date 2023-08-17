@@ -35,6 +35,7 @@
 	var/old_lighting_overlay = lighting_overlay
 	var/old_corners = corners
 	var/old_ao_neighbors = ao_neighbors
+	var/old_above = above
 
 //	log_debug("Replacing [src.type] with [N]")
 
@@ -54,7 +55,7 @@
 	// Run the Destroy() chain.
 	qdel(src)
 
-	var/old_opaque_counter = opaque_counter 
+	var/old_opaque_counter = opaque_counter
 	var/turf/simulated/W = new N(src)
 
 	if (permit_ao)
@@ -81,6 +82,8 @@
 
 	for(var/turf/space/S in range(W,1))
 		S.update_starlight()
+
+	W.above = old_above
 
 	W.post_change()
 	. = W
