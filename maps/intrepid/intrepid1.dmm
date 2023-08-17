@@ -995,13 +995,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/center)
 "aUC" = (
-/obj/machinery/power/debug_items{
-	name = "Bluespace Drive"
-	},
-/obj/machinery/shield{
-	name = "Bluespace Drive Protection Field"
-	},
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/bluespacedrive,
 /turf/simulated/floor/greengrid,
 /area/intrepid/misc/maint/aft)
 "aUH" = (
@@ -1431,10 +1425,8 @@
 /area/intrepid/misc/hallway/starboard)
 "bll" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/command{
-	name = "Bluespace Drive"
-	},
-/turf/simulated/floor/reinforced,
+/obj/effect/wallframe_spawn/reinforced_phoron/titanium,
+/turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
 "blw" = (
 /obj/structure/cable/green{
@@ -6757,12 +6749,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/security/wing)
-"ftR" = (
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 8
-	},
-/turf/simulated/floor/reinforced,
-/area/intrepid/misc/maint/aft)
 "ftU" = (
 /obj/structure/bed/chair/office/comfy,
 /turf/simulated/floor/tiled/dark,
@@ -6931,13 +6917,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/center)
-"fBB" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/warning,
-/turf/simulated/floor/reinforced,
-/area/intrepid/misc/maint/aft)
 "fBC" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -8179,11 +8158,8 @@
 /turf/simulated/floor/reinforced,
 /area/intrepid/department/engineering/assembly/chargebay)
 "gGD" = (
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/warning/corner,
-/turf/simulated/floor/reinforced,
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/bluegrid,
 /area/intrepid/misc/maint/aft)
 "gGG" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -11674,10 +11650,6 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
-"jJU" = (
-/obj/effect/floor_decal/industrial/warning/corner,
-/turf/simulated/floor/reinforced,
-/area/intrepid/misc/maint/aft)
 "jKV" = (
 /obj/effect/floor_decal/terralogo{
 	dir = 1;
@@ -12918,9 +12890,9 @@
 /area/intrepid/misc/hallway/starboard)
 "kOr" = (
 /obj/effect/floor_decal/industrial/warning{
-	dir = 8
+	dir = 4
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/bluegrid,
 /area/intrepid/misc/maint/aft)
 "kPD" = (
 /obj/structure/cable/green{
@@ -16433,13 +16405,6 @@
 /obj/item/stack/material/phoron/ten,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/virology)
-"nwP" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/warning,
-/turf/simulated/floor/reinforced,
-/area/intrepid/misc/maint/aft)
 "nxK" = (
 /obj/machinery/computer/modular/preset/civilian{
 	dir = 1
@@ -17305,13 +17270,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/portside)
 "olJ" = (
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 1
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
 	},
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 8
-	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/bluegrid,
 /area/intrepid/misc/maint/aft)
 "omp" = (
 /obj/machinery/artifact_scanpad,
@@ -22340,10 +22302,7 @@
 /turf/simulated/floor/wood/walnut,
 /area/intrepid/department/civillian/mess)
 "shd" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/bluegrid,
 /area/intrepid/misc/maint/aft)
 "shO" = (
 /obj/machinery/door/firedoor,
@@ -58361,10 +58320,10 @@ yfs
 iHN
 oOh
 oOh
-jJU
+shd
 shd
 gGD
-fEe
+bll
 bof
 eYE
 xUD
@@ -58563,9 +58522,9 @@ sXq
 eXY
 tmQ
 oOh
-nwP
+shd
 aUC
-fBB
+gGD
 bll
 bof
 vVM
@@ -58765,10 +58724,10 @@ thC
 uWN
 tsU
 oOh
-ftR
+kOr
 kOr
 olJ
-fEe
+bll
 bof
 oqJ
 nIy
@@ -58967,9 +58926,9 @@ oxu
 xZt
 ndp
 oOh
-fEe
-fEe
-fEe
+bll
+bll
+bll
 fEe
 hwL
 flW
