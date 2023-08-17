@@ -140,7 +140,7 @@
 	plane = OPENTURF_MAX_PLANE
 	var/atom/movable/associated_atom
 	var/depth
-	var/queued = FALSE
+	var/queued = 0
 	var/destruction_timer
 	var/mimiced_type
 	var/original_z
