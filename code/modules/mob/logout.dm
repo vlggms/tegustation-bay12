@@ -5,10 +5,9 @@
 	handle_admin_logout()
 	if(my_client)
 		my_client.screen -= l_general
-
-	RemoveRenderers()
-
+		my_client.screen -= l_plane
 	QDEL_NULL(l_general)
+	QDEL_NULL(l_plane)
 	hide_client_images()
 	..()
 

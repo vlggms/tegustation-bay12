@@ -1,3 +1,5 @@
+#define subtypesof(prototype) (typesof(prototype) - prototype)
+
 // Helper macros to aid in optimizing lazy instantiation of lists.
 // All of these are null-safe, you can use them without knowing if the list var is initialized yet
 
