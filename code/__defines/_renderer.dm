@@ -94,6 +94,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/renderer)
 		if (renderer.relay)
 			my_client.screen += renderer.relay
 		my_client.screen += renderer
+
 	for (var/atom/movable/renderer/zrenderer as anything in GLOB.zmimic_renderers)
 		if (zrenderer.relay)
 			my_client.screen += zrenderer.relay
