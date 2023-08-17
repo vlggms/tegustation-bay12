@@ -13,7 +13,6 @@
 	screen_loc = "CENTER"
 	plane = LOWEST_PLANE
 	blend_mode = BLEND_OVERLAY
-	mouse_opacity = MOUSE_OPACITY_UNCLICKABLE
 
 	/// The compositing renderer this renderer belongs to.
 	var/group = RENDER_GROUP_FINAL
@@ -27,8 +26,10 @@
 	/// If text, uses the text or, if TRUE, uses "*AUTO-[name]"
 	var/render_target_name = TRUE
 
+	var/mob/owner = null
 
 /atom/movable/renderer/Destroy()
+	owner = null
 	QDEL_NULL(relay)
 	return ..()
 
@@ -36,8 +37,9 @@
 INITIALIZE_IMMEDIATE(/atom/movable/renderer)
 
 
-/atom/movable/renderer/Initialize()
+/atom/movable/renderer/Initialize(mapload, mob/owner)
 	. = ..()
+	src.owner = owner
 	INIT_DISALLOW_TYPE(/atom/movable/renderer)
 	if (isnull(group))
 		if (istext(render_target_name))
@@ -60,6 +62,13 @@ INITIALIZE_IMMEDIATE(/atom/movable/renderer)
 	else
 		relay.blend_mode = relay_blend_mode
 
+/**
+* Graphic preferences
+*
+* Some renderers may be able to use a graphic preference to determine how to display effects. For example reduce particle counts or filter variables.
+*/
+/atom/movable/renderer/proc/GraphicsUpdate()
+	return
 
 /**
 * Renderers on /mob
@@ -78,20 +87,29 @@ INITIALIZE_IMMEDIATE(/atom/movable/renderer)
 	if (!renderers)
 		renderers = list()
 	for (var/atom/movable/renderer/renderer as anything in subtypesof(/atom/movable/renderer))
+		if(ispath(renderer, /atom/movable/renderer/shared))
+			continue
 		renderer = new renderer (null, src)
 		renderers[renderer] = renderer.plane // (renderer = plane) format for visual debugging
 		if (renderer.relay)
 			my_client.screen += renderer.relay
 		my_client.screen += renderer
+	for (var/atom/movable/renderer/zrenderer as anything in GLOB.zmimic_renderers)
+		if (zrenderer.relay)
+			my_client.screen += zrenderer.relay
+		my_client.screen += zrenderer
 
 
 /// Removes the mob's renderers on /Logout()
 /mob/proc/RemoveRenderers()
-	for(var/atom/movable/renderer/renderer as anything in renderers)
-		my_client.screen -= renderer
-		if (renderer.relay)
-			my_client.screen -= renderer.relay
-		qdel(renderer)
+	if(my_client)
+		for(var/atom/movable/renderer/renderer as anything in renderers)
+			my_client.screen -= renderer
+			if (renderer.relay)
+				my_client.screen -= renderer.relay
+			qdel(renderer)
+		for (var/atom/movable/renderer/renderer as anything in GLOB.zmimic_renderers)
+			my_client.screen -= renderer
 	if (renderers)
 		renderers.Cut()
 
@@ -114,6 +132,40 @@ INITIALIZE_IMMEDIATE(/atom/movable/renderer)
 	appearance_flags = PLANE_MASTER | NO_CLIENT_COLOR
 	blend_mode = BLEND_MULTIPLY
 	color = list(null, null, null, "#0000", "#000f")
+	mouse_opacity = MOUSE_OPACITY_UNCLICKABLE
+
+
+/atom/movable/renderer/space
+	name = "Space"
+	group = RENDER_GROUP_SCENE
+	plane = SPACE_PLANE
+
+
+/atom/movable/renderer/skybox
+	name = "Skybox"
+	group = RENDER_GROUP_SCENE
+	plane = SKYBOX_PLANE
+	relay_blend_mode = BLEND_MULTIPLY
+
+
+//Z Mimic planemasters -> Could apply scaling for parallax though that requires copying appearances from adjacent turfs
+GLOBAL_LIST_EMPTY(zmimic_renderers)
+
+/hook/startup/proc/create_global_renderers() //Some (most) renderers probably do not need to be instantiated per mob. So may as well make them global and just add to screen
+	//Zmimic planemasters
+	for(var/i = 0 to OPENTURF_MAX_DEPTH)
+		GLOB.zmimic_renderers += new /atom/movable/renderer/shared/zmimic(null, null, OPENTURF_MAX_PLANE - i)
+
+	return TRUE
+
+/atom/movable/renderer/shared/zmimic
+	name = "Zrenderer"
+	group = RENDER_GROUP_SCENE
+
+/atom/movable/renderer/shared/zmimic/Initialize(mapload, _owner, _plane)
+	plane = _plane
+	name = "Zrenderer [plane]"
+	. = ..()
 
 
 // Draws the game world; live mobs, items, turfs, etc.
@@ -121,7 +173,6 @@ INITIALIZE_IMMEDIATE(/atom/movable/renderer)
 	name = "Game"
 	group = RENDER_GROUP_SCENE
 	plane = DEFAULT_PLANE
-	mouse_opacity = MOUSE_OPACITY_NORMAL
 
 
 /// Draws observers; ghosts, camera eyes, etc.
@@ -129,7 +180,6 @@ INITIALIZE_IMMEDIATE(/atom/movable/renderer)
 	name = "Observers"
 	group = RENDER_GROUP_SCENE
 	plane = OBSERVER_PLANE
-	mouse_opacity = MOUSE_OPACITY_NORMAL
 
 
 /// Draws darkness effects.
@@ -146,6 +196,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/renderer)
 		 0,  0,  0,  0, // A
 		 1,  1,  1,  1  // Mapping
 	)
+	mouse_opacity = MOUSE_OPACITY_UNCLICKABLE
 
 
 /// Draws visuals that should not be affected by darkness.
@@ -160,6 +211,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/renderer)
 	name = "Screen Effects"
 	group = RENDER_GROUP_SCENE
 	plane = FULLSCREEN_PLANE
+	mouse_opacity = MOUSE_OPACITY_UNCLICKABLE
 
 
 /// Draws user interface elements.
@@ -167,7 +219,6 @@ INITIALIZE_IMMEDIATE(/atom/movable/renderer)
 	name = "Interface"
 	group = RENDER_GROUP_SCREEN
 	plane = HUD_PLANE
-	mouse_opacity = MOUSE_OPACITY_NORMAL
 
 
 /* *
@@ -185,7 +236,6 @@ INITIALIZE_IMMEDIATE(/atom/movable/renderer)
 	name = "Scene Group"
 	group = RENDER_GROUP_FINAL
 	plane = RENDER_GROUP_SCENE
-	mouse_opacity = MOUSE_OPACITY_NORMAL
 
 
 /// Render group for stuff OUTSIDE the typical game context - UI, full screen effects, etc.
@@ -193,7 +243,6 @@ INITIALIZE_IMMEDIATE(/atom/movable/renderer)
 	name = "Screen Group"
 	group = RENDER_GROUP_FINAL
 	plane = RENDER_GROUP_SCREEN
-	mouse_opacity = MOUSE_OPACITY_NORMAL
 
 
 /// Render group for final compositing before user display.
@@ -201,7 +250,6 @@ INITIALIZE_IMMEDIATE(/atom/movable/renderer)
 	name = "Final Group"
 	group = RENDER_GROUP_NONE
 	plane = RENDER_GROUP_FINAL
-	mouse_opacity = MOUSE_OPACITY_NORMAL
 
 
 /* *
@@ -214,18 +262,64 @@ INITIALIZE_IMMEDIATE(/atom/movable/renderer)
 */
 
 
-/// Renders the /obj/effect/effect/warp example effect
+/// Renders the /obj/effect/effect/warp example effect as well as gravity catapult effects
 /atom/movable/renderer/warp
 	name = "Warp Effect"
 	group = RENDER_GROUP_NONE
 	plane = WARP_EFFECT_PLANE
 	render_target_name = "*warp"
+	mouse_opacity = MOUSE_OPACITY_UNCLICKABLE
 
+//Similar to warp but not as strong
+/atom/movable/renderer/heat
+	name = "Heat Effect"
+	group = RENDER_GROUP_NONE
+	plane = HEAT_EFFECT_PLANE
+	render_target_name = HEAT_COMPOSITE_TARGET
+	mouse_opacity = MOUSE_OPACITY_UNCLICKABLE
 
-/// Adds the warp effect to the game rendering group
-/atom/movable/renderer/group_game/Initialize()
+	var/obj/gas_heat_object = null
+
+/atom/movable/renderer/heat/proc/Setup()
+	var/mob/M = owner
+
+	if(!istype(M))
+		return
+
+	var/quality = M.get_preference_value(/datum/client_preference/graphics_quality)
+
+	if(gas_heat_object)
+		vis_contents -= gas_heat_object
+
+	if (quality == GLOB.PREF_LOW)
+		if(!istype(gas_heat_object, /obj/effect/heat))
+			QDEL_NULL(gas_heat_object)
+			gas_heat_object = new /obj/effect/heat(null)
+	else
+		if(!istype(gas_heat_object, /obj/particle_emitter/heat))
+			QDEL_NULL(gas_heat_object)
+			gas_heat_object = new /obj/particle_emitter/heat(null, -1)
+		if (quality == GLOB.PREF_MED)
+			gas_heat_object.particles?.count = 250
+			gas_heat_object.particles?.spawning = 15
+		else if (quality == GLOB.PREF_HIGH)
+			gas_heat_object.particles?.count = 600
+			gas_heat_object.particles?.spawning = 35
+
+	vis_contents += gas_heat_object
+
+/atom/movable/renderer/heat/Initialize()
 	. = ..()
-	filters += filter(type = "displace", render_source = "*warp", size = 10)
+	Setup()
+
+/atom/movable/renderer/heat/GraphicsUpdate()
+	. = ..()
+	Setup()
+
+/atom/movable/renderer/scene_group/Initialize()
+	. = ..()
+	filters += filter(type = "displace", render_source = "*warp", size = 5)
+	filters += filter(type = "displace", render_source = HEAT_COMPOSITE_TARGET, size = 2.5)
 
 
 /// Example of a warp filter for /renderer use
