@@ -1,0 +1,6 @@
+author: CrimsonShrike
+delete-after: true
+changes:
+  - rscadd: Hot zones will now be warped to represent the heat
+  - tweak: Exosuit gravity catapult is now a bit faster and has new effects to make
+      it clearer.
