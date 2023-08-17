@@ -189,7 +189,7 @@
 #define DEFAULT_APPEARANCE_FLAGS (PIXEL_SCALE)
 
 /atom/appearance_flags = DEFAULT_APPEARANCE_FLAGS
-/atom/movable/appearance_flags = DEFAULT_APPEARANCE_FLAGS | TILE_BOUND // Most AMs are not visibly bigger than a tile.
+/atom/movable/appearance_flags = DEFAULT_APPEARANCE_FLAGS | TILE_BOUND | LONG_GLIDE // Most AMs are not visibly bigger than a tile.
 /image/appearance_flags = DEFAULT_APPEARANCE_FLAGS
 /mutable_appearance/appearance_flags = DEFAULT_APPEARANCE_FLAGS // Inherits /image but re docs, subject to change
 
