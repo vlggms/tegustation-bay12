@@ -189,11 +189,12 @@ obj/item/gun/energy/retro
 /obj/item/gun/energy/laser/assault
 	name = "assault laser rifle"
 	desc = "An advanced fully automatic laser rifle, dubbed ALR-1. Capable of firing in several firemodes."
-	icon_state = "lasersec"
-	item_state = "lasersec"
-	wielded_item_state = "lasersec-wielded"
+	icon = 'icons/obj/guns/laser_auto.dmi'
+	icon_state = "laser_auto"
+	item_state = "laser"
+	wielded_item_state = "laser-wielded"
 	max_shots = 18
-	origin_tech = list(TECH_COMBAT = 4, TECH_MAGNET = 3)
+	origin_tech = list(TECH_COMBAT = 6, TECH_MAGNET = 6)
 	matter = list(MATERIAL_STEEL = 4000)
 
 	firemodes = list(
