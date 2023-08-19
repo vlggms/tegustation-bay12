@@ -160,18 +160,6 @@
 	label_text = "Ambrosia"
 	starting_reagents = list(/datum/reagent/space_drugs = 50)
 
-
-/datum/mil_branch/skrell_fleet
-	name = "Skrellian Defense Task Force"
-	name_short = "SDTF"
-	email_domain = "sdtf.qb"
-
-	rank_types = list(/datum/mil_rank/skrell_fleet)
-	spawn_rank_types = list(/datum/mil_rank/skrell_fleet)
-
-/datum/mil_rank/skrell_fleet
-	name = "NULL"
-
 /obj/machinery/power/apc/skrell
 	req_access = list(access_skrellscoutship)
 
@@ -244,29 +232,6 @@
 		/obj/item/clothing/gloves,
 		/obj/item/gun/energy/gun/skrell
 		)
-
-//Skell Lights
-
-/obj/machinery/light/skrell
-	name = "skrellian light"
-	desc = "Some kind of strange alien lighting technology."
-	allowed_light_type = /obj/item/light/tube/skrell
-	spawn_light_type = /obj/item/light/tube/skrell
-
-
-/obj/item/light/tube/skrell
-	name = "skrellian light filament"
-	color = COLOR_LIGHT_CYAN
-	b_colour = COLOR_LIGHT_CYAN
-	desc = "Some kind of strange alien lightbulb technology."
-	random_tone = FALSE
-
-/obj/item/light/tube/large/skrell
-	name = "skrellian light filament"
-	color = COLOR_LIGHT_CYAN
-	b_colour = COLOR_LIGHT_CYAN
-	desc = "Some kind of strange alien lightbulb technology."
-
 
 /obj/item/storage/box/lights/tubes/skrell
 	name = "box of replacement tubes"
