@@ -145,7 +145,6 @@
 		)
 
 /obj/item/rig/eva/equipped
-
 	initial_modules = list(
 		/obj/item/rig_module/mounted/plasmacutter,
 		/obj/item/rig_module/maneuvering_jets,
@@ -182,7 +181,6 @@
 	min_pressure_protection = 0
 
 /obj/item/rig/ce/equipped
-
 	initial_modules = list(
 		/obj/item/rig_module/ai_container,
 		/obj/item/rig_module/maneuvering_jets,
@@ -195,7 +193,39 @@
 		)
 
 /obj/item/clothing/head/helmet/space/rig/ce
+	light_overlay = "helmet_light_alt"
 	camera = /obj/machinery/camera/network/engineering
+	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_IPC)
+	sprite_sheets = list(
+		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_helmet_unathi.dmi',
+		SPECIES_SKRELL = 'icons/mob/species/skrell/onmob_head_skrell.dmi'
+	)
+
+/obj/item/clothing/suit/space/rig/ce
+	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_IPC)
+	sprite_sheets = list(
+		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_suit_unathi.dmi'
+	)
+	allowed = list(
+		/obj/item/gun,
+		/obj/item/device/flashlight,
+		/obj/item/tank,
+		/obj/item/device/suit_cooling_unit,
+		/obj/item/storage/ore,
+		/obj/item/storage/toolbox,
+		/obj/item/storage/briefcase/inflatable,
+		/obj/item/inflatable_dispenser,
+		/obj/item/device/t_scanner,
+		/obj/item/pickaxe,
+		/obj/item/rcd,
+		/obj/item/rpd
+	)
+
+/obj/item/clothing/shoes/magboots/rig/ce
+	species_restricted = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_IPC)
+	sprite_sheets = list(
+		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_feet_unathi.dmi'
+	)
 
 /obj/item/clothing/gloves/rig/ce
 	siemens_coefficient = 0
