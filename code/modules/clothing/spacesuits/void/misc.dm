@@ -189,4 +189,48 @@
 
 /obj/item/clothing/suit/space/void/cybersun/prepared
 	helmet = /obj/item/clothing/head/helmet/space/void/cybersun
+	boots = /obj/item/clothing/shoes/magboots
+	tank = /obj/item/tank/oxygen
+
+// Commando
+/obj/item/clothing/head/helmet/space/void/commando
+	name = "commando voidsuit helmet"
+	desc = "A fairly outdated, yet advanced model frequently employed by commando units of the Imperial marine forces. The fact you see it in this age can only mean one thing..."
+	icon_state = "eta-helmet-open"
+	armor = list(
+		melee = ARMOR_MELEE_MAJOR,
+		bullet = ARMOR_BALLISTIC_RIFLE,
+		laser = ARMOR_LASER_MAJOR,
+		energy =  ARMOR_ENERGY_SHIELDED,
+		bomb = ARMOR_BOMB_RESISTANT,
+		bio = ARMOR_BIO_SHIELDED,
+		rad = ARMOR_RAD_SHIELDED
+		)
+	siemens_coefficient = 0.1
+	light_overlay = "helmet_light"
+
+/obj/item/clothing/suit/space/void/commando
+	name = "commando voidsuit"
+	desc = "An advanced model of an armored voidsuit used by commando units of the Imperial marine forces, while they still existed."
+	icon_state = "eta-armor"
+	w_class = ITEM_SIZE_NORMAL
+	armor = list(
+		melee = ARMOR_MELEE_MAJOR,
+		bullet = ARMOR_BALLISTIC_RIFLE,
+		laser = ARMOR_LASER_MAJOR,
+		energy =  ARMOR_ENERGY_SHIELDED,
+		bomb = ARMOR_BOMB_RESISTANT,
+		bio = ARMOR_BIO_SHIELDED,
+		rad = ARMOR_RAD_SHIELDED
+		)
+	allowed = list(/obj/item/device/flashlight, /obj/item/tank, /obj/item/device/suit_cooling_unit, /obj/item/gun, /obj/item/ammo_magazine, /obj/item/ammo_casing, /obj/item/melee/baton, /obj/item/melee/energy/sword, /obj/item/handcuffs)
+	siemens_coefficient = 0.1
+
+/obj/item/clothing/suit/space/void/commando/New()
+	..()
+	slowdown_per_slot[slot_wear_suit] = 0.5
+
+/obj/item/clothing/suit/space/void/commando/prepared
+	helmet = /obj/item/clothing/head/helmet/space/void/commando
+	boots = /obj/item/clothing/shoes/magboots
 	tank = /obj/item/tank/oxygen
