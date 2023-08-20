@@ -1,0 +1,6 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - balance: Space suit breaches now consider the armor. Getting hit with a powerful
+      sniper round of 50 damage will still pierce the suit, but not some random carp
+      that bit you for 8 damage.
