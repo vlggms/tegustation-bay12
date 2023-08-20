@@ -11,10 +11,13 @@
 	blacklisted_species = null
 	is_semi_antagonist = TRUE
 
-	branch = /datum/mil_branch/civilian
-	rank = /datum/mil_rank/civ/civ
-	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/civ)
+	branch = /datum/mil_branch/obs
+	rank = null
+	allowed_branches = list(/datum/mil_branch/obs)
+	allowed_ranks = list(
+		/datum/mil_rank/obs/initiate,
+		/datum/mil_rank/obs/acolyte,
+		)
 
 	no_skill_buffs = TRUE
 	min_skill = list(
@@ -54,6 +57,10 @@
 	info = "You are the pilot aboard \"Independent\" Light Corvette. Navigate the team wherever they need to and assist the \
 	scientist."
 	outfit_type = /decl/hierarchy/outfit/job/obs/member/pilot
+
+	allowed_ranks = list(
+		/datum/mil_rank/obs/socius,
+		)
 
 	min_skill = list(
 		SKILL_HAULING = SKILL_BASIC,
@@ -95,6 +102,11 @@
 	about medicine, general science and engineering. Your main goal is developing a weapon of mass destruction and assissting \
 	the group in the process."
 	outfit_type = /decl/hierarchy/outfit/job/obs/member/scientist
+
+
+	allowed_ranks = list(
+		/datum/mil_rank/obs/inquisitor,
+		)
 
 	min_skill = list(
 		SKILL_COMPUTER = SKILL_TRAINED,

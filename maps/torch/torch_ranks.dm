@@ -13,7 +13,11 @@
 		/datum/mil_branch/solgov,
 		/datum/mil_branch/army,
 		/datum/mil_branch/alien,
-		/datum/mil_branch/skrell_fleet
+		// Submap branches,
+		/datum/mil_branch/skrell_fleet,
+		/datum/mil_branch/obs,
+		// Others,
+		/datum/mil_branch/imperial_commando,
 	)
 
 	spawn_branch_types = list(
@@ -22,7 +26,11 @@
 		/datum/mil_branch/civilian,
 		/datum/mil_branch/solgov,
 		/datum/mil_branch/alien,
-		/datum/mil_branch/skrell_fleet
+		// Submap branches,
+		/datum/mil_branch/skrell_fleet,
+		/datum/mil_branch/obs,
+		// Others,
+		/datum/mil_branch/imperial_commando,
 	)
 
 	species_to_branch_blacklist = list(
