@@ -1,3 +1,10 @@
+/datum/job/submap
+	branch = /datum/mil_branch/civilian
+	rank =   /datum/mil_rank/civ/civ
+	allowed_branches = list(/datum/mil_branch/civilian)
+	allowed_ranks = list(/datum/mil_rank/civ/civ)
+	required_language = null
+
 /datum/map/intrepid
 	branch_types = list(
 		/datum/mil_branch/exploration_division,
@@ -9,7 +16,11 @@
 		/datum/mil_branch/marine_corps,
 		/datum/mil_branch/worker,
 		/datum/mil_branch/alien,
-		/datum/mil_branch/skrell_fleet
+		// Submap branches,
+		/datum/mil_branch/skrell_fleet,
+		/datum/mil_branch/obs,
+		// Others,
+		/datum/mil_branch/imperial_commando,
 	)
 
 	spawn_branch_types = list(
@@ -22,7 +33,11 @@
 		/datum/mil_branch/marine_corps,
 		/datum/mil_branch/worker,
 		/datum/mil_branch/alien,
-		/datum/mil_branch/skrell_fleet
+		// Submap branches,
+		/datum/mil_branch/skrell_fleet,
+		/datum/mil_branch/obs,
+		// Others,
+		/datum/mil_branch/imperial_commando,
 	)
 
 	species_to_branch_blacklist = list(
