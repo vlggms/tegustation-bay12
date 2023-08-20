@@ -41,7 +41,7 @@
 	sound_takeoff = 'sound/effects/lift_heavy_start.ogg'
 	sound_landing = 'sound/effects/lift_heavy_stop.ogg'
 	ceiling_type = null
-	knockdown = 0
+	knockdown = 3
 
 //Lift Control Interface objects. (Lift computer)
 /obj/machinery/computer/shuttle_control/lift
@@ -114,8 +114,6 @@
 	name = "Intrepid Cargo Upper Deck"
 	landmark_tag = "nav_intrepidcargo_lift_top"
 	flags = SLANDMARK_FLAG_AUTOSET
-	base_area = /area/intrepid/department/cargo/cargostorage
-	base_turf = /turf/simulated/open
 
 /obj/effect/shuttle_landmark/lift/intrepidcargo_bottom
 	name = "Intrepid Cargo Lower Deck"

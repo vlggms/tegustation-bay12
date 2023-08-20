@@ -35,8 +35,15 @@
 /area/intrepid/misc/maint/aft
 	name = "\improper Aft Maintenance Tunnel"
 
-/area/intrepid/misc/maint/upper
-	name = "\improper Upper Maintenance Tunnel"
+//Upper Maintaince Tunnels
+/area/intrepid/misc/maint/upper/central
+	name = "\improper Upper Central Maintenance Tunnel"
+
+/area/intrepid/misc/maint/upper/portside
+	name = "\improper Upper Portside Maintenance Tunnel"
+
+/area/intrepid/misc/maint/upper/starboard
+	name = "\improper Upper Starboard Maintenance Tunnel"
 
 /area/intrepid/misc/maint/superstructure
 	name = "\improper Intrepid Superstructure"
@@ -225,6 +232,10 @@
 /area/intrepid/department/command/commandquarters/psiadvisor
 	name = "\improper Psionic Advisor Office"
 	req_access = list(access_psiadvisor)
+
+/area/intrepid/department/command/commandquarters/squadleader
+	name = "\improper Squad Leader's Office"
+	req_access = list(access_squad_leader)
 
 /area/intrepid/department/command/teleporter
 	icon_state = "intrepid_teleporter"
@@ -433,11 +444,29 @@
 	name = "\improper Pandora - Cargo Compartment"
 	icon_state = "shuttlered"
 
+// Cargo Drone
 /area/shuttle/cargodrone
 	name = "\improper Cargo Drone"
 	icon_state = "shuttlered"
 	base_turf = /turf/simulated/floor/plating
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
+
+// Pithos
+/area/shuttle/pithos
+	name = "\improper Pithos"
+	icon_state = "shuttlered"
+	base_turf = /turf/simulated/floor/plating
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
+	requires_power = TRUE
+
+/area/shuttle/pithos/cockpit
+	name = "\improper Pithos - Cockpit"
+	icon_state = "shuttlered"
+
+/area/shuttle/pithos/cargo
+	name = "\improper Pithos - Cargo Compartment"
+	icon_state = "shuttlered"
 
 // Caduceus
 /area/shuttle/ambulance
