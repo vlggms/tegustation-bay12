@@ -138,8 +138,8 @@
 	for(var/obj/item/clothing/accessory/ass in accessories)
 		if(ass.removable)
 			removables |= ass
-	if(accessories.len > 1)
-		A = input("Select an accessory to remove from [src]") as null|anything in removables
+	if(length(removables) > 1)
+		A = show_radial_menu(usr, usr, make_item_radial_menu_choices(removables), radius = 42)
 	else
 		A = accessories[1]
 	src.remove_accessory(usr,A)
