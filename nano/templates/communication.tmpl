@@ -10,7 +10,10 @@
 
 		<h4>Communications</h4>
 		<div class=itemGroup>
-			<div class=item>{{:helper.link('Message list', null, {'action' : 'sw_menu', 'target' : 2}, !data.net_comms ? 'disabled' : null)}} </div>
+			<div class=item>{{if data.cross_enabled}}
+				<div class=item>{{:helper.link('Message list', null, {'action' : 'sw_menu', 'target' : 2}, !data.net_comms ? 'disabled' : null)}} </div>
+			{{/if}} </div>
+			<div class=item>{{:helper.link('Send message to allied sector', null, {'action' : 'cross_comms'}, data.isAI || !data.net_comms ? 'disabled' : null)}} </div>
 			<div class=item>{{if data.emagged}}
 				{{:helper.link('Send an emergency message to [UNKNOWN]', null, {'action' : 'message', 'target' : 'emagged'}, data.isAI || !data.net_comms ? 'disabled' : null)}}
 			{{else}}

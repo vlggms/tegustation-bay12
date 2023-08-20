@@ -86,6 +86,7 @@
 		return
 	if (evacuation_controller.call_evacuation(user, 1))
 		log_and_message_admins("[user? key_name(user) : "Autotransfer"] has initiated abandonment of the spacecraft.")
+		SSticker.news_report = max(SSticker.news_report, SHIP_ABANDONED)
 
 /datum/evacuation_option/bluespace_jump
 	option_text = "Initiate bluespace jump"
@@ -108,6 +109,7 @@
 		return
 	if (evacuation_controller.call_evacuation(user, 0))
 		log_and_message_admins("[user? key_name(user) : "Autotransfer"] has initiated bluespace jump preparation.")
+		SSticker.news_report = max(SSticker.news_report, SHIP_BLUESPACEJUMP)
 
 /datum/evacuation_option/cancel_abandon_ship
 	option_text = "Cancel abandonment"

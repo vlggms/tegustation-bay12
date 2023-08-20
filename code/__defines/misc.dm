@@ -308,3 +308,21 @@
 //they are here to support hotkeys
 #define INTENT_HOTKEY_LEFT  "left"
 #define INTENT_HOTKEY_RIGHT "right"
+
+/* Ticker subsystem cross-comms news report */
+// The higher numbers are basically more impactful and will override lower ones
+#define SHIP_BLUESPACEJUMP 1
+#define SHIP_ABANDONED 2
+#define SHIP_EVACUATED 3
+#define SHIP_DESTROYED_NUKE 4
+#define SHIP_DESTROYED_SELF_DESTRUCT 5
+#define SHIP_SUPERMATTER_CASCADE 15
+// Nuclear operatives; Starting from crew major victory, going up to nuke ops major victory
+#define SHIP_NUKEOPS_CREW_VICTORY_SUPERMAJOR 20 // Disk secured, evacuated and all syndies were killed
+#define SHIP_NUKEOPS_CREW_VICTORY_MAJOR 21 // Disk secured and evacuated
+#define SHIP_NUKEOPS_CREW_VICTORY_MINOR 22 // Syndies destroyed wrong station and died
+#define SHIP_NUKEOPS_CREW_VICTORY_MINOR_2 23 // Syndies destroyed wrong station
+#define SHIP_NUKEOPS_TOTAL_ANNIHILATION 24 // Everyone dead
+#define SHIP_NUKEOPS_MERCENARY_VICTORY_MINOR 25 // Disk lost, crew evacuated and all syndies died
+#define SHIP_NUKEOPS_MERCENARY_VICTORY_MINOR_2 26 // Disk lost and crew evacuted
+#define SHIP_NUKEOPS_MERCENARY_VICTORY_MAJOR 27 // Syndies exploded the ship and survived

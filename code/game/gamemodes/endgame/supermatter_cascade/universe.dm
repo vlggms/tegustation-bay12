@@ -56,6 +56,7 @@ var/global/universe_has_ended = 0
 
 	PlayerSet()
 	SSskybox.change_skybox("cascade", new_use_stars = FALSE, new_use_overmap_details = FALSE)
+	SSticker.news_report = max(SSticker.news_report, SHIP_SUPERMATTER_CASCADE)
 
 	new /obj/singularity/narsie/large/exit(pick(endgame_exits))
 	spawn(rand(30,60) SECONDS)

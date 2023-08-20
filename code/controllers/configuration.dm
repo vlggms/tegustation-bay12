@@ -230,6 +230,12 @@ var/list/gamemode_cache = list()
 	/// The delay in deciseconds between stat() updates.
 	var/stat_delay = 5
 
+	/* Cross-communications */
+	var/comms_key = null
+	var/cross_comms_name = null
+	var/cross_comms_network = null
+	var/list/cross_servers = list()
+
 /datum/configuration/New()
 	var/list/L = typesof(/datum/game_mode) - /datum/game_mode
 	for (var/T in L)
@@ -845,6 +851,17 @@ var/list/gamemode_cache = list()
 				log_misc("Unknown value for setting [name] in [filename].")
 			else
 				GLOB.using_map.setup_config(name, value, filename)
+
+		else if(type == "comms")
+			switch (name)
+				if("comms_key")
+					config.comms_key = value
+				if("cross_comms_name")
+					config.cross_comms_name = value
+				if("cross_comms_network")
+					config.cross_comms_network = value
+				if("cross_servers")
+					config.cross_servers = params2list(value)
 
 	fps = round(fps)
 	if(fps <= 0)
