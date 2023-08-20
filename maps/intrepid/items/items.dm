@@ -45,6 +45,10 @@ Unique items
 	desc = "A rugged backpack worn over one shoulder."
 	icon_state = "courierbagexp"
 
+// Explo banner capsule access edit
+/obj/item/explo_banner/terragov
+	req_access = list(access_squad_leader)
+
 /obj/effect/paint/hull
 	color = COLOR_RED_GRAY
 
