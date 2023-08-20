@@ -386,6 +386,7 @@
 #include "code\datums\licences\license.dm"
 #include "code\datums\mil_ranks\_mil_ranks.dm"
 #include "code\datums\mil_ranks\empire.dm"
+#include "code\datums\mil_ranks\obs.dm"
 #include "code\datums\mil_ranks\skrell.dm"
 #include "code\datums\mind\memory.dm"
 #include "code\datums\mind\mind.dm"
