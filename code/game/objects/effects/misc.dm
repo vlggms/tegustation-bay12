@@ -136,3 +136,4 @@ obj/effect/paint/palegreengray
 	icon = 'icons/effects/fire.dmi'
 	icon_state = "3"
 	render_target = HEAT_EFFECT_TARGET
+	mouse_opacity = MOUSE_OPACITY_UNCLICKABLE
