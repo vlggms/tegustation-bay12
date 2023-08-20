@@ -360,10 +360,12 @@
 	. = 0
 
 	//If it's hot add something
+	var/tile_overlay = get_tile_overlay(GAS_HEAT)
 	if(temperature >= CARBON_LIFEFORM_FIRE_RESISTANCE)
-		var/tile_overlay = get_tile_overlay(GAS_HEAT)
 		if(!(tile_overlay in graphic))
 			LAZYADD(graphic_add, tile_overlay)
+	else if(tile_overlay in graphic)
+		LAZYADD(graphic_remove, tile_overlay)
 
 	//Apply changes
 	if(graphic_add && graphic_add.len)
