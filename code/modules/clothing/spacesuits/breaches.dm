@@ -3,11 +3,15 @@
 //They can be healed with plastic or metal sheeting.
 
 /datum/breach
-	var/class = 0                           // Size. Lower is smaller. Uses floating point values!
-	var/descriptor                          // 'gaping hole' etc.
-	var/damtype = BURN                      // Punctured or melted
+	/// Size. Lower is smaller. Uses floating point values!
+	var/class = 0
+	// 'gaping hole' etc.
+	var/descriptor
+	/// Punctured(BRUTE) or melted(BURN))
+	var/damtype = BURN
 	var/patched = FALSE
-	var/obj/item/clothing/suit/space/holder // Suit containing the list of breaches holding this instance.
+	/// Suit containing the list of breaches holding this instance.
+	var/obj/item/clothing/suit/space/holder
 	var/global/list/breach_brute_descriptors = list(
 		"tiny puncture",
 		"ragged tear",
@@ -24,18 +28,27 @@
 		"huge scorched area"
 		)
 
-/obj/item/clothing/suit/space
+/datum/breach/Destroy()
+	holder = null
+	return ..()
 
-	var/can_breach = 1                      // Set to 0 to disregard all breaching.
-	var/list/breaches = list()              // Breach datum container.
-	var/resilience = 0.2                    // Multiplier that turns damage into breach class. 1 is 100% of damage to breach, 0.1 is 10%. 0.2 -> 50 brute/burn damage to cause 10 breach damage
-	var/breach_threshold = 3                // Min damage before a breach is possible. Damage is subtracted by this amount, it determines the "hardness" of the suit.
-	var/damage = 0                          // Current total damage. Does not count patched breaches.
-	var/brute_damage = 0                    // Specifically brute damage. Includes patched punctures.
-	var/burn_damage = 0                     // Specifically burn damage. Includes patched burns.
+/obj/item/clothing/suit/space
+	/// Set to FALSE to disregard all breaching.
+	var/can_breach = TRUE
+	/// Breach datum container.
+	var/list/breaches = list()
+	/// Multiplier that turns damage into breach class. 1 is 100% of damage to breach, 0.1 is 10%. 0.2 -> 50 brute/burn damage to cause 10 breach damage
+	var/resilience = 0.2
+	/// Min damage before a breach is possible. Damage is subtracted by this amount, it determines the "hardness" of the suit.
+	var/breach_threshold = 8
+	/// Current total damage. Does not count patched breaches.
+	var/damage = 0
+	/// Specifically brute damage. Includes patched punctures.
+	var/brute_damage = 0
+	/// Specifically burn damage. Includes patched burns.
+	var/burn_damage = 0
 
 /datum/breach/proc/update_descriptor()
-
 	//Sanity...
 	class = between(1, round(class), 5)
 	//Apply the correct descriptor.
@@ -82,7 +95,9 @@
 	)
 	calc_breach_damage()
 
-/obj/item/clothing/suit/space/proc/create_breaches(var/damtype, var/amount)
+/obj/item/clothing/suit/space/proc/create_breaches(damtype, amount)
+	if(damage > 25)
+		return //We don't need to keep tracking it when it's at 250% pressure loss, really.
 
 	amount -= src.breach_threshold
 	amount *= src.resilience
@@ -93,17 +108,14 @@
 	if(!breaches)
 		breaches = list()
 
-	if(damage > 25) return //We don't need to keep tracking it when it's at 250% pressure loss, really.
-
 	//Increase existing breaches.
 	for(var/datum/breach/existing in breaches)
-
 		if(existing.damtype != damtype)
 			continue
 
 		//keep in mind that 10 breach damage == full pressure loss.
 		//a breach can have at most 5 breach damage
-		if (existing.class < 5)
+		if(existing.class < 5)
 			var/needs = 5 - existing.class
 			if(amount < needs)
 				existing.class += amount
@@ -121,7 +133,7 @@
 
 			existing.patched = FALSE
 
-	if (amount)
+	if(amount)
 		//Spawn a new breach.
 		var/datum/breach/B = new()
 		breaches += B
@@ -141,7 +153,6 @@
 
 //Calculates the current extent of the damage to the suit.
 /obj/item/clothing/suit/space/proc/calc_breach_damage()
-
 	damage = 0
 	brute_damage = 0
 	burn_damage = 0
