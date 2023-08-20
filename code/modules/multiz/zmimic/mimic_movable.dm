@@ -82,7 +82,7 @@
 	icon_state = "dark"
 	plane = OPENTURF_MAX_PLANE
 	layer = MIMICED_LIGHTING_LAYER
-	color = "#0000004b"
+	color = "#00000064"
 
 /atom/movable/openspace/multiplier/Destroy()
 	var/turf/myturf = loc
