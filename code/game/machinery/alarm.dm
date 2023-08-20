@@ -1058,7 +1058,7 @@ FIRE ALARM
 		src.updateDialog()
 	last_process = world.timeofday
 
-	if(locate(/obj/fire) in loc)
+	if(locate(/obj/hotspot) in loc)
 		alarm()
 
 /obj/machinery/firealarm/interface_interact(mob/user)
