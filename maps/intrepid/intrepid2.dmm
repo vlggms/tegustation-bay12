@@ -4744,15 +4744,16 @@
 /turf/simulated/floor,
 /area/intrepid/department/engineering/atmos)
 "pc" = (
-/obj/machinery/power/apc/critical{
-	dir = 8;
-	pixel_x = -24
-	},
 /obj/structure/cable/orange{
 	icon_state = "0-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 8
+	},
+/obj/machinery/power/apc/super/critical{
+	dir = 8;
+	pixel_x = -24;
+	uncreated_component_parts = list(/obj/item/stock_parts/power/terminal,/obj/item/stock_parts/power/apc,/obj/item/stock_parts/power/battery/buildable/turbo)
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/pithos/cargo)
@@ -4768,15 +4769,16 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/pithos/cockpit)
 "pe" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	pixel_y = 23
-	},
 /obj/structure/cable/orange{
 	icon_state = "0-2"
 	},
 /obj/structure/table/standard,
 /obj/machinery/cell_charger,
+/obj/machinery/power/apc/super{
+	dir = 1;
+	pixel_y = 24;
+	uncreated_component_parts = list(/obj/item/stock_parts/power/terminal,/obj/item/stock_parts/power/apc,/obj/item/stock_parts/power/battery/buildable/turbo)
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/pandora/cargo)
 "pf" = (
@@ -8276,8 +8278,8 @@
 	id_tag = "calypso_shuttle_pump_out_external"
 	},
 /obj/item/device/radio/intercom/hailing{
-	pixel_x = -24;
 	dir = 4;
+	pixel_x = -24;
 	pixel_y = 4
 	},
 /turf/simulated/floor/reinforced,
@@ -8971,13 +8973,14 @@
 "Cd" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/bed/chair/shuttle,
-/obj/machinery/power/apc/critical{
-	dir = 8;
-	pixel_x = -24
-	},
 /obj/structure/cable/orange,
 /obj/structure/cable/orange{
 	icon_state = "1-2"
+	},
+/obj/machinery/power/apc/super/critical{
+	dir = 8;
+	pixel_x = -24;
+	uncreated_component_parts = list(/obj/item/stock_parts/power/terminal,/obj/item/stock_parts/power/apc,/obj/item/stock_parts/power/battery/buildable/turbo)
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/shuttle/pithos/cockpit)
@@ -11077,8 +11080,9 @@
 	dir = 8;
 	pixel_x = 32
 	},
-/obj/machinery/power/apc/critical{
-	pixel_y = -23
+/obj/machinery/power/apc/super/critical{
+	pixel_y = -24;
+	uncreated_component_parts = list(/obj/item/stock_parts/power/terminal,/obj/item/stock_parts/power/apc,/obj/item/stock_parts/power/battery/buildable/turbo)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/pandora/cockpit)

@@ -495,9 +495,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/power/apc{
-	pixel_y = -24
-	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -506,6 +503,10 @@
 /obj/structure/cable/green{
 	d2 = 8;
 	icon_state = "0-8"
+	},
+/obj/machinery/power/apc/super/critical{
+	pixel_y = -24;
+	uncreated_component_parts = list(/obj/item/stock_parts/power/terminal,/obj/item/stock_parts/power/apc,/obj/item/stock_parts/power/battery/buildable/turbo)
 	},
 /turf/simulated/floor/tiled,
 /area/obs_shuttle/ofd)
@@ -965,15 +966,14 @@
 /area/obs_shuttle/primaryhall)
 "rc" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_x = 0;
-	pixel_y = 24
-	},
 /obj/structure/cable/green{
 	d2 = 4;
 	icon_state = "0-4"
+	},
+/obj/machinery/power/apc/super/critical{
+	dir = 1;
+	pixel_y = 24;
+	uncreated_component_parts = list(/obj/item/stock_parts/power/terminal,/obj/item/stock_parts/power/apc,/obj/item/stock_parts/power/battery/buildable/turbo)
 	},
 /turf/simulated/floor/tiled,
 /area/obs_shuttle/primaryhall)
@@ -1086,10 +1086,11 @@
 /turf/simulated/floor/tiled/white,
 /area/obs_shuttle/medbay)
 "tv" = (
-/obj/machinery/power/apc{
-	pixel_y = -24
-	},
 /obj/structure/cable/green,
+/obj/machinery/power/apc/super/critical{
+	pixel_y = -24;
+	uncreated_component_parts = list(/obj/item/stock_parts/power/terminal,/obj/item/stock_parts/power/apc,/obj/item/stock_parts/power/battery/buildable/turbo)
+	},
 /turf/simulated/floor/tiled,
 /area/obs_shuttle/ofdstorage)
 "tw" = (
@@ -1100,17 +1101,16 @@
 /turf/simulated/floor/tiled,
 /area/obs_shuttle/atmospherics)
 "tA" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_x = 0;
-	pixel_y = 24
-	},
 /obj/structure/cable/green{
 	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/power/apc/super/critical{
+	dir = 1;
+	pixel_y = 24;
+	uncreated_component_parts = list(/obj/item/stock_parts/power/terminal,/obj/item/stock_parts/power/apc,/obj/item/stock_parts/power/battery/buildable/turbo)
+	},
 /turf/simulated/floor/tiled,
 /area/obs_shuttle/atmospherics)
 "tF" = (
@@ -1203,14 +1203,15 @@
 /obj/item/clothing/accessory/storage/holster/waist,
 /obj/item/ammo_magazine/magnum,
 /obj/item/ammo_magazine/magnum,
-/obj/machinery/power/apc{
-	pixel_y = -24
-	},
 /obj/structure/cable/green,
 /obj/item/clothing/under/rank/ntpilot/nanotrasen,
 /obj/item/clothing/head/helmet/nt/pilot,
 /obj/item/clothing/accessory/armband/obs,
 /obj/item/device/radio,
+/obj/machinery/power/apc/super/critical{
+	pixel_y = -24;
+	uncreated_component_parts = list(/obj/item/stock_parts/power/terminal,/obj/item/stock_parts/power/apc,/obj/item/stock_parts/power/battery/buildable/turbo)
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/obs_shuttle/bridge)
 "uT" = (
@@ -1526,16 +1527,16 @@
 /area/obs_shuttle/equipment)
 "Bn" = (
 /obj/structure/table/reinforced,
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
 /obj/structure/cable/green{
 	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/item/storage/toolbox/syndicate,
+/obj/machinery/power/apc/super/critical{
+	dir = 8;
+	pixel_x = -24;
+	uncreated_component_parts = list(/obj/item/stock_parts/power/terminal,/obj/item/stock_parts/power/apc,/obj/item/stock_parts/power/battery/buildable/turbo)
+	},
 /turf/simulated/floor/plating,
 /area/obs_shuttle/medbay)
 "Bq" = (
@@ -2002,17 +2003,16 @@
 /turf/simulated/floor/reinforced,
 /area/obs_shuttle/equipment)
 "FZ" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_x = 0;
-	pixel_y = 24
-	},
 /obj/structure/cable/green{
 	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/power/apc/super/critical{
+	dir = 1;
+	pixel_y = 24;
+	uncreated_component_parts = list(/obj/item/stock_parts/power/terminal,/obj/item/stock_parts/power/apc,/obj/item/stock_parts/power/battery/buildable/turbo)
+	},
 /turf/simulated/floor/tiled,
 /area/obs_shuttle/cargo)
 "Gq" = (
@@ -2065,16 +2065,16 @@
 /turf/simulated/floor/reinforced,
 /area/obs_shuttle/equipment)
 "GQ" = (
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
-	},
 /obj/structure/cable/green{
 	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/power/apc/super/critical{
+	dir = 4;
+	pixel_x = 24;
+	uncreated_component_parts = list(/obj/item/stock_parts/power/terminal,/obj/item/stock_parts/power/apc,/obj/item/stock_parts/power/battery/buildable/turbo)
+	},
 /turf/simulated/floor/reinforced,
 /area/obs_shuttle/equipment)
 "Hb" = (
@@ -2231,15 +2231,14 @@
 /turf/simulated/floor/plating,
 /area/obs_shuttle/electrical)
 "IQ" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_x = 0;
-	pixel_y = 24
-	},
 /obj/structure/cable/green{
 	d2 = 2;
 	icon_state = "0-2"
+	},
+/obj/machinery/power/apc/super/critical{
+	dir = 1;
+	pixel_y = 24;
+	uncreated_component_parts = list(/obj/item/stock_parts/power/terminal,/obj/item/stock_parts/power/apc,/obj/item/stock_parts/power/battery/buildable/turbo)
 	},
 /turf/simulated/floor/plating,
 /area/obs_shuttle/electrical)
@@ -2470,15 +2469,14 @@
 /area/obs_shuttle/hydro)
 "Ml" = (
 /obj/machinery/vending/hydroseeds/generic,
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_x = 0;
-	pixel_y = 24
-	},
 /obj/structure/cable/green{
 	d2 = 8;
 	icon_state = "0-8"
+	},
+/obj/machinery/power/apc/super/critical{
+	dir = 1;
+	pixel_y = 24;
+	uncreated_component_parts = list(/obj/item/stock_parts/power/terminal,/obj/item/stock_parts/power/apc,/obj/item/stock_parts/power/battery/buildable/turbo)
 	},
 /turf/simulated/floor/tiled,
 /area/obs_shuttle/hydro)
@@ -2551,17 +2549,16 @@
 /turf/simulated/wall/r_wall,
 /area/obs_shuttle/electrical)
 "Nx" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_x = 0;
-	pixel_y = 24
-	},
 /obj/structure/cable/green{
 	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/power/apc/super/critical{
+	dir = 1;
+	pixel_y = 24;
+	uncreated_component_parts = list(/obj/item/stock_parts/power/terminal,/obj/item/stock_parts/power/apc,/obj/item/stock_parts/power/battery/buildable/turbo)
+	},
 /turf/simulated/floor/tiled,
 /area/obs_shuttle/cryo)
 "NQ" = (
