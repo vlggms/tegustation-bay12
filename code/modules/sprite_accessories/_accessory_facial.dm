@@ -140,3 +140,7 @@
 /datum/sprite_accessory/facial_hair/lumberjack
 	name = "Lumberjack"
 	icon_state = "facial_lumberjack"
+
+/datum/sprite_accessory/facial_hair/broken_man
+	name = "Broken Man"
+	icon_state = "facial_brokenman"
