@@ -52,3 +52,19 @@
 	name = "shuttle control console"
 	shuttle_tag = "Pandora"
 	req_access = list(access_expedition_shuttle_helm)
+
+/obj/effect/overmap/visitable/ship/landable/cargo_shuttle
+	name = "Pithos"
+	desc = "An SSE-U11 long range shuttle, broadcasting SCGEC codes and the callsign \"Intrepid-3 Pithos\"."
+	shuttle = "Pithos"
+	max_speed = 1/(2 SECONDS)
+	burn_delay = 1 SECONDS
+	vessel_mass = 3000
+	fore_dir = NORTH
+	skill_needed = SKILL_BASIC
+	vessel_size = SHIP_SIZE_SMALL
+
+/obj/machinery/computer/shuttle_control/explore/cargo_shuttle
+	name = "shuttle control console"
+	shuttle_tag = "Pithos"
+	req_access = list(access_expedition_shuttle_helm)

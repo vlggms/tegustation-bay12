@@ -128,12 +128,36 @@ INTREPID_ESCAPE_POD(3)
 /obj/effect/shuttle_landmark/intrepid/hangar/exploration_shuttle
 	name = "Pandora Hangar"
 	landmark_tag = "nav_hangar_pandora"
-	base_area = /area/intrepid/department/cargo/cargobay
+	base_area = /area/intrepid/department/exploration/hangar/pandora
 	base_turf = /turf/simulated/floor/plating
 
 /obj/effect/shuttle_landmark/transit/intrepid/exploration_shuttle
 	name = "In transit"
 	landmark_tag = "nav_transit_pandora"
+
+// Pithos
+/datum/shuttle/autodock/overmap/cargo_shuttle
+	name = "Pithos"
+	move_time = 60
+	shuttle_area = list(/area/shuttle/pithos/cockpit, /area/shuttle/pithos/cargo )
+	dock_target = "pithos_shuttle"
+	current_location = "nav_hangar_pithos"
+	landmark_transition = "nav_transit_pithos"
+	range = 1
+	fuel_consumption = 2
+	logging_home_tag = "nav_hangar_pithos"
+	logging_access = access_expedition_shuttle_helm
+	ceiling_type = /turf/simulated/floor/shuttle_ceiling
+
+/obj/effect/shuttle_landmark/intrepid/hangar/cargo_shuttle
+	name = "Pithos Hangar"
+	landmark_tag = "nav_hangar_pithos"
+	base_area = /area/intrepid/department/exploration/hangar/pithos
+	base_turf = /turf/simulated/floor/plating
+
+/obj/effect/shuttle_landmark/transit/intrepid/cargo_shuttle
+	name = "In transit"
+	landmark_tag = "nav_transit_pithos"
 
 // Caduceus
 /datum/shuttle/autodock/ferry/ambulance

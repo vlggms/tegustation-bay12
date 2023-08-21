@@ -312,8 +312,13 @@
 /area/intrepid/department/exploration
 	holomap_color = HOLOMAP_AREACOLOR_EXPLORATION
 
-/area/intrepid/department/exploration/hangar
-	name = "\improper Hangar"
+/area/intrepid/department/exploration/hangar/pandora
+	name = "\improper Pandora Hangar"
+	icon_state = "hangar"
+	sound_env = LARGE_ENCLOSED
+
+/area/intrepid/department/exploration/hangar/pithos
+	name = "\improper Pithos Hangar"
 	icon_state = "hangar"
 	sound_env = LARGE_ENCLOSED
 
