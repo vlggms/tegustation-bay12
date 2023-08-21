@@ -1,0 +1,10 @@
+author: Spookerton, EgorDinamit, rootoo807
+delete-after: true
+changes:
+  - tweak: Added Fade (Up, Long), Fade (Down, Long), Fade (High), Fade (Wavy), and
+      Split (Low) hair marking options.
+  - tweak: Added some ear biomods - pointy ears and long pointy ears in both up and
+      down configurations.
+  - tweak: Added long & floorlength bedhead hair styles.
+  - tweak: Added shaved bun alt and half-shaved bun alt hair styles.
+  - tweak: Added broken man facial hair style.
