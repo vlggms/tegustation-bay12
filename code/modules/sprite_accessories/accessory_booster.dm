@@ -7,16 +7,31 @@
 	body_parts = list(BP_HEAD)
 	draw_target = MARKING_TARGET_HEAD
 	draw_order = 75 //before horns
-	do_coloration = FALSE
+	do_coloration = DO_COLORATION_AUTO
 	disallows = list(
 		/datum/sprite_accessory/marking/booster/ears,
 		/datum/sprite_accessory/marking/booster/horns/ram
 	)
 
-/datum/sprite_accessory/marking/booster/horns
-	body_parts = list(BP_HEAD)
-	draw_target = MARKING_TARGET_HEAD
-	disallows = list(/datum/sprite_accessory/marking/booster/horns)
+/datum/sprite_accessory/marking/booster/ears/pointy
+	icon_state = "ears_pointy"
+	name = "Ear Biomods (Pointy)"
+	do_coloration = DO_COLORATION_SKIN
+
+/datum/sprite_accessory/marking/booster/ears/pointy_down
+	icon_state = "ears_pointy_down"
+	name = "Ear Biomods (Pointy, Down)"
+	do_coloration = DO_COLORATION_SKIN
+
+/datum/sprite_accessory/marking/booster/ears/pointy_long
+	icon_state = "ears_pointy_long"
+	name = "Ear Biomods (Pointy, Long)"
+	do_coloration = DO_COLORATION_SKIN
+
+/datum/sprite_accessory/marking/booster/ears/pointy_long_down
+	icon_state = "ears_pointy_long_down"
+	name = "Ear Biomods (Pointy, Long, Down)"
+	do_coloration = DO_COLORATION_SKIN
 
 /datum/sprite_accessory/marking/booster/ears/cat
 	icon_state = "ears_cat"
@@ -25,6 +40,11 @@
 /datum/sprite_accessory/marking/booster/ears/rabbit
 	icon_state = "ears_bun"
 	name = "Ear Biomods (Rabbit)"
+
+/datum/sprite_accessory/marking/booster/horns
+	body_parts = list(BP_HEAD)
+	draw_target = MARKING_TARGET_HEAD
+	disallows = list(/datum/sprite_accessory/marking/booster/horns)
 
 /datum/sprite_accessory/marking/booster/horns/ram
 	icon_state = "horns_ram"
