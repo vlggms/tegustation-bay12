@@ -55,14 +55,14 @@
 	uniform = /obj/item/clothing/under/rank/medical/scrubs/black
 
 /decl/hierarchy/outfit/job/intrepid/crew/medical/contractor/paramedic
-	name = OUTFIT_JOB_NAME("Paramedic")
+	name = OUTFIT_JOB_NAME("Paramedic - Contractor")
 	uniform = /obj/item/clothing/under/rank/medical/paramedic
 	suit = /obj/item/clothing/suit/storage/toggle/fr_jacket
 	shoes = /obj/item/clothing/shoes/jackboots
 	flags = OUTFIT_FLAGS_JOB_DEFAULT | OUTFIT_EXTENDED_SURVIVAL
 
 /decl/hierarchy/outfit/job/intrepid/crew/medical/contractor/chemist
-	name = OUTFIT_JOB_NAME("Chemist")
+	name = OUTFIT_JOB_NAME("Chemist - Contractor")
 	uniform = /obj/item/clothing/under/rank/chemist
 	shoes = /obj/item/clothing/shoes/white
 	pda_type = /obj/item/modular_computer/pda/chemistry

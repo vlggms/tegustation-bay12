@@ -1,4 +1,5 @@
 /decl/hierarchy/outfit/job/intrepid/crew/service
+	name = OUTFIT_JOB_NAME("Intrepid Service")
 	l_ear = /obj/item/device/radio/headset/headset_service
 	hierarchy_type = /decl/hierarchy/outfit/job/intrepid/crew/service
 
@@ -21,7 +22,7 @@
 	id_types = list(/obj/item/card/id/intrepid/crew/alien)
 
 /decl/hierarchy/outfit/job/intrepid/crew/service/janitor
-	name = OUTFIT_JOB_NAME("Janitor")
+	name = OUTFIT_JOB_NAME("Janitor - Intrepid")
 	uniform = /obj/item/clothing/under/rank/janitor
 	shoes = /obj/item/clothing/shoes/black
 	id_types = list(/obj/item/card/id/intrepid/crew/service/janitor)

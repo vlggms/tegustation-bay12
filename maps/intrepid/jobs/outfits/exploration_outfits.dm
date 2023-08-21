@@ -1,4 +1,7 @@
-decl/hierarchy/outfit/job/intrepid/crew/exploration/New()
+/decl/hierarchy/outfit/job/intrepid/crew/exploration
+	name = OUTFIT_JOB_NAME("Intrepid Marine Outfit")
+
+/decl/hierarchy/outfit/job/intrepid/crew/exploration/New()
 	..()
 	backpack_overrides[/decl/backpack_outfit/backpack]      = /obj/item/storage/backpack/explorer
 	backpack_overrides[/decl/backpack_outfit/satchel]       = /obj/item/storage/backpack/satchel/explorer

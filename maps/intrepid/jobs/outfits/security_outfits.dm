@@ -1,4 +1,5 @@
 /decl/hierarchy/outfit/job/intrepid/crew/security
+	name = OUTFIT_JOB_NAME("Intrepid Security Outfit")
 	hierarchy_type = /decl/hierarchy/outfit/job/intrepid/crew/security
 	l_ear = /obj/item/device/radio/headset/headset_sec
 	pda_slot = slot_l_store
@@ -38,7 +39,7 @@
 	shoes = /obj/item/clothing/shoes/dress
 
 /decl/hierarchy/outfit/job/intrepid/crew/security/officer
-	name = OUTFIT_JOB_NAME("Security Officer")
+	name = OUTFIT_JOB_NAME("Security Officer - Intrepid")
 	uniform = /obj/item/clothing/under/terragov/utility/exploration/security
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_types = list(/obj/item/card/id/intrepid/crew/security)

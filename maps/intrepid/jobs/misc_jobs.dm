@@ -17,7 +17,7 @@
 		"Sociologist",
 		"Trainer",
 		)
-	outfit_type = /decl/hierarchy/outfit/job/intrepid/passenger/passenger
+	outfit_type = /decl/hierarchy/outfit/job/intrepid/passenger
 	allowed_branches = list(/datum/mil_branch/civilian)
 	allowed_ranks = list(
 		/datum/mil_rank/civ/civ

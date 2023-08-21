@@ -58,7 +58,7 @@
 	uniform = /obj/item/clothing/under/rank/ntwork
 
 /decl/hierarchy/outfit/job/intrepid/passenger/research/assist/terragov
-	name = OUTFIT_JOB_NAME("Research Assistant")
+	name = OUTFIT_JOB_NAME("Research Assistant - TerraGov")
 	head = /obj/item/clothing/head/beret/terragov/research
 
 /decl/hierarchy/outfit/job/intrepid/passenger/research/assist/janitor

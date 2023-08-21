@@ -21,7 +21,7 @@
 	shoes = /obj/item/clothing/shoes/dutyboots
 
 /decl/hierarchy/outfit/job/intrepid/crew/engineering/engineer
-	name = OUTFIT_JOB_NAME("Engineer")
+	name = OUTFIT_JOB_NAME("Engineer - Intrepid")
 	uniform = /obj/item/clothing/under/terragov/utility/exploration/engineering
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_types = list(/obj/item/card/id/intrepid/crew/engineering)
@@ -37,7 +37,7 @@
 	id_types = list(/obj/item/card/id/intrepid/crew/engineering/alien)
 
 /decl/hierarchy/outfit/job/intrepid/crew/engineering/roboticisted
-	name = OUTFIT_JOB_NAME("Roboticist")
+	name = OUTFIT_JOB_NAME("Roboticist - Intrepid")
 	uniform = /obj/item/clothing/under/terragov/utility/exploration/engineering
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_types = list(/obj/item/card/id/intrepid/contractor/engineering/roboticist)

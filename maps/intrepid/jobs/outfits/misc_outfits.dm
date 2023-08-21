@@ -1,4 +1,4 @@
-/decl/hierarchy/outfit/job/intrepid/passenger/passenger
+/decl/hierarchy/outfit/job/intrepid/passenger
 	name = OUTFIT_JOB_NAME("Passenger")
 	uniform = /obj/item/clothing/under/color/grey
 	l_ear = /obj/item/device/radio/headset
@@ -7,17 +7,17 @@
 	id_types = list(/obj/item/card/id/intrepid/passenger)
 
 /decl/hierarchy/outfit/job/intrepid/passenger/passenger/psychologist
-	name = OUTFIT_JOB_NAME("Passenger")
+	name = OUTFIT_JOB_NAME("Passenger - Psychologist")
 	uniform = /obj/item/clothing/under/rank/psych/turtleneck
 	shoes = /obj/item/clothing/shoes/laceup
 
 /decl/hierarchy/outfit/job/intrepid/passenger/passenger/journalist
-	name = OUTFIT_JOB_NAME("Journalist")
+	name = OUTFIT_JOB_NAME("Passenger - Journalist")
 	backpack_contents = list(/obj/item/device/camera/tvcamera = 1,
 	/obj/item/clothing/accessory/badge/press = 1)
 
 /decl/hierarchy/outfit/job/intrepid/passenger/passenger/investor
-	name = OUTFIT_JOB_NAME("Investor")
+	name = OUTFIT_JOB_NAME("Passenger - Investor")
 
 /decl/hierarchy/outfit/job/intrepid/passenger/passenger/investor/post_equip(var/mob/living/carbon/human/H)
 	..()

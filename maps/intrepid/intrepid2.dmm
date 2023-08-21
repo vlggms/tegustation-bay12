@@ -610,9 +610,6 @@
 /turf/simulated/wall/ocp_wall,
 /area/intrepid/department/engineering/engine_room/aux)
 "bR" = (
-/obj/machinery/door/firedoor{
-	dir = 4
-	},
 /obj/machinery/light,
 /turf/simulated/open,
 /area/intrepid/misc/maint/upper/central)
@@ -12394,10 +12391,6 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
-/obj/machinery/power/apc/critical{
-	dir = 1;
-	pixel_y = 14
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
@@ -13310,9 +13303,6 @@
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/morgue)
 "Qx" = (
-/obj/machinery/door/firedoor{
-	dir = 4
-	},
 /turf/simulated/open,
 /area/intrepid/misc/maint/upper/central)
 "Qy" = (
@@ -14704,9 +14694,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/security/starboarddockingbaysecurity)
 "Vi" = (
-/obj/machinery/door/firedoor{
-	dir = 4
-	},
 /obj/machinery/light{
 	dir = 1
 	},

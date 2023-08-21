@@ -1,4 +1,5 @@
 /decl/hierarchy/outfit/job/intrepid/crew/supply
+	name = OUTFIT_JOB_NAME("Intrepid Supply Outfit")
 	l_ear = /obj/item/device/radio/headset/headset_cargo
 	hierarchy_type = /decl/hierarchy/outfit/job/intrepid/crew/supply
 
@@ -43,10 +44,6 @@
 	pda_type = /obj/item/modular_computer/pda/mining
 	flags = OUTFIT_FLAGS_JOB_DEFAULT | OUTFIT_EXTENDED_SURVIVAL
 	l_ear = /obj/item/device/radio/headset/headset_mining
-
-/decl/hierarchy/outfit/job/intrepid/passenger/research/prospector/New()
-	..()
-	BACKPACK_OVERRIDE_ENGINEERING
 
 /decl/hierarchy/outfit/job/intrepid/crew/supply/prospector/alien
 	name = OUTFIT_JOB_NAME("Prospector - Alien")

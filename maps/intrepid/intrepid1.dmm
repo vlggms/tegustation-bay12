@@ -650,8 +650,8 @@
 /area/intrepid/misc/hallway/center)
 "aIo" = (
 /obj/machinery/light_switch{
-	pixel_x = -32;
 	dir = 1;
+	pixel_x = -32;
 	pixel_y = -25
 	},
 /turf/simulated/floor/carpet/blue,
@@ -1597,9 +1597,9 @@
 	},
 /obj/structure/cable/orange,
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
+	id_tag = "ambulance_shuttle_dock";
 	pixel_x = 28;
 	pixel_y = 19;
-	id_tag = "ambulance_shuttle_dock";
 	tag_door = "ambulance_interior"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -4091,8 +4091,8 @@
 /area/intrepid/department/exploration/storage)
 "dpq" = (
 /obj/machinery/light_switch{
-	pixel_x = -32;
 	dir = 1;
+	pixel_x = -32;
 	pixel_y = -25
 	},
 /turf/simulated/floor/carpet/blue2,
@@ -4157,10 +4157,6 @@
 /area/intrepid/misc/hallway/starboard)
 "dtc" = (
 /obj/effect/floor_decal/corner/green/diagonal,
-/obj/machinery/power/apc{
-	dir = 8;
-	pixel_x = -23
-	},
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -23
@@ -12986,9 +12982,7 @@
 /turf/simulated/floor/reinforced/phoron/fuel,
 /area/intrepid/department/engineering/portthruster)
 "kLs" = (
-/obj/item/airlock_brace{
-	req_access = list("access_heads_vault")
-	},
+/obj/item/airlock_brace,
 /obj/machinery/door/airlock/highsecurity,
 /turf/simulated/floor/reinforced,
 /area/intrepid/misc/maint/starboard)
@@ -14454,8 +14448,8 @@
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	dir = 1;
-	pixel_y = -25;
 	id_tag = "ambulance_intrepid_dock";
+	pixel_y = -25;
 	tag_door = "ambulance_exterior_dock"
 	},
 /turf/simulated/floor,
@@ -16939,9 +16933,7 @@
 /area/intrepid/department/security/armory)
 "nKK" = (
 /obj/machinery/door/airlock/highsecurity,
-/obj/item/airlock_brace{
-	req_access = list("access_heads_vault")
-	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/reinforced,
 /area/intrepid/misc/maint/portside)
 "nLp" = (
@@ -17228,8 +17220,8 @@
 /area/turbolift/intrepidcargo/lift)
 "oaI" = (
 /obj/machinery/light_switch{
-	pixel_x = -32;
 	dir = 1;
+	pixel_x = -32;
 	pixel_y = -25
 	},
 /turf/simulated/floor/carpet/red,
@@ -24044,9 +24036,7 @@
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/treatment)
 "tjE" = (
-/obj/item/airlock_brace{
-	req_access = list("access_heads_vault")
-	},
+/obj/item/airlock_brace,
 /obj/machinery/door/airlock/highsecurity,
 /turf/simulated/floor/reinforced,
 /area/intrepid/misc/maint/aft)
@@ -26561,8 +26551,8 @@
 /area/intrepid/department/cargo/cargobay)
 "viW" = (
 /obj/machinery/light_switch{
-	pixel_x = 32;
 	dir = 1;
+	pixel_x = 32;
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -27291,11 +27281,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/item/airlock_brace{
-	req_access = list("access_armory")
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/security/armory_tactical)
 "vKG" = (
@@ -28083,9 +28071,7 @@
 /area/intrepid/misc/hallway/portside)
 "wuw" = (
 /obj/machinery/door/airlock/highsecurity,
-/obj/item/airlock_brace{
-	req_access = list("access_heads_vault")
-	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/reinforced,
 /area/intrepid/misc/maint/aft)
 "wuB" = (
