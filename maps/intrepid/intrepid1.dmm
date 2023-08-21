@@ -928,7 +928,7 @@
 	dir = 1
 	},
 /obj/machinery/door/window/brigdoor/southleft{
-	req_access = list(access_virology)
+	req_access = list("ACCESS_VIRO")
 	},
 /mob/living/carbon/human/monkey/punpun,
 /turf/simulated/floor/tiled/white,
