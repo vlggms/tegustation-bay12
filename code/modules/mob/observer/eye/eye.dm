@@ -69,6 +69,7 @@
 		return
 	LAZYREMOVE(user.additional_vision_handlers, src)
 	owner.eyeobj = null
+	owner.reset_view()
 	owner = null
 	SetName(initial(name))
 
