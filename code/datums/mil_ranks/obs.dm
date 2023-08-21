@@ -5,10 +5,18 @@
 	email_domain = "obs.terra-2" // Used to be legal for a very short time before throwing a fit
 
 	rank_types = list(
-		/datum/mil_rank/skrell_fleet
+		/datum/mil_rank/obs/initiate,
+		/datum/mil_rank/obs/acolyte,
+		/datum/mil_rank/obs/socius,
+		/datum/mil_rank/obs/inquisitor,
+		/datum/mil_rank/obs/controller,
+		/datum/mil_rank/obs/magister,
 	)
 	spawn_rank_types = list(
-		/datum/mil_rank/skrell_fleet
+		/datum/mil_rank/obs/initiate,
+		/datum/mil_rank/obs/acolyte,
+		/datum/mil_rank/obs/socius,
+		/datum/mil_rank/obs/inquisitor,
 	)
 
 /datum/mil_rank/obs
