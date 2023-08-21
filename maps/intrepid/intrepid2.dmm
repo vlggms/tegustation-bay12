@@ -5234,12 +5234,9 @@
 "qO" = (
 /obj/machinery/door/airlock/external/glass/bolted{
 	frequency = 1380;
-	id_tag = "merchant_shuttle_station_exterior"
+	id_tag = "merchant_shuttle_station_outer_airlock"
 	},
 /obj/effect/floor_decal/industrial/warning/fulltile,
-/obj/machinery/door/blast/regular{
-	id_tag = "externaldockblastdoor3"
-	},
 /turf/simulated/floor/tiled/dark/airless,
 /area/intrepid/department/civillian/dockbaythree)
 "qP" = (
@@ -6031,7 +6028,7 @@
 /obj/machinery/door/airlock/external/bolted_open{
 	frequency = 1380;
 	icon_state = "open";
-	id_tag = "merchant_shuttle_station_interior"
+	id_tag = "merchant_shuttle_station_airlock"
 	},
 /obj/effect/floor_decal/industrial/warning/fulltile,
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -7826,7 +7823,7 @@
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	dir = 4;
-	frequency = 1331;
+	frequency = 1380;
 	id_tag = "merchant_shuttle_station_dock";
 	pixel_x = -24;
 	req_access = list("ACCESS_EXTERNAL");
