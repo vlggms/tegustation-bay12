@@ -623,7 +623,12 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 		desc += " (<b>[escaped_total>0 ? escaped_total : "none"] escaped</b>), <b>[offship_players] off-ship player(s)."
 		data += " and <b>[ghosts] ghosts</b>.</b><br>"
 	else
-		desc += "There were <b>no survivors</b>, <b>[data["offship_players"]] off-ship player(s)</b>, (<b>[data["ghosts"]] ghosts</b>)."
+		desc += "There were <b>no survivors</b>, <b>[data["offship_players"]] off-ship player(s)</b>, (<b>[data["ghosts"]] ghosts</b>).<br>"
+
+	for(var/line in SSstatistics.get_field(STAT_FLAGS_PLANTED))
+		if(!islist(line))
+			continue
+		desc += "[line["planet"]] was claimed for \the [line["gov"]] by [line["user"]]!<br>"
 
 	return desc
 

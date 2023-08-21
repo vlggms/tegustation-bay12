@@ -42,7 +42,7 @@
 	T.visible_message("<span class='notice'>[user] successfully claims this world for \the [claim_government]!</span>")
 	playsound(T, 'sound/effects/banner_deploy.ogg', 35, 1)
 	P.claim = claim_government
-	SSstatistics.add_field(STAT_FLAGS_PLANTED, list("gov" = claim_government, "user" = user, "planet" = P.name))
+	SSstatistics.add_field(STAT_FLAGS_PLANTED, list("gov" = claim_government, "user" = user.real_name, "planet" = P.name))
 	qdel(src)
 
 /* Various subtypes */
