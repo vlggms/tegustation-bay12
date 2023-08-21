@@ -248,6 +248,7 @@ var/list/gear_datums = list()
 				entry += "<font color=55cc55>Character's age higher than [min_age].</font>"
 			else
 				entry += "<font color=cc5555>Character's age higher than [min_age].</font>"
+			entry += "</i>"
 
 		if (G.whitelisted && pref.species)
 			entry += "<br><i>"

@@ -7281,8 +7281,7 @@
 /obj/machinery/power/sensor{
 	id_tag = "R-UST Production Grid";
 	name = "R-UST Production Grid";
-	name_tag = "R-UST Production Grid";
-	tag = "R-UST Production Grid"
+	name_tag = "R-UST Production Grid"
 	},
 /obj/structure/cable{
 	icon_state = "0-2"
@@ -12979,8 +12978,7 @@
 /obj/machinery/power/sensor{
 	id_tag = "Supermatter Production Grid";
 	name = "Supermatter Production Grid";
-	name_tag = "Supermatter Production Grid";
-	tag = "Supermatter Production Grid"
+	name_tag = "Supermatter Production Grid"
 	},
 /obj/structure/cable{
 	d2 = 4;

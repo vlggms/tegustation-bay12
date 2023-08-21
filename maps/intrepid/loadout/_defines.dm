@@ -1,5 +1,5 @@
 #define COMMAND_ROLES list(/datum/job/captain, /datum/job/hop, /datum/job/hos, /datum/job/rd, \
-		/datum/job/cmo, /datum/job/chief_engineer, /datum/job/representative, /datum/job/bridgeofficer\
+		/datum/job/cmo, /datum/job/chief_engineer, /datum/job/representative, /datum/job/bridgeofficer, \
 		/datum/job/psiadvisor)
 #define SECURITY_ROLES list(/datum/job/hos, /datum/job/warden, /datum/job/detective, /datum/job/officer)
 #define SUPPLY_ROLES list(/datum/job/qm, /datum/job/cargo_tech, /datum/job/mining)

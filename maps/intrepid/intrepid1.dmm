@@ -1599,7 +1599,7 @@
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	pixel_x = 28;
 	pixel_y = 19;
-	tag = "ambulance_shuttle_dock";
+	id_tag = "ambulance_shuttle_dock";
 	tag_door = "ambulance_interior"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -14455,7 +14455,7 @@
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	dir = 1;
 	pixel_y = -25;
-	tag = "ambulance_intrepid_dock";
+	id_tag = "ambulance_intrepid_dock";
 	tag_door = "ambulance_exterior_dock"
 	},
 /turf/simulated/floor,
@@ -21458,7 +21458,7 @@
 "rks" = (
 /obj/machinery/door/airlock/external/glass/bolted{
 	frequency = 1379;
-	tag = "ambulance_interior"
+	id_tag = "ambulance_interior"
 	},
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -28816,7 +28816,7 @@
 "wVN" = (
 /obj/machinery/door/airlock/external/glass/bolted{
 	frequency = 1379;
-	tag = "ambulance_exterior_dock"
+	id_tag = "ambulance_exterior_dock"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
