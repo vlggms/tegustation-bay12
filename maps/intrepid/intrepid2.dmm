@@ -730,6 +730,22 @@
 "ck" = (
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/starboard)
+"cl" = (
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper/starboard)
 "cm" = (
 /obj/machinery/firealarm{
 	dir = 4;
@@ -2546,7 +2562,9 @@
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/civillian/safe_room/port)
 "id" = (
-/obj/machinery/suit_storage_unit/mining/alt,
+/obj/machinery/suit_storage_unit/mining/alt{
+	req_access = list()
+	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/cargo/cargostorage)
@@ -3398,6 +3416,16 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /turf/simulated/floor/tiled/steel_grid,
 /area/intrepid/department/civillian/dockbayone)
+"kZ" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/machinery/power/apc{
+	pixel_y = -24
+	},
+/obj/structure/cable/green,
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper/starboard)
 "la" = (
 /obj/machinery/rotating_alarm{
 	dir = 4;
@@ -4650,7 +4678,9 @@
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/engineering/engine_room)
 "oT" = (
-/obj/machinery/suit_storage_unit/mining,
+/obj/machinery/suit_storage_unit/mining{
+	req_access = list()
+	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/cargo/cargostorage)
@@ -6042,6 +6072,22 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/civillian/dockbaythree)
+"tr" = (
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper/portside)
 "ts" = (
 /obj/effect/paint/sun,
 /turf/simulated/wall/r_titanium,
@@ -6814,6 +6860,15 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/exploration/hangar/pandora)
+"vv" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/black,
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper/central)
 "vx" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -10805,6 +10860,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/pithos/cargo)
+"IA" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper/central)
 "IB" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/techfloor,
@@ -11235,6 +11298,25 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/morgue)
+"JY" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/black{
+	dir = 4
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_x = 0;
+	pixel_y = 24;
+	req_access = list("ACCESS_MERCHANT")
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper/portside)
 "JZ" = (
 /obj/structure/bookcase/manuals/engineering{
 	density = 0;
@@ -36652,8 +36734,8 @@ Rb
 Wn
 Ja
 Na
-ai
-JO
+cl
+kZ
 Nx
 rj
 rj
@@ -36707,8 +36789,8 @@ Sz
 XT
 XT
 NS
-hc
-Rd
+JY
+tr
 Mx
 GQ
 BB
@@ -37058,7 +37140,7 @@ UA
 Na
 rR
 JA
-of
+IA
 of
 of
 of
@@ -37110,7 +37192,7 @@ Qu
 Qu
 Qu
 Qu
-Qu
+vv
 Yk
 Nf
 LQ
@@ -37260,7 +37342,7 @@ Yr
 Na
 rd
 Gm
-PF
+sF
 PF
 PF
 PF
@@ -37312,7 +37394,7 @@ PF
 PF
 PF
 PF
-PF
+sF
 hh
 dl
 LQ
