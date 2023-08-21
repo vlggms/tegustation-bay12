@@ -20,7 +20,7 @@
 	if(!allowed(user))
 		to_chat(user, "<span class='warning'>\The [src] does not recognize your authority!</span>")
 		return
-	var/obj/effect/overmap/visitable/sector/exoplanet/P = map_sectors["[z]"]
+	var/obj/effect/overmap/visitable/sector/exoplanet/P = map_sectors["[user.z]"]
 	if(!istype(P))
 		to_chat(user, "<span class='warning'>\The [src] must be deployed on a planet!</span>")
 		return
@@ -34,7 +34,7 @@
 	if(!user.unEquip(src))
 		return
 
-	var/obj/structure/banner/exploration/E = new(T)
+	var/obj/structure/banner/exploration/E = new banner_type(T)
 	var/dudename = ID.registered_name
 	if(istype(ID.military_rank))
 		dudename = "[ID.military_rank.name] [dudename]"
