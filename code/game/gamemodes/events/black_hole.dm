@@ -45,8 +45,8 @@
 		//MOVEMENT
 		var/list/pick_dirs = GLOB.alldirs.Copy()
 		for(var/i = 1 to 4)
-			var/new_dir = pick_dirs
-			var/turf/simulated/T = get_step(src, pick(new_dir))
+			var/new_dir = pick(pick_dirs)
+			var/turf/simulated/T = get_step(src, new_dir)
 			if(!istype(T) || T.density)
 				pick_dirs -= new_dir
 				continue
