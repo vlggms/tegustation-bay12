@@ -352,7 +352,6 @@
 		rad = ARMOR_RAD_RESISTANT
 		)
 	light_overlay = "helmet_light_dual_alt"
-	tinted = FALSE
 
 /obj/item/clothing/head/helmet/space/void/marine/dark
 	name = "dark marine voidsuit helmet"
