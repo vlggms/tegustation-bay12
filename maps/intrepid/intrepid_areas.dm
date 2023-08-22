@@ -656,6 +656,11 @@
 	icon_state = "security"
 	req_access = list(access_security)
 
+/area/intrepid/department/security/interrogation
+	name = "\improper Security Processing"
+	icon_state = "security"
+	req_access = list(access_security)
+
 /area/intrepid/department/security/detectives_office
 	name = "\improper Security - Investigations Office"
 	icon_state = "detective"
