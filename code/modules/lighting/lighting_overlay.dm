@@ -145,5 +145,5 @@
 /atom/movable/lighting_overlay/Move()
 	return 0
 
-/atom/movable/lighting_overlay/throw_at()
+/atom/movable/lighting_overlay/throw_at(atom/target, range, speed, mob/thrower, spin = TRUE, datum/callback/callback)
 	return 0

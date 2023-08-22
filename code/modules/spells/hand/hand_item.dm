@@ -53,7 +53,7 @@ Basically: I can use it to target things where I click. I can then pass these ta
 	if(hand_spell)
 		fire_spell(A,user)
 
-/obj/item/magic_hand/throw_at() //no throwing pls
+/obj/item/magic_hand/throw_at(atom/target, range, speed, mob/thrower, spin = TRUE, datum/callback/callback) //no throwing pls
 	usr.drop_from_inventory(src)
 
 /obj/item/magic_hand/dropped() //gets deleted on drop

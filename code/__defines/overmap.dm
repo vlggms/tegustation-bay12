@@ -1,3 +1,6 @@
+//How far from the edge of overmap zlevel could randomly placed objects spawn
+#define OVERMAP_EDGE 2
+
 #define SHIP_SIZE_TINY	1
 #define SHIP_SIZE_SMALL	2
 #define SHIP_SIZE_LARGE	3
