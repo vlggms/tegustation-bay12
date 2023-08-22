@@ -34,3 +34,4 @@
 		var/obj/effect/bhole/safe/B = new(TT)
 		B.alpha = 0
 		animate(B, alpha = 255, time = 3)
+		QDEL_IN(B, rand(45 SECONDS, 90 SECONDS))

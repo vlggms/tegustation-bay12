@@ -40,7 +40,7 @@
 
 		for(var/i = 1 to 5)
 			sleep(8)
-			Grav(35 + (i * 10), i) // Gets progressively more dangerous
+			Grav(35 + (i * 10), i, prob(50)) // Gets progressively more dangerous
 
 		//MOVEMENT
 		var/list/pick_dirs = GLOB.alldirs.Copy()
@@ -53,7 +53,7 @@
 			forceMove(T)
 			break
 
-/obj/effect/bhole/proc/Grav(pull_chance = 90, throw_speed = 1)
+/obj/effect/bhole/proc/Grav(pull_chance = 90, throw_speed = 1, throw_dir = FALSE)
 	var/turf/T = get_turf(src)
 	var/obj/effect/effect/warp/W = new warp_type(T)
 	animate(W, alpha = 0, time = 6)
@@ -62,7 +62,8 @@
 		if(A.anchored || !A.simulated || !prob(pull_chance))
 			continue
 		var/dist = grav_range - get_dist(A, src)
-		A.throw_at(get_edge_target_turf(A, get_dir(src, A)), dist, throw_speed, spin = FALSE)
+		throw_dir = throw_dir ? get_dir(A, src) : get_dir(src, A)
+		A.throw_at(get_edge_target_turf(A, throw_dir), dist, throw_speed, spin = FALSE)
 
 /obj/effect/bhole/safe
 	destroy_mobs = FALSE
