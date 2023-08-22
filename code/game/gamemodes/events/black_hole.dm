@@ -66,8 +66,7 @@
 		warp_effect = new warp_type(T)
 	warp_effect.forceMove(T)
 	warp_effect.alpha = 255
-	animate(W, alpha = 0, time = 6)
-	QDEL_IN(W, 6)
+	animate(warp_effect, alpha = 0, time = 6)
 	for(var/atom/movable/A in view(T, grav_range))
 		if(A.anchored || !A.simulated || !prob(pull_chance))
 			continue
