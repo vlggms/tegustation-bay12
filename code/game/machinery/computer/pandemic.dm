@@ -116,7 +116,8 @@
 		if(!LAZYLEN(disease_data) && !LAZYLEN(vaccine_data))
 			to_chat(user, SPAN_WARNING("\The [src] cannot detect any visible diseases or antibodies."))
 	else
-		to_chat(user, SPAN_WARNING("\The beaker does not contain blood!"))
+		to_chat(user, SPAN_WARNING("The beaker does not contain blood!"))
+	dat += "<br><A href='byond://?src=[REF(src)];remove_beacon=1'>Remove beaker</a>"
 	var/datum/browser/popup = new(user, "pandemic_computer", "Pan.D.E.M.I.C. 2200 console", 400, 600)
 	popup.set_content(dat)
 	popup.open()
@@ -150,6 +151,10 @@
 		B.reagents.add_reagent(/datum/reagent/vaccine, 15, list(id))
 		vaccine_cooldown = world.time + 30 SECONDS
 		playsound(src, 'sound/machines/ping.ogg', 30, TRUE)
+		return TOPIC_HANDLED
+	if(href_list["remove_beacon"])
+		if(Adjacent(usr))
+			EjectBeaker()
 		return TOPIC_HANDLED
 
 /obj/machinery/computer/pandemic/proc/GetByIndex(thing, index)
