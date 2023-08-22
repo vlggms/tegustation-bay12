@@ -61,7 +61,9 @@ Bonus
 				to_chat(H, SPAN_WARNING(pick("Your windpipe feels like a straw.", "Your breathing becomes tremendously difficult.")))
 			else
 				to_chat(H, SPAN_WARNING("You feel very [pick("dizzy","woozy","faint")].")) // Fake bloodloss messages
-			H.adjustOxyLoss(rand(9, 18))
+			H.adjustOxyLoss(rand(16, 20))
+			if(!(CE_STABLE in H.chem_effects))
+				H.losebreath = max(H.losebreath + 4, H.losebreath)
 			H.emote("gasp")
 			if(damage_lungs && prob(10))
 				var/obj/item/organ/internal/I = H.internal_organs_by_name[H.species.breathing_organ]
@@ -73,7 +75,9 @@ Bonus
 
 		if(5)
 			to_chat(H, SPAN_USERDANGER("[pick("You're choking!", "You can't breathe!")]"))
-			H.adjustOxyLoss(rand(14, 26))
+			H.adjustOxyLoss(rand(24, 28))
+			if(!(CE_STABLE in H.chem_effects))
+				H.losebreath = max(H.losebreath + 7, H.losebreath)
 			H.emote("gasp")
 			if(damage_lungs && prob(15))
 				var/obj/item/organ/internal/I = H.internal_organs_by_name[H.species.breathing_organ]
