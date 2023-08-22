@@ -254,6 +254,15 @@
 	opacity = 0
 	color = "#321945"
 
+// Teleports ship to random location on the overmap when passed
+// Spawned only via random event, self-deletes when event ends
+/obj/effect/overmap/event/wormhole
+	name = "wormhole"
+	events = list(/datum/event/wormhole_jump)
+	event_icon_states = list("wormhole1")
+	opacity = 0
+	color = "#111111"
+
 //These now are basically only used to spawn hazards. Will be useful when we need to spawn group of moving hazards
 /datum/overmap_event
 	var/name = "map event"
