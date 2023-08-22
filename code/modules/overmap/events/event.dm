@@ -261,7 +261,7 @@
 	events = list(/datum/event/wormhole_jump)
 	event_icon_states = list("wormhole1")
 	opacity = 0
-	color = "#111111"
+	color = "#aaaaaa"
 
 //These now are basically only used to spawn hazards. Will be useful when we need to spawn group of moving hazards
 /datum/overmap_event

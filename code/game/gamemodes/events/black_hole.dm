@@ -11,12 +11,19 @@
 	var/destroy_objs = TRUE
 	var/destroy_turfs = TRUE
 	var/obj/effect/effect/warp/warp_type = /obj/effect/effect/warp
+	// Currently spawned effect, so we don't have to create one every time
+	var/obj/effect/effect/warp/warp_effect = null
 	var/grav_range = 5
 
 /obj/effect/bhole/Initialize()
 	. = ..()
 	spawn(4)
 		controller()
+
+/obj/effect/bhole/Destroy()
+	QDEL_NULL(warp_effect)
+	warp_effect = null
+	return ..()
 
 /obj/effect/bhole/proc/controller()
 	while(src)
@@ -55,7 +62,10 @@
 
 /obj/effect/bhole/proc/Grav(pull_chance = 90, throw_speed = 1, throw_dir = FALSE)
 	var/turf/T = get_turf(src)
-	var/obj/effect/effect/warp/W = new warp_type(T)
+	if(!istype(warp_effect))
+		warp_effect = new warp_type(T)
+	warp_effect.forceMove(T)
+	warp_effect.alpha = 255
 	animate(W, alpha = 0, time = 6)
 	QDEL_IN(W, 6)
 	for(var/atom/movable/A in view(T, grav_range))
