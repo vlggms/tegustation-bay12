@@ -1,0 +1,5 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: On lower server population, the lighting overlod station trait will break
+      less lights.
