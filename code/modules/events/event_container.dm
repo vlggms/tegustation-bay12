@@ -196,10 +196,17 @@ var/global/list/severity_to_string = list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Bluespace Drive Instability",		/datum/event/bsd_instability,		0,list(ASSIGNMENT_ENGINEER = 10, ASSIGNMENT_ANY = 5), 1),
 	)
 
+/datum/event_container/catastrophe
+	severity = EVENT_LEVEL_CATASTROPHE
+	available_events = list(
+		new /datum/event_meta(EVENT_LEVEL_CATASTROPHE, "Nothing",			/datum/event/nothing,			100),
+		new /datum/event_meta(EVENT_LEVEL_CATASTROPHE, "Leviathan",			/datum/event/leviathan_spawn,	0,		list(ASSIGNMENT_COMMAND = 5, ASSIGNMENT_EXPLORATION = 5, ASSIGNMENT_SECURITY = 5, ASSIGNMENT_MEDICAL = 5, ASSIGNMENT_ENGINEER = 5))
+	)
+
 /datum/event_container/exo
 	severity = EVENT_LEVEL_EXO
 	available_events = list(
-		new /datum/event_meta(EVENT_LEVEL_EXO, "Nothing",			/datum/event/nothing,		100),
+		new /datum/event_meta(EVENT_LEVEL_EXO, "Nothing",				/datum/event/nothing,		100),
 		new /datum/event_meta(EVENT_LEVEL_EXO, "Exoplanet Awakening",	/datum/event/exo_awakening,	0,		list(ASSIGNMENT_ANY = 2, ASSIGNMENT_EXPLORATION = 5))
 	)
 
