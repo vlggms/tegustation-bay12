@@ -23,7 +23,8 @@
 		href_list["datumrefresh"] = href_list["rename"]
 
 	else if(href_list["dressup"])
-		if(!check_rights(R_VAREDIT))	return
+		if(!check_rights(R_SPAWN))
+			return
 
 		DressUpMobTarget(locate(href_list["dressup"]))
 
