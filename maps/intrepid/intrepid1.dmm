@@ -9182,17 +9182,11 @@
 /area/intrepid/department/engineering/starboardthruster)
 "hoy" = (
 /obj/structure/disposalpipe/up,
-/obj/structure/cable/green{
-	icon_state = "16-0"
-	},
 /obj/machinery/atmospherics/pipe/zpipe/up/scrubbers{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/zpipe/up/supply{
 	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
@@ -20827,7 +20821,10 @@
 	sort_type = "Forensics"
 	},
 /obj/structure/cable/green{
-	icon_state = "1-8"
+	icon_state = "0-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "16-0"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
