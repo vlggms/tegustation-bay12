@@ -304,10 +304,12 @@
 	START_PROCESSING(SSobj, src)
 	// You have a total of 25 minutes to kill it, before it completely overruns the sector
 	addtimer(CALLBACK(src, .proc/WarnApocalypse), 20 MINUTES)
+
+/obj/effect/overmap/event/leviathan/Process()
 	if(world.time >= hive_cooldown)
-		SpawnHives()
+		INVOKE_ASYNC(src, .proc/SpawnHives)
 	if(world.time > wail_cooldown)
-		Wail()
+		INVOKE_ASYNC(src, .proc/Wail)
 
 /obj/effect/overmap/event/leviathan/Destroy()
 	STOP_PROCESSING(SSobj, src)
@@ -333,6 +335,8 @@
 	var/list/candidate_turfs = block(locate(OVERMAP_EDGE, OVERMAP_EDGE, GLOB.using_map.overmap_z), locate(GLOB.using_map.overmap_size - OVERMAP_EDGE, GLOB.using_map.overmap_size - OVERMAP_EDGE, GLOB.using_map.overmap_z))
 	candidate_turfs = where(candidate_turfs, /proc/can_not_locate, /obj/effect/overmap)
 	for(var/i = 1 to hive_spawn_count)
+		if(!LAZYLEN(candidate_turfs))
+			break
 		var/turf/T = pick(candidate_turfs)
 		new /obj/effect/overmap/event/infestation_hive(T)
 		candidate_turfs -= T
@@ -342,6 +346,8 @@
 	var/list/affected_z = list()
 	for(var/obj/effect/overmap/visitable/V in range(3, src))
 		affected_z |= V.map_z
+	if(!LAZYLEN(affected_z))
+		return
 	var/wail_sound = pick(wail_sounds)
 	var/sound_vol = rand(25, 100)
 	for(var/mob/M in GLOB.player_list)
@@ -364,8 +370,8 @@
 		return
 
 	var/list/affected_z = list()
-	for(var/obj/effect/overmap/visitable/V in range(3, src))
-		affected_z |= V.map_z
+	for(var/i in map_sectors)
+		affected_z |= text2num(i)
 	command_announcement.Announce(
 		"The structure of space is being manipulated by the Leviathan entity. \n\
 		All nearby vessels have approximately 5 minutes before it is too late.",
@@ -381,8 +387,8 @@
 		return
 
 	var/list/affected_z = list()
-	for(var/obj/effect/overmap/visitable/V in range(3, src))
-		affected_z |= V.map_z
+	for(var/i in map_sectors)
+		affected_z |= text2num(i)
 	command_announcement.Announce(
 		"The hyperspace fluctuations have entered their final phase. All vessels are recommended to evacuate via bluespace teleportation. \n\
 		It is now too late.",
