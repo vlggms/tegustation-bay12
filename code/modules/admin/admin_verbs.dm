@@ -963,7 +963,7 @@ var/list/admin_verbs_mentors = list(
 	if(!check_rights(R_SPAWN))
 		return
 
-	if(!ishuman(M) || !isghost(M))
+	if(!ishuman(M) && !isghost(M))
 		to_chat(usr, SPAN_DANGER("This can only be used on instances of type /mob/living/carbon/human or /mob/observer/ghost"))
 		return
 
