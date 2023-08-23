@@ -17,7 +17,7 @@
 	blacklist = list(/datum/station_trait/slow_shuttle)
 
 /datum/station_trait/quick_shuttle/on_round_start()
-	SSsupply.movetime = 900
+	SSsupply.movetime = round(SSsupply.movetime * 0.75)
 
 /datum/station_trait/premium_crewbox
 	name = "Premium Survival Boxes"

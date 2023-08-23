@@ -7,7 +7,7 @@
 	blacklist = list(/datum/station_trait/quick_shuttle)
 
 /datum/station_trait/slow_shuttle/on_round_start()
-	SSsupply.movetime = 1500
+	SSsupply.movetime = round(SSsupply.movetime * 1.25)
 
 /datum/station_trait/disabled_lighting
 	name = "Overloaded Lighting"
@@ -17,6 +17,13 @@
 	report_message = "The ship has been through a light electrical storm, and as such, some light bulbs might need replacement."
 
 /datum/station_trait/disabled_lighting/on_round_start()
+	var/overload_chance = 25 // Every fourth light
+	// Low pop will have less broken lights
+	if(GLOB.clients < 5)
+		overload_chance = 5
+	else if(GLOB.clients < 10)
+		overload_chance = 15
+
 	for(var/obj/machinery/power/apc/C in SSmachines.machinery)
 		if(!C.is_critical && (C.z in GLOB.using_map.station_levels))
-			C.overload_lighting(25) // Every fourth light
+			C.overload_lighting(overload_chance)
