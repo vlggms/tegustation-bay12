@@ -334,7 +334,7 @@
 	hive_cooldown = world.time + hive_cooldown_time
 	var/list/candidate_turfs = block(locate(OVERMAP_EDGE, OVERMAP_EDGE, GLOB.using_map.overmap_z), locate(GLOB.using_map.overmap_size - OVERMAP_EDGE, GLOB.using_map.overmap_size - OVERMAP_EDGE, GLOB.using_map.overmap_z))
 	candidate_turfs = where(candidate_turfs, /proc/can_not_locate, /obj/effect/overmap)
-	for(var/i = 1 to hive_spawn_count)
+	for(var/i = 1 to amount)
 		if(!LAZYLEN(candidate_turfs))
 			break
 		var/turf/T = pick(candidate_turfs)
@@ -349,7 +349,7 @@
 	if(!LAZYLEN(affected_z))
 		return
 	var/wail_sound = pick(wail_sounds)
-	var/sound_vol = rand(25, 100)
+	var/sound_vol = rand(75, 150)
 	for(var/mob/M in GLOB.player_list)
 		if(!(M.z in affected_z))
 			continue
@@ -402,7 +402,7 @@
 		if(!(M.z in affected_z))
 			continue
 		M.playsound_local(get_turf(M), 'sound/simple_mob/abominable_infestation/leviathan/apocalypse.ogg', 100, TRUE)
-		to_chat(M, SPAN_USERDANGER("A terrible noise disturbs the space, something bad has truly happened. It is all over."))
+		to_chat(M, SPAN_DANGER("A terrible noise disturbs the space, something bad has truly happened. It is all over."))
 		flash_color(M, flash_color = COLOR_MAROON, flash_time = 1000)
 		if(ishuman(M) && prob(50))
 			var/mob/living/carbon/human/H = M
@@ -417,7 +417,7 @@
 		if(QDELETED(T))
 			continue
 		T.icon_state = "hell01"
-		sleep(2)
+		sleep(1)
 
 /obj/effect/overmap/event/infestation_hive
 	name = "infestation hive"

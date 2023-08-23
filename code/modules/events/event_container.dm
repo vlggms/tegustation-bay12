@@ -9,7 +9,7 @@
 #define ASSIGNMENT_EXPLORATION "Exploration"
 #define ASSIGNMENT_SECURITY "Security"
 
-var/global/list/severity_to_string = list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT_LEVEL_MODERATE = "Moderate", EVENT_LEVEL_MAJOR = "Major", EVENT_LEVEL_EXO = "Exoplanet")
+var/global/list/severity_to_string = list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT_LEVEL_MODERATE = "Moderate", EVENT_LEVEL_MAJOR = "Major", EVENT_LEVEL_CATASTROPHE = "Catastrophe", EVENT_LEVEL_EXO = "Exoplanet")
 
 /datum/event_container
 	var/severity = -1
