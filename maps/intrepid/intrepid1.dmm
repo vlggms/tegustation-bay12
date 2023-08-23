@@ -3774,6 +3774,9 @@
 	icon_state = "pipe-c"
 	},
 /obj/structure/reagent_dispensers/coolanttank,
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
 "dce" = (
@@ -9180,9 +9183,6 @@
 "hoy" = (
 /obj/structure/disposalpipe/up,
 /obj/structure/cable/green{
-	icon_state = "0-8"
-	},
-/obj/structure/cable/green{
 	icon_state = "16-0"
 	},
 /obj/machinery/atmospherics/pipe/zpipe/up/scrubbers{
@@ -9190,6 +9190,9 @@
 	},
 /obj/machinery/atmospherics/pipe/zpipe/up/supply{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
@@ -20823,6 +20826,9 @@
 	name = "Forensics";
 	sort_type = "Forensics"
 	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
 "qEu" = (
@@ -25221,11 +25227,11 @@
 /area/intrepid/misc/hallway/starboard)
 "uas" = (
 /obj/structure/disposalpipe/segment,
-/obj/structure/cable/green{
-	icon_state = "1-4"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
 "uaD" = (
@@ -29974,6 +29980,21 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/escape_pod1/station)
+"xOa" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/aft)
 "xOH" = (
 /obj/machinery/papershredder,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -59168,8 +59189,8 @@ wHp
 qng
 nav
 vld
-rai
-pTC
+tYb
+xOa
 tIB
 eeG
 ufs
