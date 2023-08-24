@@ -93,7 +93,7 @@
 /datum/bubble_effect/infestation/TurfEffect(turf/T)
 	if(TICK_CHECK)
 		return TRUE
-	if(T.density)
+	if(T.density || is_open_space(T) || is_space_turf(T))
 		return TRUE
 	if(prob(33))
 		return TRUE
