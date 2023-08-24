@@ -126,3 +126,15 @@
 	var/datum/gender/T = gender_datums[get_gender()]
 	visible_message(SPAN_DANGER("[src] lets out the final gasp, succumbing to [T.his] injuries."))
 	death()
+
+/mob/living/carbon/human/proc/physically_destroyed(skip_qdel, droplimb_type = DROPLIMB_BLUNT)
+	for(var/obj/item/organ/external/limb in organs)
+		var/limb_can_amputate = (limb.limb_flags & ORGAN_FLAG_CAN_AMPUTATE)
+		limb.limb_flags |= ORGAN_FLAG_CAN_AMPUTATE
+		limb.droplimb(TRUE, droplimb_type, TRUE, TRUE)
+		if(!QDELETED(limb) && !limb_can_amputate)
+			limb.limb_flags &= ~ORGAN_FLAG_CAN_AMPUTATE
+	for(var/obj/item/I in src)
+		drop_from_inventory(I)
+	if(!skip_qdel && !QDELETED(src))
+		qdel(src)

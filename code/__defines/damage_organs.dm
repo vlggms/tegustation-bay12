@@ -130,3 +130,9 @@
 #define APPENDIX_INFLAMATION_MIDDLE 400
 /// The finale - appendix rupture is inevitable
 #define APPENDIX_INFLAMATION_CRITICAL 600
+
+// enum-ish values for surgery conditions
+#define OPERATE_DENY     0
+#define OPERATE_PASSABLE 1
+#define OPERATE_OKAY     2
+#define OPERATE_IDEAL    3
