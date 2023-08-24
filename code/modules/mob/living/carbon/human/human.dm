@@ -631,7 +631,7 @@
 /mob/living/proc/empty_stomach()
 	return
 
-/mob/living/carbon/human/empty_stomach()
+/mob/living/carbon/human/empty_stomach(bloodyvomit = FALSE, bloodtovomit = 0) //blood to vomit is about of units to put into the vomit, does nothing if bloodyvomit is disabled
 
 	Stun(3)
 
@@ -685,6 +685,8 @@
 		if(stomach.ingested.total_volume)
 			stomach.ingested.trans_to_obj(splat, min(15, stomach.ingested.total_volume))
 		handle_additional_vomit_reagents(splat)
+		if(bloodyvomit && bloodtovomi)
+			vessel.trans_to_obj(splat, bloodtovomit)
 		splat.update_icon()
 
 /mob/living/carbon/human/proc/vomit(timevomit = 1, level = 3, delay = 0, deliberate = FALSE)
