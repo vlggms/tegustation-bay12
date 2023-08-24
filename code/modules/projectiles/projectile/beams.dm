@@ -463,10 +463,30 @@
 	tracer_type = /obj/effect/projectile/tracer/emitter
 	impact_type = /obj/effect/projectile/impact/emitter
 
+	var/explosion_high = 1
+	var/explosion_medium = 3
+	var/explosion_low = 5
+
 /obj/item/projectile/beam/gigabeam/on_impact(atom/target)
 	if(QDELETED(src))
 		return
 	var/turf/T = get_turf(target)
 	if(T)
-		explosion(T, 1, 3, 5)
+		explosion(T, explosion_high, explosion_medium, explosion_low)
 	return ..()
+
+// Used by leviathan attack event
+/obj/item/projectile/beam/gigabeam/leviathan
+	name = "concentrated energy beam"
+	icon_state = "hcult"
+	damage = 25
+	agony = 25
+	life_span = 40
+
+	muzzle_type = /obj/effect/projectile/muzzle/cult/heavy
+	tracer_type = /obj/effect/projectile/tracer/cult/heavy
+	impact_type = /obj/effect/projectile/impact/cult/heavy
+
+	explosion_high = 0
+	explosion_medium = 2
+	explosion_low = 4

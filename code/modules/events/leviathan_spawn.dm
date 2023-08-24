@@ -6,11 +6,13 @@
 /datum/event/leviathan_spawn
 	announceWhen = 5
 	endWhen = 6
+	var/spawned_loc = "UNKNOWN"
 
 /datum/event/leviathan_spawn/announce()
 	command_announcement.Announce(
 		"Leviathan class abomination has been spotted within the sector. All civilian personnel is advised to evacuate \
-		to the closest safe area immediatelly. \nMilitary responders must contain the threat until it is too late.",
+		to the closest safe area immediatelly. \nMilitary responders must contain the threat until it is too late.\n\n\
+		Last known coordinates of the creature: [spawned_loc]",
 		"[GLOB.using_map.company_name] Infestation Alert",
 		'sound/effects/alarm_catastrophe.ogg',
 		zlevels = affecting_z,
@@ -22,3 +24,4 @@
 	var/turf/T = pick(candidate_turfs)
 	new /obj/effect/temp_visual/ftl(T)
 	new /obj/effect/overmap/event/leviathan(T)
+	spawned_loc = "[T.x]:[T.y]"

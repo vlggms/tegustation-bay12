@@ -284,13 +284,13 @@
 	/// When reaches 0 - finally dies
 	var/health = 8
 	/// How often it spawns infestation hives
-	var/hive_cooldown_time = 60 SECONDS
+	var/hive_cooldown_time = 100 SECONDS
 	var/hive_cooldown
 	/// How many hives are spawned per activation
 	var/hive_spawn_count = 2
 	/// Wail sounds a sound to all nearby visitable places; Affected mobs get some negative effects as a result
-	var/wail_cooldown_time_lower = 70 SECONDS
-	var/wail_cooldown_time_upper = 140 SECONDS
+	var/wail_cooldown_time_lower = 40 SECONDS
+	var/wail_cooldown_time_upper = 100 SECONDS
 	var/wail_cooldown
 	var/list/wail_sounds = list(
 		'sound/simple_mob/abominable_infestation/leviathan/wail1.ogg',
@@ -301,6 +301,8 @@
 
 /obj/effect/overmap/event/leviathan/Initialize()
 	. = ..()
+	hive_cooldown = world.time + hive_cooldown_time
+	wail_cooldown = world.time + wail_cooldown_time_lower
 	START_PROCESSING(SSobj, src)
 	// You have a total of 25 minutes to kill it, before it completely overruns the sector
 	addtimer(CALLBACK(src, .proc/WarnApocalypse), 20 MINUTES)
@@ -319,9 +321,8 @@
 	for(var/mob/M in GLOB.player_list)
 		if(!(M.z in affected_z))
 			continue
-		M.playsound_local(get_turf(M), death_sound, 50, FALSE)
-		to_chat(M, SPAN_USERDANGER("A terrible scream echoes through the space. The Leviathan has been finally defeated..."))
-		flash_color(M, flash_color = COLOR_MAROON, flash_time = 500)
+		M.playsound_local(get_turf(M), death_sound, 100, FALSE)
+		to_chat(M, SPAN_DANGER("A terrible scream echoes through the space. The Leviathan has been finally defeated..."))
 	return ..()
 
 /obj/effect/overmap/event/leviathan/FiredAt(obj/machinery/computer/ship/disperser/source, chargetype)
@@ -401,9 +402,9 @@
 	for(var/mob/M in GLOB.player_list)
 		if(!(M.z in affected_z))
 			continue
-		M.playsound_local(get_turf(M), 'sound/simple_mob/abominable_infestation/leviathan/apocalypse.ogg', 100, TRUE)
+		M.playsound_local(get_turf(M), 'sound/simple_mob/abominable_infestation/leviathan/apocalypse.ogg', 100, FALSE)
 		to_chat(M, SPAN_DANGER("A terrible noise disturbs the space, something bad has truly happened. It is all over."))
-		flash_color(M, flash_color = COLOR_MAROON, flash_time = 1000)
+		flash_color(M, flash_color = COLOR_MAROON, flash_time = 200)
 		if(ishuman(M) && prob(50))
 			var/mob/living/carbon/human/H = M
 			H.confused = max(M.confused + 30, M.confused)
@@ -424,7 +425,7 @@
 	events = list(/datum/event/infestation_hive_space)
 	opacity = 0
 	difficulty = EVENT_LEVEL_MODERATE
-	event_icon_states = list("hive1")
+	event_icon_states = list("hive1", "hive2")
 	weaknesses = OVERMAP_WEAKNESS_EXPLOSIVE | OVERMAP_WEAKNESS_FIRE
 	color = COLOR_MAROON
 
