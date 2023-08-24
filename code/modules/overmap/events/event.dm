@@ -319,6 +319,8 @@
 	for(var/obj/effect/overmap/visitable/V in range(3, src))
 		affected_z |= V.map_z
 	for(var/mob/M in GLOB.player_list)
+		if(isnewplayer(M))
+			continue
 		if(!(M.z in affected_z))
 			continue
 		M.playsound_local(get_turf(M), death_sound, 100, FALSE)
@@ -352,6 +354,8 @@
 	var/wail_sound = pick(wail_sounds)
 	var/sound_vol = rand(75, 150)
 	for(var/mob/M in GLOB.player_list)
+		if(isnewplayer(M))
+			continue
 		if(!(M.z in affected_z))
 			continue
 		M.playsound_local(get_turf(M), wail_sound, sound_vol, TRUE)
@@ -400,6 +404,8 @@
 
 	// Tell players that they are, in fact, dead
 	for(var/mob/M in GLOB.player_list)
+		if(isnewplayer(M))
+			continue
 		if(!(M.z in affected_z))
 			continue
 		M.playsound_local(get_turf(M), 'sound/simple_mob/abominable_infestation/leviathan/apocalypse.ogg', 100, FALSE)
