@@ -94,8 +94,7 @@
 	if(TICK_CHECK)
 		return TRUE
 	if(T.density || is_open_space(T) || is_space_turf(T))
-		return TRUE
+		return
 	if(prob(33))
-		return TRUE
+		return // Continue
 	T.ChangeTurf(/turf/simulated/floor/exoplanet/flesh)
-	return TRUE
