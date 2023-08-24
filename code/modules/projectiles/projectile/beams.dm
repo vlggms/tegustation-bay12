@@ -472,7 +472,7 @@
 		return
 	var/turf/T = get_turf(target)
 	if(T)
-		explosion(T, explosion_high, explosion_medium, explosion_low)
+		explosion(T, explosion_high, explosion_medium, explosion_low, adminlog = ismob(firer))
 	return ..()
 
 // Used by leviathan attack event
@@ -481,12 +481,10 @@
 	icon_state = "hcult"
 	damage = 25
 	agony = 25
-	life_span = 40
+	life_span = 100
 
 	muzzle_type = /obj/effect/projectile/muzzle/cult/heavy
 	tracer_type = /obj/effect/projectile/tracer/cult/heavy
 	impact_type = /obj/effect/projectile/impact/cult/heavy
 
-	explosion_high = 0
-	explosion_medium = 2
-	explosion_low = 4
+	explosion_low = 7

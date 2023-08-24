@@ -3,10 +3,10 @@
 // Additionally, spawns hearts of the hive directly on the ship
 /datum/event/leviathan_attack
 	has_skybox_image = TRUE
-	var/beams_per_tick = 2
+	var/beams_per_tick = 1
 	// Checks against world.time, not event ticks
 	var/infestation_spawn_cooldown
-	var/infestation_spawn_cooldown_time = 30 SECONDS
+	var/infestation_spawn_cooldown_time = 60 SECONDS
 	/// How many random mobs are spawned around heart of the hive on activation
 	var/infestation_spawn_count = 5
 	/// Types of mobs = chance the infestation spawn will create; It utilizes pickweight
@@ -53,14 +53,13 @@
 			P.dispersion += pick(0, 0.1, 0.2)
 			P.launch(get_random_edge_turf(GLOB.reverse_dir[dir], TRANSITIONEDGE + 2, Z), pick(BP_ALL_LIMBS), T)
 
-/datum/event/leviathan_attack/proc/InfestationSpawn()
+/datum/event/leviathan_attack/proc/InfestationSpawn(turf/T)
 	infestation_spawn_cooldown = world.time + infestation_spawn_cooldown_time
 	if(!living_observers_present(affecting_z))
 		return
 
-	var/Z = pick(affecting_z)
-	var/turf/T = pick_area_turf_in_single_z_level(list(/proc/is_not_space_area), list(/proc/not_turf_contains_dense_objects, /proc/is_not_open_space, /proc/is_not_space_turf), Z)
 	if(!istype(T))
+		T = pick_area_turf_in_single_z_level(list(/proc/is_not_space_area), list(/proc/not_turf_contains_dense_objects, /proc/is_not_open_space, /proc/is_not_space_turf), pick(affecting_z))
 		return
 
 	new /obj/effect/hive_heart(T)
@@ -93,6 +92,8 @@
 
 /datum/bubble_effect/infestation/TurfEffect(turf/T)
 	if(TICK_CHECK)
+		return TRUE
+	if(T.density)
 		return TRUE
 	if(prob(33))
 		return TRUE
