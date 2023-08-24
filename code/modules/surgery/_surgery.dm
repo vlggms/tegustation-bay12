@@ -32,6 +32,9 @@ GLOBAL_LIST_INIT(surgery_tool_exception_cache, new)
 			return allowed_tools[T]
 	return 0
 
+/decl/surgery_step/proc/get_speed_modifier(mob/user, mob/target, obj/item/tool)
+	. = 1
+
 /decl/surgery_step/proc/pre_surgery_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	return TRUE
 
@@ -226,7 +229,7 @@ GLOBAL_LIST_INIT(surgery_tool_exception_cache, new)
 				LAZYSET(M.surgeries_in_progress, zone, operation_data)
 				S.begin_step(user, M, zone, src)
 				var/skill_reqs = S.get_skill_reqs(user, M, src, zone)
-				var/duration = user.skill_delay_mult(skill_reqs[1]) * rand(S.min_duration, S.max_duration)
+				var/duration = user.skill_delay_mult(skill_reqs[1]) * rand(S.min_duration, S.max_duration) * S.get_speed_modifier(user, M, src)
 				if(prob(S.success_chance(user, M, src, zone)) && do_after(user, duration, M))
 					if (S.can_use(user, M, zone, src))
 						S.end_step(user, M, zone, src)
@@ -244,6 +247,33 @@ GLOBAL_LIST_INIT(surgery_tool_exception_cache, new)
 						H.update_surgery()
 		return TRUE
 	return FALSE
+
+//check if mob is lying down on something we can operate him on.
+/proc/can_operate(mob/living/carbon/M, mob/living/carbon/user)
+	var/turf/T = get_turf(M)
+	if(locate(/obj/machinery/optable, T))
+		. = OPERATE_IDEAL
+	else if(locate(/obj/structure/table, T))
+		. = OPERATE_OKAY
+	else if(locate(/obj/structure/bed, T))
+		. = OPERATE_PASSABLE
+	else if(locate(/obj/effect/rune, T))
+		. = OPERATE_PASSABLE
+	else
+		. = OPERATE_DENY
+
+	if(. != OPERATE_DENY && M == user)
+		var/hitzone = check_zone(user.zone_sel.selecting)
+		var/list/badzones = list(BP_HEAD)
+		if(user.hand)
+			badzones += BP_L_ARM
+			badzones += BP_L_HAND
+		else
+			badzones += BP_R_ARM
+			badzones += BP_R_HAND
+		if(hitzone in badzones)
+			return OPERATE_DENY
+		. = min(., OPERATE_OKAY) // it's awkward no matter what
 
 /obj/item/proc/handle_post_surgery()
 	return
