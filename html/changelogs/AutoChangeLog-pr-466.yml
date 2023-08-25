@@ -1,0 +1,8 @@
+author: casualspacestation14enjoyer
+delete-after: true
+changes:
+  - tweak: You can now use emag on helm control console and airalarm to remove access
+      requirements on them
+  - tweak: You can now order rcd matter units from cargo
+  - tweak: The empty_stomach proc now has functionality for adding blood to vomit
+      (instead of having to damage the stomach).
