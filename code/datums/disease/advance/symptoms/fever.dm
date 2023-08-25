@@ -57,7 +57,7 @@ Bonus
 		else
 			to_chat(H, SPAN_USERDANGER(pick("You feel too hot.", "You feel like your blood is boiling.")))
 	if(dehydrate)
-		H.adjust_hydration(-round(stage * 1.5))
+		H.adjust_hydration(-round(A.stage * 1.5))
 	SetBodyTemp(H, A)
 
 /**
