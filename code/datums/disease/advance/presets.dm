@@ -51,3 +51,19 @@
 	name = "Paranoia"
 	symptoms += new /datum/symptom/paranoia
 	..()
+
+// Conspiracy! Paranoia that spreads and is difficult to notice
+/datum/disease/advance/conspiracy
+	copy_type = /datum/disease/advance
+
+/datum/disease/advance/conspiracy/New()
+	name = "Conspirological Virus"
+	symptoms += new /datum/symptom/paranoia
+	symptoms += new /datum/symptom/viraladaptation
+	var/datum/symptom/fever/F = new
+	F.neutered = TRUE
+	symptoms += F
+	var/datum/symptom/cough/C = new
+	C.neutered = TRUE
+	symptoms += C
+	..()

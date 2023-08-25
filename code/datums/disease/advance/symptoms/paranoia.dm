@@ -36,6 +36,13 @@ GLOBAL_LIST_INIT(paranoia_items, list(
 // If no list is associated - treated as single sound instance
 GLOBAL_LIST_INIT(paranoia_sounds, list(
 	"button" = list(3, 1 SECONDS, 3 SECONDS),
+	'sound/machines/airlock_open.ogg',
+	'sound/machines/airlock_open_force.ogg',
+	'sound/machines/airlock_close.ogg',
+	'sound/machines/airlock_close_force.ogg',
+	'sound/machines/bolts_up.ogg',
+	'sound/machines/bolts_down.ogg',
+	'sound/machines/deniedboop.ogg' = list(5, 1.5 SECONDS, 3 SECONDS),
 	'sound/effects/walkieon.ogg' = list(2, 2 SECONDS, 4 SECONDS),
 	'sound/effects/walkietalkie.ogg' = list(12, 0.5 SECONDS, 4 SECONDS),
 	'sound/weapons/Laser.ogg' = list(6, 1 SECONDS, 4 SECONDS),
