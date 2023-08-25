@@ -7,7 +7,6 @@
 	density = TRUE
 	anchored = TRUE
 	idle_power_usage = 50
-	base_type = /obj/machinery/remote_weapon
 	construct_state = /decl/machine_construction/default/panel_closed
 
 	machine_name = "remote weapon"
