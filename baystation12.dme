@@ -320,7 +320,6 @@
 #include "code\datums\disease\advance\_advance.dm"
 #include "code\datums\disease\advance\presets.dm"
 #include "code\datums\disease\advance\symptoms\_symptom.dm"
-#include "code\datums\disease\advance\symptoms\bloodyvomit.dm"
 #include "code\datums\disease\advance\symptoms\bone.dm"
 #include "code\datums\disease\advance\symptoms\choking.dm"
 #include "code\datums\disease\advance\symptoms\confusion.dm"
