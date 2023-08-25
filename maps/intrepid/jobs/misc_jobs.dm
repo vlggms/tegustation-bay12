@@ -60,3 +60,23 @@
 	max_skill = list(   SKILL_PILOT       = SKILL_MAX)
 	skill_points = 24
 	required_language = null
+
+/********
+Synthetic
+********/
+
+/datum/job/cyborg
+	total_positions = 3
+	spawn_positions = 3
+	supervisors = "your laws"
+	minimal_player_age = 3
+	allowed_ranks = list(
+		/datum/mil_rank/civ/synthetic
+	)
+
+/datum/job/ai
+	minimal_player_age = 7
+	require_whitelist = "AI"
+	allowed_ranks = list(
+		/datum/mil_rank/civ/synthetic
+	)
