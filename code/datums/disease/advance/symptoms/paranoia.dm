@@ -44,7 +44,7 @@ GLOBAL_LIST_INIT(paranoia_sounds, list(
 	'sound/machines/bolts_down.ogg',
 	'sound/machines/deniedboop.ogg' = list(5, 1.5 SECONDS, 3 SECONDS),
 	'sound/effects/walkieon.ogg' = list(2, 2 SECONDS, 4 SECONDS),
-	'sound/effects/walkietalkie.ogg' = list(12, 0.5 SECONDS, 4 SECONDS),
+	'sound/effects/walkietalkie.ogg' = list(6, 1 SECONDS, 6 SECONDS),
 	'sound/weapons/Laser.ogg' = list(6, 1 SECONDS, 4 SECONDS),
 	'sound/weapons/lasercannonfire.ogg' = list(3, 2 SECONDS, 6 SECONDS),
 	'sound/weapons/pulse.ogg' = list(5, 1.5 SECONDS, 5 SECONDS),
