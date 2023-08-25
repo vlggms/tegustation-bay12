@@ -21,6 +21,12 @@
 	facial_styles_per_species = list(SPECIES_HUMAN = list("Shaved"))
 	genders_per_species = list(SPECIES_HUMAN = list(MALE))
 
+// All of the corpses have the disease
+/obj/effect/landmark/corpse/lar_maria/AdditionalEffects(mob/living/carbon/human/H)
+	. = ..()
+	var/datum/disease/rage/D = new()
+	D.TryInfect(H, FALSE)
+
 /mob/living/simple_animal/hostile/lar_maria
 	name = "Lar Maria hostile mob"
 	desc = "You shouldn't see me!"
@@ -43,22 +49,19 @@
 	say_list_type = /datum/say_list/lar_maria
 
 /mob/living/simple_animal/hostile/lar_maria/death(gibbed, deathmessage, show_dead_message)
-	..(gibbed, deathmessage, show_dead_message)
+	. = ..()
 	if(corpse)
 		new corpse (src.loc)
 	if (weapon)
 		new weapon(src.loc)
 	visible_message(SPAN_WARNING("Small shining spores float away from dying [src]!"))
-	for(var/mob/living/carbon/human/H in view(2, src))
+	for(var/mob/living/carbon/human/H in view(3, src))
 		var/datum/disease/rage/D = new()
-		if(!CanContractDisease(D))
+		if(!H.CanContractDisease(D))
 			qdel(D)
 			continue
-		var/list/armor_list = H.get_armors_by_zone(null, TOX, DAM_BIO)
-		for(var/datum/extension/armor/A in armor_list)
-			if(A.get_value("bio") > ARMOR_BIO_SMALL)
-				continue
-		if(prob(25 + 25 * get_dist(src, H)))
+		if(prob(26 * get_dist(src, H)))
+			qdel(D)
 			continue
 		H.ForceContractDisease(D, FALSE, TRUE)
 	qdel(src)
