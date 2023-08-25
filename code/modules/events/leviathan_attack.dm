@@ -60,7 +60,6 @@
 
 	if(!istype(T))
 		T = pick_area_turf_in_single_z_level(list(/proc/is_not_space_area), list(/proc/not_turf_contains_dense_objects, /proc/is_not_open_space, /proc/is_not_space_turf), pick(affecting_z))
-		return
 
 	new /obj/effect/hive_heart(T)
 	new /datum/bubble_effect/infestation(T.x, T.y, T.z, 1, 1)

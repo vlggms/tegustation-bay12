@@ -411,7 +411,7 @@
 		M.playsound_local(get_turf(M), 'sound/simple_mob/abominable_infestation/leviathan/apocalypse.ogg', 100, FALSE)
 		to_chat(M, SPAN_DANGER("A terrible noise disturbs the space, something bad has truly happened. It is all over."))
 		flash_color(M, flash_color = COLOR_MAROON, flash_time = 200)
-		if(ishuman(M) && prob(50))
+		if(ishuman(M))
 			var/mob/living/carbon/human/H = M
 			H.confused = max(M.confused + 30, M.confused)
 			var/obj/item/organ/external/my_head = H.get_organ(BP_HEAD)
