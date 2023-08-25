@@ -60,9 +60,15 @@
 	name = "Conspirological Virus"
 	symptoms += new /datum/symptom/paranoia
 	symptoms += new /datum/symptom/viraladaptation
+	var/datum/symptom/itching/I = new
+	I.neutered = TRUE
+	symptoms += I
 	var/datum/symptom/fever/F = new
 	F.neutered = TRUE
 	symptoms += F
+	var/datum/symptom/sneeze/S = new
+	S.neutered = TRUE
+	symptoms += S
 	var/datum/symptom/cough/C = new
 	C.neutered = TRUE
 	symptoms += C

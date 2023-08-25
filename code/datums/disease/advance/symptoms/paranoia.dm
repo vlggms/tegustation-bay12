@@ -143,9 +143,10 @@ BONUS
 				to_chat(M, "<span class='subtle'><b>\The [H]</b> looks [fake_message].</span>")
 			// Fake sound
 			if(2)
-				var/turf/T = get_random_turf_in_range(M, 6, 2)
+				var/turf/T = get_random_turf_in_range(M, 12, 5)
 				var/S = pick(GLOB.paranoia_sounds)
-				M.playsound_local(T, S, rand(10, 65), prob(50))
+				var/vol = rand(10, 50)
+				M.playsound_local(T, S, , prob(50), extrarange = 7)
 				if(!islist(GLOB.paranoia_sounds[S]))
 					return
 				// Epic paranoidal sounds
@@ -155,8 +156,8 @@ BONUS
 					var/delay = rand(params[2], params[3])
 					addtimer(CALLBACK(src, .proc/PlayDelayedSound, M, T, S), delay)
 
-/datum/symptom/paranoia/proc/PlayDelayedSound(mob/living/M, turf/T, S)
+/datum/symptom/paranoia/proc/PlayDelayedSound(mob/living/M, turf/T, S, vol)
 	if(QDELETED(M) || QDELETED(T))
 		return
-	var/turf/TT = get_random_turf_in_range(T, 2) // Sound is coming from slightly different place now
-	M.playsound_local(TT, S, rand(10, 65), prob(50))
+	var/turf/TT = get_random_turf_in_range(T, 1) // Sound is coming from slightly different place now
+	M.playsound_local(TT, S, rand(round(vol * 0.75), round(vol * 1.25)), prob(50), extrarange = 7)
