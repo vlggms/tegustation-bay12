@@ -42,3 +42,12 @@
 	name = "Flu"
 	symptoms += new /datum/symptom/cough
 	..()
+
+// Paranoia
+/datum/disease/advance/paranoia
+	copy_type = /datum/disease/advance
+
+/datum/disease/advance/paranoia/New()
+	name = "Paranoia"
+	symptoms += new /datum/symptom/paranoia
+	..()
