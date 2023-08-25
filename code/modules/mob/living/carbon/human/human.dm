@@ -685,7 +685,7 @@
 		if(stomach.ingested.total_volume)
 			stomach.ingested.trans_to_obj(splat, min(15, stomach.ingested.total_volume))
 		handle_additional_vomit_reagents(splat)
-		if(bloodyvomit && bloodtovomi)
+		if(bloodyvomit && bloodtovomit)
 			vessel.trans_to_obj(splat, bloodtovomit)
 		splat.update_icon()
 

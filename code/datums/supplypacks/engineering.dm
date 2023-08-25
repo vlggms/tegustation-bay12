@@ -73,6 +73,12 @@
 	containername = "emitter crate"
 	access = access_engine_equip
 
+/decl/hierarchy/supply_pack/engineering/rcdmatter
+	name = "Equipment - Matter Cartridges"
+	contains = list(/obj/item/rcd_ammo = 5)
+	cost = 10
+	containername = "matter cartridge container"
+
 /decl/hierarchy/supply_pack/engineering/field_gen
 	name = "Equipment - Field generator"
 	contains = list(/obj/machinery/field_generator = 2)
