@@ -146,7 +146,7 @@ BONUS
 				var/turf/T = get_random_turf_in_range(M, 12, 5)
 				var/S = pick(GLOB.paranoia_sounds)
 				var/vol = rand(10, 50)
-				M.playsound_local(T, S, , prob(50), extrarange = 7)
+				M.playsound_local(T, S, vol, prob(50), extrarange = 7)
 				if(!islist(GLOB.paranoia_sounds[S]))
 					return
 				// Epic paranoidal sounds
