@@ -1165,6 +1165,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/intrepid/department/engineering/engine_room)
+"dG" = (
+/obj/structure/table/standard,
+/obj/item/stack/cable_coil,
+/turf/simulated/floor,
+/area/intrepid/department/engineering/construction)
 "dH" = (
 /obj/structure/window/phoronreinforced,
 /obj/effect/floor_decal/industrial/radiation/fulltile,
@@ -1240,34 +1245,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/exploration/hangar/pandora)
-"dR" = (
-/obj/structure/table/standard,
-/obj/item/reagent_containers/glass/paint/black{
-	pixel_y = 11;
-	pixel_x = -4
-	},
-/obj/item/reagent_containers/glass/paint/white{
-	pixel_x = 6;
-	pixel_y = 11
-	},
-/obj/item/reagent_containers/glass/paint/red{
-	pixel_x = -4;
-	pixel_y = 4
-	},
-/obj/item/reagent_containers/glass/paint/yellow{
-	pixel_x = 6;
-	pixel_y = 4
-	},
-/obj/item/reagent_containers/glass/paint/green{
-	pixel_x = -4;
-	pixel_y = -3
-	},
-/obj/item/reagent_containers/glass/paint/purple{
-	pixel_x = 6;
-	pixel_y = -3
-	},
-/turf/simulated/floor,
-/area/intrepid/department/engineering/construction)
 "dS" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -1751,6 +1728,12 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbayfive)
+"fs" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor,
+/area/intrepid/department/engineering/construction)
 "ft" = (
 /obj/machinery/door/airlock/highsecurity,
 /obj/machinery/door/firedoor,
@@ -2203,6 +2186,10 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/civillian/safe_room/starboard)
+"gE" = (
+/obj/structure/catwalk,
+/turf/simulated/floor,
+/area/intrepid/department/engineering/construction)
 "gF" = (
 /obj/machinery/vending/weeb,
 /turf/simulated/floor/tiled/techfloor,
@@ -2243,6 +2230,13 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/portside)
+"gM" = (
+/obj/structure/table/standard,
+/obj/item/stack/material/steel/fifty,
+/obj/item/stack/material/glass/fifty,
+/obj/item/stack/material/glass/reinforced/fifty,
+/turf/simulated/floor,
+/area/intrepid/department/engineering/construction)
 "gN" = (
 /obj/machinery/computer/ship/engines{
 	dir = 8
@@ -2827,6 +2821,10 @@
 /area/intrepid/department/exploration/hangar/pandora)
 "iD" = (
 /obj/effect/wallframe_spawn/reinforced_phoron/hull,
+/obj/machinery/door/blast/shutters{
+	name = "Supply Warehouse Shutters";
+	id_tag = "warehouseshutter"
+	},
 /turf/simulated/floor,
 /area/intrepid/department/cargo/cargostorage)
 "iE" = (
@@ -3263,6 +3261,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/civillian/dockbaythree)
+"jU" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper/central)
 "jV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -3508,6 +3515,16 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /turf/simulated/floor/tiled/steel_grid,
 /area/intrepid/department/civillian/dockbayfive)
+"kL" = (
+/obj/machinery/power/apc/high{
+	dir = 4;
+	pixel_x = 23
+	},
+/obj/structure/cable/orange{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor,
+/area/intrepid/department/engineering/construction)
 "kM" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -3700,10 +3717,24 @@
 	},
 /turf/simulated/floor/reinforced/oxygen,
 /area/intrepid/department/engineering/atmos)
+"lh" = (
+/obj/effect/floor_decal/corner/brown/half,
+/obj/machinery/camera/network/hangar{
+	c_tag = "Hangar - Portside Pithos Hangar";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/intrepid/department/exploration/hangar/pithos)
 "li" = (
 /obj/structure/table/glass,
 /obj/item/paper_bin,
 /obj/item/pen,
+/obj/machinery/button/blast_door{
+	dir = 4;
+	id_tag = "detshuttertwo";
+	name = "Forensics Laboratory Shutters button";
+	pixel_x = -25
+	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/intrepid/department/security/detectives_office)
 "lj" = (
@@ -4189,6 +4220,13 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/cargo/cargostorage)
+"my" = (
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 23
+	},
+/turf/simulated/floor,
+/area/intrepid/department/engineering/construction)
 "mz" = (
 /obj/structure/cable/orange{
 	icon_state = "1-8"
@@ -4461,16 +4499,6 @@
 	},
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/misc/maint/superstructure)
-"nq" = (
-/obj/machinery/power/apc/high{
-	dir = 4;
-	pixel_x = 23
-	},
-/obj/structure/cable/orange{
-	icon_state = "0-2"
-	},
-/turf/simulated/floor,
-/area/intrepid/department/engineering/construction)
 "nr" = (
 /obj/structure/morgue{
 	dir = 8
@@ -4767,15 +4795,6 @@
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/cargo/cargostorage)
-"ov" = (
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
-/obj/structure/cable/orange{
-	icon_state = "1-8"
-	},
-/turf/simulated/floor,
-/area/intrepid/misc/maint/upper/central)
 "ow" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -4909,14 +4928,6 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/engineering/engine_room)
-"oS" = (
-/obj/structure/table/standard,
-/obj/item/storage/toolbox/electrical{
-	pixel_y = 7
-	},
-/obj/item/storage/toolbox/mechanical,
-/turf/simulated/floor,
-/area/intrepid/department/engineering/construction)
 "oT" = (
 /obj/machinery/suit_storage_unit/mining{
 	req_access = list()
@@ -5427,9 +5438,6 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/engineering/engine_room)
-"qB" = (
-/turf/simulated/floor,
-/area/intrepid/department/engineering/construction)
 "qC" = (
 /obj/machinery/atmospherics/pipe/simple/visible/supply{
 	dir = 9
@@ -5994,14 +6002,6 @@
 /obj/effect/floor_decal/corner/black/diagonal,
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/morgue)
-"sk" = (
-/obj/effect/floor_decal/corner/brown/half,
-/obj/machinery/camera/network/hangar{
-	c_tag = "Hangar - Portside Pithos Hangar";
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark/monotile,
-/area/intrepid/department/exploration/hangar/pithos)
 "sl" = (
 /obj/effect/floor_decal/corner/research/mono,
 /obj/machinery/light/small,
@@ -6037,6 +6037,20 @@
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/intrepid/department/security/detectives_office)
+"so" = (
+/obj/effect/floor_decal/corner/brown/half{
+	dir = 4;
+	icon_state = "bordercolorhalf"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/camera/network/hangar{
+	c_tag = "Hangar - Portside Quarter Pithos Hangar";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/intrepid/department/exploration/hangar/pithos)
 "sp" = (
 /obj/structure/cable/orange{
 	icon_state = "1-4"
@@ -7148,20 +7162,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/civillian/dockbaysix)
-"vq" = (
-/obj/effect/floor_decal/corner/brown/half{
-	dir = 4;
-	icon_state = "bordercolorhalf"
-	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/machinery/camera/network/hangar{
-	c_tag = "Hangar - Portside Quarter Pithos Hangar";
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark/monotile,
-/area/intrepid/department/exploration/hangar/pithos)
 "vs" = (
 /obj/machinery/door/firedoor{
 	dir = 4
@@ -7826,6 +7826,10 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/intrepid/misc/maint/superstructure)
+"xq" = (
+/obj/machinery/pipedispenser/disposal,
+/turf/simulated/floor,
+/area/intrepid/department/engineering/construction)
 "xr" = (
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/command/commandquarters/psiadvisor)
@@ -8001,9 +8005,6 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/tcommsat)
-"xY" = (
-/turf/simulated/wall/prepainted,
-/area/intrepid/department/engineering/construction)
 "xZ" = (
 /obj/structure/closet/secure_closet/personal/empty,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -8735,6 +8736,10 @@
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/engineering/atmos)
+"Aj" = (
+/obj/machinery/pipedispenser,
+/turf/simulated/floor,
+/area/intrepid/department/engineering/construction)
 "Ak" = (
 /obj/machinery/door/firedoor{
 	dir = 4
@@ -9170,8 +9175,32 @@
 /obj/effect/shuttle_landmark/lift/marine_top,
 /turf/simulated/open,
 /area/intrepid/department/exploration/hangar/pandora)
-"Bw" = (
-/obj/machinery/pipedispenser/disposal,
+"Bu" = (
+/obj/structure/table/standard,
+/obj/item/reagent_containers/glass/paint/black{
+	pixel_y = 11;
+	pixel_x = -4
+	},
+/obj/item/reagent_containers/glass/paint/white{
+	pixel_x = 6;
+	pixel_y = 11
+	},
+/obj/item/reagent_containers/glass/paint/red{
+	pixel_x = -4;
+	pixel_y = 4
+	},
+/obj/item/reagent_containers/glass/paint/yellow{
+	pixel_x = 6;
+	pixel_y = 4
+	},
+/obj/item/reagent_containers/glass/paint/green{
+	pixel_x = -4;
+	pixel_y = -3
+	},
+/obj/item/reagent_containers/glass/paint/purple{
+	pixel_x = 6;
+	pixel_y = -3
+	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/construction)
 "Bx" = (
@@ -9544,25 +9573,6 @@
 	},
 /turf/simulated/floor,
 /area/security/prison)
-"Cy" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/camera/network/security{
-	c_tag = "Security - Upper Deck Hallway";
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/prison)
 "Cz" = (
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/department/civillian/archive)
@@ -9929,6 +9939,9 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/central)
+"DK" = (
+/turf/simulated/floor,
+/area/intrepid/department/engineering/construction)
 "DL" = (
 /obj/machinery/door/airlock/vault,
 /obj/structure/cable/green{
@@ -10145,13 +10158,6 @@
 /obj/effect/decal/cleanable/cobweb,
 /turf/simulated/floor/shuttle/black,
 /area/intrepid/misc/maint/superstructure)
-"Et" = (
-/obj/structure/table/standard,
-/obj/item/stack/material/steel/fifty,
-/obj/item/stack/material/glass/fifty,
-/obj/item/stack/material/glass/reinforced/fifty,
-/turf/simulated/floor,
-/area/intrepid/department/engineering/construction)
 "Eu" = (
 /obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor,
@@ -10164,13 +10170,6 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/portside)
-"Ex" = (
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 23
-	},
-/turf/simulated/floor,
-/area/intrepid/department/engineering/construction)
 "Ey" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -10415,6 +10414,15 @@
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/central)
+"Fo" = (
+/obj/effect/wallframe_spawn/reinforced/hull,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/blast/shutters{
+	name = "Forensics Laboratory Shutters";
+	id_tag = "detshuttertwo"
+	},
+/turf/simulated/floor,
+/area/intrepid/department/security/detectives_office)
 "Fs" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 4
@@ -11550,17 +11558,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/security/portdockingbaysecurity)
-"IW" = (
-/obj/effect/floor_decal/corner/brown/half{
-	dir = 4;
-	icon_state = "bordercolorhalf"
-	},
-/obj/machinery/camera/network/hangar{
-	c_tag = "Hangar - Starboard Quarter Pithos Hangar";
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark/monotile,
-/area/intrepid/department/exploration/hangar/pithos)
 "IY" = (
 /obj/item/stack/cable_coil,
 /obj/item/stock_parts/circuitboard/vending,
@@ -12425,6 +12422,10 @@
 "LH" = (
 /obj/effect/wallframe_spawn/reinforced/hull,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/blast/shutters{
+	name = "Forensics Laboratory Shutters";
+	id_tag = "detshutterone"
+	},
 /turf/simulated/floor,
 /area/intrepid/department/security/detectives_office)
 "LJ" = (
@@ -12634,6 +12635,11 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/civillian/dockbayone)
+"Mt" = (
+/obj/structure/table/standard,
+/obj/item/device/flashlight/lamp/floodlamp,
+/turf/simulated/floor,
+/area/intrepid/department/engineering/construction)
 "Mu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -13149,17 +13155,6 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/cargo/cargostorage)
-"NQ" = (
-/obj/effect/floor_decal/corner/brown/half{
-	dir = 8;
-	icon_state = "bordercolorhalf"
-	},
-/obj/machinery/camera/network/hangar{
-	c_tag = "Hangar - Fore Pithos Hangar";
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark/monotile,
-/area/intrepid/department/exploration/hangar/pithos)
 "NR" = (
 /obj/structure/closet/emcloset,
 /obj/structure/railing/mapped,
@@ -13932,7 +13927,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/security/portdockingbaysecurity)
 "Qp" = (
-/obj/structure/catwalk,
+/obj/structure/cable/orange{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/construction)
 "Qq" = (
@@ -14093,6 +14090,9 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/civillian/safe_room/starboard)
+"QP" = (
+/turf/simulated/wall/prepainted,
+/area/intrepid/department/engineering/construction)
 "QQ" = (
 /obj/effect/floor_decal/corner/brown/half{
 	dir = 8;
@@ -14256,11 +14256,6 @@
 /obj/machinery/newscaster,
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/department/civillian/dockbayfour)
-"Rq" = (
-/obj/structure/table/standard,
-/obj/item/device/flashlight/lamp/floodlamp,
-/turf/simulated/floor,
-/area/intrepid/department/engineering/construction)
 "Rr" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/clothing/glasses/meson,
@@ -14368,6 +14363,17 @@
 /obj/effect/paint_stripe/blue,
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/department/civillian/dockbayone)
+"RI" = (
+/obj/effect/floor_decal/corner/brown/half{
+	dir = 8;
+	icon_state = "bordercolorhalf"
+	},
+/obj/machinery/camera/network/hangar{
+	c_tag = "Hangar - Fore Pithos Hangar";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/intrepid/department/exploration/hangar/pithos)
 "RJ" = (
 /obj/structure/lattice,
 /obj/structure/disposalpipe/down{
@@ -14449,6 +14455,16 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/cargo/cargostorage)
+"RW" = (
+/obj/effect/floor_decal/corner/brown/half{
+	dir = 1;
+	icon_state = "bordercolorhalf"
+	},
+/obj/machinery/camera/network/hangar{
+	c_tag = "Hangar - Starboard Pithos Hangar"
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/intrepid/department/exploration/hangar/pithos)
 "RX" = (
 /obj/structure/bed/chair/office{
 	dir = 1
@@ -14694,6 +14710,25 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/exploration/hangar/pithos)
+"SL" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/camera/network/security{
+	c_tag = "Security - Upper Deck Hallway";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/prison)
 "SN" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -14800,6 +14835,17 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/central)
+"Ta" = (
+/obj/effect/floor_decal/corner/brown/half{
+	dir = 4;
+	icon_state = "bordercolorhalf"
+	},
+/obj/machinery/camera/network/hangar{
+	c_tag = "Hangar - Starboard Quarter Pithos Hangar";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/intrepid/department/exploration/hangar/pithos)
 "Tb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -14875,9 +14921,23 @@
 /obj/structure/ladder,
 /turf/simulated/open,
 /area/intrepid/department/exploration/hangar/pandora)
+"Tm" = (
+/obj/structure/table/standard,
+/obj/item/storage/toolbox/electrical{
+	pixel_y = 7
+	},
+/obj/item/storage/toolbox/mechanical,
+/turf/simulated/floor,
+/area/intrepid/department/engineering/construction)
 "Tn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
+	},
+/obj/machinery/button/blast_door{
+	dir = 8;
+	id_tag = "warehouseshutter";
+	name = "Supply Warehouse Shutters button";
+	pixel_x = 25
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/cargo/cargostorage)
@@ -15272,12 +15332,6 @@
 	},
 /turf/simulated/floor/shuttle/black,
 /area/intrepid/department/engineering/portthruster)
-"UC" = (
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor,
-/area/intrepid/department/engineering/construction)
 "UD" = (
 /obj/structure/table/glass,
 /obj/item/reagent_containers/spray/luminol{
@@ -15290,6 +15344,12 @@
 	},
 /obj/machinery/light/dystopian{
 	dir = 1
+	},
+/obj/machinery/button/blast_door{
+	dir = 8;
+	id_tag = "detshutterone";
+	name = "Forensics Laboratory Shutters button";
+	pixel_x = 25
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/intrepid/department/security/detectives_office)
@@ -16185,16 +16245,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbayfive)
-"Xd" = (
-/obj/effect/floor_decal/corner/brown/half{
-	dir = 1;
-	icon_state = "bordercolorhalf"
-	},
-/obj/machinery/camera/network/hangar{
-	c_tag = "Hangar - Starboard Pithos Hangar"
-	},
-/turf/simulated/floor/tiled/dark/monotile,
-/area/intrepid/department/exploration/hangar/pithos)
 "Xe" = (
 /obj/structure/lattice,
 /obj/structure/catwalk,
@@ -16205,12 +16255,6 @@
 /obj/machinery/atmospherics/pipe/zpipe/down/supply,
 /turf/simulated/open,
 /area/intrepid/department/civillian/archive)
-"Xf" = (
-/obj/structure/cable/orange{
-	icon_state = "1-4"
-	},
-/turf/simulated/floor,
-/area/intrepid/department/engineering/construction)
 "Xg" = (
 /obj/machinery/rotating_alarm{
 	dir = 4;
@@ -16716,11 +16760,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/command/commandquarters/psiadvisor)
-"YD" = (
-/obj/structure/table/standard,
-/obj/item/stack/cable_coil,
-/turf/simulated/floor,
-/area/intrepid/department/engineering/construction)
 "YE" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
@@ -17160,10 +17199,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/pithos/cargo)
-"ZO" = (
-/obj/machinery/pipedispenser,
-/turf/simulated/floor,
-/area/intrepid/department/engineering/construction)
 "ZP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -30431,13 +30466,13 @@ LY
 Wg
 ck
 XP
-xY
-xY
-xY
-xY
-xY
-xY
-xY
+QP
+QP
+QP
+QP
+QP
+QP
+QP
 vM
 vM
 Ml
@@ -30633,13 +30668,13 @@ LY
 Wg
 ck
 XP
-xY
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+QP
 ml
 tV
 qT
@@ -30835,13 +30870,13 @@ Hw
 vh
 qu
 XP
-xY
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+QP
 ml
 tV
 qT
@@ -31038,12 +31073,12 @@ HZ
 JO
 Xw
 ya
-qB
-qB
-qB
-qB
-qB
-xY
+DK
+DK
+DK
+DK
+DK
+QP
 ml
 tV
 qT
@@ -31239,13 +31274,13 @@ XE
 Nq
 JO
 wO
-xY
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+QP
 TM
 tV
 qT
@@ -31441,13 +31476,13 @@ LY
 ai
 JO
 wO
-xY
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+QP
 ml
 tV
 qT
@@ -31643,13 +31678,13 @@ LY
 ai
 JO
 wO
-xY
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+QP
 ml
 tV
 qT
@@ -31844,14 +31879,14 @@ cy
 LY
 ai
 JO
-xY
-xY
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+QP
+DK
+DK
+DK
+DK
+DK
+QP
 ml
 tV
 qT
@@ -32046,14 +32081,14 @@ um
 LY
 yQ
 JO
-xY
-qB
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+DK
+QP
 TM
 tV
 qT
@@ -32248,14 +32283,14 @@ LY
 LY
 ai
 JO
-xY
-qB
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+DK
+QP
 ml
 tV
 qT
@@ -32450,14 +32485,14 @@ jf
 GB
 bE
 JO
-xY
-qB
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+DK
+QP
 ml
 tV
 qT
@@ -32652,14 +32687,14 @@ ai
 hJ
 qt
 lQ
-xY
-qB
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+DK
+QP
 ml
 tV
 qT
@@ -32852,16 +32887,16 @@ tV
 ck
 ai
 JO
-xY
-xY
-xY
-xY
-Qp
-Qp
-Qp
-Qp
-xY
-xY
+QP
+QP
+QP
+QP
+gE
+gE
+gE
+gE
+QP
+QP
 FL
 tV
 qT
@@ -33054,16 +33089,16 @@ rp
 ck
 ai
 gi
-xY
-qB
-qB
-qB
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+DK
+DK
+DK
+QP
 ml
 tV
 qT
@@ -33256,16 +33291,16 @@ LK
 ck
 ai
 JO
-xY
-qB
-qB
-qB
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+DK
+DK
+DK
+QP
 ml
 tV
 qT
@@ -33458,16 +33493,16 @@ tV
 ck
 ai
 Qv
-xY
-qB
-qB
-qB
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+DK
+DK
+DK
+QP
 ml
 tV
 qT
@@ -33660,16 +33695,16 @@ tV
 ck
 ai
 JO
-xY
-qB
-qB
-qB
-qB
-qB
-qB
-qB
-xY
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+DK
+DK
+QP
+QP
 TM
 tV
 qT
@@ -33862,15 +33897,15 @@ RH
 RH
 ns
 mM
-xY
-qB
-qB
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+DK
+DK
+QP
 ml
 ml
 tV
@@ -34064,15 +34099,15 @@ hI
 RH
 ai
 JO
-xY
-qB
-qB
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+DK
+DK
+QP
 ml
 tV
 tV
@@ -34266,15 +34301,15 @@ hN
 ir
 zW
 gi
-xY
-qB
-qB
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+DK
+DK
+QP
 ml
 tV
 qT
@@ -34468,15 +34503,15 @@ gx
 RH
 ai
 JO
-xY
-qB
-qB
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+DK
+DK
+QP
 TM
 tV
 qT
@@ -34670,15 +34705,15 @@ Yi
 RH
 ai
 JO
-xY
-qB
-qB
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+DK
+DK
+QP
 ml
 tV
 qT
@@ -34872,15 +34907,15 @@ Yi
 RH
 ai
 JO
-xY
-qB
-qB
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+DK
+DK
+QP
 ml
 tV
 qT
@@ -35074,15 +35109,15 @@ Ob
 RH
 ai
 JO
-xY
-qB
-qB
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+DK
+DK
+QP
 ml
 tV
 qT
@@ -35276,15 +35311,15 @@ Ms
 RH
 ai
 JO
-xY
-qB
-qB
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+DK
+DK
+QP
 TM
 tV
 qT
@@ -35478,15 +35513,15 @@ SG
 RH
 ai
 gi
-xY
-qB
-qB
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+DK
+DK
+QP
 ml
 tV
 qT
@@ -35680,15 +35715,15 @@ pL
 RH
 ai
 JO
-xY
-qB
-qB
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+DK
+DK
+QP
 ml
 tV
 qT
@@ -35882,15 +35917,15 @@ LT
 RH
 ai
 JO
-xY
-qB
-qB
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+DK
+DK
+QP
 ml
 tV
 qT
@@ -36084,15 +36119,15 @@ RH
 RH
 ai
 JO
-xY
-qB
-qB
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+DK
+DK
+QP
 FL
 tV
 qT
@@ -36286,15 +36321,15 @@ vM
 ck
 ai
 VD
-xY
-qB
-qB
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+DK
+DK
+QP
 ml
 tV
 qT
@@ -36488,15 +36523,15 @@ vM
 ck
 ai
 JO
-xY
-qB
-qB
-ZO
-qB
-Bw
-qB
-qB
-xY
+QP
+DK
+DK
+Aj
+DK
+xq
+DK
+DK
+QP
 ml
 tV
 qT
@@ -36690,15 +36725,15 @@ EK
 ck
 ai
 gi
-xY
-qB
-qB
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+DK
+DK
+QP
 ml
 tV
 qT
@@ -36892,15 +36927,15 @@ Gg
 ck
 ai
 JO
-xY
-qB
-qB
-Rq
-Et
-oS
-qB
-qB
-xY
+QP
+DK
+DK
+Mt
+gM
+Tm
+DK
+DK
+QP
 TM
 tV
 qT
@@ -37094,15 +37129,15 @@ vM
 ck
 ai
 JO
-xY
-qB
-qB
-Rq
-dR
-YD
-qB
-qB
-xY
+QP
+DK
+DK
+Mt
+Bu
+dG
+DK
+DK
+QP
 ml
 tV
 qT
@@ -37296,15 +37331,15 @@ vM
 ck
 ai
 JO
-xY
-qB
-qB
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+DK
+DK
+QP
 ml
 tV
 qT
@@ -37498,15 +37533,15 @@ Na
 Na
 ai
 JO
-xY
-qB
-qB
-qB
-qB
-qB
-qB
-qB
-xY
+QP
+DK
+DK
+DK
+DK
+DK
+DK
+DK
+QP
 ml
 tV
 zT
@@ -37700,15 +37735,15 @@ Ja
 Na
 cl
 kZ
-xY
-qB
-nq
-UC
-Xf
-qB
-Ex
-qB
-xY
+QP
+DK
+kL
+fs
+Qp
+DK
+my
+DK
+QP
 TM
 tV
 Pu
@@ -37902,15 +37937,15 @@ mh
 xo
 vx
 gi
-xY
-xY
-xY
-xY
+QP
+QP
+QP
+QP
 eU
-xY
-xY
-xY
-xY
+QP
+QP
+QP
+QP
 Nx
 tV
 HJ
@@ -38108,7 +38143,7 @@ IA
 of
 of
 of
-ov
+jU
 oi
 of
 of
@@ -40940,7 +40975,7 @@ cG
 cG
 oE
 cG
-NQ
+RI
 nJ
 cG
 oE
@@ -42953,7 +42988,7 @@ Rj
 mi
 ck
 WJ
-Xd
+RW
 uz
 lJ
 Rk
@@ -42968,7 +43003,7 @@ JJ
 Rv
 lJ
 kU
-sk
+lh
 Nx
 Lb
 Ro
@@ -43545,7 +43580,7 @@ UU
 UU
 UU
 Ya
-LH
+Fo
 li
 yv
 fJ
@@ -43747,7 +43782,7 @@ UU
 UU
 UU
 Ya
-LH
+Fo
 Aq
 WQ
 cP
@@ -43949,7 +43984,7 @@ UU
 UU
 UU
 Ya
-LH
+Fo
 yE
 GE
 TH
@@ -45168,7 +45203,7 @@ iy
 sR
 ms
 pQ
-Cy
+SL
 lA
 ml
 ml
@@ -45381,14 +45416,14 @@ Jy
 cL
 cL
 Li
-IW
+Ta
 pC
 cL
 cL
 bV
 og
 Vc
-vq
+so
 uv
 og
 kF
