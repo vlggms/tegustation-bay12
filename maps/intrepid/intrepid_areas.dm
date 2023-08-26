@@ -184,6 +184,7 @@
 /area/intrepid/department/command/selfdestruct
 	name = "\improper Self Destruct Terminal"
 	icon_state = "selfdestruct"
+	req_access = list(access_heads_vault)
 
 /area/intrepid/department/command/commandquarters
 	icon_state = "heads"
@@ -307,6 +308,12 @@
 /area/intrepid/department/engineering/storage/primary
 	name = "Primary Tool Storage"
 	icon_state = "primarystorage"
+
+/area/intrepid/department/engineering/construction
+	name = "\improper Construction Zone"
+	icon_state = "engine"
+	sound_env = LARGE_ENCLOSED
+	req_access = list(access_construction)
 
 //Exploration
 /area/intrepid/department/exploration
