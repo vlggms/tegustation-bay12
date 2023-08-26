@@ -118,46 +118,52 @@ BONUS
 		switch(rand_effect)
 			// Fake examine message
 			if(1)
-				if(M.is_blind())
-					return
-				var/list/potential_people = list()
-				for(var/mob/living/carbon/human/H in view(4, M))
-					if(H == M)
-						continue
-					if(!H.client)
-						continue
-					if(H.stat)
-						continue
-					if(H.is_invisible_to(M))
-						continue
-					potential_people += H
-				if(!LAZYLEN(potential_people))
-					return
-				var/mob/living/carbon/human/H = pick(potential_people)
-				var/fake_message = "at the void"
-				if(prob(25) && istype(H.back, /obj/item/storage))
-					fake_message = "inside \the [H.back.name]"
-				else
-					var/obj/item/fake_item = pick(GLOB.paranoia_items)
-					fake_message = "at \the [initial(fake_item.name)]"
-				to_chat(M, "<span class='subtle'><b>\The [H]</b> looks [fake_message].</span>")
+				SendFakeExamine(M)
 			// Fake sound
 			if(2)
-				var/turf/T = get_random_turf_in_range(M, 12, 5)
-				var/S = pick(GLOB.paranoia_sounds)
-				var/vol = rand(10, 50)
-				M.playsound_local(T, S, vol, prob(50), extrarange = 7)
-				if(!islist(GLOB.paranoia_sounds[S]))
-					return
-				// Epic paranoidal sounds
-				var/list/params = GLOB.paranoia_sounds[S]
-				var/repeats = rand(1, params[1])
-				for(var/i = 1 to repeats)
-					var/delay = rand(params[2], params[3])
-					addtimer(CALLBACK(src, .proc/PlayDelayedSound, M, T, S), delay)
+				PlayFakeSound(M)
+
+/datum/symptom/paranoia/proc/SendFakeExamine(mob/living/M)
+	if(M.is_blind())
+		return
+	var/list/potential_people = list()
+	for(var/mob/living/carbon/human/H in view(4, M))
+		if(H == M)
+			continue
+		if(!H.client)
+			continue
+		if(H.stat)
+			continue
+		if(H.is_invisible_to(M))
+			continue
+		potential_people += H
+	if(!LAZYLEN(potential_people))
+		return
+	var/mob/living/carbon/human/H = pick(potential_people)
+	var/fake_message = "at the void"
+	if(prob(25) && istype(H.back, /obj/item/storage))
+		fake_message = "inside \the [H.back.name]"
+	else
+		var/obj/item/fake_item = pick(GLOB.paranoia_items)
+		fake_message = "at \the [initial(fake_item.name)]"
+	to_chat(M, "<span class='subtle'><b>\The [H]</b> looks [fake_message].</span>")
+
+/datum/symptom/paranoia/proc/PlayFakeSound(mob/living/M)
+	var/turf/T = get_random_turf_in_range(M, 8, 4)
+	var/S = pick(GLOB.paranoia_sounds)
+	var/vol = rand(10, 50)
+	M.playsound_local(T, S, vol, prob(50))
+	if(!islist(GLOB.paranoia_sounds[S]))
+		return
+	// Epic paranoidal sounds
+	var/list/params = GLOB.paranoia_sounds[S]
+	var/repeats = rand(1, params[1])
+	for(var/i = 1 to repeats)
+		var/delay = rand(params[2], params[3])
+		addtimer(CALLBACK(src, .proc/PlayDelayedSound, M, T, S), delay)
 
 /datum/symptom/paranoia/proc/PlayDelayedSound(mob/living/M, turf/T, S, vol)
 	if(QDELETED(M) || QDELETED(T))
 		return
 	var/turf/TT = get_random_turf_in_range(T, 1) // Sound is coming from slightly different place now
-	M.playsound_local(TT, S, rand(round(vol * 0.75), round(vol * 1.25)), prob(50), extrarange = 7)
+	M.playsound_local(TT, S, rand(round(vol * 0.75), round(vol * 1.25)), prob(50))

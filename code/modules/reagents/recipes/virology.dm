@@ -66,58 +66,42 @@
 		if(D)
 			D.Evolve(level_min, level_max)
 
-
-/datum/chemical_reaction/mix_virus/mix_virus_2
-	required_reagents = list(/datum/reagent/unstable_mutagen = 1)
-	level_min = 2
-	level_max = 4
-
-/datum/chemical_reaction/mix_virus/mix_virus_3
-	required_reagents = list(/datum/reagent/toxin/phoron = 1)
-	level_min = 4
-	level_max = 6
-
-/datum/chemical_reaction/mix_virus/mix_virus_4
-	required_reagents = list(/datum/reagent/uranium = 1)
-	level_min = 5
-	level_max = 6
-
-/datum/chemical_reaction/mix_virus/mix_virus_5
+/datum/chemical_reaction/mix_virus/mix_virus_1
 	required_reagents = list(/datum/reagent/unstable_mutagen/mutagen_virus_food = 1)
 	level_min = 3
 	level_max = 3
 
-/datum/chemical_reaction/mix_virus/mix_virus_6
+/datum/chemical_reaction/mix_virus/mix_virus_2
 	required_reagents = list(/datum/reagent/unstable_mutagen/mutagen_virus_food/sugar = 1)
 	level_min = 4
 	level_max = 4
 
-/datum/chemical_reaction/mix_virus/mix_virus_7
+/datum/chemical_reaction/mix_virus/mix_virus_3
 	required_reagents = list(/datum/reagent/toxin/phoron/phoron_virus_food/weak = 1)
 	level_min = 5
 	level_max = 5
 
-/datum/chemical_reaction/mix_virus/mix_virus_8
+/datum/chemical_reaction/mix_virus/mix_virus_4
 	required_reagents = list(/datum/reagent/toxin/phoron/phoron_virus_food = 1)
 	level_min = 6
 	level_max = 6
 
-/datum/chemical_reaction/mix_virus/mix_virus_9
+/datum/chemical_reaction/mix_virus/mix_virus_5
 	required_reagents = list(/datum/reagent/medicine/stimulant/synaptizine/synaptizine_virus_food = 1)
 	level_min = 1
 	level_max = 1
 
-/datum/chemical_reaction/mix_virus/mix_virus_10
+/datum/chemical_reaction/mix_virus/mix_virus_6
 	required_reagents = list(/datum/reagent/uranium/uranium_virus_food = 1)
 	level_min = 6
 	level_max = 7
 
-/datum/chemical_reaction/mix_virus/mix_virus_11
+/datum/chemical_reaction/mix_virus/mix_virus_7
 	required_reagents = list(/datum/reagent/uranium/uranium_virus_food/unstable = 1)
 	level_min = 7
 	level_max = 7
 
-/datum/chemical_reaction/mix_virus/mix_virus_12
+/datum/chemical_reaction/mix_virus/mix_virus_8
 	required_reagents = list(/datum/reagent/uranium/uranium_virus_food/stable = 1)
 	level_min = 8
 	level_max = 8
