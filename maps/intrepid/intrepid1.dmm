@@ -956,7 +956,7 @@
 /area/crew_quarters/sleep/bunk)
 "aSm" = (
 /obj/structure/table/standard,
-/obj/item/rig/combat/equipped,
+/obj/item/clothing/suit/space/void/security/alt/prepared,
 /turf/simulated/floor/carpet/red,
 /area/intrepid/department/command/commandquarters/cos)
 "aSz" = (
@@ -4454,9 +4454,9 @@
 "dBd" = (
 /obj/effect/wallframe_spawn/reinforced_phoron/hull,
 /obj/machinery/door/blast/shutters{
+	dir = 8;
 	id_tag = "senatorquarters";
-	name = "Senator Quarters Window Shutters";
-	dir = 8
+	name = "Senator Quarters Window Shutters"
 	},
 /turf/simulated/floor,
 /area/intrepid/department/command/commandquarters/tgs)
@@ -7880,7 +7880,7 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 1
 	},
-/obj/structure/sign/poster/illegal_random{
+/obj/structure/sign/poster{
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,
@@ -9299,9 +9299,9 @@
 "htY" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/blast/shutters{
+	dir = 8;
 	id_tag = "senatoroffice";
-	name = "Senator Office Window Shutters";
-	dir = 8
+	name = "Senator Office Window Shutters"
 	},
 /turf/simulated/floor,
 /area/intrepid/department/command/commandquarters/tgs)
@@ -13597,7 +13597,7 @@
 	dir = 8;
 	icon_state = "corner_white"
 	},
-/obj/structure/sign/poster/illegal_random{
+/obj/structure/sign/poster{
 	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/dark,
@@ -14182,6 +14182,21 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/intrepid/misc/hallway/starboard)
+"lAG" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/structure/sign/poster/illegal_random{
+	pixel_y = 32
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/portside)
 "lBK" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
@@ -21333,9 +21348,9 @@
 "qRQ" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/blast/shutters{
+	dir = 8;
 	id_tag = "senatorquarters";
-	name = "Senator Quarters Window Shutters";
-	dir = 8
+	name = "Senator Quarters Window Shutters"
 	},
 /turf/simulated/floor,
 /area/intrepid/department/command/commandquarters/tgs)
@@ -23862,9 +23877,9 @@
 "sSR" = (
 /obj/effect/wallframe_spawn/reinforced_phoron/hull,
 /obj/machinery/door/blast/shutters{
+	dir = 8;
 	id_tag = "senatoroffice";
-	name = "Senator Office Window Shutters";
-	dir = 8
+	name = "Senator Office Window Shutters"
 	},
 /turf/simulated/floor,
 /area/intrepid/department/command/commandquarters/tgs)
@@ -25110,6 +25125,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/portside)
+"tOY" = (
+/obj/structure/sign/poster/illegal_random{
+	pixel_y = -32
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/internalportside)
 "tPg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 10;
@@ -45902,7 +45923,7 @@ fLr
 mfm
 kiU
 caZ
-ksQ
+tOY
 cao
 uGn
 dlG
@@ -50971,7 +50992,7 @@ jbM
 viY
 ckL
 sSX
-luw
+lAG
 oMt
 vVc
 nkh
