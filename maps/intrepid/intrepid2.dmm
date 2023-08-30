@@ -2,6 +2,17 @@
 "ab" = (
 /turf/simulated/floor/tiled/steel_ridged,
 /area/turbolift/port/lift)
+"ac" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -32
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/security/firing_range)
 "ad" = (
 /obj/machinery/computer/shuttle_control/explore/exploration_shuttle{
 	dir = 4
@@ -186,6 +197,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/security/portdockingbaysecurity)
+"aE" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/techmaint,
+/area/intrepid/department/security/firing_range)
 "aJ" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/handrail{
@@ -288,6 +306,23 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/department/command/obstructionfielddisperser)
+"aZ" = (
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -23
+	},
+/obj/machinery/button/blast_door{
+	dir = 1;
+	id_tag = "firingrange";
+	name = "Firing Range shutters button";
+	pixel_x = 25;
+	pixel_y = -22
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/intrepid/department/security/firing_range)
 "ba" = (
 /obj/machinery/disperser/front{
 	dir = 8
@@ -970,6 +1005,20 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/central)
+"cY" = (
+/obj/item/gun/energy/laser/practice,
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 6;
+	pixel_y = 20
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_x = -8;
+	pixel_y = 20
+	},
+/obj/structure/table/rack,
+/obj/item/gun/energy/laser/practice,
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/security/firing_range)
 "da" = (
 /obj/machinery/light{
 	dir = 1
@@ -1058,6 +1107,11 @@
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/portside)
+"dm" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/light/small/dystopian,
+/turf/simulated/floor/tiled,
+/area/intrepid/department/security/firing_range)
 "dn" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -1971,6 +2025,15 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/morgue)
+"gd" = (
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/superstructure)
 "gf" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/exploration/hangar/pandora)
@@ -2459,6 +2522,19 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbaysix)
+"hz" = (
+/obj/machinery/door/airlock/maintenance,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/intrepid/department/security/firing_range)
 "hA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 10
@@ -2673,6 +2749,19 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/civillian/safe_room/port)
+"ic" = (
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/superstructure)
 "id" = (
 /obj/machinery/suit_storage_unit/mining/alt{
 	req_access = list()
@@ -3091,6 +3180,10 @@
 	},
 /turf/simulated/floor,
 /area/space)
+"jv" = (
+/obj/effect/paint_stripe/red,
+/turf/simulated/wall/prepainted,
+/area/intrepid/department/security/firing_range)
 "jw" = (
 /obj/effect/paint/brown,
 /obj/machinery/atmospherics/valve/digital/open,
@@ -3348,6 +3441,16 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/security/starboarddockingbaysecurity)
+"kh" = (
+/obj/structure/table/standard,
+/obj/machinery/light/dystopian{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/security/firing_range)
 "ki" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/orange{
@@ -3367,6 +3470,7 @@
 	name = "Hangar Superstructure Maintaince Shaft Blast Door button";
 	req_access = list("ACCESS_CONSTRUCTION")
 	},
+/obj/effect/paint_stripe/brown,
 /turf/simulated/wall/prepainted,
 /area/intrepid/department/exploration/hangar/pithos)
 "kl" = (
@@ -3858,6 +3962,10 @@
 	dir = 1;
 	pixel_y = -23
 	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 17
+	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/intrepid/department/security/detectives_office)
 "lz" = (
@@ -4010,6 +4118,21 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/tcommsat)
+"lS" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/intrepid/department/security/firing_range)
 "lU" = (
 /obj/machinery/computer/telecomms/monitor{
 	dir = 4
@@ -4319,6 +4442,23 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/tcommsat)
+"mL" = (
+/obj/structure/table/steel_reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/item/clothing/ears/earmuffs,
+/obj/structure/railing/mapped{
+	dir = 8;
+	icon_state = "railing0-1"
+	},
+/obj/machinery/door/blast/shutters/open{
+	dir = 4;
+	icon_state = "shutter0";
+	id_tag = "firingrange"
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/intrepid/department/security/firing_range)
 "mM" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -4434,6 +4574,13 @@
 /obj/random/single/playing_cards,
 /turf/simulated/floor/tiled,
 /area/intrepid/department/civillian/safe_room/starboard)
+"nj" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/spline/fancy/black{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/intrepid/department/security/firing_range)
 "nl" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	frequency = 1441;
@@ -4499,6 +4646,12 @@
 	},
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/misc/maint/superstructure)
+"nq" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/obj/effect/paint_stripe/brown,
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper/central)
 "nr" = (
 /obj/structure/morgue{
 	dir = 8
@@ -4527,6 +4680,10 @@
 /obj/effect/paint_stripe/red,
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/department/security/detectives_office)
+"nw" = (
+/obj/effect/paint_stripe/brown,
+/turf/simulated/wall/r_wall/prepainted,
+/area/intrepid/department/engineering/atmos)
 "nx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -4829,6 +4986,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/engineering/engine_room/aux)
 "oB" = (
+/obj/effect/paint_stripe/brown,
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/department/exploration/hangar/pithos)
 "oC" = (
@@ -4876,6 +5034,18 @@
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/department/engineering/atmos)
+"oK" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/intrepid/department/security/firing_range)
 "oL" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -5255,6 +5425,15 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/starboard)
+"pT" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/fancy/black{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/intrepid/department/security/firing_range)
 "pU" = (
 /obj/structure/closet/crate/bin,
 /turf/simulated/floor/tiled/techfloor,
@@ -5530,6 +5709,13 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/monotile,
 /area/eva)
+"qQ" = (
+/obj/machinery/camera/network/security{
+	c_tag = "Security - Firing Range";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/prison)
 "qR" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -5663,7 +5849,8 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/civillian/dockbayfive)
 "rj" = (
-/turf/simulated/floor,
+/obj/effect/paint_stripe/brown,
+/turf/simulated/wall/prepainted,
 /area/intrepid/misc/maint/superstructure)
 "rk" = (
 /obj/structure/bed/chair,
@@ -5703,6 +5890,20 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/central)
+"rs" = (
+/obj/structure/closet/crate/large,
+/obj/machinery/door/window/southright,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/storage/box/ammo/practiceshells,
+/obj/item/storage/box/ammo/practiceshells,
+/obj/item/ammo_magazine/mil_rifle/practice,
+/obj/item/ammo_magazine/mil_rifle/practice,
+/obj/item/ammo_magazine/pistol/double/practice{
+	name = "practice doublestack pistol magazine"
+	},
+/obj/item/ammo_magazine/smg_top/practice,
+/turf/simulated/floor/tiled/monotile,
+/area/intrepid/department/security/firing_range)
 "ru" = (
 /obj/machinery/light{
 	dir = 4
@@ -7162,6 +7363,16 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/civillian/dockbaysix)
+"vq" = (
+/obj/machinery/door/airlock/security,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/firedoor,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/intrepid/department/security/firing_range)
 "vs" = (
 /obj/machinery/door/firedoor{
 	dir = 4
@@ -7329,6 +7540,13 @@
 /obj/effect/paint_stripe/blue,
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/department/command/selfdestruct)
+"vT" = (
+/obj/item/stool/padded,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/intrepid/department/security/firing_range)
 "vU" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
@@ -8072,6 +8290,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/pandora/cockpit)
 "yk" = (
+/obj/effect/paint_stripe/brown,
 /turf/simulated/wall/prepainted,
 /area/intrepid/department/exploration/hangar/pithos)
 "ym" = (
@@ -8110,6 +8329,7 @@
 "ys" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/firedoor,
+/obj/effect/paint_stripe/brown,
 /turf/simulated/floor,
 /area/intrepid/department/exploration/hangar/pithos)
 "yt" = (
@@ -8780,6 +9000,10 @@
 /obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/tiled/white/monotile,
 /area/intrepid/department/security/detectives_office)
+"At" = (
+/obj/effect/paint_stripe/brown,
+/turf/simulated/wall/prepainted,
+/area/intrepid/misc/maint/upper/starboard)
 "Au" = (
 /obj/structure/cable/orange{
 	icon_state = "2-5"
@@ -9210,6 +9434,21 @@
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room/aux)
+"By" = (
+/obj/structure/table/steel_reinforced,
+/obj/structure/window/reinforced,
+/obj/item/clothing/ears/earmuffs,
+/obj/structure/railing/mapped{
+	dir = 8;
+	icon_state = "railing0-1"
+	},
+/obj/machinery/door/blast/shutters/open{
+	dir = 4;
+	icon_state = "shutter0";
+	id_tag = "firingrange"
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/intrepid/department/security/firing_range)
 "Bz" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light/spot{
@@ -9514,6 +9753,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/exploration/hangar/pandora)
+"Cm" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/intrepid/department/security/firing_range)
 "Cn" = (
 /obj/structure/bed/chair/office/comfy{
 	dir = 1
@@ -9807,6 +10052,10 @@
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/intrepid/department/civillian/safe_room/port)
+"Dm" = (
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled,
+/area/intrepid/department/security/firing_range)
 "Do" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /turf/simulated/floor/tiled/steel_grid,
@@ -9871,6 +10120,7 @@
 /turf/simulated/floor/reinforced/airless,
 /area/intrepid/department/engineering/engine_room/aux)
 "DA" = (
+/obj/effect/paint_stripe/brown,
 /turf/simulated/wall/prepainted,
 /area/intrepid/department/command/commandquarters/psiadvisor)
 "DB" = (
@@ -10281,6 +10531,12 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/central)
+"EN" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/intrepid/department/security/firing_range)
 "EP" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/effect/floor_decal/corner/white/diagonal{
@@ -10359,6 +10615,17 @@
 /obj/effect/shuttle_landmark/lift/intrepidcargo_top,
 /turf/simulated/open,
 /area/intrepid/department/cargo/cargostorage)
+"Fe" = (
+/obj/structure/table/standard,
+/obj/machinery/camera/network/security{
+	c_tag = "Security - Aft Firing Range";
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/security/firing_range)
 "Ff" = (
 /obj/structure/closet/firecloset,
 /obj/effect/floor_decal/industrial/fire/fulltile,
@@ -10382,6 +10649,7 @@
 	name = "Hangar Superstructure Maintaince Shaft Blast Door button";
 	req_access = list("ACCESS_CONSTRUCTION")
 	},
+/obj/effect/paint_stripe/brown,
 /turf/simulated/wall/prepainted,
 /area/intrepid/department/exploration/hangar/pithos)
 "Fi" = (
@@ -12196,6 +12464,10 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/intrepid/department/engineering/atmos)
+"KX" = (
+/obj/machinery/door/airlock/glass/security,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/intrepid/department/security/firing_range)
 "La" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -12304,6 +12576,15 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/atmos)
+"Lq" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/camera/network/security{
+	c_tag = "Security - Fore Firing Range"
+	},
+/turf/simulated/floor/tiled,
+/area/intrepid/department/security/firing_range)
 "Lr" = (
 /obj/structure/cable{
 	icon_state = "0-2"
@@ -12719,6 +13000,18 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/eva)
+"MG" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/security/firing_range)
 "MH" = (
 /obj/structure/table/standard,
 /obj/item/paper/pamphlet,
@@ -13747,6 +14040,24 @@
 	},
 /turf/simulated/floor/tiled/dark/airless,
 /area/intrepid/department/civillian/dockbayfour)
+"PK" = (
+/obj/item/gun/energy/laser/practice,
+/obj/machinery/recharger/wallcharger{
+	pixel_x = -8;
+	pixel_y = 20
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 6;
+	pixel_y = 20
+	},
+/obj/structure/table/rack,
+/obj/item/gun/energy/laser/practice,
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 17
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/security/firing_range)
 "PL" = (
 /obj/machinery/door/blast/regular{
 	dir = 4;
@@ -14531,6 +14842,18 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/tcommsat)
+"Sf" = (
+/obj/structure/table/rack,
+/obj/item/target/alien,
+/obj/item/target/alien,
+/obj/item/target/syndicate,
+/obj/item/target/syndicate,
+/obj/structure/railing/mapped,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/intrepid/department/security/firing_range)
 "Sh" = (
 /obj/machinery/suit_storage_unit/security,
 /obj/effect/floor_decal/industrial/outline/red,
@@ -14539,6 +14862,14 @@
 "Si" = (
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/department/civillian/safe_room/starboard)
+"Sj" = (
+/obj/item/stool/padded,
+/obj/machinery/power/apc{
+	pixel_y = -23
+	},
+/obj/structure/cable/green,
+/turf/simulated/floor/tiled/techmaint,
+/area/intrepid/department/security/firing_range)
 "Sn" = (
 /obj/machinery/light{
 	dir = 8
@@ -14578,16 +14909,18 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/superstructure)
 "St" = (
@@ -14711,21 +15044,20 @@
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/exploration/hangar/pithos)
 "SL" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/camera/network/security{
-	c_tag = "Security - Upper Deck Hallway";
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/prison)
@@ -14820,6 +15152,11 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/portside)
+"SW" = (
+/obj/effect/floor_decal/industrial/hatch/red,
+/obj/structure/target_stake,
+/turf/simulated/floor/tiled/steel_grid,
+/area/intrepid/department/security/firing_range)
 "SX" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 4
@@ -16236,6 +16573,10 @@
 /obj/machinery/meter,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/pandora/cockpit)
+"Xb" = (
+/obj/effect/paint_stripe/brown,
+/turf/simulated/wall/prepainted,
+/area/intrepid/department/security/firing_range)
 "Xc" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -16462,6 +16803,15 @@
 /obj/machinery/psi_monitor,
 /turf/simulated/floor/wood,
 /area/intrepid/department/command/commandquarters/psiadvisor)
+"XN" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/light/small/dystopian{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/intrepid/department/security/firing_range)
 "XO" = (
 /obj/machinery/atmospherics/unary/tank/carbon_dioxide{
 	dir = 8
@@ -16735,6 +17085,12 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/pandora/cockpit)
+"Yy" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/turf/simulated/floor/tiled,
+/area/intrepid/department/security/firing_range)
 "Yz" = (
 /turf/simulated/floor/tiled/steel_grid,
 /area/eva)
@@ -16884,6 +17240,9 @@
 /obj/effect/wingrille_spawn/reinforced_phoron/full,
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room/aux)
+"YZ" = (
+/turf/simulated/floor/tiled/steel_grid,
+/area/intrepid/department/security/firing_range)
 "Za" = (
 /obj/machinery/button/toggle/valve{
 	dir = 1;
@@ -17199,6 +17558,19 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/pithos/cargo)
+"ZM" = (
+/obj/structure/table/rack,
+/obj/item/target,
+/obj/item/target,
+/obj/item/target,
+/obj/item/target,
+/obj/item/target,
+/obj/structure/railing/mapped,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/intrepid/department/security/firing_range)
 "ZP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -40765,7 +41137,7 @@ pq
 ZI
 ai
 ck
-WJ
+At
 yk
 yk
 yk
@@ -40967,7 +41339,7 @@ pq
 ZI
 ai
 ck
-WJ
+At
 Jy
 cG
 cG
@@ -41169,7 +41541,7 @@ Rj
 Rj
 ai
 ck
-WJ
+At
 TZ
 Pn
 ee
@@ -41371,7 +41743,7 @@ jT
 Rj
 ai
 ck
-WJ
+At
 va
 JG
 Bq
@@ -41573,7 +41945,7 @@ Qf
 mm
 bl
 Qh
-WJ
+At
 tN
 uz
 lJ
@@ -41775,7 +42147,7 @@ Nb
 Rj
 vQ
 ck
-WJ
+At
 rJ
 uz
 lJ
@@ -41977,7 +42349,7 @@ Qi
 Rj
 ku
 Ux
-WJ
+At
 rJ
 uz
 lJ
@@ -42398,7 +42770,7 @@ lJ
 lJ
 kU
 zR
-Nx
+rj
 Es
 Ro
 sM
@@ -42600,7 +42972,7 @@ JJ
 lJ
 kU
 Om
-Nx
+rj
 xp
 Ro
 qK
@@ -42785,7 +43157,7 @@ uA
 Rj
 rq
 ck
-WJ
+At
 rJ
 uz
 lJ
@@ -42802,7 +43174,7 @@ Rv
 lJ
 kU
 zR
-Nx
+rj
 Lk
 Ro
 su
@@ -42987,7 +43359,7 @@ WM
 Rj
 mi
 ck
-WJ
+At
 RW
 uz
 lJ
@@ -43004,7 +43376,7 @@ Rv
 lJ
 kU
 lh
-Nx
+rj
 Lb
 Ro
 Ro
@@ -43189,7 +43561,7 @@ XB
 Rj
 mi
 ck
-WJ
+At
 rJ
 uz
 lJ
@@ -43206,7 +43578,7 @@ JJ
 lJ
 kU
 zR
-Nx
+rj
 ml
 Lb
 pV
@@ -43389,9 +43761,9 @@ Rj
 Rj
 Rj
 Rj
-WJ
-WJ
-WJ
+jv
+jv
+Xb
 rJ
 uz
 lP
@@ -43408,7 +43780,7 @@ lP
 lP
 kU
 zR
-Nx
+rj
 Nx
 Nx
 Nx
@@ -43591,9 +43963,9 @@ Eo
 MW
 sn
 UM
-ml
-ml
-Nx
+SW
+SW
+Xb
 rJ
 uz
 lP
@@ -43793,9 +44165,9 @@ NN
 We
 VC
 UM
-Sq
-Sq
-Nx
+pT
+nj
+Xb
 tN
 uz
 lP
@@ -43812,7 +44184,7 @@ BL
 lP
 kU
 Pk
-Rt
+nq
 AD
 KH
 PF
@@ -43995,9 +44367,9 @@ sn
 pO
 sn
 UM
-ml
-ml
-Nx
+XN
+Dm
+Xb
 rJ
 uz
 NW
@@ -44197,9 +44569,9 @@ UM
 UM
 UM
 UM
-Sq
-Sq
-Nx
+Lq
+Dm
+Xb
 rJ
 uz
 lJ
@@ -44216,7 +44588,7 @@ lJ
 lJ
 gw
 Pk
-DQ
+nw
 DQ
 DQ
 DQ
@@ -44397,11 +44769,11 @@ UM
 pQ
 Kp
 Kp
-lA
-ml
-ml
-ml
-Nx
+jv
+ZM
+Cm
+Dm
+Xb
 rJ
 uz
 lJ
@@ -44418,7 +44790,7 @@ lJ
 lJ
 gw
 Pk
-DQ
+nw
 DQ
 DQ
 DQ
@@ -44598,12 +44970,12 @@ iy
 ms
 pQ
 ak
-lA
-lA
-Nx
-fT
-Nx
-Nx
+jv
+jv
+Sf
+Cm
+dm
+Xb
 rJ
 uz
 lJ
@@ -44620,7 +44992,7 @@ lJ
 lJ
 gw
 Pk
-DQ
+nw
 iO
 nl
 Vk
@@ -44799,13 +45171,13 @@ ZP
 ZR
 ms
 pQ
-pQ
-lA
-ml
-ml
-ml
-ml
-Nx
+qQ
+jv
+rs
+YZ
+Yy
+EN
+Xb
 tN
 uz
 lJ
@@ -44822,7 +45194,7 @@ lJ
 lJ
 gw
 zh
-DQ
+nw
 ko
 oJ
 tP
@@ -45002,12 +45374,12 @@ eV
 RZ
 Bi
 XX
-lA
-ml
-ml
-ml
-ml
-Nx
+jv
+jv
+KX
+mL
+By
+Xb
 va
 qb
 Wr
@@ -45024,7 +45396,7 @@ Wr
 Wr
 zJ
 Kl
-DQ
+nw
 DQ
 DQ
 DQ
@@ -45204,12 +45576,12 @@ sR
 ms
 pQ
 SL
-lA
-ml
-ml
-ml
-ml
-Nx
+vq
+ac
+lS
+vT
+Sj
+Xb
 TZ
 Hi
 ee
@@ -45226,7 +45598,7 @@ ee
 ee
 VR
 tZ
-DQ
+nw
 lg
 pr
 Vk
@@ -45406,12 +45778,12 @@ iy
 ms
 pQ
 jZ
-lA
-ml
-ml
-ml
-ml
-Nx
+jv
+cY
+oK
+aE
+aZ
+Xb
 Jy
 cL
 cL
@@ -45428,7 +45800,7 @@ uv
 og
 kF
 ZV
-DQ
+nw
 ko
 oJ
 tP
@@ -45608,12 +45980,12 @@ ly
 UM
 CT
 to
-lA
-ml
-ml
-ml
-ml
-Nx
+jv
+PK
+MG
+kh
+Fe
+Xb
 yk
 yk
 yk
@@ -45630,7 +46002,7 @@ yk
 yk
 yT
 yk
-DQ
+nw
 lH
 oJ
 tP
@@ -45810,12 +46182,12 @@ nt
 UM
 lA
 Cv
-lA
-Nx
-Nx
-fT
-Nx
-Nx
+jv
+jv
+hz
+jv
+jv
+jv
 Sq
 ml
 ml
@@ -46012,10 +46384,10 @@ tV
 FT
 FL
 Ss
-rj
+gd
+gd
+ic
 Nx
-ml
-Sq
 ml
 ml
 Sq
@@ -46214,10 +46586,10 @@ tV
 FT
 FL
 RJ
-rj
+FT
+FT
+wQ
 Nx
-ml
-Sq
 ml
 ml
 Sq
@@ -46416,10 +46788,10 @@ tV
 FT
 FL
 wQ
-rj
+FT
+FT
+wQ
 Nx
-ml
-Sq
 ml
 ml
 Sq

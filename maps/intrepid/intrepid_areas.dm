@@ -674,6 +674,10 @@
 	sound_env = MEDIUM_SOFTFLOOR
 	req_access = list(access_forensics_lockers)
 
+/area/intrepid/department/security/firing_range
+	name = "\improper Security - Firing Range"
+	icon_state = "security"
+
 /area/intrepid/department/security/starboarddockingbaysecurity
 	name = "\improper Starboard Docking Bay Checkpoint"
 	icon_state = "security"
