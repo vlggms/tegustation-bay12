@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "ak" = (
-/obj/effect/overmap/visitable/ship/landable/sol_shuttle,
+/obj/effect/overmap/visitable/ship/landable/sol_shuttle/north,
 /turf/space,
 /area/space)
 "am" = (
@@ -98,15 +98,12 @@
 /turf/simulated/floor,
 /area/sol_shuttle/atmospherics)
 "cb" = (
-/obj/structure/shuttle/engine/heater,
-/obj/machinery/atmospherics/pipe/manifold/visible/fuel{
-	dir = 4
+/obj/item/storage/briefcase/inflatable{
+	pixel_x = 8;
+	pixel_y = 14
 	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/simulated/floor,
-/area/sol_shuttle/engine2)
+/turf/simulated/floor/tiled/techfloor,
+/area/sol_shuttle/engineering)
 "cg" = (
 /obj/item/clothing/head/helmet/space/psi_amp/lesser,
 /turf/simulated/floor/asteroid,
@@ -201,10 +198,6 @@
 "dm" = (
 /turf/simulated/wall/r_wall/prepainted,
 /area/sol_shuttle/bridge)
-"ds" = (
-/obj/machinery/recharger/wallcharger,
-/turf/simulated/wall/r_wall/prepainted,
-/area/sol_shuttle/bridge)
 "dx" = (
 /obj/structure/bed/chair/comfy/blue{
 	dir = 1
@@ -218,10 +211,10 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/structure/fuel_port{
-	pixel_y = 32
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide/engine_setup{
+	start_pressure = 7498.00
 	},
-/obj/machinery/atmospherics/unary/tank/carbon_dioxide,
+/obj/machinery/atmospherics/portables_connector,
 /turf/simulated/floor,
 /area/sol_shuttle/engine2)
 "dz" = (
@@ -279,13 +272,10 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/sol_shuttle/telecomms)
 "eE" = (
-/obj/structure/shuttle/engine/heater,
 /obj/machinery/atmospherics/pipe/manifold/visible/fuel{
 	dir = 8
 	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
+/obj/machinery/meter,
 /turf/simulated/floor,
 /area/sol_shuttle/engine1)
 "eJ" = (
@@ -358,6 +348,9 @@
 /obj/item/ammo_magazine/mil_rifle,
 /obj/item/storage/box/flashbangs,
 /obj/item/ammo_magazine/mil_rifle,
+/obj/machinery/recharger/wallcharger{
+	pixel_y = 25
+	},
 /turf/simulated/floor/tiled/dark,
 /area/sol_shuttle/bridge)
 "fy" = (
@@ -384,11 +377,12 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/sol_shuttle/engineering)
 "fB" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 1
+/obj/machinery/atmospherics/pipe/manifold/visible/fuel{
+	dir = 4
 	},
+/obj/machinery/meter,
 /turf/simulated/floor,
-/area/sol_shuttle/engine1)
+/area/sol_shuttle/engine2)
 "fJ" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 1
@@ -409,6 +403,9 @@
 /obj/item/ammo_magazine/mil_rifle,
 /obj/item/storage/box/handcuffs,
 /obj/item/ammo_magazine/mil_rifle,
+/obj/machinery/recharger/wallcharger{
+	pixel_y = 25
+	},
 /turf/simulated/floor/tiled/dark,
 /area/sol_shuttle/bridge)
 "fO" = (
@@ -593,6 +590,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
+/obj/effect/floor_decal/industrial/warning/fulltile,
 /turf/simulated/floor/tiled/techfloor,
 /area/sol_shuttle/ofd)
 "iy" = (
@@ -630,7 +628,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/sol_shuttle/bridge)
 "iV" = (
-/obj/machinery/door/airlock/sol,
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -639,6 +636,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/airlock/highsecurity,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/sol_shuttle/bridge)
 "iY" = (
@@ -1059,7 +1057,8 @@
 	frequency = 5833;
 	id_tag = "sol-shuttle_exit1";
 	pixel_x = 21;
-	tag_exterior_sensor = "sol-shuttle_exit1_exterior"
+	tag_exterior_sensor = "sol-shuttle_exit1_exterior_sensor";
+	tag_interior_sensor = "sol-shuttle_exit1_sensor"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
 	dir = 8;
@@ -1463,10 +1462,6 @@
 /area/sol_shuttle/electrical)
 "qY" = (
 /obj/structure/table/woodentable/walnut,
-/obj/item/toy/icarus_model{
-	desc = "A small model of a spaceship mounted on a wooden stand. On the stand is engraved: \"SEV Quantum 1:278th scale\". The small lights on the hull and the engine exhaust still light up and blink.";
-	name = "table-top SEV Quantum model"
-	},
 /turf/simulated/floor/wood/walnut,
 /area/sol_shuttle/capsroom)
 "rc" = (
@@ -1532,7 +1527,9 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 9
 	},
-/obj/machinery/suit_storage_unit/merc,
+/obj/machinery/suit_storage_unit/merc{
+	req_access = list("ACCESS_SOL_SHUTTLE")
+	},
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/techfloor,
 /area/sol_shuttle/engineering)
@@ -1581,7 +1578,9 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 1
 	},
-/obj/machinery/suit_storage_unit/merc,
+/obj/machinery/suit_storage_unit/merc{
+	req_access = list("ACCESS_SOL_SHUTTLE")
+	},
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/techfloor,
 /area/sol_shuttle/engineering)
@@ -1729,7 +1728,10 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/machinery/atmospherics/unary/tank/carbon_dioxide,
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide/engine_setup{
+	start_pressure = 7498.00
+	},
+/obj/machinery/atmospherics/portables_connector,
 /turf/simulated/floor,
 /area/sol_shuttle/engine1)
 "ug" = (
@@ -2018,6 +2020,7 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 9
 	},
+/obj/effect/submap_landmark/spawnpoint/sol_shuttle/VIP,
 /turf/simulated/floor/tiled/dark,
 /area/sol_shuttle/lounge)
 "yl" = (
@@ -2074,8 +2077,9 @@
 /turf/simulated/wall/prepainted,
 /area/sol_shuttle/lounge)
 "yZ" = (
-/obj/machinery/atmospherics/pipe/simple/visible/fuel,
-/obj/machinery/meter,
+/obj/machinery/atmospherics/binary/pump/high_power/on{
+	power_rating = 450
+	},
 /turf/simulated/floor,
 /area/sol_shuttle/engine1)
 "ze" = (
@@ -2105,7 +2109,7 @@
 "zI" = (
 /obj/structure/table/woodentable/walnut,
 /obj/machinery/photocopier/faxmachine{
-	department = "SEV Quantum"
+	department = "SolGov Cruiser"
 	},
 /turf/simulated/floor/carpet/blue,
 /area/sol_shuttle/capsroom)
@@ -2315,8 +2319,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/sol_shuttle/primaryhall)
 "Dn" = (
-/obj/machinery/atmospherics/binary/pump/high_power/on{
-	power_rating = 450
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
 	},
 /turf/simulated/floor,
 /area/sol_shuttle/engine1)
@@ -2479,12 +2483,11 @@
 /turf/simulated/wall/r_wall/prepainted,
 /area/sol_shuttle/ofd)
 "Es" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/fuel{
-	dir = 8
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
 	},
-/obj/machinery/meter,
 /turf/simulated/floor,
-/area/sol_shuttle/engine1)
+/area/sol_shuttle/engine2)
 "Ex" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -2847,10 +2850,9 @@
 /turf/simulated/floor,
 /area/sol_shuttle/engine2)
 "Iv" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/fuel{
-	dir = 4
+/obj/machinery/atmospherics/binary/pump/high_power/on{
+	power_rating = 450
 	},
-/obj/machinery/meter,
 /turf/simulated/floor,
 /area/sol_shuttle/engine2)
 "Ix" = (
@@ -2923,11 +2925,10 @@
 /turf/simulated/floor/tiled/white,
 /area/sol_shuttle/science)
 "Jk" = (
-/obj/machinery/atmospherics/binary/pump/high_power/on{
-	power_rating = 450
-	},
+/obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/simple/visible/fuel,
 /turf/simulated/floor,
-/area/sol_shuttle/engine2)
+/area/sol_shuttle/engine1)
 "Jq" = (
 /obj/machinery/disperser/back{
 	dir = 1
@@ -3021,6 +3022,7 @@
 /obj/structure/table/reinforced,
 /obj/item/device/radio/map_preset/sol_shuttle,
 /obj/item/device/radio/map_preset/sol_shuttle,
+/obj/item/inflatable_dispenser,
 /turf/simulated/floor/tiled/techfloor,
 /area/sol_shuttle/engineering)
 "KB" = (
@@ -3051,6 +3053,9 @@
 "Lx" = (
 /obj/machinery/alarm{
 	dir = 4
+	},
+/obj/structure/fuel_port{
+	pixel_y = 32
 	},
 /turf/simulated/floor,
 /area/sol_shuttle/engine2)
@@ -3516,9 +3521,8 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/sol_shuttle/ofd)
 "OU" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 1
-	},
+/obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/simple/visible/fuel,
 /turf/simulated/floor,
 /area/sol_shuttle/engine2)
 "OX" = (
@@ -3673,6 +3677,7 @@
 /turf/simulated/floor,
 /area/sol_shuttle/engine2)
 "Qy" = (
+/obj/effect/floor_decal/industrial/warning/fulltile,
 /turf/simulated/floor/tiled/techfloor,
 /area/sol_shuttle/ofd)
 "Qz" = (
@@ -3704,6 +3709,16 @@
 /obj/item/device/measuring_tape,
 /turf/simulated/floor/tiled/dark,
 /area/sol_shuttle/science)
+"QT" = (
+/obj/structure/shuttle/engine/heater,
+/obj/machinery/atmospherics/pipe/manifold/visible/fuel{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor,
+/area/sol_shuttle/engine1)
 "QV" = (
 /obj/machinery/computer/ship/disperser,
 /obj/structure/railing/mapped{
@@ -3833,6 +3848,16 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/sol_shuttle/engineering)
+"SD" = (
+/obj/structure/shuttle/engine/heater,
+/obj/machinery/atmospherics/pipe/manifold/visible/fuel{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor,
+/area/sol_shuttle/engine2)
 "SI" = (
 /obj/structure/closet/hydrant{
 	pixel_x = -32
@@ -3847,6 +3872,9 @@
 "SL" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 9
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/sol_shuttle/ofd)
@@ -4472,11 +4500,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/sol_shuttle/ofd)
-"Zt" = (
-/obj/machinery/atmospherics/pipe/simple/visible/fuel,
-/obj/machinery/meter,
-/turf/simulated/floor,
-/area/sol_shuttle/engine2)
 "Zx" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -5914,9 +5937,9 @@ aW
 At
 At
 At
-lU
-lU
-lU
+At
+At
+At
 lU
 lU
 lU
@@ -5994,12 +6017,12 @@ WL
 WL
 Hm
 aW
-At
-At
-At
-At
-At
-At
+td
+eE
+yZ
+Jk
+QT
+cl
 lU
 lU
 lU
@@ -6078,10 +6101,10 @@ rl
 nd
 aW
 td
-Es
-Dn
-yZ
-eE
+jO
+vY
+vY
+lD
 cl
 lU
 lU
@@ -6328,7 +6351,7 @@ Os
 aW
 tV
 Hg
-fB
+Dn
 Rb
 lD
 cl
@@ -6379,7 +6402,7 @@ lU
 lU
 lU
 aI
-ds
+dm
 fc
 ir
 kb
@@ -6462,7 +6485,7 @@ lU
 lU
 aI
 aI
-ds
+dm
 fL
 iL
 kb
@@ -7153,7 +7176,7 @@ UA
 pb
 xs
 Kv
-yR
+cb
 Hk
 DB
 TF
@@ -7490,7 +7513,7 @@ En
 FI
 dy
 Zm
-OU
+Es
 YU
 da
 Tf
@@ -7656,7 +7679,7 @@ Tp
 FI
 Qq
 Qr
-YU
+HV
 HV
 da
 Tf
@@ -7738,10 +7761,10 @@ rV
 Hl
 FI
 Qq
-Iv
-Jk
-Zt
-cb
+Qr
+HV
+HV
+da
 Tf
 lU
 lU
@@ -7820,12 +7843,12 @@ OX
 yy
 ND
 FI
-TF
-TF
-TF
-TF
-TF
-TF
+Qq
+fB
+Iv
+OU
+SD
+Tf
 lU
 lU
 lU
@@ -7906,9 +7929,9 @@ FI
 TF
 TF
 TF
-lU
-lU
-lU
+TF
+TF
+TF
 lU
 lU
 lU

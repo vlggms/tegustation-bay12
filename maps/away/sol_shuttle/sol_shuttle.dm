@@ -77,7 +77,6 @@
 	color = "#0099cc"
 	icon_state = "ship"
 	moving_state = "ship_moving"
-	fore_dir = NORTH
 	vessel_size = SHIP_SIZE_SMALL
 
 /obj/effect/overmap/visitable/ship/landable/sol_shuttle/New()
@@ -87,6 +86,13 @@
 		GLOB.using_map.area_purity_test_exempt_areas += A.type
 	name = "[name], \a [initial(name)]"
 	..()
+
+/obj/effect/overmap/visitable/ship/landable/sol_shuttle/north
+	fore_dir = NORTH
+
+/obj/effect/overmap/visitable/ship/landable/sol_shuttle/east
+	fore_dir = EAST
+
 /obj/machinery/computer/shuttle_control/explore/sol_shuttle
 	name = "landing control console"
 	shuttle_tag = "SolGov Cruiser"
@@ -110,5 +116,6 @@
 	crew_jobs = list(
 		/datum/job/submap/sol,
 		/datum/job/submap/sol/captain,
-		/datum/job/submap/sol/scientist
+		/datum/job/submap/sol/scientist,
+		/datum/job/submap/sol/VIP
 	)

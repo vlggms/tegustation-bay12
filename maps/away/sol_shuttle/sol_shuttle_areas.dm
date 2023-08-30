@@ -1,6 +1,6 @@
 /area/sol_shuttle
 	req_access = list(access_sol_shuttle)
-
+	has_gravity = 1
 /area/sol_shuttle/cryo
 	name = "Cruiser Cryogenic Storage Compartment"
 	icon_state = "cryo"

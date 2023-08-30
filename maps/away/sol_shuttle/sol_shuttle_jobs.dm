@@ -122,6 +122,43 @@
 	)
 	skill_points = 22
 
+/datum/job/submap/sol/VIP
+	title = "SCG VIP"
+	total_positions = 1
+	info = "Wether you are a person thats being transported or a diplomat on the way to some peace talks, you are a VIP aboard an SCG Shuttle."
+	outfit_type = /decl/hierarchy/outfit/job/sol/member/scientist
+
+	min_skill = list(
+		SKILL_COMPUTER = SKILL_TRAINED,
+		SKILL_BUREAUCRACY = SKILL_TRAINED,
+		SKILL_FINANCE = SKILL_TRAINED,
+	)
+
+	max_skill = list(
+		SKILL_BUREAUCRACY = SKILL_MAX,
+		SKILL_FINANCE = SKILL_MAX,
+		SKILL_EVA = SKILL_EXPERIENCED,
+		SKILL_MECH = SKILL_MAX,
+		SKILL_PILOT = SKILL_TRAINED,
+		SKILL_HAULING = SKILL_MAX,
+		SKILL_COMPUTER = SKILL_MAX,
+		SKILL_BOTANY = SKILL_MAX,
+		SKILL_COOKING = SKILL_MAX,
+		SKILL_COMBAT = SKILL_TRAINED,
+		SKILL_WEAPONS = SKILL_TRAINED,
+		SKILL_FORENSICS = SKILL_MAX,
+		SKILL_CONSTRUCTION = SKILL_MAX,
+		SKILL_ELECTRICAL = SKILL_MAX,
+		SKILL_ATMOS = SKILL_MAX,
+		SKILL_ENGINES = SKILL_MAX,
+		SKILL_DEVICES = SKILL_MAX,
+		SKILL_SCIENCE = SKILL_MAX,
+		SKILL_MEDICAL = SKILL_EXPERIENCED,
+		SKILL_ANATOMY = SKILL_EXPERIENCED,
+		SKILL_CHEMISTRY = SKILL_EXPERIENCED
+	)
+	skill_points = 22
+
 // Access
 /var/const/access_sol_shuttle = "ACCESS_SOL_SHUTTLE"
 /datum/access/sol_shuttle
@@ -165,3 +202,6 @@
 
 /obj/effect/submap_landmark/spawnpoint/sol_shuttle/scientist
 	name = "SCG Scientist"
+
+/obj/effect/submap_landmark/spawnpoint/sol_shuttle/VIP
+	name = "SCG VIP"
