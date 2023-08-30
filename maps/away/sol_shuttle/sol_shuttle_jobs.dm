@@ -3,7 +3,7 @@
 	total_positions = 3
 	outfit_type = /decl/hierarchy/outfit/job/sol/member
 	supervisors = "SCG"
-	info = "You are a crewman in the SCG."
+	info = "You are a member of the SCG Fleet serving on a small scouting vessel."
 	is_semi_antagonist = TRUE
 
 	branch = /datum/mil_branch/civilian
@@ -46,7 +46,7 @@
 /datum/job/submap/sol/captain
 	title = "SCG Captain"
 	total_positions = 1
-	info = "You are the Captain of a light SCG corvette."
+	info = "You are the Captain of a light SCG corvette part of the SCG Fleet."
 	outfit_type = /decl/hierarchy/outfit/job/sol/member/pilot
 
 	min_skill = list(
@@ -85,7 +85,7 @@
 /datum/job/submap/sol/scientist
 	title = "SCG Scientist"
 	total_positions = 1
-	info = "You are a researcher aboard an SCG Vessel tasked with researching."
+	info = "You are a researcher aboard an SCG vessel tasked with researching."
 	outfit_type = /decl/hierarchy/outfit/job/sol/member/scientist
 
 	min_skill = list(
@@ -126,7 +126,7 @@
 /var/const/access_sol_shuttle = "ACCESS_SOL_SHUTTLE"
 /datum/access/sol_shuttle
 	id = access_sol_shuttle
-	desc = "SEV Quantum"
+	desc = "SolGov Cruiser"
 	region = ACCESS_REGION_NONE
 
 /obj/item/card/id/sol_shuttle
@@ -138,6 +138,7 @@
 	l_ear = null
 	r_ear = null
 
+// If only we had custom SCG Outfits :(
 /decl/hierarchy/outfit/job/sol/member
 	name = ("Sol - Job - Crew")
 	id_types = list(/obj/item/card/id/sol_shuttle)
