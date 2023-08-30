@@ -42,7 +42,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/starboard)
@@ -748,7 +748,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/green{
 	icon_state = "2-4"
@@ -832,7 +832,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/light{
 	dir = 1
@@ -942,7 +942,7 @@
 "cW" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/shuttle/pandora/cargo)
@@ -1103,7 +1103,7 @@
 /area/intrepid/department/civillian/dockbaythree)
 "dw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -1325,7 +1325,7 @@
 /area/intrepid/misc/maint/upper/portside)
 "ei" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbayone)
@@ -1527,7 +1527,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/intrepid/department/engineering/engine_room)
@@ -1615,7 +1615,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
@@ -1889,13 +1889,13 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor,
@@ -2009,7 +2009,7 @@
 "gl" = (
 /obj/machinery/door/airlock/mining,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/pithos/cockpit)
@@ -2120,7 +2120,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2196,7 +2196,7 @@
 /area/intrepid/department/civillian/dockbayfour)
 "gH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -2255,7 +2255,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/exploration/hangar/pithos)
@@ -2401,7 +2401,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/tiled/techmaint,
@@ -2432,7 +2432,7 @@
 /area/intrepid/department/civillian/archive)
 "hu" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -2486,7 +2486,7 @@
 /area/intrepid/department/engineering/engine_room)
 "hG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/shuttle/pithos/cockpit)
@@ -2602,7 +2602,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -2956,13 +2956,13 @@
 /area/intrepid/misc/maint/upper/central)
 "iX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/structure/cable/green{
@@ -3282,7 +3282,7 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/exploration/hangar/pithos)
@@ -3295,7 +3295,7 @@
 /area/intrepid/department/civillian/dockbaysix)
 "jZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -3415,7 +3415,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/starboard)
@@ -3578,7 +3578,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/exploration/hangar/pithos)
@@ -3963,7 +3963,7 @@
 /area/intrepid/misc/maint/upper/central)
 "lM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
@@ -4023,7 +4023,7 @@
 /area/intrepid/department/engineering/atmos)
 "lX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -4138,7 +4138,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/tcommsat)
@@ -4200,7 +4200,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/exploration/hangar/pandora)
@@ -4396,7 +4396,7 @@
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/central)
@@ -4519,7 +4519,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/starboard)
@@ -4529,7 +4529,7 @@
 /area/intrepid/department/security/detectives_office)
 "nx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbayfive)
@@ -4696,7 +4696,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/exploration/hangar/pandora)
@@ -4921,7 +4921,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
@@ -5475,7 +5475,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/camera/network/second_deck{
 	c_tag = "Second Deck - Starboard Quarter Hallway"
@@ -5875,7 +5875,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor,
@@ -6020,7 +6020,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -6311,7 +6311,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/selfdestruct)
@@ -6366,7 +6366,7 @@
 /area/intrepid/department/engineering/engine_room)
 "to" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -6402,7 +6402,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -6415,7 +6415,7 @@
 /area/shuttle/pandora/cockpit)
 "tt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -6486,7 +6486,7 @@
 "tE" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -6709,7 +6709,7 @@
 "uf" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -6753,7 +6753,7 @@
 /area/space)
 "ul" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbaythree)
@@ -6765,7 +6765,7 @@
 "un" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/starboard)
@@ -6863,7 +6863,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/exploration/hangar/pithos)
@@ -7084,7 +7084,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -7093,7 +7093,7 @@
 /area/intrepid/misc/maint/upper/starboard)
 "vi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -7102,7 +7102,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor,
@@ -7167,7 +7167,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -7182,7 +7182,7 @@
 /area/intrepid/department/security/starboarddockingbaysecurity)
 "vu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -7313,7 +7313,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor,
@@ -7422,7 +7422,7 @@
 /area/intrepid/department/civillian/safe_room/port)
 "wj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -7857,7 +7857,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/atmos)
@@ -8289,7 +8289,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/light{
 	dir = 1
@@ -8725,7 +8725,7 @@
 /area/intrepid/department/civillian/safe_room/starboard)
 "Ag" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -8745,7 +8745,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -8810,7 +8810,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/camera/network/second_deck{
 	c_tag = "Second Deck - Port Quarter Hallway";
@@ -8858,14 +8858,14 @@
 /area/intrepid/department/engineering/portthruster)
 "AF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /obj/machinery/power/terminal,
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/orange,
 /turf/simulated/floor/tiled/techmaint,
@@ -8878,7 +8878,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -8933,7 +8933,7 @@
 "AQ" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/orange{
 	icon_state = "2-9"
@@ -8986,7 +8986,7 @@
 /area/eva)
 "AX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -9087,7 +9087,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/tcommsat)
@@ -9144,13 +9144,13 @@
 /area/intrepid/department/exploration/hangar/pithos)
 "Br" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/structure/catwalk,
@@ -9258,7 +9258,7 @@
 /area/intrepid/department/engineering/engine_room/aux)
 "BE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbayfour)
@@ -9273,7 +9273,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -9519,7 +9519,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -9560,7 +9560,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -9652,7 +9652,7 @@
 /area/intrepid/department/engineering/engine_room)
 "CL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/catwalk,
@@ -9736,7 +9736,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/tcommsat)
@@ -9834,7 +9834,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/light,
 /turf/simulated/floor,
@@ -9951,7 +9951,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/selfdestruct)
@@ -10245,7 +10245,7 @@
 /area/intrepid/department/command/obstructionfielddisperser)
 "EJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -10330,7 +10330,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/pithos/cockpit)
@@ -10350,7 +10350,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor,
@@ -11065,7 +11065,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/central)
@@ -11087,7 +11087,7 @@
 /area/intrepid/department/engineering/engine_room)
 "Hs" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/central)
@@ -11283,7 +11283,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/camera/network/second_deck{
 	c_tag = "Second Deck - Starboard Fore Hallway"
@@ -11305,7 +11305,7 @@
 	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/starboard)
@@ -11371,7 +11371,7 @@
 /area/intrepid/department/engineering/atmos)
 "Ip" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -11428,7 +11428,7 @@
 /area/intrepid/department/civillian/safe_room/starboard)
 "Iy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbaysix)
@@ -11501,7 +11501,7 @@
 /area/shuttle/pithos/cockpit)
 "IJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -11796,7 +11796,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/tcommsat)
@@ -11913,7 +11913,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
@@ -12102,7 +12102,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/firealarm{
 	pixel_y = 15
@@ -12177,7 +12177,7 @@
 /area/intrepid/department/civillian/safe_room/port)
 "KT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/meter,
 /turf/simulated/floor/tiled/techfloor,
@@ -12237,7 +12237,7 @@
 "Lg" = (
 /obj/effect/paint/sun,
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/wall/r_titanium,
 /area/shuttle/pandora/cockpit)
@@ -12384,7 +12384,7 @@
 "LD" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -12703,7 +12703,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/status_display{
 	pixel_y = -32
@@ -12756,7 +12756,7 @@
 /area/intrepid/department/engineering/engine_room/aux)
 "MP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -12790,7 +12790,7 @@
 /area/intrepid/department/civillian/dockbayfour)
 "MS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -12904,7 +12904,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor,
@@ -12950,7 +12950,7 @@
 	},
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -13001,7 +13001,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -13266,7 +13266,7 @@
 /area/intrepid/department/exploration/hangar/pithos)
 "Ok" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -13456,7 +13456,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/portside)
@@ -13553,7 +13553,7 @@
 /area/intrepid/department/civillian/archive)
 "Pi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -13562,7 +13562,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/alarm{
 	dir = 1;
@@ -14187,7 +14187,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/portside)
@@ -14551,7 +14551,7 @@
 /area/intrepid/department/engineering/starboardthruster)
 "So" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -14579,7 +14579,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -14617,7 +14617,7 @@
 /area/intrepid/department/engineering/atmos)
 "Sy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor,
@@ -14635,7 +14635,7 @@
 /area/intrepid/department/engineering/engine_room)
 "SB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/pandora/cargo)
@@ -14712,7 +14712,7 @@
 /area/intrepid/department/exploration/hangar/pithos)
 "SL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -15118,7 +15118,7 @@
 /area/intrepid/department/civillian/safe_room/port)
 "TS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbaytwo)
@@ -15158,7 +15158,7 @@
 "Ua" = (
 /obj/machinery/door/airlock/glass/medical,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -15190,7 +15190,7 @@
 "Uf" = (
 /obj/structure/railing/mapped,
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/central)
@@ -15580,7 +15580,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -15687,7 +15687,7 @@
 /obj/effect/overmap/visitable/ship/landable/exploration_shuttle,
 /obj/effect/paint/sun,
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -15814,7 +15814,7 @@
 /area/intrepid/department/exploration/hangar/pithos)
 "VS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -15907,7 +15907,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -15922,7 +15922,7 @@
 	icon_state = "5-6"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/exploration/hangar/pandora)
@@ -15960,7 +15960,7 @@
 "Wp" = (
 /obj/effect/floor_decal/corner/black/diagonal,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -15992,7 +15992,7 @@
 /area/intrepid/department/civillian/safe_room/port)
 "Ww" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -16122,7 +16122,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/light{
 	dir = 1
@@ -16206,7 +16206,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/engineering/engine_room)
@@ -16663,7 +16663,7 @@
 "Yp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/catwalk,
 /obj/effect/floor_decal/industrial/warning{
@@ -16994,7 +16994,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/command/selfdestruct)
@@ -17046,7 +17046,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/intrepid/department/engineering/engine_room)
@@ -17143,7 +17143,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/camera/network/second_deck{
 	c_tag = "Second Deck - Port Fore Hallway";
@@ -17156,7 +17156,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -17201,7 +17201,7 @@
 /area/shuttle/pithos/cargo)
 "ZP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -34961,7 +34961,7 @@ Mw
 Sb
 NS
 hc
-Rd
+Nf
 gm
 gF
 MS
