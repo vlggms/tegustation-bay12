@@ -47,8 +47,27 @@
 /turf/simulated/floor/shuttle/yellow,
 /area/centcom/evac)
 "aan" = (
-/turf/space,
-/turf/space,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "6-9";
+	d1 = 6;
+	d2 = 9
+	},
+/obj/structure/cable{
+	icon_state = "5-10";
+	d1 = 5;
+	d2 = 10
+	},
+/turf/unsimulated/floor/plating,
 /area/space)
 "aao" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
@@ -6377,6 +6396,13 @@
 /obj/item/rig/military/equipped,
 /turf/unsimulated/floor/reinforced,
 /area/centcom/specops)
+"aDq" = (
+/obj/structure/cable/cyan{
+	icon_state = "0-8";
+	d2 = 8
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "aDy" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 1;
@@ -7123,6 +7149,14 @@
 	},
 /turf/space,
 /area/space)
+"aOs" = (
+/obj/structure/cable{
+	icon_state = "32-9";
+	d1 = 32;
+	d2 = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "aRf" = (
 /turf/unsimulated/floor{
 	icon_state = "lino"
@@ -7609,6 +7643,21 @@
 	},
 /turf/space,
 /area/shuttle/merchant/home)
+"aWR" = (
+/obj/structure/cable/cyan{
+	icon_state = "32-2";
+	d1 = 32;
+	d2 = 2
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"aZw" = (
+/obj/structure/cable/white{
+	icon_state = "0-4";
+	d2 = 4
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "baD" = (
 /obj/item/device/radio/intercom/syndicate{
 	dir = 8;
@@ -7630,6 +7679,13 @@
 	},
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_cafe)
+"bit" = (
+/obj/structure/cable/orange{
+	icon_state = "0-2";
+	d2 = 2
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "bmb" = (
 /obj/machinery/tele_projector{
 	dir = 4
@@ -7643,6 +7699,14 @@
 /obj/effect/floor_decal/spline/fancy/wood/corner,
 /turf/simulated/floor/holofloor/concrete,
 /area/holodeck/source_plaza)
+"bnZ" = (
+/obj/structure/cable/pink{
+	icon_state = "32-6";
+	d1 = 32;
+	d2 = 6
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "bqb" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/box/handcuffs,
@@ -7709,6 +7773,14 @@
 /obj/item/reagent_containers/ivbag/nanoblood,
 /turf/unsimulated/floor/tile,
 /area/centcom/specops)
+"bzn" = (
+/obj/structure/cable/orange{
+	icon_state = "32-8";
+	d1 = 32;
+	d2 = 8
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "bDH" = (
 /obj/effect/floor_decal/corner/blue/three_quarters,
 /turf/unsimulated/floor/techfloor,
@@ -7718,6 +7790,13 @@
 /obj/item/toy/ringbell,
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/holodeck/source_boxingcourt)
+"bGA" = (
+/obj/structure/cable/blue{
+	d2 = 9;
+	icon_state = "0-9"
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "bHb" = (
 /obj/structure/table/holotable,
 /obj/item/device/megaphone,
@@ -7734,6 +7813,18 @@
 	},
 /turf/simulated/floor/holofloor/concrete,
 /area/holodeck/source_volleyball)
+"bUT" = (
+/obj/structure/cable/green,
+/turf/unsimulated/floor/plating,
+/area/space)
+"bWj" = (
+/obj/structure/cable/green{
+	icon_state = "32-8";
+	d1 = 32;
+	d2 = 8
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "cay" = (
 /obj/structure/bed/chair/wood{
 	dir = 8;
@@ -7742,6 +7833,27 @@
 	},
 /turf/simulated/floor/holofloor/concrete,
 /area/holodeck/source_plaza)
+"cdr" = (
+/obj/structure/cable/blue{
+	d2 = 5;
+	icon_state = "0-5"
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"chK" = (
+/obj/structure/cable/white{
+	icon_state = "0-5";
+	d2 = 5
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"chQ" = (
+/obj/structure/cable{
+	icon_state = "32-1";
+	d1 = 32
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "cjX" = (
 /obj/effect/landmark{
 	name = "Syndicate-Commando"
@@ -7750,6 +7862,52 @@
 	icon_state = "dark"
 	},
 /area/syndicate_elite_squad)
+"cpE" = (
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/cable/blue{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable/blue{
+	d1 = 5;
+	d2 = 6;
+	icon_state = "5-6"
+	},
+/obj/structure/cable/blue{
+	d1 = 8;
+	d2 = 10;
+	icon_state = "8-10"
+	},
+/obj/structure/cable/blue{
+	d1 = 8;
+	d2 = 9;
+	icon_state = "8-9"
+	},
+/obj/structure/cable/blue{
+	d1 = 6;
+	d2 = 8;
+	icon_state = "6-8"
+	},
+/obj/structure/cable/blue{
+	d1 = 5;
+	d2 = 8;
+	icon_state = "5-8"
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"cpR" = (
+/obj/structure/cable/cyan{
+	icon_state = "32-10";
+	d1 = 32;
+	d2 = 10
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "cqu" = (
 /obj/structure/holostool,
 /obj/effect/floor_decal/beach{
@@ -7758,6 +7916,31 @@
 	},
 /turf/simulated/floor/holofloor/concrete,
 /area/holodeck/source_volleyball)
+"cry" = (
+/obj/structure/cable/pink{
+	icon_state = "32-5";
+	d1 = 32;
+	d2 = 5
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"csm" = (
+/obj/structure/cable/blue{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"cuw" = (
+/turf/unsimulated/floor/plating,
+/area/space)
+"cvh" = (
+/obj/structure/cable/white{
+	icon_state = "0-8";
+	d2 = 8
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "cvG" = (
 /obj/machinery/door/blast/regular{
 	id_tag = "thunderdomehea";
@@ -7774,10 +7957,139 @@
 /obj/random/handgun,
 /turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
+"cAe" = (
+/obj/structure/cable/cyan{
+	icon_state = "1-8";
+	d1 = 1;
+	d2 = 8
+	},
+/obj/structure/cable/cyan{
+	icon_state = "2-8";
+	d1 = 2;
+	d2 = 8
+	},
+/obj/structure/cable/cyan{
+	icon_state = "5-6";
+	d1 = 5;
+	d2 = 6
+	},
+/obj/structure/cable/cyan{
+	icon_state = "5-8";
+	d1 = 5;
+	d2 = 8
+	},
+/obj/structure/cable/cyan{
+	icon_state = "6-8";
+	d1 = 6;
+	d2 = 8
+	},
+/obj/structure/cable/cyan{
+	icon_state = "8-10";
+	d1 = 8;
+	d2 = 10
+	},
+/obj/structure/cable/cyan{
+	icon_state = "8-9";
+	d1 = 8;
+	d2 = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "cCV" = (
 /obj/machinery/hologram/holopad/longrange,
 /turf/simulated/floor/carpet/blue,
 /area/shuttle/merchant/home)
+"cEw" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-8";
+	d1 = 1;
+	d2 = 8
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-8";
+	d1 = 2;
+	d2 = 8
+	},
+/obj/structure/cable/yellow{
+	icon_state = "6-8";
+	d1 = 6;
+	d2 = 8
+	},
+/obj/structure/cable/yellow{
+	icon_state = "5-8";
+	d1 = 5;
+	d2 = 8
+	},
+/obj/structure/cable/yellow{
+	icon_state = "5-6";
+	d1 = 5;
+	d2 = 6
+	},
+/obj/structure/cable/yellow{
+	icon_state = "8-9";
+	d1 = 8;
+	d2 = 9
+	},
+/obj/structure/cable/yellow{
+	icon_state = "8-10";
+	d1 = 8;
+	d2 = 10
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"cGw" = (
+/obj/structure/cable/pink{
+	icon_state = "1-8";
+	d1 = 1;
+	d2 = 8
+	},
+/obj/structure/cable/pink{
+	icon_state = "2-8";
+	d1 = 2;
+	d2 = 8
+	},
+/obj/structure/cable/pink{
+	icon_state = "5-6";
+	d1 = 5;
+	d2 = 6
+	},
+/obj/structure/cable/pink{
+	icon_state = "5-8";
+	d1 = 5;
+	d2 = 8
+	},
+/obj/structure/cable/pink{
+	icon_state = "6-8";
+	d1 = 6;
+	d2 = 8
+	},
+/obj/structure/cable/pink{
+	icon_state = "8-10";
+	d1 = 8;
+	d2 = 10
+	},
+/obj/structure/cable/pink{
+	icon_state = "8-9";
+	d1 = 8;
+	d2 = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"cGS" = (
+/obj/structure/cable/pink{
+	icon_state = "32-2";
+	d1 = 32;
+	d2 = 2
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"cIa" = (
+/obj/structure/cable/orange{
+	icon_state = "0-4";
+	d2 = 4
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "cMe" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1;
@@ -7803,10 +8115,64 @@
 	},
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_cafe)
+"cNG" = (
+/obj/structure/cable/green{
+	icon_state = "32-6";
+	d1 = 32;
+	d2 = 6
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"cNO" = (
+/obj/structure/cable/pink{
+	icon_state = "1-2";
+	d1 = 1;
+	d2 = 2
+	},
+/obj/structure/cable/pink{
+	icon_state = "4-8";
+	d1 = 4;
+	d2 = 8
+	},
+/obj/structure/cable/pink{
+	icon_state = "5-10";
+	d1 = 5;
+	d2 = 10
+	},
+/obj/structure/cable/pink{
+	icon_state = "6-9";
+	d1 = 6;
+	d2 = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"cRE" = (
+/obj/structure/cable/white{
+	icon_state = "32-9";
+	d1 = 32;
+	d2 = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"cYb" = (
+/obj/structure/cable/orange{
+	icon_state = "32-9";
+	d1 = 32;
+	d2 = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "djm" = (
 /obj/item/beach_ball/holovolleyball,
 /turf/simulated/floor/holofloor/beach/sand,
 /area/holodeck/source_volleyball)
+"dld" = (
+/obj/structure/cable/cyan{
+	icon_state = "0-6";
+	d2 = 6
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "dnO" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 6
@@ -7816,6 +8182,99 @@
 "dpy" = (
 /turf/simulated/floor/tiled,
 /area/acting/stage)
+"dtq" = (
+/obj/structure/cable{
+	icon_state = "32-2";
+	d2 = 2;
+	d1 = 32
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"duh" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2";
+	d1 = 1;
+	d2 = 2
+	},
+/obj/structure/cable/orange{
+	icon_state = "6-9";
+	d1 = 6;
+	d2 = 9
+	},
+/obj/structure/cable/orange{
+	icon_state = "5-10";
+	d1 = 5;
+	d2 = 10
+	},
+/obj/structure/cable/orange{
+	icon_state = "4-8";
+	d1 = 4;
+	d2 = 8
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"dui" = (
+/obj/structure/cable/white{
+	icon_state = "32-2";
+	d1 = 32;
+	d2 = 2
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"dvV" = (
+/obj/structure/cable/cyan{
+	icon_state = "32-5";
+	d1 = 32;
+	d2 = 5
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"dwE" = (
+/obj/structure/cable/green{
+	icon_state = "5-6";
+	d1 = 5;
+	d2 = 6
+	},
+/obj/structure/cable/green{
+	icon_state = "6-8";
+	d1 = 6;
+	d2 = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "5-8";
+	d1 = 5;
+	d2 = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8";
+	d1 = 2;
+	d2 = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8";
+	d1 = 1;
+	d2 = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "8-10";
+	d1 = 8;
+	d2 = 10
+	},
+/obj/structure/cable/green{
+	icon_state = "8-9";
+	d1 = 8;
+	d2 = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"dya" = (
+/obj/structure/cable/orange{
+	icon_state = "32-2";
+	d1 = 32;
+	d2 = 2
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "dzK" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /obj/structure/flora/ausbushes/ywflowers,
@@ -7827,6 +8286,44 @@
 	},
 /turf/simulated/floor/holofloor/grass,
 /area/holodeck/source_plaza)
+"dAW" = (
+/obj/structure/cable/cyan{
+	icon_state = "2-10";
+	d1 = 2;
+	d2 = 10
+	},
+/obj/structure/cable/cyan{
+	icon_state = "2-4";
+	d1 = 2;
+	d2 = 4
+	},
+/obj/structure/cable/cyan{
+	icon_state = "2-5";
+	d1 = 2;
+	d2 = 5
+	},
+/obj/structure/cable/cyan{
+	icon_state = "2-6";
+	d1 = 2;
+	d2 = 6
+	},
+/obj/structure/cable/cyan{
+	icon_state = "2-8";
+	d1 = 2;
+	d2 = 8
+	},
+/obj/structure/cable/cyan{
+	icon_state = "2-9";
+	d1 = 2;
+	d2 = 9
+	},
+/obj/structure/cable/cyan{
+	icon_state = "5-9";
+	d1 = 5;
+	d2 = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "dBi" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 9;
@@ -7834,10 +8331,61 @@
 	},
 /turf/simulated/floor/holofloor/concrete,
 /area/holodeck/source_plaza)
+"dCa" = (
+/obj/structure/cable/green{
+	icon_state = "32-2";
+	d1 = 32;
+	d2 = 2
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "dCA" = (
 /obj/structure/table/holo_woodentable,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_cafe)
+"dEW" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-2";
+	d2 = 2
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"dHp" = (
+/obj/structure/cable/cyan{
+	icon_state = "1-10";
+	d2 = 10
+	},
+/obj/structure/cable/cyan{
+	icon_state = "1-4";
+	d1 = 1;
+	d2 = 4
+	},
+/obj/structure/cable/cyan{
+	icon_state = "1-5";
+	d2 = 5
+	},
+/obj/structure/cable/cyan{
+	icon_state = "1-6";
+	d1 = 1;
+	d2 = 6
+	},
+/obj/structure/cable/cyan{
+	icon_state = "1-8";
+	d1 = 1;
+	d2 = 8
+	},
+/obj/structure/cable/cyan{
+	icon_state = "1-9";
+	d1 = 1;
+	d2 = 9
+	},
+/obj/structure/cable/cyan{
+	icon_state = "6-10";
+	d1 = 6;
+	d2 = 10
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "dIU" = (
 /turf/simulated/floor/holofloor/tiled/stone,
 /area/holodeck/source_temple)
@@ -7866,6 +8414,14 @@
 	},
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_cafe)
+"dYC" = (
+/obj/structure/cable/yellow{
+	icon_state = "16-0";
+	d1 = 16;
+	d2 = 0
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "dZC" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 4;
@@ -7877,9 +8433,40 @@
 	},
 /turf/simulated/floor/holofloor/beach/sand,
 /area/holodeck/source_volleyball)
+"edB" = (
+/obj/structure/cable/blue{
+	d1 = 32;
+	d2 = 2;
+	icon_state = "32-2"
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "efq" = (
 /turf/simulated/floor/holofloor/concrete,
 /area/holodeck/source_cafe)
+"eqf" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2";
+	d1 = 1;
+	d2 = 2
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8";
+	d1 = 4;
+	d2 = 8
+	},
+/obj/structure/cable/yellow{
+	icon_state = "5-10";
+	d1 = 5;
+	d2 = 10
+	},
+/obj/structure/cable/yellow{
+	icon_state = "6-9";
+	d1 = 6;
+	d2 = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "esx" = (
 /turf/unsimulated/wall,
 /area/centcom/holding)
@@ -7900,6 +8487,14 @@
 "exn" = (
 /turf/unsimulated/floor/plating,
 /area/centcom/holding)
+"exA" = (
+/obj/structure/cable/white{
+	icon_state = "32-6";
+	d1 = 32;
+	d2 = 6
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "eyC" = (
 /turf/simulated/floor/plating,
 /area/shuttle/cargodrone)
@@ -7910,6 +8505,30 @@
 	},
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_cafe)
+"eFI" = (
+/obj/structure/cable{
+	icon_state = "32-4";
+	d1 = 32;
+	d2 = 4
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"eLD" = (
+/obj/structure/cable/yellow{
+	icon_state = "32-4";
+	d1 = 32;
+	d2 = 4
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"eNJ" = (
+/obj/structure/cable/blue{
+	d1 = 32;
+	d2 = 4;
+	icon_state = "32-4"
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "eOs" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/corner/green{
@@ -7944,6 +8563,44 @@
 	icon_state = "vault"
 	},
 /area/tdome)
+"fmW" = (
+/obj/structure/cable/blue{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable/blue{
+	d1 = 2;
+	d2 = 10;
+	icon_state = "2-10"
+	},
+/obj/structure/cable/blue{
+	d1 = 2;
+	d2 = 6;
+	icon_state = "2-6"
+	},
+/obj/structure/cable/blue{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable/blue{
+	d1 = 2;
+	d2 = 9;
+	icon_state = "2-9"
+	},
+/obj/structure/cable/blue{
+	d1 = 2;
+	d2 = 5;
+	icon_state = "2-5"
+	},
+/obj/structure/cable/blue{
+	d1 = 5;
+	d2 = 9;
+	icon_state = "5-9"
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "fpW" = (
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 8
@@ -7968,12 +8625,132 @@
 	},
 /turf/simulated/floor/holofloor/concrete,
 /area/holodeck/source_plaza)
+"fLw" = (
+/obj/structure/cable/white{
+	icon_state = "32-1";
+	d1 = 32
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"fOH" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-4";
+	d1 = 2;
+	d2 = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-5";
+	d1 = 2;
+	d2 = 5
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-8";
+	d1 = 2;
+	d2 = 8
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-9";
+	d1 = 2;
+	d2 = 9
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-6";
+	d1 = 2;
+	d2 = 6
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-10";
+	d1 = 2;
+	d2 = 10
+	},
+/obj/structure/cable/yellow{
+	icon_state = "5-9";
+	d1 = 5;
+	d2 = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"fPh" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-9";
+	d2 = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"fUP" = (
+/obj/structure/cable/white{
+	icon_state = "1-8";
+	d1 = 1;
+	d2 = 8
+	},
+/obj/structure/cable/white{
+	icon_state = "2-8";
+	d1 = 2;
+	d2 = 8
+	},
+/obj/structure/cable/white{
+	icon_state = "5-6";
+	d1 = 5;
+	d2 = 6
+	},
+/obj/structure/cable/white{
+	icon_state = "5-8";
+	d1 = 5;
+	d2 = 8
+	},
+/obj/structure/cable/white{
+	icon_state = "6-8";
+	d1 = 6;
+	d2 = 8
+	},
+/obj/structure/cable/white{
+	icon_state = "8-10";
+	d1 = 8;
+	d2 = 10
+	},
+/obj/structure/cable/white{
+	icon_state = "8-9";
+	d1 = 8;
+	d2 = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"fVO" = (
+/obj/structure/cable/cyan{
+	icon_state = "16-0";
+	d1 = 16;
+	d2 = 0
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"gdN" = (
+/obj/structure/cable/green{
+	icon_state = "0-2";
+	d2 = 2
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "glo" = (
 /turf/simulated/floor/holofloor/concrete,
 /area/holodeck/source_volleyball)
+"gnD" = (
+/obj/structure/cable/cyan{
+	icon_state = "32-8";
+	d1 = 32;
+	d2 = 8
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "gnX" = (
 /turf/simulated/floor/holofloor/beach/water,
 /area/holodeck/source_temple)
+"gqU" = (
+/obj/structure/cable/orange{
+	icon_state = "0-8";
+	d2 = 8
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "gse" = (
 /obj/structure/table/holo_woodentable,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -7990,12 +8767,26 @@
 	icon_state = "wood_broken4"
 	},
 /area/holodeck/source_temple)
+"gtC" = (
+/obj/structure/cable/cyan{
+	icon_state = "0-9";
+	d2 = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "gHX" = (
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
+"gIp" = (
+/obj/structure/cable/cyan{
+	icon_state = "0-2";
+	d2 = 2
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "gKj" = (
 /obj/machinery/door/airlock/command{
 	name = "Thunderdome"
@@ -8004,6 +8795,52 @@
 	icon_state = "lino"
 	},
 /area/tdome/tdomeobserve)
+"gMd" = (
+/obj/structure/cable/yellow{
+	icon_state = "32-5";
+	d1 = 32;
+	d2 = 5
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"had" = (
+/obj/structure/cable/white{
+	icon_state = "1-6";
+	d1 = 1;
+	d2 = 6
+	},
+/obj/structure/cable/white{
+	icon_state = "1-4";
+	d1 = 1;
+	d2 = 4
+	},
+/obj/structure/cable/white{
+	icon_state = "1-5";
+	d1 = 1;
+	d2 = 5
+	},
+/obj/structure/cable/white{
+	icon_state = "1-10";
+	d1 = 1;
+	d2 = 10
+	},
+/obj/structure/cable/white{
+	icon_state = "1-9";
+	d1 = 1;
+	d2 = 9
+	},
+/obj/structure/cable/white{
+	icon_state = "1-8";
+	d1 = 1;
+	d2 = 8
+	},
+/obj/structure/cable/white{
+	icon_state = "6-10";
+	d1 = 6;
+	d2 = 10
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "hhC" = (
 /obj/machinery/door/airlock/glass/civilian,
 /turf/simulated/floor/shuttle/blue,
@@ -8013,15 +8850,46 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/shuttle/yellow,
 /area/centcom/evac)
+"his" = (
+/obj/structure/cable/cyan{
+	icon_state = "32-6";
+	d1 = 32;
+	d2 = 6
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "hjL" = (
 /turf/unsimulated/wall,
 /area/acting/stage)
+"hkS" = (
+/obj/structure/cable/white{
+	icon_state = "32-5";
+	d1 = 32;
+	d2 = 5
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"hmT" = (
+/obj/structure/cable{
+	icon_state = "32-6";
+	d1 = 32;
+	d2 = 6
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "hoI" = (
 /obj/structure/closet/secure_closet/freezer/meat,
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
 /area/tdome)
+"huq" = (
+/obj/structure/cable/green{
+	icon_state = "0-5";
+	d2 = 5
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "hzB" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /obj/structure/flora/ausbushes/ywflowers,
@@ -8035,6 +8903,13 @@
 "hJc" = (
 /turf/unsimulated/wall,
 /area/acting/backstage)
+"hXU" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-8";
+	d2 = 8
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "icO" = (
 /obj/structure/bed/chair/wood{
 	dir = 1;
@@ -8043,6 +8918,20 @@
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/holofloor/concrete,
 /area/holodeck/source_plaza)
+"ieg" = (
+/obj/structure/cable/green{
+	icon_state = "0-10";
+	d2 = 10
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"iiF" = (
+/obj/structure/cable/blue{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "ikd" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
 /obj/effect/paint/silver,
@@ -8054,6 +8943,52 @@
 	icon_state = "dark"
 	},
 /area/syndicate_elite_squad)
+"izv" = (
+/obj/structure/cable/yellow{
+	icon_state = "32-10";
+	d1 = 32;
+	d2 = 10
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"izw" = (
+/obj/structure/cable/cyan{
+	icon_state = "1-4";
+	d1 = 1;
+	d2 = 4
+	},
+/obj/structure/cable/cyan{
+	icon_state = "2-4";
+	d1 = 2;
+	d2 = 4
+	},
+/obj/structure/cable/cyan{
+	icon_state = "4-10";
+	d1 = 4;
+	d2 = 10
+	},
+/obj/structure/cable/cyan{
+	icon_state = "4-5";
+	d1 = 4;
+	d2 = 5
+	},
+/obj/structure/cable/cyan{
+	icon_state = "4-6";
+	d1 = 4;
+	d2 = 6
+	},
+/obj/structure/cable/cyan{
+	icon_state = "4-9";
+	d1 = 4;
+	d2 = 9
+	},
+/obj/structure/cable/cyan{
+	icon_state = "9-10";
+	d1 = 9;
+	d2 = 10
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "iAa" = (
 /obj/effect/forcefield{
 	desc = "You can't get in. Heh.";
@@ -8071,6 +9006,44 @@
 	},
 /turf/simulated/floor/holofloor/concrete,
 /area/holodeck/source_plaza)
+"iEO" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "5-9";
+	d1 = 5;
+	d2 = 9
+	},
+/obj/structure/cable{
+	icon_state = "2-9";
+	d1 = 2;
+	d2 = 9
+	},
+/obj/structure/cable{
+	icon_state = "2-5";
+	d1 = 2;
+	d2 = 5
+	},
+/obj/structure/cable{
+	icon_state = "2-10";
+	d1 = 2;
+	d2 = 10
+	},
+/obj/structure/cable{
+	icon_state = "2-6";
+	d1 = 2;
+	d2 = 6
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "iIc" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /obj/structure/flora/ausbushes/ywflowers,
@@ -8088,6 +9061,13 @@
 	icon_state = "wood_broken6"
 	},
 /area/holodeck/source_temple)
+"iKg" = (
+/obj/structure/cable/white{
+	icon_state = "0-6";
+	d2 = 6
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "iSJ" = (
 /obj/effect/wallframe_spawn/reinforced/titanium,
 /turf/simulated/floor/plating,
@@ -8097,6 +9077,30 @@
 	icon_state = "white"
 	},
 /area/tdome)
+"jba" = (
+/obj/structure/cable/blue{
+	d1 = 32;
+	d2 = 9;
+	icon_state = "32-9"
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"jbj" = (
+/obj/structure/cable/pink{
+	icon_state = "32-10";
+	d1 = 32;
+	d2 = 10
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"jdH" = (
+/obj/structure/cable{
+	icon_state = "16-0";
+	d1 = 16;
+	d2 = 0
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "jdS" = (
 /obj/structure/table/reinforced,
 /obj/item/device/radio/off,
@@ -8126,6 +9130,21 @@
 	},
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_cafe)
+"jhm" = (
+/obj/structure/cable/blue{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"jos" = (
+/obj/structure/cable/blue{
+	d1 = 32;
+	d2 = 8;
+	icon_state = "32-8"
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "joZ" = (
 /obj/structure/fountain/mundane{
 	alpha = 204;
@@ -8155,6 +9174,14 @@
 	},
 /turf/simulated/floor/holofloor/grass,
 /area/holodeck/source_plaza)
+"jHK" = (
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2";
+	pixel_y = 0
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "jHQ" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/effect/floor_decal/spline/plain/grey{
@@ -8163,6 +9190,13 @@
 	},
 /turf/simulated/floor/holofloor/grass,
 /area/holodeck/source_cafe)
+"jLN" = (
+/obj/structure/cable/pink{
+	icon_state = "0-2";
+	d2 = 2
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "jSi" = (
 /obj/structure/table/holo_woodentable,
 /turf/simulated/floor/holofloor/tiled/stone,
@@ -8178,6 +9212,44 @@
 	icon_state = "desert4"
 	},
 /area/holodeck/source_volleyball)
+"kcI" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-4";
+	d1 = 1;
+	d2 = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-4";
+	d1 = 2;
+	d2 = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "9-10";
+	d1 = 9;
+	d2 = 10
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-9";
+	d1 = 4;
+	d2 = 9
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-10";
+	d1 = 4;
+	d2 = 10
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-6";
+	d1 = 4;
+	d2 = 6
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-5";
+	d1 = 4;
+	d2 = 5
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "kfk" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 5;
@@ -8198,6 +9270,44 @@
 	},
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_cafe)
+"krl" = (
+/obj/structure/cable/pink{
+	icon_state = "1-4";
+	d1 = 1;
+	d2 = 4
+	},
+/obj/structure/cable/pink{
+	icon_state = "2-4";
+	d1 = 2;
+	d2 = 4
+	},
+/obj/structure/cable/pink{
+	icon_state = "4-10";
+	d1 = 4;
+	d2 = 10
+	},
+/obj/structure/cable/pink{
+	icon_state = "4-5";
+	d1 = 4;
+	d2 = 5
+	},
+/obj/structure/cable/pink{
+	icon_state = "4-6";
+	d1 = 4;
+	d2 = 6
+	},
+/obj/structure/cable/pink{
+	icon_state = "4-9";
+	d1 = 4;
+	d2 = 9
+	},
+/obj/structure/cable/pink{
+	icon_state = "9-10";
+	d1 = 9;
+	d2 = 10
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "kBT" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 4;
@@ -8217,15 +9327,81 @@
 	icon_state = "vault"
 	},
 /area/centcom/specops)
+"kDJ" = (
+/obj/structure/cable/green{
+	icon_state = "32-9";
+	d1 = 32;
+	d2 = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "kEf" = (
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
 /area/syndicate_elite_squad)
+"kME" = (
+/obj/structure/cable{
+	icon_state = "32-5";
+	d1 = 32;
+	d2 = 5
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "kSr" = (
 /obj/effect/shuttle_landmark/supply/centcom,
 /turf/simulated/floor/plating,
 /area/shuttle/cargodrone)
+"kXW" = (
+/obj/structure/cable/white,
+/turf/unsimulated/floor/plating,
+/area/space)
+"kYo" = (
+/obj/structure/cable/blue{
+	d1 = 16;
+	d2 = 0;
+	icon_state = "16-0"
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"laz" = (
+/obj/structure/cable/blue{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 5;
+	icon_state = "4-5"
+	},
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 6;
+	icon_state = "4-6"
+	},
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 10;
+	icon_state = "4-10"
+	},
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 9;
+	icon_state = "4-9"
+	},
+/obj/structure/cable/blue{
+	d1 = 9;
+	d2 = 10;
+	icon_state = "9-10"
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "laG" = (
 /obj/structure/table/standard,
 /obj/random/documents,
@@ -8236,15 +9412,107 @@
 /obj/item/paper_bin,
 /turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
+"lfc" = (
+/obj/structure/cable/orange{
+	icon_state = "8-9";
+	d1 = 8;
+	d2 = 9
+	},
+/obj/structure/cable/orange{
+	icon_state = "8-10";
+	d1 = 8;
+	d2 = 10
+	},
+/obj/structure/cable/orange{
+	icon_state = "2-8";
+	d1 = 2;
+	d2 = 8
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-8";
+	d1 = 1;
+	d2 = 8
+	},
+/obj/structure/cable/orange{
+	icon_state = "6-8";
+	d1 = 6;
+	d2 = 8
+	},
+/obj/structure/cable/orange{
+	icon_state = "5-8";
+	d1 = 5;
+	d2 = 8
+	},
+/obj/structure/cable/orange{
+	icon_state = "5-6";
+	d1 = 5;
+	d2 = 6
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"lfe" = (
+/obj/structure/cable/white{
+	icon_state = "32-8";
+	d1 = 32;
+	d2 = 8
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "ljS" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/simulated/floor/holofloor/grass,
 /area/holodeck/source_plaza)
+"lnN" = (
+/obj/structure/cable{
+	icon_state = "32-10";
+	d1 = 32;
+	d2 = 10
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "low" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/shuttle/yellow,
 /area/centcom/evac)
+"ltA" = (
+/obj/structure/cable{
+	icon_state = "1-8";
+	d1 = 1;
+	d2 = 8
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "5-6";
+	d1 = 5;
+	d2 = 6
+	},
+/obj/structure/cable{
+	icon_state = "6-8";
+	d1 = 6;
+	d2 = 8
+	},
+/obj/structure/cable{
+	icon_state = "8-9";
+	d1 = 8;
+	d2 = 9
+	},
+/obj/structure/cable{
+	icon_state = "8-10";
+	d1 = 8;
+	d2 = 10
+	},
+/obj/structure/cable{
+	icon_state = "5-8";
+	d1 = 5;
+	d2 = 8
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "lwD" = (
 /obj/structure/bed/chair/wood{
 	dir = 1;
@@ -8252,6 +9520,67 @@
 	},
 /turf/simulated/floor/holofloor/tiled/stone,
 /area/holodeck/source_temple)
+"lye" = (
+/obj/structure/cable/pink{
+	icon_state = "32-8";
+	d1 = 32;
+	d2 = 8
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"lCK" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-10";
+	d1 = 1;
+	d2 = 10
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-4";
+	d1 = 1;
+	d2 = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-5";
+	d1 = 1;
+	d2 = 5
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-6";
+	d1 = 1;
+	d2 = 6
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-8";
+	d1 = 1;
+	d2 = 8
+	},
+/obj/structure/cable/yellow{
+	icon_state = "6-10";
+	d1 = 6;
+	d2 = 10
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-9";
+	d1 = 1;
+	d2 = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"lDT" = (
+/obj/structure/cable/green{
+	icon_state = "32-10";
+	d1 = 32;
+	d2 = 10
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"lEp" = (
+/obj/structure/cable/orange{
+	icon_state = "0-10";
+	d2 = 10
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "lIX" = (
 /obj/structure/curtain{
 	color = "#cd6889"
@@ -8260,6 +9589,29 @@
 	icon_state = "wood_broken3"
 	},
 /area/holodeck/source_temple)
+"lJR" = (
+/obj/structure/cable/white{
+	icon_state = "1-2";
+	d1 = 1;
+	d2 = 2
+	},
+/obj/structure/cable/white{
+	icon_state = "4-8";
+	d1 = 4;
+	d2 = 8
+	},
+/obj/structure/cable/white{
+	icon_state = "5-10";
+	d1 = 5;
+	d2 = 10
+	},
+/obj/structure/cable/white{
+	icon_state = "6-9";
+	d1 = 6;
+	d2 = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "lQU" = (
 /obj/machinery/door/airlock/centcom,
 /turf/simulated/floor/shuttle/blue,
@@ -8287,6 +9639,13 @@
 	icon_state = "vault"
 	},
 /area/centcom)
+"lSp" = (
+/obj/structure/cable{
+	icon_state = "0-6";
+	d2 = 6
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "lSD" = (
 /obj/structure/bed/chair/wood{
 	holographic = 1
@@ -8301,9 +9660,21 @@
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/holofloor/concrete,
 /area/holodeck/source_plaza)
+"maC" = (
+/obj/structure/cable/cyan{
+	icon_state = "32-4";
+	d1 = 32;
+	d2 = 4
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "mjR" = (
 /turf/simulated/floor/holofloor/concrete,
 /area/holodeck/source_plaza)
+"mkj" = (
+/obj/structure/cable/cyan,
+/turf/unsimulated/floor/plating,
+/area/space)
 "mlL" = (
 /obj/structure/table/holo_woodentable,
 /obj/item/flame/candle{
@@ -8351,6 +9722,29 @@
 	icon_state = "vault"
 	},
 /area/tdome/tdome2)
+"mCT" = (
+/obj/structure/cable/pink,
+/turf/unsimulated/floor/plating,
+/area/space)
+"mFE" = (
+/obj/structure/cable/cyan{
+	icon_state = "32-9";
+	d1 = 32;
+	d2 = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"mHn" = (
+/obj/structure/cable/yellow,
+/turf/unsimulated/floor/plating,
+/area/space)
+"mHR" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-10";
+	d2 = 10
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "mJB" = (
 /obj/structure/closet/emcloset,
 /obj/machinery/light/small{
@@ -8373,6 +9767,10 @@
 	},
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_cafe)
+"mTc" = (
+/obj/structure/cable/orange,
+/turf/unsimulated/floor/plating,
+/area/space)
 "mTy" = (
 /obj/structure/flora/ausbushes/genericbush,
 /obj/effect/floor_decal/spline/plain/grey{
@@ -8387,6 +9785,44 @@
 	icon_state = "vault"
 	},
 /area/tdome/tdome1)
+"mWC" = (
+/obj/structure/cable/green{
+	icon_state = "2-5";
+	d1 = 2;
+	d2 = 5
+	},
+/obj/structure/cable/green{
+	icon_state = "2-9";
+	d1 = 2;
+	d2 = 9
+	},
+/obj/structure/cable/green{
+	icon_state = "5-9";
+	d1 = 5;
+	d2 = 9
+	},
+/obj/structure/cable/green{
+	icon_state = "2-10";
+	d1 = 2;
+	d2 = 10
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4";
+	d1 = 2;
+	d2 = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "2-6";
+	d1 = 2;
+	d2 = 6
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8";
+	d1 = 2;
+	d2 = 8
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "niJ" = (
 /obj/structure/bed/chair/wood{
 	dir = 4
@@ -8409,11 +9845,63 @@
 	icon_state = "vault"
 	},
 /area/tdome/tdome2)
+"nDA" = (
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "nGo" = (
 /obj/structure/table/reinforced,
 /obj/random/contraband,
 /turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
+"nGZ" = (
+/obj/structure/cable/green{
+	icon_state = "0-9";
+	d2 = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"nHR" = (
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 10;
+	icon_state = "1-10"
+	},
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 5;
+	icon_state = "1-5"
+	},
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 6;
+	icon_state = "1-6"
+	},
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 9;
+	icon_state = "1-9"
+	},
+/obj/structure/cable/blue{
+	d1 = 6;
+	d2 = 10;
+	icon_state = "6-10"
+	},
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "nJl" = (
 /obj/structure/bed/chair/wood{
 	dir = 8;
@@ -8425,6 +9913,52 @@
 	},
 /turf/simulated/floor/holofloor/concrete,
 /area/holodeck/source_plaza)
+"nLe" = (
+/obj/structure/cable/yellow{
+	icon_state = "32-6";
+	d1 = 32;
+	d2 = 6
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"nOF" = (
+/obj/structure/cable/orange{
+	icon_state = "1-10";
+	d1 = 1;
+	d2 = 10
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-4";
+	d1 = 1;
+	d2 = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-8";
+	d1 = 1;
+	d2 = 8
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-6";
+	d1 = 1;
+	d2 = 6
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-5";
+	d1 = 1;
+	d2 = 5
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-9";
+	d1 = 1;
+	d2 = 9
+	},
+/obj/structure/cable/orange{
+	icon_state = "6-10";
+	d1 = 6;
+	d2 = 10
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "nQJ" = (
 /obj/machinery/door/airlock/glass/security{
 	name = "Airlock"
@@ -8444,6 +9978,58 @@
 	},
 /turf/simulated/floor/holofloor/beach/sand,
 /area/holodeck/source_volleyball)
+"ogS" = (
+/obj/structure/cable/green{
+	icon_state = "0-4";
+	d2 = 4
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"ohw" = (
+/obj/structure/cable{
+	icon_state = "0-5";
+	d2 = 5
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"ojL" = (
+/obj/structure/cable/orange{
+	icon_state = "4-5";
+	d1 = 4;
+	d2 = 5
+	},
+/obj/structure/cable/orange{
+	icon_state = "4-6";
+	d1 = 4;
+	d2 = 6
+	},
+/obj/structure/cable/orange{
+	icon_state = "2-4";
+	d1 = 2;
+	d2 = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-4";
+	d1 = 1;
+	d2 = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "4-10";
+	d1 = 4;
+	d2 = 10
+	},
+/obj/structure/cable/orange{
+	icon_state = "4-9";
+	d1 = 4;
+	d2 = 9
+	},
+/obj/structure/cable/orange{
+	icon_state = "9-10";
+	d1 = 9;
+	d2 = 10
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "olJ" = (
 /obj/effect/floor_decal/beach{
 	dir = 4;
@@ -8499,6 +10085,13 @@
 /obj/item/grenade/chem_grenade/cleaner,
 /turf/unsimulated/floor/techfloor,
 /area/centcom)
+"oBx" = (
+/obj/structure/cable/yellow{
+	icon_state = "32-1";
+	d1 = 32
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "oFc" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1;
@@ -8506,11 +10099,98 @@
 	},
 /turf/simulated/floor/holofloor/lino,
 /area/holodeck/source_meetinghall)
+"oJX" = (
+/obj/structure/cable/orange{
+	icon_state = "0-9"
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"oRl" = (
+/obj/structure/cable/green{
+	icon_state = "9-10";
+	d1 = 9;
+	d2 = 10
+	},
+/obj/structure/cable/green{
+	icon_state = "4-10";
+	d1 = 4;
+	d2 = 10
+	},
+/obj/structure/cable/green{
+	icon_state = "4-9";
+	d1 = 4;
+	d2 = 9
+	},
+/obj/structure/cable/green{
+	icon_state = "4-5";
+	d1 = 4;
+	d2 = 5
+	},
+/obj/structure/cable/green{
+	icon_state = "4-6";
+	d1 = 4;
+	d2 = 6
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4";
+	d1 = 2;
+	d2 = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4";
+	d1 = 1;
+	d2 = 4
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"oRO" = (
+/obj/structure/cable/white{
+	icon_state = "0-9";
+	d2 = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"oSx" = (
+/obj/structure/cable/orange{
+	icon_state = "0-5"
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "oZZ" = (
 /obj/structure/table/reinforced,
 /obj/random/energy,
 /turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
+"pdH" = (
+/obj/structure/cable/cyan{
+	icon_state = "1-2";
+	d2 = 2
+	},
+/obj/structure/cable/cyan{
+	icon_state = "4-8";
+	d1 = 4;
+	d2 = 8
+	},
+/obj/structure/cable/cyan{
+	icon_state = "5-10";
+	d1 = 5;
+	d2 = 10
+	},
+/obj/structure/cable/cyan{
+	icon_state = "6-9";
+	d1 = 6;
+	d2 = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"peg" = (
+/obj/structure/cable/green{
+	icon_state = "16-0";
+	d1 = 16;
+	d2 = 0
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "pen" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -8547,6 +10227,66 @@
 /obj/structure/table/holo_woodentable,
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_cafe)
+"pEA" = (
+/obj/structure/cable/pink{
+	icon_state = "32-1";
+	d1 = 32
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"pIu" = (
+/obj/structure/cable/blue{
+	d1 = 32;
+	d2 = 5;
+	icon_state = "32-5"
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"pKZ" = (
+/obj/structure/cable{
+	icon_state = "1-6";
+	d1 = 1;
+	d2 = 6
+	},
+/obj/structure/cable{
+	icon_state = "1-8";
+	d1 = 1;
+	d2 = 8
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	icon_state = "6-10";
+	d1 = 6;
+	d2 = 10
+	},
+/obj/structure/cable{
+	icon_state = "1-9";
+	d1 = 1;
+	d2 = 9
+	},
+/obj/structure/cable{
+	icon_state = "1-5";
+	d1 = 1;
+	d2 = 5
+	},
+/obj/structure/cable{
+	icon_state = "1-10";
+	d1 = 1;
+	d2 = 10
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"pPO" = (
+/obj/structure/cable/white{
+	icon_state = "0-2";
+	d2 = 2
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "pRb" = (
 /obj/machinery/door/blast/regular{
 	id_tag = "thunderdomegen";
@@ -8557,6 +10297,13 @@
 	icon_state = "vault"
 	},
 /area/tdome/tdome2)
+"pTH" = (
+/obj/structure/cable/cyan{
+	icon_state = "32-1";
+	d1 = 32
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "pUt" = (
 /obj/effect/floor_decal/stoneborder,
 /turf/simulated/floor/holofloor/beach/water,
@@ -8568,6 +10315,51 @@
 	},
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_cafe)
+"pXb" = (
+/obj/structure/cable/cyan{
+	icon_state = "0-10";
+	d2 = 10
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"pXx" = (
+/obj/structure/cable/pink{
+	icon_state = "1-10";
+	d1 = 1;
+	d2 = 10
+	},
+/obj/structure/cable/pink{
+	icon_state = "1-4";
+	d1 = 1;
+	d2 = 4
+	},
+/obj/structure/cable/pink{
+	icon_state = "1-5";
+	d1 = 1;
+	d2 = 5
+	},
+/obj/structure/cable/pink{
+	icon_state = "1-6";
+	d1 = 1;
+	d2 = 6
+	},
+/obj/structure/cable/pink{
+	icon_state = "1-8";
+	d1 = 1;
+	d2 = 8
+	},
+/obj/structure/cable/pink{
+	icon_state = "1-9";
+	d1 = 1;
+	d2 = 9
+	},
+/obj/structure/cable/pink{
+	icon_state = "6-10";
+	d1 = 6;
+	d2 = 10
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "qgB" = (
 /obj/structure/table/reinforced,
 /obj/random/drinkbottle,
@@ -8591,6 +10383,44 @@
 	},
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_cafe)
+"qCp" = (
+/obj/structure/cable/orange{
+	icon_state = "2-4";
+	d1 = 2;
+	d2 = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "2-5";
+	d1 = 2;
+	d2 = 5
+	},
+/obj/structure/cable/orange{
+	icon_state = "2-6";
+	d1 = 2;
+	d2 = 6
+	},
+/obj/structure/cable/orange{
+	icon_state = "2-8";
+	d1 = 2;
+	d2 = 8
+	},
+/obj/structure/cable/orange{
+	icon_state = "2-9";
+	d1 = 2;
+	d2 = 9
+	},
+/obj/structure/cable/orange{
+	icon_state = "2-10";
+	d1 = 2;
+	d2 = 10
+	},
+/obj/structure/cable/orange{
+	icon_state = "5-9";
+	d1 = 5;
+	d2 = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "qIk" = (
 /obj/machinery/door/unpowered/simple/sandstone,
 /turf/simulated/floor/holofloor/tiled/stone,
@@ -8607,6 +10437,44 @@
 	icon_state = "desert3"
 	},
 /area/holodeck/source_volleyball)
+"qRT" = (
+/obj/structure/cable/pink{
+	icon_state = "2-10";
+	d1 = 2;
+	d2 = 10
+	},
+/obj/structure/cable/pink{
+	icon_state = "2-4";
+	d1 = 2;
+	d2 = 4
+	},
+/obj/structure/cable/pink{
+	icon_state = "2-5";
+	d1 = 2;
+	d2 = 5
+	},
+/obj/structure/cable/pink{
+	icon_state = "2-6";
+	d1 = 2;
+	d2 = 6
+	},
+/obj/structure/cable/pink{
+	icon_state = "2-8";
+	d1 = 2;
+	d2 = 8
+	},
+/obj/structure/cable/pink{
+	icon_state = "2-9";
+	d1 = 2;
+	d2 = 9
+	},
+/obj/structure/cable/pink{
+	icon_state = "5-9";
+	d1 = 5;
+	d2 = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "qTC" = (
 /obj/structure/decoy{
 	icon_state = "ai-malf";
@@ -8620,6 +10488,14 @@
 /obj/structure/holonet,
 /turf/simulated/floor/holofloor/beach/sand,
 /area/holodeck/source_volleyball)
+"rbU" = (
+/obj/structure/cable/orange{
+	icon_state = "32-5";
+	d1 = 32;
+	d2 = 5
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "reF" = (
 /obj/structure/bed/chair/wood{
 	dir = 1;
@@ -8637,6 +10513,13 @@
 	icon_state = "desert2"
 	},
 /area/holodeck/source_volleyball)
+"ros" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-5";
+	d2 = 5
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "rpk" = (
 /turf/simulated/wall/r_titanium,
 /area/syndicate_elite_squad)
@@ -8644,6 +10527,14 @@
 /obj/machinery/door/unpowered/simple/wood,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_cafe)
+"rtZ" = (
+/obj/structure/cable/yellow{
+	icon_state = "32-8";
+	d1 = 32;
+	d2 = 8
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "ruS" = (
 /obj/machinery/computer/shuttle{
 	dir = 1;
@@ -8651,9 +10542,39 @@
 	},
 /turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
+"rvt" = (
+/obj/structure/cable/pink{
+	icon_state = "32-9";
+	d1 = 32;
+	d2 = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"ryM" = (
+/obj/structure/cable/white{
+	icon_state = "0-10";
+	d2 = 10
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "rzY" = (
 /turf/unsimulated/wall,
 /area/tdome)
+"rAc" = (
+/obj/structure/cable/pink{
+	icon_state = "0-8";
+	d2 = 8
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"rFX" = (
+/obj/structure/cable/orange{
+	icon_state = "16-0";
+	d1 = 16;
+	d2 = 0
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "rHP" = (
 /obj/effect/floor_decal/corner/blue/three_quarters{
 	dir = 8
@@ -8683,6 +10604,65 @@
 	icon_state = "vault"
 	},
 /area/tdome/tdome2)
+"rQj" = (
+/obj/structure/cable{
+	icon_state = "0-9"
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"rYB" = (
+/obj/structure/cable/green{
+	icon_state = "32-5";
+	d1 = 32;
+	d2 = 5
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"rZL" = (
+/obj/structure/cable/white{
+	icon_state = "2-10";
+	d1 = 2;
+	d2 = 10
+	},
+/obj/structure/cable/white{
+	icon_state = "2-4";
+	d1 = 2;
+	d2 = 4
+	},
+/obj/structure/cable/white{
+	icon_state = "2-5";
+	d1 = 2;
+	d2 = 5
+	},
+/obj/structure/cable/white{
+	icon_state = "2-6";
+	d1 = 2;
+	d2 = 6
+	},
+/obj/structure/cable/white{
+	icon_state = "2-9";
+	d1 = 2;
+	d2 = 9
+	},
+/obj/structure/cable/white{
+	icon_state = "2-8";
+	d1 = 2;
+	d2 = 8
+	},
+/obj/structure/cable/white{
+	icon_state = "5-9";
+	d1 = 5;
+	d2 = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"seV" = (
+/obj/structure/cable/orange{
+	icon_state = "32-1";
+	d1 = 32
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "sfb" = (
 /obj/machinery/computer/crew{
 	dir = 1
@@ -8697,6 +10677,20 @@
 /obj/structure/holostool,
 /turf/simulated/floor/holofloor/concrete,
 /area/holodeck/source_volleyball)
+"smw" = (
+/obj/structure/cable/pink{
+	icon_state = "0-6";
+	d2 = 6
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"suB" = (
+/obj/structure/cable/pink{
+	icon_state = "0-9";
+	d2 = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "szh" = (
 /obj/machinery/mech_recharger,
 /turf/unsimulated/floor{
@@ -8713,6 +10707,14 @@
 	},
 /turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
+"sFm" = (
+/obj/structure/cable/orange{
+	icon_state = "32-6";
+	d1 = 32;
+	d2 = 6
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "sGJ" = (
 /obj/structure/holostool,
 /turf/simulated/floor/holofloor/wood{
@@ -8733,6 +10735,14 @@
 /obj/machinery/door/airlock/command,
 /turf/unsimulated/floor/tile,
 /area/centcom)
+"sSq" = (
+/obj/structure/cable/blue{
+	d1 = 32;
+	d2 = 10;
+	icon_state = "32-10"
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "sWJ" = (
 /obj/effect/floor_decal/beach{
 	dir = 8;
@@ -8764,6 +10774,13 @@
 	},
 /turf/simulated/floor/holofloor/concrete,
 /area/holodeck/source_plaza)
+"tvo" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-6";
+	d2 = 6
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "twU" = (
 /obj/effect/floor_decal/beach{
 	dir = 4;
@@ -8778,6 +10795,13 @@
 	},
 /turf/simulated/floor/holofloor/beach/water,
 /area/holodeck/source_temple)
+"tEQ" = (
+/obj/structure/cable/pink{
+	icon_state = "0-5";
+	d2 = 5
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "tGT" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1;
@@ -8785,6 +10809,14 @@
 	},
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/holodeck/source_meetinghall)
+"tHi" = (
+/obj/structure/cable/pink{
+	icon_state = "32-4";
+	d1 = 32;
+	d2 = 4
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "tKk" = (
 /obj/effect/shuttle_landmark/ert/internim,
 /turf/space,
@@ -8805,12 +10837,55 @@
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_meetinghall)
+"umR" = (
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"unW" = (
+/obj/structure/cable/orange{
+	icon_state = "0-6";
+	d2 = 6
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"upm" = (
+/obj/structure/cable/pink{
+	icon_state = "0-4";
+	d2 = 4
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "upH" = (
 /obj/structure/holostool,
 /turf/simulated/floor/holofloor/wood{
 	icon_state = "wood_broken4"
 	},
 /area/holodeck/source_temple)
+"urA" = (
+/obj/structure/cable/green{
+	icon_state = "32-1";
+	d1 = 32
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"urS" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-4";
+	d2 = 4
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"utu" = (
+/obj/structure/cable/blue{
+	d1 = 32;
+	d2 = 6;
+	icon_state = "32-6"
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "uvD" = (
 /obj/machinery/button/blast_door{
 	id_tag = "syndicate_elite";
@@ -8863,6 +10938,21 @@
 	icon_state = "white"
 	},
 /area/tdome)
+"uQz" = (
+/obj/structure/cable/blue{
+	d2 = 10;
+	icon_state = "0-10"
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"uTX" = (
+/obj/structure/cable/orange{
+	icon_state = "32-4";
+	d1 = 32;
+	d2 = 4
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "uXg" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 9
@@ -8876,6 +10966,14 @@
 "vbR" = (
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_cafe)
+"veN" = (
+/obj/structure/cable/white{
+	icon_state = "16-0";
+	d1 = 16;
+	d2 = 0
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "veY" = (
 /turf/unsimulated/wall,
 /area/tdome/tdomeadmin)
@@ -8885,11 +10983,65 @@
 	icon_state = "wood_broken2"
 	},
 /area/holodeck/source_temple)
+"vlj" = (
+/obj/structure/cable/green{
+	icon_state = "1-2";
+	d1 = 1;
+	d2 = 2
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8";
+	d1 = 4;
+	d2 = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "5-10";
+	d1 = 5;
+	d2 = 10
+	},
+/obj/structure/cable/green{
+	icon_state = "6-9";
+	d1 = 6;
+	d2 = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "vzG" = (
 /turf/unsimulated/floor{
 	icon_state = "lino"
 	},
 /area/tdome/tdomeadmin)
+"vEr" = (
+/obj/structure/cable/blue{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable/blue{
+	d1 = 5;
+	d2 = 10;
+	icon_state = "5-10"
+	},
+/obj/structure/cable/blue{
+	d1 = 6;
+	d2 = 9;
+	icon_state = "6-9"
+	},
+/obj/structure/cable/blue{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-2"
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"vGx" = (
+/obj/structure/cable/green{
+	icon_state = "32-4";
+	d1 = 32;
+	d2 = 4
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "vOe" = (
 /obj/effect/floor_decal/stoneborder/corner{
 	dir = 1;
@@ -8901,6 +11053,44 @@
 /obj/effect/overlay/palmtree_r,
 /turf/simulated/floor/holofloor/beach/sand,
 /area/holodeck/source_temple)
+"vTl" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "4-10";
+	d1 = 4;
+	d2 = 10
+	},
+/obj/structure/cable{
+	icon_state = "4-9";
+	d1 = 4;
+	d2 = 9
+	},
+/obj/structure/cable{
+	icon_state = "9-10";
+	d1 = 9;
+	d2 = 10
+	},
+/obj/structure/cable{
+	icon_state = "4-6";
+	d1 = 4;
+	d2 = 6
+	},
+/obj/structure/cable{
+	icon_state = "4-5";
+	d1 = 4;
+	d2 = 5
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "vVF" = (
 /obj/structure/table/standard,
 /obj/random/firstaid,
@@ -8911,6 +11101,44 @@
 /obj/structure/flora/ausbushes/brflowers,
 /turf/simulated/floor/holofloor/grass,
 /area/holodeck/source_plaza)
+"weG" = (
+/obj/structure/cable/green{
+	icon_state = "1-10";
+	d1 = 1;
+	d2 = 10
+	},
+/obj/structure/cable/green{
+	icon_state = "1-6";
+	d1 = 1;
+	d2 = 6
+	},
+/obj/structure/cable/green{
+	icon_state = "6-10";
+	d1 = 6;
+	d2 = 10
+	},
+/obj/structure/cable/green{
+	icon_state = "1-5";
+	d1 = 1;
+	d2 = 5
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4";
+	d1 = 1;
+	d2 = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8";
+	d1 = 1;
+	d2 = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "1-9";
+	d1 = 1;
+	d2 = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "wht" = (
 /obj/machinery/body_scanconsole{
 	dir = 4
@@ -8926,6 +11154,13 @@
 	icon_state = "desert2"
 	},
 /area/holodeck/source_temple)
+"wly" = (
+/obj/structure/cable/pink{
+	icon_state = "0-10";
+	d2 = 10
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "wnd" = (
 /obj/effect/forcefield{
 	desc = "You can't get in. Heh.";
@@ -8936,10 +11171,43 @@
 	icon_state = "dark"
 	},
 /area/tdome/tdomeadmin)
+"wnn" = (
+/obj/structure/cable{
+	icon_state = "32-8";
+	d1 = 32;
+	d2 = 8
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"wnT" = (
+/obj/structure/cable/pink{
+	icon_state = "16-0";
+	d1 = 16;
+	d2 = 0
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"wxz" = (
+/obj/structure/cable/blue,
+/turf/unsimulated/floor/plating,
+/area/space)
 "wyK" = (
 /obj/structure/shuttle/engine/propulsion,
 /turf/space,
 /area/shuttle/transport1/centcom)
+"wyU" = (
+/obj/structure/cable{
+	icon_state = "0-10";
+	d2 = 10
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"wzX" = (
+/obj/structure/cable{
+	icon_state = "0-1"
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "wCv" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /obj/structure/flora/ausbushes/ywflowers,
@@ -8953,11 +11221,80 @@
 "wDD" = (
 /turf/simulated/floor/holofloor/beach/sand,
 /area/holodeck/source_temple)
+"wIS" = (
+/obj/structure/cable/blue{
+	d2 = 6;
+	icon_state = "0-6"
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"wKr" = (
+/obj/structure/cable/orange{
+	icon_state = "32-10";
+	d1 = 32;
+	d2 = 10
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "xaC" = (
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
 /area/tdome)
+"xjZ" = (
+/obj/structure/cable/white{
+	icon_state = "32-10";
+	d1 = 32;
+	d2 = 10
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"xmP" = (
+/obj/structure/cable/yellow{
+	icon_state = "32-9";
+	d1 = 32;
+	d2 = 9
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"xpH" = (
+/obj/structure/cable/white{
+	icon_state = "1-4";
+	d1 = 1;
+	d2 = 4
+	},
+/obj/structure/cable/white{
+	icon_state = "2-4";
+	d1 = 2;
+	d2 = 4
+	},
+/obj/structure/cable/white{
+	icon_state = "4-10";
+	d1 = 4;
+	d2 = 10
+	},
+/obj/structure/cable/white{
+	icon_state = "4-5";
+	d1 = 4;
+	d2 = 5
+	},
+/obj/structure/cable/white{
+	icon_state = "4-6";
+	d1 = 4;
+	d2 = 6
+	},
+/obj/structure/cable/white{
+	icon_state = "4-9";
+	d1 = 4;
+	d2 = 9
+	},
+/obj/structure/cable/white{
+	icon_state = "9-10";
+	d1 = 9;
+	d2 = 10
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "xqW" = (
 /obj/structure/bed/chair/wood{
 	holographic = 1
@@ -8968,6 +11305,20 @@
 	},
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_cafe)
+"xDy" = (
+/obj/structure/cable/cyan{
+	icon_state = "0-5";
+	d2 = 5
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"xFy" = (
+/obj/structure/cable/green{
+	icon_state = "0-8";
+	d2 = 8
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "xHn" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 8;
@@ -8976,6 +11327,29 @@
 /obj/structure/holonet/end,
 /turf/simulated/floor/holofloor/beach/sand,
 /area/holodeck/source_volleyball)
+"xNI" = (
+/obj/structure/cable/cyan{
+	icon_state = "0-4";
+	d2 = 4
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"xRn" = (
+/obj/structure/cable/white{
+	icon_state = "32-4";
+	d1 = 32;
+	d2 = 4
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
+"xRS" = (
+/obj/structure/cable/yellow{
+	icon_state = "32-2";
+	d1 = 32;
+	d2 = 2
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "xTc" = (
 /obj/structure/table/holo_woodentable,
 /obj/item/tray{
@@ -8996,11 +11370,25 @@
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/holofloor/beach/sand,
 /area/holodeck/source_volleyball)
+"yfF" = (
+/obj/structure/cable/blue{
+	d1 = 32;
+	icon_state = "32-1"
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 "yhu" = (
 /obj/structure/table/reinforced,
 /obj/item/stamp/boss,
 /turf/simulated/floor/shuttle/blue,
 /area/centcom/evac)
+"yhM" = (
+/obj/structure/cable/green{
+	icon_state = "0-6";
+	d2 = 6
+	},
+/turf/unsimulated/floor/plating,
+/area/space)
 
 (1,1,1) = {"
 ala
@@ -13649,28 +16037,28 @@ aab
 aab
 "}
 (24,1,1) = {"
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aab
 aab
 aab
@@ -13851,28 +16239,28 @@ aab
 aab
 "}
 (25,1,1) = {"
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aaa
+cuw
+cuw
+aZw
+cuw
+cuw
+cuw
+cuw
+nDA
+cuw
+cuw
+cuw
+cuw
+urS
+cuw
+cuw
+cuw
+cuw
+cIa
+cuw
+cuw
+aaa
 aab
 aab
 aab
@@ -14053,28 +16441,28 @@ aab
 aab
 "}
 (26,1,1) = {"
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aaa
+cuw
+iKg
+fUP
+chK
+cuw
+cuw
+lSp
+ltA
+ohw
+cuw
+cuw
+tvo
+cEw
+ros
+cuw
+cuw
+unW
+lfc
+oSx
+cuw
+aaa
 aab
 aab
 aab
@@ -14255,28 +16643,28 @@ aab
 aab
 "}
 (27,1,1) = {"
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aaa
+pPO
+had
+lJR
+rZL
+kXW
+jHK
+pKZ
 aan
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+iEO
+wzX
+dEW
+lCK
+eqf
+fOH
+mHn
+bit
+nOF
+duh
+qCp
+mTc
+aaa
 aab
 aab
 aab
@@ -14457,28 +16845,28 @@ aab
 aab
 "}
 (28,1,1) = {"
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aaa
+cuw
+ryM
+xpH
+oRO
+cuw
+cuw
+wyU
+vTl
+rQj
+cuw
+cuw
+mHR
+kcI
+fPh
+cuw
+cuw
+lEp
+ojL
+oJX
+cuw
+aaa
 aab
 aab
 aab
@@ -14659,28 +17047,28 @@ aab
 aab
 "}
 (29,1,1) = {"
-aab
-aab
-aab
-aab
-aab
-aab
-aan
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aaa
+cuw
+cuw
+cvh
+cuw
+cuw
+cuw
+cuw
+umR
+cuw
+cuw
+cuw
+cuw
+hXU
+cuw
+cuw
+cuw
+cuw
+gqU
+cuw
+cuw
+aaa
 aab
 aab
 aab
@@ -14861,28 +17249,28 @@ aab
 aab
 "}
 (30,1,1) = {"
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aaa
+cuw
+exA
+xRn
+hkS
+cuw
+cuw
+hmT
+eFI
+kME
+cuw
+cuw
+nLe
+eLD
+gMd
+cuw
+cuw
+sFm
+uTX
+rbU
+cuw
+aaa
 aab
 aab
 aab
@@ -15063,28 +17451,28 @@ aab
 aab
 "}
 (31,1,1) = {"
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aaa
+cuw
+dui
+veN
+fLw
+cuw
+cuw
+dtq
+jdH
+chQ
+cuw
+cuw
+xRS
+dYC
+oBx
+cuw
+cuw
+dya
+rFX
+seV
+cuw
+aaa
 aab
 aae
 aae
@@ -15265,28 +17653,28 @@ aab
 aab
 "}
 (32,1,1) = {"
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aaa
+cuw
+xjZ
+lfe
+cRE
+cuw
+cuw
+lnN
+wnn
+aOs
+cuw
+cuw
+izv
+rtZ
+xmP
+cuw
+cuw
+wKr
+bzn
+cYb
+cuw
+aaa
 aab
 aae
 aab
@@ -15467,28 +17855,28 @@ aab
 aab
 "}
 (33,1,1) = {"
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aaa
+cuw
+cuw
+ogS
+cuw
+cuw
+cuw
+cuw
+xNI
+cuw
+cuw
+cuw
+cuw
+csm
+cuw
+cuw
+cuw
+cuw
+upm
+cuw
+cuw
+aaa
 aab
 aae
 aab
@@ -15669,28 +18057,28 @@ aab
 aab
 "}
 (34,1,1) = {"
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aaa
+cuw
+yhM
+dwE
+huq
+cuw
+cuw
+dld
+cAe
+xDy
+cuw
+cuw
+wIS
+cpE
+cdr
+cuw
+cuw
+smw
+cGw
+tEQ
+cuw
+aaa
 aab
 aae
 aab
@@ -15871,28 +18259,28 @@ aab
 aab
 "}
 (35,1,1) = {"
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aaa
+gdN
+weG
+vlj
+mWC
+bUT
+gIp
+dHp
+pdH
+dAW
+mkj
+iiF
+nHR
+vEr
+fmW
+wxz
+jLN
+pXx
+cNO
+qRT
+mCT
+aaa
 aab
 aae
 aab
@@ -16073,28 +18461,28 @@ aab
 aab
 "}
 (36,1,1) = {"
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aaa
+cuw
+ieg
+oRl
+nGZ
+cuw
+cuw
+pXb
+izw
+gtC
+cuw
+cuw
+uQz
+laz
+bGA
+cuw
+cuw
+wly
+krl
+suB
+cuw
+aaa
 aab
 aae
 aab
@@ -16275,28 +18663,28 @@ aab
 aab
 "}
 (37,1,1) = {"
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aaa
+cuw
+cuw
+xFy
+cuw
+cuw
+cuw
+cuw
+aDq
+cuw
+cuw
+cuw
+cuw
+jhm
+cuw
+cuw
+cuw
+cuw
+rAc
+cuw
+cuw
+aaa
 aab
 aae
 aab
@@ -16477,28 +18865,28 @@ aab
 aab
 "}
 (38,1,1) = {"
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aaa
+cuw
+cNG
+vGx
+rYB
+cuw
+cuw
+his
+maC
+dvV
+cuw
+cuw
+utu
+eNJ
+pIu
+cuw
+cuw
+bnZ
+tHi
+cry
+cuw
+aaa
 aab
 aae
 aab
@@ -16679,28 +19067,28 @@ aab
 aab
 "}
 (39,1,1) = {"
-aab
-aab
-aab
-aab
-aab
-aab
-aan
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aaa
+cuw
+dCa
+peg
+urA
+cuw
+cuw
+aWR
+fVO
+pTH
+cuw
+cuw
+edB
+kYo
+yfF
+cuw
+cuw
+cGS
+wnT
+pEA
+cuw
+aaa
 aab
 aae
 aab
@@ -16881,28 +19269,28 @@ aab
 aab
 "}
 (40,1,1) = {"
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aaa
+cuw
+lDT
+bWj
+kDJ
+cuw
+cuw
+cpR
+gnD
+mFE
+cuw
+cuw
+sSq
+jos
+jba
+cuw
+cuw
+jbj
+lye
+rvt
+cuw
+aaa
 aab
 aae
 aab
@@ -17083,28 +19471,28 @@ aab
 aab
 "}
 (41,1,1) = {"
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aan
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aab
 aae
 aab
