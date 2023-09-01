@@ -110,3 +110,41 @@
 	name = "lightweight utility knife"
 	desc = "A lightweight utility knife made out of a steel alloy."
 	icon_state = "titanium"
+
+//Reagent Knives
+
+/obj/item/material/knife/reagent
+	atom_flags = ATOM_FLAG_OPEN_CONTAINER
+	origin_tech = list(TECH_MATERIAL = 2, TECH_ESOTERIC = 5)
+
+/obj/item/material/knife/reagent/New()
+	..()
+	create_reagents(30)
+
+/obj/item/material/knife/reagent/attack(mob/living/M, mob/user, var/target_zone)
+	if(!istype(M))
+		return
+
+	. = ..()
+	if(reagents.total_volume)
+		if(M.reagents)
+			var/should_admin_log = reagents.should_admin_log()
+			var/contained_reagents = reagents.get_reagents()
+			var/trans = reagents.trans_to_mob(M, 8, CHEM_BLOOD) //we transfer only 8 units because slashing doesnt generally make you stay in the wound long
+			if(should_admin_log)
+				admin_inject_log(user, M, src, contained_reagents, trans)
+
+
+/obj/item/material/knife/reagent/fakescalp
+	name = "scalpel"
+	desc = "A tiny and extremely sharp steel cutting tool used for surgery, dissection, autopsy, and very precise cuts. The cornerstone of any surgical procedure."
+	icon = 'icons/obj/surgery.dmi'
+	icon_state = "scalpel"
+	applies_material_colour = 0 //does not rename it to "steel scalpel" so we can hide it :)))))))
+	applies_material_name = 0 //does not recolor it, makes it indistinguishable from  a real scalpel.
+	origin_tech = list(TECH_MATERIAL = 2, TECH_ESOTERIC = 5)
+
+/obj/item/material/knife/reagent/fakescalp/examine(mob/user, distance)
+	. = ..()
+	if(istraitor(user) || user.skill_check(SKILL_MEDICAL, SKILL_TRAINED) || user.skill_check(SKILL_DEVICES, SKILL_TRAINED))
+		to_chat(user, "That doesn't look like a normal scalpel.")

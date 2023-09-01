@@ -41,7 +41,7 @@
 	active_power_usage = 0
 	anchored = TRUE
 
-	obj_flags = OBJ_FLAG_ANCHORABLE
+	obj_flags = OBJ_FLAG_ANCHORABLE | OBJ_FLAG_ROTATABLE
 	var/on = FALSE
 	var/low_alarm = FALSE
 	var/construct_type = /obj/machinery/light_construct
