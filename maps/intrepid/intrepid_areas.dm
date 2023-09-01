@@ -246,10 +246,6 @@
 /area/intrepid/department/engineering
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
-/area/intrepid/department/engineering/solarcontrol
-	name = "\improper Solar Plating Control"
-	icon_state = "solarcontrol"
-
 /area/intrepid/department/engineering/lockerroom
 	name = "\improper Engineering Locker Room"
 	icon_state = "engineeringlockerroom"
