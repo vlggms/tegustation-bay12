@@ -118,7 +118,9 @@
 
 	if(T.dynamic_lighting)
 		dynamic_lighting = TRUE
+		shadower?.alpha = initial(shadower.alpha)
 		lighting_build_overlay()
 	else
 		dynamic_lighting = FALSE
+		shadower?.alpha = initial(shadower.alpha) * 0.5
 		lighting_clear_overlay()
