@@ -126,13 +126,19 @@
 		return
 
 	. = ..()
-	if(reagents.total_volume)
-		if(M.reagents)
-			var/should_admin_log = reagents.should_admin_log()
-			var/contained_reagents = reagents.get_reagents()
-			var/trans = reagents.trans_to_mob(M, 8, CHEM_BLOOD) //we transfer only 8 units because slashing doesnt generally make you stay in the wound long
-			if(should_admin_log)
-				admin_inject_log(user, M, src, contained_reagents, trans)
+
+	var/allow = M.can_inject(user, target_zone)
+	if(user.a_intent == I_HURT) //prevents it from injecting reagents WITHOUT attacking (reagents get injected but no harm is done to the target)
+		if(allow)
+			if(allow == INJECTION_PORT) //this is a knife meant for combat, we are not gonna inject
+				return
+		if(reagents.total_volume)
+			if(M.reagents)
+				var/should_admin_log = reagents.should_admin_log()
+				var/contained_reagents = reagents.get_reagents()
+				var/trans = reagents.trans_to_mob(M, 4, CHEM_BLOOD) //we transfer only 4 units because slashing doesnt generally make you stay in the wound long
+				if(should_admin_log)
+					admin_inject_log(user, M, src, contained_reagents, trans)
 
 
 /obj/item/material/knife/reagent/fakescalp

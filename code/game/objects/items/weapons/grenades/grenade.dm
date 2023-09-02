@@ -9,10 +9,20 @@
 	throw_range = 20
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BELT
+	var/emagged = FALSE
 	var/active = 0
 	var/det_time = 50
 	var/fail_det_time = 5 // If you are clumsy and fail, you get this time.
 	var/arm_sound = 'sound/weapons/armbomb.ogg'
+
+/obj/item/grenade/emag_act(remaining_charges, mob/user, emag_source)
+	. = ..()
+	if(!emagged)
+		to_chat(user, SPAN_NOTICE("You short out \the [src]'s timer, it is now permanently set for instant detonation!"))
+		sparks(2, 1, src)
+		det_time = 1
+		emagged = 1
+		return 1
 
 /obj/item/grenade/proc/clown_check(var/mob/living/user)
 	if((MUTATION_CLUMSY in user.mutations) && prob(50))
@@ -61,21 +71,24 @@
 		T.hotspot_expose(700,125)
 
 /obj/item/grenade/attackby(obj/item/W as obj, mob/user as mob)
-	if(isScrewdriver(W))
-		switch(det_time)
-			if (1)
-				det_time = 10
-				to_chat(user, "<span class='notice'>You set the [name] for 1 second detonation time.</span>")
-			if (10)
-				det_time = 30
-				to_chat(user, "<span class='notice'>You set the [name] for 3 second detonation time.</span>")
-			if (30)
-				det_time = 50
-				to_chat(user, "<span class='notice'>You set the [name] for 5 second detonation time.</span>")
-			if (50)
-				det_time = 1
-				to_chat(user, "<span class='notice'>You set the [name] for instant detonation.</span>")
-		add_fingerprint(user)
+	if(!emagged)
+		if(isScrewdriver(W))
+			switch(det_time)
+				if (1)
+					det_time = 10
+					to_chat(user, "<span class='notice'>You set the [name] for 1 second detonation time.</span>")
+				if (10)
+					det_time = 30
+					to_chat(user, "<span class='notice'>You set the [name] for 3 second detonation time.</span>")
+				if (30)
+					det_time = 50
+					to_chat(user, "<span class='notice'>You set the [name] for 5 second detonation time.</span>")
+				if (50)
+					det_time = 1
+					to_chat(user, "<span class='notice'>You set the [name] for instant detonation.</span>")
+	else
+		to_chat(user, SPAN_WARNING("\The [src] refuses the change!"))
+	add_fingerprint(user)
 	..()
 
 /obj/item/grenade/attack_hand()
