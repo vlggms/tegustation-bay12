@@ -21,7 +21,7 @@
 		to_chat(user, SPAN_NOTICE("You short out \the [src]'s timer, it is now permanently set for instant detonation!"))
 		sparks(2, 1, src)
 		det_time = 1
-		emagged = 1
+		emagged = TRUE
 		return 1
 
 /obj/item/grenade/proc/clown_check(var/mob/living/user)

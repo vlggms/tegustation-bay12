@@ -228,7 +228,7 @@
 		req_access.Cut()
 		to_chat(user, SPAN_NOTICE("You short out \the [src]'s scanner circuit, removing the access requirements!"))
 		sparks(2, 1, src)
-		emagged = 1
+		emagged = TRUE
 		return 1
 	return
 
