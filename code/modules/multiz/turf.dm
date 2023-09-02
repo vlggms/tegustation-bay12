@@ -106,3 +106,19 @@
 //Most things use is_plating to test if there is a cover tile on top (like regular floors)
 /turf/simulated/open/is_plating()
 	return 1
+
+// This is for handling light on open turfs above space turfs
+/turf/simulated/open/update_mimic()
+	. = ..()
+	if(!.)
+		return
+	var/turf/T = GetBelow(src)
+	if(!istype(T))
+		return
+
+	if(T.dynamic_lighting)
+		dynamic_lighting = TRUE
+		lighting_build_overlay()
+	else
+		dynamic_lighting = FALSE
+		lighting_clear_overlay()
