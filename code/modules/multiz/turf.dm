@@ -118,9 +118,9 @@
 
 	if(T.dynamic_lighting)
 		dynamic_lighting = TRUE
-		shadower?.alpha = initial(shadower.alpha)
+		shadower?.color = initial(shadower.color)
 		lighting_build_overlay()
 	else
 		dynamic_lighting = FALSE
-		shadower?.alpha = initial(shadower.alpha) * 0.5
+		shadower?.color = "#00000032"
 		lighting_clear_overlay()
