@@ -22,7 +22,7 @@
 		sparks(2, 1, src)
 		det_time = 1
 		emagged = TRUE
-		return 1
+		return TRUE
 
 /obj/item/grenade/proc/clown_check(var/mob/living/user)
 	if((MUTATION_CLUMSY in user.mutations) && prob(50))

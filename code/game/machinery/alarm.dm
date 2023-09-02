@@ -229,7 +229,7 @@
 		to_chat(user, SPAN_NOTICE("You short out \the [src]'s scanner circuit, removing the access requirements!"))
 		sparks(2, 1, src)
 		emagged = TRUE
-		return 1
+		return TRUE
 	return
 
 /obj/machinery/alarm/proc/handle_heating_cooling(var/datum/gas_mixture/environment)
