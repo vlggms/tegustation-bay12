@@ -31,10 +31,11 @@
 
 /turf/proc/update_mimic()
 	if (!(z_flags & ZM_MIMIC_BELOW))
-		return
+		return FALSE
 
 	z_queued += 1
 	SSzcopy.queued_turfs += src
+	return TRUE
 
 /// Enables Z-mimic for a turf that didn't already have it enabled.
 /turf/proc/enable_zmimic(additional_flags = 0)
