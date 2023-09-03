@@ -98,7 +98,7 @@
 	shift.Translate(0, radius)
 	transform = shift
 
-	SpinAnimation(rotation_speed, -1, clockwise, rotation_segments)
+	SpinAnimation(rotation_speed, -1, clockwise, rotation_segments, parallel = FALSE)
 
 /atom/movable/proc/stop_orbit()
 	SpinAnimation(0, 0)

@@ -76,10 +76,16 @@
 	return ..()
 
 // Remind me to remove NPC and player differing controls...
-/mob/living/simple_animal/hostile/megafauna/all_around_helper/shoot_target(atom/A)
+/mob/living/simple_animal/hostile/megafauna/all_around_helper/ICheckRangedAttack(atom/A)
+	return TRUE
+
+/mob/living/simple_animal/hostile/megafauna/all_around_helper/IRangedAttack(atom/A)
 	return RangedAttack(A)
 
 /mob/living/simple_animal/hostile/megafauna/all_around_helper/RangedAttack(atom/A)
+	if(charging)
+		return
+
 	if(client && !A.Adjacent(src))
 		switch(chosen_attack)
 			if(1)
@@ -139,15 +145,20 @@
 	var/para = TRUE
 	if(move_dir in list(WEST, NORTHWEST, SOUTHWEST))
 		para = FALSE
-	SpinAnimation(3, 1, para)
-	playsound(src,"sound/simple_mob/abnormality/all_around_helper/move0[pick(1,2,3)].ogg", rand(50, 70), TRUE)
+	SpinAnimation(dash_speed, 1, para)
+	var/picked_sound = pick(
+		'sound/simple_mob/abnormality/all_around_helper/move01.ogg',
+		'sound/simple_mob/abnormality/all_around_helper/move02.ogg',
+		'sound/simple_mob/abnormality/all_around_helper/move03.ogg',
+		)
+	playsound(src, picked_sound, rand(50, 70), TRUE)
 	for(var/mob/living/L in range(1, T))
 		if(L.faction != faction)
 			if(L in been_hit)
 				continue
 			visible_message("<span class='boldwarning'>[src] runs through [L]!</span>")
 			to_chat(L, "<span class='userdanger'>[src] pierces you with their spinning blades!</span>")
-			playsound(L, attack_sound, 75, 1)
+			playsound(L, 'sound/simple_mob/abnormality/all_around_helper/attack.ogg', 75, 1)
 			var/turf/LT = get_turf(L)
 			new /obj/effect/temp_visual/smash(LT)
 			if(ishuman(L))
