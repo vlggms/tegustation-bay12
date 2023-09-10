@@ -71,8 +71,8 @@
 				to_chat(src, "<span class='name'>[speaker_name]</span>[alt_name] talks but you cannot hear \him.")
 	else
 		var/message_to_send = null
+		var/nverb = verb
 		if (language)
-			var/nverb = verb
 			if (say_understands(speaker, language))
 				var/skip = FALSE
 				if (isliving(src))
@@ -86,9 +86,9 @@
 							nverb = "[verb] ([language.shorthand])"
 						if(GLOB.PREF_OFF)//Regular output
 							nverb = verb
-			message_to_send = "<span class='game say'><span class='name'>[speaker_name]</span>[alt_name] [track][language.format_message(message, verb)]</span>"
+			message_to_send = "<span class='game say'><span class='name'>[speaker_name]</span>[alt_name] [track][language.format_message(message, nverb)]</span>"
 		else
-			message_to_send = "<span class='game say'><span class='name'>[speaker_name]</span>[alt_name] [track][verb], <span class='message'><span class='body'>\"[message]\"</span></span></span>"
+			message_to_send = "<span class='game say'><span class='name'>[speaker_name]</span>[alt_name] [track][nverb], <span class='message'><span class='body'>\"[message]\"</span></span></span>"
 			if(check_mentioned(message) && get_preference_value(/datum/client_preference/check_mention) == GLOB.PREF_YES)
 				message_to_send = "<font size='3'><b>[message_to_send]</b></font>"
 
