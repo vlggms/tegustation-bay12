@@ -25,6 +25,7 @@
 		usr.emote(message)
 
 /mob/proc/say_dead(var/message)
+	message = say_emphasis(message)
 	communicate(/decl/communication_channel/dsay, client, message)
 
 /mob/proc/say_understands(var/mob/other,var/datum/language/speaking = null)

@@ -53,6 +53,8 @@
 	if(italics)
 		message = "<i>[message]</i>"
 
+	message = say_emphasis(message)
+
 	var/track = null
 	if(isghost(src))
 		if(speaker_name != speaker.real_name && speaker.real_name)
@@ -68,6 +70,7 @@
 			else if(!is_blind())
 				to_chat(src, "<span class='name'>[speaker_name]</span>[alt_name] talks but you cannot hear \him.")
 	else
+		var/message_to_send = null
 		if (language)
 			var/nverb = verb
 			if (say_understands(speaker, language))
@@ -83,21 +86,70 @@
 							nverb = "[verb] ([language.shorthand])"
 						if(GLOB.PREF_OFF)//Regular output
 							nverb = verb
-			on_hear_say("<span class='game say'>[track]<span class='name'>[speaker_name]</span>[alt_name] [language.format_message(message, nverb)]</span>")
+			message_to_send = "<span class='game say'><span class='name'>[speaker_name]</span>[alt_name] [track][language.format_message(message, verb)]</span>"
 		else
-			on_hear_say("<span class='game say'>[track]<span class='name'>[speaker_name]</span>[alt_name] [verb], <span class='message'><span class='body'>\"[message]\"</span></span></span>")
+			message_to_send = "<span class='game say'><span class='name'>[speaker_name]</span>[alt_name] [track][verb], <span class='message'><span class='body'>\"[message]\"</span></span></span>"
+			if(check_mentioned(message) && get_preference_value(/datum/client_preference/check_mention) == GLOB.PREF_YES)
+				message_to_send = "<font size='3'><b>[message_to_send]</b></font>"
+
+		on_hear_say(message_to_send)
 		if (speech_sound && (get_dist(speaker, src) <= world.view && src.z == speaker.z))
 			var/turf/source = speaker? get_turf(speaker) : get_turf(src)
 			src.playsound_local(source, speech_sound, sound_vol, 1)
 
-		return message
-
 /mob/proc/on_hear_say(var/message)
-	to_chat(src, message)
+	to_chat(src, "[message]")
 
 /mob/living/silicon/on_hear_say(var/message)
 	var/time = say_timestamp()
 	to_chat(src, "[time] [message]")
+
+// Checks if the mob's own name is included inside message.  Handles both first and last names.
+/mob/proc/check_mentioned(var/message)
+	var/list/valid_names = splittext(real_name, " ") // Should output list("John", "Doe") as an example.
+	valid_names += special_mentions()
+	for(var/name in valid_names)
+		if(findtext(message, name))
+			return TRUE
+	return FALSE
+
+// Override this if you want something besides the mob's name to count for being mentioned in check_mentioned().
+/mob/proc/special_mentions()
+	return list()
+
+/mob/living/silicon/ai/special_mentions()
+	return list("AI") // AI door!
+
+// Converts specific characters, like *, /, and _ to formatted output.
+/mob/proc/say_emphasis(var/message)
+	message = encode_html_emphasis(message, "/", "i")
+	message = encode_html_emphasis(message, "*", "b")
+	message = encode_html_emphasis(message, "_", "u")
+	return message
+
+// Replaces a character inside message with html tags.  Note that html var must not include brackets.
+// Will not create an open html tag if it would not have a closing one.
+/proc/encode_html_emphasis(var/message, var/char, var/html)
+	var/i = 20 // Infinite loop safety.
+	var/pattern = "(?<!<)\\" + char
+	var/regex/re = regex(pattern,"i") // This matches results which do not have a < next to them, to avoid stripping slashes from closing html tags.
+	var/first = re.Find(message) // Find first occurance.
+	var/second = re.Find(message, first + 1) // Then the second.
+	while(first && second && i)
+		// Calculate how far foward the second char is, as the first replacetext() will displace it.
+		var/length_increase = length("<[html]>") - 1
+
+		// Now replace both.
+		message = replacetext(message, char, "<[html]>", first, first + 1)
+		message = replacetext(message, char, "</[html]>", second + length_increase, second + length_increase + 1)
+
+		// Check again to see if we need to keep going.
+		first = re.Find(message)
+		second = re.Find(message, first + 1)
+		i--
+	if(!i)
+		CRASH("Possible infinite loop occured in encode_html_emphasis().")
+	return message
 
 /mob/proc/hear_radio(var/message, var/verb="says", var/datum/language/language=null, var/part_a, var/part_b, var/part_c, var/mob/speaker = null, var/hard_to_hear = 0, var/vname ="")
 
@@ -204,6 +256,8 @@
 		else
 			track = "[speaker_name]"
 
+	message = say_emphasis(message)
+
 	var/formatted
 	if (language)
 		var/nverb = verb
@@ -234,18 +288,30 @@
 	return "<span class='say_quote'>\[[stationtime2text()]\]</span>"
 
 /mob/proc/on_hear_radio(part_a, speaker_name, track, part_b, part_c, formatted)
-	to_chat(src, "[part_a][speaker_name][part_b][formatted][part_c]")
+	var/final_message = "[part_a][speaker_name][part_b][formatted][part_c]"
+	if(check_mentioned(formatted) && get_preference_value(/datum/client_preference/check_mention) == GLOB.PREF_YES)
+		final_message = "<font size='3'><b>[final_message]</b></font>"
+	to_chat(src, final_message)
 
 /mob/observer/ghost/on_hear_radio(part_a, speaker_name, track, part_b, part_c, formatted)
-	to_chat(src, "[part_a][track][part_b][formatted][part_c]")
+	var/final_message = "[part_a][track][part_b][formatted][part_c]"
+	if(check_mentioned(formatted) && get_preference_value(/datum/client_preference/check_mention) == GLOB.PREF_YES)
+		final_message = "<font size='3'><b>[final_message]</b></font>"
+	to_chat(src, final_message)
 
 /mob/living/silicon/on_hear_radio(part_a, speaker_name, track, part_b, part_c, formatted)
 	var/time = say_timestamp()
-	to_chat(src, "[time][part_a][speaker_name][part_b][formatted][part_c]")
+	var/final_message = "[part_a][speaker_name][part_b][formatted][part_c]"
+	if(check_mentioned(formatted) && get_preference_value(/datum/client_preference/check_mention) == GLOB.PREF_YES)
+		final_message = "[time]<font size='3'><b>[final_message]</b></font>"
+	to_chat(src, final_message)
 
 /mob/living/silicon/ai/on_hear_radio(part_a, speaker_name, track, part_b, part_c, formatted)
 	var/time = say_timestamp()
-	to_chat(src, "[time][part_a][track][part_b][formatted][part_c]")
+	var/final_message = "[time][part_a][track][part_b][formatted][part_c]"
+	if(check_mentioned(formatted) && get_preference_value(/datum/client_preference/check_mention) == GLOB.PREF_YES)
+		final_message = "<font size='3'><b>[final_message]</b></font>"
+	to_chat(src, final_message)
 
 /mob/proc/hear_signlang(var/message, var/verb = "gestures", var/datum/language/language, var/mob/speaker = null)
 	if(!client)

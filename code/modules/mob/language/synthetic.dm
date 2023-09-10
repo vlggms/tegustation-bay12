@@ -18,6 +18,8 @@
 	if (!message)
 		return
 
+	message = speaker.say_emphasis(message)
+
 	var/message_start = "<i><span class='game say'>[name], <span class='name'>[speaker.name]</span>"
 	var/message_body = "<span class='message'>[speaker.say_quote(message)], \"[message]\"</span></span></i>"
 
@@ -26,7 +28,10 @@
 
 	for (var/mob/M in GLOB.dead_mob_list_)
 		if(!istype(M,/mob/new_player) && !istype(M,/mob/living/carbon/brain)) //No meta-evesdropping
-			M.show_message("[message_start] ([ghost_follow_link(speaker, M)]) [message_body]", 2)
+			var/message_to_send = "[message_start] ([ghost_follow_link(speaker, M)]) [message_body]"
+			if(M.check_mentioned(message) && M.get_preference_value(/datum/client_preference/check_mention) == GLOB.PREF_YES)
+				message_to_send = "<font size='3'><b>[message_to_send]</b></font>"
+			M.show_message(message_to_send, 2)
 
 	for (var/mob/living/S in GLOB.living_mob_list_)
 		if(drone_only && !istype(S,/mob/living/silicon/robot/drone))
@@ -36,7 +41,10 @@
 		else if (!S.binarycheck())
 			continue
 
-		S.show_message("[message_start] [message_body]", 2)
+		var/message_to_send = "[message_start] [message_body]"
+		if(S.check_mentioned(message) && S.get_preference_value(/datum/client_preference/check_mention) == GLOB.PREF_YES)
+			message_to_send = "<font size='3'><b>[message_to_send]</b></font>"
+		S.show_message(message_to_send, 2)
 
 	var/list/listening = hearers(1, src)
 	listening -= src
@@ -84,4 +92,3 @@
 	if(prob(70))
 		return "[pick(list("PBU","HIU","SINA","ARMA","OSI"))]-[rand(100, 999)]"
 	return pick(GLOB.ai_names)
-
