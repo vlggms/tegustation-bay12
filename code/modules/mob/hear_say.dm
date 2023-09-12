@@ -86,7 +86,7 @@
 							nverb = "[verb] ([language.shorthand])"
 						if(GLOB.PREF_OFF)//Regular output
 							nverb = verb
-			message_to_send = "<span class='game say'><span class='name'>[speaker_name]</span>[alt_name] [track][language.format_message(message, nverb)]</span>"
+			message_to_send = "<span class='game say'>[track]<span class='name'>[speaker_name]</span>[alt_name] [track][language.format_message(message, nverb)]</span>"
 		else
 			message_to_send = "<span class='game say'><span class='name'>[speaker_name]</span>[alt_name] [track][nverb], <span class='message'><span class='body'>\"[message]\"</span></span></span>"
 			if(check_mentioned(message) && get_preference_value(/datum/client_preference/check_mention) == GLOB.PREF_YES)
@@ -97,8 +97,10 @@
 			var/turf/source = speaker? get_turf(speaker) : get_turf(src)
 			src.playsound_local(source, speech_sound, sound_vol, 1)
 
+		return message
+
 /mob/proc/on_hear_say(var/message)
-	to_chat(src, "[message]")
+	to_chat(src, message)
 
 /mob/living/silicon/on_hear_say(var/message)
 	var/time = say_timestamp()
