@@ -135,8 +135,8 @@
 	var/i = 20 // Infinite loop safety.
 	var/pattern = "(?<!<)\\" + char
 	var/regex/re = regex(pattern,"i") // This matches results which do not have a < next to them, to avoid stripping slashes from closing html tags.
-	var/first = re.Find(message) // Find first occurance.
-	var/second = re.Find(message, first + 1) // Then the second.
+	var/first = findtext(re, message) // Find first occurance.
+	var/second = findtext(re, message, first + 1)
 	while(first && second && i)
 		// Calculate how far foward the second char is, as the first replacetext() will displace it.
 		var/length_increase = length("<[html]>") - 1
@@ -146,8 +146,8 @@
 		message = replacetext(message, char, "</[html]>", second + length_increase, second + length_increase + 1)
 
 		// Check again to see if we need to keep going.
-		first = re.Find(message)
-		second = re.Find(message, first + 1)
+		first = findtext(re, message)
+		second = findtext(re, message, first + 1)
 		i--
 	if(!i)
 		CRASH("Possible infinite loop occured in encode_html_emphasis().")
