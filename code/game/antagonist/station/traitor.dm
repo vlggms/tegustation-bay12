@@ -5,6 +5,7 @@ GLOBAL_DATUM_INIT(traitors, /datum/antagonist/traitor, new)
 		return FALSE
 	if(player.mind in GLOB.traitors.current_antagonists)
 		return TRUE
+	return FALSE
 
 // Inherits most of its vars from the base datum.
 /datum/antagonist/traitor
