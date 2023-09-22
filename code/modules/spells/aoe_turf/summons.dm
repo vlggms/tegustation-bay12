@@ -13,7 +13,6 @@
 	name = "Summon Carp"
 	desc = "This spell conjures a simple carp."
 
-	school = "conjuration"
 	charge_max = 1200
 	spell_flags = NEEDSCLOTHES
 	invocation = "Nouk Fhumm Sacp Risska!"
@@ -29,7 +28,6 @@
 	name = "Summon Creature Swarm"
 	desc = "This spell tears the fabric of reality, allowing horrific daemons to spill forth"
 
-	school = "conjuration"
 	charge_max = 1200
 	spell_flags = 0
 	invocation = "Ia-Ia! Naomesnalia!"
@@ -44,8 +42,6 @@
 /datum/spell/aoe_turf/conjure/mirage
 	name = "Summon Mirage"
 	desc = "This spell summons a harmless carp mirage for a few seconds."
-	feedback = "MR"
-	school = "illusion"
 	charge_max = 1200
 	spell_flags = NEEDSCLOTHES
 	invocation = "Nouk Fhunhm Sacp Risska!"

@@ -1,8 +1,6 @@
 /datum/spell/targeted/glimpse_of_eternity
 	name = "Glimpse of Eternity"
 	desc = "Show the non-believers what enlightenment truely means."
-	feedback = "GE"
-	school = "illusion"
 	invocation = "Ghe Tar Yet!"
 	invocation_type = INVOKE_SHOUT
 	spell_flags = INCLUDEUSER

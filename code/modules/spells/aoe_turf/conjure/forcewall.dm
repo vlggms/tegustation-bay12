@@ -1,8 +1,6 @@
 /datum/spell/aoe_turf/conjure/forcewall
 	name = "Forcewall"
 	desc = "Create a wall of pure energy at your location."
-	school = "conjuration"
-	feedback = "FW"
 	summon_type = list(/obj/effect/forcefield)
 	duration = 300
 	charge_max = 100
@@ -15,7 +13,6 @@
 /datum/spell/aoe_turf/conjure/forcewall/mime
 	name = "Invisible wall"
 	desc = "Create an invisible wall on your location."
-	school = "mime"
 	panel = "Mime"
 	summon_type = list(/obj/effect/forcefield/mime)
 	invocation_type = INVOKE_EMOTE

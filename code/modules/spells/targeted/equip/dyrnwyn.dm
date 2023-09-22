@@ -1,11 +1,9 @@
 /datum/spell/targeted/equip_item/dyrnwyn
 	name = "Summon Dyrnwyn"
 	desc = "Summons the legendary sword of Rhydderch Hael, said to draw in flame when held by a worthy man."
-	feedback = "SD"
 	charge_type = SPELL_HOLDVAR
 	holder_var_type = "fireloss"
 	holder_var_amount = 10
-	school = "conjuration"
 	invocation = "Anrhydeddu Fi!"
 	invocation_type = INVOKE_SHOUT
 	spell_flags = INCLUDEUSER

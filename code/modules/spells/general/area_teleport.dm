@@ -1,8 +1,6 @@
 /datum/spell/area_teleport
 	name = "Teleport"
 	desc = "This spell teleports you to a type of area of your selection."
-	feedback = "TP"
-	school = "conjuration"
 	charge_max = 60 SECONDS
 	spell_flags = NEEDSCLOTHES
 	invocation = "Scyar Nila!"

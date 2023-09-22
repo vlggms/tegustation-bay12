@@ -1,8 +1,6 @@
 /datum/spell/hand/charges/entangle
 	name = "Entangle"
 	desc = "This spell creates vines that immediately entangle a nearby victim."
-	feedback = "ET"
-	school = "transmutation"
 	charge_max = 600
 	spell_flags = NEEDSCLOTHES | SELECTABLE | IGNOREPREV
 	invocation = "Bu-Ekel'Inas!"

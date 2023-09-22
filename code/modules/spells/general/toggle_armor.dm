@@ -2,7 +2,6 @@
 	name = "Toggle Armor"
 	spell_flags = 0
 	charge_max = 10
-	school = "Conjuration"
 	var/list/armor_pieces
 	var/equip = 0
 	hud_state = "const_shell"

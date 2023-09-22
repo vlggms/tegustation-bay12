@@ -1,8 +1,6 @@
 /datum/spell/targeted/swap
 	name = "swap"
 	desc = "This spell swaps the positions of the wizard and a target. Causes brain damage."
-	feedback = "SW"
-	school = "conjuration"
 
 	charge_type = SPELL_HOLDVAR
 	holder_var_type = "brainloss"

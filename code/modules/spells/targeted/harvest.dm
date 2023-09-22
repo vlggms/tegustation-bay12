@@ -2,7 +2,6 @@
 	name = "Harvest"
 	desc = "Back to where I come from, and you're coming with me."
 
-	school = "transmutation"
 	charge_max = 200
 	spell_flags = Z2NOCAST | CONSTRUCT_CHECK | INCLUDEUSER
 	invocation = ""

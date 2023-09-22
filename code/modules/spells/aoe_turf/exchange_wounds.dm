@@ -1,8 +1,6 @@
 /datum/spell/aoe_turf/exchange_wounds
 	name = "Exchange Wounds"
 	desc = "Syphon the wounds from your allies."
-	feedback = "EW"
-	school = "transmutation"
 	invocation = "Esh Yek Vai!"
 	invocation_type = INVOKE_SHOUT
 	charge_max = 400

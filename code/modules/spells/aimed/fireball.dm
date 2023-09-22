@@ -1,10 +1,8 @@
 /datum/spell/aimed/fireball
 	name = "Fireball"
 	desc = "This spell fires an explosive fireball at a target."
-	school = "conjuration"
 	charge_max = 10 SECONDS
 	spell_flags = 0
-	feedback = "FB"
 	invocation = "ONI SOMA"
 	invocation_type = INVOKE_SHOUT
 	range = 20

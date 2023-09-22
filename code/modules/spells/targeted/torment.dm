@@ -1,8 +1,6 @@
 /datum/spell/targeted/torment
 	name = "Torment"
 	desc = "this spell causes pain to all those in its radius."
-	feedback = "TM"
-	school = "illusion"
 	charge_max = 150
 	spell_flags = NOFACTION
 	invocation = "Rai Di-Kaal!"

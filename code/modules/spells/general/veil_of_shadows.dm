@@ -4,7 +4,6 @@
 	charge_max = 400
 	invocation_type = INVOKE_EMOTE
 	invocation = "flickers out of existance"
-	school = "Divine" //Means that it doesn't proc the deity's spell cost.
 	spell_flags = 0
 	duration = 100
 	var/timer_id

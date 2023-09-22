@@ -1,8 +1,6 @@
 /datum/spell/aimed/passage
 	name = "Passage"
 	desc = "throw a spell towards an area and teleport to it."
-	feedback = "PA"
-	school = "conjuration"
 	charge_max = 250
 	spell_flags = 0
 	invocation = "A'YASAMA"

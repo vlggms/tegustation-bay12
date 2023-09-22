@@ -348,3 +348,7 @@
 /// Handles special effects of item being removed from "implants" of a mob
 /atom/movable/proc/ImplantRemoval(mob/user)
 	return
+
+/// The effect of being affected by dispells, either a projectile or AOE effects
+/atom/movable/proc/Dispell()
+	return

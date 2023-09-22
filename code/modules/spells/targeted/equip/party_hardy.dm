@@ -1,8 +1,6 @@
 /datum/spell/targeted/equip_item/party_hardy
 	name = "Summon Party"
 	desc = "This spell was invented for the sole purpose of getting crunked at 11am on a Tuesday. Does not require wizard garb."
-	feedback = "PY"
-	school = "conjuration"
 	charge_type = SPELL_RECHARGE
 	charge_max = 900
 	cooldown_min = 600

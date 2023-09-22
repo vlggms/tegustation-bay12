@@ -19,7 +19,6 @@
 /datum/spell/aoe_turf/conjure/summon/bats
 	name = "Summon Space Bats"
 	desc = "This spell summons a flock of spooky space bats."
-	feedback = "SB"
 
 	charge_max = 1200 //2 minutes
 	spell_flags = NEEDSCLOTHES

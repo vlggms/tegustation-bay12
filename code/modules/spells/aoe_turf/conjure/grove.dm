@@ -4,7 +4,6 @@
 
 	spell_flags = IGNOREDENSE | IGNORESPACE | NEEDSCLOTHES | Z2NOCAST | IGNOREPREV
 	charge_max = 1200
-	school = "transmutation"
 
 	range = 1
 	cooldown_min = 600
@@ -34,7 +33,6 @@
 /datum/spell/aoe_turf/conjure/grove/sanctuary
 	name = "Sanctuary"
 	desc = "Creates a sanctuary of nature around the wizard as well as creating a healing plant."
-	feedback = "SY"
 	invocation = "Bo K'Iitan!"
 	invocation_type = INVOKE_SHOUT
 	spell_flags = IGNOREDENSE | IGNORESPACE | NEEDSCLOTHES | Z2NOCAST | IGNOREPREV

@@ -4,7 +4,6 @@
 	name = "Artificer"
 	desc = "This spell conjures a construct which may be controlled by Shades."
 
-	school = "conjuration"
 	charge_max = 600
 	spell_flags = 0
 	invocation = "none"

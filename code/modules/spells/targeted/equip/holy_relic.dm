@@ -1,8 +1,6 @@
 /datum/spell/targeted/equip_item/holy_relic
 	name = "Summon Holy Relic"
 	desc = "This spell summons a relic of purity into your hand for a short while. The relic will disrupt occult and magical energies - be wary, as this includes your own."
-	feedback = "SR"
-	school = "conjuration"
 	charge_type = SPELL_RECHARGE
 	spell_flags = NEEDSCLOTHES | INCLUDEUSER
 	invocation = "Yee'Ro Su!"

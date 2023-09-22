@@ -1,0 +1,36 @@
+/datum/mana
+	var/mana_level = 10
+	var/mana_level_max = 10
+	/// Amount of mana restored per second
+	var/mana_recharge_speed = 0.25
+	var/recharging = FALSE
+
+/datum/mana/proc/UseMana(mob/user, amount = 0, silent = TRUE)
+	if(mana_level < amount)
+		if(!silent)
+			to_chat(user, SPAN_WARNING("You do not have enough mana!"))
+		return FALSE
+	mana_level = clamp(mana_level - amount, 0, mana_level_max)
+	// We attempt to start recharge any time mana is used
+	StartRecharge()
+	return TRUE
+
+// Starts a "process" of recharging if we should and can
+/datum/mana/proc/StartRecharge()
+	if(recharging)
+		return FALSE
+	if(mana_level >= mana_level_max)
+		return FALSE
+	recharging = TRUE
+	RechargeMana()
+	return TRUE
+
+/datum/mana/proc/RechargeMana()
+	if(!recharging)
+		return FALSE
+	if(mana_level >= mana_level_max)
+		recharging = FALSE
+		return FALSE
+	mana_level = clamp(mana_level + mana_recharge_speed * 0.5, 0, mana_level_max)
+	addtimer(CALLBACK(src, .proc/RechargeMana), (0.5 SECONDS))
+	return TRUE

@@ -6,7 +6,6 @@
 	invocation_type = INVOKE_SHOUT
 	invocation = "Herald! Bless me with your anger!"
 	show_message = " erupts fire from their hands"
-	school = "Divine"
 	hand_duration = 100
 	spell_delay = 30
 	range = 4

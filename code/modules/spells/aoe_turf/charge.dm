@@ -2,7 +2,6 @@
 	name = "Charge"
 	desc = "This spell can be used to charge up spent magical artifacts, among other things."
 
-	school = "transmutation"
 	charge_max = 600
 	spell_flags = 0
 	invocation = "DIRI CEL"

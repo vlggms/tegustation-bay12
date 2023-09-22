@@ -1,45 +1,61 @@
-var/list/spells = typesof(/datum/spell) //needed for the badmin verb for now
-
 /datum/spell
+	parent_type = /datum
 	var/name = "Spell"
 	var/desc = "A spell."
-	var/feedback = "" //what gets sent if this spell gets chosen by the spellbook.
-	parent_type = /datum
-	var/panel = "Spells"//What panel the proc holder needs to go on.
+	/// What panel the proc holder needs to go on.
+	var/panel = "Spells"
 
-	var/school = "evocation" //not relevant at now, but may be important later if there are changes to how spells work. the ones I used for now will probably be changed... maybe spell presets? lacking flexibility but with some other benefit?
-	/*Spell schools as follows:
-	Racial - Only tagged to spells gained for being a certain race
-	Conjuration - Creating an object or transporting it.
-	Transmutation - Modifying an object or transforming it.
-	Illusion - Altering perception or thought.
-	*/
-	var/charge_type = SPELL_RECHARGE //can be recharge or charges, see charge_max and charge_counter descriptions; can also be based on the holder's vars now, use "holder_var" for that
+	// Spell book representation
+	/// List of categories for the spellbook
+	var/list/categories = list()
+	/// If TRUE - will be available via spell book
+	var/spell_book_visible = TRUE
 
-	var/charge_max = 100 //recharge time in deciseconds if charge_type = SPELL_RECHARGE or starting charges if charge_type = SPELL_CHARGES
-	var/charge_counter = 0 //can only cast spells if it equals recharge, ++ each decisecond if charge_type = SPELL_RECHARGE or -- each cast if charge_type = SPELL_CHARGES
+	/// Can be recharge or charges, see charge_max and charge_counter descriptions; can also be based on the holder's vars now, use "holder_var" for that
+	var/charge_type = SPELL_RECHARGE
+	/// Recharge time in deciseconds if charge_type = SPELL_RECHARGE or starting charges if charge_type = SPELL_CHARGES
+	var/charge_max = 100
+	/// Can only cast spells if it equals recharge, ++ each decisecond if charge_type = SPELL_RECHARGE or -- each cast if charge_type = SPELL_CHARGES
+	var/charge_counter = 0
 	var/still_recharging_msg = "<span class='notice'>The spell is still recharging.</span>"
+	/// Amount of mana used per cast
+	var/mana_cost = 0
 
-	var/silenced = 0 //not a binary - the length of time we can't cast this for
-	var/processing = 0 //are we processing already? Mainly used so that silencing a spell doesn't call process() again. (and inadvertedly making it run twice as fast)
+	/// Not a binary - the length of time we can't cast this for
+	var/silenced = 0
+	/// Are we processing already? Mainly used so that silencing a spell doesn't call process() again. (and inadvertedly making it run twice as fast)
+	var/processing = 0
 
-	var/holder_var_type = "bruteloss" //only used if charge_type equals to "holder_var"
-	var/holder_var_amount = 20 //same. The amount adjusted with the mob's var when the spell is used
+	// Only used if charge_type equals to "holder_var"
+	var/holder_var_type = "bruteloss"
+	// Same. The amount adjusted with the mob's var when the spell is used
+	var/holder_var_amount = 20
 
 	var/spell_flags = NEEDSCLOTHES
-	var/invocation = "HURP DURP"	//what is uttered when the wizard casts the spell
-	var/invocation_type = INVOKE_NONE	//can be none, whisper, shout, and emote
-	var/range = 7					//the range of the spell; outer radius for aoe spells
-	var/message = ""				//whatever it says to the guy affected by it
-	var/selection_type = "view"		//can be "range" or "view"
-	var/atom/movable/holder			//where the spell is. Normally the user, can be an item
-	var/duration = 0 				//how long the spell lasts
+	/// What is uttered when the wizard casts the spell
+	var/invocation = "HURP DURP"
+	/// Can be none, whisper, shout, and emote
+	var/invocation_type = INVOKE_NONE
+	/// The range of the spell; Outer radius for aoe spells
+	var/range = 7
+	/// Whatever it says to the guy affected by it
+	var/message = ""
+	/// Can be "range" or "view"
+	var/selection_type = "view"
+	/// Where the spell is. Normally the user, can be an item
+	var/atom/movable/holder
+	/// How long the spell lasts
+	var/duration = 0
 
-	var/list/spell_levels = list(UPGRADE_SPEED = 0, UPGRADE_POWER = 0) //the current spell levels - total spell levels can be obtained by just adding the two values
-	var/list/level_max = list(UPGRADE_TOTAL = 4, UPGRADE_SPEED = 4, UPGRADE_POWER = 0) //maximum possible levels in each category. Total does cover both.
-	var/cooldown_reduc = 0		//If set, defines how much charge_max drops by every speed upgrade
+	/// The current spell levels - total spell levels can be obtained by just adding the two values
+	var/list/spell_levels = list(UPGRADE_SPEED = 0, UPGRADE_POWER = 0)
+	/// Maximum possible levels in each category. Total does cover both.
+	var/list/level_max = list(UPGRADE_TOTAL = 4, UPGRADE_SPEED = 4, UPGRADE_POWER = 0)
+	/// If set, defines how much charge_max drops by every speed upgrade
+	var/cooldown_reduc = 0
 	var/delay_reduc = 0
-	var/cooldown_min = 0 //minimum possible cooldown for a charging spell
+	/// Minimum possible cooldown for a charging spell
+	var/cooldown_min = 0
 
 	var/overlay = 0
 	var/overlay_icon = 'icons/obj/wizard.dmi'
@@ -47,22 +63,29 @@ var/list/spells = typesof(/datum/spell) //needed for the badmin verb for now
 	var/overlay_lifespan = 0
 
 	var/sparks_spread = 0
-	var/sparks_amt = 0 //cropped at 10
-	var/smoke_spread = 0 //1 - harmless, 2 - harmful
-	var/smoke_amt = 0 //cropped at 10
+	// Cropped at 10
+	var/sparks_amt = 0
+	// 1 - harmless, 2 - harmful
+	var/smoke_spread = 0
+	// Cropped at 10
+	var/smoke_amt = 0
 
 	var/critfailchance = 0
-	var/time_between_channels = 0 //Delay between casts
-	var/number_of_channels = 1 //How many times can we channel?
+	// Delay between casts
+	var/time_between_channels = 0
+	// How many times can we channel?
+	var/number_of_channels = 1
 
 	var/cast_delay = 1
 	var/cast_sound = ""
 
-	var/hud_state = "" //name of the icon used in generating the spell hud object
+	/// Name of the icon used in generating the spell hud object
+	var/hud_state = ""
 	var/override_base = ""
 
 
-	var/mob/living/deity/connected_god //Do we have this spell based off a boon from a god?
+	// Do we have this spell based off a boon from a god?
+	var/mob/living/deity/connected_god
 	var/obj/screen/connected_button
 
 	var/hidden_from_codex = FALSE
@@ -111,7 +134,8 @@ var/list/spells = typesof(/datum/spell) //needed for the badmin verb for now
 /datum/spell/proc/choose_targets(mob/user = usr) //depends on subtype - see targeted.dm, aoe_turf.dm, dumbfire.dm, or code in general folder
 	return
 
-/datum/spell/proc/perform(mob/user = usr, list/targets, skipcharge = 0) //if recharge is started it is important for the trigger spells
+// If recharge is started it is important for the trigger spells
+/datum/spell/proc/perform(mob/user = usr, list/targets, skipcharge = FALSE)
 	if(!holder)
 		holder = user //just in case
 	if(cast_delay > 1)
@@ -125,6 +149,7 @@ var/list/spells = typesof(/datum/spell) //needed for the badmin verb for now
 		if(cast_check(1,user, targets)) //we check again, otherwise you can choose a target and then wait for when you are no longer able to cast (I.E. Incapacitated) to use it.
 			invocation(user, targets)
 			take_charge(user, skipcharge)
+			TakeMana(user)
 			before_cast(targets) //applies any overlays and effects
 			if(prob(critfailchance))
 				critfail(targets, user)
@@ -218,58 +243,64 @@ var/list/spells = typesof(/datum/spell) //needed for the badmin verb for now
 /datum/spell/proc/cast_check(skipcharge = 0, mob/user = usr, list/targets) //checks if the spell can be cast based on its settings; skipcharge is used when an additional cast_check is called inside the spell
 
 	if(silenced > 0)
-		return 0
+		return FALSE
 
 	if(!(src in user.mind.learned_spells) && holder == user && !(isanimal(user)))
 		error("[user] utilized the spell '[src]' without having it.")
 		to_chat(user, "<span class='warning'>You shouldn't have this spell! Something's wrong.</span>")
-		return 0
+		return FALSE
 
 	var/spell_leech = user.disrupts_psionics()
 	if(spell_leech)
 		to_chat(user, SPAN_WARNING("You try to marshal your energy, but find it leeched away by \the [spell_leech]!"))
-		return 0
+		return FALSE
 
 	var/turf/user_turf = get_turf(user)
 	if(!user_turf)
 		to_chat(user, "<span class='warning'>You cannot cast spells in null space!</span>")
 
 	if((spell_flags & Z2NOCAST) && (user_turf.z in GLOB.using_map.admin_levels)) //Certain spells are not allowed on the centcomm zlevel
-		return 0
+		return FALSE
 
 	if(spell_flags & CONSTRUCT_CHECK)
 		for(var/turf/T in range(holder, 1))
 			if(findNullRod(T))
-				return 0
+				return FALSE
 
 	if(!src.check_charge(skipcharge, user)) //sees if we can cast based on charges alone
-		return 0
+		return FALSE
 
 	if(holder == user)
 		if(istype(user, /mob/living/simple_animal))
 			var/mob/living/simple_animal/SA = user
 			if(SA.purge)
 				to_chat(SA, "<span class='warning'>The null sceptre's power interferes with your own!</span>")
-				return 0
+				return FALSE
 
 		if(!(spell_flags & GHOSTCAST))
 			if(!(spell_flags & NO_SOMATIC))
 				var/mob/living/L = user
 				if(L.incapacitated(INCAPACITATION_STUNNED|INCAPACITATION_RESTRAINED|INCAPACITATION_BUCKLED_FULLY|INCAPACITATION_FORCELYING|INCAPACITATION_KNOCKOUT))
 					to_chat(user, "<span class='warning'>You can't cast spells while incapacitated!</span>")
-					return 0
+					return FALSE
 
 			if(ishuman(user) && !(invocation_type in list(INVOKE_EMOTE, INVOKE_NONE)))
 				if(istype(user.wear_mask, /obj/item/clothing/mask/muzzle))
 					to_chat(user, "Mmmf mrrfff!")
-					return 0
+					return FALSE
 
 		var/datum/spell/noclothes/spell = locate() in user.mind.learned_spells
 		if((spell_flags & NEEDSCLOTHES) && !(spell && istype(spell)))//clothes check
 			if(!user.wearing_wiz_garb())
-				return 0
+				return FALSE
 
-	return 1
+		if(isliving(user))
+			var/mob/living/L = user
+			if(!istype(L.mana) || L.mana.mana_level < mana_cost)
+				to_chat(L, SPAN_WARNING("You do not have enough mana!"))
+				return FALSE
+
+	return TRUE
 
 /datum/spell/proc/check_charge(var/skipcharge, mob/user)
 	if(!skipcharge)
@@ -299,6 +330,13 @@ var/list/spells = typesof(/datum/spell) //needed for the badmin verb for now
 				return 1
 		return 0
 	return 1
+
+/datum/spell/proc/TakeMana(mob/user = user)
+	if(!isliving(user))
+		return FALSE
+	var/mob/living/L = user
+	L.mana.UseMana(L, mana_cost)
+	return TRUE
 
 /datum/spell/proc/invocation(mob/user = usr, var/list/targets) //spelling the spell out and setting it on recharge/reducing charges amount
 

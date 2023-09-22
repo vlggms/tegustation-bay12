@@ -1,8 +1,6 @@
 /datum/spell/targeted/shatter
 	name = "Shatter Mind"
 	desc = "this spell allows the caster to literally break an enemy's mind. Permanently."
-	feedback = "SM"
-	school = "illusion"
 	charge_max = 300
 	spell_flags = 0
 	invocation_type = INVOKE_NONE

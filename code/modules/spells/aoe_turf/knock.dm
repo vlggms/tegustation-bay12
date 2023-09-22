@@ -1,8 +1,6 @@
 /datum/spell/aoe_turf/knock
 	name = "Knock"
 	desc = "This spell opens nearby doors and does not require wizard garb."
-	feedback = "KN"
-	school = "transmutation"
 	charge_max = 100
 	spell_flags = 0
 	invocation = "Aulie Oxin Fiera."

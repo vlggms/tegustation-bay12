@@ -1,8 +1,6 @@
 /datum/spell/targeted/blood_boil
 	name = "Blood Boil"
 	desc = "This spell allows the caster to heat up an adversary's body so much their blood boils."
-	feedback = "BO"
-	school = "transmutation"
 	charge_max = 300
 	spell_flags = 0
 	invocation_type = INVOKE_NONE

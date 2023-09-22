@@ -1,11 +1,8 @@
 /datum/spell/radiant_aura
 	name = "Radiant aura"
 	desc = "Form a protective layer of light around you, making you immune to laser fire."
-	school = "transmutation"
-	feedback = "ra"
 	invocation_type = INVOKE_EMOTE
 	invocation = "conjures a sphere of fire around themselves."
-	school = "conjuration"
 	spell_flags = NEEDSCLOTHES
 	charge_max = 300
 	cooldown_min = 100
