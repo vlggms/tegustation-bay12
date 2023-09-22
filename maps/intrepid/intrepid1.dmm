@@ -1229,7 +1229,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/command/commandquarters/squadleader)
 "aYQ" = (
-/obj/machinery/door/airlock/glass/security,
+/obj/machinery/door/airlock/glass/security{
+	name = "Security Department"
+	},
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
@@ -2139,7 +2141,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/security/interrogation)
 "bHn" = (
-/obj/machinery/door/airlock/glass/engineering,
+/obj/machinery/door/airlock/glass/engineering{
+	name = "Robotics"
+	},
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -2266,7 +2270,9 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/obj/machinery/door/airlock/glass/research,
+/obj/machinery/door/airlock/glass/research{
+	name = "Stardust Aft Hallway"
+	},
 /obj/structure/cable/green{
 	icon_state = "4-8";
 	d1 = 4;
@@ -2493,7 +2499,8 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/engineering{
-	autoset_access = 0
+	autoset_access = 0;
+	name = "Deck Ladderwell"
 	},
 /obj/structure/cable/orange{
 	icon_state = "4-8";
@@ -2707,7 +2714,9 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/portside)
 "bZI" = (
-/obj/machinery/door/airlock/glass/command,
+/obj/machinery/door/airlock/glass/command{
+	name = "Amidships Hallway"
+	},
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/orange{
@@ -3036,6 +3045,12 @@
 	d1 = 2;
 	d2 = 9
 	},
+/obj/machinery/button/alternate/door{
+	pixel_x = 25;
+	dir = 8;
+	id_tag = "medical_exit";
+	name = "Medical Exit button"
+	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/treatment)
 "cji" = (
@@ -3241,7 +3256,9 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/obj/machinery/door/airlock/atmos,
+/obj/machinery/door/airlock/atmos{
+	name = "Starboard Thruster Fuel Compartment"
+	},
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 4
 	},
@@ -3321,6 +3338,10 @@
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -17
+	},
+/obj/machinery/computer/cryopod/robot{
+	pixel_y = 32;
+	pixel_x = -30
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/assembly/robotics)
@@ -3891,7 +3912,9 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/obj/machinery/door/airlock/atmos,
+/obj/machinery/door/airlock/atmos{
+	name = "Port Thruster Fuel Compartment"
+	},
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 4
 	},
@@ -3991,7 +4014,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/glass/medical,
+/obj/machinery/door/airlock/glass/medical{
+	name = "Medical Reception"
+	},
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white/monotile,
@@ -4139,7 +4164,9 @@
 	d2 = 2
 	},
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/engineering,
+/obj/machinery/door/airlock/engineering{
+	name = "Engineering Equipment"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/engineering/lockerroom)
@@ -4171,6 +4198,18 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/intrepid/department/command/AI/AIFoyer)
+"dcg" = (
+/obj/machinery/door/airlock/glass/security{
+	name = "Brig Access"
+	},
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/intrepid/department/security/wing)
 "dci" = (
 /obj/structure/table/standard,
 /obj/item/modular_computer/laptop/preset/custom_loadout/advanced,
@@ -4792,20 +4831,18 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/cargo/cargostorage)
 "dyE" = (
-/obj/machinery/door/firedoor,
-/obj/effect/wingrille_spawn/reinforced/full,
-/obj/structure/cable/green{
-	icon_state = "2-8";
-	d1 = 2;
-	d2 = 8
+/obj/structure/table/rack,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
 	},
-/obj/structure/cable/green{
-	icon_state = "2-9";
-	d1 = 2;
-	d2 = 9
+/obj/effect/floor_decal/corner/yellow{
+	dir = 8
 	},
-/turf/simulated/floor,
-/area/shuttle/research/hallway)
+/obj/item/stack/cable_coil/random,
+/obj/item/stack/cable_coil/random,
+/obj/item/stack/cable_coil/random,
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/misc/maint/aft)
 "dyG" = (
 /obj/machinery/atmospherics/unary/tank/carbon_dioxide{
 	dir = 4
@@ -5153,7 +5190,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/camera/network/engineering{
-	c_tag = "Engineering - Portside Solar Plating Control";
+	c_tag = "Engineering - Starboard Solar Plating Control";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -5584,7 +5621,9 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/door/airlock/atmos,
+/obj/machinery/door/airlock/atmos{
+	name = "Primary Thruster Compartment"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techfloor,
@@ -6793,7 +6832,9 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/obj/machinery/door/airlock/glass/research,
+/obj/machinery/door/airlock/glass/research{
+	name = "Stardust Amidships Hallway"
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/hallway)
 "ePZ" = (
@@ -7039,7 +7080,14 @@
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/civillian/hydroponics)
 "eYE" = (
-/turf/simulated/floor/tiled/techmaint,
+/obj/machinery/vending/tool{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/yellow,
+/turf/simulated/floor/tiled/techfloor,
 /area/intrepid/misc/maint/aft)
 "eZZ" = (
 /obj/effect/paint/silver,
@@ -8322,7 +8370,9 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/starboard)
 "fWz" = (
-/obj/machinery/door/airlock/glass/medical,
+/obj/machinery/door/airlock/glass/medical{
+	name = "Science Access Hallway"
+	},
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
@@ -9999,7 +10049,9 @@
 	d2 = 2
 	},
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/atmos,
+/obj/machinery/door/airlock/atmos{
+	name = "Port Thruster Compartment"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techmaint,
@@ -10746,6 +10798,18 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
+"hSg" = (
+/obj/machinery/vending/engivend{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/yellow{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/misc/maint/aft)
 "hSk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -11263,7 +11327,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/glass/medical,
+/obj/machinery/door/airlock/glass/medical{
+	id_tag = "medical_exit";
+	name = "Medical Treatment Center"
+	},
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/orange{
@@ -11471,7 +11538,9 @@
 	d1 = 1;
 	d2 = 2
 	},
-/obj/machinery/door/airlock/atmos,
+/obj/machinery/door/airlock/atmos{
+	name = "Starboard Thruster Compartment"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techmaint,
@@ -11782,7 +11851,9 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance,
+/obj/machinery/door/airlock/maintenance{
+	name = "Hangar Ladderwell"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -11901,7 +11972,9 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/misc/maint/aft)
 "iKr" = (
-/obj/machinery/door/airlock/civilian,
+/obj/machinery/door/airlock/civilian{
+	name = "Toilet"
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/intrepid/department/exploration/storage)
 "iKz" = (
@@ -12088,7 +12161,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock/glass/medical,
+/obj/machinery/door/airlock/glass/medical{
+	name = "Chemistry Laboratory"
+	},
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
@@ -12211,11 +12286,6 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
 "iWV" = (
-/obj/structure/cable/orange{
-	icon_state = "1-2";
-	d1 = 1;
-	d2 = 2
-	},
 /obj/structure/reagent_dispensers/fueltank,
 /obj/structure/cable/orange{
 	icon_state = "1-8";
@@ -13351,7 +13421,9 @@
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/department/engineering/starboardthruster)
 "jRD" = (
-/obj/machinery/door/airlock/glass/command,
+/obj/machinery/door/airlock/glass/command{
+	name = "Amidships Hallway"
+	},
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/dark/monotile,
@@ -13603,7 +13675,9 @@
 /area/intrepid/misc/hallway/starboard)
 "keE" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/engineering,
+/obj/machinery/door/airlock/engineering{
+	name = "Engineering Equipment"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/engineering/lockerroom)
@@ -14198,7 +14272,9 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/obj/machinery/door/airlock/glass/research,
+/obj/machinery/door/airlock/glass/research{
+	name = "Stardust Amidships Hallway"
+	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/research/hallway)
 "kAa" = (
@@ -14287,6 +14363,9 @@
 	icon_state = "4-8";
 	d1 = 4;
 	d2 = 8
+	},
+/obj/machinery/computer/cryopod/robot{
+	pixel_y = 32
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
@@ -15151,7 +15230,7 @@
 /obj/effect/landmark{
 	name = "JoinLateCyborg"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/tiled/monotile,
 /area/intrepid/misc/maint/aft)
 "llX" = (
 /obj/effect/floor_decal/corner/green/diagonal,
@@ -15331,7 +15410,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock/glass/medical,
+/obj/machinery/door/airlock/glass/medical{
+	name = "Science Access Hallway"
+	},
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
@@ -15812,7 +15893,9 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/obj/machinery/door/airlock/glass/research,
+/obj/machinery/door/airlock/glass/research{
+	name = "Stardust Amidships Hallway"
+	},
 /obj/structure/cable/green{
 	icon_state = "4-8";
 	d1 = 4;
@@ -16985,7 +17068,9 @@
 /area/intrepid/department/civillian/galley)
 "mvY" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass/command,
+/obj/machinery/door/airlock/glass/command{
+	name = "Amidships Hallway"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/orange{
 	icon_state = "1-2";
@@ -17787,7 +17872,9 @@
 /area/intrepid/misc/maint/portside)
 "mTp" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/atmos,
+/obj/machinery/door/airlock/atmos{
+	name = "Starboard Thruster Compartment"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techmaint,
@@ -18086,7 +18173,9 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
 "ncI" = (
-/obj/machinery/door/airlock/glass/security,
+/obj/machinery/door/airlock/glass/security{
+	name = "Security Equipment"
+	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
 	icon_state = "1-2";
@@ -18206,7 +18295,9 @@
 	d1 = 4;
 	d2 = 8
 	},
-/obj/machinery/door/airlock/maintenance,
+/obj/machinery/door/airlock/maintenance{
+	name = "Port Thruster Compartment"
+	},
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
@@ -18247,11 +18338,6 @@
 /obj/structure/sign/directions/engineering{
 	dir = 1;
 	pixel_x = 32
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
 	},
 /obj/effect/catwalk_plated/dark,
 /turf/simulated/floor,
@@ -20060,7 +20146,9 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/obj/machinery/door/airlock/glass/research,
+/obj/machinery/door/airlock/glass/research{
+	name = "Stardust Aft Hallway"
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/hallway)
 "oyM" = (
@@ -20202,7 +20290,8 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/glass/mining{
-	dir = 4
+	dir = 4;
+	name = "Exploration Preperation"
 	},
 /obj/machinery/door/firedoor{
 	dir = 4
@@ -20434,7 +20523,9 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/hallway)
 "oNe" = (
-/obj/machinery/door/airlock/maintenance,
+/obj/machinery/door/airlock/maintenance{
+	name = "Port Thruster Compartment"
+	},
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
@@ -20863,6 +20954,9 @@
 /obj/effect/landmark{
 	name = "JoinLateCyborg"
 	},
+/obj/structure/railing/mapped{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/misc/maint/aft)
 "oZj" = (
@@ -20948,7 +21042,9 @@
 /turf/simulated/floor/carpet/brown,
 /area/crew_quarters/sleep/bunk)
 "paO" = (
-/obj/machinery/door/airlock/glass/security,
+/obj/machinery/door/airlock/glass/security{
+	name = "Brig Access"
+	},
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
@@ -21476,7 +21572,9 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/obj/machinery/door/airlock/research,
+/obj/machinery/door/airlock/research{
+	name = "Xenoarcheology Labratory"
+	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/research/xenoarchlab)
 "pzH" = (
@@ -21499,7 +21597,9 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/obj/machinery/door/airlock/glass/research,
+/obj/machinery/door/airlock/glass/research{
+	name = "Stardust Amidships Hallway"
+	},
 /obj/structure/cable/green{
 	icon_state = "4-8";
 	d1 = 4;
@@ -21834,7 +21934,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock/glass/maintenance,
+/obj/machinery/door/airlock/glass/maintenance{
+	name = "Surgery Access"
+	},
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
@@ -21979,7 +22081,9 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/hallway)
 "pMT" = (
-/obj/machinery/door/airlock/highsecurity,
+/obj/machinery/door/airlock/highsecurity{
+	name = "Spare Equipment Storage"
+	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
 	icon_state = "1-2";
@@ -22309,7 +22413,8 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/glass/mining{
-	dir = 4
+	dir = 4;
+	name = "Exploration Preperation"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -22484,7 +22589,9 @@
 /area/intrepid/misc/hallway/portside)
 "qcC" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/multi_tile/glass,
+/obj/machinery/door/airlock/multi_tile/glass{
+	name = "Hydroponics"
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/civillian/hydroponics)
 "qcE" = (
@@ -22515,10 +22622,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/engineering/primarythruster)
 "qdc" = (
-/obj/structure/railing/mapped{
-	dir = 1;
-	icon_state = "railing0-1"
-	},
 /obj/structure/cable/green{
 	icon_state = "2-4";
 	d1 = 2;
@@ -22620,7 +22723,9 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance,
+/obj/machinery/door/airlock/maintenance{
+	name = "Starboard Thruster Compartment"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -22770,11 +22875,13 @@
 /turf/simulated/floor/tiled,
 /area/intrepid/misc/hallway/starboard)
 "qlf" = (
-/obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/mining{
+	name = "Ore Refinery"
+	},
 /turf/simulated/floor,
 /area/intrepid/misc/hallway/portside)
 "qlo" = (
@@ -23332,15 +23439,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/disposalpipe/sortjunction/flipped{
-	dir = 4;
-	name = "Forensics";
-	sort_type = "Forensics"
-	},
 /obj/structure/cable/green{
 	icon_state = "1-8";
 	d1 = 1;
 	d2 = 8
+	},
+/obj/structure/disposalpipe/junction/mirrored{
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
@@ -24091,11 +24196,6 @@
 	d1 = 4;
 	d2 = 8
 	},
-/obj/structure/cable/green{
-	icon_state = "2-4";
-	d1 = 2;
-	d2 = 4
-	},
 /turf/simulated/floor/tiled,
 /area/intrepid/misc/hallway/portside)
 "rhM" = (
@@ -24183,7 +24283,8 @@
 "rks" = (
 /obj/machinery/door/airlock/external/glass/bolted{
 	frequency = 1379;
-	id_tag = "ambulance_interior"
+	id_tag = "ambulance_interior";
+	name = "APV Caduceus Entrance"
 	},
 /obj/structure/cable/orange{
 	icon_state = "1-2";
@@ -24201,7 +24302,9 @@
 	d2 = 2
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/door/airlock/atmos,
+/obj/machinery/door/airlock/atmos{
+	name = "Primary Thruster Compartment"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techfloor,
@@ -24292,13 +24395,8 @@
 /area/intrepid/department/civillian/adherent)
 "rnY" = (
 /obj/structure/railing/mapped{
-	dir = 1;
-	icon_state = "railing0-1"
-	},
-/obj/structure/railing/mapped{
 	dir = 4
 	},
-/obj/machinery/space_heater,
 /obj/structure/cable/green{
 	icon_state = "2-8";
 	d1 = 2;
@@ -24352,7 +24450,9 @@
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance,
+/obj/machinery/door/airlock/maintenance{
+	name = "Starboard Thruster Compartment"
+	},
 /obj/structure/cable/green{
 	icon_state = "4-8";
 	d1 = 4;
@@ -24623,7 +24723,8 @@
 	d2 = 8
 	},
 /obj/machinery/door/airlock/multi_tile/glass/command{
-	dir = 1
+	dir = 1;
+	name = "Bridge"
 	},
 /obj/machinery/atmospherics/valve/shutoff/scrubbers{
 	dir = 4
@@ -25125,7 +25226,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/door/airlock/civilian,
+/obj/machinery/door/airlock/civilian{
+	name = "Computer Lab"
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/civillian/computerlab)
 "rUW" = (
@@ -25146,7 +25249,9 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/internalportside)
 "rXn" = (
-/obj/machinery/door/airlock/multi_tile/glass/research,
+/obj/machinery/door/airlock/multi_tile/glass/research{
+	name = "Archive"
+	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/intrepid/misc/hallway/portside)
 "rXr" = (
@@ -25546,7 +25651,9 @@
 /turf/simulated/floor/tiled,
 /area/intrepid/department/cargo/cargobay)
 "skQ" = (
-/obj/machinery/door/airlock/glass/security,
+/obj/machinery/door/airlock/glass/security{
+	name = "Security Department"
+	},
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
@@ -25913,7 +26020,9 @@
 /area/intrepid/department/command/commandquarters/squadleader)
 "stl" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass/command,
+/obj/machinery/door/airlock/glass/command{
+	name = "Amidships Hallway"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/misc/hallway/center)
@@ -26671,7 +26780,9 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
 "sUo" = (
-/obj/machinery/door/airlock/security,
+/obj/machinery/door/airlock/security{
+	name = "Criminal Processing"
+	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/security/interrogation)
@@ -26982,7 +27093,9 @@
 /area/intrepid/misc/hallway/starboard)
 "tfZ" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/civilian,
+/obj/machinery/door/airlock/civilian{
+	name = "Restroom"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/intrepid/department/exploration/storage)
 "tgl" = (
@@ -29296,7 +29409,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock/medical,
+/obj/machinery/door/airlock/medical{
+	name = "Medical Equipment Storage"
+	},
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
@@ -30506,7 +30621,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock/civilian,
+/obj/machinery/door/airlock/civilian{
+	name = "Computer Lab"
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/civillian/computerlab)
 "vEl" = (
@@ -30718,7 +30835,9 @@
 	d1 = 4;
 	d2 = 8
 	},
-/obj/machinery/door/airlock/glass/maintenance,
+/obj/machinery/door/airlock/glass/maintenance{
+	name = "Robotics Access"
+	},
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
@@ -31741,7 +31860,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/center)
 "wBj" = (
-/obj/machinery/door/airlock/glass/security,
+/obj/machinery/door/airlock/glass/security{
+	name = "Brig Chief Office"
+	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
 	icon_state = "1-2";
@@ -31885,7 +32006,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/primarythruster)
 "wGk" = (
-/obj/machinery/door/airlock/glass/medical,
+/obj/machinery/door/airlock/glass/medical{
+	name = "Criminal Processing"
+	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
 	icon_state = "1-2";
@@ -32248,7 +32371,9 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/glass/engineering,
+/obj/machinery/door/airlock/glass/engineering{
+	name = "Mechatronics Laboratory"
+	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/engineering/assembly/robotics)
@@ -32410,7 +32535,8 @@
 "wVN" = (
 /obj/machinery/door/airlock/external/glass/bolted{
 	frequency = 1379;
-	id_tag = "ambulance_exterior_dock"
+	id_tag = "ambulance_exterior_dock";
+	name = "APV Caduceus Entrance"
 	},
 /obj/structure/cable/orange{
 	icon_state = "1-2";
@@ -32433,11 +32559,6 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/maintenance{
 	autoset_access = 0
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
@@ -33080,7 +33201,9 @@
 /area/intrepid/misc/maint/aft)
 "xpm" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/atmos,
+/obj/machinery/door/airlock/atmos{
+	name = "Port Thruster Compartment"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techmaint,
@@ -34012,7 +34135,8 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/multi_tile/glass/command{
-	dir = 1
+	dir = 1;
+	name = "Bridge"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/command/bridgeofficer)
@@ -52037,7 +52161,7 @@ kiP
 lLl
 qjC
 wSM
-dyE
+cBx
 sWi
 xgM
 vVc
@@ -60264,7 +60388,7 @@ agP
 bWq
 paO
 nEQ
-skQ
+dcg
 thJ
 nNT
 kds
@@ -60857,7 +60981,7 @@ oVM
 sRW
 aYb
 qMY
-tYb
+sus
 awf
 bWq
 bWx
@@ -62722,7 +62846,7 @@ cjS
 cjS
 nUN
 vBk
-jtt
+hSg
 tvB
 jIY
 nUG
@@ -62924,7 +63048,7 @@ kty
 gDi
 qPN
 qQE
-jtt
+dyE
 tvB
 xgP
 fdc

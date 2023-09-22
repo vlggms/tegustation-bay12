@@ -1312,7 +1312,9 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/engineering/engine_room/aux)
 "dI" = (
-/obj/machinery/door/airlock/glass/mining,
+/obj/machinery/door/airlock/glass/mining{
+	name = "Pithos Hangar"
+	},
 /obj/effect/floor_decal/corner/brown/full,
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -1664,7 +1666,9 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/pithos/cockpit)
 "eL" = (
-/obj/machinery/door/airlock/multi_tile/glass/research,
+/obj/machinery/door/airlock/multi_tile/glass/research{
+	name = "Archive"
+	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/civillian/archive)
@@ -1755,7 +1759,9 @@
 "eW" = (
 /obj/structure/catwalk,
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass/civilian,
+/obj/machinery/door/airlock/glass/civilian{
+	name = "Portside Bow Maintenance Shaft"
+	},
 /obj/machinery/atmospherics/valve/shutoff/scrubbers,
 /obj/machinery/atmospherics/valve/shutoff/supply,
 /turf/simulated/floor,
@@ -1832,16 +1838,20 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/intrepid/department/civillian/dockbayfive)
 "fj" = (
-/obj/structure/cable,
-/obj/structure/cable{
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	icon_state = "1-2";
 	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+	d2 = 2
 	},
-/obj/effect/floor_decal/solarpanel,
-/obj/machinery/power/solar/improved,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/airlock/glass/civilian{
+	name = "Starboard Maintenance Shaft"
+	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor,
-/area/space)
+/area/intrepid/misc/maint/upper/central)
 "fk" = (
 /obj/structure/table/standard,
 /obj/item/device/binoculars,
@@ -2947,7 +2957,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/cargo/cargostorage)
 "ie" = (
-/obj/machinery/door/airlock/medical,
+/obj/machinery/door/airlock/medical{
+	name = "Evidence Storage"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/firedoor,
@@ -3016,7 +3028,9 @@
 /area/intrepid/misc/maint/upper/central)
 "ir" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance,
+/obj/machinery/door/airlock/maintenance{
+	name = "Docking Bay 1"
+	},
 /obj/structure/cable/green{
 	icon_state = "1-2";
 	d1 = 1;
@@ -3634,7 +3648,7 @@
 	d2 = 8
 	},
 /obj/item/airlock_brace{
-	req_access = list("access_heads_vault")
+	req_access = list(access_heads_vault)
 	},
 /turf/simulated/floor/reinforced,
 /area/intrepid/department/command/selfdestruct)
@@ -3822,7 +3836,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/civillian/dockbaythree)
 "kI" = (
-/obj/machinery/door/airlock/mining,
+/obj/machinery/door/airlock/mining{
+	name = "Pandora Hangar"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
@@ -3883,7 +3899,9 @@
 /turf/simulated/floor,
 /area/shuttle/pandora/cargo)
 "kO" = (
-/obj/machinery/door/airlock/glass/medical,
+/obj/machinery/door/airlock/glass/medical{
+	name = "Psionic Testing Laboratory"
+	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/intrepid/department/command/commandquarters/psiadvisor)
 "kQ" = (
@@ -4032,7 +4050,9 @@
 "lk" = (
 /obj/structure/catwalk,
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass/civilian,
+/obj/machinery/door/airlock/glass/civilian{
+	name = "Starboard Bow Maintenance Shaft"
+	},
 /obj/machinery/atmospherics/valve/shutoff/supply,
 /obj/machinery/atmospherics/valve/shutoff/scrubbers,
 /turf/simulated/floor,
@@ -4293,11 +4313,6 @@
 	d2 = 2
 	},
 /obj/structure/cable/green{
-	icon_state = "1-4";
-	d1 = 1;
-	d2 = 4
-	},
-/obj/structure/cable/green{
 	icon_state = "1-8";
 	d1 = 1;
 	d2 = 8
@@ -4478,7 +4493,9 @@
 /area/intrepid/misc/maint/superstructure)
 "mm" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance,
+/obj/machinery/door/airlock/maintenance{
+	name = "Docking Bay 3"
+	},
 /obj/structure/cable/green{
 	icon_state = "1-2";
 	d1 = 1;
@@ -4660,7 +4677,9 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/obj/machinery/door/airlock/engineering,
+/obj/machinery/door/airlock/engineering{
+	name = "OFD Munitions Access"
+	},
 /turf/simulated/floor,
 /area/intrepid/department/command/obstructionfielddisperser)
 "mG" = (
@@ -4941,7 +4960,9 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/obj/machinery/door/airlock/glass/civilian,
+/obj/machinery/door/airlock/glass/civilian{
+	name = "Starboard Maintenance Shaft"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -6460,7 +6481,9 @@
 /turf/simulated/floor/reinforced,
 /area/intrepid/department/engineering/engine_room)
 "rU" = (
-/obj/machinery/door/airlock/glass/mining,
+/obj/machinery/door/airlock/glass/mining{
+	name = "Pithos Hangar"
+	},
 /obj/effect/floor_decal/corner/brown/full,
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -6762,7 +6785,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/glass/civilian,
+/obj/machinery/door/airlock/glass/civilian{
+	name = "Pithos Hangar"
+	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/central)
@@ -7128,7 +7153,9 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/obj/machinery/door/airlock/atmos,
+/obj/machinery/door/airlock/atmos{
+	name = "Atmospherics"
+	},
 /obj/structure/cable/green{
 	icon_state = "4-8";
 	d1 = 4;
@@ -7581,7 +7608,9 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/airlock/security,
+/obj/machinery/door/airlock/security{
+	name = "Starboard Docking Control Room"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/security/portdockingbaysecurity)
 "uK" = (
@@ -7742,6 +7771,7 @@
 	d2 = 8
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/structure/catwalk,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/starboard)
 "vi" = (
@@ -7820,7 +7850,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/civillian/dockbaysix)
 "vq" = (
-/obj/machinery/door/airlock/security,
+/obj/machinery/door/airlock/security{
+	name = "Firing Range"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/firedoor,
@@ -7847,7 +7879,7 @@
 	d2 = 8
 	},
 /obj/machinery/door/airlock/maintenance{
-	name = "Restricted Item Storage"
+	name = "Portside Docking Checkpoint"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/security/starboarddockingbaysecurity)
@@ -7935,7 +7967,9 @@
 /area/tcommsat)
 "vG" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance,
+/obj/machinery/door/airlock/maintenance{
+	name = "Docking Bay 4"
+	},
 /obj/structure/cable/green{
 	icon_state = "1-2";
 	d1 = 1;
@@ -7947,7 +7981,9 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/intrepid/department/civillian/dockbayfour)
 "vH" = (
-/obj/machinery/door/airlock/glass/mining,
+/obj/machinery/door/airlock/glass/mining{
+	name = "Pithos Hangar"
+	},
 /obj/effect/floor_decal/corner/brown/full,
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
@@ -8115,7 +8151,6 @@
 /area/intrepid/department/exploration/hangar/pandora)
 "wg" = (
 /obj/structure/ladder,
-/obj/structure/lattice,
 /turf/simulated/open,
 /area/intrepid/misc/maint/upper/central)
 "wh" = (
@@ -8561,7 +8596,9 @@
 /area/intrepid/department/medical/morgue)
 "xo" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance,
+/obj/machinery/door/airlock/maintenance{
+	name = "Docking Bay 2"
+	},
 /obj/structure/cable/green{
 	icon_state = "1-2";
 	d1 = 1;
@@ -8604,7 +8641,9 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/obj/machinery/door/airlock/atmos,
+/obj/machinery/door/airlock/atmos{
+	name = "Atmospherics"
+	},
 /obj/structure/cable/green{
 	icon_state = "4-8";
 	d1 = 4;
@@ -9449,20 +9488,20 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/portside)
 "zW" = (
+/obj/structure/catwalk,
 /obj/structure/cable/green{
-	icon_state = "4-8";
-	d1 = 4;
-	d2 = 8
-	},
-/obj/structure/cable/green{
-	icon_state = "1-8";
+	icon_state = "1-2";
 	d1 = 1;
-	d2 = 8
+	d2 = 2
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/airlock/glass/civilian{
+	name = "Portside Maintenance Shaft"
+	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor,
-/area/intrepid/misc/maint/upper/starboard)
+/area/intrepid/misc/maint/upper/central)
 "zX" = (
 /obj/machinery/atmospherics/unary/vent_pump/tank{
 	dir = 8;
@@ -9576,7 +9615,7 @@
 	d2 = 8
 	},
 /obj/machinery/door/airlock/maintenance{
-	name = "Restricted Item Storage"
+	name = "Starboard Docking Checkpoint"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/security/portdockingbaysecurity)
@@ -11119,7 +11158,9 @@
 	d1 = 1;
 	d2 = 2
 	},
-/obj/machinery/door/airlock/glass/civilian,
+/obj/machinery/door/airlock/glass/civilian{
+	name = "Pandora Hangar"
+	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/central)
@@ -11407,7 +11448,9 @@
 /area/intrepid/department/exploration/hangar/pandora)
 "Fj" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance,
+/obj/machinery/door/airlock/maintenance{
+	name = "Docking Bay 5"
+	},
 /obj/structure/cable/green{
 	icon_state = "1-2";
 	d1 = 1;
@@ -14168,6 +14211,7 @@
 	d2 = 8
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/structure/catwalk,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/starboard)
 "Nr" = (
@@ -14379,7 +14423,9 @@
 /area/tcommsat)
 "NZ" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance,
+/obj/machinery/door/airlock/maintenance{
+	name = "Docking Bay 6"
+	},
 /obj/structure/cable/green{
 	icon_state = "1-2";
 	d1 = 1;
@@ -14671,7 +14717,9 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
-/obj/machinery/door/airlock/glass/civilian,
+/obj/machinery/door/airlock/glass/civilian{
+	name = "Portside Maintenance Shaft"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -14770,7 +14818,9 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbayfour)
 "Pe" = (
-/obj/machinery/door/airlock/multi_tile/glass/research,
+/obj/machinery/door/airlock/multi_tile/glass/research{
+	name = "Archive"
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/civillian/archive)
 "Pi" = (
@@ -15783,7 +15833,9 @@
 /turf/simulated/floor/wood,
 /area/intrepid/department/command/commandquarters/psiadvisor)
 "RZ" = (
-/obj/machinery/door/airlock/glass/medical,
+/obj/machinery/door/airlock/glass/medical{
+	name = "Forensics Laboratory"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
@@ -15902,7 +15954,9 @@
 /turf/simulated/floor/reinforced,
 /area/intrepid/misc/maint/superstructure)
 "Sr" = (
-/obj/machinery/door/airlock/command,
+/obj/machinery/door/airlock/command{
+	name = "Psionic Advisor's Office"
+	},
 /obj/structure/cable/green{
 	icon_state = "1-2";
 	d1 = 1;
@@ -16056,7 +16110,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/pandora/cargo)
 "SK" = (
-/obj/machinery/door/airlock/glass/mining,
+/obj/machinery/door/airlock/glass/mining{
+	name = "Pithos Hangar"
+	},
 /obj/effect/floor_decal/corner/brown/full,
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -18522,7 +18578,9 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/airlock/security,
+/obj/machinery/door/airlock/security{
+	name = "Portside Docking Control Room"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/security/starboarddockingbaysecurity)
 "Zx" = (
@@ -31394,7 +31452,7 @@ ZT
 ZT
 ZT
 ih
-uN
+xQ
 UU
 UU
 UU
@@ -35771,7 +35829,7 @@ Gi
 Yw
 hN
 ir
-zW
+vx
 gi
 QP
 DK
@@ -39813,7 +39871,7 @@ Yr
 Na
 rd
 Gm
-sF
+fj
 PF
 PF
 PF
@@ -39865,7 +39923,7 @@ PF
 PF
 PF
 PF
-sF
+zW
 hh
 dl
 LQ
@@ -50716,7 +50774,7 @@ UU
 UU
 Fv
 Lr
-fj
+DM
 ds
 ds
 ds
