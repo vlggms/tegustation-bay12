@@ -75,9 +75,6 @@
 	else
 		layer = open_layer
 
-
-	update_bounds()
-
 	if (turf_hand_priority)
 		set_extension(src, /datum/extension/turf_hand, turf_hand_priority)
 
@@ -99,6 +96,7 @@
 
 /obj/machinery/door/LateInitialize()
 	..()
+	update_bounds()
 	if(autoset_access) // Delayed because apparently the dir is not set by mapping and we need to wait for nearby walls to init and turn us.
 		inherit_access_from_area()
 
