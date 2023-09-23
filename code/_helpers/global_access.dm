@@ -887,7 +887,7 @@
 			return global.z_levels;
 		if("zone_blocked")
 			return global.zone_blocked;
-
+		
 /proc/writeglobal(which, newval)
 	switch(which)
 		if("ANTAG_FREQS")
@@ -1776,7 +1776,7 @@
 			global.z_levels=newval;
 		if("zone_blocked")
 			global.zone_blocked=newval;
-
+		
 /var/list/_all_globals=list(
 	"ANTAG_FREQS",
 	"AWAY_FREQS_ASSIGNED",
@@ -1926,7 +1926,6 @@
 	"antag_add_finished",
 	"appearance_manager",
 	"area_repository",
-	"artefact_feedback",
 	"ascii_esc",
 	"ascii_green",
 	"ascii_red",
@@ -2157,7 +2156,6 @@
 	"sounds_cache",
 	"spacevines_spawned",
 	"sparring_attack_cache",
-	"spells",
 	"splatter_cache",
 	"sqladdress",
 	"sqldb",
