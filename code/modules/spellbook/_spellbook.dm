@@ -235,12 +235,13 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 		/datum/spell/targeted/projectile/magic_missile,
 		)
 
-// Free for all spell book!
+// Free for all spell book that contains low-end spells that do not require wizard robes.
 /obj/item/spellbook/minor_free
 	book_flags = NO_OWNER
 	allowed_spells = list(
-		/datum/spell/aimed/passage,
 		/datum/spell/aoe_turf/knock,
-		/datum/spell/targeted/ethereal_jaunt,
+		/datum/spell/aoe_turf/blink,
 		/datum/spell/targeted/heal_target/touch,
+		/datum/spell/aoe_turf/exchange_wounds,
+		/datum/spell/aoe_turf/smoke,
 		)

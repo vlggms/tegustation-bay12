@@ -3145,6 +3145,7 @@
 #include "code\modules\spells\racial_wizard.dm"
 #include "code\modules\spells\spell_projectile.dm"
 #include "code\modules\spells\aimed\_aimed.dm"
+#include "code\modules\spells\aimed\dispell.dm"
 #include "code\modules\spells\aimed\fireball.dm"
 #include "code\modules\spells\aimed\passage.dm"
 #include "code\modules\spells\aoe_turf\aoe_turf.dm"
