@@ -10,6 +10,9 @@
 
 	hud_state = "wiz_glimpse"
 
+	spell_cost = 2
+	mana_cost = 10
+
 /datum/spell/targeted/glimpse_of_eternity/cast(var/list/targets, var/mob/user)
 	for(var/t in targets)
 		var/mob/living/L = t

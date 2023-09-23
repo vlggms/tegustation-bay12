@@ -18,6 +18,9 @@
 	show_message = " points towards the ground, causing plants to erupt"
 	var/datum/seed/seed
 
+	spell_cost = 2
+	mana_cost = 10
+
 /datum/spell/hand/charges/entangle/New()
 	..()
 	seed = new()

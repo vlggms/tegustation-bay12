@@ -11,6 +11,9 @@
 	duration = 40
 	hud_state = "gen_immolate"
 
+	spell_cost = 3
+	mana_cost = 10
+
 /datum/spell/radiant_aura/choose_targets(mob/user = usr)
 	perform(user, list(holder))
 
@@ -21,3 +24,5 @@
 /datum/spell/radiant_aura/starlight
 	spell_flags = 0
 	charge_max = 400
+
+	mana_cost = 0

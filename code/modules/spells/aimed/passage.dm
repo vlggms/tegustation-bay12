@@ -18,6 +18,9 @@
 	hud_state = "gen_project"
 	cast_sound = 'sound/magic/lightning_bolt.ogg'
 
+	spell_cost = 2
+	mana_cost = 10
+
 /datum/spell/aimed/passage/prox_cast(list/targets, atom/spell_holder)
 	for(var/mob/living/L in targets)
 		L.Paralyse(amt_paralysis)

@@ -16,6 +16,9 @@
 	hud_state = "wiz_smoke"
 	cast_sound = 'sound/magic/smoke.ogg'
 
+	spell_cost = 1
+	mana_cost = 5
+
 /datum/spell/aoe_turf/smoke/empower_spell()
 	if(!..())
 		return 0

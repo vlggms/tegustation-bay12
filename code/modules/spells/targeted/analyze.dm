@@ -10,6 +10,9 @@
 	compatible_mobs = list(/mob/living/carbon/human)
 	hud_state = "analyze"
 
+	spell_cost = 1
+	mana_cost = 3
+
 /datum/spell/targeted/analyze/cast(var/list/targets, var/mob/user)
 	for(var/a in targets)
 		var/mob/living/carbon/human/H = a

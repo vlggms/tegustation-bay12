@@ -17,6 +17,9 @@
 	hud_state = "wiz_tech"
 	cast_sound = 'sound/magic/disable_tech.ogg'
 
+	spell_cost = 3
+	mana_cost = 15
+
 /datum/spell/aoe_turf/disable_tech/cast(list/targets)
 
 	for(var/turf/target in targets)

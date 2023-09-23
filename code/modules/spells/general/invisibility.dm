@@ -8,6 +8,9 @@
 	var/on = 0
 	hud_state = "invisibility"
 
+	spell_cost = 1
+	mana_cost = 5
+
 /datum/spell/invisibility/choose_targets(mob/user = usr)
 	if(istype(holder, /mob/living/carbon/human))
 		perform(user, holder)

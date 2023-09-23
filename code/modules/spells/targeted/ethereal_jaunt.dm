@@ -13,6 +13,9 @@
 
 	hud_state = "wiz_jaunt"
 
+	spell_cost = 2
+	mana_cost = 5
+
 	var/reappear_duration = 5
 	var/obj/effect/dummy/spell_jaunt/jaunt_holder
 	var/atom/movable/overlay/animation

@@ -1,9 +1,12 @@
+// Stores a lot of things related to magic, not just mana
 /datum/mana
 	var/mana_level = 10
 	var/mana_level_max = 10
 	/// Amount of mana restored per second
 	var/mana_recharge_speed = 0.25
 	var/recharging = FALSE
+	/// Personal spell points used for purchasing spells
+	var/spell_points = 2
 
 /datum/mana/proc/UseMana(mob/user, amount = 0, silent = TRUE)
 	if(mana_level < amount)

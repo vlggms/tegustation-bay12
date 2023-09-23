@@ -9,6 +9,9 @@
 
 	hud_state = "wiz_ed"
 
+	spell_cost = 5
+	mana_cost = 100
+
 /datum/spell/aoe_turf/conjure/carp
 	name = "Summon Carp"
 	desc = "This spell conjures a simple carp."
@@ -24,6 +27,9 @@
 
 	hud_state = "wiz_carp"
 
+	spell_cost = 2
+	mana_cost = 10
+
 /datum/spell/aoe_turf/conjure/creature
 	name = "Summon Creature Swarm"
 	desc = "This spell tears the fabric of reality, allowing horrific daemons to spill forth"
@@ -38,6 +44,9 @@
 	summon_type = list(/mob/living/simple_animal/hostile/creature)
 
 	hud_state = "wiz_creature"
+
+	spell_cost = 5
+	mana_cost = 50
 
 /datum/spell/aoe_turf/conjure/mirage
 	name = "Summon Mirage"
@@ -58,6 +67,9 @@
 	hud_state = "wiz_carp"
 
 	newVars = list("melee_damage_lower" = 0, "melee_damage_upper" = 0, "break_stuff_probability" = 0)
+
+	spell_cost = 1
+	mana_cost = 5
 
 /datum/spell/aoe_turf/conjure/mirage/empower_spell()
 	if(!..())

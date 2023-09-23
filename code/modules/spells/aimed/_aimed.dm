@@ -1,5 +1,4 @@
 /datum/spell/aimed
-	name = "aimed projectile spell"
 	hud_state = "projectile"
 
 	var/projectile_type = /obj/item/projectile

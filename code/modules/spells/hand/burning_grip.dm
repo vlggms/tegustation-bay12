@@ -10,6 +10,9 @@
 	cast_sound = 'sound/magic/fireball.ogg'
 	compatible_targets = list(/mob/living/carbon/human)
 
+	spell_cost = 1
+	mana_cost = 5
+
 /datum/spell/hand/burning_grip/valid_target(var/mob/living/L, var/mob/user)
 	if(!..())
 		return 0

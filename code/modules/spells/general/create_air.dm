@@ -13,6 +13,9 @@
 	var/list/air_change = list(GAS_OXYGEN = ONE_ATMOSPHERE)
 	number_of_channels = 0
 
+	spell_cost = 1
+	mana_cost = 5
+
 /datum/spell/create_air/choose_targets(mob/user = usr)
 	var/air = holder.return_air()
 	if(air)

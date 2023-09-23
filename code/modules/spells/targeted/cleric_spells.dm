@@ -22,6 +22,10 @@
 	// Vars expect a constant at compile time, so we can't use macros for spans here
 	message = "<span class='notice'><b>You feel a pleasant rush of heat move through your body.</b></span>"
 
+	categories = list(SPELL_CATEGORY_HEALING)
+	spell_cost = 1
+	mana_cost = 3
+
 /datum/spell/targeted/heal_target/empower_spell()
 	if(!..())
 		return 0
@@ -64,6 +68,9 @@
 
 	message = "<span class='notice'><b>Your body feels like a warm, cozy fire.</b></span>"
 
+	spell_cost = 2
+	mana_cost = 12
+
 /datum/spell/targeted/heal_target/major/empower_spell()
 	if(!..())
 		return 0
@@ -97,6 +104,9 @@
 	amt_dam_robo = -6
 	amt_dam_brute = -25
 	amt_dam_fire = -25
+
+	spell_cost = 3
+	mana_cost = 25
 
 /datum/spell/targeted/heal_target/area/empower_spell()
 	if(!..())
@@ -135,6 +145,9 @@
 	hud_state = "gen_dissolve"
 	cast_sound = 'sound/magic/disintegrate.ogg'
 
+	spell_cost = 3
+	mana_cost = 20
+
 /datum/spell/targeted/heal_target/sacrifice/empower_spell()
 	if(!..())
 		return 0
@@ -161,6 +174,9 @@
 	amt_dam_robo = -1000
 	hud_state = "trance"
 	var/obj/effect/effect
+
+	spell_cost = 3
+	mana_cost = 20
 
 /datum/spell/targeted/heal_target/trance/cast(var/list/targets, var/mob/user)
 	for(var/t in targets)
@@ -214,6 +230,10 @@
 	invocation_type = INVOKE_SHOUT
 	range = 1
 	hud_state = "heal_revoke"
+
+	categories = list(SPELL_CATEGORY_HEALING)
+	spell_cost = 3
+	mana_cost = 25
 
 /datum/spell/targeted/revoke/cast(var/list/targets, var/mob/living/user)
 	if(alert(user, "Are you sure?", "Alert", "Yes", "No") == "Yes" && alert(user, "Are you ABSOLUTELY SURE?", "Alert", "Absolutely!", "No") == "Absolutely!")

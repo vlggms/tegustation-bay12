@@ -1,5 +1,5 @@
 /datum/spell/aoe_turf/blink
-	name = "Blink"
+	name = "Random blink"
 	desc = "This spell randomly teleports you a short distance."
 	charge_max = 20
 	spell_flags = Z2NOCAST | IGNOREDENSE | IGNORESPACE
@@ -12,6 +12,9 @@
 	cooldown_min = 5 //4 deciseconds reduction per rank
 	hud_state = "wiz_blink"
 	cast_sound = 'sound/magic/blink.ogg'
+
+	spell_cost = 1
+	mana_cost = 2
 
 /datum/spell/aoe_turf/blink/cast(var/list/targets, mob/user)
 	if(!targets.len)

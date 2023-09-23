@@ -20,6 +20,9 @@
 
 	hud_state = "wiz_subj"
 
+	spell_cost = 3
+	mana_cost = 25
+
 /datum/spell/targeted/subjugation/empower_spell()
 	if(!..())
 		return 0

@@ -1,7 +1,6 @@
 //basic transformation spell. Should work for most simple_animals
 
 /datum/spell/targeted/shapeshift
-	name = "Shapeshift"
 	desc = "This spell transforms the target into something else for a short while."
 
 
@@ -113,6 +112,8 @@
 
 	hud_state = "wiz_poly"
 
+	spell_cost = 1
+	mana_cost = 3
 
 /datum/spell/targeted/shapeshift/baleful_polymorph/empower_spell()
 	if(!..())
@@ -139,6 +140,9 @@
 	level_max = list(UPGRADE_TOTAL = 1, UPGRADE_SPEED = 1, UPGRADE_POWER = 0)
 	hud_state = "wiz_parrot"
 
+	spell_cost = 1
+	mana_cost = 3
+
 /datum/spell/targeted/shapeshift/corrupt_form
 	name = "Corrupt Form"
 	desc = "This spell shapes the wizard into a terrible, terrible beast."
@@ -160,6 +164,9 @@
 
 	hud_state = "wiz_corrupt"
 	cast_sound = 'sound/magic/disintegrate.ogg'
+
+	spell_cost = 2
+	mana_cost = 10
 
 /datum/spell/targeted/shapeshift/corrupt_form/empower_spell()
 	if(!..())
@@ -192,3 +199,6 @@
 	toggle = 1
 
 	hud_state = "wiz_carp"
+
+	spell_cost = 2
+	mana_cost = 5

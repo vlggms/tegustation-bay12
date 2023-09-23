@@ -10,6 +10,9 @@
 
 	hud_state = "wiz_shield"
 
+	spell_cost = 2
+	mana_cost = 10
+
 /datum/spell/aoe_turf/conjure/forcewall/mime
 	name = "Invisible wall"
 	desc = "Create an invisible wall on your location."
@@ -22,6 +25,8 @@
 
 	override_base = "grey"
 	hud_state = "mime_wall"
+
+	mana_cost = 0
 
 /obj/effect/forcefield
 	desc = "A space wizard's magic wall."

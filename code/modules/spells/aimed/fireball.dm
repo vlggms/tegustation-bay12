@@ -14,6 +14,10 @@
 
 	level_max = list(UPGRADE_TOTAL = 5, UPGRADE_SPEED = 0, UPGRADE_POWER = 5)
 
+	categories = list(SPELL_CATEGORY_EXPLOSIVE)
+	spell_cost = 5
+	mana_cost = 20
+
 	var/ex_severe = -1
 	var/ex_heavy = 1
 	var/ex_light = 2

@@ -1,15 +1,33 @@
+// All possible categories. Please follow them.
+#define SPELL_CATEGORY_FIRE "Fire"
+#define SPELL_CATEGORY_EXPLOSIVE "Explosive"
+#define SPELL_CATEGORY_HEALING "Healing"
+#define SPELL_CATEGORY_PASSIVE "Passive"
+#define SPELL_CATEGORY_FORBIDDEN "Forbidden arts"
+
+// A global list of them
+GLOBAL_LIST_INIT(spell_categories, list(
+	SPELL_CATEGORY_FIRE,
+	SPELL_CATEGORY_EXPLOSIVE,
+	SPELL_CATEGORY_HEALING,
+	SPELL_CATEGORY_PASSIVE,
+	SPELL_CATEGORY_FORBIDDEN,
+	))
+
 /datum/spell
 	parent_type = /datum
-	var/name = "Spell"
+	var/name = null
 	var/desc = "A spell."
 	/// What panel the proc holder needs to go on.
 	var/panel = "Spells"
 
-	// Spell book representation
+	// Spell book variables
 	/// List of categories for the spellbook
 	var/list/categories = list()
 	/// If TRUE - will be available via spell book
 	var/spell_book_visible = TRUE
+	/// Amount of points required to purchase the spell
+	var/spell_cost = 1
 
 	/// Can be recharge or charges, see charge_max and charge_counter descriptions; can also be based on the holder's vars now, use "holder_var" for that
 	var/charge_type = SPELL_RECHARGE

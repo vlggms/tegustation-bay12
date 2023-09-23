@@ -15,6 +15,9 @@
 
 	hud_state = "wiz_exchange"
 
+	spell_cost = 2
+	mana_cost = 10
+
 /datum/spell/aoe_turf/exchange_wounds/perform()
 	amt_healed = 0
 	..()

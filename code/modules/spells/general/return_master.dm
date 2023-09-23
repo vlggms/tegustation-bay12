@@ -13,6 +13,7 @@
 
 	hud_state = "wiz_tele"
 
+	mana_cost = 2
 
 /datum/spell/contract/return_master/cast(mob/target,mob/user)
 	target = ..(target,user)

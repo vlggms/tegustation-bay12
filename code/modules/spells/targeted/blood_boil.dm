@@ -13,6 +13,9 @@
 
 	hud_state = "wiz_boilblood"
 
+	spell_cost = 2
+	mana_cost = 8
+
 /datum/spell/targeted/blood_boil/cast(list/targets, mob/user)
 	for(var/mob/living/carbon/human/H in targets)
 		H.bodytemperature += 80

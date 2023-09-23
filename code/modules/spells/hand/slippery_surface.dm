@@ -9,6 +9,9 @@
 	hud_state = "gen_ice"
 	cast_sound = 'sound/magic/summonitems_generic.ogg'
 
+	spell_cost = 1
+	mana_cost = 5
+
 /datum/spell/hand/slippery_surface/cast_hand(var/atom/a, var/mob/user)
 	for(var/turf/simulated/T in view(1,a))
 		T.wet_floor(50)

@@ -12,6 +12,9 @@
 	hud_state = "wiz_charge"
 	cast_sound = 'sound/magic/charge.ogg'
 
+	spell_cost = 2
+	mana_cost = 25
+
 /datum/spell/aoe_turf/charge/cast(var/list/targets, mob/user)
 	for(var/turf/T in targets)
 		depth_cast(T)

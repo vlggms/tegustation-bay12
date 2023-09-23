@@ -17,6 +17,9 @@
 
 	hud_state = "wiz_tele"
 
+	spell_cost = 3
+	mana_cost = 5
+
 /datum/spell/area_teleport/before_cast()
 	return
 

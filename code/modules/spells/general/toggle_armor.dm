@@ -1,5 +1,4 @@
 /datum/spell/toggle_armor
-	name = "Toggle Armor"
 	spell_flags = 0
 	charge_max = 10
 	var/list/armor_pieces

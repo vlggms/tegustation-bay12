@@ -77,6 +77,12 @@ GLOBAL_DATUM_INIT(wizards, /datum/antagonist/wizard, new)
 	var/decl/hierarchy/outfit/wizard_outfit = outfit_by_type(outfit_type)
 	wizard_outfit.equip(wizard_mob)
 
+	// Gives high mana & spell points
+	wizard_mob.mana.mana_level_max = 100
+	wizard_mob.mana.mana_level = 100
+	wizard_mob.mana.mana_recharge_speed = 2
+	wizard_mob.mana.spell_points = 15 // Should allow wizard to buy 2-3 dangerous spells, or a bunch of small stuff
+
 	return 1
 
 /datum/antagonist/wizard/print_player_summary()

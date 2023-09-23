@@ -17,6 +17,9 @@
 	var/seed_type = /datum/seed/merlin_tear
 	cast_sound = 'sound/magic/repulse.ogg'
 
+	spell_cost = 2
+	mana_cost = 15
+
 /datum/spell/aoe_turf/conjure/grove/New()
 	..()
 	if(seed_type)
@@ -44,6 +47,9 @@
 	newVars = list("name" = "sanctuary", "desc" = "This grass makes you feel comfortable. Peaceful.","blessed" = 1)
 
 	hud_state = "wiz_grove"
+
+	spell_cost = 4
+	mana_cost = 30
 
 /datum/spell/aoe_turf/conjure/grove/sanctuary/empower_spell()
 	if(!..())

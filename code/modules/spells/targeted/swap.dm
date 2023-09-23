@@ -1,6 +1,6 @@
 /datum/spell/targeted/swap
-	name = "swap"
-	desc = "This spell swaps the positions of the wizard and a target. Causes brain damage."
+	name = "Swap"
+	desc = "This spell swaps the positions of the wizard and a target."
 
 	charge_type = SPELL_HOLDVAR
 	holder_var_type = "brainloss"
@@ -19,6 +19,9 @@
 	hud_state = "wiz_swap"
 
 	cast_sound = 'sound/magic/mandswap.ogg'
+
+	spell_cost = 1
+	mana_cost = 5
 
 /datum/spell/targeted/swap/cast(var/list/targets, mob/user)
 	for(var/mob/T in targets)

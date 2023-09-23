@@ -12,6 +12,9 @@
 	summon_type = list(/mob/living/simple_animal/faithful_hound)
 	hud_state = "wiz_hound"
 
+	spell_cost = 3
+	mana_cost = 10
+
 /datum/spell/aoe_turf/conjure/faithful_hound/before_cast()
 	..()
 	var/password = sanitize(input("What password will this beast listen to?") as text, MAX_NAME_LEN)

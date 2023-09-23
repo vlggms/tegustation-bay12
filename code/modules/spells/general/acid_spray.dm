@@ -10,6 +10,9 @@
 	hud_state = "wiz_acid"
 	cast_sound = 'sound/magic/disintegrate.ogg'
 
+	spell_cost = 3
+	mana_cost = 10
+
 /datum/spell/acid_spray/choose_targets(mob/user = usr)
 	perform(user, list(holder))
 

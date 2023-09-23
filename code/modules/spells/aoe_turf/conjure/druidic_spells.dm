@@ -34,6 +34,9 @@
 
 	hud_state = "wiz_bats"
 
+	spell_cost = 2
+	mana_cost = 10
+
 /datum/spell/aoe_turf/conjure/summon/bats/empower_spell()
 	if(!..())
 		return 0

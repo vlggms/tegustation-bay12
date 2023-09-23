@@ -21,6 +21,9 @@
 	hud_state = "wiz_cuff"
 	cast_sound = 'sound/magic/wandodeath.ogg'
 
+	spell_cost = 3
+	mana_cost = 15
+
 /datum/spell/targeted/projectile/dumbfire/stuncuff/prox_cast(var/list/targets, spell_holder)
 	for(var/mob/living/M in targets)
 		if(istype(M,/mob/living/carbon/human))

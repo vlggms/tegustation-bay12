@@ -1,6 +1,4 @@
-// Assoc list of category = spell type
-GLOBAL_LIST_EMPTY(categories_to_spells)
-// Reverse assoc list for "reasons"
+// Assoc list of spell types and their categories
 GLOBAL_LIST_EMPTY(spells_by_categories)
 
 // Does exactly what it says: Unless dispelled, only wizards can use it.
@@ -22,15 +20,29 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 	var/book_flags = 0
 	/// Current owner of the book, none other than them can use it; Can be dispelled to remove that and other locks.
 	var/mob/owner = null
+	/// List of shown spells.
+	var/list/allowed_spells = list()
 	/// Currently applied spell categories that will be shown; If none - all spells are shown.
 	var/list/spell_categories = list()
+
+/obj/item/spellbook/Initialize()
+	. = ..()
+	// Create the global list if empty
+	if(!LAZYLEN(GLOB.spells_by_categories))
+		for(var/spell_type in subtypesof(/datum/spell))
+			var/datum/spell/S = new spell_type()
+			GLOB.spells_by_categories[S.type] = S.categories
+			qdel(S)
 
 /obj/item/spellbook/Destroy()
 	RemoveOwner()
 	return ..()
 
-/obj/item/spellbook/attack_self(mob/user)
+/obj/item/spellbook/attack_self(mob/living/user)
 	if(!user.mind)
+		return
+	if(!user.mana)
+		to_chat(user, SPAN_WARNING("You cannot see anything in the book..."))
 		return
 	if(user.mind.special_role != ANTAG_WIZARD && (book_flags & WIZARD_ONLY))
 		to_chat(user, SPAN_WARNING("The book refuses to open for you!"))
@@ -52,25 +64,14 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 
 	interact(user)
 
-/obj/item/spellbook/interact(mob/user)
+/obj/item/spellbook/interact(mob/living/user)
 	var/dat = null
-
-	// Create the global lists if empty
-	if(!LAZYLEN(GLOB.categories_to_spells) || !LAZYLEN(GLOB.spells_by_categories))
-		for(var/spell_type in subtypesof(/datum/spell))
-			var/datum/spell/S = new spell_type()
-			for(var/category in S.categories)
-				if(!(category in GLOB.categories_to_spells))
-					GLOB.categories_to_spells[category] = list()
-				GLOB.categories_to_spells[category] += S.type
-			GLOB.spells_by_categories[S.type] = S.categories
-			qdel(S)
-
-	for(var/spell_type in GLOB.spells_by_categories)
+	dat += "Your spell points: [user.mana.spell_points].<br>"
+	dat += "Applied categories: [english_list(spell_categories, "None")].<br>"
+	dat += "<hr>"
+	for(var/spell_type in allowed_spells)
 		var/datum/spell/S = spell_type
 		if(LAZYLEN(spell_categories) && !(GLOB.spells_by_categories[spell_type] & spell_categories))
-			continue
-		if(!initial(S.spell_book_visible))
 			continue
 
 		dat += "<A href='byond://?src=\ref[src];spell=[spell_type]'>[initial(S.name)]</a><br>"
@@ -98,32 +99,53 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 	return ..()
 
 /obj/item/spellbook/OnTopic(mob/user, href_list)
-	if(href_list["temp"])
-		temp = null
-		. = TOPIC_REFRESH
+	if(href_list["spell"])
+		var/datum/spell/S = text2path(href_list["spell"])
+		if(!ispath(S))
+			return TOPIC_REFRESH
+		var/dat = null
+		dat += "<A href='byond://?src=\ref[src];purchase=[S]'>Purchase ([initial(S.spell_cost)] points)</a> "
+		dat += "<br><hr>"
+		dat += "[initial(S.name)]<br>"
+		dat += "[initial(S.desc)]<br>"
+		dat += "<hr>"
+		dat += "Mana cost: [initial(S.mana_cost)].<br>"
+		dat += "Categories: <A href='byond://?src=\ref[src];categories=1'>[english_list(GLOB.spells_by_categories[S], "None")].</a><br>"
 
-	else if(href_list["path"])
-		var/path = text2path(href_list["path"])
+		var/datum/browser/popup = new(user, "spellbook_[S]", "Spell Book - [initial(S.name)]")
+		popup.set_content(dat)
+		popup.open()
+		return TOPIC_NOACTION
+
+	else if(href_list["purchase"])
+		var/path = text2path(href_list["purchase"])
 		if(!path)
-			return TOPIC_HANDLED
+			return TOPIC_NOACTION
 		SendFeedback(path) //feedback stuff
 		if(ispath(path, /datum/spell))
-			temp = AddSpell(user, path)
+			to_chat(user, AddSpell(user, path))
 		else
 			var/obj/O = new path(get_turf(user))
-			temp = "You have purchased \a [O]."
+			to_chat(user, SPAN_NOTICE("You have purchased \a [O]."))
 			//finally give it a bit of an oomf
 			playsound(get_turf(user),'sound/effects/phasein.ogg',50,1)
 		. = TOPIC_REFRESH
 
-	else if(href_list["reset"])
-		var/area/map_template/wizard_station/A = get_area(user)
-		if(istype(A))
-			user.spellremove()
-			temp = "All spells and investments have been removed. You may now memorize a new set of spells."
-			SSstatistics.add_field_details("wizard_spell_learned","UM") //please do not change the abbreviation to keep data processing consistent. Add a unique id to any new spells
-		else
-			to_chat(user, "<span class='warning'>You must be in the wizard academy to re-memorize your spells.</span>")
+	else if(href_list["categories"])
+		var/option = "Add"
+		if(LAZYLEN(spell_categories))
+			option = input(user, "What do you want to do?", "Options") as anything in list("Add", "Remove", "Clear")
+		switch(option)
+			if("Add")
+				var/cat = input(user, "What category do you want to add?", "Add Category") as anything in (GLOB.spell_categories - spell_categories)
+				if(cat && !(cat in spell_categories) && (cat in GLOB.spell_categories))
+					spell_categories |= cat
+			if("Remove")
+				var/cat = input(user, "What category do you want to remove?", "Remove Category") as anything in spell_categories
+				if(cat && (cat in spell_categories))
+					spell_categories -= cat
+			if("Clear")
+				spell_categories = list()
 		. = TOPIC_REFRESH
 
 	interact(user)
@@ -158,7 +180,7 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 		var/obj/O = path
 		SSstatistics.add_field_details("wizard_spell_learned","[initial(O.name)]")
 
-/obj/item/spellbook/proc/AddSpell(mob/user, spell_path)
+/obj/item/spellbook/proc/AddSpell(mob/living/user, spell_path)
 	for(var/datum/spell/S in user.mind.learned_spells)
 		if(istype(S,spell_path))
 			if(!S.can_improve())
@@ -176,6 +198,51 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 			else if(S.can_improve(UPGRADE_SPEED))
 				return S.quicken_spell()
 
+	var/datum/spell/SP = spell_path
+	if(user.mana.spell_points < initial(SP.spell_cost))
+		return SPAN_WARNING("Not enough points!")
+
 	var/datum/spell/S = new spell_path()
 	user.add_spell(S)
-	return "You learn the spell [S]"
+	user.mana.spell_points -= S.spell_cost
+	return SPAN_NOTICE("You learn the spell [S]")
+
+/* Subtypes */
+// A spell book with EVERY spell available
+/obj/item/spellbook/all_spells/Initialize()
+	. = ..()
+	for(var/spell_type in subtypesof(/datum/spell))
+		var/datum/spell/S = spell_type
+		if(isnull(initial(S.name)))
+			continue
+		allowed_spells |= S
+
+// All spells available via spell book
+/obj/item/spellbook/all_book_spells/Initialize()
+	. = ..()
+	for(var/spell_type in GLOB.spells_by_categories)
+		var/datum/spell/S = spell_type
+		if(isnull(initial(S.name)))
+			continue
+		if(initial(S.spell_book_visible))
+			allowed_spells |= spell_type
+
+// A book spawned to wizard apprentices
+/obj/item/spellbook/apprentice
+	allowed_spells = list(
+		/datum/spell/aoe_turf/knock,
+		/datum/spell/targeted/ethereal_jaunt,
+		/datum/spell/targeted/projectile/magic_missile,
+		)
+
+// Free for all spell book!
+/obj/item/spellbook/minor_free
+	book_flags = NO_OWNER
+	allowed_spells = list(
+		/datum/spell/noclothes,
+		/datum/spell/aimed/passage,
+		/datum/spell/aoe_turf/knock,
+		/datum/spell/targeted/ethereal_jaunt,
+		/datum/spell/targeted/heal_target/touch,
+		/datum/spell/area_teleport,
+		)

@@ -12,6 +12,9 @@
 
 	hud_state = "wiz_immolate"
 
+	spell_cost = 5
+	mana_cost = 30
+
 /datum/spell/hand/duration/sunwrath/cast_hand(var/atom/A, var/mob/user)
 	var/turf/T = get_turf(user)
 	var/list/turfs = getline(T,A) - T

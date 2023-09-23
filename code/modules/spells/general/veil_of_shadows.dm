@@ -11,6 +11,9 @@
 
 	hud_state = "wiz_statue"
 
+	spell_cost = 3
+	mana_cost = 20
+
 /datum/spell/veil_of_shadows/choose_targets(mob/user = usr)
 	if(!timer_id && istype(holder, /mob/living/carbon/human))
 		perform(user, list(holder))

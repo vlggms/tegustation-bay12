@@ -16,6 +16,9 @@
 	hud_state = "wiz_mark"
 	var/mark = null
 
+	spell_cost = 1
+	mana_cost = 5
+
 /datum/spell/mark_recall/choose_targets(mob/user = usr)
 	if(!mark)
 		perform(user, list("magical fairy dust")) //because why not

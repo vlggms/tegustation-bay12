@@ -12,6 +12,9 @@
 	hud_state = "wiz_knock"
 	cast_sound = 'sound/magic/knock.ogg'
 
+	spell_cost = 1
+	mana_cost = 5
+
 /datum/spell/aoe_turf/knock/cast(list/targets)
 	for(var/turf/T in targets)
 		for(var/obj/machinery/door/door in T.contents)
