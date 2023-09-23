@@ -67,11 +67,11 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 /obj/item/spellbook/interact(mob/living/user)
 	var/dat = null
 	dat += "Your spell points: [user.mana.spell_points].<br>"
-	dat += "Applied categories: [english_list(spell_categories, "None")].<br>"
+	dat += "Applied categories: <A href='byond://?src=\ref[src];categories=1'>[english_list(spell_categories, "None")].</a><br>"
 	dat += "<hr>"
 	for(var/spell_type in allowed_spells)
 		var/datum/spell/S = spell_type
-		if(LAZYLEN(spell_categories) && !(GLOB.spells_by_categories[spell_type] & spell_categories))
+		if(LAZYLEN(spell_categories) && !(spell_type in (GLOB.spells_by_categories[spell_type] & spell_categories)))
 			continue
 
 		dat += "<A href='byond://?src=\ref[src];spell=[spell_type]'>[initial(S.name)]</a><br>"
@@ -110,7 +110,7 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 		dat += "[initial(S.desc)]<br>"
 		dat += "<hr>"
 		dat += "Mana cost: [initial(S.mana_cost)].<br>"
-		dat += "Categories: <A href='byond://?src=\ref[src];categories=1'>[english_list(GLOB.spells_by_categories[S], "None")].</a><br>"
+		dat += "Categories: [english_list(GLOB.spells_by_categories[S], "None")].<br>"
 
 		var/datum/browser/popup = new(user, "spellbook_[S]", "Spell Book - [initial(S.name)]")
 		popup.set_content(dat)
@@ -239,10 +239,8 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 /obj/item/spellbook/minor_free
 	book_flags = NO_OWNER
 	allowed_spells = list(
-		/datum/spell/noclothes,
 		/datum/spell/aimed/passage,
 		/datum/spell/aoe_turf/knock,
 		/datum/spell/targeted/ethereal_jaunt,
 		/datum/spell/targeted/heal_target/touch,
-		/datum/spell/area_teleport,
 		)

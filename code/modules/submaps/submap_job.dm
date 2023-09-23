@@ -14,6 +14,8 @@
 	skill_points = 25
 	psi_latency_chance = 6
 	give_psionic_implant_on_join = FALSE
+	higher_mana_chance = 5
+	higher_spell_points_chance = 5
 	max_skill = list(   SKILL_BUREAUCRACY = SKILL_MAX,
 	                    SKILL_FINANCE = SKILL_MAX,
 	                    SKILL_EVA = SKILL_MAX,
