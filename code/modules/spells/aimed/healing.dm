@@ -193,7 +193,7 @@
 	mana_cost = 30
 
 /datum/spell/aimed/heal_target/trance/fire_projectile(mob/living/user, mob/living/target)
-	var/time = min(30 SECONDS, (target.getBruteLoss() + target.getFireLoss()) * 20)
+	var/time = max(30 SECONDS, (target.getBruteLoss() + target.getFireLoss()) * 20)
 	. = ..()
 	var/turf/T = get_turf(target)
 	effect = new /obj/effect/rift(T)
