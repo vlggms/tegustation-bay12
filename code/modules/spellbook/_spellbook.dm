@@ -71,7 +71,8 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 	dat += "<hr>"
 	for(var/spell_type in allowed_spells)
 		var/datum/spell/S = spell_type
-		if(LAZYLEN(spell_categories) && !(spell_type in (GLOB.spells_by_categories[spell_type] & spell_categories)))
+		var/list/combined_list = GLOB.spells_by_categories[spell_type] & spell_categories
+		if(LAZYLEN(spell_categories) && !LAZYLEN(combined_list))
 			continue
 
 		dat += "<A href='byond://?src=\ref[src];spell=[spell_type]'>[initial(S.name)]</a><br>"
@@ -111,6 +112,10 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 		dat += "<hr>"
 		dat += "Mana cost: [initial(S.mana_cost)].<br>"
 		dat += "Categories: [english_list(GLOB.spells_by_categories[S], "None")].<br>"
+		if(initial(S.spell_flags) & NEEDSCLOTHES)
+			dat += "Requires wizard robes to cast."
+		if(initial(S.spell_flags) & NO_SOMATIC)
+			dat += "Can be cast while incapacitated."
 
 		var/datum/browser/popup = new(user, "spellbook_[S]", "Spell Book - [initial(S.name)]")
 		popup.set_content(dat)

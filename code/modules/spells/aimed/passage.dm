@@ -44,3 +44,4 @@
 /obj/item/projectile/spell_projectile/passage
 	name = "bolt of passage"
 	icon_state = "energy2"
+	speed = 0.8

@@ -17,6 +17,7 @@
 	hud_state = "wiz_dispell_proj"
 	cast_sound = 'sound/magic/staff_healing.ogg'
 
+	categories = list(SPELL_CATEGORY_ANTIMAGIC)
 	spell_cost = 2
 	mana_cost = 15
 
@@ -41,3 +42,14 @@
 /obj/item/projectile/spell_projectile/dispell
 	name = "bolt of dispell"
 	icon_state = "spark_green"
+	speed = 0.8
+
+/obj/item/projectile/spell_projectile/dispell/Bump(atom/A, forced = FALSE)
+	if(A && carried)
+		prox_cast(list(A), src)
+	return TRUE
+
+/obj/item/projectile/spell_projectile/dispell/on_impact(atom/A)
+	if(A && carried)
+		prox_cast(list(A), src)
+	return TRUE
