@@ -103,11 +103,11 @@
 	antag_text = "Allows you to liquify for a short duration, letting them pass through all dense objects."
 
 /datum/codex_entry/heal_target/tower
-	associated_paths = list(/datum/spell/targeted/heal_target/tower)
+	associated_paths = list(/datum/spell/aimed/heal_target/tower)
 	antag_text = "Allows you to heal yourself, or others, for a slight amount."
 
 /datum/codex_entry/heal_target/major/tower
-	associated_paths = list(/datum/spell/targeted/heal_target/major/tower)
+	associated_paths = list(/datum/spell/aimed/heal_target/major/tower)
 	antag_text = "Allows you to heal others for a great amount."
 
 /datum/codex_entry/heal_target/area/tower

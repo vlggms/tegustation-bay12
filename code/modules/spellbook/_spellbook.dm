@@ -246,7 +246,7 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 	allowed_spells = list(
 		/datum/spell/aoe_turf/knock,
 		/datum/spell/aoe_turf/blink,
-		/datum/spell/targeted/heal_target/touch,
+		/datum/spell/aimed/heal_target/touch,
 		/datum/spell/aoe_turf/exchange_wounds,
 		/datum/spell/aoe_turf/smoke,
 		)
