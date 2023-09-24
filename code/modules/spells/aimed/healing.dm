@@ -32,8 +32,7 @@
 	spell_cost = 1
 	mana_cost = 3
 
-/datum/spell/aimed/heal_target/cast_check(skipcharge = 0, mob/user = usr, list/targets)
-	var/mob/living/target = targets[1]
+/datum/spell/aimed/heal_target/TargetCastCheck(mob/living/user, mob/living/target)
 	if(!isliving(target))
 		to_chat(user, SPAN_WARNING("The target must be a living creature!"))
 		return FALSE
@@ -243,8 +242,7 @@
 
 	var/use_range = 1
 
-/datum/spell/aimed/revoke_death/cast_check(skipcharge = 0, mob/user = usr, list/targets)
-	var/mob/living/target = targets[1]
+/datum/spell/aimed/revoke_death/TargetCastCheck(mob/living/user, mob/living/target)
 	if(!isliving(target))
 		to_chat(user, SPAN_WARNING("The target must be a living creature!"))
 		return FALSE

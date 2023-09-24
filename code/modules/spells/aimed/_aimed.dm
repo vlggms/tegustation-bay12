@@ -40,11 +40,15 @@
 	active = FALSE
 	return
 
+// Additional checks when there's a target
+/datum/spell/aimed/proc/TargetCastCheck(mob/living/user, atom/target)
+	return TRUE
+
 /datum/spell/aimed/InterceptClickOn(mob/living/caller, params, atom/target)
 	if(..())
 		return FALSE
 	var/ran_out = (current_amount <= 0)
-	if(!cast_check(!ran_out, ranged_ability_user, list(target)))
+	if(!cast_check(!ran_out, ranged_ability_user, list(target) || !TargetCastCheck(ranged_ability_user, target)))
 		remove_ranged_ability()
 		return FALSE
 	var/list/targets = list(target)
