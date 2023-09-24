@@ -1,7 +1,7 @@
 /datum/spell/aimed
 	hud_state = "projectile"
 
-	var/projectile_type = /obj/item/projectile
+	var/projectile_type = null
 	var/deactive_msg = "You discharge your projectile..."
 	var/active_msg = "You charge your projectile!"
 	var/active_icon_state = "projectile"
@@ -48,7 +48,7 @@
 	if(..())
 		return FALSE
 	var/ran_out = (current_amount <= 0)
-	if(!cast_check(!ran_out, ranged_ability_user, list(target) || !TargetCastCheck(ranged_ability_user, target)))
+	if(!cast_check(!ran_out, ranged_ability_user, list(target)) || !TargetCastCheck(ranged_ability_user, target))
 		remove_ranged_ability()
 		return FALSE
 	var/list/targets = list(target)
@@ -69,16 +69,17 @@
 
 /datum/spell/aimed/proc/fire_projectile(mob/living/user, atom/target)
 	current_amount--
-	for(var/i in 1 to projectiles_per_fire)
-		var/obj/item/projectile/P = new projectile_type(user.loc)
-		if(istype(P, /obj/item/projectile/spell_projectile))
-			var/obj/item/projectile/spell_projectile/SP = P
-			SP.carried = src //casting is magical
-		P.original = target
-		P.current = target
-		P.starting = get_turf(user)
-		P.shot_from = user
-		P.launch(target, user.zone_sel.selecting, user)
+	if(projectile_type)
+		for(var/i in 1 to projectiles_per_fire)
+			var/obj/item/projectile/P = new projectile_type(user.loc)
+			if(istype(P, /obj/item/projectile/spell_projectile))
+				var/obj/item/projectile/spell_projectile/SP = P
+				SP.carried = src //casting is magical
+			P.original = target
+			P.current = target
+			P.starting = get_turf(user)
+			P.shot_from = user
+			P.launch(target, user.zone_sel.selecting, user)
 	return TRUE
 
 // For spell_projectile types

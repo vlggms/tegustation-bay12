@@ -1,6 +1,9 @@
 /datum/spell/aimed/heal_target
 	name = "Cure Light Wounds"
 	desc = "A rudimentary spell used mainly by wizards to heal papercuts. Does not require wizard garb."
+	deactive_msg = "You discharge the healing spell..."
+	active_msg = "You charge the healing spell!"
+	spell_flags = 0
 	charge_max = 20 SECONDS
 	invocation = "Di'Nath!"
 	invocation_type = INVOKE_SHOUT
@@ -42,6 +45,7 @@
 	return ..()
 
 /datum/spell/aimed/heal_target/fire_projectile(mob/living/user, mob/living/target)
+	. = ..()
 	target.adjustBruteLoss(brute_damage)
 	target.adjustFireLoss(burn_damage)
 	target.adjustToxLoss(tox_damage)
@@ -229,6 +233,8 @@
 /datum/spell/aimed/revoke_death
 	name = "Revoke Death"
 	desc = "Revoke that of death itself. Comes at a cost that may be hard to manage for some."
+	deactive_msg = "You discharge the healing spell..."
+	active_msg = "You charge the healing spell!"
 
 	charge_type = SPELL_CHARGES
 	charge_max = 1
