@@ -1,50 +1,61 @@
 /* Reagents used to alter diseases */
 /datum/chemical_reaction/virus_food
-	result = list(/datum/reagent/nutriment/virus_food = 15)
+	result = /datum/reagent/nutriment/virus_food
 	required_reagents = list(/datum/reagent/water = 5, /datum/reagent/drink/milk = 5)
+	result_amount = 15
 
 /datum/chemical_reaction/virus_food_mutagen
-	result = list(/datum/reagent/unstable_mutagen/mutagen_virus_food = 1)
+	result = /datum/reagent/unstable_mutagen/mutagen_virus_food
 	required_reagents = list(/datum/reagent/unstable_mutagen = 1, /datum/reagent/nutriment/virus_food = 1)
+	result_amount = 1
 
 /datum/chemical_reaction/virus_food_mutagen_sugar
-	result = list(/datum/reagent/unstable_mutagen/mutagen_virus_food/sugar = 2)
+	result = /datum/reagent/unstable_mutagen/mutagen_virus_food/sugar
 	required_reagents = list(/datum/reagent/sugar = 1, /datum/reagent/unstable_mutagen/mutagen_virus_food = 1)
+	result_amount = 2
 
 /datum/chemical_reaction/virus_food_phoron
-	result = list(/datum/reagent/toxin/phoron/phoron_virus_food = 1)
+	result = /datum/reagent/toxin/phoron/phoron_virus_food
 	required_reagents = list(/datum/reagent/toxin/phoron = 1, /datum/reagent/nutriment/virus_food = 1)
+	result_amount = 1
 
 /datum/chemical_reaction/virus_food_phoron_synaptizine
-	result = list(/datum/reagent/toxin/phoron/phoron_virus_food/weak = 2)
+	result = /datum/reagent/toxin/phoron/phoron_virus_food/weak
 	required_reagents = list(/datum/reagent/medicine/stimulant/synaptizine = 1, /datum/reagent/toxin/phoron/phoron_virus_food = 1)
+	result_amount = 2
 
 /datum/chemical_reaction/virus_food_synaptizine
-	result = list(/datum/reagent/medicine/stimulant/synaptizine/synaptizine_virus_food = 1)
+	result = /datum/reagent/medicine/stimulant/synaptizine/synaptizine_virus_food
 	required_reagents = list(/datum/reagent/medicine/stimulant/synaptizine = 1, /datum/reagent/nutriment/virus_food = 1)
+	result_amount = 1
 
 /datum/chemical_reaction/virus_food_uranium
-	result = list(/datum/reagent/uranium/uranium_virus_food = 1)
+	result = /datum/reagent/uranium/uranium_virus_food
 	required_reagents = list(/datum/reagent/uranium = 1, /datum/reagent/nutriment/virus_food = 1)
+	result_amount = 1
 
 /datum/chemical_reaction/virus_food_uranium_plasma
-	result = list(/datum/reagent/uranium/uranium_virus_food/unstable = 1)
+	result = /datum/reagent/uranium/uranium_virus_food/unstable
 	required_reagents = list(/datum/reagent/uranium = 5, /datum/reagent/toxin/phoron/phoron_virus_food = 1)
+	result_amount = 1
 
 /datum/chemical_reaction/virus_food_uranium_plasma_gold
-	result = list(/datum/reagent/uranium/uranium_virus_food/stable = 1)
+	result = /datum/reagent/uranium/uranium_virus_food/stable
 	required_reagents = list(/datum/reagent/uranium = 10, /datum/reagent/gold = 10, /datum/reagent/toxin/phoron = 1)
+	result_amount = 1
 
 /datum/chemical_reaction/virus_food_uranium_plasma_silver
-	result = list(/datum/reagent/uranium/uranium_virus_food/stable = 1)
+	result = /datum/reagent/uranium/uranium_virus_food/stable
 	required_reagents = list(/datum/reagent/uranium = 10, /datum/reagent/silver = 10, /datum/reagent/toxin/phoron = 1)
+	result_amount = 1
 
 
 /* Reactions that alter a disease within blood reagent */
 /datum/chemical_reaction/mix_virus
-	result = list(/datum/reagent/blood = 1)
+	result = /datum/reagent/blood
 	required_reagents = list(/datum/reagent/nutriment/virus_food = 1)
 	catalysts = list(/datum/reagent/blood = 1)
+	result_amount = 1
 	var/level_min = 1
 	var/level_max = 2
 

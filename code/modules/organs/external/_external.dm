@@ -1,4 +1,4 @@
-/****************************************************
+r/****************************************************
 				EXTERNAL ORGANS
 ****************************************************/
 
@@ -883,7 +883,15 @@ Note that amputating the affected organ does in fact remove the infection from t
 	if(!clean)
 		victim.shock_stage += min_broken_damage
 
+	var/mob/living/carbon/human/last_owner = owner
 	removed(null, ignore_children)
+	var/list/valid_organs = list()
+	for(var/obj/item/organ/external/E in last_owner.organs)
+		if(E.is_stump())
+			continue
+		valid_organs += E
+	if(istype(last_owner) && !QDELETED(last_owner) && length(valid_organs) <= 1)
+		last_owner.physically_destroyed(FALSE, disintegrate)
 	if(QDELETED(src))
 		return
 

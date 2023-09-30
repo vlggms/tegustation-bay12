@@ -250,6 +250,14 @@ LEGACY_RECORD_STRUCTURE(all_waypoints, waypoint)
 	if (!autopilot)
 		set_operator(user)
 
+/obj/machinery/computer/ship/helm/emag_act(remaining_charges, mob/user, emag_source)
+	. = ..()
+	if(req_access.len)
+		req_access.Cut()
+		to_chat(user, SPAN_NOTICE("You short out \the [src]'s internal circuitry, removing the access requirements!"))
+		sparks(2, 1, src)
+		return 1
+	return
 
 /**
  * Updates `current_operator` to the new user, or `null` and ejects the old operator from the overmap view - Only one person on a helm at a time!

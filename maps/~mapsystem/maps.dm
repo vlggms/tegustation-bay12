@@ -91,9 +91,17 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 
 	var/list/lobby_screens = list('icons/default_lobby.png')    // The list of lobby screen images to pick() from.
 	var/current_lobby_screen
-	var/decl/audio/track/lobby_track                     // The track that will play in the lobby screen.
-	var/list/lobby_tracks = list()                  // The list of lobby tracks to pick() from. If left unset will randomly select among all available decl/audio/track subtypes.
-	var/welcome_sound = 'sound/AI/welcome.ogg'		// Sound played on roundstart
+	/// The track that will play in the lobby screen.
+	var/decl/audio/track/lobby_track
+	/// The list of lobby tracks to pick() from. If left unset will randomly select among all available /music_track subtypes.
+	var/list/lobby_tracks = list()
+
+	/// Sounds played on roundstart
+	var/list/welcome_sound = list('sound/AI/welcome.ogg')
+	/// Sounds played with end titles (credits)
+	var/list/credit_sound = list('sound/music/THUNDERDOME.ogg', 'sound/music/europa/Chronox_-_03_-_In_Orbit.ogg', 'sound/music/europa/asfarasitgets.ogg')
+	/// Sounds played on server reboot
+	var/list/reboot_sound = list('sound/AI/newroundsexy.ogg','sound/misc/apcdestroyed.ogg','sound/misc/bangindonk.ogg')
 
 	var/default_law_type = /datum/ai_laws/nanotrasen  // The default lawset use by synth units, if not overriden by their laws var.
 	var/security_state = /decl/security_state/default // The default security state system to use.
@@ -300,6 +308,8 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 /datum/map/proc/perform_map_generation()
 	return
 
+/datum/map/proc/ship_jump()
+	return
 
 /* It is perfectly possible to create loops with TEMPLATE_FLAG_ALLOW_DUPLICATES and force/allow. Don't. */
 /proc/resolve_site_selection(datum/map_template/ruin/away_site/site, list/selected, list/available, list/unavailable, list/by_type)
@@ -397,9 +407,16 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 		return
 
 	for(var/i = 0, i < num_exoplanets, i++)
-		var/exoplanet_type = pick(subtypesof(/obj/effect/overmap/visitable/sector/exoplanet))
+		var/exoplanet_type = pick_exoplanet()
 		var/obj/effect/overmap/visitable/sector/exoplanet/new_planet = new exoplanet_type(null, planet_size[1], planet_size[2])
 		new_planet.build_level()
+
+/datum/map/proc/pick_exoplanet()
+	var/planets = list()
+	for(var/T in subtypesof(/obj/effect/overmap/visitable/sector/exoplanet))
+		var/obj/effect/overmap/visitable/sector/exoplanet/planet_type = T
+		planets[T] = initial(planet_type.spawn_weight)
+	return pickweight(planets)
 
 // Used to apply various post-compile procedural effects to the map.
 /datum/map/proc/refresh_mining_turfs(var/zlevel)

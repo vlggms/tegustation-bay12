@@ -213,7 +213,7 @@
 	icon = 'icons/turf/flooring/flesh.dmi'
 	icon_state = "flesh0"
 	color = "#94404e"
-	footstep_type = /decl/footsteps/blank
+	footstep_type = /decl/footsteps/mud
 
 /turf/simulated/floor/exoplanet/flesh/Initialize()
 	. = ..()

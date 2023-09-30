@@ -215,10 +215,6 @@
 		if(config.aggressive_changelog)
 			src.changes()
 
-	if(isnum(player_age) && player_age < 3)
-		src.lore_splash()
-		to_chat(src, "<span class = 'notice'>Greetings, and welcome to the server! A link to the beginner's lore page has been opened, please read through it! This window will stop automatically opening once your account here is greater than 3 days old.</span>")
-
 	if(!winexists(src, "asset_cache_browser")) // The client is using a custom skin, tell them.
 		to_chat(src, "<span class='warning'>Unable to access asset cache browser, if you are using a custom skin file, please allow DS to download the updated version, if you are not, then make a bug report. This is not a critical issue but can cause issues with resource downloading, as it is impossible to know when extra resources arrived to you.</span>")
 
@@ -589,3 +585,20 @@ client/verb/character_setup()
 		if(!(key in list("F1","F2")) && !winget(src, "default-\ref[key]", "command"))
 			to_chat(src, "You probably entered the game with a different keyboard layout.\n<a href='?src=\ref[src];reset_macros=1'>Please switch to the English layout and click here to fix the communication hotkeys.</a>")
 			break
+
+// Creates the character out of client's preferences
+/client/proc/SpawnPrefsCharacter(turf/T)
+	var/mob/living/carbon/human/new_character = new(T)
+	new_character.lastarea = get_area(T)
+	prefs.copy_to(new_character)
+	new_character.dna.ready_dna(new_character)
+	new_character.dna.b_type = prefs.b_type
+	new_character.sync_organ_dna()
+	if(prefs.disabilities)
+		new_character.dna.SetSEState(GLOB.GLASSESBLOCK,1,0)
+		new_character.disabilities |= NEARSIGHTED
+	new_character.force_update_limbs()
+	new_character.update_eyes()
+	new_character.regenerate_icons()
+	new_character.ckey = ckey
+	return new_character

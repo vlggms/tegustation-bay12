@@ -1,0 +1,6 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - rscadd: Added wormhole event. It creates wormholes on the overmap, which will
+      teleport the ship to random spot on the overmap and create weak black holes
+      on the ship itself.

@@ -14,6 +14,7 @@
 	water_color = null
 	habitability_distribution = HABITABILITY_BAD
 	has_trees = FALSE
+	spawn_weight = 25 // These are pretty boring
 
 /obj/effect/overmap/visitable/sector/exoplanet/barren/generate_atmosphere()
 	..()

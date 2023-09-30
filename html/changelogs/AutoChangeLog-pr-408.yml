@@ -1,0 +1,5 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - tweak: Humanoid simple mobs(riot officers in abandoned bunker, for example) do
+      not threaten enemies before attacking anymore. Beware!

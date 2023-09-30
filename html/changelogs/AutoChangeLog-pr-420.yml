@@ -1,0 +1,4 @@
+author: TobyThorne
+delete-after: true
+changes:
+  - rscadd: Cigarettes now have a visible smoke effect.

@@ -12,6 +12,8 @@
 
 	var/prying = FALSE                      // True when the mob is trying to force open a door.
 
+	var/max_attack_range = 7
+
 	var/list/valid_obstacles_by_priority = list(/obj/structure/window,
 												/obj/structure/closet,
 												/obj/machinery/door/window,
@@ -132,21 +134,20 @@
 
 	// This will hold a list of all mobs in a line, even those behind the target, and possibly the wall.
 	// By default the test projectile goes through things like glass and grilles, which is desirable as otherwise the AI won't try to shoot through windows.
-	var/hit_thing = check_trajectory(AM, holder) // This isn't always reliable but its better than the previous method.
+	var/hit_things = check_trajectory(AM, holder) // This isn't always reliable but its better than the previous method.
 
 	// Test to see if the primary target actually has a chance to get hit.
 	// We'll fire anyways if not, if we have conserve_ammo turned off.
 	var/would_hit_primary_target = FALSE
-	if (hit_thing == AM)
+	if(AM in hit_things)
 		would_hit_primary_target = TRUE
 	ai_log("test_projectile_safety() : Test projectile did[!would_hit_primary_target ? " NOT " : " "]hit \the [AM]", AI_LOG_DEBUG)
 
 	// Make sure we don't have a chance to shoot our friends.
-	var/atom/A = hit_thing
-	ai_log("test_projectile_safety() : Evaluating \the [A] ([A.type]).", AI_LOG_TRACE)
-	if (isliving(A)) // Don't shoot at our friends, even if they're behind the target, as RNG can make them get hit.
-		var/mob/living/L = A
-		if (holder.IIsAlly(L))
+	ai_log("test_projectile_safety() : Evaluating \the chance of hitting allies.", AI_LOG_TRACE)
+	for(var/mob/living/L in hit_things)
+		// Don't shoot at our friends, even if they're behind the target, as RNG can make them get hit.
+		if(holder.IIsAlly(L) && L.stat != DEAD)
 			ai_log("test_projectile_safety() : Would threaten ally, exiting with FALSE.", AI_LOG_DEBUG)
 			return FALSE
 
@@ -174,7 +175,7 @@
 
 // Can be used to conditionally do a ranged or melee attack.
 /datum/ai_holder/proc/max_range(atom/movable/AM)
-	return holder.ICheckRangedAttack(AM) ? 7 : 1
+	return holder.ICheckRangedAttack(AM) ? max_attack_range : 1
 
 // Goes to the target, to attack them.
 // Called when in STANCE_APPROACH.

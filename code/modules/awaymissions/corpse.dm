@@ -107,6 +107,9 @@
 	var/decl/hierarchy/outfit/corpse_outfit = outfit_by_type(pickweight(corpse_outfits))
 	corpse_outfit.equip(M, equip_adjustments = adjustments)
 
+/obj/effect/landmark/corpse/proc/AdditionalEffects(mob/living/carbon/human/H)
+	return
+
 /obj/effect/landmark/corpse/chef
 	name = "Chef"
 	corpse_outfits = list(/decl/hierarchy/outfit/job/service/chef)
@@ -175,3 +178,11 @@
 /obj/effect/landmark/corpse/riot_officer
 	name = "Riot Officer"
 	corpse_outfits = list(/decl/hierarchy/outfit/job/security/officer/armored/riot)
+
+/obj/effect/landmark/corpse/ascent_alate
+	name = "Ascent Alate"
+	species = list(SPECIES_MANTID_ALATE)
+
+/obj/effect/landmark/corpse/ascent_alate/armor
+	name = "Ascent Alate - Armor"
+	corpse_outfits = list(/decl/hierarchy/outfit/job/ascent/voidsuit)

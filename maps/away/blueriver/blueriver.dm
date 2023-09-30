@@ -16,6 +16,7 @@
 /obj/effect/overmap/visitable/sector/arcticplanet/Initialize()
 	. = ..()
 	name = "[generate_planet_name()], \an [name]"
+	GLOB.number_of_planetoids++
 	var/matrix/M = new
 	M.Turn(90)
 	transform = M
@@ -283,7 +284,7 @@
 		// Create an afterimage of the mob that slowly fades off
 		// The actual mob is instantly deleted - this is just for effect
 		// It's inspired by what an observer theoretically sees when something passes the event horizon of a black hole!
-		var/obj/effect/temporary/T = new (get_turf(L), 30 SECONDS)
+		var/obj/effect/temp_visual/temporary/T = new (get_turf(L), 30 SECONDS)
 
 		T.icon = image(M)
 		T.icon_state = M.icon_state

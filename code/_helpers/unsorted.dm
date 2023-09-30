@@ -4,6 +4,14 @@
  * A large number of misc global procs.
  */
 
+/proc/subtypesof(datum/thing)
+	RETURN_TYPE(/list)
+	if(ispath(thing))
+		return typesof(thing) - thing
+	if(istype(thing))
+		return typesof(thing) - thing.type
+	return list()
+
 //Checks if all high bits in req_mask are set in bitfield
 #define BIT_TEST_ALL(bitfield, req_mask) ((~(bitfield) & (req_mask)) == 0)
 
@@ -1082,30 +1090,6 @@ var/global/list/common_tools = list(
 /obj/item/clothing/mask/smokable/cigarette/can_puncture()
 	return src.lit
 
-//check if mob is lying down on something we can operate him on.
-/proc/can_operate(mob/living/carbon/M, mob/living/carbon/user)
-	var/turf/T = get_turf(M)
-	if(locate(/obj/machinery/optable, T))
-		. = TRUE
-	if(locate(/obj/structure/bed, T))
-		. = TRUE
-	if(locate(/obj/structure/table, T))
-		. = TRUE
-	if(locate(/obj/effect/rune/, T))
-		. = TRUE
-
-	if(M == user)
-		var/hitzone = check_zone(user.zone_sel.selecting)
-		var/list/badzones = list(BP_HEAD)
-		if(user.hand)
-			badzones += BP_L_ARM
-			badzones += BP_L_HAND
-		else
-			badzones += BP_R_ARM
-			badzones += BP_R_HAND
-		if(hitzone in badzones)
-			return FALSE
-
 /proc/reverse_direction(var/dir)
 	switch(dir)
 		if(NORTH)
@@ -1243,13 +1227,13 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 	else
 		step(user.pulling, get_dir(user.pulling.loc, A))
 
-/proc/show_blurb(client/C, duration, blurb_text, fade_time = 5)
+/proc/show_blurb(client/C, duration, blurb_text, fade_time = 5, our_loc = "LEFT+1,BOTTOM+2", our_style = "font-family: 'Fixedsys'; -dm-text-outline: 1 black; font-size: 11px;", typeout = TRUE)
 	set waitfor = 0
 
 	if(!C)
 		return
 
-	var/style = "font-family: 'Fixedsys'; -dm-text-outline: 1 black; font-size: 11px;"
+	var/style = our_style
 	var/text = blurb_text
 	text = uppertext(text)
 
@@ -1259,13 +1243,16 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 	T.layer = FLOAT_LAYER
 	T.plane = HUD_PLANE
 	T.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
-	T.screen_loc = "LEFT+1,BOTTOM+2"
+	T.screen_loc = our_loc
 
 	C.screen += T
 	animate(T, alpha = 255, time = 10)
-	for(var/i = 1 to length(text)+1)
-		T.maptext = "<span style=\"[style]\">[copytext(text,1,i)] </span>"
-		sleep(1)
+	if(typeout)
+		for(var/i = 1 to length(text)+1)
+			T.maptext = "<span style=\"[style]\">[copytext(text,1,i)] </span>"
+			sleep(1)
+	else
+		T.maptext = "<span style=\"[style]\">[text] </span>"
 
 	addtimer(CALLBACK(GLOBAL_PROC, .proc/fade_blurb, C, T, fade_time), duration)
 
@@ -1275,9 +1262,9 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 	C.screen -= T
 	qdel(T)
 
-/proc/show_global_blurb(duration, blurb_text, fade_time = 5) // Shows a blurb to every living player
+/proc/show_global_blurb(duration, blurb_text, fade_time = 5, our_loc = "LEFT+1,BOTTOM+2", our_style = "font-family: 'Fixedsys'; -dm-text-outline: 1 black; font-size: 11px;", typeout = TRUE) // Shows a blurb to every living player
 	for(var/mob/M in GLOB.player_list)
-		show_blurb(M.client, duration, blurb_text, fade_time)
+		show_blurb(M.client, duration, blurb_text, fade_time, our_loc, our_style, typeout)
 
 /proc/flash_color(mob_or_client, flash_color="#960000", flash_time=20)
 	var/client/C

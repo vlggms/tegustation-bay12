@@ -39,6 +39,9 @@
 	/// List of 'dangerous' objs that the turf holds that can cause something bad to happen when stepped on, used for AI mobs.
 	var/list/dangerous_objects
 
+	/// Reference to the turf fire on the turf
+	var/obj/effect/turf_fire/turf_fire
+
 /turf/Initialize(mapload, ...)
 	. = ..()
 	if(dynamic_lighting)
@@ -82,8 +85,8 @@
 	if (z_flags & ZM_MIMIC_BELOW)
 		cleanup_zmimic()
 
-	if (bound_overlay)
-		QDEL_NULL(bound_overlay)
+	if (mimic_proxy)
+		QDEL_NULL(mimic_proxy)
 
 	..()
 	return QDEL_HINT_IWILLGC
@@ -384,3 +387,6 @@ var/const/enterloopsanity = 100
 		return FALSE
 	LAZYREMOVE(dangerous_objects, O)
 	UNSETEMPTY(dangerous_objects) // This nulls the list var if it's empty.
+
+/turf/proc/IgniteTurf(power, fire_colour)
+	return

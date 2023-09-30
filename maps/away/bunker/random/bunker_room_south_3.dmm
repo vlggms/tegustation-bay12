@@ -1,0 +1,83 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"h" = (
+/obj/structure/filingcabinet/chestdrawer,
+/turf/simulated/floor/carpet/green,
+/area/template_noop)
+"q" = (
+/obj/structure/flora/pottedplant/orientaltree,
+/turf/simulated/floor/carpet/green,
+/area/template_noop)
+"t" = (
+/obj/structure/bed,
+/obj/item/bedsheet/red,
+/turf/simulated/floor/carpet/green,
+/area/template_noop)
+"v" = (
+/turf/simulated/floor/carpet/green,
+/area/template_noop)
+"H" = (
+/obj/machinery/door/airlock/civilian,
+/turf/simulated/floor/carpet/green,
+/area/template_noop)
+"J" = (
+/obj/structure/flora/pottedplant/mysterious,
+/turf/simulated/floor/carpet/green,
+/area/template_noop)
+"K" = (
+/obj/structure/closet/wardrobe,
+/obj/random/clothing,
+/obj/random/clothing,
+/obj/random/clothing,
+/obj/random/clothing,
+/obj/random/cash,
+/obj/random/accessory,
+/obj/random/accessory,
+/obj/random/hat,
+/obj/random/shoes,
+/obj/random/shoes,
+/turf/simulated/floor/carpet/green,
+/area/template_noop)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+h
+v
+v
+q
+a
+"}
+(3,1,1) = {"
+H
+v
+v
+v
+t
+a
+"}
+(4,1,1) = {"
+a
+K
+v
+v
+J
+a
+"}
+(5,1,1) = {"
+a
+a
+a
+a
+a
+a
+"}

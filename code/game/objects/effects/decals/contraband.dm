@@ -156,9 +156,11 @@
 	qdel(src)
 
 /obj/structure/sign/poster/safety_moth_random
+	icon_state = "random_moth"
 	random_poster_type = /decl/poster/safety_moth
 
 /obj/structure/sign/poster/illegal_random
+	icon_state = "random_red"
 	random_poster_type = /decl/poster/illegal
 
 /decl/poster

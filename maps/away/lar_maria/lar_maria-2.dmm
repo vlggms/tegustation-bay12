@@ -3148,6 +3148,7 @@
 	dir = 4;
 	icon_state = "techfloor_edges"
 	},
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/dark,
 /area/lar_maria/entrance)
 "pF" = (
@@ -4458,6 +4459,15 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/lar_maria/mess_hall)
+"BJ" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4;
+	icon_state = "techfloor_edges"
+	},
+/obj/structure/closet/emcloset,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/simulated/floor/tiled/dark,
+/area/lar_maria/entrance)
 "BM" = (
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/wood,
@@ -4730,6 +4740,14 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/dark,
 /area/lar_maria/control)
+"EA" = (
+/obj/machinery/access_button/airlock_exterior{
+	master_tag = "ZHP_south_airlock";
+	pixel_x = 25;
+	pixel_y = 15
+	},
+/turf/simulated/floor/airless,
+/area/space)
 "EC" = (
 /obj/machinery/door/airlock,
 /obj/machinery/door/firedoor,
@@ -23234,7 +23252,7 @@ Dr
 Dr
 jE
 pD
-pD
+BJ
 Pr
 Pr
 lU
@@ -27282,7 +27300,7 @@ EQ
 nA
 uV
 Uz
-Uy
+EA
 hC
 aa
 aa

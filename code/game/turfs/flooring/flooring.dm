@@ -400,6 +400,7 @@
 	flags = TURF_ACID_IMMUNE | TURF_REMOVE_CROWBAR
 	remove_timer = 60
 	can_engrave = FALSE
+	footstep_type = /decl/footsteps/mud
 
 /decl/flooring/flesh/infested
 	name = "pulsating flesh"
@@ -418,3 +419,15 @@
 	wall_smooth = SMOOTH_NONE
 	space_smooth = SMOOTH_NONE
 	height = -FLUID_OVER_MOB_HEAD * 2
+
+/decl/flooring/bluespace
+	name = "bluespace"
+	desc = "Infinite bluespace. It gives you a piercing headache if you stare at it for too long."
+	icon = 'icons/turf/space.dmi'
+	icon_base = "bluespace"
+	flags = TURF_ACID_IMMUNE
+	build_type = null
+	footstep_type = /decl/footsteps/tiles
+	floor_smooth = SMOOTH_NONE
+	wall_smooth = SMOOTH_NONE
+	space_smooth = SMOOTH_NONE

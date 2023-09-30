@@ -123,6 +123,7 @@
 
 /datum/evacuation_option/call_shuttle/execute(mob/user)
 	call_shuttle_proc(user)
+	SSticker.news_report = max(SSticker.news_report, SHIP_EVACUATED)
 
 /datum/evacuation_option/recall_shuttle
 	option_text = "Cancel shuttle call"

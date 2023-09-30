@@ -53,3 +53,11 @@
 /proc/do_teleport(var/atom/movable/target, var/atom/destination, var/precision = 0, var/type = /decl/teleport/sparks)
 	var/decl/teleport/tele = decls_repository.get_decl(type)
 	tele.teleport(target, destination, precision)
+
+/// Teleport an object randomly within a set of connected zlevels
+/proc/do_unstable_teleport_safe(atom/movable/target, list/zlevels = GLOB.using_map.station_levels)
+	var/turf/T = pick_area_turf_in_connected_z_levels(
+		list(/proc/is_not_space_area),
+		list(/proc/not_turf_contains_dense_objects, /proc/IsTurfAtmosSafe),
+		zlevels[1])
+	do_teleport(target, T)

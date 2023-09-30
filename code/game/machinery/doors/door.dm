@@ -38,9 +38,12 @@
 
 	var/autoset_access = TRUE // Determines whether the door will automatically set its access from the areas surrounding it. Can be used for mapping.
 
-	//Multi-tile doors
+	// Multi-tile doors
 	dir = SOUTH
+	/// Width of the door in tiles.
 	var/width = 1
+	/// layer view blocking fillers for multi-tile doors.
+	var/list/fillers
 
 	//Used for intercepting clicks on our turf. Set 0 to disable click interception
 	var/turf_hand_priority = 3
@@ -72,15 +75,6 @@
 	else
 		layer = open_layer
 
-
-	if(width > 1)
-		if(dir in list(EAST, WEST))
-			bound_width = width * world.icon_size
-			bound_height = world.icon_size
-		else
-			bound_width = world.icon_size
-			bound_height = width * world.icon_size
-
 	if (turf_hand_priority)
 		set_extension(src, /datum/extension/turf_hand, turf_hand_priority)
 
@@ -102,6 +96,7 @@
 
 /obj/machinery/door/LateInitialize()
 	..()
+	update_bounds()
 	if(autoset_access) // Delayed because apparently the dir is not set by mapping and we need to wait for nearby walls to init and turn us.
 		inherit_access_from_area()
 
@@ -430,13 +425,19 @@
 	do_animate("opening")
 	icon_state = "door0"
 	set_opacity(0)
+	if(width > 1)
+		set_fillers_opacity(0)
 	sleep(animation_time*0.3)
 	src.set_density(0)
+	if(width > 1)
+		set_fillers_density(0)
 	update_nearby_tiles()
 	sleep(animation_time*0.7)
 	src.layer = open_layer
 	update_icon()
 	set_opacity(0)
+	if(width > 1)
+		set_fillers_opacity(0)
 	operating = 0
 
 	if(autoclose)
@@ -457,16 +458,20 @@
 	do_animate("closing")
 	sleep(animation_time*0.3)
 	src.set_density(1)
+	if(width > 1)
+		set_fillers_density(1)
 	src.layer = closed_layer
 	update_nearby_tiles()
 	sleep(animation_time*0.7)
 	update_icon()
 	if(visible && !glass)
 		set_opacity(1)	//caaaaarn!
+		if(width > 1)
+			set_fillers_opacity(1)
 	operating = 0
 
 	//I shall not add a check every x ticks if a door has closed over some fire.
-	var/obj/fire/fire = locate() in loc
+	var/obj/hotspot/fire = locate() in loc
 	if(fire)
 		qdel(fire)
 	return
@@ -501,15 +506,9 @@
 
 /obj/machinery/door/Move(new_loc, new_dir)
 	update_nearby_tiles()
+	update_bounds()
 
 	. = ..()
-	if(width > 1)
-		if(dir in list(EAST, WEST))
-			bound_width = width * world.icon_size
-			bound_height = world.icon_size
-		else
-			bound_width = world.icon_size
-			bound_height = width * world.icon_size
 
 	if(.)
 		deconstruct(null, TRUE)
@@ -591,6 +590,67 @@
 	if(!requiresID() || allowed(null))
 		toggle()
 	return TRUE
+
+/**
+ * Checks which way the airlock is facing and adjusts the direction accordingly.
+ * For use with multi-tile airlocks.
+ */
+/obj/machinery/door/proc/get_adjusted_dir(dir)
+	if(dir in list(NORTH, SOUTH))
+		return EAST
+	else
+		return NORTH
+
+/**
+ * Sets the bounds of the airlock. For use with multi-tile airlocks.
+ * If the airlock is multi-tile, it will set the bounds to be the size of the airlock.
+ * If the airlock doesn't already have fillers, it will create them.
+ * If the airlock already has fillers, it will move them to the correct location.
+ */
+/obj/machinery/door/proc/update_bounds()
+	if(width <= 1)
+		return
+
+	if(dir in list(NORTH, SOUTH))
+		bound_width = width * world.icon_size
+		bound_height = world.icon_size
+	else
+		bound_width = world.icon_size
+		bound_height = width * world.icon_size
+
+	LAZYINITLIST(fillers)
+
+	var/adjusted_dir = get_adjusted_dir(dir)
+	var/obj/last_filler = src
+	for(var/i = 1, i < width, i++)
+		var/obj/airlock_filler_object/filler
+
+		if(length(fillers) < i)
+			filler = new
+			filler.pair_airlock(src)
+			fillers.Add(filler)
+		else
+			filler = fillers[i]
+
+		filler.loc = get_step(last_filler, adjusted_dir)
+		filler.density = density
+		filler.set_opacity(opacity)
+
+		last_filler = filler
+
+/obj/machinery/door/proc/set_fillers_density(density)
+	if(!length(fillers))
+		return
+
+	for(var/obj/airlock_filler_object/filler as anything in fillers)
+		filler.density = density
+
+/obj/machinery/door/proc/set_fillers_opacity(opacity)
+	if(!length(fillers))
+		return
+
+	for(var/obj/airlock_filler_object/filler as anything in fillers)
+		filler.set_opacity(opacity)
 
 // Public access
 

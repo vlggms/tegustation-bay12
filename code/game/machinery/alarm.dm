@@ -222,6 +222,15 @@
 
 	return
 
+/obj/machinery/alarm/emag_act(remaining_charges, mob/user, emag_source)
+	. = ..()
+	if(req_access.len)
+		req_access.Cut()
+		to_chat(user, SPAN_NOTICE("You short out \the [src]'s scanner circuit, removing the access requirements!"))
+		sparks(2, 1, src)
+		return 1
+	return
+
 /obj/machinery/alarm/proc/handle_heating_cooling(var/datum/gas_mixture/environment)
 	if (!regulating_temperature)
 		//check for when we should start adjusting temperature
@@ -1058,7 +1067,7 @@ FIRE ALARM
 		src.updateDialog()
 	last_process = world.timeofday
 
-	if(locate(/obj/fire) in loc)
+	if(locate(/obj/hotspot) in loc)
 		alarm()
 
 /obj/machinery/firealarm/interface_interact(mob/user)

@@ -1,0 +1,5 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - soundadd: Added 3 new lobby/jukebox tracks.
+  - tweak: The infested planet ambience has been compressed down to ~3MB.

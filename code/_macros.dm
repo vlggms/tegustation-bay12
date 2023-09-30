@@ -215,3 +215,58 @@ var/const/NEGATIVE_INFINITY = -1#INF // win: -1.#INF, lin: -inf
 #define FONT_GIANT(X) "<font size='5'>[X]</font>"
 
 #define crash_with(X) crash_at(X, __FILE__, __LINE__)
+
+// Qdels
+#define QDEL_IN(item, time) addtimer(CALLBACK(GLOBAL_PROC, .proc/qdel, item), time, TIMER_STOPPABLE)
+#define QDEL_IN_CLIENT_TIME(item, time) addtimer(CALLBACK(GLOBAL_PROC, .proc/qdel, item), time, TIMER_STOPPABLE | TIMER_CLIENT_TIME)
+#define QDEL_NULL(item) qdel(item); item = null
+#define QDEL_NULL_LIST(x) if(x) { for(var/y in x) { qdel(y) }}; if(x) {x.Cut(); x = null; }
+#define QDEL_LIST(L) for(var/I in L) qdel(I); L?.Cut();
+#define QDEL_LIST_IN(L, time) addtimer(CALLBACK(GLOBAL_PROC, .proc/______qdel_list_wrapper, L), time, TIMER_STOPPABLE)
+#define QDEL_LIST_ASSOC(L) for(var/I in L) { qdel(L[I]); qdel(I); } L?.Cut();
+#define QDEL_LIST_ASSOC_VAL(L) for(var/I in L) qdel(L[I]); L?.Cut()
+
+/proc/______qdel_list_wrapper(list/L) //the underscores are to encourage people not to use this directly.
+	QDEL_LIST(L)
+
+/// Semantic define for a 0 int intended for use as a bitfield
+#define EMPTY_BITFIELD 0
+
+/// Right-shift of INT by BITS
+#define SHIFTR(INT, BITS) ((INT) >> (BITS))
+
+/// Left-shift of INT by BITS
+#define SHIFTL(INT, BITS) ((INT) << (BITS))
+
+/// Convenience define for nth-bit flags, 0-indexed
+#define FLAG(BIT) SHIFTL(1, BIT)
+
+/// Test bit at index BIT is set in FIELD
+#define GET_BIT(FIELD, BIT) ((FIELD) & FLAG(BIT))
+
+/// Test bit at index BIT is set in FIELD; semantic alias of GET_BIT
+#define HAS_BIT(FIELD, BIT) GET_BIT(FIELD, BIT)
+
+/// Set bit at index BIT in FIELD
+#define SET_BIT(FIELD, BIT) ((FIELD) |= FLAG(BIT))
+
+/// Unset bit at index BIT in FIELD
+#define CLEAR_BIT(FIELD, BIT) ((FIELD) &= ~FLAG(BIT))
+
+/// Flip bit at index BIT in FIELD
+#define FLIP_BIT(FIELD, BIT) ((FIELD) ^= FLAG(BIT))
+
+/// Test any bits of MASK are set in FIELD
+#define GET_FLAGS(FIELD, MASK) ((FIELD) & (MASK))
+
+/// Test all bits of MASK are set in FIELD
+#define HAS_FLAGS(FIELD, MASK) (((FIELD) & (MASK)) == (MASK))
+
+/// Set bits of MASK in FIELD
+#define SET_FLAGS(FIELD, MASK) ((FIELD) |= (MASK))
+
+/// Unset bits of MASK in FIELD
+#define CLEAR_FLAGS(FIELD, MASK) ((FIELD) &= ~(MASK))
+
+/// Flip bits of MASK in FIELD
+#define FLIP_FLAGS(FIELD, MASK) ((FIELD) ^= (MASK))

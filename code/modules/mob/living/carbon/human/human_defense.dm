@@ -401,19 +401,20 @@ meteor_act
 		w_uniform.add_blood(source)
 		update_inv_w_uniform(0)
 
-/mob/living/carbon/human/proc/handle_suit_punctures(var/damtype, var/damage, var/def_zone)
-
+// TODO: This is stupid, all of it. Let's remove or rework it later.
+/mob/living/carbon/human/proc/handle_suit_punctures(damtype, damage, def_zone)
 	// Tox and oxy don't matter to suits.
-	if(damtype != BURN && damtype != BRUTE) return
+	if(damtype != BURN && damtype != BRUTE)
+		return
 
 	// The rig might soak this hit, if we're wearing one.
-	if(back && istype(back,/obj/item/rig))
+	if(back && istype(back, /obj/item/rig))
 		var/obj/item/rig/rig = back
 		rig.take_hit(damage)
 
-	// We may also be taking a suit breach.
-	if(!wear_suit) return
-	if(!istype(wear_suit,/obj/item/clothing/suit/space)) return
+	if(!istype(wear_suit,/obj/item/clothing/suit/space))
+		return
+
 	var/obj/item/clothing/suit/space/SS = wear_suit
 	SS.create_breaches(damtype, damage)
 

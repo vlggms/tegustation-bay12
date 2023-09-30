@@ -1,0 +1,11 @@
+author: SomeAngryMiner, Beanysprout, Crimsonshrike, Dudezube, MuckerMayhem, Spookerton,
+  Ryan180602
+delete-after: true
+changes:
+  - rscadd: Replaces the bluespace drive placeholder with a proper machine, effects
+      and sounds included.
+  - rscadd: Adds the 'BSD Instability' Event, which causes spooky anomalies while
+      its active, can trigger in the 'moderate' and 'major' categories.
+  - tweak: The Torch will be removed from the overmap during jump.
+  - tweak: If the drive is missing/destroyed, there will be no jump, round will simply
+      end after the same amount of time.

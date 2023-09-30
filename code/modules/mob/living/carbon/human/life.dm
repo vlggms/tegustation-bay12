@@ -1009,7 +1009,10 @@
 				if(D.visibility_flags & HIDDEN_HUD)
 					continue
 				disease_num = max(disease_num, GetDiseaseSeverityValue(D.severity))
-			holder2.icon_state = "hudill[disease_num]"
+			if(!disease_num) // Stealthy diseases
+				holder2.icon_state = "hudhealthy"
+			else
+				holder2.icon_state = "hudill[disease_num]"
 		else
 			holder2.icon_state = "hudhealthy"
 

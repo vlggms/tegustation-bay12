@@ -87,16 +87,23 @@
 	if(eyeobj)
 		eyeobj.possess(src)
 
-	l_plane = new()
 	l_general = new()
-	client.screen += l_plane
 	client.screen += l_general
+
+	CreateRenderers()
 
 	refresh_client_images()
 	reload_fullscreen() // Reload any fullscreen overlays this mob has.
 	add_click_catcher()
 	update_action_buttons()
 	update_mouse_pointer()
+
+	if(machine)
+		machine.on_user_login(src)
+
+	if(SScharacter_setup.initialized && SSchat.initialized && !isnull(client.chatOutput))
+		if(client.get_preference_value(/datum/client_preference/goonchat) == GLOB.PREF_YES)
+			client.chatOutput.start()
 
 /mob/living/carbon/Login()
 	. = ..()

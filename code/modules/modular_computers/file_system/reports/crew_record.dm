@@ -10,8 +10,9 @@ GLOBAL_VAR_INIT(arrest_security_status, "Arrest")
 /datum/computer_file/report/crew_record
 	filetype = "CDB"
 	size = 2
-	var/icon/photo_front = null
+	// Mainly used by AI hologram
 	var/icon/uncropped_photo_front = null
+	var/icon/photo_front = null
 	var/icon/photo_side = null
 	//More variables below.
 
@@ -128,13 +129,15 @@ GLOBAL_VAR_INIT(arrest_security_status, "Arrest")
 			photo_front = id.front
 			photo_side = id.side
 		else
-			photo_front = uncropped_photo_front.Crop(9, 18, 23, 32)
+			photo_front = getFlatIcon(H, SOUTH, always_use_defdir = 1)
+			photo_front.Crop(9, 18, 23, 32)
 			photo_side = getFlatIcon(H, WEST, always_use_defdir = 1)
 			photo_side.Crop(9, 18, 23, 32)
 	else
 		var/mob/living/carbon/human/dummy/dummy = new()
 		uncropped_photo_front = getFlatIcon(dummy, SOUTH, always_use_defdir = 1)
-		photo_front = uncropped_photo_front.Crop(9, 18, 23, 32)
+		photo_front = getFlatIcon(dummy, SOUTH, always_use_defdir = 1)
+		photo_front.Crop(9, 18, 23, 32)
 		photo_side = getFlatIcon(dummy, WEST, always_use_defdir = 1)
 		photo_side.Crop(9, 18, 23, 32)
 		qdel(dummy)

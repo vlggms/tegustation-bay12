@@ -156,7 +156,6 @@
 /datum/ai_holder/simple_animal/humanoid
 	intelligence_level = AI_SMART //Purportedly
 	retaliate = TRUE //If attacked, attack back
-	threaten = TRUE //Verbal threats
 	firing_lanes = TRUE //Avoid shooting allies
 	conserve_ammo = TRUE //Don't shoot when it can't hit target
 	can_breakthrough = TRUE //Can break through doors
@@ -191,5 +190,4 @@
 		holder.face_atom(A)
 
 /datum/ai_holder/simple_animal/humanoid/hostile/violent
-	conserve_ammo = FALSE
 	mauling = TRUE

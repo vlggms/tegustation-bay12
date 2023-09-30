@@ -1,0 +1,5 @@
+author: MistakeNot4892
+delete-after: true
+changes:
+  - rscadd: Overmap objects now move by pixels, instead of strictly by tiles.
+  - tweak: Autopilot can move with the speed of up to 10.

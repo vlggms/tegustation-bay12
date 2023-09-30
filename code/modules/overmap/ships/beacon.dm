@@ -14,6 +14,9 @@
 	/// World time at which it can be used again
 	var/activation_cooldown = 0
 	var/activation_cooldown_time = 1 MINUTES
+	// Mostly mapping stuff
+	/// If TRUE - triggers distress signal upon creationg
+	var/start_with_distress = FALSE
 
 /obj/item/stock_parts/circuitboard/radio_beacon
 	name = T_BOARD("transmission beacon")
@@ -32,6 +35,11 @@
 		/obj/item/stock_parts/power/battery/buildable/stock = 1,
 		/obj/item/cell/high = 1
 	)
+
+/obj/machinery/radio_beacon/Initialize()
+	. = ..()
+	if(start_with_distress)
+		ActivateDistress(TRUE)
 
 /obj/machinery/radio_beacon/Destroy()
 	QDEL_NULL(signal)
@@ -127,8 +135,8 @@
 	update_use_power(POWER_USE_ACTIVE)
 	update_icon()
 
-/obj/machinery/radio_beacon/proc/ActivateDistress()
-	if(activation_cooldown > world.time)
+/obj/machinery/radio_beacon/proc/ActivateDistress(forced = FALSE)
+	if(!forced && activation_cooldown > world.time)
 		to_chat(usr, SPAN_WARNING("\The [src] cannot be used yet!"))
 		return
 
@@ -137,11 +145,11 @@
 	visible_message(SPAN_WARNING("\The [src] beeps urgently as it whirrs to life, sending out intermittent tones."))
 	playsound(src, 'sound/machines/sensors/newcontact.ogg', 50, TRUE)
 
-	log_and_message_admins("A distress beacon was activated in [get_area(src)] of [O.name].", usr, get_turf(src))
+	if(!forced) // Forced is usually map-loaded stuff
+		log_and_message_admins("A distress beacon was activated in [get_area(src)] of [O.name].", usr, get_turf(src))
+		activation_cooldown = world.time + activation_cooldown_time
 
 	emergency_signal = new()
-
-	activation_cooldown = world.time + activation_cooldown_time
 
 	emergency_signal.SetOrigin(O)
 
@@ -186,6 +194,9 @@
 	<br><br>---END OF TRANSMISSION---"
 
 /obj/effect/overmap/radio/proc/SetOrigin(obj/effect/overmap/origin)
+	// This check is usually obsolete, but oh well, unit tests...
+	if(!istype(origin))
+		return
 	GLOB.moved_event.register(origin, src, /obj/effect/overmap/radio/proc/Follow)
 	GLOB.destroyed_event.register(origin, src, /datum/proc/qdel_self)
 	forceMove(origin.loc)

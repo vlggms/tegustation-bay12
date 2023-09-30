@@ -1,0 +1,5 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - soundadd: Flesh floors(infested planets) now have their own footstep sounds.
+  - tweak: Shrouded, barren and infested exoplanet types are made less common.

@@ -25,6 +25,9 @@ GLOBAL_VAR_CONST(PREF_SHORTHAND, "Shorthand")
 GLOBAL_VAR_CONST(PREF_NEVER, "Never")
 GLOBAL_VAR_CONST(PREF_NON_ANTAG, "Non-Antag Only")
 GLOBAL_VAR_CONST(PREF_ALWAYS, "Always")
+GLOBAL_VAR_CONST(PREF_LOW, "Low")
+GLOBAL_VAR_CONST(PREF_MED, "Medium")
+GLOBAL_VAR_CONST(PREF_HIGH, "High")
 
 var/list/_client_preferences
 var/list/_client_preferences_by_key
@@ -258,6 +261,17 @@ var/list/_client_preferences_by_type
 			C.force_white_theme()
 			winset(C, "output", "is-visible=true;is-disabled=false")
 			winset(C, "browseroutput", "is-visible=false")
+
+/datum/client_preference/graphics_quality
+	description = "Graphics quality (where relevant it will reduce effects)"
+	key = "GRAPHICS_QUALITY"
+	options = list(GLOB.PREF_LOW, GLOB.PREF_MED, GLOB.PREF_HIGH)
+	default_value = GLOB.PREF_HIGH
+
+/datum/client_preference/graphics_quality/changed(mob/preference_mob, new_value)
+	if(preference_mob?.client)
+		for(var/atom/movable/renderer/R as anything in preference_mob.renderers)
+			R.GraphicsUpdate()
 
 /********************
 * General Staff Preferences *

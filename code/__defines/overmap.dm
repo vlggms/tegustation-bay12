@@ -1,3 +1,6 @@
+//How far from the edge of overmap zlevel could randomly placed objects spawn
+#define OVERMAP_EDGE 2
+
 #define SHIP_SIZE_TINY	1
 #define SHIP_SIZE_SMALL	2
 #define SHIP_SIZE_LARGE	3
@@ -12,3 +15,14 @@
 #define OVERMAP_WEAKNESS_MINING 4
 #define OVERMAP_WEAKNESS_EXPLOSIVE 8
 #define OVERMAP_WEAKNESS_DROPPOD 16
+
+#define SHIP_MOVE_RESOLUTION 0.00001
+#define MOVING(speed) abs(speed) >= min_speed
+#define SANITIZE_SPEED(speed) SIGN(speed) * Clamp(abs(speed), 0, max_speed)
+#define CHANGE_SPEED_BY(speed_var, v_diff) \
+	v_diff = SANITIZE_SPEED(v_diff);\
+	if(!MOVING(speed_var + v_diff)) \
+		{speed_var = 0};\
+	else \
+		{speed_var = SANITIZE_SPEED((speed_var + v_diff)/(1 + speed_var*v_diff/(max_speed ** 2)))}
+// Uses Lorentzian dynamics to avoid going too fast.

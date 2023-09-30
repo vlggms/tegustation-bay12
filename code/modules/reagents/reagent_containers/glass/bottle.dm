@@ -388,3 +388,6 @@
 
 /obj/item/reagent_containers/glass/bottle/virus_random/high
 	max_severity = 12
+
+/obj/item/reagent_containers/glass/bottle/rage
+	spawned_disease = /datum/disease/rage

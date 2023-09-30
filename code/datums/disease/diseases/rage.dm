@@ -9,7 +9,10 @@
 	agent = "VMD4-Rage"
 	viable_mobtypes = list(/mob/living/carbon/human)
 	severity = DISEASE_SEVERITY_BIOHAZARD
-	var/first_message_shown = FALSE
+
+/datum/disease/rage/AfterAdd()
+	to_chat(affected_mob, SPAN_DANGER("Your muscles start tensing up, and you can feel your pulse rising, throbbing at the back of your head. Your breathing increases, and you feel... angry. An urge wells up inside you. Everything is making you angry, and you want it to <i>pay</i> for it."))
+	return // As with the old virus nothing really happens at first giving you a chance to adjust your roleplay. Since this is a roleplay server after all.
 
 /datum/disease/rage/StageAct()
 	. = ..()
@@ -17,12 +20,6 @@
 		return
 
 	switch(stage)
-		if(1)
-			if(!first_message_shown)
-				first_message_shown = TRUE
-				to_chat(affected_mob, SPAN_DANGER("Your muscles start tensing up, and you can feel your pulse rising, throbbing at the back of your head. Your breathing increases, and you feel... angry. An urge wells up inside you. Everything is making you angry, and you want it to <i>pay</i> for it."))
-				return // As with the old virus nothing really happens at first giving you a chance to adjust your roleplay. Since this is a roleplay server after all.
-
 		if(2)
 			if(prob(2))
 				affected_mob.emote("mumble")
@@ -39,7 +36,7 @@
 
 			if(prob(15) && affected_mob.can_eat(null, FALSE) && !affected_mob.restrained() && !affected_mob.stat && !affected_mob.paralysis && !affected_mob.stunned && !affected_mob.sleeping)
 				var/list/potential_targets = list()
-				for(var/mob/living/L in view(1, affected_mob))
+				for(var/mob/living/L in view(2, affected_mob))
 					if(L == affected_mob)
 						continue
 					if(L.stat == DEAD)
@@ -47,6 +44,13 @@
 					potential_targets += L
 				if(LAZYLEN(potential_targets))
 					var/mob/living/target = pick(potential_targets)
+					if(!affected_mob.Adjacent(target))
+						var/dir = get_dir(affected_mob, target)
+						if(!affected_mob.DoMove(dir, affected_mob) == MOVEMENT_HANDLED)
+							return
+						affected_mob.SetMoveCooldown(affected_mob.movement_delay())
+					if(!affected_mob.Adjacent(target))
+						return
 					affected_mob.do_attack_animation(target)
 					affected_mob.visible_message(SPAN_DANGER("[affected_mob] violently bites [target]!"))
 					playsound(affected_mob, 'sound/weapons/bite.ogg', 50, TRUE)

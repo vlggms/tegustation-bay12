@@ -1,0 +1,4 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - admin: Admins can bypass all respawn checks.

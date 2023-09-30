@@ -86,6 +86,7 @@
 		return
 	if (evacuation_controller.call_evacuation(user, 1))
 		log_and_message_admins("[user? key_name(user) : "Autotransfer"] has initiated abandonment of the spacecraft.")
+		SSticker.news_report = max(SSticker.news_report, SHIP_ABANDONED)
 
 /datum/evacuation_option/bluespace_jump
 	option_text = "Initiate bluespace jump"
@@ -108,6 +109,7 @@
 		return
 	if (evacuation_controller.call_evacuation(user, 0))
 		log_and_message_admins("[user? key_name(user) : "Autotransfer"] has initiated bluespace jump preparation.")
+		SSticker.news_report = max(SSticker.news_report, SHIP_BLUESPACEJUMP)
 
 /datum/evacuation_option/cancel_abandon_ship
 	option_text = "Cancel abandonment"
@@ -130,14 +132,6 @@
 /datum/evacuation_option/cancel_bluespace_jump/execute(mob/user)
 	if (evacuation_controller && evacuation_controller.cancel_evacuation())
 		log_and_message_admins("[key_name(user)] has cancelled the bluespace jump.")
-
-/obj/screen/fullscreen/bluespace_overlay
-	icon = 'icons/effects/effects.dmi'
-	icon_state = "mfoam"
-	screen_loc = "WEST,SOUTH to EAST,NORTH"
-	color = "#ff9900"
-	blend_mode = BLEND_SUBTRACT
-	layer = FULLSCREEN_LAYER
 
 #undef EVAC_OPT_ABANDON_SHIP
 #undef EVAC_OPT_BLUESPACE_JUMP

@@ -6,7 +6,7 @@
 	var/lastprocess
 	var/matrix/init_transform
 
-/datum/orbit/New(atom/movable/_orbiter, var/atom/_orbiting, _lock)
+/datum/orbit/New(atom/movable/_orbiter, atom/_orbiting, _lock)
 	orbiter = _orbiter
 	orbiting = _orbiting
 	init_transform = _orbiter.transform
@@ -59,6 +59,8 @@
 		orbiter.stop_orbit()
 		return
 	orbiter.loc = targetloc
+	if(istype(orbiting, /atom/movable))
+		orbiter.glide_size = AM.glide_size
 	//TODO-LESH-DEL orbiter.update_parallax_contents()
 	orbiter.update_light()
 	lastloc = orbiter.loc

@@ -74,7 +74,15 @@
 	. = ..()
 
 /obj/item/gun/energy/laser/secure
-	name = "laser carbine"
 	desc = "A Hephaestus Industries G40E carbine, designed to kill with concentrated energy blasts. Fitted with an NT1019 chip to make sure killcount is tracked appropriately."
 	icon_state = "lasersec"
+	item_state = "lasersec"
+	wielded_item_state = "lasersec-wielded"
+	req_access = list(list(access_brig, access_bridge))
+
+/obj/item/gun/energy/laser/assault/secure
+	desc = "An advanced fully automatic laser rifle, dubbed ALR-1. Capable of firing in several firemodes.  Fitted with an NT1019 chip to make sure killcount is tracked appropriately."
+	icon_state = "lasersec_auto"
+	item_state = "lasersec"
+	wielded_item_state = "lasersec-wielded"
 	req_access = list(list(access_brig, access_bridge))

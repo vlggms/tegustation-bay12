@@ -26,6 +26,11 @@
 	name = "Ascent - Serpentid Queen"
 	belt = /obj/item/clothing/suit/storage/ascent
 
+/decl/hierarchy/outfit/job/ascent/voidsuit
+	name = "Ascent - Voidsuit"
+	suit = /obj/item/clothing/suit/space/void/ascent
+	head = /obj/item/clothing/head/helmet/space/void/ascent
+
 /obj/item/clothing/mask/gas/ascent
 	name = "mantid facemask"
 	desc = "An alien facemask with chunky gas filters and a breathing valve."

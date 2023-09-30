@@ -1,5 +1,6 @@
 //temporary visual effects
 /obj/effect/temp_visual
+	icon = 'icons/effects/effects.dmi'
 	icon_state = "nothing"
 	anchored = TRUE
 	layer = ABOVE_HUMAN_LAYER
@@ -41,6 +42,13 @@
 		target_pixel_x = -16
 	animate(src, pixel_x = target_pixel_x, pixel_y = target_pixel_y, alpha = 0, time = duration)
 
+// Attack effect
+
+/obj/effect/temp_visual/smash
+	name = "smash"
+	icon_state = "smash"
+	duration = 8
+
 // Smoke effect
 
 /obj/effect/temp_visual/smoke
@@ -54,6 +62,9 @@
 	name = "sparkle"
 	icon_state = "pink_sparkles"
 	duration = 8
+
+/obj/effect/temp_visual/sparkle/cyan
+	icon_state = "cyan_sparkles"
 
 // Cult effects
 
@@ -80,3 +91,49 @@
 		appearance = mimiced_atom.appearance
 		set_dir(setdir)
 		mouse_opacity = 0
+
+// Used in place of old /obj/effect/temporary where applicable.
+// Do not use it for new stuff, please
+/obj/effect/temp_visual/temporary/Initialize(mapload, new_dur = 5, new_icon = null, new_icon_state = null)
+	duration = new_dur
+	icon = new_icon
+	icon_state = new_icon_state
+	return ..()
+
+/obj/effect/temp_visual/cig_smoke
+	name = "smoke"
+	icon_state = "smallsmoke"
+	icon = 'icons/effects/effects.dmi'
+	opacity = FALSE
+	anchored = TRUE
+	mouse_opacity = FALSE
+	layer = ABOVE_HUMAN_LAYER
+
+	duration = 3 SECONDS
+
+/obj/effect/temp_visual/cig_smoke/Initialize()
+	. = ..()
+	set_dir(pick(GLOB.cardinal))
+	pixel_x = rand(-12, 12)
+	pixel_y = rand(0, 16)
+	animate(src, alpha = 0, pixel_x = pixel_x + rand(-6, 6), pixel_y = pixel_y + 12, duration, easing = EASE_IN)
+
+/obj/effect/temp_visual/ftl
+	icon = 'icons/obj/singularity.dmi'
+	icon_state = "singularity_s1"
+	blend_mode = BLEND_MULTIPLY
+	mouse_opacity = 0
+	alpha = 0
+	layer = 4
+	duration = 3 SECONDS
+
+/obj/effect/temp_visual/ftl/Initialize()
+	. = ..()
+	var/matrix/M1 = matrix()
+	M1.Scale(2, 2)
+	transform.Scale(0, 0)
+	var/matrix/M2 = transform
+	filters += filter(type="blur", size = 2)
+	animate(src, transform = M1, alpha = 192, time = 0.5 SECONDS)
+	animate(time = 2 SECONDS)
+	animate(transform = M2, alpha = 0, time = 0.5 SECONDS)

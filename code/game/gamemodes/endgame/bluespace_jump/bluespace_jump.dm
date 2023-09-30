@@ -9,6 +9,15 @@
 	affected_levels = zlevels
 
 /datum/universal_state/bluespace_jump/OnEnter()
+	var/obj/machinery/bluespacedrive/drive = locate(/obj/machinery/bluespacedrive) in SSmachines.machinery
+
+	if(!drive || !(drive.z in affected_levels))
+		return
+
+	if(HAS_FLAGS(drive.state, drive.STATE_BROKEN))
+		var/datum/event_meta/bsd = new(EVENT_LEVEL_MAJOR, "Bluespace Jump Fracture", add_to_queue = 0)
+		new/datum/event/bsd_instability(bsd) // Destroyed BSD means the ship still jumps, but not without consequences
+
 	var/space_zlevel = GLOB.using_map.get_empty_zlevel() //get a place for stragglers
 	for(var/mob/living/M in SSmobs.mob_list)
 		if(M.z in affected_levels)
@@ -26,6 +35,7 @@
 	old_accessible_z_levels = GLOB.using_map.accessible_z_levels.Copy()
 	for(var/z in affected_levels)
 		GLOB.using_map.accessible_z_levels -= "[z]" //not accessible during the jump
+	GLOB.using_map.ship_jump()
 
 /datum/universal_state/bluespace_jump/OnExit()
 	for(var/mob/M in bluespaced)
@@ -119,7 +129,6 @@
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "mfoam"
 	screen_loc = "WEST,SOUTH to EAST,NORTH"
-	color = "#ff9900"
-	alpha = 100
-	blend_mode = BLEND_SUBTRACT
-	layer = FULLSCREEN_LAYER
+	alpha = 80
+	color = "#000050"
+	blend_mode = BLEND_ADD
