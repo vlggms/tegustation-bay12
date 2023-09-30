@@ -35,7 +35,7 @@
 
 /datum/uplink_item/item/stealthy_weapons/fakescalp
 	name = "Injection Scalpel"
-	desc = "This 'scalpel' will inject a chemical of choice into the bloodstream of an unsuspecting patient, either it be a surgery or assault. WARNING: Not for use as a scalpel, poison not included."
+	desc = "This 'scalpel' will inject a chemical of choice into the bloodstream of an unsuspecting patient, either it be a surgery or assault. WARNING: Not for use as a scalpel, chemicals not included."
 	item_cost = 15
 	path = /obj/item/material/knife/reagent/fakescalp
 

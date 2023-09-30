@@ -115,11 +115,13 @@
 
 /obj/item/material/knife/reagent
 	atom_flags = ATOM_FLAG_OPEN_CONTAINER
+	var/amount_to_transfer = 1 // the amount of chems to transfer between attacks
+	var/volume = 30
 	origin_tech = list(TECH_MATERIAL = 2, TECH_ESOTERIC = 5)
 
 /obj/item/material/knife/reagent/New()
 	..()
-	create_reagents(30)
+	create_reagents(volume)
 
 /obj/item/material/knife/reagent/attack(mob/living/M, mob/user, var/target_zone)
 	if(!istype(M))
@@ -129,14 +131,13 @@
 
 	var/allow = M.can_inject(user, target_zone)
 	if(user.a_intent == I_HURT) //prevents it from injecting reagents WITHOUT attacking (reagents get injected but no harm is done to the target)
-		if(allow)
-			if(allow == INJECTION_PORT) //this is a knife meant for combat, we are not gonna inject
-				return
+		if(allow == INJECTION_PORT) //this is a knife meant for combat, we are not gonna inject
+			return
 		if(reagents.total_volume)
 			if(M.reagents)
 				var/should_admin_log = reagents.should_admin_log()
 				var/contained_reagents = reagents.get_reagents()
-				var/trans = reagents.trans_to_mob(M, 4, CHEM_BLOOD) //we transfer only 4 units because slashing doesnt generally make you stay in the wound long
+				var/trans = reagents.trans_to_mob(M, 1, CHEM_BLOOD) //we transfer only 1 unit because slashing doesnt generally make you stay in the wound long
 				if(should_admin_log)
 					admin_inject_log(user, M, src, contained_reagents, trans)
 
@@ -146,6 +147,7 @@
 	desc = "A tiny and extremely sharp steel cutting tool used for surgery, dissection, autopsy, and very precise cuts. The cornerstone of any surgical procedure."
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "scalpel"
+	max_force = 7 //already kills people with chems, why make it op?
 	applies_material_colour = 0 //does not rename it to "steel scalpel" so we can hide it :)))))))
 	applies_material_name = 0 //does not recolor it, makes it indistinguishable from  a real scalpel.
 	origin_tech = list(TECH_MATERIAL = 2, TECH_ESOTERIC = 5)
