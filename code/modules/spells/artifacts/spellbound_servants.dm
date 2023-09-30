@@ -75,7 +75,7 @@
 				/datum/spell/aimed/heal_target/touch,
 				/datum/spell/aoe_turf/knock/slow,
 				/datum/spell/targeted/heal_target/area,
-				/datum/spell/targeted/analyze,
+				/datum/spell/hand/analyze_health,
 				/datum/spell/aimed/heal_target/trance
 				)
 
