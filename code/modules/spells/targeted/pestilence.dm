@@ -21,9 +21,12 @@
 
 /datum/spell/targeted/pestilence/cast(list/targets, mob/living/carbon/human/user)
 	var/datum/disease/D = new /datum/disease/advance/random(disease_symptoms, disease_severity)
-
 	user.disease_resistances |= D.GetDiseaseID()
+	for(var/i = 1 to 8)
+		new /obj/effect/temp_visual/pestilence_glow/self(get_turf(user))
 	for(var/mob/living/carbon/human/H in targets)
+		if(LAZYLEN(H.diseases))
+			continue
 		if(!H.CanContractDisease(D))
 			continue
 

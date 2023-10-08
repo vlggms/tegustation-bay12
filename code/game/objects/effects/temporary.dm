@@ -169,8 +169,15 @@
 
 	duration = 1 SECONDS
 
+	var/max_spread_pixels = 16
+
 /obj/effect/temp_visual/pestilence_glow/Initialize()
 	. = ..()
 	pixel_x = rand(-4, 4)
 	pixel_y = rand(-4, 4)
-	animate(src, alpha = 0, pixel_x = pixel_x + rand(-16, 16), pixel_y = pixel_y + rand(-16, 16), duration, easing = EASE_IN)
+	animate(src, alpha = 0, pixel_x = pixel_x + rand(-max_spread_pixels, max_spread_pixels), pixel_y = pixel_y + rand(-max_spread_pixels, max_spread_pixels), duration, easing = EASE_IN)
+
+// The one spreading from the user
+/obj/effect/temp_visual/pestilence_glow/self
+	duration = 5 SECONDS
+	max_spread_pixels = 64

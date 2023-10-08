@@ -111,7 +111,7 @@ GLOBAL_LIST_INIT(spell_categories, list(
 	var/hidden_from_codex = FALSE
 
 	var/mob/living/ranged_ability_user
-	var/ranged_clickcd_override = -1
+	var/ranged_clickcd = 15
 
 	var/active = FALSE
 
@@ -451,10 +451,7 @@ GLOBAL_LIST_INIT(spell_categories, list(
 		to_chat(caller, "<span class='warning'><b>[caller.ranged_ability.name]</b> has been disabled.</span>")
 		caller.ranged_ability.remove_ranged_ability()
 		return TRUE //TRUE for failed, FALSE for passed.
-	if(ranged_clickcd_override >= 0)
-		ranged_ability_user.next_click = world.time + ranged_clickcd_override
-	else
-		ranged_ability_user.next_click = world.time + 15 // FIX ME
+	ranged_ability_user.next_click = world.time + ranged_clickcd
 	ranged_ability_user.face_atom(A)
 	return FALSE
 

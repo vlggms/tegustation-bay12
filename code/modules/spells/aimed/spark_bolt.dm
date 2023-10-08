@@ -8,6 +8,7 @@
 	range = 20
 	projectile_type = /obj/item/projectile/spark_bolt
 	projectile_amount = 5
+	ranged_clickcd = 4 // Pew-pew
 	hud_state = "wiz_sparkbolt"
 	cast_sound = 'sound/magic/shot.ogg'
 	active_msg = "You prepare to cast spark bolt!"
@@ -17,7 +18,7 @@
 
 	categories = list()
 	spell_cost = 2
-	mana_cost = 5
+	mana_cost = 0.5 // Per projectile, mind you
 
 /datum/spell/aimed/spark_bolt/quicken_spell()
 	if(!..())
