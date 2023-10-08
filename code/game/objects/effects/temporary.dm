@@ -155,3 +155,22 @@
 
 /obj/effect/temp_visual/bite/proc/FadeOut()
 	animate(src, alpha = 0, (duration * 0.2))
+
+// Used by pestilence spell
+/obj/effect/temp_visual/pestilence_glow
+	name = "pestilence"
+	icon_state = "greenglow"
+	icon = 'icons/effects/effects.dmi'
+	alpha = 125
+	opacity = FALSE
+	anchored = TRUE
+	mouse_opacity = FALSE
+	layer = ABOVE_HUMAN_LAYER
+
+	duration = 1 SECONDS
+
+/obj/effect/temp_visual/pestilence_glow/Initialize()
+	. = ..()
+	pixel_x = rand(-4, 4)
+	pixel_y = rand(-4, 4)
+	animate(src, alpha = 0, pixel_x = pixel_x + rand(-16, 16), pixel_y = pixel_y + rand(-16, 16), duration, easing = EASE_IN)

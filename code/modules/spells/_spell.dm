@@ -483,3 +483,4 @@ GLOBAL_LIST_INIT(spell_categories, list(
 	if(msg)
 		to_chat(ranged_ability_user, msg)
 	ranged_ability_user = null
+	active = FALSE
