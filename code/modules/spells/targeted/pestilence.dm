@@ -41,4 +41,4 @@
 	disease_symptoms += 1
 	disease_severity += 1
 
-	return "The diseases spread with spell [src] are now more powerful."
+	return "The symptoms of the disease created with spell [src] are now more powerful and their amount is [disease_symptoms]."

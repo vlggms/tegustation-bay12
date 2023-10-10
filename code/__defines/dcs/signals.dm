@@ -32,6 +32,8 @@
 // /atom signals
 
 // /atom/movable signals
+/// When an atom's Dispell() proc is called
+#define COMSIG_ATOM_MOVABLE_DISPELL "atom_dispell"
 
 // /area signals
 

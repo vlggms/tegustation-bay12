@@ -351,4 +351,5 @@
 
 /// The effect of being affected by dispells, either a projectile or AOE effects
 /atom/movable/proc/Dispell()
+	SEND_SIGNAL(src, COMSIG_ATOM_MOVABLE_DISPELL)
 	return

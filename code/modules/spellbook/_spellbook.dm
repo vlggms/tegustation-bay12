@@ -142,12 +142,12 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 			option = input(user, "What do you want to do?", "Options") as anything in list("Add", "Remove", "Clear")
 		switch(option)
 			if("Add")
-				var/cat = input(user, "What category do you want to add?", "Add Category") as anything in (GLOB.spell_categories - spell_categories)
-				if(cat && !(cat in spell_categories) && (cat in GLOB.spell_categories))
+				var/cat = input(user, "What category do you want to add?", "Add Category") as anything in ("-- None --" + GLOB.spell_categories - spell_categories)
+				if(cat && cat != "-- None --" && !(cat in spell_categories) && (cat in GLOB.spell_categories))
 					spell_categories |= cat
 			if("Remove")
-				var/cat = input(user, "What category do you want to remove?", "Remove Category") as anything in spell_categories
-				if(cat && (cat in spell_categories))
+				var/cat = input(user, "What category do you want to remove?", "Remove Category") as anything in ("-- None --" + spell_categories)
+				if(cat && cat != "-- None --" && (cat in spell_categories))
 					spell_categories -= cat
 			if("Clear")
 				spell_categories = list()
@@ -157,9 +157,11 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 
 // Being hit with any source of dispell releases any locks
 /obj/item/spellbook/Dispell()
+	. = ..()
 	if(!istype(owner) && !(book_flags & WIZARD_ONLY) && !(book_flags & APPRENTICE_ONLY))
 		return
 	visible_message(SPAN_NOTICE("\The [src] fizzles and sparks!"))
+	RemoveOwner()
 	owner = null
 	book_flags &= ~WIZARD_ONLY
 	book_flags &= ~APPRENTICE_ONLY
