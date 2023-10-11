@@ -1,6 +1,8 @@
 /datum/spell/aimed/swap
 	name = "Swap"
 	desc = "This spell swaps the positions of the wizard and a target."
+	deactive_msg = "You discharge the swap spell..."
+	active_msg = "You charge the swap spell!"
 
 	invocation = "Joyo!"
 	invocation_type = INVOKE_WHISPER

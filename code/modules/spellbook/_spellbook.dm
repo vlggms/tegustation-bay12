@@ -142,12 +142,14 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 			option = input(user, "What do you want to do?", "Options") as anything in list("Add", "Remove", "Clear")
 		switch(option)
 			if("Add")
-				var/cat = input(user, "What category do you want to add?", "Add Category") as anything in ("-- None --" + GLOB.spell_categories - spell_categories)
-				if(cat && cat != "-- None --" && !(cat in spell_categories) && (cat in GLOB.spell_categories))
+				var/list/add_list = list("-- None --") + GLOB.spell_categories - spell_categories
+				var/cat = input(user, "What category do you want to add?", "Add Category") as anything in add_list
+				if(cat && !(cat in spell_categories) && (cat in GLOB.spell_categories))
 					spell_categories |= cat
 			if("Remove")
-				var/cat = input(user, "What category do you want to remove?", "Remove Category") as anything in ("-- None --" + spell_categories)
-				if(cat && cat != "-- None --" && (cat in spell_categories))
+				var/list/rem_list = list("-- None --") + spell_categories
+				var/cat = input(user, "What category do you want to remove?", "Remove Category") as anything in rem_list
+				if(cat && (cat in spell_categories))
 					spell_categories -= cat
 			if("Clear")
 				spell_categories = list()
