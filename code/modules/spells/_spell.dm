@@ -316,7 +316,7 @@ GLOBAL_LIST_INIT(spell_categories, list(
 
 		if(isliving(user))
 			var/mob/living/L = user
-			if(!istype(L.mana) || L.mana.mana_level < mana_cost)
+			if(!istype(L.mind.mana) || L.mind.mana.mana_level < mana_cost)
 				to_chat(L, SPAN_WARNING("You do not have enough mana!"))
 				return FALSE
 
@@ -352,10 +352,10 @@ GLOBAL_LIST_INIT(spell_categories, list(
 	return 1
 
 /datum/spell/proc/TakeMana(mob/user = user)
-	if(!isliving(user))
+	if(!user.mind)
 		return FALSE
 	var/mob/living/L = user
-	L.mana.UseMana(L, mana_cost)
+	L.mind.mana.UseMana(L, mana_cost)
 	return TRUE
 
 /datum/spell/proc/invocation(mob/user = usr, var/list/targets) //spelling the spell out and setting it on recharge/reducing charges amount

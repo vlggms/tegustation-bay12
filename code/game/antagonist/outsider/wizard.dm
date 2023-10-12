@@ -78,10 +78,10 @@ GLOBAL_DATUM_INIT(wizards, /datum/antagonist/wizard, new)
 	wizard_outfit.equip(wizard_mob)
 
 	// Gives high mana & spell points
-	wizard_mob.mana.mana_level_max = 100
-	wizard_mob.mana.mana_level = 100
-	wizard_mob.mana.mana_recharge_speed = 2
-	wizard_mob.mana.spell_points = 15 // Should allow wizard to buy 2-3 dangerous spells, or a bunch of small stuff
+	wizard_mob.mind.mana.mana_level_max = 100
+	wizard_mob.mind.mana.mana_level = 100
+	wizard_mob.mind.mana.mana_recharge_speed = 2
+	wizard_mob.mind.mana.spell_points = 15 // Should allow wizard to buy 2-3 dangerous spells, or a bunch of small stuff
 
 	return 1
 

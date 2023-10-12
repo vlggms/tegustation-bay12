@@ -41,7 +41,7 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 /obj/item/spellbook/attack_self(mob/living/user)
 	if(!user.mind)
 		return
-	if(!user.mana)
+	if(!user.mind.mana)
 		to_chat(user, SPAN_WARNING("You cannot see anything in the book..."))
 		return
 	if(user.mind.special_role != ANTAG_WIZARD && (book_flags & WIZARD_ONLY))
@@ -66,7 +66,7 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 
 /obj/item/spellbook/interact(mob/living/user)
 	var/dat = null
-	dat += "Your spell points: [user.mana.spell_points].<br>"
+	dat += "Your spell points: [user.mind.mana.spell_points].<br>"
 	dat += "Applied categories: <A href='byond://?src=\ref[src];categories=1'>[english_list(spell_categories, "None")].</a><br>"
 	dat += "<hr>"
 	for(var/spell_type in allowed_spells)
@@ -208,12 +208,12 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 				return S.quicken_spell()
 
 	var/datum/spell/SP = spell_path
-	if(user.mana.spell_points < initial(SP.spell_cost))
+	if(user.mind.mana.spell_points < initial(SP.spell_cost))
 		return SPAN_WARNING("Not enough points!")
 
 	var/datum/spell/S = new spell_path()
 	user.add_spell(S)
-	user.mana.spell_points -= S.spell_cost
+	user.mind.mana.spell_points -= S.spell_cost
 	return SPAN_NOTICE("You learn the spell [S]")
 
 /* Subtypes */

@@ -107,11 +107,11 @@
 			to_chat(H, SPAN_DANGER("As a registered psionic, you are fitted with a psi-dampening control implant. Using psi-power while the implant is active will result in neural shocks and your violation being reported."))
 
 	if(prob(higher_mana_chance))
-		H.mana.mana_level_max *= 2
-		H.mana.mana_level = H.mana.mana_level_max
-		H.mana.mana_recharge_speed *= 2
+		H.mind.mana.mana_level_max *= 2
+		H.mind.mana.mana_level = H.mind.mana.mana_level_max
+		H.mind.mana.mana_recharge_speed *= 2
 	if(prob(higher_spell_points_chance))
-		H.mana.spell_points += pickweight(1 = 30, 2 = 12, 3 = 4, 4 = 1)
+		H.mind.mana.spell_points += pickweight(1 = 30, 2 = 12, 3 = 4, 4 = 1)
 
 	var/decl/hierarchy/outfit/outfit = get_outfit(H, alt_title, branch, grade)
 	if(outfit) . = outfit.equip(H, title, alt_title)

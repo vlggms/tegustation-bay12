@@ -11,6 +11,8 @@
 #define COMSIG_GLOB_MOB_CREATED "!mob_created"
 /// Mob died somewhere : (mob/living, gibbed)
 #define COMSIG_GLOB_MOB_DEATH "!mob_death"
+/// A magic orb was picked up by a mob: (orb, mob/living)
+#define COMSIG_GLOB_ORB_PICKUP "!mob_death"
 
 //////////////////////////////////////////////////////////////////
 
