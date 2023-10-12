@@ -143,12 +143,12 @@
 	width = 500
 	height = 500
 	count = 2000
-	spawning = 260
+	spawning = 20
 	lifespan = 1 SECONDS
 	fade = 1 SECONDS
-	position = generator("circle", 28, 36, NORMAL_RAND)
+	position = generator("circle", 16, 20, NORMAL_RAND)
 	velocity = generator("circle", 0, 3, NORMAL_RAND)
-	friction = 0.1
+	friction = 0.3
 	gradient = list(0, COLOR_DIAMOND, 0.75, COLOR_BLUE_LIGHT)
 	color_change = 0.1
 	color = 0

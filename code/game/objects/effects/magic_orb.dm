@@ -13,7 +13,7 @@
 	if(!ambient_sound)
 		return
 	sound_id = "[type]_[sequential_id(/obj/effect/magic_orb)]"
-	sound_token = GLOB.sound_player.PlayLoopingSound(src, sound_id, ambient_sound, volume = 35)
+	sound_token = GLOB.sound_player.PlayLoopingSound(src, sound_id, ambient_sound, 50, 14, 4)
 	particles = new /particles/magic_orb()
 
 /obj/effect/magic_orb/Destroy()
@@ -27,9 +27,9 @@
 	if(!CanUseOrb(user))
 		return
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_ORB_PICKUP, src, user)
-	playsound(src, 'sound/magic/orb_pickup.ogg', 50, FALSE, 3)
-	var/obj/effect/temp_visual/decoy/D = new /obj/effect/temp_visual/decoy(loc, dir, src, 20)
-	animate(D, alpha = 0, color = "#aaaaff", transform = matrix()*3, time = 20)
+	playsound(src, 'sound/magic/orb_pickup.ogg', 75, FALSE, 3)
+	var/obj/effect/temp_visual/decoy/D = new /obj/effect/temp_visual/decoy(loc, dir, src, 10)
+	animate(D, alpha = 0, color = "#aaaaff", transform = matrix()*2, time = 10)
 	OrbEffect(user)
 	qdel(src)
 	return

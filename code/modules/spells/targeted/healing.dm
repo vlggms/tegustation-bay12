@@ -4,9 +4,10 @@
 	charge_max = 1 MINUTE
 	spell_flags = INCLUDEUSER
 	invocation = "Nal Di'Nath!"
+	invocation_type = INVOKE_SHOUT
 	range = 2
 	max_targets = 0
-	level_max = list(UPGRADE_TOTAL = 1, UPGRADE_SPEED = 1, UPGRADE_POWER = 1)
+	level_max = list(UPGRADE_TOTAL = 3, UPGRADE_SPEED = 2, UPGRADE_POWER = 2)
 	cooldown_reduc = 300
 	hud_state = "heal_area"
 	amt_dam_robo = -6
