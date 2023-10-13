@@ -126,7 +126,7 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 
 	else if(href_list["upgrade"])
 		var/spell_path = text2path(href_list["upgrade"])
-		UpgradeSpell(user, spell_path, href_list["upgrade_type"])
+		to_chat(user, UpgradeSpell(user, spell_path, href_list["upgrade_type"]))
 		ShowSpellMenu(user, spell_path)
 
 	else if(href_list["categories"])
