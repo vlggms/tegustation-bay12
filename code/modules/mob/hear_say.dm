@@ -69,7 +69,6 @@
 				to_chat(src, "<span class='name'>[speaker_name]</span>[alt_name] talks but you cannot hear \him.")
 	else
 		if (language)
-			var/message_to_send = null
 			var/nverb = verb
 			if (say_understands(speaker, language))
 				var/skip = FALSE
@@ -207,7 +206,6 @@
 
 	var/formatted
 	if (language)
-		var/message_to_send = null
 		var/nverb = verb
 		if (say_understands(speaker, language))
 			var/skip = FALSE
