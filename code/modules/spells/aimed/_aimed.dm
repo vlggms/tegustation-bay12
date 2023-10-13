@@ -48,8 +48,11 @@
 	if(..())
 		return FALSE
 	var/ran_out = (current_amount <= 0)
-	if(!cast_check(!ran_out, ranged_ability_user, list(target)) || !TargetCastCheck(ranged_ability_user, target))
+	if(!cast_check(!ran_out, ranged_ability_user, list(target)))
 		remove_ranged_ability()
+		return FALSE
+	// The targeted check does not remove the ranged ability, allowing you to pick another target
+	if(!TargetCastCheck(ranged_ability_user, target))
 		return FALSE
 	var/list/targets = list(target)
 	perform(ranged_ability_user, targets)

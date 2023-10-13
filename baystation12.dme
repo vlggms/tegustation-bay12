@@ -3152,6 +3152,7 @@
 #include "code\modules\spells\aimed\passage.dm"
 #include "code\modules\spells\aimed\spark_bolt.dm"
 #include "code\modules\spells\aimed\swap.dm"
+#include "code\modules\spells\aimed\water_slash.dm"
 #include "code\modules\spells\aoe_turf\aoe_turf.dm"
 #include "code\modules\spells\aoe_turf\blink.dm"
 #include "code\modules\spells\aoe_turf\charge.dm"

@@ -181,3 +181,24 @@
 /obj/effect/temp_visual/pestilence_glow/self
 	duration = 5 SECONDS
 	max_spread_pixels = 64
+
+/obj/effect/temp_visual/slash
+	name = "slash"
+	icon_state = "slash"
+	icon = 'icons/effects/effects.dmi'
+	alpha = 25
+	opacity = FALSE
+	anchored = TRUE
+	mouse_opacity = FALSE
+	layer = ABOVE_HUMAN_LAYER
+
+	duration = 1.5 SECONDS
+
+/obj/effect/temp_visual/slash/Initialize()
+	. = ..()
+	animate(src, alpha = 200, time = (duration * 0.25))
+	animate(src, alpha = 0, time = (duration * 0.75))
+
+// Used by water slash spell
+/obj/effect/temp_visual/slash/water
+	color = COLOR_BLUE
