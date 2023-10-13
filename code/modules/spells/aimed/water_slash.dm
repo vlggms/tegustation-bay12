@@ -34,6 +34,8 @@
 	for(var/turf/T in getline(start_turf, target_turf))
 		if(T.density)
 			break
+		if(T.contains_dense_objects())
+			break
 		attack_line += T
 		target_turf = T
 
