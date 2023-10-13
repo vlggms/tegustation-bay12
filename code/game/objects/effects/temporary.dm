@@ -192,15 +192,10 @@
 	mouse_opacity = FALSE
 	layer = ABOVE_HUMAN_LAYER
 
-	duration = 1.5 SECONDS
-
-/obj/effect/temp_visual/slash/Initialize()
-	. = ..()
-	animate(src, alpha = 255, time = (duration * 0.25))
-	addtimer(CALLBACK(src, .proc/FadeOut), duration * 0.25)
+	duration = 1 SECONDS
 
 /obj/effect/temp_visual/slash/proc/FadeOut()
-	animate(src, alpha = 0, time = (duration * 0.75))
+	animate(src, alpha = 0, time = 5)
 
 // Used by water slash spell
 /obj/effect/temp_visual/slash/water

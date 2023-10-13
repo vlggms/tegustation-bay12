@@ -17,7 +17,7 @@
 	spell_cost = 2
 	mana_cost = 10
 
-	var/slash_damage = 30
+	var/slash_damage = 50
 	var/slash_distance = 4
 
 /datum/spell/aimed/water_slash/TargetCastCheck(mob/living/user, mob/living/target)
@@ -40,10 +40,9 @@
 		target_turf = T
 
 	var/obj/effect/temp_visual/slash/water/S = new(start_turf)
-	var/matrix/M = matrix(S.transform)
-	M.Turn(Get_Angle(start_turf, target_turf))
-	S.transform = M
-	animate(S, pixel_x = (target_turf.x - start_turf.x) * world.icon_size, pixel_y = (target_turf.y - start_turf.y) * world.icon_size, transform = M*3, time = 5)
+	S.transform.Turn(Get_Angle(start_turf, target_turf))
+	animate(S, alpha = 255, pixel_x = (target_turf.x - start_turf.x) * world.icon_size, pixel_y = (target_turf.y - start_turf.y) * world.icon_size, transform = matrix(S.transform) * 3, time = 5)
+	addtimer(CALLBACK(S, /obj/effect/temp_visual/slash/proc/FadeOut), 5)
 	var/list/already_hit = list()
 	for(var/turf/T in attack_line)
 		for(var/turf/TT in view(1, T))
