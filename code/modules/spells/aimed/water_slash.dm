@@ -36,7 +36,12 @@
 	for(var/turf/T in getline(start_turf, target_turf))
 		if(T.density)
 			break
-		if(T.contains_dense_objects())
+		var/dense_obj = FALSE
+		for(var/obj/O in T)
+			if(O.density)
+				dense_obj = TRUE
+				break
+		if(dense_obj)
 			break
 		attack_line += T
 		move_turf = T
@@ -45,8 +50,8 @@
 	var/matrix/M = new
 	M.Turn(Get_Angle(start_turf, target_turf))
 	S.transform = M
-	animate(S, alpha = 255, pixel_x = (move_turf.x - start_turf.x) * world.icon_size, pixel_y = (move_turf.y - start_turf.y) * world.icon_size, transform = matrix(S.transform) * 3, time = 5)
-	addtimer(CALLBACK(S, /obj/effect/temp_visual/slash/proc/FadeOut), 5)
+	animate(S, alpha = 225, pixel_x = (move_turf.x - start_turf.x) * world.icon_size, pixel_y = (move_turf.y - start_turf.y) * world.icon_size, transform = matrix(S.transform) * 3, time = 1)
+	addtimer(CALLBACK(S, /obj/effect/temp_visual/slash/proc/FadeOut), 1)
 	var/list/already_hit = list()
 	for(var/turf/T in attack_line)
 		for(var/turf/TT in view(1, T))
@@ -65,7 +70,9 @@
 				else if(ishuman(L))
 					var/mob/living/carbon/human/H = L
 					blood_col = H.species.blood_color
-				new /obj/effect/temp_visual/bloodsplatter(LT, get_dir(LT, start_turf), blood_col)
+				// BLOOD BLOOD BLOOD
+				for(var/i = 1 to min(round(slash_damage * 0.05), 15))
+					new /obj/effect/temp_visual/bloodsplatter(LT, get_dir(LT, start_turf), blood_col)
 				if(!istype(LT))
 					continue
 				LT.add_blood(L)
