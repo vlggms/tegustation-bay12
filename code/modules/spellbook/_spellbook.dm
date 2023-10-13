@@ -105,8 +105,16 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 		if(!ispath(S))
 			return TOPIC_REFRESH
 		var/dat = null
-		dat += "<A href='byond://?src=\ref[src];purchase=[S]'>Purchase ([initial(S.spell_cost)] points)</a> "
-		dat += "<br><hr>"
+		var/datum/spell/OS = locate(S) in user.mind.learned_spells
+		if(!istype(OS))
+			dat += "<A href='byond://?src=\ref[src];purchase=[S]'>Purchase ([initial(S.spell_cost)] points)</a><br>"
+		else
+			for(var/upgrade_type in OS.spell_levels)
+				dat += "Current [upgrade_type] level: [OS.spell_levels[upgrade_type]]/[OS.level_max[upgrade_type]].<br>"
+				if(!S.can_improve(upgrade_type))
+					continue
+				dat += "<A href='byond://?src=\ref[src];upgrade=[S]&upgrade_type=[upgrade_type]'>Improve [upgrade_type] ([OS.upgrade_cost[upgrade_type]]) points)</a><br>"
+		dat += "<hr>"
 		dat += "[initial(S.name)]<br>"
 		dat += "[initial(S.desc)]<br>"
 		dat += "<hr>"
@@ -135,6 +143,10 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 			//finally give it a bit of an oomf
 			playsound(get_turf(user),'sound/effects/phasein.ogg',50,1)
 		. = TOPIC_REFRESH
+
+	else if(href_list["upgrade"])
+		var/spell_path = text2path(href_list["upgrade"])
+		UpgradeSpell(user, spell_path, href_list["upgrade_type"])
 
 	else if(href_list["categories"])
 		var/option = "Add"
@@ -189,24 +201,22 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 		var/obj/O = path
 		SSstatistics.add_field_details("wizard_spell_learned","[initial(O.name)]")
 
-/obj/item/spellbook/proc/AddSpell(mob/living/user, spell_path)
+/obj/item/spellbook/proc/UpgradeSpell(mob/living/user, spell_path, upgrade_type = UPGRADE_POWER)
+	// TODO: Remove hardcoded upgrade types, and instead make it spell dependent
 	for(var/datum/spell/S in user.mind.learned_spells)
-		if(istype(S,spell_path))
-			if(!S.can_improve())
-				return
-			if(S.can_improve(UPGRADE_SPEED) && S.can_improve(UPGRADE_POWER))
-				switch(alert(user, "Do you want to upgrade this spell's speed or power?", "Spell upgrade", "Speed", "Power", "Cancel"))
-					if("Speed")
-						return S.quicken_spell()
-					if("Power")
-						return S.empower_spell()
-					else
-						return
-			else if(S.can_improve(UPGRADE_POWER))
-				return S.empower_spell()
-			else if(S.can_improve(UPGRADE_SPEED))
-				return S.quicken_spell()
+		if(!istype(S, spell_path))
+			continue
+		if(!S.can_improve())
+			return SPAN_WARNING("Cannot upgrade the spell!")
+		if(!S.can_improve(upgrade_type))
+			return SPAN_WARNING("Cannot upgrade the spell!")
+		if(upgrade_type == UPGRADE_POWER)
+			return S.empower_spell()
+		if(upgrade_type == UPGRADE_SPEED)
+			return S.quicken_spell()
+	return SPAN_DANGER("Could not locate the spell!")
 
+/obj/item/spellbook/proc/AddSpell(mob/living/user, spell_path)
 	var/datum/spell/SP = spell_path
 	if(user.mind.mana.spell_points < initial(SP.spell_cost))
 		return SPAN_WARNING("Not enough points!")

@@ -67,6 +67,8 @@ GLOBAL_LIST_INIT(spell_categories, list(
 	/// How long the spell lasts
 	var/duration = 0
 
+	/// Upgrade costs for each upgrade type as seen in spell levels; If null - set to the spell's cost
+	var/list/upgrade_cost = list(UPGRADE_SPEED = null, UPGRADE_POWER = null)
 	/// The current spell levels - total spell levels can be obtained by just adding the two values
 	var/list/spell_levels = list(UPGRADE_SPEED = 0, UPGRADE_POWER = 0)
 	/// Maximum possible levels in each category. Total does cover both.
@@ -111,7 +113,7 @@ GLOBAL_LIST_INIT(spell_categories, list(
 	var/hidden_from_codex = FALSE
 
 	var/mob/living/ranged_ability_user
-	var/ranged_clickcd = 15
+	var/ranged_clickcd = 10
 
 	var/active = FALSE
 
@@ -121,6 +123,10 @@ GLOBAL_LIST_INIT(spell_categories, list(
 
 /datum/spell/New()
 	..()
+
+	for(var/U in upgrade_cost)
+		if(upgrade_cost[U] == null)
+			upgrade_cost[U] = spell_cost
 
 	//still_recharging_msg = "<span class='notice'>[name] is still recharging.</span>"
 	charge_counter = charge_max
