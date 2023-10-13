@@ -4,9 +4,12 @@
 	deactive_msg = "You discharge the slash spell..."
 	active_msg = "You charge the slash spell!"
 
+	charge_max = 20 SECONDS
+	cooldown_reduc = 5 SECONDS
+
 	invocation = "Wa Sli!"
 	invocation_type = INVOKE_SHOUT
-	level_max = list(UPGRADE_TOTAL = 3, UPGRADE_SPEED = 1, UPGRADE_POWER = 2)
+	level_max = list(UPGRADE_TOTAL = 3, UPGRADE_SPEED = 2, UPGRADE_POWER = 2)
 
 	range = 8
 	hud_state = "slash"
@@ -14,7 +17,7 @@
 	spell_cost = 2
 	mana_cost = 10
 
-	var/slash_damage = 50
+	var/slash_damage = 30
 	var/slash_distance = 4
 
 /datum/spell/aimed/water_slash/TargetCastCheck(mob/living/user, mob/living/target)
@@ -30,13 +33,17 @@
 	var/list/attack_line = getline(start_turf, target_turf)
 
 	var/obj/effect/temp_visual/slash/water/S = new(start_turf)
-	S.transform = turn(matrix(), Get_Angle(start_turf, target_turf))
+	S.transform.Turn(Get_Angle(start_turf, target_turf))
 	animate(S, pixel_x = (target_turf.x - start_turf.x) * world.icon_size, pixel_y = (target_turf.y - start_turf.y) * world.icon_size, transform = matrix()*3, time = 5)
+	var/list/already_hit = list()
 	for(var/turf/T in attack_line)
 		for(var/turf/TT in view(1, T))
 			for(var/mob/living/L in TT)
 				if(L == user)
 					continue
+				if(L in already_hit)
+					continue
+				already_hit |= L
 				L.apply_damage(slash_damage, BRUTE, null, DAM_EDGE|DAM_SHARP)
 				var/turf/simulated/LT = get_turf(L)
 				var/blood_col = COLOR_RED
@@ -50,3 +57,10 @@
 				if(!istype(LT))
 					continue
 				LT.add_blood(L)
+
+/datum/spell/aimed/water_slash/empower_spell()
+	if(!..())
+		return FALSE
+
+	slash_damage += 25
+	return "The [src] spell now deals [slash_damage] damage."
