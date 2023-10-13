@@ -30,11 +30,18 @@
 	. = ..()
 	var/turf/start_turf = get_step(get_turf(user), get_dir(user, target))
 	var/turf/target_turf = get_ranged_target_turf_direct(start_turf, target, slash_distance)
-	var/list/attack_line = getline(start_turf, target_turf)
+	var/list/attack_line = list()
+	for(var/turf/T in getline(start_turf, target_turf))
+		if(T.density)
+			break
+		attack_line += T
+		target_turf = T
 
 	var/obj/effect/temp_visual/slash/water/S = new(start_turf)
-	S.transform.Turn(Get_Angle(start_turf, target_turf))
-	animate(S, pixel_x = (target_turf.x - start_turf.x) * world.icon_size, pixel_y = (target_turf.y - start_turf.y) * world.icon_size, transform = matrix()*3, time = 5)
+	var/matrix/M = matrix(S.transform)
+	M.Turn(Get_Angle(start_turf, target_turf))
+	S.transform = M
+	animate(S, pixel_x = (target_turf.x - start_turf.x) * world.icon_size, pixel_y = (target_turf.y - start_turf.y) * world.icon_size, transform = M*3, time = 5)
 	var/list/already_hit = list()
 	for(var/turf/T in attack_line)
 		for(var/turf/TT in view(1, T))

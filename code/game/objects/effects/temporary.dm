@@ -197,7 +197,7 @@
 /obj/effect/temp_visual/slash/Initialize()
 	. = ..()
 	animate(src, alpha = 255, time = (duration * 0.25))
-	animate(src, alpha = 0, time = (duration * 0.75))
+	animate(alpha = 0, time = (duration * 0.75))
 
 // Used by water slash spell
 /obj/effect/temp_visual/slash/water
