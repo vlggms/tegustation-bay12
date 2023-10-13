@@ -27,7 +27,7 @@
 	if(!..())
 		return 0
 
-	if(spell_levels[UPGRADE_POWER]%2 == 1)
+	if(spell_levels[UPGRADE_POWER]%2 == 0)
 		ex_severe++
 	ex_heavy++
 	ex_light++
@@ -39,7 +39,10 @@
 	charge_max = 2
 
 /datum/spell/aimed/fireball/prox_cast(list/targets, spell_holder)
-	explosion(get_turf(spell_holder), ex_severe, ex_heavy, ex_light, ex_flash)
+	var/turf/T = get_turf(spell_holder)
+	if(LAZYLEN(targets))
+		T = get_turf(pick(targets))
+	explosion(T, ex_severe, ex_heavy, ex_light, ex_flash)
 
 // Projectile
 /obj/item/projectile/spell_projectile/fireball

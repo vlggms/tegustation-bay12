@@ -172,7 +172,7 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 			dat += "Current [upgrade_type] level: [OS.spell_levels[upgrade_type]]/[OS.level_max[upgrade_type]].<br>"
 			if(!OS.can_improve(upgrade_type))
 				continue
-			dat += "<A href='byond://?src=\ref[src];upgrade=[S]&upgrade_type=[upgrade_type]'>Improve [upgrade_type] ([OS.upgrade_cost[upgrade_type]]) points)</a><br>"
+			dat += "<A href='byond://?src=\ref[src];upgrade=[S]&upgrade_type=[upgrade_type]'>Improve [upgrade_type] ([OS.upgrade_cost[upgrade_type]] points)</a><br>"
 	dat += "<hr>"
 	dat += "[initial(S.name)]<br>"
 	dat += "[initial(S.desc)]<br>"
@@ -214,13 +214,15 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 	for(var/datum/spell/S in user.mind.learned_spells)
 		if(!istype(S, spell_path))
 			continue
-		if(!S.can_improve())
-			return SPAN_WARNING("Cannot upgrade the spell!")
+		if(user.mind.mana.spell_points < S.upgrade_cost[upgrade_type])
+			return SPAN_WARNING("Not enough spell points!")
 		if(!S.can_improve(upgrade_type))
 			return SPAN_WARNING("Cannot upgrade the spell!")
 		if(upgrade_type == UPGRADE_POWER)
+			user.mind.mana.spell_points -= S.upgrade_cost[upgrade_type]
 			return S.empower_spell()
 		if(upgrade_type == UPGRADE_SPEED)
+			user.mind.mana.spell_points -= S.upgrade_cost[upgrade_type]
 			return S.quicken_spell()
 	return SPAN_DANGER("Could not locate the spell!")
 

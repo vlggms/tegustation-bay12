@@ -384,7 +384,7 @@ GLOBAL_LIST_INIT(spell_categories, list(
 ///UPGRADING PROCS///
 /////////////////////
 
-/datum/spell/proc/can_improve(var/upgrade_type)
+/datum/spell/proc/can_improve(upgrade_type)
 	if(level_max[UPGRADE_TOTAL] <= ( spell_levels[UPGRADE_SPEED] + spell_levels[UPGRADE_POWER] )) //too many levels, can't do it
 		return 0
 
