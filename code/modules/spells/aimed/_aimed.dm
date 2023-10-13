@@ -24,6 +24,7 @@
 		if(charge_type == "recharge")
 			var/refund_percent = current_amount/projectile_amount
 			charge_counter = charge_max * refund_percent
+			process()
 		remove_ranged_ability(msg)
 		on_deactivation(user)
 	else
