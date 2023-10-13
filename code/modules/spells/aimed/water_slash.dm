@@ -42,8 +42,10 @@
 		move_turf = T
 
 	var/obj/effect/temp_visual/slash/water/S = new(start_turf)
-	S.transform.Turn(Get_Angle(start_turf, target_turf))
-	animate(S, alpha = 255, pixel_x = (target_turf.x - start_turf.x) * world.icon_size, pixel_y = (target_turf.y - start_turf.y) * world.icon_size, transform = matrix(S.transform) * 3, time = 5)
+	var/matrix/M = new
+	M.Turn(Get_Angle(start_turf, target_turf))
+	S.transform = M
+	animate(S, alpha = 255, pixel_x = (move_turf.x - start_turf.x) * world.icon_size, pixel_y = (move_turf.y - start_turf.y) * world.icon_size, transform = matrix(S.transform) * 3, time = 5)
 	addtimer(CALLBACK(S, /obj/effect/temp_visual/slash/proc/FadeOut), 5)
 	var/list/already_hit = list()
 	for(var/turf/T in attack_line)
