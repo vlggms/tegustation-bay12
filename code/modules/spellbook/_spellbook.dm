@@ -104,49 +104,30 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 		var/datum/spell/S = text2path(href_list["spell"])
 		if(!ispath(S))
 			return TOPIC_REFRESH
-		var/dat = null
-		var/datum/spell/OS = locate(S) in user.mind.learned_spells
-		if(!istype(OS))
-			dat += "<A href='byond://?src=\ref[src];purchase=[S]'>Purchase ([initial(S.spell_cost)] points)</a><br>"
-		else
-			for(var/upgrade_type in OS.spell_levels)
-				dat += "Current [upgrade_type] level: [OS.spell_levels[upgrade_type]]/[OS.level_max[upgrade_type]].<br>"
-				if(!S.can_improve(upgrade_type))
-					continue
-				dat += "<A href='byond://?src=\ref[src];upgrade=[S]&upgrade_type=[upgrade_type]'>Improve [upgrade_type] ([OS.upgrade_cost[upgrade_type]]) points)</a><br>"
-		dat += "<hr>"
-		dat += "[initial(S.name)]<br>"
-		dat += "[initial(S.desc)]<br>"
-		dat += "<hr>"
-		dat += "Mana cost: [initial(S.mana_cost)].<br>"
-		dat += "Categories: [english_list(GLOB.spells_by_categories[S], "None")].<br>"
-		if(initial(S.spell_flags) & NEEDSCLOTHES)
-			dat += "Requires wizard robes to cast."
-		if(initial(S.spell_flags) & NO_SOMATIC)
-			dat += "Can be cast while incapacitated."
-
-		var/datum/browser/popup = new(user, "spellbook_[S]", "Spell Book - [initial(S.name)]")
-		popup.set_content(dat)
-		popup.open()
+		ShowSpellMenu(user, S)
 		return TOPIC_NOACTION
 
 	else if(href_list["purchase"])
 		var/path = text2path(href_list["purchase"])
 		if(!path)
 			return TOPIC_NOACTION
+		// No duplicate spells
+		if(locate(path) in user.mind.learned_spells)
+			return
 		SendFeedback(path) //feedback stuff
 		if(ispath(path, /datum/spell))
 			to_chat(user, AddSpell(user, path))
+			ShowSpellMenu(user, path)
 		else
 			var/obj/O = new path(get_turf(user))
 			to_chat(user, SPAN_NOTICE("You have purchased \a [O]."))
 			//finally give it a bit of an oomf
 			playsound(get_turf(user),'sound/effects/phasein.ogg',50,1)
-		. = TOPIC_REFRESH
 
 	else if(href_list["upgrade"])
 		var/spell_path = text2path(href_list["upgrade"])
 		UpgradeSpell(user, spell_path, href_list["upgrade_type"])
+		ShowSpellMenu(user, spell_path)
 
 	else if(href_list["categories"])
 		var/option = "Add"
@@ -179,6 +160,33 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 	owner = null
 	book_flags &= ~WIZARD_ONLY
 	book_flags &= ~APPRENTICE_ONLY
+
+// Shows a second menu for the specific spell
+/obj/item/spellbook/proc/ShowSpellMenu(mob/living/user, datum/spell/S)
+	var/dat = null
+	var/datum/spell/OS = locate(S) in user.mind.learned_spells
+	if(!istype(OS))
+		dat += "<A href='byond://?src=\ref[src];purchase=[S]'>Purchase ([initial(S.spell_cost)] points)</a><br>"
+	else
+		for(var/upgrade_type in OS.spell_levels)
+			dat += "Current [upgrade_type] level: [OS.spell_levels[upgrade_type]]/[OS.level_max[upgrade_type]].<br>"
+			if(!OS.can_improve(upgrade_type))
+				continue
+			dat += "<A href='byond://?src=\ref[src];upgrade=[S]&upgrade_type=[upgrade_type]'>Improve [upgrade_type] ([OS.upgrade_cost[upgrade_type]]) points)</a><br>"
+	dat += "<hr>"
+	dat += "[initial(S.name)]<br>"
+	dat += "[initial(S.desc)]<br>"
+	dat += "<hr>"
+	dat += "Mana cost: [initial(S.mana_cost)].<br>"
+	dat += "Categories: [english_list(GLOB.spells_by_categories[S], "None")].<br>"
+	if(initial(S.spell_flags) & NEEDSCLOTHES)
+		dat += "Requires wizard robes to cast."
+	if(initial(S.spell_flags) & NO_SOMATIC)
+		dat += "Can be cast while incapacitated."
+
+	var/datum/browser/popup = new(user, "spellbook_[S]", "Spell Book - [initial(S.name)]")
+	popup.set_content(dat)
+	popup.open()
 
 /obj/item/spellbook/proc/SetOwner(mob/new_owner)
 	if(!istype(new_owner))
