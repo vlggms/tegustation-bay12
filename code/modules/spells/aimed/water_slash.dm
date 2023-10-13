@@ -30,6 +30,8 @@
 	. = ..()
 	var/turf/start_turf = get_step(get_turf(user), get_dir(user, target))
 	var/turf/target_turf = get_ranged_target_turf_direct(start_turf, target, slash_distance)
+	/// The turf where the slash effect will visibly travel
+	var/turf/move_turf = target_turf
 	var/list/attack_line = list()
 	for(var/turf/T in getline(start_turf, target_turf))
 		if(T.density)
@@ -37,7 +39,7 @@
 		if(T.contains_dense_objects())
 			break
 		attack_line += T
-		target_turf = T
+		move_turf = T
 
 	var/obj/effect/temp_visual/slash/water/S = new(start_turf)
 	S.transform.Turn(Get_Angle(start_turf, target_turf))
