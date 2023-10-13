@@ -54,7 +54,7 @@
 	addtimer(CALLBACK(S, /obj/effect/temp_visual/slash/proc/FadeOut), 1)
 	var/list/already_hit = list()
 	for(var/turf/T in attack_line)
-		for(var/turf/TT in view(1, T))
+		for(var/turf/TT in range(1, T))
 			for(var/mob/living/L in TT)
 				if(L == user)
 					continue
