@@ -14,7 +14,7 @@
 
 	level_max = list(UPGRADE_TOTAL = 5, UPGRADE_SPEED = 0, UPGRADE_POWER = 5)
 
-	categories = list(SPELL_CATEGORY_EXPLOSIVE)
+	categories = list(SPELL_CATEGORY_FIRE, SPELL_CATEGORY_EXPLOSIVE)
 	spell_cost = 5
 	mana_cost = 20
 
@@ -34,9 +34,6 @@
 	ex_flash++
 
 	return "The spell [src] now has a larger explosion."
-
-/datum/spell/aimed/fireball/tower
-	charge_max = 2
 
 /datum/spell/aimed/fireball/prox_cast(list/targets, spell_holder)
 	var/turf/T = get_turf(spell_holder)

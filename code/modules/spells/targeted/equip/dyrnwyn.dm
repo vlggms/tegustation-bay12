@@ -33,6 +33,3 @@
 
 	material = MATERIAL_SILVER
 	return "Dyrnwyn has been made pure: it is now made of silver."
-
-/datum/spell/targeted/equip_item/dyrnwyn/tower
-	charge_max = 1

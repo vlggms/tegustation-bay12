@@ -49,6 +49,3 @@
 	icon_state = "empty"
 	name = "invisible wall"
 	desc = "You have a bad feeling about this."
-
-/datum/spell/aoe_turf/conjure/forcewall/tower
-	charge_max = 3

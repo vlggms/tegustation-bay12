@@ -26,6 +26,3 @@
 	var/datum/gas_mixture/environment = targets[1]
 	for(var/gas in air_change)
 		environment.adjust_gas(gas, air_change[gas])
-
-/datum/spell/create_air/tower
-	charge_max = 5

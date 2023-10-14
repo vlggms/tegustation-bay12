@@ -17,6 +17,3 @@
 		T.wet_floor(50)
 		new /obj/effect/temp_visual/temporary(T,3, 'icons/effects/effects.dmi', "sonar_ping")
 	return ..()
-
-/datum/spell/hand/slippery_surface/tower
-	charge_max = 2

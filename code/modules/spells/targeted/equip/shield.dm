@@ -37,6 +37,3 @@
 	block_chance = 60
 
 	return "Your summoned shields will now block more often."
-
-/datum/spell/targeted/equip_item/shield/tower
-	charge_max = 1

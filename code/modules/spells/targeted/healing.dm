@@ -26,9 +26,3 @@
 	range += 2
 
 	return "[src] now heals more in a wider area."
-
-// Admin subtype
-/datum/spell/targeted/heal_target/area/tower
-	name = "Instant Cure Area"
-	charge_max = 1
-	spell_book_visible = FALSE

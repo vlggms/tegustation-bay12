@@ -36,6 +36,3 @@
 /datum/spell/aoe_turf/knock/slow
 	name = "Slow Knock"
 	charge_max = 200
-
-/datum/spell/aoe_turf/knock/tower
-	charge_max = 2

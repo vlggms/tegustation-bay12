@@ -38,6 +38,3 @@
 		else
 			E.take_external_damage(burn=6, used_weapon = "hot iron")
 			to_chat(H, "<span class='warning'>You look down to notice that your [E] is burned.</span>")
-
-/datum/spell/hand/burning_grip/tower
-	charge_max = 3

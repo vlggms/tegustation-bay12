@@ -132,7 +132,3 @@
 	return
 /obj/effect/dummy/spell_jaunt/bullet_act(blah)
 	return
-
-/datum/spell/targeted/ethereal_jaunt/tower
-	charge_max = 2
-	spell_flags = Z2NOCAST | INCLUDEUSER

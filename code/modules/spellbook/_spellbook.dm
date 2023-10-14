@@ -169,6 +169,8 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 		dat += "<A href='byond://?src=\ref[src];purchase=[S]'>Purchase ([initial(S.spell_cost)] points)</a><br>"
 	else
 		for(var/upgrade_type in OS.spell_levels)
+			if(OS.level_max[upgrade_type] <= 0)
+				continue
 			dat += "Current [upgrade_type] level: [OS.spell_levels[upgrade_type]]/[OS.level_max[upgrade_type]].<br>"
 			if(!OS.can_improve(upgrade_type))
 				continue

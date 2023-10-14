@@ -196,7 +196,3 @@
 
 /obj/effect/temp_visual/slash/proc/FadeOut()
 	animate(src, alpha = 0, time = 5)
-
-// Used by water slash spell
-/obj/effect/temp_visual/slash/water
-	color = COLOR_BLUE

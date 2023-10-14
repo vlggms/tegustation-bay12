@@ -79,12 +79,6 @@
 	robo_damage -= 7
 	return "[src] will now heal more."
 
-// Admin subtype
-/datum/spell/aimed/heal_target/tower
-	name = "Instant Cure Light Wounds"
-	charge_max = 2
-	spell_book_visible = FALSE
-
 /datum/spell/aimed/heal_target/touch
 	name = "Healing Touch"
 	desc = "Heals an adjacent target for a reasonable amount of health."
@@ -133,12 +127,6 @@
 	oxy_damage = -14
 
 	return "[src] heals more, and heals organ damage and radiation."
-
-// Admin subtype
-/datum/spell/aimed/heal_target/major/tower
-	charge_max = 1
-	spell_flags = 0
-	spell_book_visible = FALSE
 
 /datum/spell/aimed/heal_target/sacrifice
 	name = "Sacrifice"

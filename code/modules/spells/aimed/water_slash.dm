@@ -12,13 +12,14 @@
 	level_max = list(UPGRADE_TOTAL = 3, UPGRADE_SPEED = 2, UPGRADE_POWER = 2)
 
 	range = 8
-	hud_state = "slash"
+	hud_state = "wiz_slash"
 	cast_sound = 'sound/magic/water.ogg'
 	spell_cost = 2
 	mana_cost = 10
 
 	var/slash_damage = 50
 	var/slash_distance = 4
+	var/slash_color = COLOR_DEEP_SKY_BLUE
 
 /datum/spell/aimed/water_slash/TargetCastCheck(mob/living/user, mob/living/target)
 	if(get_dist(user, target) > range)
@@ -28,12 +29,14 @@
 
 /datum/spell/aimed/water_slash/fire_projectile(mob/living/user, mob/living/target)
 	. = ..()
-	var/turf/start_turf = get_step(get_turf(user), get_dir(user, target))
+	var/turf/start_turf = get_turf(user)
 	var/turf/target_turf = get_ranged_target_turf_direct(start_turf, target, slash_distance)
 	/// The turf where the slash effect will visibly travel
 	var/turf/move_turf = target_turf
 	var/list/attack_line = list()
 	for(var/turf/T in getline(start_turf, target_turf))
+		if(T == start_turf)
+			continue
 		if(T.density)
 			break
 		var/dense_obj = FALSE
@@ -46,12 +49,13 @@
 		attack_line += T
 		move_turf = T
 
-	var/obj/effect/temp_visual/slash/water/S = new(start_turf)
+	var/obj/effect/temp_visual/slash/S = new(start_turf)
+	S.color = slash_color
 	var/matrix/M = new
 	M.Turn(Get_Angle(start_turf, target_turf))
 	S.transform = M
-	animate(S, alpha = 225, pixel_x = (move_turf.x - start_turf.x) * world.icon_size, pixel_y = (move_turf.y - start_turf.y) * world.icon_size, transform = matrix(S.transform) * 3, time = 1)
-	addtimer(CALLBACK(S, /obj/effect/temp_visual/slash/proc/FadeOut), 1)
+	animate(S, alpha = 225, pixel_x = (move_turf.x - start_turf.x) * world.icon_size, pixel_y = (move_turf.y - start_turf.y) * world.icon_size, transform = matrix(S.transform) * 3, time = 1.5)
+	addtimer(CALLBACK(S, /obj/effect/temp_visual/slash/proc/FadeOut), 1.5)
 	var/list/already_hit = list()
 	for(var/turf/T in attack_line)
 		for(var/turf/TT in range(1, T))

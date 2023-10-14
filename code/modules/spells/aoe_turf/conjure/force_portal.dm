@@ -11,7 +11,3 @@
 
 	spell_cost = 2
 	mana_cost = 20
-
-/datum/spell/aoe_turf/conjure/force_portal/tower
-	charge_max = 2
-	spell_flags = 0
