@@ -20,7 +20,7 @@
 
 	var/flame_power = 20
 	var/flame_distance = 4
-	var/flame_color = COLOR_RED_GRAY
+	var/flame_color = COLOR_ORANGE
 
 /datum/spell/aimed/flamethrower/TargetCastCheck(mob/living/user, mob/living/target)
 	if(get_dist(user, target) > range)
@@ -48,7 +48,7 @@
 
 /datum/spell/aimed/flamethrower/proc/PlaceFlame(turf/T)
 	T.IgniteTurf(flame_power, flame_color)
-	T.hotspot_expose((flame_power * 3) + 380, 500)
+	T.hotspot_expose((flame_power * 3) + 300, 50)
 
 /datum/spell/aimed/flamethrower/empower_spell()
 	if(!..())

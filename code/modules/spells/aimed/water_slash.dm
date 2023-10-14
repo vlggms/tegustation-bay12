@@ -32,7 +32,7 @@
 	var/turf/start_turf = get_turf(user)
 	var/turf/target_turf = get_ranged_target_turf_direct(start_turf, target, slash_distance)
 	/// The turf where the slash effect will visibly travel
-	var/turf/move_turf = target_turf
+	var/turf/move_turf = start_turf
 	var/list/attack_line = list()
 	for(var/turf/T in getline(start_turf, target_turf))
 		if(T == start_turf)
