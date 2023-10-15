@@ -65,6 +65,8 @@
 		return
 	if(health <= maxHealth)
 		adjustBruteLoss(-round(maxHealth * regeneration_speed))
+		// While regenerating, it will restore its ability to fire meatchips
+		spawn_health = min(spawn_health + round(maxHealth * regeneration_speed), round(maxHealth * (1 - spawn_health_reduction)))
 
 /mob/living/simple_animal/hostile/infestation/aggregate/updatehealth()
 	. = ..()
