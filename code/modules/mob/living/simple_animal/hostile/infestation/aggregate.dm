@@ -6,6 +6,8 @@
 	icon_living = "aggregate"
 	icon_dead = "aggregate_dead"
 	mob_size = MOB_LARGE
+	default_pixel_x = -8
+	pixel_x = -8
 	movement_cooldown = 7
 
 	// A giant fuck-off bite attack; Don't come close to this thing
