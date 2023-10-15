@@ -6,6 +6,8 @@
 	icon_living = "aggregate"
 	icon_dead = "aggregate_dead"
 	mob_size = MOB_LARGE
+	default_pixel_x = -8
+	pixel_x = -8
 	movement_cooldown = 7
 
 	// A giant fuck-off bite attack; Don't come close to this thing
@@ -34,8 +36,10 @@
 	name = "malformed teeth"
 	attack_verb = list("bitten with many of its deformed teeth")
 	hitsound = 'sound/simple_mob/abominable_infestation/aggregate/attack.ogg'
-	force = 50 // Yes. Fifty. Do NOT fight it in melee.
-	armor_penetration = 40
+	force = 100 // Yes. A hundred. Do NOT fight it in melee.
+	armor_penetration = 20
+	melee_accuracy_bonus = 50 // Three bites, less miss chance :)
+	attack_cooldown = DEFAULT_WEAPON_COOLDOWN * 1.5
 
 // Show the foolish mortals just how deadly this attack was!
 /obj/item/natural_weapon/bite/aggregate/apply_hit_effect(mob/living/target, mob/living/user, hit_zone)
@@ -47,8 +51,9 @@
 	if(QDELETED(target))
 		return
 	var/obj/effect/temp_visual/bite/B = new (get_turf(target))
-	B.pixel_x = rand(-16, 16)
-	B.pixel_y = rand(-16, 16)
+	B.color = pick(COLOR_MAROON, COLOR_RED, COLOR_RED_GRAY)
+	B.pixel_x = rand(-8, 8)
+	B.pixel_y = rand(-8, 8)
 
 /mob/living/simple_animal/hostile/infestation/aggregate/Initialize()
 	. = ..()
@@ -60,6 +65,8 @@
 		return
 	if(health <= maxHealth)
 		adjustBruteLoss(-round(maxHealth * regeneration_speed))
+		// While regenerating, it will restore its ability to fire meatchips
+		spawn_health = min(spawn_health + round(maxHealth * regeneration_speed), round(maxHealth * (1 - spawn_health_reduction)))
 
 /mob/living/simple_animal/hostile/infestation/aggregate/updatehealth()
 	. = ..()

@@ -6,6 +6,8 @@
 	icon_living = "meatchip"
 	icon_dead = "meatchip_dead"
 	mob_size = MOB_TINY
+	density = FALSE
+	layer = LYING_MOB_LAYER
 	movement_cooldown = 1.2
 
 	natural_weapon = /obj/item/natural_weapon/claws/meatchip
@@ -28,3 +30,10 @@
 	armor_penetration = 15
 	hitsound = 'sound/weapons/slashmiss.ogg'
 	attack_cooldown = 1
+
+/mob/living/simple_animal/hostile/infestation/meatchip/Initialize()
+	. = ..()
+	default_pixel_x = rand(-6, 6)
+	default_pixel_y = rand(-6, 6)
+	pixel_x = default_pixel_x
+	pixel_y = default_pixel_y
