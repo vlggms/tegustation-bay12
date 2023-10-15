@@ -1,0 +1,91 @@
+/mob/living/simple_animal/hostile/infestation/aggregate
+	name = "aggregate"
+	desc = "A repulsive mass of flesh that is constantly regenerating itself."
+	icon = 'icons/mob/simple_animal/abominable_infestation/48x48.dmi'
+	icon_state = "aggregate"
+	icon_living = "aggregate"
+	icon_dead = "aggregate_dead"
+	mob_size = MOB_LARGE
+	movement_cooldown = 7
+
+	// A giant fuck-off bite attack; Don't come close to this thing
+	natural_weapon = /obj/item/natural_weapon/bite/aggregate
+
+	health = 1200
+	maxHealth = 1200
+
+	meat_type = /obj/item/reagent_containers/food/snacks/abominationmeat
+	meat_amount = 15
+	skin_material = MATERIAL_SKIN_CHITIN
+	skin_amount = 10
+	bone_material = MATERIAL_BONE_CARTILAGE
+	bone_amount = 2
+
+	death_sounds = list('sound/simple_mob/abominable_infestation/aggregate/death.ogg')
+
+	/// Percent of max HP restored every Life() tick
+	var/regeneration_speed = 0.005
+	/// How much health should we have before throwing a new meatchip
+	var/spawn_health = 0
+	/// How much percents of max HP is reduced from damage_to_spawn on each new meatchip spawn
+	var/spawn_health_reduction = 0.03
+
+/obj/item/natural_weapon/bite/aggregate
+	name = "malformed teeth"
+	attack_verb = list("bitten with many of its deformed teeth")
+	hitsound = 'sound/simple_mob/abominable_infestation/aggregate/attack.ogg'
+	force = 50 // Yes. Fifty. Do NOT fight it in melee.
+	armor_penetration = 40
+
+// Show the foolish mortals just how deadly this attack was!
+/obj/item/natural_weapon/bite/aggregate/apply_hit_effect(mob/living/target, mob/living/user, hit_zone)
+	. = ..()
+	for(var/i = 1 to 3)
+		addtimer(CALLBACK(src, .proc/SpawnBiteEffect, target), i-1)
+
+/obj/item/natural_weapon/bite/aggregate/proc/SpawnBiteEffect(mob/living/target)
+	if(QDELETED(target))
+		return
+	var/obj/effect/temp_visual/bite/B = new (get_turf(target))
+	B.pixel_x = rand(-16, 16)
+	B.pixel_y = rand(-16, 16)
+
+/mob/living/simple_animal/hostile/infestation/aggregate/Initialize()
+	. = ..()
+	spawn_health = round(maxHealth * (1 - spawn_health_reduction))
+
+/mob/living/simple_animal/hostile/infestation/aggregate/Life()
+	. = ..()
+	if(!.)
+		return
+	if(health <= maxHealth)
+		adjustBruteLoss(-round(maxHealth * regeneration_speed))
+
+/mob/living/simple_animal/hostile/infestation/aggregate/updatehealth()
+	. = ..()
+	if(stat == DEAD || health <= 0)
+		return
+	if(health > spawn_health)
+		return
+	addtimer(CALLBACK(src, .proc/SpawnMeatChip), rand(1, 4))
+
+/mob/living/simple_animal/hostile/infestation/aggregate/proc/SpawnMeatChip()
+	if(stat == DEAD || health <= 0)
+		return
+	spawn_health -= round(maxHealth * spawn_health_reduction)
+	var/list/potential_targets = list()
+	for(var/mob/living/L in view(7, src))
+		if(L.stat)
+			continue
+		if(L.faction == faction)
+			continue
+		potential_targets += L
+	var/atom/throw_target = null
+	if(LAZYLEN(potential_targets))
+		throw_target = pick(potential_targets)
+	visible_message(SPAN_WARNING("A tiny creature flies off the [src]!"))
+	playsound(src, 'sound/simple_mob/abominable_infestation/aggregate/spawn_meatchip.ogg', 50, TRUE)
+	var/mob/living/simple_animal/hostile/infestation/meatchip/M = new(get_turf(src))
+	if(!throw_target)
+		throw_target = pick(getcircle(get_turf(src), 3))
+	M.throw_at(get_turf(throw_target), 3, 6)
