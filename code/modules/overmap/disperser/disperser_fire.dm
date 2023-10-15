@@ -121,10 +121,7 @@
 	return TRUE
 
 /obj/machinery/computer/ship/disperser/proc/fire_at_event(obj/effect/overmap/event/finaltarget, chargetype)
-	if(chargetype & finaltarget.weaknesses)
-		var/turf/T = finaltarget.loc
-		qdel(finaltarget)
-		overmap_event_handler.update_hazards(T)
+	finaltarget.FiredAt(src, chargetype)
 
 /obj/machinery/computer/ship/disperser/proc/fire_at_sector(obj/effect/overmap/visitable/finaltarget, obj/structure/ship_munition/disperser_charge/charge, chargetype)
 	var/list/targetareas = finaltarget.get_areas()

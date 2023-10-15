@@ -198,6 +198,13 @@
 	. = ..()
 	overmap_event_handler.update_hazards(T)
 
+/// Called from disperser_fire.dm whenever a charge is fired at this event
+/obj/effect/overmap/event/proc/FiredAt(obj/machinery/computer/ship/disperser/source, chargetype)
+	if(chargetype & weaknesses)
+		var/turf/T = get_turf(src)
+		qdel(src)
+		overmap_event_handler.update_hazards(T)
+
 /obj/effect/overmap/event/meteor
 	name = "asteroid field"
 	events = list(/datum/event/meteor_wave/overmap)
@@ -262,6 +269,171 @@
 	event_icon_states = list("wormhole1")
 	opacity = 0
 	color = "#aaaaaa"
+
+// Spawned by catastrophe level event.
+// Takes 8 hits to kill with OFD, constantly spawns infestation hives in the sector as long as it is alive
+// TODO: Make it fly around the space, similar to ships
+/obj/effect/overmap/event/leviathan
+	name = "leviathan"
+	dir = EAST
+	weaknesses = OVERMAP_WEAKNESS_EXPLOSIVE | OVERMAP_WEAKNESS_FIRE
+	events = list(/datum/event/leviathan_attack)
+	event_icon_states = list("leviathan1")
+	opacity = 0
+	color = COLOR_MAROON
+	/// When reaches 0 - finally dies
+	var/health = 8
+	/// How often it spawns infestation hives
+	var/hive_cooldown_time = 100 SECONDS
+	var/hive_cooldown
+	/// How many hives are spawned per activation
+	var/hive_spawn_count = 2
+	/// Wail sounds a sound to all nearby visitable places; Affected mobs get some negative effects as a result
+	var/wail_cooldown_time_lower = 40 SECONDS
+	var/wail_cooldown_time_upper = 100 SECONDS
+	var/wail_cooldown
+	var/list/wail_sounds = list(
+		'sound/simple_mob/abominable_infestation/leviathan/wail1.ogg',
+		'sound/simple_mob/abominable_infestation/leviathan/wail1-long.ogg',
+		'sound/simple_mob/abominable_infestation/leviathan/wail2.ogg',
+		)
+	var/death_sound = 'sound/simple_mob/abominable_infestation/leviathan/death.ogg'
+
+/obj/effect/overmap/event/leviathan/Initialize()
+	. = ..()
+	hive_cooldown = world.time + hive_cooldown_time
+	wail_cooldown = world.time + wail_cooldown_time_lower
+	START_PROCESSING(SSobj, src)
+	// You have a total of 25 minutes to kill it, before it completely overruns the sector
+	addtimer(CALLBACK(src, .proc/WarnApocalypse), 20 MINUTES)
+
+/obj/effect/overmap/event/leviathan/Process()
+	if(world.time >= hive_cooldown)
+		INVOKE_ASYNC(src, .proc/SpawnHives)
+	if(world.time > wail_cooldown)
+		INVOKE_ASYNC(src, .proc/Wail)
+
+/obj/effect/overmap/event/leviathan/Destroy()
+	STOP_PROCESSING(SSobj, src)
+	var/list/affected_z = list()
+	for(var/obj/effect/overmap/visitable/V in range(3, src))
+		affected_z |= V.map_z
+	for(var/mob/M in GLOB.player_list)
+		if(isnewplayer(M))
+			continue
+		if(!(M.z in affected_z))
+			continue
+		M.playsound_local(get_turf(M), death_sound, 100, FALSE)
+		to_chat(M, SPAN_DANGER("A terrible scream echoes through the space. The Leviathan has been finally defeated..."))
+	return ..()
+
+/obj/effect/overmap/event/leviathan/FiredAt(obj/machinery/computer/ship/disperser/source, chargetype)
+	if(chargetype & weaknesses)
+		health -= 1
+	if(health <= 0)
+		return ..()
+
+/obj/effect/overmap/event/leviathan/proc/SpawnHives(amount = hive_spawn_count)
+	hive_cooldown = world.time + hive_cooldown_time
+	var/list/candidate_turfs = block(locate(OVERMAP_EDGE, OVERMAP_EDGE, GLOB.using_map.overmap_z), locate(GLOB.using_map.overmap_size - OVERMAP_EDGE, GLOB.using_map.overmap_size - OVERMAP_EDGE, GLOB.using_map.overmap_z))
+	candidate_turfs = where(candidate_turfs, /proc/can_not_locate, /obj/effect/overmap)
+	for(var/i = 1 to amount)
+		if(!LAZYLEN(candidate_turfs))
+			break
+		var/turf/T = pick(candidate_turfs)
+		new /obj/effect/overmap/event/infestation_hive(T)
+		candidate_turfs -= T
+
+/obj/effect/overmap/event/leviathan/proc/Wail()
+	wail_cooldown = world.time + rand(wail_cooldown_time_lower, wail_cooldown_time_upper)
+	var/list/affected_z = list()
+	for(var/obj/effect/overmap/visitable/V in range(3, src))
+		affected_z |= V.map_z
+	if(!LAZYLEN(affected_z))
+		return
+	var/wail_sound = pick(wail_sounds)
+	var/sound_vol = rand(75, 150)
+	for(var/mob/M in GLOB.player_list)
+		if(isnewplayer(M))
+			continue
+		if(!(M.z in affected_z))
+			continue
+		M.playsound_local(get_turf(M), wail_sound, sound_vol, TRUE)
+		to_chat(M, SPAN_WARNING("A terrifying creatures is wailing somewhere far from you, yet it sends chills down your spine..."))
+		if(isliving(M))
+			var/mob/living/L = M
+			flash_color(L, flash_color = COLOR_MAROON, flash_time = 100)
+			// Evil effects >:)
+			if(ishuman(L) && prob(50))
+				var/mob/living/carbon/human/H = L
+				H.confused = max(H.confused + 5, H.confused)
+				var/obj/item/organ/external/my_head = H.get_organ(BP_HEAD)
+				H.custom_pain(SPAN_DANGER("This terrible wail makes your head hurt a lot!"), 25, affecting = my_head)
+
+/obj/effect/overmap/event/leviathan/proc/WarnApocalypse()
+	if(QDELETED(src))
+		return
+
+	var/list/affected_z = list()
+	for(var/i in map_sectors)
+		affected_z |= text2num(i)
+	command_announcement.Announce(
+		"The structure of space is being manipulated by the Leviathan entity. \n\
+		All nearby vessels have approximately 5 minutes before it is too late.",
+		"[GLOB.using_map.company_name] Infestation Alert",
+		'sound/effects/alarm_catastrophe.ogg',
+		zlevels = affected_z,
+		)
+
+	addtimer(CALLBACK(src, .proc/StartApocalypse), 5 MINUTES)
+
+/obj/effect/overmap/event/leviathan/proc/StartApocalypse()
+	if(QDELETED(src))
+		return
+
+	var/list/affected_z = list()
+	for(var/i in map_sectors)
+		affected_z |= text2num(i)
+	command_announcement.Announce(
+		"The hyperspace fluctuations have entered their final phase. All vessels are recommended to evacuate via bluespace teleportation. \n\
+		It is now too late.",
+		"[GLOB.using_map.company_name] Infestation Alert",
+		'sound/effects/alarm_catastrophe.ogg',
+		zlevels = affected_z,
+		)
+
+	// Tell players that they are, in fact, dead
+	for(var/mob/M in GLOB.player_list)
+		if(isnewplayer(M))
+			continue
+		if(!(M.z in affected_z))
+			continue
+		M.playsound_local(get_turf(M), 'sound/simple_mob/abominable_infestation/leviathan/apocalypse.ogg', 100, FALSE)
+		to_chat(M, SPAN_DANGER("A terrible noise disturbs the space, something bad has truly happened. It is all over."))
+		flash_color(M, flash_color = COLOR_MAROON, flash_time = 200)
+		if(ishuman(M))
+			var/mob/living/carbon/human/H = M
+			H.confused = max(M.confused + 30, M.confused)
+			var/obj/item/organ/external/my_head = H.get_organ(BP_HEAD)
+			H.custom_pain(SPAN_DANGER("MY HEAD HURTS! WHAT IS GOING ON!?"), 150, affecting = my_head)
+
+	// UNRAVEL THE FUCKING REALITY!!!
+	SpawnHives(120)
+	var/list/overmap_turfs = block(locate(OVERMAP_EDGE, OVERMAP_EDGE, GLOB.using_map.overmap_z), locate(GLOB.using_map.overmap_size - OVERMAP_EDGE, GLOB.using_map.overmap_size - OVERMAP_EDGE, GLOB.using_map.overmap_z))
+	for(var/turf/unsimulated/map/T in shuffle(overmap_turfs))
+		if(QDELETED(T))
+			continue
+		T.icon_state = "hell01"
+		sleep(1)
+
+/obj/effect/overmap/event/infestation_hive
+	name = "infestation hive"
+	events = list(/datum/event/infestation_hive_space)
+	opacity = 0
+	difficulty = EVENT_LEVEL_MODERATE
+	event_icon_states = list("hive1", "hive2")
+	weaknesses = OVERMAP_WEAKNESS_EXPLOSIVE | OVERMAP_WEAKNESS_FIRE
+	color = COLOR_MAROON
 
 //These now are basically only used to spawn hazards. Will be useful when we need to spawn group of moving hazards
 /datum/overmap_event

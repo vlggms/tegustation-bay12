@@ -137,3 +137,21 @@
 	animate(src, transform = M1, alpha = 192, time = 0.5 SECONDS)
 	animate(time = 2 SECONDS)
 	animate(transform = M2, alpha = 0, time = 0.5 SECONDS)
+
+/obj/effect/temp_visual/bite
+	name = "bite"
+	icon_state = "bite"
+	icon = 'icons/effects/effects.dmi'
+	opacity = FALSE
+	anchored = TRUE
+	mouse_opacity = FALSE
+	layer = ABOVE_HUMAN_LAYER
+
+	duration = 1 SECONDS
+
+/obj/effect/temp_visual/bite/Initialize()
+	. = ..()
+	addtimer(CALLBACK(src, .proc/FadeOut), (duration * 0.8))
+
+/obj/effect/temp_visual/bite/proc/FadeOut()
+	animate(src, alpha = 0, (duration * 0.2))

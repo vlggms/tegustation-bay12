@@ -65,10 +65,11 @@
 #define MAX_TEXTFILE_LENGTH 128000		// 512GQ file
 
 // Event defines.
-#define EVENT_LEVEL_MUNDANE  1
-#define EVENT_LEVEL_MODERATE 2
-#define EVENT_LEVEL_MAJOR    3
-#define EVENT_LEVEL_EXO      4
+#define EVENT_LEVEL_MUNDANE		1
+#define EVENT_LEVEL_MODERATE	2
+#define EVENT_LEVEL_MAJOR		3
+#define EVENT_LEVEL_CATASTROPHE	4
+#define EVENT_LEVEL_EXO			5
 
 //General-purpose life speed define for plants.
 #define HYDRO_SPEED_MULTIPLIER 1

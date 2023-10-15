@@ -169,11 +169,29 @@ var/list/gamemode_cache = list()
 	// Event settings
 	var/expected_round_length = 3 HOURS
 	/// If the first delay has a custom start time
-	var/static/list/event_first_run = list(EVENT_LEVEL_MUNDANE = null, EVENT_LEVEL_MODERATE = null, EVENT_LEVEL_MAJOR = list("lower" = 80 MINUTES, "upper" = 100 MINUTES), EVENT_LEVEL_EXO = list("lower" = 50 MINUTES, "upper" = 80 MINUTES))
+	var/static/list/event_first_run = list(
+		EVENT_LEVEL_MUNDANE = null,
+		EVENT_LEVEL_MODERATE = null,
+		EVENT_LEVEL_MAJOR = list("lower" = 80 MINUTES, "upper" = 100 MINUTES),
+		EVENT_LEVEL_CATASTROPHE = list("lower" = 150 MINUTES, "upper" = 200 MINUTES),
+		EVENT_LEVEL_EXO = list("lower" = 50 MINUTES, "upper" = 80 MINUTES),
+		)
 	/// The lowest delay until next event
-	var/static/list/event_delay_lower = list(EVENT_LEVEL_MUNDANE = 10 MINUTES, EVENT_LEVEL_MODERATE = 30 MINUTES, EVENT_LEVEL_MAJOR = 50 MINUTES, EVENT_LEVEL_EXO = 40 MINUTES)
+	var/static/list/event_delay_lower = list(
+		EVENT_LEVEL_MUNDANE = 10 MINUTES,
+		EVENT_LEVEL_MODERATE = 30 MINUTES,
+		EVENT_LEVEL_MAJOR = 50 MINUTES,
+		EVENT_LEVEL_CATASTROPHE = 100 MINUTES,
+		EVENT_LEVEL_EXO = 40 MINUTES,
+		)
 	/// The upper delay until next event
-	var/static/list/event_delay_upper = list(EVENT_LEVEL_MUNDANE = 15 MINUTES, EVENT_LEVEL_MODERATE = 45 MINUTES, EVENT_LEVEL_MAJOR = 70 MINUTES, EVENT_LEVEL_EXO = 60 MINUTES)
+	var/static/list/event_delay_upper = list(
+		EVENT_LEVEL_MUNDANE = 15 MINUTES,
+		EVENT_LEVEL_MODERATE = 45 MINUTES,
+		EVENT_LEVEL_MAJOR = 70 MINUTES,
+		EVENT_LEVEL_CATASTROPHE = 120 MINUTES,
+		EVENT_LEVEL_EXO = 60 MINUTES,
+		)
 
 	var/abandon_allowed = 1
 	var/ooc_allowed = 1
@@ -665,17 +683,29 @@ var/list/gamemode_cache = list()
 					var/values = text2numlist(value, ";")
 					config.event_first_run[EVENT_LEVEL_MAJOR] = list("lower" = MinutesToTicks(values[1]), "upper" = MinutesToTicks(values[2]))
 
+				if("event_custom_start_catastrophe")
+					var/values = text2numlist(value, ";")
+					config.event_first_run[EVENT_LEVEL_CATASTROPHE] = list("lower" = MinutesToTicks(values[1]), "upper" = MinutesToTicks(values[2]))
+
+				if("event_custom_start_exo")
+					var/values = text2numlist(value, ";")
+					config.event_first_run[EVENT_LEVEL_EXO] = list("lower" = MinutesToTicks(values[1]), "upper" = MinutesToTicks(values[2]))
+
 				if("event_delay_lower")
 					var/values = text2numlist(value, ";")
 					config.event_delay_lower[EVENT_LEVEL_MUNDANE] = MinutesToTicks(values[1])
 					config.event_delay_lower[EVENT_LEVEL_MODERATE] = MinutesToTicks(values[2])
 					config.event_delay_lower[EVENT_LEVEL_MAJOR] = MinutesToTicks(values[3])
+					config.event_delay_lower[EVENT_LEVEL_CATASTROPHE] = MinutesToTicks(values[4])
+					config.event_delay_lower[EVENT_LEVEL_EXO] = MinutesToTicks(values[5])
 
 				if("event_delay_upper")
 					var/values = text2numlist(value, ";")
 					config.event_delay_upper[EVENT_LEVEL_MUNDANE] = MinutesToTicks(values[1])
 					config.event_delay_upper[EVENT_LEVEL_MODERATE] = MinutesToTicks(values[2])
 					config.event_delay_upper[EVENT_LEVEL_MAJOR] = MinutesToTicks(values[3])
+					config.event_delay_lower[EVENT_LEVEL_CATASTROPHE] = MinutesToTicks(values[4])
+					config.event_delay_lower[EVENT_LEVEL_EXO] = MinutesToTicks(values[5])
 
 				if("starlight")
 					value = text2num(value)

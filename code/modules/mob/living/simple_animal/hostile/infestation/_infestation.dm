@@ -61,6 +61,11 @@
 		QDEL_IN(src, (5 SECONDS))
 	return ..()
 
+// While they are "resistant" to high temperatures, they are specifically weak to fire
+/mob/living/simple_animal/hostile/infestation/fire_burn_temperature()
+	. = ..()
+	. *= 3
+
 /mob/living/simple_animal/hostile/infestation/proc/BecomeEgg()
 	name = "egg"
 	desc = "A weird egg..?"
