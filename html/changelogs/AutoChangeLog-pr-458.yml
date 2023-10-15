@@ -1,0 +1,8 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - rscadd: 'Added first catastrophe level event: Leviathan. As it exists in the overmap,
+      it will slowly spawn infestation hives that act not much different from carp
+      schools, except those will throw infestation mobs at you. To defeat it - you
+      must fire 8 fire/explosive OFD charges. If you take too long(25 minutes) to
+      kill it, the entire sector will be overrun.'
