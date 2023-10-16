@@ -1,4 +1,5 @@
 #include "slavers_base_areas.dm"
+#include "slavers_base_random_rooms.dm"
 #include "../mining/mining_areas.dm"
 
 /obj/effect/overmap/visitable/sector/slavers_base
