@@ -26,9 +26,6 @@
 	spawn_cost = 1
 	generate_mining_by_z = 1
 	area_usage_test_exempted_root_areas = list(/area/slavers_base)
-	apc_test_exempt_areas = list(
-		/area/slavers_base/hangar = NO_SCRUBBER
-	)
 
 /obj/effect/shuttle_landmark/nav_slavers_base/nav1
 	name = "Slavers Base Navpoint #1"

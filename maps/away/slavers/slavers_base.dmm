@@ -308,6 +308,16 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/tiled,
 /area/slavers_base/hallway)
 "hg" = (
@@ -539,6 +549,10 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/slavers_base/security_wing)
+"mI" = (
+/obj/effect/gibspawner/generic,
+/turf/simulated/floor/tiled/dark,
+/area/slavers_base/morgue)
 "ni" = (
 /obj/structure/window/basic,
 /turf/simulated/floor/tiled/white,
@@ -1456,6 +1470,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/slavers_base/mining)
+"Hq" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/effect/gibspawner/generic,
+/turf/simulated/floor/plating,
+/area/slavers_base/cells)
 "Hw" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -1558,6 +1579,10 @@
 "Kj" = (
 /turf/simulated/floor/tiled/white,
 /area/slavers_base/medical)
+"Kk" = (
+/obj/effect/gibspawner/generic,
+/turf/simulated/floor/plating,
+/area/slavers_base/cells)
 "Kn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -2200,7 +2225,7 @@
 /turf/simulated/floor/tiled/white,
 /area/slavers_base/medical)
 "ZQ" = (
-/obj/machinery/atmospherics/binary/pump{
+/obj/machinery/atmospherics/binary/pump/on{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
@@ -19680,7 +19705,7 @@ Yd
 Yd
 TL
 Xi
-gk
+Kk
 eQ
 Bz
 Dp
@@ -20493,7 +20518,7 @@ rz
 Bz
 Dp
 RU
-gk
+Kk
 Ym
 TL
 rK
@@ -21700,7 +21725,7 @@ EJ
 NL
 TL
 XV
-gk
+Kk
 gF
 Bz
 Dp
@@ -22709,7 +22734,7 @@ hT
 hT
 hT
 TL
-Xi
+Hq
 gk
 hg
 Bz
@@ -22918,7 +22943,7 @@ Bz
 Dp
 Vg
 XV
-gk
+Kk
 TL
 SM
 gI
@@ -24534,7 +24559,7 @@ WQ
 GO
 mn
 Ua
-Ua
+Sk
 Nu
 Yd
 Yd
@@ -24937,7 +24962,7 @@ Yr
 Cb
 jQ
 mn
-Ua
+Sk
 Ua
 Nu
 Yd
@@ -25744,7 +25769,7 @@ vo
 tu
 gc
 WX
-gc
+mI
 PI
 vo
 Yd

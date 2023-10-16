@@ -2,7 +2,7 @@
 /obj/effect/spawner/room/slavers_base_mining
 	room_width = 5
 	room_height = 6
-	room_type = "abandoned_bunker_sec_dorm"
+	room_type = "slavers_base_mining"
 
 /datum/map_template/ruin/random_room/slavers_base_mining
 	name = "Slavers Base - Mining Normal"
