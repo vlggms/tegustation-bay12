@@ -254,9 +254,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/hologram/holopad/longrange/remoteship{
-	id_tag = "SEV Prickelnd Bridge"
-	},
+/obj/machinery/hologram/holopad/longrange/remoteship,
 /turf/simulated/floor/tiled/dark,
 /area/sol_shuttle/bridge)
 "et" = (
@@ -975,10 +973,10 @@
 	pixel_y = -24
 	},
 /obj/machinery/disposal,
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/sol_shuttle/bridge)
 "lD" = (
@@ -1057,6 +1055,7 @@
 	frequency = 5833;
 	id_tag = "sol-shuttle_exit1";
 	pixel_x = 21;
+	tag_chamber_sensor = "sol-shuttle_exit1_sensor";
 	tag_exterior_sensor = "sol-shuttle_exit1_exterior_sensor";
 	tag_interior_sensor = "sol-shuttle_exit1_sensor"
 	},
@@ -3300,13 +3299,13 @@
 /area/sol_shuttle/engineering)
 "Nm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
 /area/sol_shuttle/medbay)
@@ -3333,6 +3332,9 @@
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/sol_shuttle/medbay)
@@ -3780,13 +3782,13 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/sol_shuttle/ofd)
 "RR" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 1
-	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
 /area/sol_shuttle/medbay)
@@ -3821,6 +3823,9 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
 	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/sol_shuttle/medbay)
 "Sk" = (
@@ -3835,12 +3840,12 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/multi_tile/glass/engineering,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/multi_tile/glass/engineering,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/sol_shuttle/engineering)
 "Su" = (
@@ -4311,7 +4316,9 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/security,
+/obj/machinery/door/airlock/security{
+	name = "Field Dispenser"
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/sol_shuttle/ofd)
 "Yi" = (
