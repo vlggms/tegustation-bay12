@@ -49,6 +49,9 @@
 	max_ammo = 5
 	multiple_sprites = 1
 
+/obj/item/ammo_magazine/speedloader/clip/flame
+	ammo_type = /obj/item/ammo_casing/rifle/flame
+
 /obj/item/ammo_magazine/shotholder
 	name = "shotgun slug holder"
 	desc = "A convenient pouch that holds 12 gauge shells."
@@ -100,6 +103,11 @@
 	ammo_type = /obj/item/ammo_casing/shotgun/stunshell
 	matter = list(MATERIAL_STEEL = 1440, MATERIAL_GLASS = 2880)
 	marking_color = COLOR_MUZZLE_FLASH
+
+/obj/item/ammo_magazine/shotholder/flame
+	name = "incendiary shell holder"
+	ammo_type = /obj/item/ammo_casing/shotgun/flame
+	marking_color = COLOR_YELLOW
 
 /obj/item/ammo_magazine/shotholder/empty
 	name = "shotgun ammunition holder"
@@ -172,6 +180,14 @@
 	labels = list("rubber")
 	ammo_type = /obj/item/ammo_casing/pistol/rubber
 
+/obj/item/ammo_magazine/pistol/practice
+	labels = list("practice")
+	ammo_type = /obj/item/ammo_casing/pistol/practice
+
+/obj/item/ammo_magazine/pistol/flame
+	labels = list("incendiary")
+	ammo_type = /obj/item/ammo_casing/pistol/flame
+
 /obj/item/ammo_magazine/pistol/double
 	name = "doublestack pistol magazine"
 	icon_state = "pistol_mag"
@@ -185,6 +201,10 @@
 /obj/item/ammo_magazine/pistol/double/practice
 	labels = list("practice")
 	ammo_type = /obj/item/ammo_casing/pistol/practice
+
+/obj/item/ammo_magazine/pistol/double/flame
+	labels = list("incendiary")
+	ammo_type = /obj/item/ammo_casing/pistol/flame
 
 /obj/item/ammo_magazine/pistol/small
 	icon_state = "holdout"
@@ -303,6 +323,9 @@
 	max_ammo = 30
 	multiple_sprites = 1
 
+/obj/item/ammo_magazine/rifle/flame
+	ammo_type = /obj/item/ammo_casing/rifle/flame
+
 /obj/item/ammo_magazine/mil_rifle
 	name = "assault rifle magazine"
 	icon_state = "bullup"
@@ -313,6 +336,9 @@
 	ammo_type = /obj/item/ammo_casing/rifle/military
 	max_ammo = 20
 	multiple_sprites = 1
+
+/obj/item/ammo_magazine/mil_rifle/flame
+	ammo_type = /obj/item/ammo_casing/rifle/military/flame
 
 /obj/item/ammo_magazine/mil_rifle/empty
 	initial_ammo = 0
@@ -361,8 +387,14 @@
 	max_ammo = 30
 	multiple_sprites = 1
 
+/obj/item/ammo_magazine/ak47/flame
+	ammo_type = /obj/item/ammo_casing/rifle/ak47/flame
+
 /obj/item/ammo_magazine/ak47/extended
 	name = "AK47 extended magazine"
 	icon_state = "ak47-ext"
 	matter = list(MATERIAL_STEEL = 2400)
 	max_ammo = 50
+
+/obj/item/ammo_magazine/ak47/extended/flame //the weapon of satan
+	ammo_type = /obj/item/ammo_casing/rifle/ak47/flame

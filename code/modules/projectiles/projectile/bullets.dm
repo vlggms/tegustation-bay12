@@ -125,6 +125,15 @@
 	damage = 40
 	distance_falloff = 3
 
+/obj/item/projectile/bullet/pistol/flame
+	name = "incendiary bullet"
+	damage = 5
+
+/obj/item/projectile/bullet/pistol/flame/attack_mob(mob/living/target_mob, distance, miss_modifier)
+	. = ..()
+	target_mob.adjust_fire_stacks(1)
+	target_mob.IgniteMob()
+
 /obj/item/projectile/bullet/pistol/holdout
 	damage = 35
 	penetration_modifier = 1.2
@@ -199,6 +208,15 @@
 	damage = 60
 	armor_penetration = 10
 
+/obj/item/projectile/bullet/shotgun/flame
+	name = "incendiary slug"
+	damage = 20
+
+/obj/item/projectile/bullet/shotgun/flame/attack_mob(mob/living/target_mob, distance, miss_modifier)
+	. = ..()
+	target_mob.adjust_fire_stacks(1)
+	target_mob.IgniteMob()
+
 /obj/item/projectile/bullet/shotgun/beanbag		//because beanbags are not bullets
 	name = "beanbag"
 	damage = 20
@@ -228,11 +246,29 @@
 	penetrating = 1
 	distance_falloff = 1.5
 
+/obj/item/projectile/bullet/rifle/flame
+	name = "incendiary bullet"
+	damage = 10
+
+/obj/item/projectile/bullet/rifle/flame/attack_mob(mob/living/target_mob, distance, miss_modifier)
+	. = ..()
+	target_mob.adjust_fire_stacks(1)
+	target_mob.IgniteMob()
+
 /obj/item/projectile/bullet/rifle/military
 	fire_sound = 'sound/weapons/gunshot/gunshot2.ogg'
 	damage = 35
 	armor_penetration = 35
 	penetration_modifier = 1
+
+/obj/item/projectile/bullet/rifle/military/flame
+	name = "incendiary bullet"
+	damage = 20
+
+/obj/item/projectile/bullet/rifle/military/flame/attack_mob(mob/living/target_mob, distance, miss_modifier)
+	. = ..()
+	target_mob.adjust_fire_stacks(1)
+	target_mob.IgniteMob()
 
 /obj/item/projectile/bullet/rifle/t12
 	fire_sound = "gun_t12"
@@ -246,6 +282,15 @@
 /obj/item/projectile/bullet/rifle/ak47
 	fire_sound = 'sound/weapons/gunshot/ak47.ogg'
 	damage = 30
+
+/obj/item/projectile/bullet/rifle/ak47/flame
+	name = "incendiary bullet"
+	damage = 20
+
+/obj/item/projectile/bullet/rifle/ak47/flame/attack_mob(mob/living/target_mob, distance, miss_modifier)
+	. = ..()
+	target_mob.adjust_fire_stacks(1)
+	target_mob.IgniteMob()
 
 /obj/item/projectile/bullet/rifle/m16
 	fire_sound = 'sound/weapons/gunshot/m16.ogg'
