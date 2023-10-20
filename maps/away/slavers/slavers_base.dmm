@@ -124,6 +124,10 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/monotile,
 /area/slavers_base/security_wing)
+"cQ" = (
+/obj/item/material/shard,
+/turf/simulated/floor/tiled/white,
+/area/slavers_base/medical)
 "db" = (
 /obj/machinery/door/airlock/medical{
 	name = "Morgue"
@@ -209,6 +213,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/slavers_base/security_wing)
+"ft" = (
+/obj/effect/gibspawner/generic,
+/turf/simulated/floor/tiled,
+/area/slavers_base/hangar)
 "fx" = (
 /obj/effect/shuttle_landmark/nav_slavers_base/nav7,
 /turf/space,
@@ -275,10 +283,15 @@
 /area/slavers_base/cells)
 "gG" = (
 /obj/machinery/light,
+/obj/effect/gibspawner/generic,
 /turf/simulated/floor/tiled,
 /area/slavers_base/hallway)
 "gI" = (
 /obj/structure/table/standard,
+/obj/item/paper/spacer{
+	info = "<center><b> Contract </b></center> <br>This contract describes exchanging of monetary pieces for the right o? the ownership for following examples: <list><*> Human, age 17. Price - 1500 thalers. <*> Human, age 49. Price - 1100 thalers. <*> Unathi, age 28. Good fist fighter. Price - 2400 thalers. <*> Human, age 34. Expirienced medic. Price - 6800 thalers. </list> <b> Overall price: 11800 thalers</b><br><small>Place for signatures</small>";
+	name = "Contract"
+	},
 /turf/simulated/floor/carpet/blue2,
 /area/slavers_base/office)
 "gT" = (
@@ -461,6 +474,7 @@
 /area/slavers_base/security_wing)
 "kB" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/item/material/shard,
 /turf/simulated/floor/tiled,
 /area/slavers_base/mining)
 "kJ" = (
@@ -573,6 +587,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/item/material/shard,
 /turf/simulated/floor/tiled,
 /area/slavers_base/hallway)
 "nK" = (
@@ -720,6 +735,11 @@
 /obj/machinery/vending/snack,
 /turf/simulated/floor/tiled,
 /area/slavers_base/hallway)
+"pO" = (
+/obj/item/material/shard,
+/obj/effect/gibspawner/generic,
+/turf/simulated/floor/tiled/dark,
+/area/slavers_base/cells)
 "pY" = (
 /obj/structure/closet/secure_closet/guncabinet,
 /obj/random/raider/lilgun,
@@ -887,6 +907,9 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/slavers_base/powatm)
 "sT" = (
@@ -1007,6 +1030,11 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/slavers_base/powatm)
+"vC" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/gibspawner/generic,
+/turf/simulated/floor/tiled,
+/area/slavers_base/hallway)
 "vD" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -1168,6 +1196,7 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
+/obj/effect/gibspawner/generic,
 /turf/simulated/floor/tiled,
 /area/slavers_base/mining)
 "zA" = (
@@ -1207,6 +1236,12 @@
 /area/slavers_base/mining)
 "Ap" = (
 /obj/structure/table/rack,
+/obj/item/paper/spacer{
+	info = "Tonight, when lights are out. Prepare shivs, pieces of glass, whatever you might find.";
+	name = "Note";
+	pixel_x = -6;
+	pixel_y = -5
+	},
 /obj/item/pickaxe{
 	pixel_x = 5;
 	pixel_y = 3
@@ -1229,6 +1264,18 @@
 /area/slavers_base/hallway)
 "Ax" = (
 /obj/structure/table/standard,
+/obj/item/paper/spacer{
+	info = "We made over 200 grands for two last weeks. We should stay low-key for month or so, or we'll get our base discovered by fucking marshalls so shut your whining and relax, I'l l get you three crates of booze and some cargo to play with.";
+	name = "Note";
+	pixel_x = 11;
+	pixel_y = 6
+	},
+/obj/item/paper/spacer{
+	info = "If this fuck from A-3 keeps thinking he's better then piece of meat, throw him to hangar and show how little pressure turns diamonds into shit.";
+	name = "Note";
+	pixel_x = -6;
+	pixel_y = -4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/slavers_base/security_wing)
 "AK" = (
@@ -1344,6 +1391,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/slavers_base/powatm)
+"En" = (
+/obj/effect/gibspawner/generic,
+/turf/simulated/floor/tiled,
+/area/slavers_base/mining)
 "Er" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -1371,6 +1422,21 @@
 	},
 /turf/simulated/floor/tiled,
 /area/slavers_base/hallway)
+"ER" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/gibspawner/generic,
+/turf/simulated/floor/tiled/white,
+/area/slavers_base/medical)
 "Fa" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -1389,6 +1455,7 @@
 /area/slavers_base/hangar)
 "Fi" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/machinery/light,
 /turf/simulated/floor/tiled/dark,
 /area/slavers_base/powatm)
 "FE" = (
@@ -1590,6 +1657,11 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/slavers_base/hangar)
+"KE" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/gibspawner/generic,
+/turf/simulated/floor/tiled,
+/area/slavers_base/mining)
 "Lm" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 10
@@ -1613,6 +1685,10 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/dark,
 /area/slavers_base/security_wing)
+"LA" = (
+/obj/effect/gibspawner/generic,
+/turf/simulated/floor/tiled,
+/area/slavers_base/hallway)
 "LR" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -1726,6 +1802,11 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled,
 /area/slavers_base/hangar)
+"Ps" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/gibspawner/generic,
+/turf/simulated/floor/tiled/dark,
+/area/slavers_base/cells)
 "Px" = (
 /obj/structure/safe,
 /obj/machinery/light{
@@ -1983,6 +2064,21 @@
 "Ua" = (
 /turf/simulated/floor/tiled/monotile,
 /area/slavers_base/security_wing)
+"Ud" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/gibspawner/generic,
+/turf/simulated/floor/tiled/dark,
+/area/slavers_base/cells)
 "Uh" = (
 /turf/simulated/floor/tiled/dark,
 /area/slavers_base/powatm)
@@ -2048,6 +2144,16 @@
 /obj/item/storage/firstaid/o2,
 /turf/simulated/floor/tiled/white,
 /area/slavers_base/medical)
+"VW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/item/material/shard,
+/turf/simulated/floor/tiled,
+/area/slavers_base/mining)
 "WB" = (
 /obj/machinery/door/airlock/multi_tile/security{
 	name = "Work Area"
@@ -2076,6 +2182,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/slavers_base/hallway)
+"WJ" = (
+/obj/effect/gibspawner/generic,
+/turf/simulated/floor/tiled/white,
+/area/slavers_base/medical)
 "WQ" = (
 /turf/simulated/floor/tiled/dark,
 /area/slavers_base/security_wing)
@@ -2098,6 +2208,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/slavers_base/morgue)
+"WY" = (
+/obj/effect/gibspawner/generic,
+/turf/simulated/floor/tiled/dark,
+/area/slavers_base/cells)
 "Xb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
@@ -2189,6 +2303,21 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/slavers_base/cells)
+"Zy" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/gibspawner/generic,
+/turf/simulated/floor/tiled,
+/area/slavers_base/hallway)
 "ZE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/power/apc{
@@ -18296,7 +18425,7 @@ fH
 Kj
 qV
 Kj
-Kj
+WJ
 Kj
 Vv
 aa
@@ -18900,8 +19029,8 @@ Vv
 Ss
 ni
 Kj
-Vp
-Kj
+ER
+cQ
 Kj
 Kj
 Vv
@@ -19707,7 +19836,7 @@ TL
 Xi
 Kk
 eQ
-Bz
+WY
 Dp
 qH
 gk
@@ -20919,7 +21048,7 @@ TL
 TL
 Vg
 Vg
-Bz
+WY
 Dp
 Vg
 Vg
@@ -20927,7 +21056,7 @@ TL
 TL
 oS
 Oq
-Oq
+LA
 Zi
 kJ
 Oq
@@ -21114,7 +21243,7 @@ zh
 lL
 uc
 uf
-uc
+VW
 Hw
 uc
 WB
@@ -21316,11 +21445,11 @@ kB
 lS
 He
 He
-He
+KE
 HJ
 He
 Xb
-pd
+Ps
 pd
 pd
 yL
@@ -21329,7 +21458,7 @@ pd
 pd
 pd
 SR
-SR
+vC
 nt
 SR
 SR
@@ -21516,7 +21645,7 @@ Yd
 yV
 kT
 nK
-pk
+En
 yV
 Gf
 FX
@@ -21532,7 +21661,7 @@ Vg
 TL
 TL
 Yt
-ZH
+Zy
 TH
 TH
 or
@@ -21740,7 +21869,7 @@ fG
 Gu
 gG
 ww
-rx
+ft
 xm
 ij
 oz
@@ -22145,7 +22274,7 @@ fF
 IZ
 ww
 rx
-rx
+ft
 bq
 Yc
 Yc
@@ -22334,7 +22463,7 @@ Vg
 Vg
 Vg
 Bz
-Dp
+Ud
 Vg
 Vg
 Vg
@@ -22737,7 +22866,7 @@ TL
 Hq
 gk
 hg
-Bz
+pO
 Dp
 tR
 gk
