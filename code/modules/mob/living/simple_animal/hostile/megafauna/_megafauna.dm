@@ -24,12 +24,38 @@
 		playsound(src, deathsound, 50, 1)
 
 /datum/action/megafauna
+	action_type = AB_INNATE
 	var/chosen_message
 	var/chosen_attack_num
 
-/datum/action/megafauna/Trigger()
+/datum/action/megafauna/Activate()
 	to_chat(owner, FONT_LARGE(SPAN_DANGER(chosen_message)))
 	if(istype(owner, /mob/living/simple_animal/hostile/megafauna))
 		var/mob/living/simple_animal/hostile/megafauna/mf = owner
 		mf.chosen_attack = chosen_attack_num
+	return
+
+
+/datum/action/megafauna/toggle
+	var/deactivate_message
+	var/button_icon_state_deactivated = ""
+
+/datum/action/megafauna/toggle/Activate()
+	active = TRUE
+	to_chat(owner, FONT_LARGE(SPAN_DANGER(chosen_message)))
+	if(istype(owner, /mob/living/simple_animal/hostile/megafauna))
+		var/mob/living/simple_animal/hostile/megafauna/mf = owner
+		mf.chosen_attack = chosen_attack_num
+		button_icon_state = button_icon_state_deactivated
+		button.UpdateIcon()
+	return
+
+/datum/action/megafauna/toggle/Deactivate()
+	active = FALSE
+	to_chat(owner, FONT_LARGE(SPAN_DANGER(deactivate_message)))
+	if(istype(owner, /mob/living/simple_animal/hostile/megafauna))
+		var/mob/living/simple_animal/hostile/megafauna/mf = owner
+		mf.chosen_attack = 0
+		button_icon_state = initial(button_icon_state)
+		button.UpdateIcon()
 	return
