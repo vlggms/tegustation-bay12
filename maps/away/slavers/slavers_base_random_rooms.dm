@@ -1,7 +1,7 @@
 /* Slavers Base Rooms */
 /obj/effect/spawner/room/slavers_base_mining
-	room_width = 5
-	room_height = 6
+	room_width = 16
+	room_height = 16
 	room_type = "slavers_base_mining"
 
 /datum/map_template/ruin/random_room/slavers_base_mining
