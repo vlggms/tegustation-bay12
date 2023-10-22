@@ -332,3 +332,7 @@ var/list/slot_equipment_priority = list( \
 		var/obj/item/I = entry
 		if(I.body_parts_covered & body_parts)
 			. += I
+
+//not sure if this is duplicate but i couldnt find a proc that does this so temporary until i get called out for being an idiot i suppose
+/mob/proc/transferItemToLoc(obj/item/I, newloc = null, force = FALSE, silent = TRUE)
+	. = unEquip(I, newloc)
