@@ -18,8 +18,7 @@
 	hard_drive.store_file(new /datum/computer_file/program/wordprocessor())
 	hard_drive.store_file(new /datum/computer_file/program/records())
 	hard_drive.store_file(new /datum/computer_file/program/newscast())
-	if(prob(50)) //harmless tax software
-		hard_drive.store_file(new /datum/computer_file/program/uplink())
+	hard_drive.store_file(new /datum/computer_file/program/uplink()) //this shit was long overdue, its now for everyone, DEATH TO METAGAME
 	var/datum/extension/interactive/ntos/os = get_extension(src, /datum/extension/interactive/ntos)
 	if(os)
 		os.set_autorun("emailc")
