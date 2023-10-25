@@ -42,7 +42,7 @@
 	item_cost = 32
 	path = /obj/item/melee/energy/sword
 
-/datum/uplink_item/item/visible_weapons/powerfist¨
+/datum/uplink_item/item/visible_weapons/powerfist
 	name = "Power-Fist"
 	desc = "A gas-powered piston-based power-fist, this model is not usually seen and quite outdated. But can still pack a punch."
 	item_cost = 50
