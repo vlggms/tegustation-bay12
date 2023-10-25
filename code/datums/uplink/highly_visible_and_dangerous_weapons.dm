@@ -42,6 +42,12 @@
 	item_cost = 32
 	path = /obj/item/melee/energy/sword
 
+/datum/uplink_item/item/visible_weapons/powerfist¨
+	name = "Power-Fist"
+	desc = "A gas-powered piston-based power-fist, this model is not usually seen and quite outdated. But can still pack a punch."
+	item_cost = 50
+	path = /obj/item/melee/powerfist
+
 /datum/uplink_item/item/visible_weapons/silenced
 	name = "Small Silenced Pistol"
 	desc = "A kit with a pocket-sized holdout pistol, silencer, and an extra magazine. \
