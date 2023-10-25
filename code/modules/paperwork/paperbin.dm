@@ -127,7 +127,7 @@
 		else
 			to_chat(user, "<span class='notice'>There are no papers in the bin.</span>")
 	if(bin_pen)
-		to_chat(user, "There is \a [bin_pen] is in \the [src].")
+		to_chat(user, "There is \a [bin_pen] in \the [src].")
 
 
 /obj/item/paper_bin/on_update_icon()
