@@ -1,29 +1,29 @@
-/obj/item/device/scanner/health/radioactive_microlaser //a health scanner that instead of scanning will give you aids and radiation
+/obj/item/device/scanner/health/radioactive_microlaser //a health scanner that will give you aids and radiation
 	origin_tech = list(TECH_MATERIAL = 2, TECH_ESOTERIC = 5)
 	var/rads = 100
-	var/cooldown
-	var/delay = 4 SECONDS
+	var/cooldown //when it will be ready to dispense rads
+	var/delay = 4 SECONDS //how long we need to wait until we can dispense rads
 	var/microlaserLevel = 1
 
 /obj/item/device/scanner/health/radioactive_microlaser/examine(mob/user, distance)
 	. = ..()
-	if(user.mind in GLOB.traitors.current_antagonists || user.skill_check(SKILL_MEDICAL, SKILL_TRAINED) || user.skill_check(SKILL_DEVICES, SKILL_TRAINED))
+	if(istraitor(user) || user.skill_check(SKILL_MEDICAL, SKILL_TRAINED) || user.skill_check(SKILL_DEVICES, SKILL_TRAINED))
 		to_chat(user, "It might seem like a normal health analyzer, but you noticed a few differences here and there.")
-		to_chat(user, "There's a dial on the side, it seems to be set to the number [microlaserLevel].")
+		to_chat(user, "There's a dial on the side, it seems to be set to the number [microlaserLevel]. You can use <b>alt-click</b> to change the level.")
 
 /obj/item/device/scanner/health/radioactive_microlaser/scan(atom/A, mob/user)
 	. = ..()
 	if(cooldown > world.time)
-		to_chat(user, SPAN_WARNING("\The [src] is not yet done cooling down!"))
+		to_chat(user, SPAN_WARNING("<b>\The [src] is not yet done cooling down!</b>"))
 		return
 	if(isliving(A))
-		playsound(src, 'sound/effects/fastbeep.ogg', 20)
 		scan_data = medical_scan_action(A, user, src, mode)
+		playsound(src, 'sound/effects/fastbeep.ogg', 20)
 		SSradiation.radiate(A, rads)
 		cooldown = world.time + delay
 	return
 
-/obj/item/device/scanner/health/radioactive_microlaser/attack_self(mob/user)
+/obj/item/device/scanner/health/radioactive_microlaser/AltClick(mob/user)
 	. = ..()
 	switch(microlaserLevel)
 		if(1)
