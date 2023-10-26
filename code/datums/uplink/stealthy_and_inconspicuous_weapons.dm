@@ -43,4 +43,4 @@
 	name = "Radioactive Microlaser"
 	desc = "A powerful X-ray based device disguised as a regular handheld health analyzer. Use it on someone and they'll be ash in no time, comes with 3 modes. Runs on an internal bluespace battery, radiation suit not included."
 	item_cost = 25
-	path = /obj/item/device/radioactive_microlaser
+	path = /obj/item/device/scanner/health/radioactive_microlaser

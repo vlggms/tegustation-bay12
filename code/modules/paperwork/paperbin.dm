@@ -97,7 +97,7 @@
 		amount++
 	else if(istype(i, /obj/item/pen) && !bin_pen)
 		var/obj/item/pen/pen = i
-		if(!user.transferItemToLoc(pen, src))
+		if(!user.unEquip(pen, src))
 			return
 		to_chat(user, SPAN_NOTICE("You put [pen] in [src]."))
 		bin_pen = pen
