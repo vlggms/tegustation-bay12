@@ -15,6 +15,7 @@
 #define FACTION_TERRAGOV       "Terran Government"
 #define FACTION_ISC            "Independent Space Confederation"
 #define FACTION_NANOTRASEN     "NanoTrasen"
+#define FACTION_CYBERSUN       "Cybersun Industries"
 #define FACTION_FREETRADE      "Free Trade Union"
 #define FACTION_HEPHAESTUS     "Hephaestus Industries"
 #define FACTION_XYNERGY        "Xynergy"
@@ -28,6 +29,7 @@
 #define FACTION_TEST_SUBJECTS  "Test Subjects"
 #define FACTION_SPACECOPS      "Sol Federal Police"
 
+// Sol Central Government
 #define HOME_SYSTEM_EARTH      "Earth"
 #define HOME_SYSTEM_LUNA       "Luna"
 #define HOME_SYSTEM_MARS       "Mars"
@@ -35,9 +37,7 @@
 #define HOME_SYSTEM_CERES      "Ceres"
 #define HOME_SYSTEM_PLUTO      "Pluto"
 #define HOME_SYSTEM_TAU_CETI   "Ceti Epsilon"
-#define HOME_SYSTEM_HELIOS	   "Eos"
-#define HOME_SYSTEM_TERRA 	   "Terra"
-#define HOME_SYSTEM_NEW_EARTH  "New Earth"
+#define HOME_SYSTEM_HELIOS     "Eos"
 #define HOME_SYSTEM_TERSTEN    "Tersten"
 #define HOME_SYSTEM_LORRIMAN   "Lorriman"
 #define HOME_SYSTEM_CINU       "Cinu"
@@ -45,8 +45,17 @@
 #define HOME_SYSTEM_LORDANIA   "Lordania"
 #define HOME_SYSTEM_KINGSTON   "Kingston"
 #define HOME_SYSTEM_GAIA       "Gaia"
-#define HOME_SYSTEM_MAGNITKA   "Magnitka"
+// Terran Government
+#define HOME_SYSTEM_TERRA      "Terra"
+#define HOME_SYSTEM_NEW_EARTH  "New Earth"
+// Independent Space Confederation
 #define HOME_SYSTEM_TAUR       "Taur"
+#define HOME_SYSTEM_FOROS      "Foros"
+#define HOME_SYSTEM_ALARID     "Alarid"
+#define HOME_SYSTEM_PARVUS     "Parvus"
+// Independent
+#define HOME_SYSTEM_MAGNITKA   "Magnitka"
+// Other
 #define HOME_SYSTEM_STATELESS  "Stateless"
 #define HOME_SYSTEM_OTHER      "Other System"
 #define HOME_SYSTEM_DEEP_SPACE "Deep Space"

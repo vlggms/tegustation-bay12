@@ -79,15 +79,33 @@
 
 /decl/cultural_info/faction/remote/nanotrasen
 	name = FACTION_NANOTRASEN
-	description = "The NanoTrasen Corporation, commonly referred to as NT, is one of the great megacorporations of the modern day.\
-	Currently headquartered in New Amsterdam on Luna and headed by CEO Jackson Trasen It deals in research of the most advanced sciences, \
-	such as genetics, blue space, and - recently - the uses of phoron, as well as mass consumer manufacturing on a truly galactic scale. \
-	They also have a sizeable asset protection and security branch with which they secure both investments and occasionally new acquisitions \
-	- a distressing rival to some minor star systems, and a powerful administrative branch sitting atop it all, directing their company's actions. \
-	NanoTrasen is characterized by its aggression and questionable ethics, which, combined with the high emphasis they put on new, untested and dangerous \
+	description = "The NanoTrasen Corporation, commonly referred to as NT, is one of the great megacorporations \
+	of the modern day. Currently headquartered in Etaria on Foros in the ISC controlled space. \
+	It deals in research of the most advanced sciences, such as genetics, blue space, and, recently - \
+	the uses of phoron, as well as mass consumer manufacturing on a truly galactic scale. \
+	They also have a sizeable asset protection and security branch with which they secure both investments and \
+	occasionally new acquisitions - a distressing rival to some minor star systems, and a powerful administrative \
+	branch sitting atop it all, directing their company's actions. NanoTrasen is characterized by its aggression \
+	and questionable ethics, which, combined with the high emphasis they put on new, untested and dangerous \
 	technology, means their installations are often considered unsafe and hazardous."
-	economic_power = 1.2
-	subversive_potential = 15
+	economic_power = 1.5
+	subversive_potential = 25
+
+/decl/cultural_info/faction/cybersun
+	name = FACTION_CYBERSUN
+	description = "Cybersun Industries - the leader of the Syndicate, a corporate union initially formed to \
+	oppose the rapid expansion of NanoTrasen. Cybersun specializes in development of cybernetic technology of any \
+	scale, including production and employment of cyborgs, artificial intelligence, development of implants, \
+	cybernetic limbs, organs and various augments. Being the most powerful corporation within the Syndicate it is \
+	capable of effectively ordering many of other member companies, granting it authority outside of its field of \
+	expertise. Despite mostly relying on Gorlex Marauders mercenaries, it also controls a powerful private \
+	military group used for protection of its assets and interests. Cybersun is known for employing predatorial \
+	tactics against both its opposition and employees. While working for the biggest cybernetic corporation has its \
+	benefits, failing your task may set you in for a life of indentured service, with a debt that you won't ever pay \
+	off, eventually leading to \"permanent assignment to the cybernetic workforce\", which is just a corporate jargon \
+	for turning you into a cyborg against your will."
+	economic_power = 1.5
+	subversive_potential = 25
 
 /decl/cultural_info/faction/remote/xynergy
 	name = FACTION_XYNERGY
