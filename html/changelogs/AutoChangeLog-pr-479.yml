@@ -1,0 +1,5 @@
+author: EgorDinamit
+delete-after: true
+changes:
+  - balance: Aggregate infestation caste now deals more damage in melee.
+  - tweak: Meatchips are no longer dense. Try to aim better!

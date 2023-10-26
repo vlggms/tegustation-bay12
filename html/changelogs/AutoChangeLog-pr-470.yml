@@ -1,0 +1,10 @@
+author: casualspacestation14enjoyer
+delete-after: true
+changes:
+  - tweak: The TaxQuickly is now given to everyone to get rid of metagame.
+  - rscadd: You can now emag a grenade to make it permanently set to 'instant detonation'.
+  - rscadd: New fun traitor item, the "Injection Scalpel". It allows you to inject
+      a reagent into a person while slashing them. Good for  faking surgery. Not for
+      use as a scalpel, poison not included.
+  - admin: new istraitor() proc, this is more code stuff but there isn't a tag for
+      it

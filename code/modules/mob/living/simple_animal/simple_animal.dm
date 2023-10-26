@@ -309,7 +309,10 @@
 	if(burn_temperature < 1)
 		return
 
-	adjustBruteLoss(log(10, (burn_temperature + 10)))
+	// At minimum level of fire stacks and default(350) max body temp it will deal ~5 damage per tick
+	// At "absolute maximum" of around 100.000 burn_temperature it will deal ~80 damage per tick
+	var/burn_damage = round(sqrt(burn_temperature) * 0.25)
+	adjustBruteLoss(burn_damage)
 
 /mob/living/simple_animal/update_fire()
 	. = ..()

@@ -15,8 +15,8 @@
 	pass_flags = PASS_FLAG_TABLE | PASS_FLAG_GRILLE
 	movement_cooldown = 1.5
 
-	health = 20
-	maxHealth = 20
+	health = 10
+	maxHealth = 10
 
 	meat_type = /obj/item/reagent_containers/food/snacks/abominationmeat
 	meat_amount = 1

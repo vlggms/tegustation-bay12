@@ -33,6 +33,12 @@
 	item_cost = 20
 	path = /obj/item/pen/reagent/sleepy
 
+/datum/uplink_item/item/stealthy_weapons/fakescalp
+	name = "Injection Scalpel"
+	desc = "This 'scalpel' will inject a chemical of choice into the bloodstream of an unsuspecting patient, either it be a surgery or assault. WARNING: Not for use as a scalpel, chemicals not included."
+	item_cost = 15
+	path = /obj/item/material/knife/reagent/fakescalp
+
 /datum/uplink_item/item/stealthy_weapons/syringegun
 	name = "Disguised Syringe Gun"
 	desc = "A syringe gun disguised as an electronic cigarette with 4 darts included in the box. Chemicals not included!"
