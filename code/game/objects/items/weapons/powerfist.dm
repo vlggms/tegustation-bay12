@@ -69,17 +69,16 @@
 
 /obj/item/melee/powerfist/attack(mob/living/M, mob/living/user, target_zone, animate)
 	. = ..()
-	if(user.a_intent == I_HURT)
-		if(tank)
-			var/affecting = user.get_organ_target()
-			if(tank.air_contents.total_moles >= gas_per_fist*fist_pressure_setting)
-				tank.air_contents.remove_volume(gas_per_fist*fist_pressure_setting)
-				M.apply_damage(force*2*fist_pressure_setting, BRUTE, affecting) //might be a little too op... Too bad!
-				return
-			else
-				src.visible_message(SPAN_WARNING("\The [src] lets out a dull hiss..."))
-				return
-		else
-			to_chat(user, SPAN_WARNING("\The [src] doesn't have a tank!"))
-			return
-	return
+	if(!user.a_intent == I_HURT)
+		return
+	if(!tank)
+		to_chat(user, SPAN_WARNING("\The [src] doesn't have a tank!"))
+		return
+	var/affecting = user.get_organ_target()
+	if(tank.air_contents.total_moles >= gas_per_fist*fist_pressure_setting)
+		tank.air_contents.remove_volume(gas_per_fist*fist_pressure_setting)
+		M.apply_damage(force*2*fist_pressure_setting, BRUTE, affecting) //might be a little too op... Too bad!
+		return
+	else
+		src.visible_message(SPAN_WARNING("\The [src] lets out a dull hiss..."))
+		return
