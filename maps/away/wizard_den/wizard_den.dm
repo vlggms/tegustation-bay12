@@ -1,3 +1,5 @@
+#include "wizard_den_areas.dm"
+
 /obj/effect/overmap/visitable/sector/shrouded_moon
 	name = "shrouded moon"
 	desc = "A shrouded tiny moon with an artificial structure taking most of its surface.<br><br>There are unknown power readings coming from the sensor."
@@ -28,8 +30,7 @@
 	suffixes = list("wizard_den/wizard_den-3.dmm", "wizard_den/wizard_den-2.dmm", "wizard_den/wizard_den-1.dmm")
 	area_usage_test_exempted_root_areas = list(/area/wizard_den_away)
 	apc_test_exempt_areas = list(
-		/area/wizard_den_away/underground = NO_SCRUBBER|NO_VENT|NO_APC,
-		/area/wizard_den_away/ground = NO_SCRUBBER|NO_VENT|NO_APC
+		/area/wizard_den_away = NO_SCRUBBER|NO_VENT|NO_APC
 	)
 
 /obj/effect/shuttle_landmark/nav_wizard_den/nav1
