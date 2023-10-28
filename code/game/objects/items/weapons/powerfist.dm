@@ -15,7 +15,7 @@
 	throw_range = 7
 	w_class = ITEM_SIZE_LARGE //its a damn power fist, its big
 	var/fist_pressure_setting = LOW_PRESSURE
-	var/gas_per_fist = 20 //amount of shit to use on pawnch, scales with pressure setting
+	var/gas_per_fist = 8 //amount of shit to use on pawnch, scales with pressure setting
 	var/obj/item/tank/tank
 
 /obj/item/melee/powerfist/proc/pressure_setting_to_text(fist_pressure_setting)
@@ -68,9 +68,9 @@
 		return
 
 /obj/item/melee/powerfist/attack(mob/living/M, mob/living/user, target_zone, animate)
-	. = ..()
 	if(!user.a_intent == I_HURT)
 		return
+	. = ..()
 	if(!tank)
 		to_chat(user, SPAN_WARNING("\The [src] doesn't have a tank!"))
 		return

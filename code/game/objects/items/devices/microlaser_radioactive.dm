@@ -1,3 +1,5 @@
+// THE RADIOACTIVE MICROLASER
+
 /obj/item/device/scanner/health/radioactive_microlaser //a health scanner that will give you aids and radiation
 	origin_tech = list(TECH_MATERIAL = 2, TECH_ESOTERIC = 5)
 	var/rads = 100
@@ -7,9 +9,10 @@
 
 /obj/item/device/scanner/health/radioactive_microlaser/examine(mob/user, distance)
 	. = ..()
-	if(istraitor(user) || user.skill_check(SKILL_MEDICAL, SKILL_TRAINED) || user.skill_check(SKILL_DEVICES, SKILL_TRAINED))
-		to_chat(user, "It might seem like a normal health analyzer, but you noticed a few differences here and there.")
-		to_chat(user, "There's a dial on the side, it seems to be set to the number [microlaserLevel]. You can use <b>alt-click</b> to change the level.")
+	if(distance <= 1)
+		if(istraitor(user) || user.skill_check(SKILL_MEDICAL, SKILL_TRAINED) || user.skill_check(SKILL_DEVICES, SKILL_TRAINED))
+			to_chat(user, "It might seem like a normal health analyzer, but you noticed a few differences here and there.")
+			to_chat(user, SPAN_NOTICE("There's a dial on the side, it seems to be set to the number [microlaserLevel]. You can use <b>alt-click</b> to change the level."))
 
 /obj/item/device/scanner/health/radioactive_microlaser/scan(atom/A, mob/user)
 	. = ..()
