@@ -44,3 +44,9 @@
 	desc = "A syringe gun disguised as an electronic cigarette with 4 darts included in the box. Chemicals not included!"
 	item_cost = 10
 	path = /obj/item/storage/box/syndie_kit/syringegun
+
+/datum/uplink_item/item/stealthy_weapons/radioactive_microlaser
+	name = "Radioactive Microlaser"
+	desc = "A powerful X-ray based device disguised as a regular handheld health analyzer. Use it on someone and they'll be ash in no time, comes with 3 modes. Runs on an internal bluespace battery, radiation suit not included."
+	item_cost = 25
+	path = /obj/item/device/scanner/health/radioactive_microlaser

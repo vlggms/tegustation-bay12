@@ -38,7 +38,7 @@
 	colour = "green"
 
 /obj/item/pen/invisible
-	desc = "It's an invisble pen marker."
+	desc = "It's an invisible pen marker."
 	icon_state = "pen"
 	colour = "white"
 	color_description = "transluscent ink"

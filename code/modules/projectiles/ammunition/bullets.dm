@@ -5,6 +5,11 @@
 	icon_state = "pistolcasing"
 	spent_icon = "pistolcasing-spent"
 
+/obj/item/ammo_casing/pistol/flame
+	desc = "A incendiary pistol bullet casing."
+	projectile_type = /obj/item/projectile/bullet/pistol/flame
+	icon_state = "pistolcasing_fi" // fi = fireIncendiary
+
 /obj/item/ammo_casing/pistol/rubber
 	desc = "A rubber pistol bullet casing."
 	projectile_type = /obj/item/projectile/bullet/pistol/rubber
@@ -96,6 +101,12 @@
 	matter = list(MATERIAL_STEEL = 360)
 	fall_sounds = list('sound/weapons/guns/shotgun_fall.ogg')
 
+/obj/item/ammo_casing/shotgun/flame //dragons breath
+	desc = "A incendiary shotgun slug."
+	projectile_type = /obj/item/projectile/bullet/shotgun/flame
+	icon_state = "fishell"
+	spent_icon = "fishell-spent"
+
 /obj/item/ammo_casing/shotgun/pellet
 	name = "shotgun shell"
 	desc = "A shotshell."
@@ -159,6 +170,11 @@
 	icon_state = "riflecasing"
 	spent_icon = "riflecasing-spent"
 
+/obj/item/ammo_casing/rifle/flame
+	desc = "A incendiary rifle bullet casing."
+	projectile_type = /obj/item/projectile/bullet/rifle/flame
+	icon_state = "riflecasing_fi"
+
 /obj/item/ammo_casing/shell
 	name = "shell casing"
 	desc = "An antimaterial shell casing."
@@ -180,6 +196,9 @@
 	icon_state = "rifle_mil"
 	spent_icon = "rifle_mil-spent"
 
+/obj/item/ammo_casing/rifle/military/flame
+	projectile_type = /obj/item/projectile/bullet/rifle/military/flame
+
 /obj/item/ammo_casing/rifle/military/practice
 	desc = "A military rifle practice bullet casing."
 	projectile_type = /obj/item/projectile/bullet/rifle/military/practice
@@ -196,6 +215,11 @@
 /obj/item/ammo_casing/rifle/ak47
 	caliber = CALIBER_AK47
 	projectile_type = /obj/item/projectile/bullet/rifle/ak47
+
+/obj/item/ammo_casing/rifle/ak47/flame
+	desc = "A incendiary rifle bullet casing."
+	projectile_type = /obj/item/projectile/bullet/rifle/ak47/flame
+	icon_state = "riflecasing_fi"
 
 /obj/item/ammo_casing/rocket
 	name = "rocket shell"
