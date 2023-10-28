@@ -3,7 +3,7 @@
 	distance = "64 light years"
 	capital = "Saoradh"
 	economic_power = 1.3
-	ruling_body = "Governor of Taur"
+	ruling_body = FACTION_ISC
 	description = "Taur is an independent planet within Independent Space Confederation in Aontacht star system. It is the only habitable planet within its system. \
 	Taur is a lush planet with cold and rainy climate, focused on development of new technologies and heavy weaponry. \
 	The history of the planet, and Aontacht system as a whole, is nearly a legend within the ISC; Being the founder and first member of the confederation, \
@@ -16,7 +16,7 @@
 	distance = "41 light years"
 	capital = "Etaria"
 	economic_power = 1.8
-	ruling_body = "Corporate Puppet Government"
+	ruling_body = FACTION_ISC
 	description = "Foros is the only habitable planet located in Chrimatos system, controlled by joint corporate command of Nanotrasen and Syndicate \
 	via puppet \"democratic\" government. Historically the Chrimatos system was deliberately made into corporate haven, posing almost no \
 	taxes or additional regulations by the Imperial government with the intent to decrease the influence of the companies. \
@@ -30,7 +30,7 @@
 	distance = "49 light years"
 	capital = "New Rome" // What else did you expect
 	economic_power = 1.1
-	ruling_body = "Reborn Christian Church"
+	ruling_body = FACTION_ISC
 	description = "Alarid - the capital of the Reborn Christian Church located within Hartage system and ruled by Pontifex Maximus, or simply the Pope. \
 	Naturally a rather barren planet, the first colonists were sent here as a form of punishment for going against the Imperial government and \
 	attempting to resurrect the Christian Church. Ever since the dissolution, the church was gaining more and more autonomy and power, eventually \
@@ -46,7 +46,7 @@
 	distance = "49 light years"
 	capital = "Oppidum"
 	economic_power = 0.8
-	ruling_body = "Reborn Christian Church"
+	ruling_body = FACTION_ISC
 	description = "Parvus, the second inhabited planet of Hartage system. Being under direct control of the Reborn \
 	Christian Church the citizens are baptized from birth and undergo normal education alongside with religious one. \
 	Relatively recent discovery of rich deposits of natural gases made it the main source of profit for the Church. \
