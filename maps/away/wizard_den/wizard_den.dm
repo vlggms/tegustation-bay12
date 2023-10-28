@@ -36,19 +36,19 @@
 /obj/effect/shuttle_landmark/nav_wizard_den/nav1
 	name = "Shrouded Moon Landing Point #1"
 	landmark_tag = "nav_wiz_den_1"
-	base_area = /area/wizard_den_away/ground
+	base_area = /area/wizard_den_away/outdoors
 
 /obj/effect/shuttle_landmark/nav_wizard_den/nav2
 	name = "Shrouded Moon Landing Point #2"
 	landmark_tag = "nav_wiz_den_2"
-	base_area = /area/wizard_den_away/ground
+	base_area = /area/wizard_den_away/outdoors
 
 /obj/effect/shuttle_landmark/nav_wizard_den/nav3
 	name = "Shrouded Moon Landing Point #3"
 	landmark_tag = "nav_wiz_den_3"
-	base_area = /area/wizard_den_away/ground
+	base_area = /area/wizard_den_away/outdoors
 
 /obj/effect/shuttle_landmark/nav_wizard_den/nav4
 	name = "Shrouded Moon Navpoint #4"
 	landmark_tag = "nav_wiz_den_antag"
-	base_area = /area/wizard_den_away/ground
+	base_area = /area/wizard_den_away/outdoors
