@@ -27,7 +27,7 @@
 	description = "Three z-level map with a shrouded planet with big wizard den."
 	id = "wizard_den"
 	spawn_cost = 4
-	suffixes = list("wizard_den/wizard_den-3.dmm", "wizard_den/wizard_den-2.dmm", "wizard_den/wizard_den-1.dmm")
+	suffixes = list("wizard_den/wizard_den-1.dmm")
 	area_usage_test_exempted_root_areas = list(/area/wizard_den_away)
 	apc_test_exempt_areas = list(
 		/area/wizard_den_away = NO_SCRUBBER|NO_VENT|NO_APC
