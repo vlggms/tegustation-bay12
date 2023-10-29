@@ -41,7 +41,7 @@
 			break
 		var/dense_obj = FALSE
 		for(var/obj/O in T)
-			if(O.density)
+			if(O.density && !istype(O, /obj/structure/table) && !istype(O, /obj/structure/railing))
 				dense_obj = TRUE
 				break
 		if(dense_obj)
@@ -76,7 +76,7 @@
 					blood_col = H.species.blood_color
 				// BLOOD BLOOD BLOOD
 				for(var/i = 1 to min(round(slash_damage * 0.05), 15))
-					new /obj/effect/temp_visual/bloodsplatter(LT, get_dir(LT, start_turf), blood_col)
+					new /obj/effect/temp_visual/bloodsplatter(LT, prob(25) ? pick(GLOB.alldirs) : get_dir(LT, start_turf), blood_col)
 				if(!istype(LT))
 					continue
 				LT.add_blood(L)

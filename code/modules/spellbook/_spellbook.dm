@@ -66,7 +66,8 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 
 /obj/item/spellbook/interact(mob/living/user)
 	var/dat = null
-	dat += "Your spell points: [user.mind.mana.spell_points].<br>"
+	dat += "Your spell power: [user.mind.mana.spell_points].<br>"
+	dat += "Your mana level: [user.mind.mana.mana_level] / [user.mind.mana.mana_level_max].<br>"
 	dat += "Applied categories: <A href='byond://?src=\ref[src];categories=1'>[english_list(spell_categories, "None")].</a><br>"
 	dat += "<hr>"
 	for(var/spell_type in allowed_spells)

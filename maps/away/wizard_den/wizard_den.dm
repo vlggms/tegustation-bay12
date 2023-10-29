@@ -24,7 +24,7 @@
 
 /datum/map_template/ruin/away_site/wizard_den
 	name = "Wizard Den"
-	description = "Three z-level map with a shrouded planet with big wizard den."
+	description = "Three z-level map on a shrouded planet with big wizard den."
 	id = "wizard_den"
 	spawn_cost = 4
 	suffixes = list("wizard_den/wizard_den-1.dmm")
