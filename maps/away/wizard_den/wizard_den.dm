@@ -28,6 +28,7 @@
 	id = "wizard_den"
 	spawn_cost = 4
 	suffixes = list("wizard_den/wizard_den-1.dmm")
+	generate_mining_by_z = 1
 	area_usage_test_exempted_root_areas = list(/area/wizard_den_away)
 	apc_test_exempt_areas = list(
 		/area/wizard_den_away = NO_SCRUBBER|NO_VENT|NO_APC
