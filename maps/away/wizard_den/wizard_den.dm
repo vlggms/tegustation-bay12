@@ -16,8 +16,8 @@
 
 /obj/effect/overmap/visitable/sector/shrouded_moon/Initialize()
 	. = ..()
-	name = "[generate_planet_name()], \a [name]"
 	GLOB.number_of_planetoids++
+	name = "[generate_planet_name()], \a [name]"
 	var/matrix/M = new
 	M.Turn(90)
 	transform = M
