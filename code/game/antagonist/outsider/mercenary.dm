@@ -10,6 +10,7 @@ GLOBAL_DATUM_INIT(mercs, /datum/antagonist/mercenary, new)
 	welcome_text = "To speak on the strike team's private channel use :t."
 	flags = ANTAG_VOTABLE | ANTAG_OVERRIDE_JOB | ANTAG_OVERRIDE_MOB | ANTAG_CLEAR_EQUIPMENT | ANTAG_CHOOSE_NAME | ANTAG_SET_APPEARANCE | ANTAG_HAS_LEADER
 	antaghud_indicator = "hudoperative"
+	welcome_sound = 'sound/ambience/antag_alerts/operative_alert.ogg'
 
 	hard_cap = 4
 	hard_cap_round = 8

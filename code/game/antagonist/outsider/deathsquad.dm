@@ -9,6 +9,7 @@ GLOBAL_DATUM_INIT(deathsquad, /datum/antagonist/deathsquad, new)
 	flags = ANTAG_OVERRIDE_JOB | ANTAG_OVERRIDE_MOB | ANTAG_HAS_LEADER | ANTAG_RANDOM_EXCEPTED
 	default_access = list(access_cent_general, access_cent_specops, access_cent_living, access_cent_storage)
 	antaghud_indicator = "huddeathsquad"
+	welcome_sound = 'sound/ambience/antag_alerts/operative_alert.ogg'
 
 	hard_cap = 4
 	hard_cap_round = 8

@@ -14,6 +14,7 @@ GLOBAL_DATUM_INIT(revs, /datum/antagonist/revolutionary, new)
 	flags = ANTAG_SUSPICIOUS | ANTAG_VOTABLE
 	antaghud_indicator = "hud_rev"
 	skill_setter = /datum/antag_skill_setter/station
+	welcome_sound = 'sound/ambience/antag_alerts/revolutionary_alert.ogg'
 
 	hard_cap = 2
 	hard_cap_round = 4

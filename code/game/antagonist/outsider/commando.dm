@@ -8,6 +8,7 @@ GLOBAL_DATUM_INIT(commandos, /datum/antagonist/deathsquad/mercenary, new)
 	welcome_text = "You are in the employ of a criminal syndicate hostile to corporate interests."
 	id_type = /obj/item/card/id/centcom/ERT
 	flags = ANTAG_RANDOM_EXCEPTED
+	welcome_sound = 'sound/ambience/antag_alerts/operative_alert.ogg'
 
 	hard_cap = 4
 	hard_cap_round = 8
