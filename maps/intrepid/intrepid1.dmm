@@ -1221,6 +1221,11 @@
 /obj/machinery/camera/network/exploration{
 	c_tag = "Exploration - Squad Leader's Office"
 	},
+/obj/machinery/light_switch{
+	on = 1;
+	pixel_x = 6;
+	pixel_y = 25
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/command/commandquarters/squadleader)
 "aYQ" = (
@@ -3180,7 +3185,7 @@
 "cmM" = (
 /obj/structure/disposalpipe/segment/bent,
 /turf/simulated/floor/tiled/white,
-/area/shuttle/research/cockpit)
+/area/shuttle/research/hallway)
 "cmR" = (
 /obj/machinery/light/small,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -3383,7 +3388,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/white,
-/area/shuttle/research/cockpit)
+/area/shuttle/research/hallway)
 "cwo" = (
 /obj/machinery/cryopod{
 	dir = 2
@@ -3781,7 +3786,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white/monotile,
-/area/shuttle/research/cockpit)
+/area/shuttle/research/hallway)
 "cLL" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -4370,7 +4375,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/white,
-/area/shuttle/research/cockpit)
+/area/shuttle/research/hallway)
 "did" = (
 /turf/simulated/floor/tiled/dark/monotile{
 	initial_gas = null
@@ -6194,7 +6199,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white/monotile,
-/area/shuttle/research/cockpit)
+/area/shuttle/research/hallway)
 "esJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -6796,7 +6801,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/shuttle/research/cockpit)
+/area/shuttle/research/hallway)
 "eRc" = (
 /obj/structure/disposalpipe/junction/mirrored{
 	dir = 1
@@ -8407,7 +8412,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/white,
-/area/shuttle/research/cockpit)
+/area/shuttle/research/hallway)
 "gbm" = (
 /obj/machinery/vending/cola,
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -9153,7 +9158,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/white/monotile,
-/area/shuttle/research/cockpit)
+/area/shuttle/research/hallway)
 "gHe" = (
 /obj/structure/ladder/up,
 /obj/machinery/atmospherics/pipe/zpipe/up/supply,
@@ -9712,7 +9717,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/white/monotile,
-/area/shuttle/research/cockpit)
+/area/shuttle/research/hallway)
 "hey" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -10277,6 +10282,7 @@
 "hyl" = (
 /obj/effect/floor_decal/corner/orange/mono,
 /obj/machinery/door/window/brigdoor/eastleft,
+/mob/living/carbon/slime,
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/research/xenobiolab)
 "hyx" = (
@@ -11582,7 +11588,7 @@
 	department = "Research Reception"
 	},
 /turf/simulated/floor/tiled/white/monotile,
-/area/shuttle/research/cockpit)
+/area/shuttle/research/hallway)
 "iyY" = (
 /obj/item/crowbar/prybar,
 /obj/item/device/radio,
@@ -11966,7 +11972,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
-/area/shuttle/research/cockpit)
+/area/shuttle/research/hallway)
 "iLT" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -13599,7 +13605,7 @@
 	name = "Research Department Entrance"
 	},
 /turf/simulated/floor/tiled/white/monotile,
-/area/shuttle/research/cockpit)
+/area/shuttle/research/hallway)
 "kbf" = (
 /obj/effect/floor_decal/industrial/warning/fulltile,
 /obj/machinery/door/blast/shutters{
@@ -13836,7 +13842,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white/monotile,
-/area/shuttle/research/cockpit)
+/area/shuttle/research/hallway)
 "kkY" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -13978,7 +13984,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white/monotile,
-/area/shuttle/research/cockpit)
+/area/shuttle/research/hallway)
 "kqW" = (
 /obj/structure/table/standard,
 /obj/item/storage/toolbox/mechanical,
@@ -15538,7 +15544,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white/monotile,
-/area/shuttle/research/cockpit)
+/area/shuttle/research/hallway)
 "lwi" = (
 /obj/machinery/door/firedoor{
 	dir = 4
@@ -15930,7 +15936,7 @@
 /area/intrepid/misc/maint/aft)
 "lLG" = (
 /turf/simulated/floor/tiled/white,
-/area/shuttle/research/cockpit)
+/area/shuttle/research/hallway)
 "lMw" = (
 /obj/effect/floor_decal/corner/green/diagonal,
 /obj/machinery/computer/pandemic,
@@ -15953,6 +15959,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/mob/living/carbon/slime,
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/research/xenobiolab)
 "lPl" = (
@@ -16677,6 +16684,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/mob/living/carbon/slime,
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/research/xenobiolab)
 "mkK" = (
@@ -20074,7 +20082,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/white/monotile,
-/area/shuttle/research/cockpit)
+/area/shuttle/research/hallway)
 "oCx" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -23777,7 +23785,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/shuttle/research/cockpit)
+/area/shuttle/research/hallway)
 "ran" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/honey_extractor,
@@ -24861,7 +24869,7 @@
 	name = "Research Reception"
 	},
 /turf/simulated/floor/tiled/white/monotile,
-/area/shuttle/research/cockpit)
+/area/shuttle/research/hallway)
 "rOE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -25069,7 +25077,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white/monotile,
-/area/shuttle/research/cockpit)
+/area/shuttle/research/hallway)
 "rYC" = (
 /obj/effect/floor_decal/corner/red/half{
 	dir = 1
@@ -25420,7 +25428,7 @@
 /obj/effect/wallframe_spawn/reinforced,
 /obj/effect/paint_stripe/mauve,
 /turf/simulated/floor,
-/area/shuttle/research/cockpit)
+/area/shuttle/research/hallway)
 "sky" = (
 /obj/effect/floor_decal/corner/research/border{
 	dir = 6
@@ -25703,7 +25711,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white/monotile,
-/area/shuttle/research/cockpit)
+/area/shuttle/research/hallway)
 "srE" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -29794,11 +29802,6 @@
 /turf/simulated/floor/tiled,
 /area/intrepid/department/cargo/cargobay)
 "viW" = (
-/obj/machinery/light_switch{
-	dir = 1;
-	pixel_x = 32;
-	pixel_y = -25
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
@@ -31138,10 +31141,6 @@
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/intrepid/department/medical/treatment)
-"weZ" = (
-/obj/effect/paint_stripe/mauve,
-/turf/simulated/wall/prepainted,
-/area/shuttle/research/cockpit)
 "wfg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -31198,7 +31197,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white/monotile,
-/area/shuttle/research/cockpit)
+/area/shuttle/research/hallway)
 "wfT" = (
 /obj/machinery/light/spot{
 	dir = 4
@@ -31726,7 +31725,7 @@
 	},
 /obj/structure/filingcabinet/chestdrawer,
 /turf/simulated/floor/tiled/white/monotile,
-/area/shuttle/research/cockpit)
+/area/shuttle/research/hallway)
 "wBH" = (
 /obj/structure/railing/mapped,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -33392,6 +33391,7 @@
 /area/shuttle/research/xenoarchlab)
 "xFT" = (
 /obj/effect/floor_decal/corner/green/mono,
+/mob/living/carbon/slime,
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/research/xenobiolab)
 "xGu" = (
@@ -51561,7 +51561,7 @@ skk
 oCv
 raj
 wBF
-weZ
+uUj
 mzF
 lqw
 wny
@@ -51965,7 +51965,7 @@ skk
 iyX
 eQA
 kqE
-weZ
+uUj
 sZa
 sWb
 wny
@@ -52163,11 +52163,11 @@ cao
 sIf
 euw
 jPZ
-weZ
+uUj
 rYj
 wfx
 kkJ
-weZ
+uUj
 sSX
 hVf
 wny
@@ -52769,11 +52769,11 @@ cao
 odH
 peS
 bXZ
-weZ
+uUj
 cLI
 lwf
 srm
-weZ
+uUj
 wCC
 khB
 bNg
