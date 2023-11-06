@@ -1589,6 +1589,13 @@
 	},
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/department/engineering/portthruster)
+"eA" = (
+/obj/machinery/camera/emp_proof{
+	c_tag = "Singularity - Engine Room Starboard";
+	network = list("Engine")
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/intrepid/department/engineering/engine_room)
 "eB" = (
 /obj/structure/bed/roller,
 /obj/structure/iv_drip,
@@ -3314,13 +3321,14 @@
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/civillian/archive)
 "jn" = (
-/obj/effect/floor_decal/industrial/radiation{
-	dir = 1
-	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/industrial/fire/fulltile,
+/obj/effect/floor_decal/industrial/radiation{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/engineering/engine_room)
@@ -5554,6 +5562,19 @@
 /obj/structure/lattice,
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/misc/maint/superstructure)
+"pm" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/camera/emp_proof{
+	c_tag = "Singularity - Engine Room Aft";
+	network = list("Engine");
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/engineering/engine_room)
 "pn" = (
 /obj/effect/floor_decal/corner/blue/half,
 /obj/structure/sign/warning/nosmoking_2{
@@ -6451,13 +6472,14 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbayfour)
 "rQ" = (
-/obj/effect/floor_decal/industrial/radiation{
-	dir = 1
-	},
 /obj/structure/cable/orange{
 	icon_state = "1-2";
 	d1 = 1;
 	d2 = 2
+	},
+/obj/effect/floor_decal/industrial/fire/fulltile,
+/obj/effect/floor_decal/industrial/radiation{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/engineering/engine_room)
@@ -7497,6 +7519,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/engine_room)
 "us" = (
+/obj/effect/floor_decal/industrial/fire/fulltile,
 /obj/effect/floor_decal/industrial/radiation,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/engineering/engine_room)
@@ -11088,12 +11111,13 @@
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/morgue)
 "Eh" = (
-/obj/effect/floor_decal/industrial/radiation,
 /obj/structure/cable/orange{
 	icon_state = "1-2";
 	d1 = 1;
 	d2 = 2
 	},
+/obj/effect/floor_decal/industrial/fire/fulltile,
+/obj/effect/floor_decal/industrial/radiation,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/engineering/engine_room)
 "Ej" = (
@@ -13516,6 +13540,25 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/civillian/safe_room/starboard)
+"Lz" = (
+/obj/machinery/power/rad_collector,
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2";
+	pixel_y = 0
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/camera/emp_proof{
+	c_tag = "Singularity - Engine Room Fore";
+	network = list("Engine");
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/intrepid/department/engineering/engine_room)
 "LA" = (
 /obj/machinery/door/blast/shutters{
 	id_tag = "eva";
@@ -14996,6 +15039,11 @@
 	pixel_y = 7
 	},
 /obj/item/storage/toolbox/mechanical,
+/obj/machinery/camera/emp_proof{
+	c_tag = "Singularity - Particle Accelerator";
+	network = list("Engine");
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/engineering/engine_room)
 "PE" = (
@@ -15601,6 +15649,7 @@
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/department/civillian/dockbayfour)
 "Rr" = (
+/obj/effect/floor_decal/industrial/fire/fulltile,
 /obj/effect/floor_decal/industrial/radiation{
 	dir = 1
 	},
@@ -16029,12 +16078,13 @@
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/misc/hallway/portside)
 "SA" = (
-/obj/effect/floor_decal/industrial/radiation,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/industrial/fire/fulltile,
+/obj/effect/floor_decal/industrial/radiation,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/engineering/engine_room)
 "SB" = (
@@ -31648,7 +31698,7 @@ NO
 eb
 re
 NO
-NO
+Lz
 NO
 NO
 eb
@@ -32855,7 +32905,7 @@ ET
 hc
 ZE
 ZT
-WX
+eA
 jA
 Vz
 uN
@@ -33670,7 +33720,7 @@ Cp
 jn
 Nk
 SA
-Cp
+pm
 gu
 tW
 ih

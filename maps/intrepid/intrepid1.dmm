@@ -221,7 +221,7 @@
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor,
+/turf/simulated/floor/airless,
 /area/space)
 "akp" = (
 /obj/structure/table/standard,
@@ -723,6 +723,10 @@
 	departmentType = 1;
 	name = "Chief Medical Officer's Requests Console";
 	pixel_y = -32
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 23
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/cmo)
@@ -1513,13 +1517,13 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 4
 	},
-/obj/structure/sign/poster{
-	pixel_y = 32
-	},
 /obj/structure/cable/orange{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/structure/sign/terragov{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/portside)
@@ -1527,23 +1531,13 @@
 /turf/simulated/wall/prepainted,
 /area/intrepid/misc/maint/internalstarboard)
 "biS" = (
-/obj/structure/cable/green{
-	d1 = 5;
-	d2 = 6;
-	icon_state = "5-6"
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/fuel,
-/obj/structure/disposalpipe/segment,
-/obj/machinery/atmospherics/pipe/simple/visible/supply,
-/obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
-/obj/effect/floor_decal/corner/yellow{
-	dir = 6
-	},
+/obj/effect/floor_decal/corner/orange,
 /obj/structure/sign/directions/marine{
-	pixel_x = -32
+	dir = 4;
+	pixel_y = -32
 	},
-/turf/simulated/floor/tiled/techmaint,
-/area/intrepid/misc/maint/aft)
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/misc/hallway/portside)
 "biT" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/corner/research/mono,
@@ -2045,6 +2039,10 @@
 	name = "Captain's Requests Console";
 	pixel_y = 26
 	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 23
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/co)
 "byB" = (
@@ -2364,7 +2362,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/alarm{
+/obj/machinery/light_switch{
 	dir = 8;
 	pixel_x = 23
 	},
@@ -2556,6 +2554,21 @@
 /obj/item/stock_parts/smes_coil,
 /turf/simulated/floor,
 /area/intrepid/department/engineering/shieldcontrol)
+"bUX" = (
+/obj/effect/floor_decal/solarpanel,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar/improved,
+/turf/simulated/floor/airless,
+/area/space)
 "bVs" = (
 /obj/structure/table/standard,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -3088,7 +3101,7 @@
 	icon_state = "2-4"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor,
+/turf/simulated/floor/airless,
 /area/space)
 "cjD" = (
 /turf/space,
@@ -3944,6 +3957,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/item/pen/retractable,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/bridge)
 "cQO" = (
@@ -4777,14 +4791,13 @@
 /obj/structure/sign/directions/science{
 	pixel_y = 24
 	},
-/obj/structure/sign/directions{
-	dir = 8;
-	name = "\improper Senator's Office";
-	pixel_y = 32
-	},
 /obj/structure/sign/directions/infirmary{
 	dir = 4;
 	pixel_y = 40
+	},
+/obj/structure/sign/directions/senator{
+	pixel_y = 32;
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/intrepid/misc/hallway/portside)
@@ -5260,6 +5273,10 @@
 	departmentType = 7;
 	name = "Head of Personnel's Requests Console";
 	pixel_y = 26
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 23
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/xo)
@@ -6468,12 +6485,13 @@
 	dir = 4;
 	pixel_y = 32
 	},
-/obj/structure/sign/directions/science{
-	pixel_y = 40
-	},
 /obj/structure/sign/directions/supply{
 	dir = 4;
 	pixel_y = 24
+	},
+/obj/structure/sign/directions/engineering{
+	dir = 4;
+	pixel_y = 40
 	},
 /turf/simulated/floor/tiled,
 /area/intrepid/misc/hallway/starboard)
@@ -6702,10 +6720,6 @@
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
 /obj/effect/floor_decal/corner/yellow{
 	dir = 4
-	},
-/obj/structure/sign/directions/marine{
-	dir = 4;
-	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/misc/maint/aft)
@@ -7646,7 +7660,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/alarm{
+/obj/machinery/light_switch{
 	dir = 8;
 	pixel_x = 23
 	},
@@ -7718,6 +7732,9 @@
 /area/turbolift/marine/lift)
 "fzM" = (
 /obj/effect/floor_decal/corner/orange,
+/obj/structure/sign/terragov{
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/portside)
 "fzN" = (
@@ -8331,6 +8348,12 @@
 "fXh" = (
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/department/command/commandquarters/ce)
+"fXC" = (
+/obj/structure/table/standard,
+/obj/item/paper_bin,
+/obj/item/pen/retractable,
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/command/commandquarters/tgs)
 "fXL" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 10
@@ -11746,6 +11769,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/sign/poster{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/portside)
 "iDh" = (
@@ -12712,6 +12738,10 @@
 	name = "Chief Science Officer's Requests Console";
 	pixel_y = -32
 	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 23
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/rd)
 "jtX" = (
@@ -13015,8 +13045,7 @@
 /obj/structure/sign/directions/bridge{
 	pixel_y = 40
 	},
-/obj/structure/sign/directions/engineering{
-	dir = 4;
+/obj/structure/sign/directions/science{
 	pixel_y = 24
 	},
 /turf/simulated/floor/tiled,
@@ -14193,6 +14222,10 @@
 	name = "Chief Security Officer's Requests Console";
 	pixel_y = 26
 	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 23
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/cos)
 "kyl" = (
@@ -14859,6 +14892,14 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/shieldcontrol)
+"kZN" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/multi_tile/glass/research{
+	name = "Research Department Entrance";
+	autoset_access = 0
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/shuttle/research/hallway)
 "kZQ" = (
 /obj/machinery/atmospherics/valve/shutoff/fuel,
 /obj/structure/disposalpipe/segment,
@@ -16445,6 +16486,22 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/turbolift/marine/lift)
+"meg" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/sign/directions/marine{
+	pixel_x = 32
+	},
+/obj/structure/sign/directions/senator{
+	pixel_x = 32;
+	pixel_y = 8
+	},
+/obj/structure/sign/directions/janitor{
+	pixel_x = 32;
+	pixel_y = -7;
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/misc/hallway/center)
 "meE" = (
 /obj/effect/floor_decal/spline/fancy/black{
 	dir = 1
@@ -16892,12 +16949,11 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
-/obj/structure/sign/directions{
-	dir = 8;
-	name = "\improper Senator's Office";
-	pixel_y = -32
-	},
 /obj/effect/floor_decal/corner/blue,
+/obj/structure/sign/directions/senator{
+	pixel_y = -32;
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/portside)
 "msD" = (
@@ -17112,7 +17168,13 @@
 	},
 /obj/structure/sign/directions/janitor{
 	dir = 8;
-	pixel_y = 32
+	pixel_y = 33
+	},
+/obj/structure/sign/directions/marine{
+	pixel_y = 40
+	},
+/obj/structure/sign/directions/senator{
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled,
 /area/intrepid/misc/hallway/starboard)
@@ -19754,10 +19816,6 @@
 /obj/machinery/rotating_alarm/security_alarm{
 	pixel_y = 13
 	},
-/obj/structure/sign/directions/marine{
-	dir = 4;
-	pixel_y = 32
-	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/portside)
 "onk" = (
@@ -20898,24 +20956,24 @@
 /area/intrepid/misc/hallway/starboard)
 "paa" = (
 /obj/structure/table/rack,
-/obj/item/clothing/head/helmet/tactical,
-/obj/item/clothing/head/helmet/tactical,
-/obj/item/clothing/head/helmet/tactical,
-/obj/item/clothing/suit/armor/pcarrier/tan/tactical,
-/obj/item/clothing/suit/armor/pcarrier/tan/tactical,
-/obj/item/clothing/suit/armor/pcarrier/tan/tactical,
-/obj/item/clothing/accessory/armguards/tan,
-/obj/item/clothing/accessory/armguards/tan,
-/obj/item/clothing/accessory/armguards/tan,
-/obj/item/clothing/accessory/legguards/tan,
-/obj/item/clothing/accessory/legguards/tan,
-/obj/item/clothing/accessory/legguards/tan,
 /obj/machinery/vending/wallmed1{
 	pixel_y = 32
 	},
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/item/clothing/suit/armor/pcarrier/merc,
+/obj/item/clothing/suit/armor/pcarrier/merc,
+/obj/item/clothing/suit/armor/pcarrier/merc,
+/obj/item/clothing/accessory/legguards/merc,
+/obj/item/clothing/accessory/legguards/merc,
+/obj/item/clothing/accessory/legguards/merc,
+/obj/item/clothing/accessory/armguards/merc,
+/obj/item/clothing/accessory/armguards/merc,
+/obj/item/clothing/accessory/armguards/merc,
+/obj/item/clothing/head/helmet/merc,
+/obj/item/clothing/head/helmet/merc,
+/obj/item/clothing/head/helmet/merc,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/exploration/storage)
 "pab" = (
@@ -22443,7 +22501,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/alarm{
+/obj/machinery/light_switch{
 	dir = 8;
 	pixel_x = 23
 	},
@@ -23133,15 +23191,10 @@
 /area/intrepid/misc/hallway/portside)
 "qBp" = (
 /obj/effect/floor_decal/solarpanel,
-/obj/structure/lattice,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
+	d2 = 2;
+	icon_state = "0-2";
+	pixel_y = 0
 	},
 /obj/machinery/power/solar/improved,
 /turf/simulated/floor/airless,
@@ -25155,6 +25208,10 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/sign/directions/marine{
+	dir = 4;
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/portside)
 "rZP" = (
@@ -26181,7 +26238,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/alarm{
+/obj/machinery/light_switch{
 	dir = 8;
 	pixel_x = 23
 	},
@@ -27637,14 +27694,13 @@
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/center)
 "tGm" = (
-/obj/structure/sign/directions{
-	dir = 8;
-	name = "\improper Senator's Office";
-	pixel_y = -32
-	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 8;
 	icon_state = "corner_white"
+	},
+/obj/structure/sign/directions/senator{
+	pixel_y = -32;
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/portside)
@@ -28904,7 +28960,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/alarm{
+/obj/machinery/light_switch{
 	dir = 8;
 	pixel_x = 23
 	},
@@ -29563,7 +29619,6 @@
 /area/intrepid/department/engineering/lockerroom)
 "uWl" = (
 /obj/effect/floor_decal/solarpanel,
-/obj/structure/lattice,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -29854,6 +29909,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = -26;
+	pixel_y = -25
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/command/commandquarters/squadleader)
 "viY" = (
@@ -29922,7 +29982,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/alarm{
+/obj/machinery/light_switch{
 	dir = 8;
 	pixel_x = 23
 	},
@@ -30344,6 +30404,10 @@
 "vze" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 4
+	},
+/obj/structure/sign/directions/marine{
+	dir = 4;
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
 /area/intrepid/misc/hallway/portside)
@@ -33154,29 +33218,14 @@
 /turf/simulated/floor/tiled,
 /area/intrepid/misc/hallway/starboard)
 "xsL" = (
-/obj/machinery/atmospherics/pipe/simple/visible/fuel{
-	dir = 4
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/sign/directions/marine{
-	dir = 1;
-	pixel_y = 32
-	},
-/turf/simulated/floor,
-/area/intrepid/misc/maint/aft)
+/obj/structure/catwalk,
+/turf/simulated/floor/airless,
+/area/space)
 "xtd" = (
 /obj/machinery/disposal,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -33239,6 +33288,10 @@
 	departmentType = 3;
 	name = "Chief Engineer's Requests Console";
 	pixel_y = -32
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 23
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/ce)
@@ -34128,11 +34181,10 @@
 /area/intrepid/misc/hallway/portside)
 "ylJ" = (
 /obj/effect/floor_decal/solarpanel,
-/obj/structure/lattice,
 /obj/structure/cable{
 	icon_state = "0-1"
 	},
-/obj/machinery/power/tracker,
+/obj/machinery/power/solar/improved,
 /turf/simulated/floor/airless,
 /area/space)
 
@@ -45771,7 +45823,7 @@ jlX
 pOW
 bVs
 hGR
-hGR
+fXC
 rgz
 hfn
 vVc
@@ -52435,7 +52487,7 @@ rXn
 onk
 rhk
 onk
-jZM
+kZN
 lLG
 lLG
 lLG
@@ -58269,7 +58321,7 @@ lsf
 lRf
 qfF
 iue
-fBv
+meg
 glU
 fBv
 hwk
@@ -58696,7 +58748,7 @@ tYb
 cao
 rZC
 dlG
-fzM
+biS
 pLD
 dYX
 gDM
@@ -59297,7 +59349,7 @@ fXh
 fXh
 fXh
 fXh
-xsL
+iNC
 tYb
 cao
 omV
@@ -59490,7 +59542,7 @@ fzN
 kZQ
 eRT
 eiC
-biS
+uCO
 vgq
 uCO
 cCv
@@ -63080,7 +63132,7 @@ cjD
 cjD
 cjD
 akd
-rMR
+xsL
 lIZ
 wws
 qng
@@ -64092,7 +64144,7 @@ cjD
 cjD
 cjD
 akd
-rMR
+xsL
 lIZ
 wws
 qng
@@ -65104,7 +65156,7 @@ cjD
 cjD
 cjD
 akd
-rMR
+xsL
 lIZ
 wws
 qng
@@ -65711,7 +65763,7 @@ cjD
 cjD
 cjD
 cjD
-hEP
+bUX
 wws
 qng
 qng
@@ -65913,7 +65965,7 @@ cjD
 cjD
 cjD
 cjD
-qBp
+hEP
 wws
 wws
 wws
@@ -66179,7 +66231,7 @@ clp
 clp
 wxh
 wws
-qFY
+qBp
 caE
 eGJ
 cjD
