@@ -68,7 +68,7 @@
 		return
 
 /obj/item/melee/powerfist/attack(mob/living/M, mob/living/user, target_zone, animate)
-	if(!user.a_intent == I_HURT)
+	if(user.a_intent != I_HURT)
 		return
 	. = ..()
 	if(!tank)
