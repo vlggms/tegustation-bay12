@@ -11,6 +11,7 @@ Fever
 
 Bonus
 	Heats up your body.
+	Causes dehydration.
 
 //////////////////////////////////////
 */
@@ -28,9 +29,11 @@ Bonus
 	symptom_delay_min = 5
 	symptom_delay_max = 10
 	var/unsafe = FALSE //over the heat threshold
+	var/dehydrate = FALSE
 	threshold_descs = list(
 		"Resistance 5" = "Increases fever intensity, fever can overheat and harm the host.",
 		"Resistance 10" = "Further increases fever intensity.",
+		"Stage Speed 8" = "Causes dehydration."
 	)
 
 /datum/symptom/fever/Start(datum/disease/advance/A)
@@ -41,6 +44,8 @@ Bonus
 		unsafe = TRUE
 	if(A.properties["resistance"] >= 10)
 		power = 3
+	if(A.properties["stage_speed"] >= 8)
+		dehydrate = TRUE
 
 /datum/symptom/fever/Activate(datum/disease/advance/A)
 	if(!..())
@@ -51,6 +56,8 @@ Bonus
 			to_chat(H, SPAN_WARNING(pick("You feel hot.", "You feel like you're burning.")))
 		else
 			to_chat(H, SPAN_USERDANGER(pick("You feel too hot.", "You feel like your blood is boiling.")))
+	if(dehydrate)
+		H.adjust_hydration(-round(A.stage * 1.5))
 	SetBodyTemp(H, A)
 
 /**

@@ -25,8 +25,8 @@
 		list(/datum/reagent/medicine/meraline, /datum/reagent/medicine/dermaline, /datum/reagent/medicine/hyronalin, /datum/reagent/medicine/peridaxon),
 		list(/datum/reagent/medicine/dylovene/venaxilin, /datum/reagent/medicine/arithrazine),
 		list(/datum/reagent/medicine/rezadone),
-		list(/datum/chemical_reaction/zombiepowder),
-		list(/datum/chemical_reaction/three_eye)
+		list(/datum/reagent/toxin/zombie_powder),
+		list(/datum/reagent/three_eye)
 	)
 
 /datum/disease/advance/New()

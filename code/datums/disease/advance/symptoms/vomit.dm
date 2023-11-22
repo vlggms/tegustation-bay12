@@ -20,7 +20,6 @@ Bonus
 */
 
 /datum/symptom/vomit
-
 	name = "Vomiting"
 	desc = "The virus causes nausea and irritates the stomach, causing occasional vomit."
 	stealth = -2
@@ -32,8 +31,12 @@ Bonus
 	base_message_chance = 100
 	symptom_delay_min = 25
 	symptom_delay_max = 80
+	var/vomit_blood = FALSE
+	var/blood_count = 15
 	threshold_descs = list(
-		"Stealth 4" =  "The symptom remains hidden until active."
+		"Stealth 4" =  "The symptom remains hidden until active.",
+		"Stage Speed 8" = "Causes the host to vomit blood,",
+		"Stage Speed 14" = "Increases the amount of blood vomited.",
 	)
 
 /datum/symptom/vomit/Start(datum/disease/advance/A)
@@ -41,6 +44,10 @@ Bonus
 		return
 	if(A.properties["stealth"] >= 4)
 		suppress_warning = TRUE
+	if(A.properties["stage_rate"] >= 8)
+		vomit_blood = TRUE
+	if(A.properties["stage_rate"] >= 14)
+		blood_count = 30
 
 /datum/symptom/vomit/Activate(datum/disease/advance/A)
 	if(!..())
@@ -54,4 +61,4 @@ Bonus
 			vomit(M)
 
 /datum/symptom/vomit/proc/vomit(mob/living/carbon/M)
-	M.empty_stomach()
+	M.empty_stomach(vomit_blood, blood_count)

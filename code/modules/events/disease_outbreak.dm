@@ -23,7 +23,7 @@
 				// virus_type = pick()
 				advanced_virus = TRUE
 			if(EVENT_LEVEL_MODERATE)
-				virus_type = pick(/datum/disease/cold)
+				virus_type = pick(/datum/disease/cold, /datum/disease/advance/conspiracy)
 			if(EVENT_LEVEL_MUNDANE)
 				virus_type = pick(/datum/disease/advance/flu, /datum/disease/advance/cold)
 
