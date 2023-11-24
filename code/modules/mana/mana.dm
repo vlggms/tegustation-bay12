@@ -1,4 +1,4 @@
-// Stores a lot of things related to magic, not just mana
+// Stores mana-related things and spell points
 /datum/mana
 	var/mana_level = 10
 	var/mana_level_max = 10
@@ -18,6 +18,10 @@
 	StartRecharge()
 	return TRUE
 
+/datum/mana/proc/AddMana(amount = 0)
+	mana_level = clamp(mana_level + amount, 0, mana_level_max)
+	return TRUE
+
 // Starts a "process" of recharging if we should and can
 /datum/mana/proc/StartRecharge()
 	if(recharging)
@@ -34,6 +38,6 @@
 	if(mana_level >= mana_level_max)
 		recharging = FALSE
 		return FALSE
-	mana_level = clamp(mana_level + mana_recharge_speed * 0.5, 0, mana_level_max)
+	AddMana(mana_recharge_speed * 0.5)
 	addtimer(CALLBACK(src, .proc/RechargeMana), (0.5 SECONDS))
 	return TRUE

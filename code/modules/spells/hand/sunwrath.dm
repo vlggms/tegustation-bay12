@@ -10,6 +10,8 @@
 	spell_delay = 30
 	range = 4
 
+	categories = list(SPELL_CATEGORY_FIRE)
+
 	hud_state = "wiz_immolate"
 
 	spell_cost = 5
@@ -26,10 +28,10 @@
 	return 1
 
 /obj/effect/fake_fire/sunwrath
-	firelevel = 2
+	firelevel = 5
 	last_temperature = 0
-	pressure = 3000
+	pressure = 5000
 
 /obj/effect/fake_fire/sunwrath/Process() //Override, so we burn mobs only
 	for(var/mob/living/L in loc)
-		L.FireBurn(firelevel,last_temperature,pressure)
+		L.FireBurn(firelevel, last_temperature, pressure)

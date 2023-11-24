@@ -34,8 +34,10 @@
 // /atom signals
 
 // /atom/movable signals
-/// When an atom's Dispell() proc is called
+/// When an atom's Dispell() proc is called; Passes dispell strength as argument.
 #define COMSIG_ATOM_MOVABLE_DISPELL "atom_dispell"
+// Return value of a signal handler if dispell should be blocked
+#define COMPONENT_DISPELL_BLOCKED (1 << 0)
 
 // /area signals
 

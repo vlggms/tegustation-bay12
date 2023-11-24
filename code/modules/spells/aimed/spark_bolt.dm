@@ -14,17 +14,27 @@
 	active_msg = "You prepare to cast spark bolt!"
 	deactive_msg = "You dissipate the spark bolt."
 
-	level_max = list(UPGRADE_TOTAL = 2, UPGRADE_SPEED = 2, UPGRADE_POWER = 0)
+	level_max = list(UPGRADE_TOTAL = 4, UPGRADE_SPEED = 2, UPGRADE_POWER = 2)
 
 	categories = list()
 	spell_cost = 2
 	mana_cost = 0.5 // Per projectile, mind you
 
+/datum/spell/aimed/spark_bolt/empower_spell()
+	if(!..())
+		return FALSE
+
+	projectile_amount += 3
+
+	return "The spell [src] now has more projectiles stored per cast."
+
 /datum/spell/aimed/spark_bolt/quicken_spell()
 	if(!..())
 		return FALSE
 
-	return "The spell [src] now has lower cooldown."
+	ranged_clickcd = max(0.5, ranged_clickcd - 1.5)
+
+	return "The spell [src] now has lower cooldown and attack delay."
 
 // Projectile
 /obj/item/projectile/spark_bolt

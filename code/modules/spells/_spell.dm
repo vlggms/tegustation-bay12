@@ -155,7 +155,7 @@ GLOBAL_LIST_INIT(spell_categories, list(
 /datum/spell/proc/Click(mob/user = usr, skipcharge = 0) // When action button is pressed
 	if(cast_check(skipcharge, user))
 		choose_targets(user)
-	return 1
+	return TRUE
 
 /datum/spell/proc/choose_targets(mob/user = usr) //depends on subtype - see targeted.dm, aoe_turf.dm, dumbfire.dm, or code in general folder
 	return
@@ -334,12 +334,12 @@ GLOBAL_LIST_INIT(spell_categories, list(
 			if(SPELL_RECHARGE)
 				if(charge_counter < charge_max)
 					to_chat(user, still_recharging_msg)
-					return 0
+					return FALSE
 			if(SPELL_CHARGES)
 				if(!charge_counter)
 					to_chat(user, "<span class='notice'>[name] has no charges left.</span>")
-					return 0
-	return 1
+					return FALSE
+	return TRUE
 
 /datum/spell/proc/take_charge(mob/user = user, var/skipcharge)
 	if(!skipcharge)
@@ -347,15 +347,15 @@ GLOBAL_LIST_INIT(spell_categories, list(
 			if(SPELL_RECHARGE)
 				charge_counter = 0 //doesn't start recharging until the targets selecting ends
 				src.process()
-				return 1
+				return TRUE
 			if(SPELL_CHARGES)
 				charge_counter-- //returns the charge if the targets selecting fails
-				return 1
+				return TRUE
 			if(SPELL_HOLDVAR)
 				adjust_var(user, holder_var_type, holder_var_amount)
-				return 1
-		return 0
-	return 1
+				return TRUE
+		return FALSE
+	return TRUE
 
 /datum/spell/proc/TakeMana(mob/user = user)
 	if(!user.mind)
@@ -386,25 +386,25 @@ GLOBAL_LIST_INIT(spell_categories, list(
 
 /datum/spell/proc/can_improve(upgrade_type)
 	if(level_max[UPGRADE_TOTAL] <= ( spell_levels[UPGRADE_SPEED] + spell_levels[UPGRADE_POWER] )) //too many levels, can't do it
-		return 0
+		return FALSE
 
 	//if(upgrade_type && spell_levels[upgrade_type] && level_max[upgrade_type])
 	if(upgrade_type && spell_levels[upgrade_type] >= level_max[upgrade_type])
-		return 0
+		return FALSE
 
-	return 1
+	return TRUE
 
 /datum/spell/proc/empower_spell()
 	if(!can_improve(UPGRADE_POWER))
-		return 0
+		return FALSE
 
 	spell_levels[UPGRADE_POWER]++
 
-	return 1
+	return TRUE
 
 /datum/spell/proc/quicken_spell()
 	if(!can_improve(UPGRADE_SPEED))
-		return 0
+		return FALSE
 
 	spell_levels[UPGRADE_SPEED]++
 
@@ -441,7 +441,7 @@ GLOBAL_LIST_INIT(spell_categories, list(
 
 /datum/spell/proc/spell_do_after(var/mob/user as mob, delay as num, var/numticks = 5)
 	if(!user || isnull(user))
-		return 0
+		return FALSE
 
 	var/incap_flags = INCAPACITATION_STUNNED|INCAPACITATION_RESTRAINED|INCAPACITATION_BUCKLED_FULLY|INCAPACITATION_FORCELYING
 	if(!(spell_flags & (GHOSTCAST)))

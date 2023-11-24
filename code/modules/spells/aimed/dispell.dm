@@ -9,7 +9,6 @@
 	level_max = list(UPGRADE_TOTAL = 2, UPGRADE_SPEED = 0, UPGRADE_POWER = 2)
 	duration = 15
 	projectile_type = /obj/item/projectile/spell_projectile/dispell
-	var/amt_range = 0
 
 	active_msg = "You prepare to cast the bolt of dispell!"
 	deactive_msg = "You decide against using the bolt of dispell."
@@ -20,6 +19,9 @@
 	categories = list(SPELL_CATEGORY_ANTIMAGIC)
 	spell_cost = 2
 	mana_cost = 15
+
+	var/amt_range = 0
+	var/strength = DISPELL_WEAK
 
 /datum/spell/aimed/dispell_projectile/prox_cast(list/targets, atom/spell_holder)
 	var/atom/movable/A = targets[1]

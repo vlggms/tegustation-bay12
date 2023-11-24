@@ -56,4 +56,4 @@
 
 	flame_power += 20
 	flame_color = flame_power >= 60 ? COLOR_PURPLE : COLOR_RED
-	return "The [src] spell is now much more powerful."
+	return "The [src] spell is now [flame_power >= 60 ? "much " : ""]more powerful."

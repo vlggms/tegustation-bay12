@@ -61,8 +61,8 @@
 		ability_master.remove_ability(ability_master.get_ability_by_spell(spell_to_remove))
 	return 1
 
-/mob/proc/silence_spells(var/amount = 0)
-	if(amount < 0)
+/mob/proc/silence_spells(amount = 0)
+	if(!amount)
 		return
 
 	if(!ability_master)

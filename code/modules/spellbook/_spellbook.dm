@@ -24,6 +24,8 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 	var/list/allowed_spells = list()
 	/// Currently applied spell categories that will be shown; If none - all spells are shown.
 	var/list/spell_categories = list()
+	/// Defines how strong the dispell must be to successfuly remove the restrictions.
+	var/dispell_resistance = 0
 
 /obj/item/spellbook/Initialize()
 	. = ..()
@@ -152,9 +154,12 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 	interact(user)
 
 // Being hit with any source of dispell releases any locks
-/obj/item/spellbook/Dispell()
+/obj/item/spellbook/Dispell(dispell_strength = DISPELL_WEAK)
 	. = ..()
 	if(!istype(owner) && !(book_flags & WIZARD_ONLY) && !(book_flags & APPRENTICE_ONLY))
+		return
+	if(dispell_resistance > dispell_strength)
+		visible_message(SPAN_WARNING("\The [src] repels the surrounding dispelling magic!"))
 		return
 	visible_message(SPAN_NOTICE("\The [src] fizzles and sparks!"))
 	RemoveOwner()

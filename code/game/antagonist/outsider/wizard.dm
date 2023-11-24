@@ -19,28 +19,28 @@ GLOBAL_DATUM_INIT(wizards, /datum/antagonist/wizard, new)
 	faction = "wizard"
 	base_to_load = /datum/map_template/ruin/antag_spawn/wizard
 
-/datum/antagonist/wizard/create_objectives(var/datum/mind/wizard)
+/datum/antagonist/wizard/create_objectives(datum/mind/wizard)
 
 	if(!..())
 		return
 
-	var/kill
-	var/escape
-	var/steal
-	var/hijack
+	var/kill = FALSE
+	var/escape = FALSE
+	var/steal = FALSE
+	var/hijack = FALSE
 
 	switch(rand(1,100))
 		if(1 to 30)
-			escape = 1
-			kill = 1
+			escape = TRUE
+			kill = TRUE
 		if(31 to 60)
-			escape = 1
-			steal = 1
+			escape = TRUE
+			steal = TRUE
 		if(61 to 99)
-			kill = 1
-			steal = 1
+			kill = TRUE
+			steal = TRUE
 		else
-			hijack = 1
+			hijack = TRUE
 
 	if(kill)
 		var/datum/objective/assassinate/kill_objective = new
@@ -62,16 +62,16 @@ GLOBAL_DATUM_INIT(wizards, /datum/antagonist/wizard, new)
 		wizard.objectives |= hijack_objective
 	return
 
-/datum/antagonist/wizard/update_antag_mob(var/datum/mind/wizard)
+/datum/antagonist/wizard/update_antag_mob(datum/mind/wizard)
 	..()
 	wizard.StoreMemory("<B>Remember:</B> do not forget to prepare your spells.", /decl/memory_options/system)
 	wizard.current.real_name = "[pick(GLOB.wizard_first)] [pick(GLOB.wizard_second)]"
 	wizard.current.SetName(wizard.current.real_name)
 
-/datum/antagonist/wizard/equip(var/mob/living/carbon/human/wizard_mob)
+/datum/antagonist/wizard/equip(mob/living/carbon/human/wizard_mob)
 
 	if(!..())
-		return 0
+		return FALSE
 
 	var/outfit_type = pick(subtypesof(/decl/hierarchy/outfit/wizard))
 	var/decl/hierarchy/outfit/wizard_outfit = outfit_by_type(outfit_type)
@@ -83,7 +83,7 @@ GLOBAL_DATUM_INIT(wizards, /datum/antagonist/wizard, new)
 	wizard_mob.mind.mana.mana_recharge_speed = 2
 	wizard_mob.mind.mana.spell_points = 15 // Should allow wizard to buy 2-3 dangerous spells, or a bunch of small stuff
 
-	return 1
+	return TRUE
 
 /datum/antagonist/wizard/print_player_summary()
 	..()
@@ -108,28 +108,24 @@ GLOBAL_DATUM_INIT(wizards, /datum/antagonist/wizard, new)
 	for(var/datum/spell/spell_to_remove in mind.learned_spells)
 		remove_spell(spell_to_remove)
 
-obj/item/clothing
+/obj/item/clothing
 	var/wizard_garb = FALSE
 
-// Does this clothing slot count as wizard garb? (Combines a few checks)
-/proc/is_wiz_garb(var/obj/item/clothing/C)
+// Does this clothing slot count as wizard garb?
+/proc/is_wiz_garb(obj/item/clothing/C)
 	return istype(C) && C.wizard_garb
 
-/*Checks if the wizard is wearing the proper attire.
-Made a proc so this is not repeated 14 (or more) times.*/
+// Checks if the wizard is wearing the proper attire.
+// Made a proc so this is not repeated 14 (or more) times.
 /mob/proc/wearing_wiz_garb()
 	to_chat(src, "Silly creature, you're not a human. Only humans can cast this spell.")
-	return 0
+	return FALSE
 
-// Humans can wear clothes.
 /mob/living/carbon/human/wearing_wiz_garb()
-	if(!is_wiz_garb(src.wear_suit) && (!src.species.hud || (slot_wear_suit in src.species.hud.equip_slots)))
-		to_chat(src, "<span class='warning'>I don't feel strong enough without my robe.</span>")
-		return 0
-	if(!is_wiz_garb(src.shoes) && (!species.hud || (slot_shoes in src.species.hud.equip_slots)))
-		to_chat(src, "<span class='warning'>I don't feel strong enough without my sandals.</span>")
-		return 0
-	if(!is_wiz_garb(src.head) && (!species.hud || (slot_head in src.species.hud.equip_slots)))
-		to_chat(src, "<span class='warning'>I don't feel strong enough without my hat.</span>")
-		return 0
-	return 1
+	if(!is_wiz_garb(wear_suit) && (!species.hud || (slot_wear_suit in species.hud.equip_slots)))
+		to_chat(src, SPAN_WARNING("I don't feel strong enough without my robe."))
+		return FALSE
+	if(!is_wiz_garb(head) && (!species.hud || (slot_head in species.hud.equip_slots)))
+		to_chat(src, SPAN_WARNING("I don't feel strong enough without my hat."))
+		return FALSE
+	return TRUE
