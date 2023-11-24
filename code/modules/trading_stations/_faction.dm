@@ -2,7 +2,7 @@
 #define TRADE_FACTION_TERRAGOV "Terran Government"
 #define TRADE_FACTION_SOLGOV "Sol Central Government"
 #define TRADE_FACTION_NANOTRASEN "Nanotrasen"
-#define TRADE_FACTION_SYNDICATE "Syndicate"
+#define TRADE_FACTION_CYBERSUN "Cybersun Industries"
 
 #define FACTION_STATE_PROTECTORATE 3 // As in - target faction is the protectorate of ours
 #define FACTION_STATE_ALLY 2
@@ -22,7 +22,11 @@
 
 /datum/trade_faction/New()
 	. = ..()
-	GLOB.trade_factions += src
+	// Factions that aren't set in relationship list of the datum are set to neutral.
+	for(var/datum/trade_faction/TF in SSsupply.factions)
+		if(TF.name in relationship)
+			continue
+		relationship[TF.name] = FACTION_STATE_NEUTRAL
 
 /datum/trade_faction/proc/ModifyRelationsWith(target = null, change = FACTION_STATE_NEUTRAL)
 	if(istype(target, /datum/trade_faction))
@@ -35,12 +39,8 @@
 	name = TRADE_FACTION_INDEPENDENT
 	desc = "Belongs to no big players in the universe, all on their own in this cruel world."
 	ruler = null
-	relationship = list(
-		TRADE_FACTION_TERRAGOV = FACTION_STATE_NEUTRAL,
-		TRADE_FACTION_SOLGOV = FACTION_STATE_NEUTRAL,
-		TRADE_FACTION_NANOTRASEN = FACTION_STATE_NEUTRAL,
-		TRADE_FACTION_SYNDICATE = FACTION_STATE_NEUTRAL,
-		)
+
+// The big three
 
 /datum/trade_faction/terragov
 	name = TRADE_FACTION_TERRAGOV
@@ -64,9 +64,22 @@
 		TRADE_FACTION_SYNDICATE = FACTION_STATE_RIVAL,
 		)
 
+/datum/trade_faction/isc
+	name = TRADE_FACTION_ISC
+	desc = "A part of the Sol Central Government, a large democratic republic that rivals TerraGov."
+	ruler = "Terran Senate"
+	relationship = list(
+		TRADE_FACTION_INDEPENDENT = FACTION_STATE_NEUTRAL,
+		TRADE_FACTION_TERRAGOV = FACTION_STATE_RIVAL,
+		TRADE_FACTION_NANOTRASEN = FACTION_STATE_FRIEND,
+		TRADE_FACTION_SYNDICATE = FACTION_STATE_RIVAL,
+		)
+
+// Corpos
+
 /datum/trade_faction/nanotrasen
 	name = TRADE_FACTION_NANOTRASEN
-	desc = "A part of the mega-corporation that specializes in developing bluespace technologies."
+	desc = "A part of the mega-corporation that specializes in development of bluespace technology."
 	ruler = "Joe Nanotrasen" // I don't care
 	relationship = list(
 		TRADE_FACTION_INDEPENDENT = FACTION_STATE_NEUTRAL,
@@ -75,9 +88,9 @@
 		TRADE_FACTION_SYNDICATE = FACTION_STATE_ENEMY,
 		)
 
-/datum/trade_faction/syndicate
-	name = TRADE_FACTION_SYNDICATE
-	desc = "A part of the big conglomerate of corporations that fight Nanotrasen at any opportunity."
+/datum/trade_faction/cybersun
+	name = TRADE_FACTION_CYBERSUN
+	desc = "A part of the Cybersun mega-corporation which specializes in development of implants and artificial intelligence."
 	ruler = "John Syndicate" // Same here
 	relationship = list(
 		TRADE_FACTION_INDEPENDENT = FACTION_STATE_NEUTRAL,

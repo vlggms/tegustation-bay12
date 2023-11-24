@@ -17,7 +17,7 @@
 	var/list/hidden_inventory = list()
 
 /// Returns the datum of our faction
-/datum/trading_station/proc/Faction()
+/datum/trading_station/proc/GetFaction()
 	var/datum/trade_faction/TF = SSsupply.factions[faction]
 	if(!istype(TF))
 		return null

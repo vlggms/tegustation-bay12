@@ -15,7 +15,7 @@
 /datum/computer_file/program/supply
 	filename = "supply"
 	filedesc = "Supply Management"
-	nanomodule_path = /datum/nano_module/supply
+	nanomodule_path = /datum/nano_module/program/supply
 	ui_header = null // Set when enabled by an admin user.
 	program_icon_state = "supply"
 	program_key_state = "rd_key"
