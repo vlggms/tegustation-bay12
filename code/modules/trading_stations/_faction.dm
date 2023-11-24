@@ -1,22 +1,17 @@
-#define TRADE_FACTION_INDEPENDENT "Independent"
-#define TRADE_FACTION_TERRAGOV "Terran Government"
-#define TRADE_FACTION_SOLGOV "Sol Central Government"
-#define TRADE_FACTION_NANOTRASEN "Nanotrasen"
-#define TRADE_FACTION_CYBERSUN "Cybersun Industries"
-
-#define FACTION_STATE_PROTECTORATE 3 // As in - target faction is the protectorate of ours
-#define FACTION_STATE_ALLY 2
-#define FACTION_STATE_FRIEND 1
+// As in - target faction is the protectorate of ours
+#define FACTION_STATE_PROTECTORATE 4
+#define FACTION_STATE_ALLY 3
+#define FACTION_STATE_FRIEND 2
+#define FACTION_STATE_WELCOMING 1
 #define FACTION_STATE_NEUTRAL 0
-#define FACTION_STATE_RIVAL -1
-#define FACTION_STATE_ENEMY -2
-#define FACTION_STATE_WAR -3
+#define FACTION_STATE_ANIMOSITY -1
+#define FACTION_STATE_RIVAL -2
+#define FACTION_STATE_ENEMY -3
+#define FACTION_STATE_WAR -4
 
 /datum/trade_faction
 	var/name = "Tegu Station Developers"
 	var/desc = "A bunch of people that decided it is upon them to modify this universe as they see fit."
-	/// Whoever is the hypothetical leader of this faction, if any
-	var/ruler = "EgorDinamit"
 	/// Associative list Faction = State
 	var/relationship = list()
 
@@ -25,6 +20,8 @@
 	// Factions that aren't set in relationship list of the datum are set to neutral.
 	for(var/datum/trade_faction/TF in SSsupply.factions)
 		if(TF.name in relationship)
+			continue
+		if(TF.name == name)
 			continue
 		relationship[TF.name] = FACTION_STATE_NEUTRAL
 
@@ -36,65 +33,64 @@
 	return
 
 /datum/trade_faction/independent
-	name = TRADE_FACTION_INDEPENDENT
+	name = FACTION_INDEPENDENT
 	desc = "Belongs to no big players in the universe, all on their own in this cruel world."
-	ruler = null
 
 // The big three
 
 /datum/trade_faction/terragov
-	name = TRADE_FACTION_TERRAGOV
+	name = FACTION_TERRAGOV
 	desc = "A part of the Terran Government, a large authoritarian republic that rivals SolGov."
-	ruler = "Terran Senate"
 	relationship = list(
-		TRADE_FACTION_INDEPENDENT = FACTION_STATE_NEUTRAL,
-		TRADE_FACTION_SOLGOV = FACTION_STATE_RIVAL,
-		TRADE_FACTION_NANOTRASEN = FACTION_STATE_RIVAL,
-		TRADE_FACTION_SYNDICATE = FACTION_STATE_NEUTRAL,
+		FACTION_INDEPENDENT = FACTION_STATE_ANIMOSITY,
+		FACTION_SOL_CENTRAL = FACTION_STATE_RIVAL,
+		FACTION_ISC = FACTION_STATE_ENEMY,
+		FACTION_NANOTRASEN = FACTION_STATE_ANIMOSITY,
+		FACTION_CYBERSUN = FACTION_STATE_ANIMOSITY,
 		)
 
 /datum/trade_faction/solgov
-	name = TRADE_FACTION_SOLGOV
+	name = FACTION_SOL_CENTRAL
 	desc = "A part of the Sol Central Government, a large democratic republic that rivals TerraGov."
-	ruler = "Terran Senate"
 	relationship = list(
-		TRADE_FACTION_INDEPENDENT = FACTION_STATE_NEUTRAL,
-		TRADE_FACTION_TERRAGOV = FACTION_STATE_RIVAL,
-		TRADE_FACTION_NANOTRASEN = FACTION_STATE_FRIEND,
-		TRADE_FACTION_SYNDICATE = FACTION_STATE_RIVAL,
+		FACTION_INDEPENDENT = FACTION_STATE_ANIMOSITY,
+		FACTION_TERRAGOV = FACTION_STATE_RIVAL,
+		FACTION_ISC = FACTION_STATE_ENEMY,
+		FACTION_NANOTRASEN = FACTION_STATE_WELCOMING,
 		)
 
 /datum/trade_faction/isc
-	name = TRADE_FACTION_ISC
-	desc = "A part of the Sol Central Government, a large democratic republic that rivals TerraGov."
-	ruler = "Terran Senate"
+	name = FACTION_ISC
+	desc = "A part of the Independent Space Confederation, a military union of independent states opposing both SolGov and TerraGov."
 	relationship = list(
-		TRADE_FACTION_INDEPENDENT = FACTION_STATE_NEUTRAL,
-		TRADE_FACTION_TERRAGOV = FACTION_STATE_RIVAL,
-		TRADE_FACTION_NANOTRASEN = FACTION_STATE_FRIEND,
-		TRADE_FACTION_SYNDICATE = FACTION_STATE_RIVAL,
+		FACTION_TERRAGOV = FACTION_STATE_ENEMY,
+		FACTION_SOL_CENTRAL = FACTION_STATE_ENEMY,
+		FACTION_NANOTRASEN = FACTION_STATE_ALLY,
+		FACTION_CYBERSUN = FACTION_STATE_ALLY,
 		)
 
 // Corpos
 
 /datum/trade_faction/nanotrasen
-	name = TRADE_FACTION_NANOTRASEN
+	name = FACTION_NANOTRASEN
 	desc = "A part of the mega-corporation that specializes in development of bluespace technology."
-	ruler = "Joe Nanotrasen" // I don't care
 	relationship = list(
-		TRADE_FACTION_INDEPENDENT = FACTION_STATE_NEUTRAL,
-		TRADE_FACTION_TERRAGOV = FACTION_STATE_RIVAL,
-		TRADE_FACTION_SOLGOV = FACTION_STATE_FRIEND,
-		TRADE_FACTION_SYNDICATE = FACTION_STATE_ENEMY,
+		FACTION_TERRAGOV = FACTION_STATE_ANIMOSITY,
+		FACTION_SOL_CENTRAL = FACTION_STATE_WELCOMING,
+		FACTION_ISC = FACTION_STATE_ALLY,
+		FACTION_CYBERSUN = FACTION_STATE_ALLY,
 		)
 
 /datum/trade_faction/cybersun
-	name = TRADE_FACTION_CYBERSUN
+	name = FACTION_CYBERSUN
 	desc = "A part of the Cybersun mega-corporation which specializes in development of implants and artificial intelligence."
-	ruler = "John Syndicate" // Same here
 	relationship = list(
-		TRADE_FACTION_INDEPENDENT = FACTION_STATE_NEUTRAL,
-		TRADE_FACTION_TERRAGOV = FACTION_STATE_NEUTRAL,
-		TRADE_FACTION_SOLGOV = FACTION_STATE_RIVAL,
-		TRADE_FACTION_NANOTRASEN = FACTION_STATE_ENEMY,
+		FACTION_TERRAGOV = FACTION_STATE_ANIMOSITY,
+		FACTION_SOL_CENTRAL = FACTION_STATE_WELCOMING,
+		FACTION_ISC = FACTION_STATE_ALLY,
+		FACTION_NANOTRASEN = FACTION_STATE_ALLY,
 		)
+
+// Member states of ISC
+
+// Purely independent states

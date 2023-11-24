@@ -233,6 +233,7 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 	// List of events specific to a map
 	var/list/map_event_container = list()
 
+
 /datum/map/New()
 	if(!map_levels)
 		map_levels = station_levels.Copy()

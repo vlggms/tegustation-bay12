@@ -6,8 +6,7 @@
 	/// Amount of favor required to unlock hidden inventory
 	var/unlock_favor = 50
 	/// Its parent faction. Factions have relations with other factions, but it is usually outside of player's control
-	/// Has to be a string: See defines in trading_stations/_faction.dm
-	var/faction = TRADE_FACTION_INDEPENDENT
+	var/faction = FACTION_INDEPENDENT
 	var/start_hidden = FALSE
 	/// What we sell
 	/// A very big assoc list of Category = list(Type = Cost, ...)
