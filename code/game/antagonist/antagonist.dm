@@ -79,7 +79,7 @@
 		Think through your actions and make the roleplay immersive! <b>Please remember all \
 		rules aside from those without explicit exceptions apply to antagonists.</b>"
 
-	var/welcome_sound = 'sound/ambience/antag_alerts/fallback_alert.ogg' // sound to play when a player becomes an antag
+	var/welcome_sound = 'sound/misc/antag_alerts/fallback_alert.ogg' // sound to play when a player becomes an antag, fallback alert is never meant to be actually heard and thats why it sucks
 
 	// Map template that antag needs to load before spawning. Nulled after it's loaded.
 	var/datum/map_template/base_to_load
