@@ -19,6 +19,9 @@
 	ClearEffects()
 	return ..()
 
+/datum/spell/end_of_everything/choose_targets(mob/user = usr)
+	perform(user, list(holder))
+
 /datum/spell/end_of_everything/cast(list/targets, mob/user)
 	if(!do_after(user, 10 SECONDS))
 		to_chat(user, SPAN_NOTICE("You cancel the ritual!"))
@@ -44,7 +47,6 @@
 		return
 
 	user.say("Annihilatio!")
-	active_effects += new /obj/effect/end_of_everything(T)
 
 	if(!do_after(user, 10 SECONDS))
 		to_chat(user, SPAN_NOTICE("You cancel the ritual!"))
@@ -69,6 +71,7 @@
 	user.say("Cruel gods, end it all!!")
 	to_chat(user, SPAN_WARNING("You feel like you should run..."))
 	log_and_message_admins("finished casting [src] spell!", user)
+	ClearEffects()
 
 	new /obj/effect/end_of_everything(get_turf(user))
 
@@ -88,6 +91,8 @@
 /obj/effect/end_of_everything
 	icon = 'icons/effects/160x160.dmi'
 	icon_state = "end_of_everything"
+	pixel_x = -64
+	pixel_y = -64
 
 /obj/effect/end_of_everything/Initialize()
 	. = ..()
@@ -103,8 +108,8 @@
 			continue
 		if(!(M.z in GetConnectedZlevels(z)))
 			continue
-		M.playsound_local(get_turf(M), 'sound/magic/end_of_everything.ogg', 50, FALSE)
-		to_chat(M, SPAN_USERDANGER("Something terrible has happened..."))
+		M.playsound_local(get_turf(M), 'sound/magic/end_of_everything.ogg', 100, FALSE)
+		to_chat(M, SPAN_DANGER("Something terrible has happened..."))
 		M.flash_eyes(FLASH_PROTECTION_MAJOR * 2)
 
 	// HAHAHAHAHA

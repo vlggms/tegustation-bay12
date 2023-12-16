@@ -71,7 +71,7 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 /obj/item/spellbook/examine(mob/user)
 	. = ..()
 	if(LAZYLEN(authors))
-		to_chat(SPAN_NOTICE("The book was written by [english_list(authors)]."))
+		to_chat(user, SPAN_NOTICE("The book was written by [english_list(authors)]."))
 
 /obj/item/spellbook/interact(mob/living/user)
 	var/dat = null
@@ -104,7 +104,10 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 			if(!istype(ML))
 				return
 
-		var/list/valid_spells = list("-- None --") + (user.mind.learned_spells - allowed_spells)
+		var/list/valid_spells = list("-- None --")
+		for(var/datum/spell/SM in user.mind.learned_spells)
+			valid_spells |= SM.type
+		valid_spells -= allowed_spells
 		var/datum/spell/S = input(user, "Which spell do you want to engrave?", "Options") as anything in valid_spells
 		if(!istype(S))
 			return
