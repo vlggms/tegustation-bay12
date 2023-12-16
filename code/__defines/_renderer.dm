@@ -320,34 +320,15 @@ GLOBAL_LIST_EMPTY(zmimic_renderers)
 	. = ..()
 	Setup()
 
-/// Renders the /obj/effect/effect/end_of_everything
-/atom/movable/renderer/outline_red
-	name = "Red Outline Effect"
-	group = RENDER_GROUP_NONE
-	plane = OUTLINE_EFFECT_PLANE
-	render_target_name = "*outline_red"
-	mouse_opacity = MOUSE_OPACITY_UNCLICKABLE
-
 /atom/movable/renderer/scene_group/Initialize()
 	. = ..()
 	filters += filter(type = "displace", render_source = "*warp", size = 5)
 	filters += filter(type = "displace", render_source = HEAT_COMPOSITE_TARGET, size = 2.5)
-	filters += filter(type = "outline", render_source = "*outline_red", size = 2, color = "#ff0000", flags = OUTLINE_SHARP)
 
 
 /// Example of a warp filter for /renderer use
 /obj/effect/effect/warp
 	plane = WARP_EFFECT_PLANE
-	appearance_flags = PIXEL_SCALE
-	icon = 'icons/effects/352x352.dmi'
-	icon_state = "singularity_s11"
-	pixel_x = -176
-	pixel_y = -176
-	no_z_overlay = TRUE
-
-// Used by end of everything spell
-/obj/effect/effect/end_of_everything
-	plane = OUTLINE_EFFECT_PLANE
 	appearance_flags = PIXEL_SCALE
 	icon = 'icons/effects/352x352.dmi'
 	icon_state = "singularity_s11"

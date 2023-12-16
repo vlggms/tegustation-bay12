@@ -44,7 +44,7 @@
 		return
 
 	user.say("Annihilatio!")
-	active_effects += new /obj/effect/effect/end_of_everything(T)
+	active_effects += new /obj/effect/end_of_everything(T)
 
 	if(!do_after(user, 10 SECONDS))
 		to_chat(user, SPAN_NOTICE("You cancel the ritual!"))
@@ -91,6 +91,7 @@
 
 /obj/effect/end_of_everything/Initialize()
 	. = ..()
+	filters += filter(type = "outline", size = 3, color = "#ff000024", flags = OUTLINE_SHARP)
 	var/matrix/M = transform
 	transform *= 0.1 // Starts small
 	animate(src, transform = M, alpha = 175, time = 24 SECONDS)
