@@ -10,7 +10,7 @@
 
 /datum/mana/proc/UseMana(mob/user, amount = 0, silent = TRUE)
 	if(mana_level < amount)
-		if(!silent)
+		if(!silent && user)
 			to_chat(user, SPAN_WARNING("You do not have enough mana!"))
 		return FALSE
 	mana_level = clamp(mana_level - amount, 0, mana_level_max)
@@ -41,3 +41,16 @@
 	AddMana(mana_recharge_speed * 0.5)
 	addtimer(CALLBACK(src, .proc/RechargeMana), (0.5 SECONDS))
 	return TRUE
+
+/* Helpers procs */
+/proc/GetManaDatum(atom/target)
+	if(istype(target, /mob))
+		var/mob/M = target
+		if(istype(M.mind))
+			return M.mind.mana
+	// Certain items may store mana
+	if(istype(target, /obj/item))
+		var/obj/item/I = target
+		if(istype(I.mana))
+			return I.mana
+	return null

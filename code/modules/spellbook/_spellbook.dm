@@ -26,6 +26,8 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 	var/list/spell_categories = list()
 	/// Defines how strong the dispell must be to successfuly remove the restrictions.
 	var/dispell_resistance = 0
+	/// List of people that contributed to the list of spells in it.
+	var/list/authors = list()
 
 /obj/item/spellbook/Initialize()
 	. = ..()
@@ -66,6 +68,11 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 
 	interact(user)
 
+/obj/item/spellbook/examine(mob/user)
+	. = ..()
+	if(LAZYLEN(authors))
+		to_chat(SPAN_NOTICE("The book was written by [english_list(authors)]."))
+
 /obj/item/spellbook/interact(mob/living/user)
 	var/dat = null
 	dat += "Your spell power: [user.mind.mana.spell_points].<br>"
@@ -83,6 +90,44 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 	var/datum/browser/popup = new(user, "spellbook", "Spell Book")
 	popup.set_content(dat)
 	popup.open()
+
+/obj/item/spellbook/attackby(obj/item/P, mob/user)
+	. = ..()
+	if(istype(P, /obj/item/pen/fancy/quill/magic))
+		if(!LAZYLEN(user.mind.learned_spells))
+			to_chat(user, SPAN_WARNING("You know no spells, and therefore, cannot write in \the [src]..."))
+			return
+		var/datum/mana/ML = GetManaDatum(user)
+		if(!istype(ML))
+			// It could happen so that the quill itself has mana, let's try it
+			ML = GetManaDatum(P)
+			if(!istype(ML))
+				return
+
+		var/list/valid_spells = list("-- None --") + (user.mind.learned_spells - allowed_spells)
+		var/datum/spell/S = input(user, "Which spell do you want to engrave?", "Options") as anything in valid_spells
+		if(!istype(S))
+			return
+		if(!(S in user.mind.learned_spells))
+			return
+		if(S.type in allowed_spells)
+			to_chat(user, SPAN_WARNING("[S.name] spell is already written in [src]!"))
+			return
+		// You need to have enough mana for the spell
+		if(!ML.UseMana(user, S.mana_cost))
+			to_chat(user, SPAN_WARNING("You do not have enough mana to engrave [S.name] into \the [src]!"))
+			return
+
+		// There we add the spell, at last
+		allowed_spells |= S.type
+		authors |= user.real_name
+		user.visible_message(
+			SPAN_NOTICE("[user] writes something in \the [src]!"),
+			SPAN_NOTICE("<b>You've engraved <i>[S.name]</i> spell in \the [src]!</b>"),
+			SPAN_NOTICE("You hear someone writing in a book."),
+			)
+		playsound(get_turf(user),'sound/effects/pen1.ogg', 50, 1)
+		return
 
 /obj/item/spellbook/CanUseTopic(mob/M)
 	if(!istype(M))
@@ -103,6 +148,7 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 	return ..()
 
 /obj/item/spellbook/OnTopic(mob/user, href_list)
+	/* Normal interact topics */
 	if(href_list["spell"])
 		var/datum/spell/S = text2path(href_list["spell"])
 		if(!ispath(S))
@@ -116,7 +162,7 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 			return TOPIC_NOACTION
 		// No duplicate spells
 		if(locate(path) in user.mind.learned_spells)
-			return
+			return TOPIC_NOACTION
 		SendFeedback(path) //feedback stuff
 		if(ispath(path, /datum/spell))
 			to_chat(user, AddSpell(user, path))
