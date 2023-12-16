@@ -106,8 +106,9 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 
 		var/list/valid_spells = list("-- None --")
 		for(var/datum/spell/SM in user.mind.learned_spells)
-			valid_spells |= SM.type
-		valid_spells -= allowed_spells
+			if(SM.type in allowed_spells)
+				continue
+			valid_spells |= SM
 		var/datum/spell/S = input(user, "Which spell do you want to engrave?", "Options") as anything in valid_spells
 		if(!istype(S))
 			return
