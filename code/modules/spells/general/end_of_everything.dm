@@ -29,7 +29,10 @@
 		ClearEffects()
 		return
 
+	var/turf/T = get_turf(user)
+
 	user.say("Interitus!")
+	active_effects += new /obj/effect/effect/warp(T)
 
 	if(!do_after(user, 10 SECONDS))
 		to_chat(user, SPAN_NOTICE("You cancel the ritual!"))
@@ -41,6 +44,7 @@
 		return
 
 	user.say("Annihilatio!")
+	active_effects += new /obj/effect/effect/end_of_everything(T)
 
 	if(!do_after(user, 10 SECONDS))
 		to_chat(user, SPAN_NOTICE("You cancel the ritual!"))
@@ -80,4 +84,44 @@
 		qdel(D)
 	active_effects = null
 
+// Essentially a delayed all-consuming terror
 /obj/effect/end_of_everything
+	icon = 'icons/effects/160x160.dmi'
+	icon_state = "end_of_everything"
+
+/obj/effect/end_of_everything/Initialize()
+	. = ..()
+	var/matrix/M = transform
+	transform *= 0.1 // Starts small
+	animate(src, transform = M, alpha = 175, time = 24 SECONDS)
+	addtimer(CALLBACK(src, .proc/Annihilation), 25 SECONDS)
+
+/obj/effect/end_of_everything/proc/Annihilation()
+	for(var/mob/M in GLOB.player_list)
+		if(isnewplayer(M))
+			continue
+		if(!(M.z in GetConnectedZlevels(z)))
+			continue
+		M.playsound_local(get_turf(M), 'sound/magic/end_of_everything.ogg', 50, FALSE)
+		to_chat(M, SPAN_USERDANGER("Something terrible has happened..."))
+		M.flash_eyes(FLASH_PROTECTION_MAJOR * 2)
+
+	// HAHAHAHAHA
+	for(var/atom/A in range(32, src))
+		if(prob(15))
+			continue
+		if(prob(33))
+			if(istype(A, /mob/living))
+				var/mob/living/L = A
+				if(prob(50))
+					L.dust()
+				else
+					L.gib()
+				continue
+			qdel(A)
+			continue
+		A.ex_act(rand(1, 2))
+
+	var/matrix/M = transform * 3
+	animate(src, transform = M, alpha = 0, time = 4 SECONDS)
+	QDEL_IN(src, (5 SECONDS))

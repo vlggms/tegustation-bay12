@@ -43,6 +43,7 @@
 #define HEAT_EFFECT_TARGET    "*heat"
 #define HEAT_COMPOSITE_TARGET "*heatc"
 #define WARP_EFFECT_PLANE -3
+#define OUTLINE_EFFECT_PLANE -2
 
 #define DEFAULT_PLANE                   1
 	#define PLATING_LAYER               1
