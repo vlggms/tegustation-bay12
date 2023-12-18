@@ -43,6 +43,9 @@
 	#include "jobs/outfits/supply_outfits.dm"
 	//#include "jobs/outfits/unused_outfits.dm"
 
+	#include "language/human/english.dm"
+	#include "language/human/misc/spacer.dm"
+
 	#include "items/cards_ids.dm"
 	#include "items/encryption_keys.dm"
 	#include "items/headsets.dm"
