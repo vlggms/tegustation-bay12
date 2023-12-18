@@ -3,7 +3,7 @@
 	desc = "An informal dialect of English that arose from the close confines, mixed population, \
 			and technical focus of the moon's first city."
 	colour = "selenian"
-	key = "6"
+	key = "7"
 	shorthand = "Sel"
 	space_chance = 100
 	partial_understanding = list(
