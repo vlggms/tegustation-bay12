@@ -10,7 +10,7 @@
 	speech_verb = "says"
 	whisper_verb = "whispers"
 	colour = ""
-	key = "1"
+	key = "2"
 	flags = WHITELISTED
 	shorthand = "Eng"
 	partial_understanding = list(

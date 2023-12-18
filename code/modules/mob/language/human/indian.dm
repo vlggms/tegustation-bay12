@@ -7,8 +7,8 @@
 	name = LANGUAGE_HUMAN_HINDI
 	desc = "An indo-aryan language originating from Earth's North India, in latin script. Rarely used in this era."
 	colour = "indian"
-	key = "3"
-	shorthand = "Dehv"
+	key = "4"
+	shorthand = "Hin"
 	space_chance = 30
 	partial_understanding = list(
 		LANGUAGE_HUMAN_ENGLISH = 5,
