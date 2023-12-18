@@ -90,8 +90,8 @@ GLOBAL_LIST_INIT(possible_say_verbs, list(
 	status_flags |= NO_ANTAG
 	card = paicard
 
-	//As a human made device, we'll understand sol common without the need of the translator
-	add_language(LANGUAGE_HUMAN_EURO, 1)
+	//As a human made device, we'll understand galactic common without the need of the translator
+	add_language(LANGUAGE_COMMON, 1)
 	verbs -= /mob/living/verb/ghost
 
 	..()

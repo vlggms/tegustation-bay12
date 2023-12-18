@@ -5,14 +5,14 @@
 	key = "j"
 	shorthand = "Spc"
 	partial_understanding = list(
-		LANGUAGE_HUMAN_EURO = 25,
-		LANGUAGE_HUMAN_CHINESE = 25,
-		LANGUAGE_HUMAN_ARABIC = 25,
-		LANGUAGE_HUMAN_INDIAN = 25,
+		LANGUAGE_HUMAN_ENGLISH = 35,
+		LANGUAGE_HUMAN_CHINESE = 15,
+		LANGUAGE_HUMAN_ARABIC = 15,
+		LANGUAGE_HUMAN_INDIAN = 15,
 		LANGUAGE_HUMAN_IBERIAN = 25,
 		LANGUAGE_HUMAN_RUSSIAN = 25,
 		LANGUAGE_HUMAN_SELENIAN = 25,
-		LANGUAGE_GUTTER = 35
+		LANGUAGE_GUTTER = 35,
 	)
 	syllables = list(
 		"ada", "zir", "bian", "ach", "usk", "ado", "ich", "cuan", "iga", "qing", "le", "que", "ki", "qaf", "dei", "eta"

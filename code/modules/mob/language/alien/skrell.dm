@@ -10,3 +10,6 @@
 	syllables = list("qr","qrr","xuq","qil","quum","xuqm","vol","xrim","zaoo","qu-uu","qix","qoo","zix","*","!")
 	shorthand = "SK"
 	has_written_form = TRUE
+	partial_understanding = list(
+		LANGUAGE_COMMON = 35,
+	)

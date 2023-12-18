@@ -5,17 +5,17 @@
 
 /datum/language/human/chinese
 	name = LANGUAGE_HUMAN_CHINESE
-	desc = "A simplified version of Mandarin written in the Latin script, Yangyu steadily rose to prominence as a trade language in the continent, Japan, Korea, as well as parts of Africa."
+	desc = "A simplified version of Mandarin written in the Latin script."
 	colour = "chinese"
-	key = "2"
-	shorthand = "YngYu"
+	key = "3"
+	shorthand = "Man"
 	space_chance = 30
 	partial_understanding = list(
 		LANGUAGE_HUMAN_EURO = 5,
 		LANGUAGE_HUMAN_ARABIC = 5,
 		LANGUAGE_HUMAN_INDIAN = 5,
 		LANGUAGE_HUMAN_SELENIAN = 10,
-		LANGUAGE_SPACER = 20
+		LANGUAGE_SPACER = 20,
 	)
 	syllables = list(
 		"a", "ai", "an", "ang", "ao", "ba", "bai", "ban", "bang", "bao", "bei", "ben", "beng", "bi", "bian", "biao",

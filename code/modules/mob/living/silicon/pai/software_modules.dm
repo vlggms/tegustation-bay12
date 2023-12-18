@@ -276,17 +276,30 @@
 	name = "Universal Translator"
 	ram_cost = 35
 	id = "translator"
-	var/list/languages = list(LANGUAGE_SPACER, LANGUAGE_GUTTER, LANGUAGE_UNATHI_SINTA, LANGUAGE_SKRELLIAN, LANGUAGE_EAL, LANGUAGE_HUMAN_ARABIC, LANGUAGE_HUMAN_CHINESE, LANGUAGE_HUMAN_IBERIAN, LANGUAGE_HUMAN_INDIAN, LANGUAGE_HUMAN_RUSSIAN, LANGUAGE_HUMAN_SELENIAN)
+	var/list/languages = list(
+		LANGUAGE_SPACER,
+		LANGUAGE_GUTTER,
+		LANGUAGE_UNATHI_SINTA,
+		LANGUAGE_SKRELLIAN,
+		LANGUAGE_EAL,
+		LANGUAGE_HUMAN_ENGLISH,
+		LANGUAGE_HUMAN_ARABIC,
+		LANGUAGE_HUMAN_CHINESE,
+		LANGUAGE_HUMAN_IBERIAN,
+		LANGUAGE_HUMAN_HINDI,
+		LANGUAGE_HUMAN_RUSSIAN,
+		LANGUAGE_HUMAN_SELENIAN,
+		)
 
-	toggle(mob/living/silicon/pai/user)
-		// 	Sol Common, Tradeband and Gutter are added with New() and are therefore the current default, always active languages
-		user.translator_on = !user.translator_on
-		if(user.translator_on)
-			for(var/language in languages)
-				user.add_language(language)
-		else
-			for(var/language in languages)
-				user.remove_language(language)
+/datum/pai_software/translator/toggle(mob/living/silicon/pai/user)
+	// Galactic Common, Tradeband and Gutter are added with New() and are therefore the current default, always active languages
+	user.translator_on = !user.translator_on
+	if(user.translator_on)
+		for(var/language in languages)
+			user.add_language(language)
+	else
+		for(var/language in languages)
+			user.remove_language(language)
 
-	is_active(mob/living/silicon/pai/user)
-		return user.translator_on
+/datum/pai_software/translator/is_active(mob/living/silicon/pai/user)
+	return user.translator_on

@@ -2,7 +2,7 @@
 	name = FACTION_SOL_CENTRAL
 	description = "The Sol Central Government, commonly referred to as SolGov or the SCG, is a federal republic \
 	composed of numerous human member states spanning many systems.\
-	Based in the Sol System and with most seats of Government on Olympus, Mars,\
+	Based in the Sol System and with most seats of Government on Geneva, Earth,\
 	the SCG governs the majority of human space. Currently engaged in a cold civil war with the Terran Government and Independent Space Confederation. \
 	Its primary governing bodies are the Assemblies which are led by an Assembly-elected secretary general. \
 	Member states have a great degree of freedom in their actions, though the SCG manages sapient rights, \
@@ -44,7 +44,7 @@
 	Terran Government prohibits any political parties that oppose the Terran Constitution, and as such there is only so many factions within the senate \
 	and each would rephrase 'progress of humanity' as they see fit, ranging from a more peaceful approach of co-existence with non-hostile alien \
 	civilizations to much more extreme sides of eternal war with everyone who isn't a part of TerraGov. Despite this, the senate is considered a stable \
-	entity due to every faction being somewhat restricted by the constitution. "
+	entity due to every faction being somewhat restricted by the constitution."
 	subversive_potential = 25
 
 /decl/cultural_info/faction/isc
@@ -166,6 +166,18 @@
 	and related products, they still remain the market leader in computer technologies."
 	economic_power = 1.1
 	subversive_potential = 15
+
+/decl/cultural_info/faction/terran_dominion
+	name = FACTION_TERRAN_DOMINION
+	description = "Terran Dominion - the first and the last government to ever rule the entire humanity. \
+	Founded in 1994 II e, it has ever since been a terrifying powerhouse of industry, technology and military might. \
+	Following an incident in 434 III e, most of the government structures alongside with the Emperor vanished, \
+	leaving most of its subbordinates in a state of confusion, iniciating what is known as 'Imperial Dissolution War'. \
+	Some still hold tight belief of belonging to the Dominion, however, and few are activelly working at re-establishing \
+	its control over Imperial human space from within, and from the outside."
+	economic_power = 2
+	subversive_potential = 100
+	hidden = TRUE
 
 /decl/cultural_info/faction/other
 	name = FACTION_OTHER
