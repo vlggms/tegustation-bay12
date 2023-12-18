@@ -7,7 +7,7 @@
 	name = LANGUAGE_HUMAN_CHINESE
 	desc = "A simplified version of Mandarin written in the Latin script."
 	colour = "chinese"
-	key = "2"
+	key = "3"
 	shorthand = "Man"
 	space_chance = 30
 	partial_understanding = list(
