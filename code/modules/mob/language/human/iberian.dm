@@ -12,7 +12,7 @@
 	key = "5"
 	shorthand = "Iber"
 	partial_understanding = list(
-		LANGUAGE_HUMAN_EURO = 30,
+		LANGUAGE_HUMAN_ENGLISH = 30,
 		LANGUAGE_HUMAN_SELENIAN = 15,
 		LANGUAGE_SPACER = 20
 	)

@@ -1,11 +1,11 @@
 // See specific map job files for valid jobs. They use types so cannot be compiled at this level.
 /decl/cultural_info/culture/nabber
 	name = CULTURE_NABBER_CMINUS
-	
+
 	description = "You have been trained to Xynergy Grade PLACEHOLDER."
 	language = LANGUAGE_NABBER
 	secondary_langs = list(
-		LANGUAGE_HUMAN_EURO,
+		LANGUAGE_COMMON,
 		LANGUAGE_SPACER,
 	)
 	var/list/valid_jobs = list()

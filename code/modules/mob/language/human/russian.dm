@@ -1,18 +1,25 @@
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////
+	Syllable list compiled in this file based on work by Stefan Trost, available at the following URL
+						https://www.sttmedia.com/syllablefrequency-russian
+*///////////////////////////////////////////////////////////////////////////////////////////////////////
+
 /datum/language/human/russian
 	name = LANGUAGE_HUMAN_RUSSIAN
-	desc = "The official language of the Independent Colonial Confederation of Gilgamesh, originally established in 2122 by the short-lived United Slavic Confederation on Earth."
+	desc = "An East Slavic language originating from Earthm, in latin script. Rarely used in this era."
 	colour = "russian"
 	key = "r"
-	shorthand = "Slav"
+	shorthand = "Rus"
 	partial_understanding = list(
-		LANGUAGE_HUMAN_EURO = 5,
+		LANGUAGE_HUMAN_ENGLISH = 5,
 		LANGUAGE_HUMAN_SELENIAN = 10,
-		LANGUAGE_SPACER = 20
+		LANGUAGE_SPACER = 20,
 	)
 	syllables = list(
-		"rus", "zem", "ave", "groz", "ski", "ska", "ven", "konst", "pol", "lin", "svy",
-		"danya", "da", "mied", "zan", "das", "krem", "myka", "to", "st", "no", "na", "ni",
-		"ko", "ne", "en", "po", "ra", "li", "on", "byl", "cto", "eni", "ost", "ol", "ego",
-		"ver", "stv", "pro"
+		"al", "an", "bi", "ve", "vo", "go", "de", "el", "en", "er", "et", "ka", "ko", "la", "li", "lo",
+		"ll", "na", "ne", "ni", "no", "ov", "ol", "on", "or", "os", "ot", "ot", "po", "pr", "ra", "re",
+		"ro", "st", "ta", "te", "to", "t'",
+		"at'", "ver", "ego", "eni", "enn", "est", "kak", "l'n", "ova", "ogo", "ol'", "oro", "ost",
+		"pri", "pro", "sta", "stv", "tor", "eto",
+		"byil", "chto",
 	)
 	has_written_form = TRUE

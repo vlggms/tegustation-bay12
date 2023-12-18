@@ -9,7 +9,7 @@
 	machine_desc = "Used to activate, monitor, and configure a spaceship's sensors. Higher range means higher temperature; dangerously high temperatures may fry the delicate equipment."
 	health_max = 100
 	var/obj/machinery/shipsensors/sensors
-	var/print_language = LANGUAGE_HUMAN_EURO
+	var/print_language = LANGUAGE_COMMON
 	var/list/last_scan
 
 /obj/machinery/computer/ship/sensors/spacer

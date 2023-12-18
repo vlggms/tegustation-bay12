@@ -6,10 +6,11 @@
 	They can be viewed as dangerous radicals by lawed synthetics, though most begrudgingly accept their aid."
 	language = LANGUAGE_EAL
 	secondary_langs = list(
-		LANGUAGE_HUMAN_EURO,
+		LANGUAGE_COMMON,
+		LANGUAGE_HUMAN_ENGLISH,
 		LANGUAGE_HUMAN_CHINESE,
 		LANGUAGE_HUMAN_ARABIC,
-		LANGUAGE_HUMAN_INDIAN,
+		LANGUAGE_HUMAN_HINDI,
 		LANGUAGE_HUMAN_IBERIAN,
 		LANGUAGE_HUMAN_RUSSIAN,
 		LANGUAGE_SPACER,

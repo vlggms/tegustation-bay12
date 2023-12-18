@@ -9,7 +9,7 @@
 	secondary_langs = list(
 		LANGUAGE_UNATHI_YEOSA,
 		LANGUAGE_SIGN,
-		LANGUAGE_HUMAN_EURO,
+		LANGUAGE_COMMON,
 		LANGUAGE_SPACER
 	)
 
@@ -22,7 +22,7 @@
 	secondary_langs = list(
 		LANGUAGE_UNATHI_YEOSA,
 		LANGUAGE_SIGN,
-		LANGUAGE_HUMAN_EURO,
+		LANGUAGE_COMMON,
 		LANGUAGE_SPACER
 	)
 
@@ -35,7 +35,7 @@
 	secondary_langs = list(
 		LANGUAGE_UNATHI_YEOSA,
 		LANGUAGE_SIGN,
-		LANGUAGE_HUMAN_EURO,
+		LANGUAGE_COMMON,
 		LANGUAGE_SPACER
 	)
 
@@ -47,10 +47,10 @@
 	secondary_langs = list(
 		LANGUAGE_UNATHI_YEOSA,
 		LANGUAGE_SIGN,
-		LANGUAGE_HUMAN_EURO,
+		LANGUAGE_COMMON,
 		LANGUAGE_SPACER
 	)
-	
+
 /decl/cultural_info/culture/unathi_salt_swamp
 	name = CULTURE_UNATHI_SALT_SWAMP
 	description = "Combining assorted elements of various cultures with an adventurous spirit and resolve, salt swamp unathi are noted for their friendliness and openness to outsiders, \
@@ -60,7 +60,7 @@
 	secondary_langs = list(
 		LANGUAGE_UNATHI_YEOSA,
 		LANGUAGE_SIGN,
-		LANGUAGE_HUMAN_EURO,
+		LANGUAGE_COMMON,
 		LANGUAGE_SPACER
 	)
 
@@ -74,7 +74,7 @@
 		LANGUAGE_UNATHI_SINTA,
 		LANGUAGE_UNATHI_YEOSA,
 		LANGUAGE_SIGN,
-		LANGUAGE_HUMAN_EURO,
+		LANGUAGE_COMMON,
 		LANGUAGE_SPACER
 	)
 
@@ -89,7 +89,7 @@
 	secondary_langs = list(
 		LANGUAGE_UNATHI_YEOSA,
 		LANGUAGE_SIGN,
-		LANGUAGE_HUMAN_EURO,
+		LANGUAGE_COMMON,
 		LANGUAGE_SPACER
 	)
 
@@ -109,7 +109,7 @@
 	secondary_langs = list(
 		LANGUAGE_UNATHI_SINTA,
 		LANGUAGE_SIGN,
-		LANGUAGE_HUMAN_EURO,
+		LANGUAGE_COMMON,
 		LANGUAGE_SPACER
 	)
 
@@ -124,6 +124,6 @@
 	secondary_langs = list(
 		LANGUAGE_UNATHI_SINTA,
 		LANGUAGE_SIGN,
-		LANGUAGE_HUMAN_EURO,
+		LANGUAGE_COMMON,
 		LANGUAGE_SPACER
 	)
