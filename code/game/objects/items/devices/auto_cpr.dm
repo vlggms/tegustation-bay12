@@ -23,7 +23,7 @@
 		if(M.wear_suit)
 			to_chat(user, SPAN_WARNING("Their [M.wear_suit] is in the way, remove it first!"))
 			return 1
-		user.visible_message(SPAN_NOTICE("[user] starts fitting [src] onto the [M]'s chest."))
+		user.visible_message(SPAN_NOTICE("[user] starts fitting [src] onto [M]'s chest."))
 
 		if(!do_after(user, 2 SECONDS, M))
 			return
