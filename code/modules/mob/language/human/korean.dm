@@ -2,7 +2,7 @@
 	name = LANGUAGE_HUMAN_KOREAN
 	desc = "An ancient language used on Sol, specifically Earth, in one of the countries."
 	colour = "korean"
-	key = "11"
+	key = "9"
 	shorthand = "Kor"
 	space_chance = 100
 	partial_understanding = list(
