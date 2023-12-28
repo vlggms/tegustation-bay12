@@ -2159,6 +2159,7 @@
 #include "code\modules\mob\language\human\arabic.dm"
 #include "code\modules\mob\language\human\chinese.dm"
 #include "code\modules\mob\language\human\english.dm"
+#include "code\modules\mob\language\human\german.dm"
 #include "code\modules\mob\language\human\human.dm"
 #include "code\modules\mob\language\human\iberian.dm"
 #include "code\modules\mob\language\human\indian.dm"
