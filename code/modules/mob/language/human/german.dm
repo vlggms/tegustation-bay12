@@ -3,7 +3,7 @@
 		https://www.sttmedia.com/syllablefrequency-german
 *///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/datum/language/human/chinese
+/datum/language/human/german
 	name = LANGUAGE_HUMAN_GERMAN
 	desc = "A language used on Earth."
 	colour = "german"
