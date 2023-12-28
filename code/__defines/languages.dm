@@ -7,6 +7,7 @@
 #define LANGUAGE_HUMAN_RUSSIAN   "Russian"
 #define LANGUAGE_HUMAN_SELENIAN  "Selenian"
 #define LANGUAGE_HUMAN_KOREAN    "Korean"
+#define LANGUAGE_HUMAN_SELENIAN  "German"
 
 // Misc
 #define LANGUAGE_COMMON         "Galactic Common"
