@@ -1,3 +1,10 @@
+// Most paper will be in English
+/obj/item/paper
+	language = LANGUAGE_HUMAN_ENGLISH
+
+/obj/item/stock_parts/computer/nano_printer
+	print_language = LANGUAGE_HUMAN_ENGLISH
+
 /obj/item/modular_computer/pda/explorer
 	icon_state = "pda-exp"
 	icon_state_unpowered = "pda-exp"
