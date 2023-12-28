@@ -2162,6 +2162,7 @@
 #include "code\modules\mob\language\human\human.dm"
 #include "code\modules\mob\language\human\iberian.dm"
 #include "code\modules\mob\language\human\indian.dm"
+#include "code\modules\mob\language\human\latin.dm"
 #include "code\modules\mob\language\human\russian.dm"
 #include "code\modules\mob\language\human\selenian.dm"
 #include "code\modules\mob\language\human\misc\common.dm"
