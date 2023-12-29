@@ -137,12 +137,12 @@
 	update_icon()
 
 /obj/item/ammo_magazine/afterattack(atom/target, mob/living/user, proximity_flag)
-	if(!proximity_flag || (!istype(target, /turf) && !istype(target, ammo_type)))
+	if(!proximity_flag || (!istype(target, /turf) && !istype(target, /obj/item/ammo_casing)))
 		return ..()
 
 	var/turf/T = istype(target, /turf) ? target : get_turf(target)
 	if(istype(target, /turf))
-		if(!locate(ammo_type) in T)
+		if(!locate(/obj/item/ammo_casing) in T)
 			return ..()
 
 	var/curr_ammo = length(stored_ammo)
@@ -154,17 +154,16 @@
 	if(!do_after(user, (max_ammo - curr_ammo) * 2, src))
 		return
 
-	var/ammo_count = 0
 	for(var/obj/item/ammo_casing/C in T)
 		if(stored_ammo.len >= max_ammo)
 			break
 		if(C.caliber != caliber)
 			continue
 		stored_ammo.Add(C)
-		ammo_count += 1
+		C.forceMove(src)
 
-	if(ammo_count)
-		to_chat(user, SPAN_NOTICE("You insert [ammo_count] casings into \the [src]."))
+	if(length(stored_ammo) - curr_ammo)
+		to_chat(user, SPAN_NOTICE("You insert [length(stored_ammo) - curr_ammo] casings into \the [src]."))
 		update_icon()
 	else
 		to_chat(user, SPAN_WARNING("You fail to collect any casings!"))
