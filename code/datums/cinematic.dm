@@ -45,7 +45,7 @@ GLOBAL_DATUM_INIT(cinematic, /datum/cinematic, new)
 	override.nuke_act(cinematic_screen, station_missed)
 	// If its actually the end of the round, wait for it to end.
 	// Otherwise if its a verb it will continue on afterwards.
-	sleep(28 SECONDS)
+	sleep(20 SECONDS)
 
 	animate(cinematic_screen, alpha = 0, time = (2 SECONDS))
 
