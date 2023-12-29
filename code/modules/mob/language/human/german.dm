@@ -11,7 +11,7 @@
 	shorthand = "Ger"
 	space_chance = 30
 	partial_understanding = list(
-		LANGUAGE_HUMAN_EURO = 85,
+		LANGUAGE_COMMON = 10,
 		LANGUAGE_HUMAN_ARABIC = 5,
 		LANGUAGE_HUMAN_INDIAN = 10,
 		LANGUAGE_HUMAN_SELENIAN = 15,
