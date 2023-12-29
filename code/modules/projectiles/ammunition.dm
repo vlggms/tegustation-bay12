@@ -136,6 +136,39 @@
 		SetName("[name] ([english_list(labels, and_text = ", ")])")
 	update_icon()
 
+/obj/item/ammo_magazine/afterattack(atom/target, mob/living/user, proximity_flag)
+	if(!proximity_flag || (!istype(target, /turf) && !istype(target, ammo_type)))
+		return ..()
+
+	var/turf/T = istype(target, /turf) ? target : get_turf(target)
+	if(istype(target, /turf))
+		if(!locate(ammo_type) in T)
+			return ..()
+
+	var/curr_ammo = length(stored_ammo)
+	if(curr_ammo >= max_ammo)
+		to_chat(user, "<span class='warning'>[src] is full!</span>")
+		return
+
+	to_chat(user, SPAN_NOTICE("You begin inserting casings into \the [src]..."))
+	if(!do_after(user, (max_ammo - curr_ammo) * 2, src))
+		return
+
+	var/ammo_count = 0
+	for(var/obj/item/ammo_casing/C in T)
+		if(stored_ammo.len >= max_ammo)
+			break
+		if(C.caliber != caliber)
+			continue
+		stored_ammo.Add(C)
+		ammo_count += 1
+
+	if(ammo_count)
+		to_chat(user, SPAN_NOTICE("You insert [ammo_count] casings into \the [src]."))
+		update_icon()
+	else
+		to_chat(user, SPAN_WARNING("You fail to collect any casings!"))
+
 /obj/item/ammo_magazine/attackby(obj/item/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/ammo_casing))
 		var/obj/item/ammo_casing/C = W
@@ -155,13 +188,19 @@
 	if(!stored_ammo.len)
 		to_chat(user, "<span class='notice'>[src] is already empty!</span>")
 		return
+	if(!do_after(user, 10, src))
+		return
 	to_chat(user, "<span class='notice'>You empty [src].</span>")
+	var/curr_sounds = 0
+	var/max_sounds = clamp(round(length(stored_ammo) * 0.2), 1, 10)
 	for(var/obj/item/ammo_casing/C in stored_ammo)
 		C.forceMove(user.loc)
 		C.set_dir(pick(GLOB.alldirs))
+		if(LAZYLEN(C.fall_sounds) && curr_sounds < max_sounds)
+			playsound(user.loc, pick(C.fall_sounds), 20, TRUE)
+			curr_sounds += 1
 	stored_ammo.Cut()
 	update_icon()
-
 
 /obj/item/ammo_magazine/attack_hand(mob/user)
 	if(user.get_inactive_hand() == src)
