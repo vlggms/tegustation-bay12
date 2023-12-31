@@ -106,6 +106,8 @@
 	//this is a new disease starting over at stage 1, so processing is not copied
 	return A
 
+/datum/disease/advance/AntiViralEffect()
+	return affected_mob.has_chem_effect(CE_ANTIVIRAL, properties["resistance"])
 
 // Mix the symptoms of two diseases (the src and the argument)
 /datum/disease/advance/proc/Mix(datum/disease/advance/D)
