@@ -477,25 +477,29 @@ meteor_act
 		if (1.0)
 			b_loss = 400
 			f_loss = 100
+			if(get_sound_volume_multiplier() >= 0.2)
+				ear_damage += 60
+				ear_deaf += 120
+			Paralyse(10)
 			var/atom/target = get_edge_target_turf(src, get_dir(src, get_step_away(src, src)))
 			throw_at(target, 200, 4)
-		if (2.0)
+		if(2.0)
 			b_loss = 60
 			f_loss = 60
 
-			if (get_sound_volume_multiplier() >= 0.2)
+			if(get_sound_volume_multiplier() >= 0.2)
 				ear_damage += 30
-				ear_deaf += 120
-			if (prob(50))
+				ear_deaf += 60
+			if(prob(50))
 				Paralyse(6)
 
 		if(3.0)
 			b_loss = 30
-			if (get_sound_volume_multiplier() >= 0.2)
+			if(get_sound_volume_multiplier() >= 0.2)
 				ear_damage += 15
-				ear_deaf += 60
-			if (prob(20))
-				Paralyse(2)
+				ear_deaf += 30
+			if(prob(20))
+				Weaken(2)
 
 	// focus most of the blast on one organ
 	apply_damage(0.7 * b_loss, BRUTE, null, DAM_EXPLODE, used_weapon = "Explosive blast")

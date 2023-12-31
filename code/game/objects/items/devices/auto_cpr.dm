@@ -23,7 +23,7 @@
 		if(M.wear_suit)
 			to_chat(user, SPAN_WARNING("Their [M.wear_suit] is in the way, remove it first!"))
 			return 1
-		user.visible_message(SPAN_NOTICE("[user] starts fitting [src] onto the [M]'s chest."))
+		user.visible_message(SPAN_NOTICE("[user] starts fitting [src] onto [M]'s chest."))
 
 		if(!do_after(user, 2 SECONDS, M))
 			return
@@ -61,7 +61,7 @@
 		if(!skilled_setup && prob(20))
 			var/obj/item/organ/external/E = H.get_organ(BP_CHEST)
 			E.add_pain(15)
-			to_chat(H, "<span class='danger'>Your [E] is compressed painfully!</span>")	
+			to_chat(H, "<span class='danger'>Your chest is compressed painfully!</span>")	
 			if(prob(5))
 				E.fracture()
 		else
