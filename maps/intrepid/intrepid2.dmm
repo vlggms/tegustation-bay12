@@ -999,6 +999,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/security/detectives_office)
+"cQ" = (
+/obj/effect/landmark/test/safe_turf,
+/turf/simulated/floor,
+/area/intrepid/department/engineering/construction)
 "cS" = (
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 8
@@ -36485,7 +36489,7 @@ QP
 DK
 DK
 DK
-DK
+cQ
 DK
 DK
 DK
