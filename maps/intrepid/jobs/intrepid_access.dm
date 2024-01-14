@@ -1,35 +1,46 @@
 /************
 * TGLV Intrepid *
 ************/
-/var/const/access_hangar = "ACCESS_INTREPID_HANGAR" //73
+
+// Marine access
+
+/var/const/access_marine = "ACCESS_INTREPID_MARINE"
+/datum/access/marine
+	id = access_marine
+	desc = "Marine"
+	region = ACCESS_REGION_MILITARY
+
+/var/const/access_squad_leader = "ACCESS_INTREPID_SQUAD_LEADER"
+/datum/access/squad_leader
+	id = access_squad_leader
+	desc = "Squad Leader"
+	region = ACCESS_REGION_MILITARY
+
+/var/const/access_combat_medic = "ACCESS_INTREPID_COMBAT_MEDIC"
+/datum/access/combat_medic
+	id = access_combat_medic
+	desc = "Combat Medic"
+	region = ACCESS_REGION_MILITARY
+
+/var/const/access_combat_engineer = "ACCESS_INTREPID_COMBAT_ENGINEER"
+/datum/access/combat_engineer
+	id = access_combat_engineer
+	desc = "Combat Engineer"
+	region = ACCESS_REGION_MILITARY
+
+/var/const/access_hangar = "ACCESS_INTREPID_HANGAR"
 /datum/access/hangar
 	id = access_hangar
-	desc = "Hangar Deck"
-	region = ACCESS_REGION_GENERAL
+	desc = "Pandora Hangar Deck"
+	region = ACCESS_REGION_MILITARY
 
-/var/const/access_guppy_helm = "ACCESS_INTREPID_GUP_HELM" //76
-/datum/access/guppy_helm
-	id = access_guppy_helm
-	desc = "General Utility Pod Helm"
-	region = ACCESS_REGION_GENERAL
-
-/var/const/access_expedition_shuttle_helm = "ACCESS_EXPLO_HELM" //77
+/var/const/access_expedition_shuttle_helm = "ACCESS_EXPLO_HELM"
 /datum/access/exploration_shuttle_helm
 	id = access_expedition_shuttle_helm
 	desc = "Pandora Helm"
-	region = ACCESS_REGION_GENERAL
+	region = ACCESS_REGION_MILITARY
 
-/var/const/access_aquila = "ACCESS_INTREPID_AQUILA" //78
-/datum/access/aquila
-	id = access_aquila
-	desc = "Aquila"
-	region = ACCESS_REGION_GENERAL
-
-/var/const/access_aquila_helm = "ACCESS_INTREPID_AQUILA_HELM" //79
-/datum/access/aquila_helm
-	id = access_aquila_helm
-	desc = "Aquila Helm"
-	region = ACCESS_REGION_GENERAL
+// Other
 
 /var/const/access_terragov_crew = "ACCESS_TERRAGOV_CREW" //80
 /datum/access/terragov_crew
@@ -50,29 +61,11 @@
 	region = ACCESS_REGION_COMMAND
 	access_type = ACCESS_TYPE_NONE //Ruler of their own domain, CO cannot enter
 
-/var/const/access_sec_guard = "ACCESS_INTREPID_SECURITY_GUARD" //86
-/datum/access/sec_guard
-	id = access_sec_guard
-	desc = "Corporate Security"
-	region = ACCESS_REGION_SERVICE
-
 /var/const/access_gun = "ACCESS_INTREPID_CANNON" //87
 /datum/access/gun
 	id = access_gun
 	desc = "Gunnery"
 	region = ACCESS_REGION_COMMAND
-
-/var/const/access_expedition_shuttle = "ACCESS_INTREPID_EXPLO" //88
-/datum/access/exploration_shuttle
-	id = access_expedition_shuttle
-	desc = "Charon"
-	region = ACCESS_REGION_GENERAL
-
-/var/const/access_guppy = "ACCESS_INTREPID_GUP" //89
-/datum/access/guppy
-	id = access_guppy
-	desc = "General Utility Pod"
-	region = ACCESS_REGION_GENERAL
 
 /var/const/access_seneng = "ACCESS_INTREPID_SENIOR_ENG" //90
 /datum/access/seneng
@@ -85,42 +78,6 @@
 	id = access_senmed
 	desc = "Physician"
 	region = ACCESS_REGION_MEDBAY
-
-/var/const/access_senadv = "ACCESS_INTREPID_SENIOR_ADVISOR" //92
-/datum/access/senadv
-	id = access_senadv
-	desc = "Senior Enlisted Advisor"
-	region = ACCESS_REGION_COMMAND
-
-/var/const/access_marine = "ACCESS_INTREPID_MARINE" //93
-/datum/access/marine
-	id = access_marine
-	desc = "Marine"
-	region = ACCESS_REGION_GENERAL
-
-/var/const/access_squad_leader = "ACCESS_INTREPID_SQUAD_LEADER" //94
-/datum/access/squad_leader
-	id = access_squad_leader
-	desc = "Squad Leader"
-	region = ACCESS_REGION_GENERAL
-
-/var/const/access_pilot = "ACCESS_INTREPID_PILOT" //95
-/datum/access/pilot
-	id = access_pilot
-	desc = "Pilot"
-	region = ACCESS_REGION_GENERAL
-
-/var/const/access_combat_medic = "ACCESS_INTREPID_COMBAT_MEDIC" //96
-/datum/access/combat_medic
-	id = access_combat_medic
-	desc = "Combat Medic"
-	region = ACCESS_REGION_GENERAL
-
-/var/const/access_combat_engineer = "ACCESS_INTREPID_COMBAT_ENGINEER" //97
-/datum/access/combat_engineer
-	id = access_combat_engineer
-	desc = "Combat Engineer"
-	region = ACCESS_REGION_GENERAL
 
 /var/const/access_commissary = "ACCESS_INTREPID_SHOP" //98
 /datum/access/commissary
@@ -194,7 +151,7 @@
 	desc = "Intrepid Helm"
 	region = ACCESS_REGION_COMMAND
 
-// Torch Radio Access
+// Intrepid Radio Access
 
 /var/const/access_radio_comm = "ACCESS_RADIO_COMM"
 /datum/access/access_radio_comm
@@ -242,4 +199,4 @@
 /datum/access/access_radio_exp
 	id = access_radio_exp
 	desc = "Exploration Radio"
-	region = ACCESS_REGION_GENERAL
+	region = ACCESS_REGION_MILITARY

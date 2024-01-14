@@ -30,7 +30,7 @@
 	boots = /obj/item/clothing/shoes/magboots
 	tank = /obj/item/tank/oxygen
 	mask = /obj/item/clothing/mask/breath
-	req_access = list(access_pilot)
+	req_access = list(access_marine)
 	islocked = 1
 
 /obj/machinery/suit_storage_unit/command

@@ -34,8 +34,8 @@
 	access = list(
 		access_squad_leader, access_combat_engineer, access_combat_medic,
 		access_marine, access_eva, access_maint_tunnels, access_bridge, access_emergency_storage,
-		access_guppy_helm, access_terragov_crew, access_expedition_shuttle, access_expedition_shuttle_helm,
-		access_guppy, access_hangar, access_stardust, access_stardust_helm,
+		access_terragov_crew, access_expedition_shuttle_helm,
+		access_hangar, access_stardust, access_stardust_helm,
 		access_tox, access_tox_storage, access_research,
 		access_xenobiology, access_xenoarch, access_terra_fax, access_radio_comm, access_radio_exp, access_radio_sci
 	)
@@ -80,7 +80,7 @@
 
 	access = list(
 		access_marine, access_combat_medic, access_maint_tunnels, access_eva, access_emergency_storage,
-		access_guppy_helm, access_terragov_crew, access_expedition_shuttle, access_expedition_shuttle_helm, access_guppy, access_hangar,
+		access_terragov_crew, access_expedition_shuttle_helm, access_hangar,
 		access_stardust, access_research, access_radio_exp
 	)
 
@@ -125,7 +125,7 @@
 
 	access = list(
 		access_marine, access_combat_engineer, access_maint_tunnels, access_eva, access_emergency_storage,
-		access_guppy_helm, access_terragov_crew, access_expedition_shuttle, access_expedition_shuttle_helm, access_guppy, access_hangar,
+		access_terragov_crew, access_expedition_shuttle_helm, access_hangar,
 		access_stardust, access_research, access_radio_exp
 	)
 
@@ -165,7 +165,7 @@
 
 	access = list(
 		access_marine, access_maint_tunnels, access_eva, access_emergency_storage,
-		access_guppy_helm, access_terragov_crew, access_expedition_shuttle, access_expedition_shuttle_helm, access_guppy, access_hangar,
+		access_terragov_crew, access_expedition_shuttle_helm, access_hangar,
 		access_stardust, access_research, access_radio_exp
 	)
 

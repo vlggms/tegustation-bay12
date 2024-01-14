@@ -78,32 +78,6 @@
 		/obj/item/clothing/head/helmet/terragov/command
 	)
 
-/obj/structure/closet/secure_closet/sea
-	name = "senior enlisted advisor's locker"
-	req_access = list(access_senadv)
-	closet_appearance = /decl/closet_appearance/secure_closet/intrepid/command
-
-/obj/structure/closet/secure_closet/sea/WillContain()
-	return list(
-		/obj/item/clothing/glasses/sunglasses,
-		/obj/item/clothing/suit/armor/pcarrier/medium/command,
-		/obj/item/clothing/head/helmet/terragov/command,
-		/obj/item/storage/belt/holster/general,
-		/obj/item/gun/energy/confuseray,
-		/obj/item/device/radio/headset/sea,
-		/obj/item/device/radio/headset/sea/alt,
-		/obj/item/storage/belt/general,
-		/obj/item/melee/telebaton,
-		/obj/item/device/flash,
-		/obj/item/device/megaphone,
-		/obj/item/material/clipboard,
-		/obj/item/device/holowarrant,
-		/obj/item/folder/blue,
-		/obj/item/material/knife/folding/swiss/officer,
-		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack, /obj/item/storage/backpack/satchel/grey)),
-		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag, /obj/item/storage/backpack/messenger))
-	)
-
 /obj/structure/closet/secure_closet/bridgeofficer
 	name = "bridge officer's locker"
 	req_access = list(access_bridge, access_keycard_auth)

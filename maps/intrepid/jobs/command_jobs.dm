@@ -69,10 +69,10 @@
 		access_chemistry, access_cargo_bot, access_hydroponics, access_manufacturing, access_library, access_lawyer, access_virology, access_cmo,
 		access_qm, access_network, access_surgery, access_research, access_mining, access_mining_office, access_mailsorting, access_heads_vault,
 		access_mining_station, access_xenobiology, access_ce, access_hop, access_hos, access_RC_announce, access_keycard_auth, access_tcomsat,
-		access_gateway, access_sec_doors, access_psychiatrist, access_xenoarch, access_medical_equip, access_heads, access_hangar, access_guppy_helm,
-		access_expedition_shuttle_helm, access_aquila, access_aquila_helm, access_terragov_crew,
-		access_emergency_armory, access_sec_guard, access_gun, access_expedition_shuttle, access_guppy, access_seneng, access_senmed, access_senadv,
-		access_marine, access_squad_leader, access_pilot, access_commissary, access_stardust, access_stardust_helm,
+		access_gateway, access_sec_doors, access_psychiatrist, access_xenoarch, access_medical_equip, access_heads, access_hangar,
+		access_expedition_shuttle_helm, access_terragov_crew,
+		access_emergency_armory, access_gun, access_seneng, access_senmed,
+		access_marine, access_squad_leader, access_commissary, access_stardust, access_stardust_helm,
 		access_rd, access_terra_fax, access_intrepid_helm,
 		access_radio_comm, access_radio_eng, access_radio_med, access_radio_sec, access_radio_sup, access_radio_serv, access_radio_exp, access_radio_sci
 	)
@@ -85,10 +85,10 @@
 		access_chemistry, access_cargo_bot, access_hydroponics, access_manufacturing, access_library, access_lawyer, access_virology, access_cmo,
 		access_qm, access_network, access_surgery, access_research, access_mining, access_mining_office, access_mailsorting, access_heads_vault,
 		access_mining_station, access_xenobiology, access_ce, access_hop, access_hos, access_RC_announce, access_keycard_auth, access_tcomsat,
-		access_gateway, access_sec_doors, access_psychiatrist, access_xenoarch, access_medical_equip, access_heads, access_hangar, access_guppy_helm,
-		access_expedition_shuttle_helm, access_aquila, access_aquila_helm, access_terragov_crew,
-		access_emergency_armory, access_sec_guard, access_gun, access_expedition_shuttle, access_guppy, access_seneng, access_senmed, access_senadv,
-		access_marine, access_squad_leader, access_pilot, access_commissary, access_stardust, access_stardust_helm,
+		access_gateway, access_sec_doors, access_psychiatrist, access_xenoarch, access_medical_equip, access_heads, access_hangar,
+		access_expedition_shuttle_helm, access_terragov_crew,
+		access_emergency_armory, access_gun, access_seneng, access_senmed,
+		access_marine, access_squad_leader, access_commissary, access_stardust, access_stardust_helm,
 		access_rd, access_terra_fax, access_intrepid_helm,
 		access_radio_comm, access_radio_eng, access_radio_med, access_radio_sec, access_radio_sup, access_radio_serv, access_radio_exp, access_radio_sci
 	)
@@ -136,11 +136,11 @@
 
 	access = list(
 		access_tox, access_tox_storage, access_emergency_storage, access_teleporter, access_bridge, access_rd,
-		access_research, access_mining, access_mining_office, access_mining_station, access_xenobiology, access_aquila,
-		access_RC_announce, access_keycard_auth, access_xenoarch, access_sec_guard, access_heads,
-		access_expedition_shuttle, access_guppy, access_hangar, access_stardust, access_virology, access_stardust_helm, access_guppy_helm,
+		access_research, access_mining, access_mining_office, access_mining_station, access_xenobiology,
+		access_RC_announce, access_keycard_auth, access_xenoarch, access_heads,
+		access_hangar, access_stardust, access_virology, access_stardust_helm,
 		access_squad_leader, access_marine, access_eva, access_terragov_crew,
-		access_expedition_shuttle, access_expedition_shuttle_helm, access_maint_tunnels, access_terra_fax, access_radio_comm,
+		access_expedition_shuttle_helm, access_maint_tunnels, access_terra_fax, access_radio_comm,
 		access_radio_sci, access_radio_exp, access_medical, access_chemistry
 	)
 
@@ -186,7 +186,7 @@
 	access = list(
 		access_medical, access_morgue, access_maint_tunnels, access_external_airlocks, access_emergency_storage,
 		access_teleporter, access_eva, access_bridge, access_heads,
-		access_chapel_office, access_crematorium, access_chemistry, access_virology, access_aquila,
+		access_chapel_office, access_crematorium, access_chemistry, access_virology,
 		access_cmo, access_surgery, access_RC_announce, access_keycard_auth, access_psychiatrist,
 		access_medical_equip, access_terragov_crew, access_senmed, access_hangar, access_terra_fax, access_radio_comm,
 		access_radio_med
@@ -242,7 +242,7 @@
 		access_ai_upload, access_teleporter, access_eva, access_bridge, access_heads,
 		access_tech_storage, access_robotics, access_atmospherics, access_janitor, access_construction,
 		access_network, access_ce, access_RC_announce, access_keycard_auth, access_tcomsat,
-		access_terragov_crew, access_aquila, access_seneng, access_hangar, access_terra_fax, access_intrepid_helm, access_radio_comm,
+		access_terragov_crew, access_seneng, access_hangar, access_terra_fax, access_intrepid_helm, access_radio_comm,
 		access_radio_eng
 		)
 
@@ -306,7 +306,7 @@
 	access = list(
 		access_security, access_brig, access_armory, access_forensics_lockers,
 		access_maint_tunnels, access_external_airlocks, access_emergency_storage,
-		access_teleporter, access_eva, access_bridge, access_heads, access_aquila,
+		access_teleporter, access_eva, access_bridge, access_heads,
 		access_hos, access_RC_announce, access_keycard_auth, access_sec_doors,
 		access_terragov_crew, access_gun, access_emergency_armory, access_hangar, access_terra_fax,
 		access_radio_comm, access_radio_sec
@@ -403,8 +403,8 @@
 	access = list(
 		access_security, access_medical, access_engine, access_maint_tunnels, access_emergency_storage,
 		access_bridge, access_janitor, access_kitchen, access_cargo, access_mailsorting, access_RC_announce, access_keycard_auth,
-		access_terragov_crew, access_aquila, access_aquila_helm, access_guppy, access_guppy_helm, access_external_airlocks,
-		access_eva, access_hangar, access_cent_creed, access_marine, access_expedition_shuttle, access_expedition_shuttle_helm, access_teleporter,
+		access_terragov_crew, access_external_airlocks,
+		access_eva, access_hangar, access_cent_creed, access_marine, access_expedition_shuttle_helm, access_teleporter,
 		access_terra_fax, access_intrepid_helm, access_radio_comm, access_radio_eng, access_radio_exp, access_radio_serv, access_radio_sci, access_radio_sup
 	)
 

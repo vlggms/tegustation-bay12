@@ -23,7 +23,7 @@
 	access = list(
 		access_tox, access_tox_storage, access_maint_tunnels, access_research, access_mining_office,
 		access_mining_station, access_xenobiology, access_xenoarch, access_terragov_crew,
-		access_expedition_shuttle, access_guppy, access_hangar, access_stardust, access_virology, access_stardust_helm, access_guppy_helm,
+		access_hangar, access_stardust, access_virology, access_stardust_helm,
 		access_terra_fax, access_radio_sci, access_radio_exp, access_chemistry, access_medical
 	)
 
@@ -80,8 +80,8 @@
 
 	access = list(
 		access_tox, access_tox_storage, access_research, access_stardust, access_virology, access_stardust_helm,
-		access_mining_office, access_mining_station, access_xenobiology, access_guppy_helm,
-		access_xenoarch, access_terragov_crew, access_expedition_shuttle, access_guppy, access_hangar,
+		access_mining_office, access_mining_station, access_xenobiology,
+		access_xenoarch, access_terragov_crew, access_hangar,
 		access_terra_fax, access_radio_sci, access_radio_exp, access_chemistry, access_medical
 	)
 
@@ -122,8 +122,8 @@
 
 	access = list(
 		access_tox, access_tox_storage, access_research, access_stardust,
-		access_mining_office, access_mining_station, access_xenobiology, access_guppy_helm,
-		access_xenoarch, access_terragov_crew, access_expedition_shuttle, access_guppy, access_hangar,
+		access_mining_office, access_mining_station, access_xenobiology,
+		access_xenoarch, access_terragov_crew, access_hangar,
 		access_radio_sci, access_radio_exp
 	)
 	possible_goals = list(/datum/goal/achievement/notslimefodder)

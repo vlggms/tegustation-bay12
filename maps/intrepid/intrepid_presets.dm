@@ -1,4 +1,3 @@
-var/const/NETWORK_POD         = "General Utility Pod"
 var/const/NETWORK_FIRST_DECK  = "First Deck"
 var/const/NETWORK_SECOND_DECK = "Second Deck"
 var/const/NETWORK_THIRD_DECK  = "Third Deck"
@@ -11,8 +10,6 @@ var/const/NETWORK_EXPLO       = "Exploration"
 	switch(network)
 		if(NETWORK_BRIDGE)
 			return access_heads
-		if(NETWORK_POD)
-			return access_guppy
 		if(NETWORK_SUPPLY)
 			return access_mailsorting
 		if(NETWORK_HANGAR)
@@ -38,7 +35,6 @@ var/const/NETWORK_EXPLO       = "Exploration"
 		NETWORK_SUPPLY,
 		NETWORK_EXPLO,
 		NETWORK_HANGAR,
-		NETWORK_POD,
 		NETWORK_ALARM_ATMOS,
 		NETWORK_ALARM_CAMERA,
 		NETWORK_ALARM_FIRE,
@@ -63,9 +59,6 @@ var/const/NETWORK_EXPLO       = "Exploration"
 
 /obj/machinery/camera/network/third_deck
 	network = list(NETWORK_THIRD_DECK)
-
-/obj/machinery/camera/network/pod
-	network = list(NETWORK_POD)
 
 /obj/machinery/camera/network/supply
 	network = list(NETWORK_SUPPLY)

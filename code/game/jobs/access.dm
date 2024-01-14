@@ -115,7 +115,7 @@
 
 	return priv_all_access_datums_region.Copy()
 
-/proc/get_access_ids(var/access_types = ACCESS_TYPE_ALL)
+/proc/get_access_ids(access_types = ACCESS_TYPE_ALL)
 	var/list/L = new()
 	for(var/datum/access/A in get_all_access_datums())
 		if(A.access_type & access_types)
@@ -151,7 +151,7 @@
 	return priv_syndicate_access.Copy()
 
 /var/list/priv_region_access
-/proc/get_region_accesses(var/code)
+/proc/get_region_accesses(code)
 	if(code == ACCESS_REGION_ALL)
 		return get_all_station_access()
 
@@ -165,12 +165,14 @@
 	var/list/region = priv_region_access["[code]"]
 	return region.Copy()
 
-/proc/get_region_accesses_name(var/code)
+/proc/get_region_accesses_name(code)
 	switch(code)
 		if(ACCESS_REGION_ALL)
 			return "All"
 		if(ACCESS_REGION_SECURITY) //security
 			return "Security"
+		if(ACCESS_REGION_MILITARY) // Marines
+			return "Military"
 		if(ACCESS_REGION_MEDBAY) //medbay
 			return "Medical"
 		if(ACCESS_REGION_RESEARCH) //research
