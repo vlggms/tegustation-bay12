@@ -3656,7 +3656,7 @@
 	icon_state = "4-8"
 	},
 /obj/item/airlock_brace{
-	req_access = list(access_heads_vault)
+	req_access = list("ACCESS_VAULT")
 	},
 /turf/simulated/floor/reinforced,
 /area/intrepid/department/command/selfdestruct)
@@ -11667,7 +11667,7 @@
 	name = "Self Destruct Terminal Access button";
 	pixel_x = 40;
 	pixel_y = 24;
-	req_access = list(access_heads_vault)
+	req_access = list("ACCESS_VAULT")
 	},
 /obj/structure/cable/green{
 	d1 = 4;
