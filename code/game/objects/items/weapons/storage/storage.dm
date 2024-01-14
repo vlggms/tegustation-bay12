@@ -87,6 +87,8 @@
 
 /obj/item/storage/proc/show_to(mob/user as mob)
 	if(storage_ui)
+		prepare_ui()
+		storage_ui.on_open(user)
 		storage_ui.show_to(user)
 
 /obj/item/storage/proc/hide_from(mob/user as mob)
@@ -105,9 +107,7 @@
 		if(robot.shown_robot_modules) //The robot's inventory is open, need to close it first.
 			robot.hud_used.toggle_show_robot_modules()
 
-	prepare_ui()
-	storage_ui.on_open(user)
-	storage_ui.show_to(user)
+	show_to(user)
 
 /obj/item/storage/proc/prepare_ui()
 	storage_ui.prepare_ui()
