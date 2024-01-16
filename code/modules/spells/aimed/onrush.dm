@@ -44,7 +44,7 @@
 	var/list/line_list = getline(user, target_turf)
 	for(var/i = 1 to length(line_list))
 		var/turf/T = line_list[i]
-		var/obj/effect/temp_visual/decoy/D = new /obj/effect/temp_visual/decoy(T, user)
+		var/obj/effect/temp_visual/decoy/D = new /obj/effect/temp_visual/decoy(T, user.dir, user)
 		D.alpha = min(150 + i*15, 255)
 		animate(D, alpha = 0, time = 2 + i*2)
 	user.forceMove(target_turf)
