@@ -10,6 +10,7 @@
 
 	level_max = list(UPGRADE_TOTAL = 2, UPGRADE_SPEED = 0, UPGRADE_POWER = 2)
 
+	charge_max = 30 SECONDS
 	spell_flags = 0
 	range = 5
 
