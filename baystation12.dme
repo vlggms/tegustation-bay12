@@ -3152,6 +3152,7 @@
 #include "code\modules\spells\aimed\fireball.dm"
 #include "code\modules\spells\aimed\flamethrower.dm"
 #include "code\modules\spells\aimed\healing.dm"
+#include "code\modules\spells\aimed\onrush.dm"
 #include "code\modules\spells\aimed\passage.dm"
 #include "code\modules\spells\aimed\spark_bolt.dm"
 #include "code\modules\spells\aimed\swap.dm"
