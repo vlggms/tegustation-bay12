@@ -23,6 +23,9 @@
 	var/list/already_attacked = list()
 
 /datum/spell/aimed/onrush/TargetCastCheck(mob/living/user, mob/living/target)
+	if(!istype(target))
+		to_chat(user, SPAN_WARNING("The target must be a living creature!"))
+		return FALSE
 	if(get_dist(user, target) > range)
 		to_chat(user, SPAN_WARNING("The target is too far away!"))
 		return FALSE
@@ -56,7 +59,8 @@
 
 /datum/spell/aimed/onrush/proc/OnrushAttack(mob/living/user, mob/living/target)
 	user.next_move = 0
-	user.a_intent = I_HURT
+	user.next_click = 0
+	user.a_intent_change(I_HURT)
 	user.ClickOn(target)
 
 // Looks for valid mobs in view and attacks one

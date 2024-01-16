@@ -47,7 +47,8 @@
 		addtimer(CALLBACK(src, .proc/PlaceFlame, T), i-1)
 
 /datum/spell/aimed/flamethrower/proc/PlaceFlame(turf/T)
-	T.IgniteTurf(flame_power, flame_color)
+	var/obj/effect/turf_fire/TF = T.IgniteTurf(flame_power, flame_color)
+	TF.interact_with_atmos = FALSE
 	T.hotspot_expose((flame_power * 3) + 300, 50)
 
 /datum/spell/aimed/flamethrower/empower_spell()

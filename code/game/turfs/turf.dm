@@ -388,5 +388,5 @@ var/const/enterloopsanity = 100
 	LAZYREMOVE(dangerous_objects, O)
 	UNSETEMPTY(dangerous_objects) // This nulls the list var if it's empty.
 
-/turf/proc/IgniteTurf(power, fire_colour)
+/turf/proc/IgniteTurf(power, fire_colour, fire_type = /obj/effect/turf_fire)
 	return

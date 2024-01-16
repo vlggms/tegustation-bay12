@@ -336,14 +336,13 @@ steam.start() -- spawns the effect
 		affect(R)
 
 /obj/effect/effect/smoke/bloody/affect(mob/living/carbon/human/R)
-	if (!..())
+	if(!..())
 		return FALSE
-	if (R.wear_mask != null)
+	if(R.wear_mask != null)
 		return FALSE
 
-	if(prob(33))
-		R.confused = max(R.confused, 3)
-	if(prob(33))
+	R.confused = max(R.confused, 3)
+	if(prob(25))
 		R.vomit(rand(2, 15), 5)
 	return
 

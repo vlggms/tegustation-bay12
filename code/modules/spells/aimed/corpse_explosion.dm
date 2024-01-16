@@ -32,7 +32,7 @@
 
 /datum/spell/aimed/corpse_explosion/fire_projectile(mob/living/user, mob/living/target)
 	. = ..()
-	var/matrix/M = matrix()
+	var/matrix/M = matrix(target.transform)
 	M *= 1.5
 	animate(target, transform = M, color = "#ffcccc", time = 5)
 	target.visible_message(SPAN_DANGER("[target]'s lifeless body visibly bloats!"))

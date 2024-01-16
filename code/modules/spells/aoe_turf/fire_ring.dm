@@ -29,8 +29,8 @@
 		return
 
 	for(var/turf/T in targets)
-		T.IgniteTurf(flame_power, flame_color)
-		T.hotspot_expose((flame_power * 3) + 300, 50)
+		var/obj/effect/turf_fire/TF = T.IgniteTurf(flame_power, flame_color)
+		TF.interact_with_atmos = FALSE
 
 /datum/spell/aoe_turf/fire_ring/empower_spell()
 	if(!..())
