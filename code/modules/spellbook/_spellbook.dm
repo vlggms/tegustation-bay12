@@ -344,3 +344,60 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 		/datum/spell/aimed/heal_target/trance,
 		/datum/spell/aimed/heal_target/sacrifice,
 		)
+
+// List of spells per categories, to prevent generating it all the time
+GLOBAL_LIST_EMPTY(random_categories_spells)
+
+// Randomly chosen spells by category, if any
+/obj/item/spellbook/random
+	name = "minor spell tome"
+	desc = "A small magic tome with a tiny assortment of spells."
+	book_flags = NO_OWNER
+	var/list/random_categories = list()
+	/// How many spells are randomly chosen on creation
+	var/random_count = 3
+
+/obj/item/spellbook/random/Initialize()
+	. = ..()
+	var/list/valid_spells = list()
+	if(LAZYLEN(random_categories) && (english_list(random_categories) in GLOB.random_categories_spells))
+		valid_spells = GLOB.random_categories_spells[english_list(random_categories)].Copy()
+	else
+		for(var/spell_type in GLOB.spells_by_categories)
+			if(LAZYLEN(random_categories))
+				var/list/combined_list = GLOB.spells_by_categories[spell_type] & random_categories
+				if(!LAZYLEN(combined_list))
+					continue
+			valid_spells += spell_type
+		GLOB.random_categories_spells[english_list(random_categories)] = valid_spells
+	for(var/i = 1 to random_count)
+		if(!LAZYLEN(valid_spells))
+			return
+		var/chosen_spell = pick(valid_spells)
+		allowed_spells += chosen_spell
+		valid_spells -= chosen_spell
+
+/obj/item/spellbook/random/healing
+	name = "minor healing tome"
+	desc = "A small magic tome with a tiny assortment of healing spells."
+	random_categories = list(SPELL_CATEGORY_HEALING)
+
+/obj/item/spellbook/random/healing/medium
+	name = "healing tome"
+	desc = "A small magic tome with an assortment of healing spells."
+	random_count = 6
+
+/obj/item/spellbook/random/fire
+	name = "minor fire tome"
+	desc = "A small magic tome with a tiny assortment of fire spells."
+	random_categories = list(SPELL_CATEGORY_FIRE)
+
+/obj/item/spellbook/random/fire/medium
+	name = "fire tome"
+	desc = "A small magic tome with an assortment of fire spells."
+	random_count = 6
+
+/obj/item/spellbook/random/antimagic
+	name = "antimagic tome"
+	desc = "A small tome containing techniques and spells used to supress magic and arcane powers."
+	random_categories = list(SPELL_CATEGORY_ANTIMAGIC)
