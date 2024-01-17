@@ -361,7 +361,8 @@ GLOBAL_LIST_EMPTY(random_categories_spells)
 	. = ..()
 	var/list/valid_spells = list()
 	if(LAZYLEN(random_categories) && (english_list(random_categories) in GLOB.random_categories_spells))
-		valid_spells = GLOB.random_categories_spells[english_list(random_categories)].Copy()
+		var/list/glob_list = GLOB.random_categories_spells[english_list(random_categories)]
+		valid_spells = glob_list.Copy()
 	else
 		for(var/spell_type in GLOB.spells_by_categories)
 			if(LAZYLEN(random_categories))
