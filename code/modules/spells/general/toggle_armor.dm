@@ -4,6 +4,7 @@
 	var/list/armor_pieces
 	var/equip = 0
 	hud_state = "const_shell"
+	spell_book_visible = FALSE
 
 /datum/spell/toggle_armor/New()
 	if(armor_pieces)

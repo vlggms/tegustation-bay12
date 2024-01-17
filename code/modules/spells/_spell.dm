@@ -8,7 +8,7 @@
 	// Spell book variables
 	/// List of categories for the spellbook
 	var/list/categories = list()
-	/// If TRUE - will be available via spell book
+	/// If TRUE - will be available via auto-generated spell book
 	var/spell_book_visible = TRUE
 	/// Amount of points required to purchase the spell
 	var/spell_cost = 1

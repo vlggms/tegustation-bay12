@@ -14,6 +14,7 @@
 	hud_state = "wiz_tele"
 
 	mana_cost = 2
+	spell_book_visible = FALSE
 
 /datum/spell/contract/return_master/cast(mob/target,mob/user)
 	target = ..(target,user)

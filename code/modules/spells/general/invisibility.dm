@@ -5,11 +5,13 @@
 	charge_max = 100
 	invocation = "Ror Rim Or!"
 	invocation_type = INVOKE_SHOUT
-	var/on = 0
 	hud_state = "invisibility"
 
 	spell_cost = 1
 	mana_cost = 5
+
+	var/on = FALSE
+	var/duration = 30 SECONDS
 
 /datum/spell/invisibility/choose_targets(mob/user = usr)
 	if(istype(holder, /mob/living/carbon/human))
@@ -21,6 +23,17 @@
 		if(H.add_cloaking_source(src))
 			playsound(get_turf(H), 'sound/effects/teleport.ogg', 90, 1)
 			H.mutations |= MUTATION_CLUMSY
-	else if(H.remove_cloaking_source(src))
+			addtimer(CALLBACK(src, .proc/ToggleOffTimed, H), duration * 0.9)
+		return
+	ToggleOff(H)
+
+/datum/spell/invisibility/proc/ToggleOffTimed(mob/living/carbon/human/H)
+	if(!on)
+		return
+	to_chat(H, SPAN_DANGER("You are about to turn visible again!"))
+	addtimer(CALLBACK(src, .proc/ToggleOff, H), duration * 0.1)
+
+/datum/spell/invisibility/proc/ToggleOff(mob/living/carbon/human/H)
+	if(H.remove_cloaking_source(src))
 		playsound(get_turf(H), 'sound/effects/stealthoff.ogg', 90, 1)
 		H.mutations -= MUTATION_CLUMSY
