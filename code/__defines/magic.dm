@@ -8,6 +8,7 @@
 #define SPELL_CATEGORY_FIRE "Fire"
 #define SPELL_CATEGORY_EXPLOSIVE "Explosive"
 #define SPELL_CATEGORY_HEALING "Healing"
+#define SPELL_CATEGORY_MOBILITY "Mobility"
 #define SPELL_CATEGORY_PASSIVE "Passive"
 #define SPELL_CATEGORY_ANTIMAGIC "Anti-magic"
 #define SPELL_CATEGORY_FORBIDDEN "Forbidden arts"

@@ -1,4 +1,4 @@
-/datum/spell/aoe_turf/blink
+/datum/spell/aoe_turf/random_blink
 	name = "Random blink"
 	desc = "This spell randomly teleports you a short distance."
 	charge_max = 20
@@ -13,31 +13,33 @@
 	hud_state = "wiz_blink"
 	cast_sound = 'sound/magic/blink.ogg'
 
+	categories = list(SPELL_CATEGORY_MOBILITY)
 	spell_cost = 1
-	mana_cost = 2
+	mana_cost = 1
 
-/datum/spell/aoe_turf/blink/cast(var/list/targets, mob/user)
+/datum/spell/aoe_turf/random_blink/cast(list/targets, mob/user)
 	if(!targets.len)
 		return
 
 	var/turf/T = pick(targets)
+	if(!istype(T))
+		return
+
+	if(user.buckled)
+		user.buckled = null
+	user.forceMove(T)
+
 	var/turf/starting = get_turf(user)
-	if(T)
-		if(user.buckled)
-			user.buckled = null
-		user.forceMove(T)
-
-		var/datum/effect/effect/system/smoke_spread/smoke = new /datum/effect/effect/system/smoke_spread()
-		smoke.set_up(3, 0, starting)
-		smoke.start()
-
-		smoke = new()
-		smoke.set_up(3, 0, T)
-		smoke.start()
+	var/list/line_list = getline(starting, T)
+	for(var/i = 1 to length(line_list))
+		var/turf/TT = line_list[i]
+		var/obj/effect/temp_visual/decoy/D = new /obj/effect/temp_visual/decoy(TT, user.dir, user)
+		D.alpha = min(150 + i*15, 255)
+		animate(D, alpha = 0, time = 2 + i*2)
 
 	return
 
-/datum/spell/aoe_turf/blink/empower_spell()
+/datum/spell/aoe_turf/random_blink/empower_spell()
 	if(!..())
 		return 0
 	inner_radius += 1

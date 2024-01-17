@@ -16,6 +16,8 @@
 	range = 8
 	hud_state = "wiz_onrush"
 	cast_sound = 'sound/magic/magic_spell.ogg'
+
+	categories = list(SPELL_CATEGORY_MOBILITY)
 	spell_cost = 2
 	mana_cost = 10
 
