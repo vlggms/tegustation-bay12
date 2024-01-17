@@ -28,7 +28,7 @@
 	if(amt_range > 0)
 		for(var/atom/movable/AA in range(amt_range, A))
 			AA.Dispell()
-	else
+	else if(istype(A))
 		A.Dispell()
 
 	playsound(A, 'sound/magic/smoke.ogg', min(100, 25 * amt_range))
