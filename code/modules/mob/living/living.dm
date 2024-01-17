@@ -953,7 +953,7 @@ default behaviour is:
 	for(var/datum/spell/S in mind.learned_spells)
 		if(!prob(dispell_strength * 25))
 			continue
-		S.charge_counter = S.charge_max * (rand(3, 10) * 0.1)
+		S.charge_counter = min(S.charge_counter, S.charge_max * (rand(2, 5) * 0.1))
 		S.process()
 		to_chat(src, SPAN_WARNING("[S] has been dispelled and put on cooldown!"))
 		play_sound = TRUE
