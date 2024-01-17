@@ -11,7 +11,7 @@
 
 	invocation = "Irruere!"
 	invocation_type = INVOKE_SHOUT
-	level_max = list(UPGRADE_TOTAL = 3, UPGRADE_SPEED = 2, UPGRADE_POWER = 2)
+	level_max = list(UPGRADE_TOTAL = 4, UPGRADE_SPEED = 2, UPGRADE_POWER = 4)
 
 	range = 8
 	hud_state = "wiz_onrush"
@@ -44,6 +44,8 @@
 	. = ..()
 	already_attacked = list()
 	free_rushes_counter = free_rushes
+	remove_ranged_ability()
+	on_deactivation(user)
 	RushTarget(user, target)
 
 /datum/spell/aimed/onrush/proc/RushTarget(mob/living/user, mob/living/target)
@@ -72,14 +74,14 @@
 	if(!QDELETED(target) && target.stat != DEAD)
 		if(!free_rushes_counter)
 			already_attacked = list()
-			return
+			return FALSE
 		free_rushes_counter -= 1
 
 	var/list/valid_mobs = list()
-	for(var/mob/living/L in view(user))
+	for(var/mob/living/L in view(6, user))
 		if(L in already_attacked)
 			continue
-		if(L.stat)
+		if(L.stat == DEAD)
 			continue
 	if(!LAZYLEN(valid_mobs))
 		already_attacked = list()
