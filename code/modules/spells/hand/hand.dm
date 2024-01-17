@@ -21,7 +21,7 @@
 
 /datum/spell/hand/cast(list/targets, mob/user)
 	if(current_hand)
-		cancel_hand()
+		CancelHand()
 	if(user.get_active_hand())
 		to_chat(user, "<span class='warning'>You need an empty hand to cast this spell.</span>")
 		return FALSE
@@ -29,17 +29,29 @@
 	if(!user.put_in_active_hand(current_hand))
 		QDEL_NULL(current_hand)
 		return FALSE
+	RegisterSignal(user, COMSIG_ATOM_MOVABLE_DISPELL, .proc/OnUserDispell)
+	RegisterSignal(current_hand, COMSIG_PARENT_QDELETING, .proc/OnHandDestroy)
 	return TRUE
 
-/datum/spell/hand/proc/cancel_hand()
-	if(!QDELETED(current_hand))
-		QDEL_NULL(current_hand)
+/datum/spell/hand/proc/OnUserDispell(datum/source, dispell_strength = DISPELL_WEAK)
+	SIGNAL_HANDLER
+	if(istype(current_hand))
+		holder.visible_message(SPAN_DANGER("[current_hand] vanishes in an instant!"))
+		CancelHand()
+
+/datum/spell/hand/proc/OnHandDestroy(datum/source)
+	SIGNAL_HANDLER
+	UnregisterSignal(holder, COMSIG_ATOM_MOVABLE_DISPELL)
+	UnregisterSignal(current_hand, COMSIG_PARENT_QDELETING)
+
+/datum/spell/hand/proc/CancelHand()
+	QDEL_NULL(current_hand)
 
 /datum/spell/hand/Destroy()
-	qdel(current_hand)
-	. = ..()
+	CancelHand()
+	return ..()
 
-/datum/spell/hand/proc/valid_target(var/atom/a,var/mob/user) //we use separate procs for our target checking for the hand spells.
+/datum/spell/hand/proc/valid_target(atom/a, mob/user) //we use separate procs for our target checking for the hand spells.
 	var/distance = get_dist(a,user)
 	if((min_range && distance < min_range) || (range && distance > range))
 		return FALSE
@@ -64,7 +76,7 @@
 	if(..())
 		casts--
 		to_chat(holder, "<span class='notice'>The [name] spell has [casts] out of [max_casts] charges left</span>")
-		cancel_hand()
+		CancelHand()
 		return TRUE
 	return FALSE
 
@@ -72,12 +84,12 @@
 	var/hand_timer = null
 	var/hand_duration = 0
 
-/datum/spell/hand/duration/cast(var/list/targets, var/mob/user)
+/datum/spell/hand/duration/cast(list/targets, mob/user)
 	. = ..()
 	if(.)
-		hand_timer = addtimer(CALLBACK(src, .proc/cancel_hand), hand_duration, TIMER_STOPPABLE|TIMER_UNIQUE|TIMER_NO_HASH_WAIT|TIMER_OVERRIDE)
+		hand_timer = addtimer(CALLBACK(src, .proc/CancelHand), hand_duration, TIMER_STOPPABLE|TIMER_UNIQUE|TIMER_NO_HASH_WAIT|TIMER_OVERRIDE)
 
-/datum/spell/hand/duration/cancel_hand()
+/datum/spell/hand/duration/CancelHand()
 	deltimer(hand_timer)
 	hand_timer = null
 	..()
