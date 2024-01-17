@@ -38,7 +38,25 @@
 			)
 			restore_health(5)
 		return
-	..()
+	return ..()
+
+/obj/structure/cult/pylon/handle_death_change(new_death_state)
+	. = ..()
+	if(new_death_state)
+		Shatter()
+
+/obj/structure/cult/pylon/proc/Shatter(display_message = TRUE)
+	playsound(src, "shatter", 70, 1)
+	if(display_message)
+		visible_message("<span class='warning'>\The [src] shatters!</span>")
+
+	var/debris_count = round(get_glass_cost() / rand(1, 4))
+	for(var/i = 1 to debris_count)
+		material.place_shard(loc)
+		if(reinf_material)
+			debris_count = rand(0, 1)
+			new /obj/item/stack/material/rods(loc, debris_count, reinf_material.name)
+	qdel(src)
 
 /obj/structure/cult/tome
 	name = "Desk"

@@ -28,9 +28,14 @@
 	if(!LAZYLEN(targets))
 		return
 
+	var/turf/user_turf = get_turf(user)
 	for(var/turf/T in targets)
 		var/obj/effect/turf_fire/TF = T.IgniteTurf(flame_power, flame_color)
-		TF.interact_with_atmos = FALSE
+		if(istype(TF))
+			TF.interact_with_atmos = FALSE
+			TF.pixel_x = (user_turf.x - T.x) * world.icon_size
+			TF.pixel_y = (user_turf.y - T.y) * world.icon_size
+			animate(TF, pixel_x = 0, pixel_y = 0, time = 3, easing = EASE_OUT)
 
 /datum/spell/aoe_turf/fire_ring/empower_spell()
 	if(!..())

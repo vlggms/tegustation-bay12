@@ -14,7 +14,8 @@
 	mana_cost = 3
 
 /datum/spell/hand/analyze_health/cast_hand(mob/living/carbon/human/H, mob/user)
-	new /obj/effect/temp_visual/temporary(get_turf(H), 5, 'icons/effects/effects.dmi', "repel_missiles")
+	var/obj/effect/temp_visual/temporary/TV = new(get_turf(H), 5, 'icons/effects/effects.dmi', "repel_missiles")
+	TV.dir = H.dir
 	var/skill_level = SKILL_UNTRAINED
 	switch(spell_levels[UPGRADE_POWER])
 		if(1)

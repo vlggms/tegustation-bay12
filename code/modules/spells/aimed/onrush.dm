@@ -11,7 +11,7 @@
 
 	invocation = "Irruere!"
 	invocation_type = INVOKE_SHOUT
-	level_max = list(UPGRADE_TOTAL = 2, UPGRADE_SPEED = 2, UPGRADE_POWER = 0)
+	level_max = list(UPGRADE_TOTAL = 3, UPGRADE_SPEED = 2, UPGRADE_POWER = 2)
 
 	range = 8
 	hud_state = "wiz_onrush"
@@ -21,8 +21,12 @@
 	spell_cost = 2
 	mana_cost = 10
 
-	// List of mobs that were already attacked in this cast
+	/// List of mobs that were already attacked in this cast
 	var/list/already_attacked = list()
+	/// How many times can this be cast for free, regardless of previous target death
+	var/free_rushes = 0
+	// Current counter of "free rushes"
+	var/free_rushes_counter = 0
 
 /datum/spell/aimed/onrush/TargetCastCheck(mob/living/user, mob/living/target)
 	if(!istype(target))
@@ -39,6 +43,7 @@
 /datum/spell/aimed/onrush/fire_projectile(mob/living/user, mob/living/target)
 	. = ..()
 	already_attacked = list()
+	free_rushes_counter = free_rushes
 	RushTarget(user, target)
 
 /datum/spell/aimed/onrush/proc/RushTarget(mob/living/user, mob/living/target)
@@ -52,12 +57,9 @@
 	user.forceMove(target_turf)
 	playsound(get_turf(user), 'sound/simple_mob/abnormality/white_night/spear_dash.ogg', 50, TRUE)
 	OnrushAttack(user, target)
-	if(target.stat || QDELETED(target))
-		if(!QDELETED(target))
-			already_attacked |= target
-		addtimer(CALLBACK(src, .proc/CheckAndRepeat, user), rand(3, 6))
-		return
-	already_attacked = list()
+	if(!QDELETED(target))
+		already_attacked |= target
+	addtimer(CALLBACK(src, .proc/CheckAndRepeat, user, target), rand(3, 6))
 
 /datum/spell/aimed/onrush/proc/OnrushAttack(mob/living/user, mob/living/target)
 	user.next_move = 0
@@ -66,7 +68,13 @@
 	user.ClickOn(target)
 
 // Looks for valid mobs in view and attacks one
-/datum/spell/aimed/onrush/proc/CheckAndRepeat(mob/living/user)
+/datum/spell/aimed/onrush/proc/CheckAndRepeat(mob/living/user, mob/living/target)
+	if(!QDELETED(target) && target.stat != DEAD)
+		if(!free_rushes_counter)
+			already_attacked = list()
+			return
+		free_rushes_counter -= 1
+
 	var/list/valid_mobs = list()
 	for(var/mob/living/L in view(user))
 		if(L in already_attacked)
@@ -78,3 +86,11 @@
 		return
 	var/mob/living/new_target = pick(valid_mobs)
 	RushTarget(user, new_target)
+
+/datum/spell/aimed/onrush/empower_spell()
+	if(!..())
+		return FALSE
+
+	free_rushes += 2
+
+	return "The [src] spell will now additionaly charge [free_rushes] times for free."
