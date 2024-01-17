@@ -6,12 +6,12 @@
 	invocation = "Ror Rim Or!"
 	invocation_type = INVOKE_SHOUT
 	hud_state = "invisibility"
+	duration = 30 SECONDS
 
 	spell_cost = 1
 	mana_cost = 5
 
 	var/on = FALSE
-	var/duration = 30 SECONDS
 
 /datum/spell/invisibility/choose_targets(mob/user = usr)
 	if(istype(holder, /mob/living/carbon/human))
