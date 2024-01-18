@@ -1,6 +1,6 @@
 /datum/spell/aimed/heal_target
 	name = "Cure Light Wounds"
-	desc = "A rudimentary spell used mainly to heal light bruises and burns. Does not require wizard garb."
+	desc = "A rudimentary spell used mainly to heal light bruises and burns."
 	deactive_msg = "You discharge the healing spell..."
 	active_msg = "You charge the healing spell!"
 	spell_flags = 0
@@ -248,10 +248,10 @@
 	return ..()
 
 /datum/spell/aimed/revoke_death/fire_projectile(mob/living/user, mob/living/target)
-	for(var/atom/A in view(7, user))
+	for(var/atom/movable/A in view(7, user))
 		var/obj/effect/temp_visual/decoy/D = new /obj/effect/temp_visual/decoy(get_turf(A), A.dir, A)
 		D.alpha = 145
-		animate(D, pixel_x = A.pixel_x + rand(-12, 12), pixel_y = A.pixel_y + rand(-12, 12), alpha = 0, time = rand(3, 7))
+		animate(D, pixel_x = A.pixel_x + rand(-12, 12), pixel_y = A.pixel_y + rand(-12, 12), alpha = 0, time = rand(7, 20))
 	for(var/i = 1 to 25)
 		addtimer(CALLBACK(src, .proc/PerformTargetEffect, target), i * 2)
 	addtimer(CALLBACK(src, .proc/DoRevive, target), 6 SECONDS)

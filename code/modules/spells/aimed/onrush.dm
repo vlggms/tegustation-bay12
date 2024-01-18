@@ -79,6 +79,8 @@
 
 	var/list/valid_mobs = list()
 	for(var/mob/living/L in view(6, user))
+		if(L == user)
+			continue
 		if(L in already_attacked)
 			continue
 		if(L.stat == DEAD)
