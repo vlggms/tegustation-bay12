@@ -371,7 +371,7 @@ GLOBAL_LIST_EMPTY(random_categories_spells)
 				if(!LAZYLEN(combined_list))
 					continue
 			valid_spells += spell_type
-		GLOB.random_categories_spells[english_list(random_categories)] = valid_spells
+		GLOB.random_categories_spells[english_list(random_categories)] = valid_spells.Copy()
 	for(var/i = 1 to random_count)
 		if(!LAZYLEN(valid_spells))
 			return
