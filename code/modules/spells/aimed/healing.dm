@@ -248,6 +248,7 @@
 	return ..()
 
 /datum/spell/aimed/revoke_death/fire_projectile(mob/living/user, mob/living/target)
+	. = ..()
 	for(var/atom/movable/A in view(7, user))
 		var/obj/effect/temp_visual/decoy/D = new /obj/effect/temp_visual/decoy(get_turf(A), A.dir, A)
 		D.alpha = 145
