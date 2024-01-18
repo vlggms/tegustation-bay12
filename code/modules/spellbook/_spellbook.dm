@@ -329,7 +329,7 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 		/datum/spell/aoe_turf/knock,
 		/datum/spell/aoe_turf/random_blink,
 		/datum/spell/aimed/blink,
-		/datum/spell/aimed/heal_target/touch,
+		/datum/spell/aimed/heal_target,
 		/datum/spell/aoe_turf/exchange_wounds,
 		/datum/spell/aoe_turf/smoke,
 		)
@@ -339,7 +339,7 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 	book_flags = NO_OWNER
 	allowed_spells = list(
 		/datum/spell/hand/analyze_health,
-		/datum/spell/aimed/heal_target/touch,
+		/datum/spell/aimed/heal_target,
 		/datum/spell/aimed/heal_target,
 		/datum/spell/aimed/heal_target/major,
 		/datum/spell/aimed/heal_target/trance,

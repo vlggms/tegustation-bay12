@@ -72,7 +72,7 @@
 	equipment = list(/obj/item/clothing/under/caretaker = slot_w_uniform,
 					/obj/item/clothing/shoes/dress/caretakershoes = slot_shoes)
 	spells = list(/datum/spell/toggle_armor/caretaker,
-				/datum/spell/aimed/heal_target/touch,
+				/datum/spell/aimed/heal_target,
 				/datum/spell/aoe_turf/knock/slow,
 				/datum/spell/targeted/heal_target/area,
 				/datum/spell/hand/analyze_health,

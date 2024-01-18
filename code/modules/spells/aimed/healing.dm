@@ -1,26 +1,27 @@
 /datum/spell/aimed/heal_target
 	name = "Cure Light Wounds"
-	desc = "A rudimentary spell used mainly by wizards to heal papercuts. Does not require wizard garb."
+	desc = "A rudimentary spell used mainly to heal light bruises and burns. Does not require wizard garb."
 	deactive_msg = "You discharge the healing spell..."
 	active_msg = "You charge the healing spell!"
 	spell_flags = 0
-	charge_max = 20 SECONDS
+	charge_max = 10 SECONDS
+	cooldown_reduc = 5 SECONDS
+
 	invocation = "Di'Nath!"
 	invocation_type = INVOKE_SHOUT
 	level_max = list(UPGRADE_TOTAL = 2, UPGRADE_SPEED = 1, UPGRADE_POWER = 2)
 
-	cooldown_reduc = 50
 	hud_state = "heal_minor"
 	cast_sound = 'sound/magic/staff_healing.ogg'
 
 	/// Maximum distance between user and target
-	var/use_range = 3
-	var/brute_damage = -15
-	var/burn_damage = -5
+	range = 3
+	var/brute_damage = -20
+	var/burn_damage = -20
 	var/tox_damage = 0
 	var/oxy_damage = 0
 	var/rad_damage = 0
-	var/robo_damage = -4
+	var/robo_damage = -10
 	var/organ_heal = 0
 	var/blood_heal = 0
 	var/brain_damage = 0
@@ -39,7 +40,7 @@
 	if(!isliving(target))
 		to_chat(user, SPAN_WARNING("The target must be a living creature!"))
 		return FALSE
-	if(get_dist(user, target) > use_range)
+	if(get_dist(user, target) > range)
 		to_chat(user, SPAN_WARNING("The target is too far away!"))
 		return FALSE
 	return ..()
@@ -74,22 +75,10 @@
 /datum/spell/aimed/heal_target/empower_spell()
 	if(!..())
 		return FALSE
-	brute_damage -= 15
-	burn_damage -= 15
-	robo_damage -= 7
-	return "[src] will now heal more."
-
-/datum/spell/aimed/heal_target/touch
-	name = "Healing Touch"
-	desc = "Heals an adjacent target for a reasonable amount of health."
-	use_range = 1
-	brute_damage = -7
-	burn_damage = -7
-	robo_damage = -3
-	charge_max = 10 SECONDS
-	invocation = "Di'Na!"
-
-	hud_state = "heal_touch"
+	brute_damage -= 20
+	burn_damage -= 20
+	robo_damage -= 10
+	return "The [src] spell now heals more."
 
 /datum/spell/aimed/heal_target/major
 	name = "Cure Major Wounds"
@@ -97,14 +86,14 @@
 	charge_max = 30 SECONDS
 	spell_flags = NEEDSCLOTHES
 	invocation = "Borv Di'Nath!"
-	use_range = 1
+	range = 1
 	level_max = list(UPGRADE_TOTAL = 2, UPGRADE_SPEED = 1, UPGRADE_POWER = 1)
 	cooldown_reduc = 100
 	hud_state = "heal_major"
 
 	brute_damage = -75
-	burn_damage  = -50
-	robo_damage = -10
+	burn_damage  = -75
+	robo_damage = -30
 	blood_heal = 28
 
 	message = "<span class='notice'><b>Your body feels like a warm, cozy fire.</b></span>"
@@ -116,28 +105,28 @@
 	if(!..())
 		return FALSE
 
-	brute_damage = -35
-	burn_damage = -35
-	robo_damage = -15
+	brute_damage = -150
+	burn_damage = -150
+	robo_damage = -60
 	blood_heal = 28
-	organ_heal = 5
-	brain_damage = -5
-	rad_damage  = -25
+	organ_heal = 10
+	brain_damage = -15
+	rad_damage  = -50
 	tox_damage = -20
-	oxy_damage = -14
+	oxy_damage = -20
 
-	return "[src] heals more, and heals organ damage and radiation."
+	return "The [src] spell now heals more, and heals organ damage and radiation."
 
 /datum/spell/aimed/heal_target/sacrifice
 	name = "Sacrifice"
-	desc = "This spell heals immensily. For a price. Does not require wizard garb."
+	desc = "This spell heals immensily while damaging the user."
 	invocation = "Ei'Nath Borv Di'Nath!"
 	charge_type = SPELL_HOLDVAR
 	holder_var_type = "fireloss"
 	holder_var_amount = 100
 	level_max = list(UPGRADE_TOTAL = 1, UPGRADE_SPEED = 0, UPGRADE_POWER = 1)
 
-	use_range = 1
+	range = 1
 	brute_damage = -1000
 	burn_damage = -1000
 	robo_damage = -1000
@@ -149,7 +138,7 @@
 	hud_state = "gen_dissolve"
 	cast_sound = 'sound/magic/disintegrate.ogg'
 
-	spell_cost = 3
+	spell_cost = 4
 	mana_cost = 20
 
 /datum/spell/aimed/heal_target/sacrifice/empower_spell()
@@ -157,7 +146,7 @@
 		return 0
 
 	organ_heal = 50
-	brain_damage  = -50
+	brain_damage  = -100
 	rad_damage  = -1000
 
 	return "You will now heal organ and brain damage, as well as virtually purge all radiation."
@@ -166,19 +155,26 @@
 	name = "Trance"
 	desc = "A mighty spell of restoration that briefly forces its target into a deep, dreamless sleep, rapidly repairing their body and soul as their senses are dulled. The users of this mighty art are known for being short lived, slowly devolving into raving madness as the power they once relied on fails them with excessive use."
 	invocation = "Di' Dae Nath!"
+
 	charge_max = 2 MINUTES
 
-	use_range = 1
-	brute_damage = -1000
-	burn_damage = -1000
-	oxy_damage = -100
-	tox_damage = -100
+	range = 1
+	brute_damage = -2000
+	burn_damage = -2000
+	oxy_damage = -1000
+	tox_damage = -1000
 	robo_damage = -1000
+	organ_heal = 100
+	brain_damage  = -200
+	rad_damage  = -5000
 	hud_state = "trance"
-	var/obj/effect/effect
 
-	spell_cost = 4
+	level_max = list(UPGRADE_TOTAL = 2, UPGRADE_SPEED = 0, UPGRADE_POWER = 0)
+
+	spell_cost = 5
 	mana_cost = 30
+
+	var/obj/effect/effect
 
 /datum/spell/aimed/heal_target/trance/fire_projectile(mob/living/user, mob/living/target)
 	var/time = max(30 SECONDS, (target.getBruteLoss() + target.getFireLoss()) * 20)
@@ -213,39 +209,38 @@
 	density = FALSE
 
 /obj/effect/rift/Destroy()
-	for(var/o in contents)
-		var/atom/movable/M = o
+	for(var/atom/movable/M in contents)
 		M.dropInto(loc)
 	. = ..()
 
 /datum/spell/aimed/revoke_death
 	name = "Revoke Death"
-	desc = "Revoke that of death itself. Comes at a cost that may be hard to manage for some."
-	deactive_msg = "You discharge the healing spell..."
-	active_msg = "You charge the healing spell!"
+	desc = "Revoke that of death itself."
+	deactive_msg = "You discharge the revoke death spell..."
+	active_msg = "You charge the revoke death spell!"
 
-	charge_type = SPELL_CHARGES
-	charge_max = 1
+	charge_max = 120 SECONDS
+	cooldown_reduc = 50 SECONDS
+
 	invocation = "Di Le Nal Yen Nath!"
 	invocation_type = INVOKE_SHOUT
+	level_max = list(UPGRADE_TOTAL = 2, UPGRADE_SPEED = 2, UPGRADE_POWER = 0)
+
+	cast_sound = 'sound/magic/churchbell.ogg'
 	hud_state = "heal_revoke"
 
 	categories = list(SPELL_CATEGORY_HEALING, SPELL_CATEGORY_FORBIDDEN)
-	spell_cost = 5
-	mana_cost = 25
+	spell_cost = 10
+	mana_cost = 50
 
-	var/use_range = 1
+	range = 1
 
 /datum/spell/aimed/revoke_death/TargetCastCheck(mob/living/user, mob/living/target)
 	if(!isliving(target))
 		to_chat(user, SPAN_WARNING("The target must be a living creature!"))
 		return FALSE
-	if(get_dist(user, target) > use_range)
+	if(get_dist(user, target) > range)
 		to_chat(user, SPAN_WARNING("The target is too far away!"))
-		return FALSE
-	if(!alert(user, "Are you sure?", "Alert", "Yes", "No") == "Yes" || !alert(user, "Are you ABSOLUTELY SURE?", "Alert", "Absolutely!", "No") == "Absolutely!")
-		return FALSE
-	if(QDELETED(target))
 		return FALSE
 	if(target.stat != DEAD)
 		to_chat(user, SPAN_NOTICE("\The [target] is not dead..."))
@@ -253,29 +248,31 @@
 	return ..()
 
 /datum/spell/aimed/revoke_death/fire_projectile(mob/living/user, mob/living/target)
+	for(var/atom/A in view(7, user))
+		var/obj/effect/temp_visual/decoy/D = new /obj/effect/temp_visual/decoy(get_turf(A), A.dir, A)
+		D.alpha = 145
+		animate(D, pixel_x = A.pixel_x + rand(-12, 12), pixel_y = A.pixel_y + rand(-12, 12), alpha = 0, time = rand(3, 7))
+	for(var/i = 1 to 25)
+		addtimer(CALLBACK(src, .proc/PerformTargetEffect, target), i * 2)
+	addtimer(CALLBACK(src, .proc/DoRevive, target), 6 SECONDS)
+
+/datum/spell/aimed/revoke_death/proc/PerformTargetEffect(mob/living/target)
+	var/obj/effect/temp_visual/decoy/D = new /obj/effect/temp_visual/decoy(get_turf(target), target.dir, target)
+	D.alpha = 5
+	D.pixel_x = target.pixel_x + rand(-20, 20)
+	D.pixel_y = target.pixel_y + rand(-20, 20)
+	animate(D, pixel_x = target.pixel_x, pixel_y = target.pixel_y, alpha = 175, time = rand(4, 8))
+	animate(alpha = 0, time = 3)
+
+/datum/spell/aimed/revoke_death/proc/DoRevive(mob/living/target)
+	for(var/i = 1 to 12)
+		var/obj/effect/temp_visual/decoy/D = new /obj/effect/temp_visual/decoy(get_turf(target), target.dir, target)
+		D.alpha = 5
+		D.pixel_x = target.pixel_x + pick(rand(-26, -14), rand(14, 26))
+		D.pixel_y = target.pixel_y + pick(rand(-26, -14), rand(14, 26))
+		animate(D, pixel_x = target.pixel_x, pixel_y = target.pixel_y, alpha = 175, time = rand(2, 4))
+		animate(alpha = 0, time = 2)
+	playsound(target, 'sound/magic/staff_healing.ogg', 50, FALSE, 14)
 	target.rejuvenate()
-	if(!target.client)
-		addtimer(CALLBACK(src,.proc/CheckForRevoke, target), 30 SECONDS)
-	else
-		RevokeSpells()
-
-/datum/spell/aimed/revoke_death/proc/CheckForRevoke(mob/living/target)
-	if(target.client)
-		RevokeSpells()
-		return
-	target.death()
-	charge_counter = charge_max
-	to_chat(holder, SPAN_NOTICE("\The [src] refreshes as it seems it could not bring back the soul of [target.real_name]."))
-
-/datum/spell/aimed/revoke_death/proc/RevokeSpells()
-	if(!istype(holder, /mob/living))
-		return
-	var/mob/living/M = holder
-	to_chat(M, SPAN_USERDANGER("The burden of twisting the fate itself is too heavy for you. You lose your magic powers!"))
-	if(M.mind)
-		for(var/s in M.mind.learned_spells)
-			if(istype(s, /datum/spell/toggle_armor)) //Can keep the armor n junk.
-				continue
-			M.remove_spell(s)
-	for(var/a in M.auras)
-		M.remove_aura(a)
+	target.confused = 30
+	target.visible_message(SPAN_WARNING("\The [target] rises once more!"))
