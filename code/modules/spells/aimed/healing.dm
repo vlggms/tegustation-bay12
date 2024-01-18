@@ -273,6 +273,6 @@
 		animate(D, pixel_x = target.pixel_x, pixel_y = target.pixel_y, alpha = 175, time = rand(2, 4))
 		animate(alpha = 0, time = 2)
 	playsound(target, 'sound/magic/staff_healing.ogg', 50, FALSE, 14)
-	target.rejuvenate()
+	target.revive()
 	target.confused = 30
 	target.visible_message(SPAN_WARNING("\The [target] rises once more!"))
