@@ -27,9 +27,9 @@
 
 	if(user.buckled)
 		user.buckled = null
-	user.forceMove(T)
 
 	var/turf/starting = get_turf(user)
+	user.forceMove(T)
 	var/list/line_list = getline(starting, T)
 	for(var/i = 1 to length(line_list))
 		var/turf/TT = line_list[i]

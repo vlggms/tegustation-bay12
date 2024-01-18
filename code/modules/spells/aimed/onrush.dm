@@ -83,6 +83,7 @@
 			continue
 		if(L.stat == DEAD)
 			continue
+		valid_mobs += L
 	if(!LAZYLEN(valid_mobs))
 		already_attacked = list()
 		return

@@ -1,12 +1,17 @@
 /datum/spell/invisibility
 	name = "invisibility"
 	desc = "A simple spell of invisibility, for when you really just can't afford a paper bag."
+
+	charge_max = 30 SECONDS
+	cooldown_reduc = 8 SECONDS
+
 	spell_flags = 0
-	charge_max = 100
 	invocation = "Ror Rim Or!"
 	invocation_type = INVOKE_SHOUT
+	level_max = list(UPGRADE_TOTAL = 4, UPGRADE_SPEED = 2, UPGRADE_POWER = 4)
+
 	hud_state = "invisibility"
-	duration = 30 SECONDS
+	duration = 20 SECONDS
 
 	spell_cost = 1
 	mana_cost = 5
@@ -23,6 +28,7 @@
 		if(H.add_cloaking_source(src))
 			playsound(get_turf(H), 'sound/effects/teleport.ogg', 90, 1)
 			H.mutations |= MUTATION_CLUMSY
+			charge_counter = charge_max
 			addtimer(CALLBACK(src, .proc/ToggleOffTimed, H), duration * 0.9)
 		return
 	ToggleOff(H)
@@ -37,3 +43,15 @@
 	if(H.remove_cloaking_source(src))
 		playsound(get_turf(H), 'sound/effects/stealthoff.ogg', 90, 1)
 		H.mutations -= MUTATION_CLUMSY
+		on = FALSE
+		charge_counter = 0
+		process()
+
+/datum/spell/invisibility/empower_spell()
+	if(!..())
+		return FALSE
+
+	duration += 10 SECONDS
+
+	return "The [src] spell now lasts for a maximum of [round(duration / 1 SECONDS)] seconds."
+
