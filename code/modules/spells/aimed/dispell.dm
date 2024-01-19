@@ -1,14 +1,17 @@
 /datum/spell/aimed/dispell_projectile
 	name = "Dispelling projectile"
 	desc = "Launches a magic bolt capable of dispelling magic."
-	charge_max = 50
+
 	spell_flags = 0
 	invocation = "Ma'Gi-Di!"
 	invocation_type = INVOKE_SHOUT
 	range = 15
-	level_max = list(UPGRADE_TOTAL = 2, UPGRADE_SPEED = 0, UPGRADE_POWER = 2)
+	level_max = list(UPGRADE_TOTAL = 3, UPGRADE_SPEED = 2, UPGRADE_POWER = 2)
 	duration = 15
 	projectile_type = /obj/item/projectile/spell_projectile/dispell
+
+	charge_max = 15 SECONDS
+	cooldown_reduc = 5 SECONDS
 
 	active_msg = "You prepare to cast the bolt of dispell!"
 	deactive_msg = "You decide against using the bolt of dispell."
