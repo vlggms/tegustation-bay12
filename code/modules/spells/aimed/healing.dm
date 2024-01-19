@@ -34,7 +34,7 @@
 
 	categories = list(SPELL_CATEGORY_HEALING)
 	spell_cost = 1
-	mana_cost = 3
+	mana_cost = 6
 
 /datum/spell/aimed/heal_target/TargetCastCheck(mob/living/user, mob/living/target)
 	if(!isliving(target))
@@ -78,37 +78,41 @@
 	brute_damage -= 20
 	burn_damage -= 20
 	robo_damage -= 10
-	return "The [src] spell now heals more."
+	blood_heal = 10
+	return "The [src] spell now heals more and slightly restores lost blood."
 
 /datum/spell/aimed/heal_target/major
 	name = "Cure Major Wounds"
 	desc = "A spell used to fix others that cannot be fixed with regular medicine."
-	charge_max = 30 SECONDS
+
 	spell_flags = NEEDSCLOTHES
 	invocation = "Borv Di'Nath!"
 	range = 1
 	level_max = list(UPGRADE_TOTAL = 2, UPGRADE_SPEED = 1, UPGRADE_POWER = 1)
-	cooldown_reduc = 100
+
+	charge_max = 40 SECONDS
+	cooldown_reduc = 10 SECONDS
+
 	hud_state = "heal_major"
 
-	brute_damage = -75
-	burn_damage  = -75
+	brute_damage = -60
+	burn_damage  = -60
 	robo_damage = -30
-	blood_heal = 28
+	blood_heal = 30
 
 	message = "<span class='notice'><b>Your body feels like a warm, cozy fire.</b></span>"
 
-	spell_cost = 2
-	mana_cost = 12
+	spell_cost = 4
+	mana_cost = 20
 
 /datum/spell/aimed/heal_target/major/empower_spell()
 	if(!..())
 		return FALSE
 
-	brute_damage = -150
-	burn_damage = -150
+	brute_damage = -120
+	burn_damage = -120
 	robo_damage = -60
-	blood_heal = 28
+	blood_heal = 60
 	organ_heal = 10
 	brain_damage = -15
 	rad_damage  = -50
@@ -230,7 +234,7 @@
 	hud_state = "heal_revoke"
 
 	categories = list(SPELL_CATEGORY_HEALING, SPELL_CATEGORY_FORBIDDEN)
-	spell_cost = 10
+	spell_cost = 12
 	mana_cost = 50
 
 	range = 1

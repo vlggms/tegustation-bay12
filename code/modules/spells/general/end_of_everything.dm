@@ -117,6 +117,8 @@
 	for(var/atom/A in range(32, src))
 		if(A == src)
 			continue
+		if(isobserver(A))
+			continue
 		if(prob(15))
 			continue
 		if(prob(33))
