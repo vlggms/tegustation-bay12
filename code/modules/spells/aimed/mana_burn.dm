@@ -15,7 +15,7 @@
 	spell_flags = 0
 	range = 4
 
-	hud_state = "wiz_mana_burst"
+	hud_state = "wiz_mana_burn"
 
 	cast_sound = 'sound/magic/blind.ogg'
 
