@@ -812,7 +812,7 @@
 		Can also be used in certain tools that utilize magic phenomenon."
 	taste_description = "cool air"
 	reagent_state = LIQUID
-	color = "#47f0ff"
+	color = COLOR_MANA
 
 /datum/reagent/concentrated_mana/affect_blood(mob/living/carbon/human/H, alien, removed)
 	if(!ishuman(H))

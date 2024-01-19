@@ -13,6 +13,9 @@
 #define COMSIG_GLOB_MOB_DEATH "!mob_death"
 /// A magic orb was picked up by a mob: (orb, mob/living)
 #define COMSIG_GLOB_ORB_PICKUP "!orb_picked"
+/// When spell is cast; (user, spell, targets)
+#define COMSIG_GLOB_SPELL_CAST "!spell_cast"
+
 
 //////////////////////////////////////////////////////////////////
 
@@ -38,6 +41,9 @@
 #define COMSIG_ATOM_MOVABLE_DISPELL "atom_dispell"
 // Return value of a signal handler if dispell should be blocked
 #define COMPONENT_DISPELL_BLOCKED (1 << 0)
+
+/// When spell is cast; (user, spell, targets)
+#define COMSIG_SPELL_CAST "spell_cast"
 
 // /area signals
 

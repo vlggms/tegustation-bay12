@@ -12,6 +12,8 @@
 	var/spell_book_visible = TRUE
 	/// Amount of points required to purchase the spell
 	var/spell_cost = 1
+	/// How many points were used for this particular spell, upgrades included
+	var/total_points_used = 0
 
 	/// Can be recharge or charges, see charge_max and charge_counter descriptions; can also be based on the holder's vars now, use "holder_var" for that
 	var/charge_type = SPELL_RECHARGE
@@ -112,6 +114,15 @@
 
 	//still_recharging_msg = "<span class='notice'>[name] is still recharging.</span>"
 	charge_counter = charge_max
+	total_points_used = spell_cost
+
+/datum/spell/Destroy()
+	if(isliving(holder))
+		var/mob/living/L = holder
+		var/datum/mind/M = L.mind
+		if(istype(M) && M.last_used_spell == src)
+			M.last_used_spell = null
+	return ..()
 
 /datum/spell/proc/process()
 	if(processing)
@@ -163,6 +174,11 @@
 				critfail(targets, user)
 			else
 				cast(targets, user, time)
+			var/datum/mind/M = user.mind
+			if(istype(M))
+				M.last_used_spell = src
+			SEND_SIGNAL(user, COMSIG_SPELL_CAST, src, targets)
+			SEND_GLOBAL_SIGNAL(COMSIG_GLOB_SPELL_CAST, user, src, targets)
 			after_cast(targets) //generates the sparks, smoke, target messages etc.
 		else
 			break

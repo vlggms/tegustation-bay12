@@ -10,7 +10,7 @@
 
 	level_max = list(UPGRADE_TOTAL = 4, UPGRADE_SPEED = 4, UPGRADE_POWER = 4)
 	cooldown_min = 5 //4 deciseconds reduction per rank
-	hud_state = "wiz_blink"
+	hud_state = "wiz_blink_random"
 	cast_sound = 'sound/magic/blink.ogg'
 
 	categories = list(SPELL_CATEGORY_MOBILITY)

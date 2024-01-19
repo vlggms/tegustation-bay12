@@ -47,7 +47,7 @@ Basically: I can use it to target things where I click. I can then pass these ta
 		if(hand_spell.move_delay)
 			user.ExtraMoveCooldown(hand_spell.move_delay)
 		if(hand_spell.click_delay)
-			user.setClickCooldown(hand_spell.move_delay)
+			user.setClickCooldown(hand_spell.click_delay)
 
 /obj/item/magic_hand/throw_at(atom/target, range, speed, mob/thrower, spin = TRUE, datum/callback/callback) //no throwing pls
 	usr.drop_from_inventory(src)

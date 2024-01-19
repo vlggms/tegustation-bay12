@@ -278,9 +278,11 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 			return SPAN_WARNING("Cannot upgrade the spell!")
 		if(upgrade_type == UPGRADE_POWER)
 			user.mind.mana.spell_points -= S.upgrade_cost[upgrade_type]
+			S.total_points_used += S.upgrade_cost[upgrade_type]
 			return S.empower_spell()
 		if(upgrade_type == UPGRADE_SPEED)
 			user.mind.mana.spell_points -= S.upgrade_cost[upgrade_type]
+			S.total_points_used += S.upgrade_cost[upgrade_type]
 			return S.quicken_spell()
 	return SPAN_DANGER("Could not locate the spell!")
 

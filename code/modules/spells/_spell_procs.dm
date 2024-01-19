@@ -1,5 +1,6 @@
 /datum/mind
-	var/list/learned_spells
+	var/list/learned_spells = list()
+	var/datum/spell/last_used_spell = null
 
 /mob/Stat()
 	. = ..()
