@@ -68,7 +68,7 @@
 	/// Amount of max mana level that is added
 	var/mana_level = 20
 	/// How much mana regeneration is added
-	var/mana_regeneration = 1
+	var/mana_regeneration = 0.5
 
 /obj/effect/magic_orb/mana/CanUseOrb(mob/living/user)
 	if(!user.mind)

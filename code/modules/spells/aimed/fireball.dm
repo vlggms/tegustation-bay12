@@ -1,7 +1,7 @@
 /datum/spell/aimed/fireball
 	name = "Fireball"
 	desc = "This spell fires an explosive fireball at a target."
-	charge_max = 10 SECONDS
+	charge_max = 15 SECONDS
 	spell_flags = 0
 	invocation = "ONI SOMA"
 	invocation_type = INVOKE_SHOUT
