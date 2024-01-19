@@ -12,7 +12,6 @@
 
 	level_max = list(UPGRADE_TOTAL = 2, UPGRADE_SPEED = 2, UPGRADE_POWER = 0)
 
-	spell_flags = 0
 	range = 4
 
 	hud_state = "wiz_mana_burn"
