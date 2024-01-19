@@ -54,7 +54,7 @@
 	var/obj/effect/temp_visual/decoy/D = new /obj/effect/temp_visual/decoy(get_turf(target), target.dir, target)
 	D.alpha = 125
 	D.color = COLOR_GREEN
-	animate(D, pixel_x = user.pixel_x, pixel_y = user.pixel_y, alpha = 55, time = 2)
+	animate(D, pixel_x = (user.y - target.y) * world.icon_size, pixel_y = (user.y - target.y) * world.icon_size, alpha = 55, time = 4)
 	animate(alpha = 0, time = 2)
 	var/datum/spell/S = new target.mind.last_used_spell.type
 	// Do the upgrades!

@@ -111,7 +111,7 @@
 	D.pixel_y = target.pixel_y + rand(-4, 4)
 	D.color = COLOR_MANA
 	D.alpha = 0
-	animate(D, pixel_x = (target.x - user.x) * world.icon_size, pixel_y = (target.y - user.y) * world.icon_size, alpha = rand(100, 175), time = rand(3, 6))
+	animate(D, pixel_x = (user.x - target.x) * world.icon_size, pixel_y = (user.y - target.y) * world.icon_size, alpha = rand(100, 175), time = rand(3, 6))
 	animate(alpha = 0, time = 2)
 
 	addtimer(CALLBACK(src, .proc/DoEffects, user, target), rand(2, 4))

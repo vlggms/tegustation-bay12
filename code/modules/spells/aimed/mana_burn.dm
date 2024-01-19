@@ -50,5 +50,5 @@
 		var/obj/effect/temp_visual/decoy/D = new /obj/effect/temp_visual/decoy(get_turf(target), target.dir, target)
 		D.alpha = 125
 		D.color = COLOR_MANA
-		animate(D, pixel_x = target.pixel_x + pick(rand(-64, -14), rand(14, 64)), pixel_y = target.pixel_y + pick(rand(-64, -14), rand(14, 64)), alpha = 55, color = COLOR_RED, time = rand(1, 2))
+		animate(D, pixel_x = target.pixel_x + pick(rand(-32, -14), rand(14, 32)), pixel_y = target.pixel_y + pick(rand(-32, -14), rand(14, 32)), alpha = 55, color = COLOR_RED, time = rand(2, 6))
 		animate(alpha = 0, time = 2)
