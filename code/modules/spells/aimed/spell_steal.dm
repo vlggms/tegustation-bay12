@@ -82,6 +82,7 @@
 	if(QDELETED(S))
 		return
 
-	to_chat(holder, SPAN_WARNING(SPAN_BOLD("You forget how to use [S.name] spell!")))
+	var/mob/living/user = holder
+	to_chat(user, SPAN_WARNING(SPAN_BOLD("You forget how to use [S.name] spell!")))
 	stolen_spells -= S
-	qdel(S)
+	user.remove_spell(S)

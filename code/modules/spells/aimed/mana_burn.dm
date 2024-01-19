@@ -44,7 +44,7 @@
 
 	to_chat(target, SPAN_USERDANGER("You feel burning sensation as the energy leaves your body!"))
 	playsound(target, 'sound/magic/blind.ogg', 50, TRUE)
-	target.adjustFireLoss(target, min(M.mana_level, max_mana_burnt))
+	target.adjustFireLoss(min(M.mana_level, max_mana_burnt))
 	M.UseMana(target, min(M.mana_level, max_mana_burnt))
 	for(var/i = 1 to 12)
 		var/obj/effect/temp_visual/decoy/D = new /obj/effect/temp_visual/decoy(get_turf(target), target.dir, target)
