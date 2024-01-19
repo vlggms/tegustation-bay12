@@ -17,8 +17,7 @@
 
 	hud_state = "wiz_mm"
 	cast_sound = 'sound/magic/magic_missile.ogg'
-	amt_paralysis = 3
-	amt_stunned = 3
+	amt_weakened = 2
 
 	amt_dam_fire = 10
 
@@ -37,8 +36,7 @@
 		return 0
 
 	if(spell_levels[UPGRADE_POWER] == level_max[UPGRADE_POWER])
-		amt_paralysis += 1
-		amt_stunned += 1
+		amt_weakened += 2
 		return "[src] will now stun people for a longer duration."
 	amt_dam_fire += 5
 	return "[src] does more damage now."
@@ -49,6 +47,9 @@
 /obj/item/projectile/spell_projectile/seeking/magic_missile
 	name = "magic missile"
 	icon_state = "magicm"
+
+	// Very slow
+	speed = 1
 
 	proj_trail = 1
 	proj_trail_lifespan = 5

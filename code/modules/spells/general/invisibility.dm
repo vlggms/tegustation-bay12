@@ -53,5 +53,5 @@
 
 	duration += 10 SECONDS
 
-	return "The [src] spell now lasts for a maximum of [round(duration / 1 SECONDS)] seconds."
+	return "The [src] spell now lasts for a maximum of [round(duration / 10)] seconds."
 

@@ -23,6 +23,7 @@
 	perform(user, list(holder))
 
 /datum/spell/end_of_everything/cast(list/targets, mob/user)
+	ClearEffects()
 	if(!do_after(user, 10 SECONDS))
 		to_chat(user, SPAN_NOTICE("You cancel the ritual!"))
 		ClearEffects()
@@ -85,7 +86,7 @@
 /datum/spell/end_of_everything/proc/ClearEffects()
 	for(var/datum/D in active_effects)
 		qdel(D)
-	active_effects = null
+	active_effects = list()
 
 // Essentially a delayed all-consuming terror
 /obj/effect/end_of_everything
@@ -108,8 +109,8 @@
 			continue
 		if(!(M.z in GetConnectedZlevels(z)))
 			continue
-		M.playsound_local(get_turf(M), 'sound/magic/end_of_everything.ogg', 100, FALSE)
-		to_chat(M, SPAN_DANGER("Something terrible has happened..."))
+		M.playsound_local(get_turf(M), 'sound/magic/end_of_everything.ogg', 150, FALSE)
+		to_chat(M, SPAN_USERDANGER("Something terrible has happened..."))
 		M.flash_eyes(FLASH_PROTECTION_MAJOR * 2)
 
 	// HAHAHAHAHA

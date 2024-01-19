@@ -2,7 +2,7 @@
 	name = "Smoke"
 	desc = "This spell spawns a cloud of choking smoke at your location."
 	charge_max = 120
-	spell_flags = 0
+	spell_flags = NO_SOMATIC
 	invocation = "none"
 	invocation_type = INVOKE_NONE
 	range = 1

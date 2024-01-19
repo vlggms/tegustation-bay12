@@ -2,7 +2,7 @@
 	name = "Random blink"
 	desc = "This spell randomly teleports you a short distance."
 	charge_max = 20
-	spell_flags = Z2NOCAST | IGNOREDENSE | IGNORESPACE
+	spell_flags = Z2NOCAST | IGNOREDENSE | IGNORESPACE | NO_SOMATIC
 	invocation = "none"
 	invocation_type = INVOKE_NONE
 	range = 7

@@ -38,6 +38,9 @@
 	if(!isliving(target) || !target.mind)
 		to_chat(user, SPAN_WARNING("The target must be a living creature!"))
 		return FALSE
+	if(target == user)
+		to_chat(user, SPAN_WARNING("You cannot steal spells from yourself!"))
+		return FALSE
 	if(!istype(target.mind.last_used_spell))
 		to_chat(user, SPAN_WARNING("The target hasn't cast any spells recently!"))
 		return FALSE
@@ -57,6 +60,9 @@
 	animate(D, pixel_x = (user.y - target.y) * world.icon_size, pixel_y = (user.y - target.y) * world.icon_size, alpha = 55, time = 4)
 	animate(alpha = 0, time = 2)
 	var/datum/spell/S = new target.mind.last_used_spell.type
+	for(var/datum/spell/SS in stolen_spells)
+		if(SS.type == S.type)
+			ForgetSpell(SS)
 	// Do the upgrades!
 	for(var/up_type in S.spell_levels)
 		if(S.spell_levels[up_type])
@@ -76,10 +82,10 @@
 
 	stolen_spell_duration += 30 SECONDS
 
-	return "The stolen spells now remain under your control for [stolen_spell_duration / 1 SECONDS] seconds!"
+	return "The stolen spells now remain under your control for [stolen_spell_duration / 10] seconds!"
 
 /datum/spell/aimed/spell_steal/proc/ForgetSpell(datum/spell/S)
-	if(QDELETED(S))
+	if(QDELETED(src) || QDELETED(S))
 		return
 
 	var/mob/living/user = holder
