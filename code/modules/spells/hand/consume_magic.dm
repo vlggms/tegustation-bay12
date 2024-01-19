@@ -62,6 +62,7 @@
 				)
 			do_effects = FALSE
 			return
+		playsound(H, 'sound/magic/drain.ogg', 50, TRUE)
 		current_hand.next_spell_time = world.time + spell_delay
 		// First, we steal all free spell points
 		if(M.spell_points > 1)
