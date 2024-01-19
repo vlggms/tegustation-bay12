@@ -65,8 +65,8 @@
 			ForgetSpell(SS)
 	// Do the upgrades!
 	for(var/up_type in S.spell_levels)
-		if(S.spell_levels[up_type])
-			for(var/i = 1 to S.spell_levels[up_type])
+		if(target.mind.last_used_spell.spell_levels[up_type])
+			for(var/i = 1 to target.mind.last_used_spell.spell_levels[up_type])
 				if(up_type == UPGRADE_POWER)
 					S.empower_spell()
 				else if(up_type == UPGRADE_SPEED)
