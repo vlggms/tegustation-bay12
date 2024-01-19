@@ -49,7 +49,7 @@
 	icon_state = "magicm"
 
 	// Very slow
-	speed = 1
+	speed = 2.5
 
 	proj_trail = 1
 	proj_trail_lifespan = 5

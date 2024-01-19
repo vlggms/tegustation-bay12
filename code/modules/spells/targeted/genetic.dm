@@ -12,6 +12,7 @@ code\game\dna\genes\goon_powers.dm
 	var/list/mutations = list() //mutation strings
 	duration = 100 //deciseconds
 
+	spell_book_visible = FALSE
 
 /datum/spell/targeted/genetic/cast(list/targets)
 	..()
