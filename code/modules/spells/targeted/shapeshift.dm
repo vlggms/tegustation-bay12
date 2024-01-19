@@ -15,7 +15,7 @@
 	cast_sound = 'sound/magic/charge.ogg'
 	var/revert_sound = 'sound/magic/charge.ogg' //the sound that plays when something gets turned back.
 	var/share_damage = 1 //do we want the damage we take from our new form to move onto our real one? (Only counts for finite duration)
-	var/drop_items = 1 //do we want to drop all our items when we transform?
+	var/drop_items = FALSE //do we want to drop all our items when we transform?
 	var/toggle = 0 //Can we toggle this?
 	var/list/transformed_dudes = list() //Who we transformed. Transformed = Transformation. Both mobs.
 
@@ -128,7 +128,6 @@
 	desc = "This spell transforms the wizard into the common parrot."
 	possible_transformations = list(/mob/living/simple_animal/hostile/retaliate/parrot)
 
-	drop_items = 0
 	share_damage = 0
 	invocation = "Poli'crakata!"
 	invocation_type = INVOKE_SHOUT
@@ -156,7 +155,6 @@
 	charge_max = 1200
 	cooldown_min = 600
 
-	drop_items = 0
 	share_damage = 0
 	level_max = list(UPGRADE_TOTAL = 3, UPGRADE_SPEED = 2, UPGRADE_POWER = 2)
 
@@ -189,7 +187,7 @@
 	name = "Transform"
 	desc = "Transform into a familiar form. Literally."
 	possible_transformations = list()
-	drop_items = 0
+
 	invocation_type = INVOKE_EMOTE
 	invocation = "'s body dissipates into a pale mass of light, then reshapes!"
 	range = -1
