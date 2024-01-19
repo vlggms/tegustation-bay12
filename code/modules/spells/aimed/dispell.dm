@@ -27,6 +27,8 @@
 	var/atom/movable/A = targets[1]
 	if(amt_range > 0)
 		for(var/atom/movable/AA in range(amt_range, A))
+			if(AA == holder)
+				continue
 			AA.Dispell()
 	else if(istype(A))
 		A.Dispell()

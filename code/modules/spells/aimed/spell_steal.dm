@@ -57,7 +57,7 @@
 	var/obj/effect/temp_visual/decoy/D = new /obj/effect/temp_visual/decoy(get_turf(target), target.dir, target)
 	D.alpha = 125
 	D.color = COLOR_GREEN
-	animate(D, pixel_x = (user.y - target.y) * world.icon_size, pixel_y = (user.y - target.y) * world.icon_size, alpha = 55, time = 4)
+	animate(D, pixel_x = (user.x - target.x) * world.icon_size, pixel_y = (user.y - target.y) * world.icon_size, alpha = 55, time = 4)
 	animate(alpha = 0, time = 2)
 	var/datum/spell/S = new target.mind.last_used_spell.type
 	for(var/datum/spell/SS in stolen_spells)
@@ -74,6 +74,7 @@
 	// To prevent shenanigans with "Consume Magic"
 	S.total_points_used = 0
 	user.add_spell(S)
+	stolen_spells += S
 	addtimer(CALLBACK(src, .proc/ForgetSpell, S), stolen_spell_duration)
 
 /datum/spell/aimed/spell_steal/empower_spell()

@@ -21,8 +21,8 @@
 	range = 1
 	compatible_targets = list(/mob/living/carbon/human)
 
-	spell_cost = 1
-	mana_cost = 5
+	spell_cost = 10
+	mana_cost = 30
 
 	var/do_effects = FALSE
 
@@ -34,6 +34,7 @@
 		return FALSE
 	var/datum/mana/M = GetManaDatum(L)
 	if(!M || (M.mana_level_max <= 5 && M.spell_points <= 1 && !LAZYLEN(L.mind.learned_spells)))
+		to_chat(user, SPAN_WARNING("There's nothing to consume here..."))
 		return FALSE
 	return TRUE
 
@@ -115,4 +116,4 @@
 	animate(D, pixel_x = (user.x - target.x) * world.icon_size, pixel_y = (user.y - target.y) * world.icon_size, alpha = rand(100, 175), time = rand(3, 6))
 	animate(alpha = 0, time = 2)
 
-	addtimer(CALLBACK(src, .proc/DoEffects, user, target), rand(2, 4))
+	addtimer(CALLBACK(src, .proc/DoEffects, user, target), rand(1, 3))
