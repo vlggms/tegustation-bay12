@@ -11,9 +11,14 @@
 	hud_state = "analyze"
 
 	spell_cost = 1
-	mana_cost = 3
+	mana_cost = 2
+	mana_cost_per_cast = 1
 
 /datum/spell/hand/analyze_health/cast_hand(mob/living/carbon/human/H, mob/user)
+	. = ..()
+	if(!.)
+		return
+
 	var/obj/effect/temp_visual/temporary/TV = new(get_turf(H), 5, 'icons/effects/effects.dmi', "repel_missiles")
 	TV.dir = H.dir
 	var/skill_level = SKILL_UNTRAINED

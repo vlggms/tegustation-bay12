@@ -16,12 +16,15 @@
 	spell_cost = 2
 	mana_cost = 10
 
-/datum/spell/hand/charges/blood_shard/cast_hand(var/atom/A,var/mob/user)
+/datum/spell/hand/charges/blood_shard/cast_hand(atom/A, mob/user)
+	. = ..()
+	if(!.)
+		return
+
 	var/obj/item/projectile/blood_shard/B = new(get_turf(user))
 	B.firer = user
 	B.launch(A, BP_CHEST)
 	user.visible_message("<span class='danger'>\The [user] shoots out a deep red shard from their hand!</span>")
-	return ..()
 
 /obj/item/projectile/blood_shard
 	name = "bloodshard"

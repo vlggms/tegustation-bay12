@@ -7,6 +7,8 @@
 	var/hand_state = "spell"
 	var/obj/item/magic_hand/current_hand
 	var/show_message
+	/// Mana cost for each use of hand
+	var/mana_cost_per_cast = 0
 
 /datum/spell/hand/choose_targets(mob/user = usr)
 	perform(user, list(user))
@@ -59,7 +61,9 @@
 		return FALSE
 	return TRUE
 
-/datum/spell/hand/proc/cast_hand(var/atom/a,var/mob/user) //same for casting.
+/datum/spell/hand/proc/cast_hand(atom/a, mob/user) //same for casting.
+	if(!TakeMana(user, mana_cost_per_cast))
+		return FALSE
 	return TRUE
 
 /datum/spell/hand/charges

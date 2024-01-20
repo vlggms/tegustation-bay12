@@ -23,6 +23,7 @@
 
 	spell_cost = 10
 	mana_cost = 30
+	mana_cost_per_cast = 10
 
 	var/do_effects = FALSE
 
@@ -39,6 +40,10 @@
 	return TRUE
 
 /datum/spell/hand/consume_energy/cast_hand(mob/living/carbon/human/H, mob/living/user)
+	. = ..()
+	if(!.)
+		return
+
 	user.visible_message(
 		SPAN_DANGER("[user] places their hand on [H], as magic particles begin to float all around them."),
 		SPAN_NOTICE("<b>You begin draining magic power out of [H]...</b>"),
