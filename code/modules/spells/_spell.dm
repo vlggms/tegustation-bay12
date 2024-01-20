@@ -126,8 +126,13 @@
 	if(isliving(holder))
 		var/mob/living/L = holder
 		var/datum/mind/M = L.mind
-		if(istype(M) && M.last_used_spell == src)
-			M.last_used_spell = null
+		if(istype(M))
+			M.learned_spells -= src
+			if(M.last_used_spell == src)
+				M.last_used_spell = null
+		if(L.ability_master)
+			L.ability_master.remove_ability(L.ability_master.get_ability_by_spell(src))
+	holder = null
 	return ..()
 
 /datum/spell/proc/process()

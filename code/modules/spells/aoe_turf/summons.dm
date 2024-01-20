@@ -3,13 +3,13 @@
 	desc = "This spell dispenses wizard justice."
 
 	summon_type = list(/mob/living/bot/secbot/ed209)
-	summon_amt = 10
+	summon_amt = 8
 	range = 3
 	newVars = list("emagged" = 1,"name" = "Wizard's Justicebot")
 
 	hud_state = "wiz_ed"
 
-	spell_cost = 5
+	spell_cost = 10
 	mana_cost = 100
 
 /datum/spell/aoe_turf/conjure/carp
