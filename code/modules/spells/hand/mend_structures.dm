@@ -8,6 +8,7 @@
 	invocation_type = INVOKE_WHISPER
 	invocation = "Melius Murum"
 	compatible_targets = list(
+		/turf,
 		/obj,
 		)
 	hud_state = "wiz_mend_structures"
