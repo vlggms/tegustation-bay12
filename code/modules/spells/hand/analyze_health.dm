@@ -33,7 +33,7 @@
 	popup.open()
 	return TRUE
 
-/datum/spell/hand/analyze_health/empower_spell()
+/datum/spell/hand/analyze_health/ImproveSpellPower()
 	if(!..())
 		return FALSE
 

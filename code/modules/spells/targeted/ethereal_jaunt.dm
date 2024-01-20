@@ -74,7 +74,7 @@
 	QDEL_NULL(animation)
 	QDEL_NULL(jaunt_holder)
 
-/datum/spell/targeted/ethereal_jaunt/empower_spell()
+/datum/spell/targeted/ethereal_jaunt/ImproveSpellPower()
 	if(!..())
 		return 0
 	duration += 2 SECONDS

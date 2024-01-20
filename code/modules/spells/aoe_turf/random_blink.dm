@@ -39,7 +39,7 @@
 
 	return
 
-/datum/spell/aoe_turf/random_blink/empower_spell()
+/datum/spell/aoe_turf/random_blink/ImproveSpellPower()
 	if(!..())
 		return 0
 	inner_radius += 1

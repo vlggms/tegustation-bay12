@@ -51,7 +51,7 @@
 	spell_cost = 4
 	mana_cost = 30
 
-/datum/spell/aoe_turf/conjure/grove/sanctuary/empower_spell()
+/datum/spell/aoe_turf/conjure/grove/sanctuary/ImproveSpellPower()
 	if(!..())
 		return 0
 

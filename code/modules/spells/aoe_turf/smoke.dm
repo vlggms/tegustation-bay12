@@ -19,7 +19,7 @@
 	spell_cost = 1
 	mana_cost = 5
 
-/datum/spell/aoe_turf/smoke/empower_spell()
+/datum/spell/aoe_turf/smoke/ImproveSpellPower()
 	if(!..())
 		return 0
 	smoke_amt += 2

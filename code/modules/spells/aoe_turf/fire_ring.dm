@@ -37,7 +37,7 @@
 			TF.pixel_y = (user_turf.y - T.y) * world.icon_size
 			animate(TF, pixel_x = 0, pixel_y = 0, time = 3, easing = EASE_OUT)
 
-/datum/spell/aoe_turf/fire_ring/empower_spell()
+/datum/spell/aoe_turf/fire_ring/ImproveSpellPower()
 	if(!..())
 		return FALSE
 

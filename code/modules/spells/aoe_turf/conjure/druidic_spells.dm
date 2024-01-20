@@ -37,7 +37,7 @@
 	spell_cost = 2
 	mana_cost = 10
 
-/datum/spell/aoe_turf/conjure/summon/bats/empower_spell()
+/datum/spell/aoe_turf/conjure/summon/bats/ImproveSpellPower()
 	if(!..())
 		return 0
 
@@ -74,7 +74,7 @@
 	..()
 	newVars["master"] = holder //why not do this in the beginning? MIND SWITCHING.
 
-/datum/spell/aoe_turf/conjure/summon/bear/empower_spell()
+/datum/spell/aoe_turf/conjure/summon/bear/ImproveSpellPower()
 	if(!..())
 		return 0
 	switch(spell_levels[UPGRADE_POWER])

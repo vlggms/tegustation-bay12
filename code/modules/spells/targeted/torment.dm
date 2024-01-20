@@ -26,7 +26,7 @@
 	for(var/mob/living/carbon/human/H in targets)
 		H.adjustHalLoss(loss)
 
-/datum/spell/targeted/torment/empower_spell()
+/datum/spell/targeted/torment/ImproveSpellPower()
 	if(!..())
 		return 0
 

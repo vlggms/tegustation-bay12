@@ -23,7 +23,7 @@
 	spell_cost = 3
 	mana_cost = 25
 
-/datum/spell/targeted/subjugation/empower_spell()
+/datum/spell/targeted/subjugation/ImproveSpellPower()
 	if(!..())
 		return 0
 

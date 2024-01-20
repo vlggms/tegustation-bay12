@@ -52,7 +52,7 @@
 		TF.interact_with_atmos = FALSE
 	T.hotspot_expose((flame_power * 3) + 300, 50)
 
-/datum/spell/aimed/flamethrower/empower_spell()
+/datum/spell/aimed/flamethrower/ImproveSpellPower()
 	if(!..())
 		return FALSE
 

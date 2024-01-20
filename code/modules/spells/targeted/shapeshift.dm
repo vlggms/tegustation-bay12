@@ -115,7 +115,7 @@
 	spell_cost = 1
 	mana_cost = 3
 
-/datum/spell/targeted/shapeshift/baleful_polymorph/empower_spell()
+/datum/spell/targeted/shapeshift/baleful_polymorph/ImproveSpellPower()
 	if(!..())
 		return 0
 
@@ -166,7 +166,7 @@
 	spell_cost = 2
 	mana_cost = 10
 
-/datum/spell/targeted/shapeshift/corrupt_form/empower_spell()
+/datum/spell/targeted/shapeshift/corrupt_form/ImproveSpellPower()
 	if(!..())
 		return 0
 

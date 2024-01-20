@@ -72,7 +72,7 @@
 
 	return TRUE
 
-/datum/spell/aimed/heal_target/empower_spell()
+/datum/spell/aimed/heal_target/ImproveSpellPower()
 	if(!..())
 		return FALSE
 	brute_damage -= 20
@@ -105,7 +105,7 @@
 	spell_cost = 4
 	mana_cost = 20
 
-/datum/spell/aimed/heal_target/major/empower_spell()
+/datum/spell/aimed/heal_target/major/ImproveSpellPower()
 	if(!..())
 		return FALSE
 
@@ -145,7 +145,7 @@
 	spell_cost = 4
 	mana_cost = 20
 
-/datum/spell/aimed/heal_target/sacrifice/empower_spell()
+/datum/spell/aimed/heal_target/sacrifice/ImproveSpellPower()
 	if(!..())
 		return 0
 

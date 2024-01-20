@@ -17,7 +17,7 @@
 	compatible_mobs = list(/mob/living/carbon/human)
 	equipped_summons = list("active hand" = /obj/item/reagent_containers/food/drinks/bottle/small/beer)
 
-/datum/spell/targeted/equip_item/party_hardy/empower_spell()
+/datum/spell/targeted/equip_item/party_hardy/ImproveSpellPower()
 	if(!..())
 		return 0
 	switch(spell_levels[UPGRADE_POWER])

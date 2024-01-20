@@ -81,7 +81,7 @@
 					continue
 				LT.add_blood(L)
 
-/datum/spell/aimed/water_slash/empower_spell()
+/datum/spell/aimed/water_slash/ImproveSpellPower()
 	if(!..())
 		return FALSE
 

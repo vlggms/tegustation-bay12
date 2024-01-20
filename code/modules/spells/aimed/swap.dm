@@ -40,7 +40,7 @@
 
 	target.eye_blind += eye_blind
 
-/datum/spell/aimed/swap/empower_spell()
+/datum/spell/aimed/swap/ImproveSpellPower()
 	if(!..())
 		return FALSE
 

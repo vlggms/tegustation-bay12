@@ -52,9 +52,11 @@
 	var/duration = 0
 
 	/// Upgrade costs for each upgrade type as seen in spell levels; If null - set to the spell's cost
-	var/list/upgrade_cost = list(UPGRADE_SPEED = null, UPGRADE_POWER = null)
-	/// The current spell levels - total spell levels can be obtained by just adding the two values
-	var/list/spell_levels = list(UPGRADE_SPEED = 0, UPGRADE_POWER = 0)
+	/// Missing upgrade types (as seen in level_max list) are automatically filled with spell_cost as cost
+	var/list/upgrade_cost = list()
+	/// The current spell levels - total spell levels can be obtained by just adding the two values;
+	/// The list is auto-generated on New(), based on level_max list
+	var/list/spell_levels = list()
 	/// Maximum possible levels in each category. Total does cover both.
 	var/list/level_max = list(UPGRADE_TOTAL = 4, UPGRADE_SPEED = 4, UPGRADE_POWER = 0)
 	/// If set, defines how much charge_max drops by every speed upgrade
@@ -108,9 +110,11 @@
 /datum/spell/New()
 	..()
 
-	for(var/U in upgrade_cost)
-		if(upgrade_cost[U] == null)
+	for(var/U in level_max)
+		if(!(U in upgrade_cost))
 			upgrade_cost[U] = spell_cost
+		if(!(U in spell_levels))
+			spell_levels[U] = 0
 
 	//still_recharging_msg = "<span class='notice'>[name] is still recharging.</span>"
 	charge_counter = charge_max
@@ -382,8 +386,14 @@
 ///UPGRADING PROCS///
 /////////////////////
 
-/datum/spell/proc/can_improve(upgrade_type)
-	if(level_max[UPGRADE_TOTAL] <= ( spell_levels[UPGRADE_SPEED] + spell_levels[UPGRADE_POWER] )) //too many levels, can't do it
+/datum/spell/proc/CanImprove(upgrade_type)
+	if(!(upgrade_type in level_max) || !(upgrade_type in spell_levels))
+		return FALSE
+
+	var/up_count = 0
+	for(var/up_type in spell_levels)
+		up_count += spell_levels[up_type]
+	if(level_max[UPGRADE_TOTAL] <= up_count) // Too many levels, can't do it
 		return FALSE
 
 	//if(upgrade_type && spell_levels[upgrade_type] && level_max[upgrade_type])
@@ -392,20 +402,24 @@
 
 	return TRUE
 
-/datum/spell/proc/empower_spell()
-	if(!can_improve(UPGRADE_POWER))
+/datum/spell/proc/ImproveSpell(upgrade_type)
+	if(!CanImprove(upgrade_type))
 		return FALSE
 
-	spell_levels[UPGRADE_POWER]++
+	spell_levels[upgrade_type]++
+
+	switch(upgrade_type)
+		if(UPGRADE_POWER)
+			return ImproveSpellPower()
+		if(UPGRADE_SPEED)
+			return ImproveSpellSpeed()
 
 	return TRUE
 
-/datum/spell/proc/quicken_spell()
-	if(!can_improve(UPGRADE_SPEED))
-		return FALSE
+/datum/spell/proc/ImproveSpellPower()
+	return TRUE
 
-	spell_levels[UPGRADE_SPEED]++
-
+/datum/spell/proc/ImproveSpellSpeed()
 	if(delay_reduc && cast_delay)
 		cast_delay = max(0, cast_delay - delay_reduc)
 	else if(cast_delay)

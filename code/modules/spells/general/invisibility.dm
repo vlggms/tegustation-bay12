@@ -47,7 +47,7 @@
 		charge_counter = 0
 		process()
 
-/datum/spell/invisibility/empower_spell()
+/datum/spell/invisibility/ImproveSpellPower()
 	if(!..())
 		return FALSE
 

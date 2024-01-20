@@ -52,7 +52,7 @@ code\game\dna\genes\goon_powers.dm
 	hud_state = "wiz_blind"
 	cast_sound = 'sound/magic/blind.ogg'
 
-/datum/spell/targeted/genetic/blind/empower_spell()
+/datum/spell/targeted/genetic/blind/ImproveSpellPower()
 	if(!..())
 		return 0
 	duration += 100

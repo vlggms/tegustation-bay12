@@ -1,3 +1,5 @@
+#define UPGRADE_STEAL_DURATION "steal duration"
+
 /datum/spell/aimed/spell_steal
 	name = "Spell Steal"
 	desc = "Temporarily grants you a perfect copy of the spell that was last cast by the target creature."
@@ -10,7 +12,7 @@
 	invocation = "Furtum!"
 	invocation_type = INVOKE_SHOUT
 
-	level_max = list(UPGRADE_TOTAL = 3, UPGRADE_SPEED = 2, UPGRADE_POWER = 2)
+	level_max = list(UPGRADE_TOTAL = 3, UPGRADE_SPEED = 2, UPGRADE_STEAL_DURATION = 2)
 
 	range = 5
 
@@ -67,17 +69,22 @@
 	for(var/up_type in S.spell_levels)
 		if(target.mind.last_used_spell.spell_levels[up_type])
 			for(var/i = 1 to target.mind.last_used_spell.spell_levels[up_type])
-				if(up_type == UPGRADE_POWER)
-					S.empower_spell()
-				else if(up_type == UPGRADE_SPEED)
-					S.quicken_spell()
+				S.ImproveSpell(up_type)
 	// To prevent shenanigans with "Consume Magic"
 	S.total_points_used = 0
 	user.add_spell(S)
 	stolen_spells += S
 	addtimer(CALLBACK(src, .proc/ForgetSpell, S), stolen_spell_duration)
 
-/datum/spell/aimed/spell_steal/empower_spell()
+/datum/spell/aimed/spell_steal/ImproveSpell(upgrade_type)
+	. = ..()
+	if(!.)
+		return
+
+	if(upgrade_type == UPGRADE_STEAL_DURATION)
+		return ImproveSpellStealDuration()
+
+/datum/spell/aimed/spell_steal/proc/ImproveSpellStealDuration()
 	if(!..())
 		return FALSE
 
@@ -93,3 +100,5 @@
 	to_chat(user, SPAN_WARNING(SPAN_BOLD("You forget how to use [S.name] spell!")))
 	stolen_spells -= S
 	user.remove_spell(S)
+
+#undef UPGRADE_STEAL_DURATION

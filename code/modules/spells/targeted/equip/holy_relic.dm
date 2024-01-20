@@ -23,7 +23,7 @@
 	for(var/mob/M in targets)
 		M.visible_message(SPAN_DANGER("A rod of metal appears in \the [M]'s hand!"))
 
-/datum/spell/targeted/equip_item/holy_relic/empower_spell()
+/datum/spell/targeted/equip_item/holy_relic/ImproveSpellPower()
 	if(!..())
 		return 0
 

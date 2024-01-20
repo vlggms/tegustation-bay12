@@ -20,7 +20,7 @@
 	spell_cost = 2
 	mana_cost = 0.5 // Per projectile, mind you
 
-/datum/spell/aimed/spark_bolt/empower_spell()
+/datum/spell/aimed/spark_bolt/ImproveSpellPower()
 	if(!..())
 		return FALSE
 
@@ -28,7 +28,7 @@
 
 	return "The spell [src] now has more projectiles stored per cast."
 
-/datum/spell/aimed/spark_bolt/quicken_spell()
+/datum/spell/aimed/spark_bolt/ImproveSpellSpeed()
 	if(!..())
 		return FALSE
 

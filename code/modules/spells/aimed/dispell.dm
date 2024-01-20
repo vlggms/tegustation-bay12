@@ -38,7 +38,7 @@
 
 	playsound(A, 'sound/magic/smoke.ogg', min(100, 25 * amt_range))
 
-/datum/spell/aimed/dispell_projectile/empower_spell()
+/datum/spell/aimed/dispell_projectile/ImproveSpellPower()
 	if(!..())
 		return FALSE
 

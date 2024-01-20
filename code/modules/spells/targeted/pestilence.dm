@@ -34,7 +34,7 @@
 		for(var/i = 1 to 4)
 			new /obj/effect/temp_visual/pestilence_glow(get_turf(H))
 
-/datum/spell/targeted/pestilence/empower_spell()
+/datum/spell/targeted/pestilence/ImproveSpellPower()
 	if(!..())
 		return FALSE
 

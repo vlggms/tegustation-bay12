@@ -26,7 +26,7 @@
 	return
 
 
-/datum/spell/aoe_turf/knock/empower_spell()
+/datum/spell/aoe_turf/knock/ImproveSpellPower()
 	if(!..())
 		return 0
 	range *= 2

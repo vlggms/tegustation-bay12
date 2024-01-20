@@ -17,7 +17,7 @@
 	spell_cost = 3
 	mana_cost = 25
 
-/datum/spell/targeted/heal_target/area/empower_spell()
+/datum/spell/targeted/heal_target/area/ImproveSpellPower()
 	if(!..())
 		return 0
 	amt_dam_brute -= 15

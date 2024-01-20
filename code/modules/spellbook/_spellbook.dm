@@ -179,7 +179,9 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 
 	else if(href_list["upgrade"])
 		var/spell_path = text2path(href_list["upgrade"])
-		to_chat(user, UpgradeSpell(user, spell_path, href_list["upgrade_type"]))
+		var/upgrade_return = UpgradeSpell(user, spell_path, href_list["upgrade_type"])
+		if(istext(upgrade_return))
+			to_chat(user, upgrade_return)
 		ShowSpellMenu(user, spell_path)
 
 	else if(href_list["categories"])
@@ -228,7 +230,7 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 			if(OS.level_max[upgrade_type] <= 0)
 				continue
 			dat += "Current [upgrade_type] level: [OS.spell_levels[upgrade_type]]/[OS.level_max[upgrade_type]].<br>"
-			if(!OS.can_improve(upgrade_type))
+			if(!OS.CanImprove(upgrade_type))
 				continue
 			dat += "<A href='byond://?src=\ref[src];upgrade=[S]&upgrade_type=[upgrade_type]'>Improve [upgrade_type] ([OS.upgrade_cost[upgrade_type]] points)</a><br>"
 	dat += "<hr>"
@@ -274,16 +276,11 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 			continue
 		if(user.mind.mana.spell_points < S.upgrade_cost[upgrade_type])
 			return SPAN_WARNING("Not enough spell points!")
-		if(!S.can_improve(upgrade_type))
+		if(!S.CanImprove(upgrade_type))
 			return SPAN_WARNING("Cannot upgrade the spell!")
-		if(upgrade_type == UPGRADE_POWER)
-			user.mind.mana.spell_points -= S.upgrade_cost[upgrade_type]
-			S.total_points_used += S.upgrade_cost[upgrade_type]
-			return S.empower_spell()
-		if(upgrade_type == UPGRADE_SPEED)
-			user.mind.mana.spell_points -= S.upgrade_cost[upgrade_type]
-			S.total_points_used += S.upgrade_cost[upgrade_type]
-			return S.quicken_spell()
+		user.mind.mana.spell_points -= S.upgrade_cost[upgrade_type]
+		S.total_points_used += S.upgrade_cost[upgrade_type]
+		return S.ImproveSpell(upgrade_type)
 	return SPAN_DANGER("Could not locate the spell!")
 
 /obj/item/spellbook/proc/AddSpell(mob/living/user, spell_path)

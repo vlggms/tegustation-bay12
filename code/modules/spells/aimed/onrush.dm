@@ -92,7 +92,7 @@
 	var/mob/living/new_target = pick(valid_mobs)
 	RushTarget(user, new_target)
 
-/datum/spell/aimed/onrush/empower_spell()
+/datum/spell/aimed/onrush/ImproveSpellPower()
 	if(!..())
 		return FALSE
 

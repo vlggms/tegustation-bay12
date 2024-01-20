@@ -45,7 +45,7 @@
 		animate(D, alpha = 0, time = 2 + i*2)
 	user.forceMove(target_turf)
 
-/datum/spell/aimed/blink/empower_spell()
+/datum/spell/aimed/blink/ImproveSpellPower()
 	if(!..())
 		return FALSE
 

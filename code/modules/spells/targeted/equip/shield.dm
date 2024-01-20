@@ -29,7 +29,7 @@
 	I.base_block_chance = block_chance
 	return I
 
-/datum/spell/targeted/equip_item/shield/empower_spell()
+/datum/spell/targeted/equip_item/shield/ImproveSpellPower()
 	if(!..())
 		return 0
 

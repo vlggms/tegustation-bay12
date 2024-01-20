@@ -40,7 +40,7 @@
 	user.forceMove(T)
 	..()
 
-/datum/spell/mark_recall/empower_spell()
+/datum/spell/mark_recall/ImproveSpellPower()
 	if(!..())
 		return 0
 

@@ -38,7 +38,7 @@
 		magichead.voicechange = 1	//NEEEEIIGHH
 	return new_item
 
-/datum/spell/targeted/equip_item/horsemask/empower_spell()
+/datum/spell/targeted/equip_item/horsemask/ImproveSpellPower()
 	if(!..())
 		return 0
 

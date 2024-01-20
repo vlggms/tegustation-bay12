@@ -23,7 +23,7 @@
 	var/ex_light = 2
 	var/ex_flash = 2
 
-/datum/spell/aimed/fireball/empower_spell()
+/datum/spell/aimed/fireball/ImproveSpellPower()
 	if(!..())
 		return 0
 

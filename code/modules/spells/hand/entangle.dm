@@ -46,7 +46,7 @@
 	M.set_dir(pick(GLOB.cardinal))
 	M.visible_message("<span class='danger'>[P] appear from the floor, spinning around \the [M] tightly!</span>")
 
-/datum/spell/hand/charges/entangle/empower_spell()
+/datum/spell/hand/charges/entangle/ImproveSpellPower()
 	if(!..())
 		return 0
 

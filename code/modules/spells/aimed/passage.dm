@@ -35,7 +35,7 @@
 	S.start()
 	playsound(src, 'sound/magic/lightningshock.ogg', 50)
 
-/datum/spell/aimed/passage/empower_spell()
+/datum/spell/aimed/passage/ImproveSpellPower()
 	if(!..())
 		return 0
 

@@ -53,7 +53,7 @@
 	CC.damage_multiplier = crystal_damage_multiplier
 	addtimer(CALLBACK(CC, /obj/structure/cult/pylon/counter_crystal/proc/TimedCollapse), duration)
 
-/datum/spell/aimed/counter_crystal/empower_spell()
+/datum/spell/aimed/counter_crystal/ImproveSpellPower()
 	if(!..())
 		return FALSE
 

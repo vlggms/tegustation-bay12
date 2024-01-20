@@ -27,7 +27,7 @@
 	W.slowdown_per_slot[slot_r_hand] = 1
 	return W
 
-/datum/spell/targeted/equip_item/dyrnwyn/empower_spell()
+/datum/spell/targeted/equip_item/dyrnwyn/ImproveSpellPower()
 	if(!..())
 		return 0
 

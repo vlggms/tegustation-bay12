@@ -37,7 +37,7 @@
 
 	return TRUE
 
-/datum/spell/hand/mend_structures/empower_spell()
+/datum/spell/hand/mend_structures/ImproveSpellPower()
 	if(!..())
 		return FALSE
 

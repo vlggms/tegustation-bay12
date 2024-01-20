@@ -26,7 +26,7 @@
 		empulse(get_turf(target), emp_heavy, emp_light)
 	return
 
-/datum/spell/aoe_turf/disable_tech/empower_spell()
+/datum/spell/aoe_turf/disable_tech/ImproveSpellPower()
 	if(!..())
 		return 0
 	emp_heavy += 2

@@ -71,7 +71,7 @@
 	spell_cost = 1
 	mana_cost = 5
 
-/datum/spell/aoe_turf/conjure/mirage/empower_spell()
+/datum/spell/aoe_turf/conjure/mirage/ImproveSpellPower()
 	if(!..())
 		return 0
 

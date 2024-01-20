@@ -61,7 +61,7 @@
 	smoke.set_up(6, 0, T)
 	smoke.start()
 
-/datum/spell/aimed/corpse_explosion/empower_spell()
+/datum/spell/aimed/corpse_explosion/ImproveSpellPower()
 	if(!..())
 		return FALSE
 

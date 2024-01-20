@@ -31,7 +31,7 @@
 		apply_spell_damage(M)
 	return
 
-/datum/spell/targeted/projectile/magic_missile/empower_spell()
+/datum/spell/targeted/projectile/magic_missile/ImproveSpellPower()
 	if(!..())
 		return 0
 
