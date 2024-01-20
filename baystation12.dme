@@ -3150,6 +3150,7 @@
 #include "code\modules\spells\aimed\_aimed.dm"
 #include "code\modules\spells\aimed\blink.dm"
 #include "code\modules\spells\aimed\corpse_explosion.dm"
+#include "code\modules\spells\aimed\counter_crystal.dm"
 #include "code\modules\spells\aimed\dispell.dm"
 #include "code\modules\spells\aimed\fireball.dm"
 #include "code\modules\spells\aimed\flamethrower.dm"
