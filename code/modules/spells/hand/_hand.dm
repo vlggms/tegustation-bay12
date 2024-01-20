@@ -66,8 +66,6 @@
 /datum/spell/hand/proc/cast_hand(atom/a, mob/user) //same for casting.
 	if(!TakeMana(user, mana_cost_per_cast))
 		return FALSE
-	SEND_SIGNAL(user, COMSIG_SPELL_CAST_HAND, src, a)
-	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_SPELL_CAST_HAND, user, src, a)
 	return TRUE
 
 /datum/spell/hand/charges

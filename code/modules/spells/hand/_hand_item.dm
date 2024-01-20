@@ -47,6 +47,8 @@ Basically: I can use it to target things where I click. I can then pass these ta
 		user.visible_message("\The [user][hand_spell.show_message]")
 	if(hand_spell.cast_hand(A,user))
 		next_spell_time = world.time + hand_spell.spell_delay
+		SEND_SIGNAL(user, COMSIG_SPELL_CAST_HAND, hand_spell, A)
+		SEND_GLOBAL_SIGNAL(COMSIG_GLOB_SPELL_CAST_HAND, user, hand_spell, A)
 		if(hand_spell.move_delay)
 			user.ExtraMoveCooldown(hand_spell.move_delay)
 		if(hand_spell.click_delay)

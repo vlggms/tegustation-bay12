@@ -365,8 +365,7 @@
 	if(!user.mind)
 		return FALSE
 	var/mob/living/L = user
-	L.mind.mana.UseMana(L, amount, FALSE)
-	return TRUE
+	return L.mind.mana.UseMana(L, amount, FALSE)
 
 /datum/spell/proc/invocation(mob/user = usr, var/list/targets) //spelling the spell out and setting it on recharge/reducing charges amount
 
