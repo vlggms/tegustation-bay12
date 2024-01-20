@@ -1,17 +1,19 @@
 /datum/spell/aimed/counter_crystal
 	name = "Counter Crystal"
-	desc = "This spell places a crystal at designated location. All spells cast in its vicinity will deal burn damage \
-			to their users proportional to the amount of mana used."
+	desc = "This spell places a crystal at designated location that lasts for a certain amount of time before collapsing. \
+			All spells cast in its vicinity will deal burn damage to their users proportional to the amount of mana used."
 	deactive_msg = "You discharge the counter crystal spell..."
 	active_msg = "You charge the counter crystal spell!"
 
-	charge_max = 20 SECONDS
-	cooldown_reduc = 5 SECONDS
+	charge_max = 50 SECONDS
+	cooldown_reduc = 10 SECONDS
+	// Defines for how long the crystal exists
+	duration = 30 SECONDS
 
-	invocation = "Joyo!"
-	invocation_type = INVOKE_WHISPER
+	invocation = "Contra Navitas!"
+	invocation_type = INVOKE_SHOUT
 
-	level_max = list(UPGRADE_TOTAL = 2, UPGRADE_SPEED = 0, UPGRADE_POWER = 2)
+	level_max = list(UPGRADE_TOTAL = 2, UPGRADE_SPEED = 2, UPGRADE_POWER = 2)
 
 	spell_flags = 0
 	range = 3
@@ -49,6 +51,7 @@
 	var/obj/structure/cult/pylon/counter_crystal/CC = new (T)
 	CC.creator = user
 	CC.damage_multiplier = crystal_damage_multiplier
+	addtimer(CALLBACK(CC, /obj/structure/cult/pylon/counter_crystal/proc/TimedCollapse), duration)
 
 ////////////////////////
 /* The crystal itself */
@@ -117,6 +120,9 @@
 	caster.adjustFireLoss(damage)
 
 /obj/structure/cult/pylon/counter_crystal/proc/TimedCollapse()
+	if(QDELETED(src))
+		return
+
 	visible_message(SPAN_DANGER("The [src] begins to collapse in on itself!"))
 	var/matrix/M = matrix()
 	M *= 1.5
