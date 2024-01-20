@@ -225,7 +225,11 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 	var/datum/spell/OS = locate(S) in user.mind.learned_spells
 	if(!istype(OS))
 		dat += "<A href='byond://?src=\ref[src];purchase=[S]'>Purchase ([initial(S.spell_cost)] points)</a><br>"
-	else
+	else if(OS.level_max[UPGRADE_TOTAL] > 0)
+		var/up_count = 0
+		for(var/up_type in spell_levels)
+			up_count += spell_levels[up_type]
+		dat += "Maximum amount of upgrades: [up_count]/[OS.level_max[UPGRADE_TOTAL]]"
 		for(var/upgrade_type in OS.spell_levels)
 			if(OS.level_max[upgrade_type] <= 0)
 				continue

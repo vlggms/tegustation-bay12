@@ -85,11 +85,7 @@
 		return ImproveSpellStealDuration()
 
 /datum/spell/aimed/spell_steal/proc/ImproveSpellStealDuration()
-	if(!..())
-		return FALSE
-
 	stolen_spell_duration += 30 SECONDS
-
 	return "The stolen spells now remain under your control for [stolen_spell_duration / 10] seconds!"
 
 /datum/spell/aimed/spell_steal/proc/ForgetSpell(datum/spell/S)

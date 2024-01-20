@@ -57,7 +57,7 @@
 	/// The current spell levels - total spell levels can be obtained by just adding the two values;
 	/// The list is auto-generated on New(), based on level_max list
 	var/list/spell_levels = list()
-	/// Maximum possible levels in each category. Total does cover both.
+	/// Maximum possible levels in each category. Total covers maximum amount of upgrades.
 	var/list/level_max = list(UPGRADE_TOTAL = 4, UPGRADE_SPEED = 4, UPGRADE_POWER = 0)
 	/// If set, defines how much charge_max drops by every speed upgrade
 	var/cooldown_reduc = 0
@@ -111,6 +111,8 @@
 	..()
 
 	for(var/U in level_max)
+		if(U == UPGRADE_TOTAL)
+			continue
 		if(!(U in upgrade_cost))
 			upgrade_cost[U] = spell_cost
 		if(!(U in spell_levels))
