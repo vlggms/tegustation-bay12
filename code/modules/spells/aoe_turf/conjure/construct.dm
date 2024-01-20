@@ -12,6 +12,8 @@
 
 	summon_type = list(/obj/structure/constructshell)
 
+	spell_book_visible = FALSE
+
 	hud_state = "artificer"
 	cast_sound = 'sound/items/Deconstruct.ogg'
 
@@ -32,6 +34,8 @@
 	range = 0
 	summon_type = list(/turf/simulated/floor/cult)
 
+	spell_book_visible = FALSE
+
 	hud_state = "const_floor"
 	cast_sound = 'sound/items/Welder.ogg'
 
@@ -46,21 +50,9 @@
 	range = 0
 	summon_type = list(/turf/simulated/wall/cult)
 
+	spell_book_visible = FALSE
+
 	hud_state = "const_wall"
-	cast_sound = 'sound/items/Welder.ogg'
-
-/datum/spell/aoe_turf/conjure/wall/reinforced
-	name = "Greater Construction"
-	desc = "This spell constructs a reinforced metal wall."
-
-	charge_max = 300
-	spell_flags = Z2NOCAST
-	invocation = "none"
-	invocation_type = INVOKE_NONE
-	range = 0
-	cast_delay = 50
-
-	summon_type = list(/turf/simulated/wall/r_wall)
 	cast_sound = 'sound/items/Welder.ogg'
 
 /datum/spell/aoe_turf/conjure/soulstone
@@ -74,6 +66,8 @@
 	range = 0
 
 	summon_type = list(/obj/item/device/soulstone)
+
+	spell_book_visible = FALSE
 
 	hud_state = "const_stone"
 	override_base = "const"
@@ -91,6 +85,8 @@
 
 	summon_type = list(/obj/structure/cult/pylon)
 
+	spell_book_visible = FALSE
+
 	hud_state = "const_pylon"
 	cast_sound = 'sound/items/Welder.ogg'
 
@@ -105,6 +101,8 @@
 	range = 0
 	summon_type = list(/obj/effect/forcefield/cult)
 	duration = 200
+
+	spell_book_visible = FALSE
 
 	hud_state = "const_juggwall"
 	cast_sound = 'sound/magic/forcewall.ogg'

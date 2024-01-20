@@ -5,10 +5,13 @@
 	invocation = "Arcesso!"
 	spell_flags = NEEDSCLOTHES
 	charge_max = 2 MINUTES
-	categories = list(SPELL_CATEGORY_FORBIDDEN)
+
 	level_max = list(UPGRADE_TOTAL = 0, UPGRADE_SPEED = 0, UPGRADE_POWER = 0)
 	cast_sound = 'sound/magic/churchbell.ogg'
 	hud_state = "wiz_endall"
+
+	categories = list(SPELL_CATEGORY_FORBIDDEN)
+	spell_book_visible = FALSE
 
 	spell_cost = 100
 	mana_cost = 200
