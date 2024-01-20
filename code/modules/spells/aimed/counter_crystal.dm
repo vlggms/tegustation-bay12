@@ -6,7 +6,7 @@
 	active_msg = "You charge the counter crystal spell!"
 
 	charge_max = 50 SECONDS
-	cooldown_reduc = 10 SECONDS
+	cooldown_reduc = 15 SECONDS
 	// Defines for how long the crystal exists
 	duration = 30 SECONDS
 
@@ -53,6 +53,14 @@
 	CC.damage_multiplier = crystal_damage_multiplier
 	addtimer(CALLBACK(CC, /obj/structure/cult/pylon/counter_crystal/proc/TimedCollapse), duration)
 
+/datum/spell/aimed/counter_crystal/empower_spell()
+	if(!..())
+		return FALSE
+
+	crystal_damage_multiplier += 1
+
+	return "The [src] damage multiplier is now [crystal_damage_multiplier * 100]%."
+
 ////////////////////////
 /* The crystal itself */
 ////////////////////////
@@ -60,7 +68,7 @@
 	name = "counter crystal"
 	desc = "A floating crystal emitting pulses that are harmful to arcane energy."
 	icon_state = "pylon_blue"
-	light_max_bright = 0.3
+	light_max_bright = 1
 	light_inner_range = 2
 	light_outer_range = 7
 	light_color = COLOR_MANA
@@ -75,9 +83,11 @@
 /obj/structure/cult/pylon/counter_crystal/Initialize()
 	. = ..()
 	RegisterSignal(SSdcs, COMSIG_GLOB_SPELL_CAST, .proc/OnSpellCast)
+	RegisterSignal(SSdcs, COMSIG_GLOB_SPELL_CAST_HAND, .proc/OnSpellCastHand)
 
 /obj/structure/cult/pylon/counter_crystal/Destroy()
 	UnregisterSignal(SSdcs, COMSIG_GLOB_SPELL_CAST)
+	UnregisterSignal(SSdcs, COMSIG_GLOB_SPELL_CAST_HAND)
 	return ..()
 
 /obj/structure/cult/pylon/counter_crystal/examine(mob/user)
@@ -90,6 +100,17 @@
 
 /obj/structure/cult/pylon/counter_crystal/proc/OnSpellCast(datum/source, mob/living/caster, datum/spell/S, list/targets)
 	SIGNAL_HANDLER
+
+	Retalite(caster, S.mana_cost)
+
+/obj/structure/cult/pylon/counter_crystal/proc/OnSpellCastHand(datum/source, mob/living/caster, datum/spell/hand/S, atom/target)
+	SIGNAL_HANDLER
+
+	Retalite(caster, S.mana_cost_per_cast)
+
+/obj/structure/cult/pylon/counter_crystal/proc/Retalite(mob/living/caster, mana_used = 0)
+	if(!mana_used)
+		return
 
 	if(caster == creator)
 		return FALSE
@@ -116,8 +137,10 @@
 	visible_message(SPAN_DANGER("Rays of powerful electricity dart from \the [src] towards \the [caster]!"))
 	to_chat(caster, SPAN_USERDANGER("The [src] strikes you with powerful blast of electricity!"))
 
-	var/damage = S.mana_cost * damage_multiplier
+	var/damage = clamp(mana_used * damage_multiplier, 20, 500)
 	caster.adjustFireLoss(damage)
+	caster.flash_eyes(FLASH_PROTECTION_MAJOR)
+	caster.confused = max(caster.confused, 3)
 
 /obj/structure/cult/pylon/counter_crystal/proc/TimedCollapse()
 	if(QDELETED(src))

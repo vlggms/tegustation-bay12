@@ -3,6 +3,7 @@
 	desc = "Using your powers, you can detect the inner destructions of a persons body."
 
 	range = 2
+	harmful = FALSE
 	level_max = list(UPGRADE_TOTAL = 2, UPGRADE_SPEED = 0, UPGRADE_POWER = 2)
 	charge_max = 5
 	invocation_type = INVOKE_WHISPER

@@ -3,6 +3,7 @@
 	desc = "Allows the user to repair most structures of any superficial damage."
 
 	range = 1
+	harmful = FALSE
 	level_max = list(UPGRADE_TOTAL = 2, UPGRADE_SPEED = 0, UPGRADE_POWER = 2)
 	charge_max = 5
 	invocation_type = INVOKE_WHISPER
@@ -42,4 +43,4 @@
 
 	mend_percent += 0.2
 
-	return "[src] now repairs [mend_percent * 10]% of structure damage."
+	return "[src] now repairs [mend_percent * 100]% of structure damage."

@@ -7,13 +7,15 @@
 	var/hand_state = "spell"
 	var/obj/item/magic_hand/current_hand
 	var/show_message
+	/// If TRUE - will prevent itself from being cast when on help intent
+	var/harmful = TRUE
 	/// Mana cost for each use of hand
 	var/mana_cost_per_cast = 0
 
 /datum/spell/hand/choose_targets(mob/user = usr)
 	perform(user, list(user))
 
-/datum/spell/hand/cast_check(skipcharge = 0,mob/user = usr, var/list/targets)
+/datum/spell/hand/cast_check(skipcharge = 0,mob/user = usr, list/targets)
 	if(!..())
 		return FALSE
 	if(user.get_active_hand())
@@ -64,6 +66,8 @@
 /datum/spell/hand/proc/cast_hand(atom/a, mob/user) //same for casting.
 	if(!TakeMana(user, mana_cost_per_cast))
 		return FALSE
+	SEND_SIGNAL(user, COMSIG_SPELL_CAST_HAND, src, a)
+	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_SPELL_CAST_HAND, user, src, a)
 	return TRUE
 
 /datum/spell/hand/charges

@@ -15,7 +15,8 @@
 #define COMSIG_GLOB_ORB_PICKUP "!orb_picked"
 /// When spell is cast; (user, spell, targets)
 #define COMSIG_GLOB_SPELL_CAST "!spell_cast"
-
+/// When hand type spell cast_hand is called; (user, spell, target)
+#define COMSIG_GLOB_SPELL_CAST_HAND "!spell_cast_hand"
 
 //////////////////////////////////////////////////////////////////
 
@@ -44,6 +45,8 @@
 
 /// When spell is cast; (user, spell, targets)
 #define COMSIG_SPELL_CAST "spell_cast"
+/// When hand type spell cast_hand is called; (user, spell, target)
+#define COMSIG_SPELL_CAST_HAND "spell_cast_hand"
 
 // /area signals
 
