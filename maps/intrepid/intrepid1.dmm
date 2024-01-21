@@ -5985,6 +5985,19 @@
 	},
 /turf/simulated/floor/tiled,
 /area/intrepid/misc/hallway/portside)
+"ejz" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/airless,
+/area/space)
 "ejB" = (
 /obj/machinery/self_destruct,
 /obj/effect/floor_decal/industrial/hatch/red,
@@ -7322,19 +7335,6 @@
 /obj/structure/lattice,
 /turf/space,
 /area/space)
-"fiZ" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/structure/catwalk,
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/turf/simulated/floor,
-/area/space)
 "fjr" = (
 /obj/machinery/disposal,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -7751,6 +7751,19 @@
 /obj/effect/floor_decal/industrial/outline/orange,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/turbolift/marine/lift)
+"fzv" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor,
+/area/space)
 "fzM" = (
 /obj/effect/floor_decal/corner/orange,
 /obj/structure/sign/terragov{
@@ -12528,19 +12541,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/monitoring)
-"jfp" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
-/obj/structure/catwalk,
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/airless,
-/area/space)
 "jgl" = (
 /obj/effect/floor_decal/corner/research/bordercorner{
 	dir = 4
@@ -21624,12 +21624,14 @@
 /turf/simulated/floor/tiled,
 /area/intrepid/misc/hallway/starboard)
 "pBH" = (
-/obj/structure/window/reinforced/polarized,
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/ausbushes/lavendergrass,
 /obj/structure/railing/mapped{
 	dir = 1;
 	icon_state = "railing0-1"
+	},
+/obj/structure/window/reinforced/polarized{
+	id = "meetingroom"
 	},
 /turf/simulated/floor/grass,
 /area/intrepid/department/command/meetingroom)
@@ -31613,13 +31615,15 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/misc/maint/aft)
 "wqo" = (
-/obj/structure/window/reinforced/polarized,
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/ausbushes/sunnybush,
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/structure/railing/mapped{
 	dir = 1;
 	icon_state = "railing0-1"
+	},
+/obj/structure/window/reinforced/polarized{
+	id = "meetingroom"
 	},
 /turf/simulated/floor/grass,
 /area/intrepid/department/command/meetingroom)
@@ -33194,12 +33198,14 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/exploration/storage)
 "xqw" = (
-/obj/structure/window/reinforced/polarized,
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/ausbushes/palebush,
 /obj/structure/railing/mapped{
 	dir = 1;
 	icon_state = "railing0-1"
+	},
+/obj/structure/window/reinforced/polarized{
+	id = "meetingroom"
 	},
 /turf/simulated/floor/grass,
 /area/intrepid/department/command/meetingroom)
@@ -45467,7 +45473,7 @@ guz
 rXr
 qFY
 wHp
-fiZ
+fzv
 cjD
 cjD
 cjD
@@ -45671,7 +45677,7 @@ rXr
 rXr
 kIk
 wHp
-fiZ
+fzv
 cjD
 cjD
 cjD
@@ -45875,7 +45881,7 @@ rXr
 rXr
 kIk
 wHp
-fiZ
+fzv
 cjD
 cjD
 cjD
@@ -46079,7 +46085,7 @@ rXr
 rXr
 kIk
 wHp
-fiZ
+fzv
 cjD
 cjD
 cjD
@@ -46282,7 +46288,7 @@ rXr
 rXr
 rXr
 kIk
-fiZ
+fzv
 cjD
 cjD
 cjD
@@ -46485,7 +46491,7 @@ vVc
 rXr
 rXr
 kIk
-fiZ
+fzv
 cjD
 cjD
 cjD
@@ -63173,7 +63179,7 @@ cjD
 cjD
 cjD
 cjD
-jfp
+ejz
 xsL
 lIZ
 wws
@@ -64185,7 +64191,7 @@ cjD
 cjD
 cjD
 cjD
-jfp
+ejz
 xsL
 lIZ
 wws
@@ -65197,7 +65203,7 @@ cjD
 cjD
 cjD
 cjD
-jfp
+ejz
 xsL
 lIZ
 wws
