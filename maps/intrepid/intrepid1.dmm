@@ -3101,6 +3101,10 @@
 	icon_state = "2-4"
 	},
 /obj/structure/catwalk,
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/airless,
 /area/space)
 "cjD" = (
@@ -4796,8 +4800,8 @@
 	pixel_y = 40
 	},
 /obj/structure/sign/directions/senator{
-	pixel_y = 32;
-	dir = 8
+	dir = 8;
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
 /area/intrepid/misc/hallway/portside)
@@ -6587,6 +6591,10 @@
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/simulated/floor,
 /area/space)
 "eGP" = (
@@ -7313,6 +7321,19 @@
 "fiR" = (
 /obj/structure/lattice,
 /turf/space,
+/area/space)
+"fiZ" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor,
 /area/space)
 "fjr" = (
 /obj/machinery/disposal,
@@ -12507,6 +12528,19 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/monitoring)
+"jfp" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/airless,
+/area/space)
 "jgl" = (
 /obj/effect/floor_decal/corner/research/bordercorner{
 	dir = 4
@@ -14895,8 +14929,8 @@
 "kZN" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/multi_tile/glass/research{
-	name = "Research Department Entrance";
-	autoset_access = 0
+	autoset_access = 0;
+	name = "Research Department Entrance"
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/research/hallway)
@@ -16496,9 +16530,9 @@
 	pixel_y = 8
 	},
 /obj/structure/sign/directions/janitor{
+	dir = 1;
 	pixel_x = 32;
-	pixel_y = -7;
-	dir = 1
+	pixel_y = -7
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/center)
@@ -16951,8 +16985,8 @@
 	},
 /obj/effect/floor_decal/corner/blue,
 /obj/structure/sign/directions/senator{
-	pixel_y = -32;
-	dir = 8
+	dir = 8;
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/portside)
@@ -24943,6 +24977,11 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2";
+	pixel_y = 0
+	},
 /turf/simulated/floor,
 /area/space)
 "rMW" = (
@@ -27699,8 +27738,8 @@
 	icon_state = "corner_white"
 	},
 /obj/structure/sign/directions/senator{
-	pixel_y = -32;
-	dir = 8
+	dir = 8;
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/portside)
@@ -33224,6 +33263,9 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
+/obj/structure/cable{
+	icon_state = "0-1"
+	},
 /turf/simulated/floor/airless,
 /area/space)
 "xtd" = (
@@ -45425,7 +45467,7 @@ guz
 rXr
 qFY
 wHp
-dSX
+fiZ
 cjD
 cjD
 cjD
@@ -45629,7 +45671,7 @@ rXr
 rXr
 kIk
 wHp
-dSX
+fiZ
 cjD
 cjD
 cjD
@@ -45833,7 +45875,7 @@ rXr
 rXr
 kIk
 wHp
-dSX
+fiZ
 cjD
 cjD
 cjD
@@ -46037,7 +46079,7 @@ rXr
 rXr
 kIk
 wHp
-dSX
+fiZ
 cjD
 cjD
 cjD
@@ -46240,7 +46282,7 @@ rXr
 rXr
 rXr
 kIk
-dSX
+fiZ
 cjD
 cjD
 cjD
@@ -46443,7 +46485,7 @@ vVc
 rXr
 rXr
 kIk
-dSX
+fiZ
 cjD
 cjD
 cjD
@@ -63131,7 +63173,7 @@ cjD
 cjD
 cjD
 cjD
-akd
+jfp
 xsL
 lIZ
 wws
@@ -64143,7 +64185,7 @@ cjD
 cjD
 cjD
 cjD
-akd
+jfp
 xsL
 lIZ
 wws
@@ -65155,7 +65197,7 @@ cjD
 cjD
 cjD
 cjD
-akd
+jfp
 xsL
 lIZ
 wws
