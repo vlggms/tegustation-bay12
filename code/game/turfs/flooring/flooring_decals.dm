@@ -958,103 +958,133 @@ var/list/floor_decals = list()
 	icon_state = "delivery"
 	alpha = 229
 
-/obj/effect/turf_decal/bot
+/obj/effect/floor_decal/industrial/bot
+	name = "bot"
 	icon_state = "bot"
 
-/obj/effect/turf_decal/bot/red
-	color = COLOR_RED_GRAY
+/obj/effect/floor_decal/industrial/bot/red
+	name = "bot red"
+	color = "#801000"
 
-/obj/effect/turf_decal/bot/yellow
-	color = "#cfcf55"
+/obj/effect/floor_decal/industrial/bot/yellow
+	name = "bot yellow"
+	color = "#FFCD00"
 
-/obj/effect/turf_decal/bot/right
+/obj/effect/floor_decal/industrial/bot/right
+	name = "bot right"
 	icon_state = "bot_right"
 
-/obj/effect/turf_decal/bot/right/red
-	color = COLOR_RED_GRAY
+/obj/effect/floor_decal/industrial/bot/right/red
+	name = "bot right red"
+	color = "#801000"
 
-/obj/effect/turf_decal/bot/right/yellow
-	color = "#cfcf55"
+/obj/effect/floor_decal/industrial/bot/right/yellow
+	name = "bot right yellow"
+	color = "#FFCD00"
 
-/obj/effect/turf_decal/bot/left
+/obj/effect/floor_decal/industrial/bot/left
+	name = "bot left"
 	icon_state = "bot_left"
 
-/obj/effect/turf_decal/bot/left/red
-	color = COLOR_RED_GRAY
+/obj/effect/floor_decal/industrial/bot/left/red
+	name = "bot left red"
+	color = "#801000"
 
-/obj/effect/turf_decal/bot/left/yellow
-	color = "#cfcf55"
+/obj/effect/floor_decal/industrial/bot/left/yellow
+	name = "bot left yellow"
+	color = "#FFCD00"
 
-/obj/effect/turf_decal/box_corners
+/obj/effect/floor_decal/industrial/box_corners
+	name = "box corner"
 	icon_state = "box_corners"
 
-/obj/effect/turf_decal/box_corners/red
-	color = COLOR_RED_GRAY
+/obj/effect/floor_decal/industrial/box_corners/red
+	name = "box corner red"
+	color = "#801000"
 
-/obj/effect/turf_decal/box_corners/yellow
-	color = "#cfcf55"
+/obj/effect/floor_decal/industrial/box_corners/yellow
+	name = "box corner yellow"
+	color = "#FFCD00"
 
-/obj/effect/turf_decal/box
+/obj/effect/floor_decal/industrial/box
+	name = "box"
 	icon_state = "box"
 
-/obj/effect/turf_decal/box/red
-	color = COLOR_RED_GRAY
+/obj/effect/floor_decal/industrial/box/red
+	name = "box red"
+	color = "#801000"
 
-/obj/effect/turf_decal/box/yellow
-	color = "#cfcf55"
+/obj/effect/floor_decal/industrial/box/yellow
+	name = "box yellow"
+	color = "#FFCD00"
 
-/obj/effect/turf_decal/box/arrows
+/obj/effect/floor_decal/industrial/box/arrows
+	name = "arrow"
 	icon_state = "arrows"
 
-/obj/effect/turf_decal/box/arrows/red
-	color = COLOR_RED_GRAY
+/obj/effect/floor_decal/industrial/box/arrows/red
+	name = "arrow red"
+	color = "#801000"
 
-/obj/effect/turf_decal/box/arrows/yellow
-	color = "#cfcf55"
+/obj/effect/floor_decal/industrial/box/arrows/yellow
+	name = "arrow yellow"
+	color = "#FFCD00"
 
-/obj/effect/floor_decal/numbers/zerotoone
+/obj/effect/floor_decal/industrial/numbers/zerotoone
 	name = "number marking"
 	icon_state = "number_0-1"
 
-/obj/effect/turf_decal/loadingarea_sharp
-	icon_state = "loadingarea_sharp"
-
-/obj/effect/turf_decal/loadingarea_sharp/red
-	color = COLOR_RED_GRAY
-
-/obj/effect/turf_decal/loadingarea_sharp/yellow
-	color = "#cfcf55"
-
-/obj/effect/turf_decal/delivery_sharp
-	icon_state = "delivery_sharp"
-
-/obj/effect/turf_decal/delivery_sharp/red
-	color = COLOR_RED_GRAY
-
-/obj/effect/turf_decal/delivery_sharp/yellow
-	color = "#cfcf55"
-
-/obj/effect/turf_decal/caution
-	icon_state = "caution"
-
-/obj/effect/turf_decal/caution/red
-	color = COLOR_RED_GRAY
-
-/obj/effect/turf_decal/caution/yellow
-	color = "#cfcf55"
-
-/obj/effect/turf_decal/stand_clear
-	icon_state = "stand_clear"
-
-/obj/effect/turf_decal/stand_clear/red
-	color = COLOR_RED_GRAY
-
-/obj/effect/turf_decal/stand_clear/yellow
-	color = "#cfcf55"
-
-/obj/effect/floor_decal/numbers/twotonine
+/obj/effect/floor_decal/industrial/numbers/twotonine
 	name = "number marking"
 	icon_state = "number_2-9"
+
+/obj/effect/floor_decal/industrial/loadingarea_sharp
+	name = "loading area marker"
+	icon_state = "loadingarea_sharp"
+
+/obj/effect/floor_decal/industrial/loadingarea_sharp/red
+	name = "red loading area marker"
+	color = "#801000"
+
+/obj/effect/floor_decal/industrial/loadingarea_sharp/yellow
+	name = "yellow loading area marker"
+	color = "#FFCD00"
+
+/obj/effect/floor_decal/industrial/delivery_sharp
+	name = "delivery area marker"
+	icon_state = "delivery_sharp"
+
+/obj/effect/floor_decal/industrial/delivery_sharp/red
+	name = "red delivery area marker"
+	color = "#801000"
+
+/obj/effect/floor_decal/industrial/delivery_sharp/yellow
+	name = " yellow delivery area marker"
+	color = "#FFCD00"
+
+/obj/effect/floor_decal/industrial/caution
+	name = "caution marker"
+	icon_state = "caution"
+
+/obj/effect/floor_decal/industrial/caution/red
+	name = "red caution marker"
+	color = "#801000"
+
+/obj/effect/floor_decal/industrial/caution/yellow
+	name = "yellow caution marker"
+	color = "#FFCD00"
+
+/obj/effect/floor_decal/industrial/stand_clear
+	name = "clearance marker"
+	icon_state = "stand_clear"
+
+/obj/effect/floor_decal/industrial/stand_clear/red
+	name = "red clearance marker"
+	color = "#801000"
+
+/obj/effect/floor_decal/industrial/stand_clear/yellow
+	name = "yellow clearance marker"
+	color = "#FFCD00"
 
 /obj/effect/floor_decal/industrial/hatch/yellow
 	color = "#cfcf55"
