@@ -6569,6 +6569,7 @@
 /area/intrepid/misc/maint/upper/starboard)
 "rS" = (
 /obj/effect/floor_decal/industrial/hatch/red,
+/obj/machinery/the_singularitygen,
 /turf/simulated/floor/reinforced,
 /area/intrepid/department/engineering/engine_room)
 "rU" = (
