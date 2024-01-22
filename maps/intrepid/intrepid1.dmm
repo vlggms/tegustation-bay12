@@ -144,7 +144,8 @@
 /obj/machinery/button/windowtint{
 	dir = 8;
 	id = "meetingroom";
-	pixel_x = 25
+	pixel_x = 25;
+	range = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -10385,9 +10386,9 @@
 	dir = 1
 	},
 /obj/machinery/button/blast_door{
-	pixel_y = 25;
 	id_tag = "bluespacedrive";
-	name = "Bluespace Drive Access Blast Door button"
+	name = "Bluespace Drive Access Blast Door button";
+	pixel_y = 25
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
