@@ -207,12 +207,6 @@
 
 #define MIDNIGHT_ROLLOVER		864000	//number of deciseconds in a day
 
-//Virus badness defines
-#define VIRUS_MILD			1
-#define VIRUS_COMMON		2	//Random events don't go higher (mutations aside)
-#define VIRUS_ENGINEERED	3
-#define VIRUS_EXOTIC		4	//Usually adminbus only
-
 //Error handler defines
 #define ERROR_USEFUL_LEN 2
 

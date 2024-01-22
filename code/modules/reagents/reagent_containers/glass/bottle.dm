@@ -16,48 +16,55 @@
 	obj_flags = 0
 	volume = 60
 
-	on_reagent_change()
-		update_icon()
-
-	pickup(mob/user)
-		..()
-		update_icon()
-
-	dropped(mob/user)
-		..()
-		update_icon()
-
-	attack_hand()
-		..()
-		update_icon()
-
-	New()
-		..()
-		if(!icon_state)
-			icon_state = "bottle-[rand(1,4)]"
-
+/obj/item/reagent_containers/glass/bottle/on_reagent_change()
 	update_icon()
-		overlays.Cut()
 
-		if(reagents.total_volume && (icon_state == "bottle-1" || icon_state == "bottle-2" || icon_state == "bottle-3" || icon_state == "bottle-4"))
-			var/image/filling = image('icons/obj/reagentfillings.dmi', src, "[icon_state]10")
+/obj/item/reagent_containers/glass/bottle/pickup(mob/user)
+	..()
+	update_icon()
 
-			var/percent = round((reagents.total_volume / volume) * 100)
-			switch(percent)
-				if(0 to 9)		filling.icon_state = "[icon_state]--10"
-				if(10 to 24) 	filling.icon_state = "[icon_state]-10"
-				if(25 to 49)	filling.icon_state = "[icon_state]-25"
-				if(50 to 74)	filling.icon_state = "[icon_state]-50"
-				if(75 to 79)	filling.icon_state = "[icon_state]-75"
-				if(80 to 90)	filling.icon_state = "[icon_state]-80"
-				if(91 to INFINITY)	filling.icon_state = "[icon_state]-100"
+/obj/item/reagent_containers/glass/bottle/dropped(mob/user)
+	..()
+	update_icon()
 
-			filling.color = reagents.get_color()
-			overlays += filling
+/obj/item/reagent_containers/glass/bottle/attack_hand()
+	..()
+	update_icon()
 
-		if (!is_open_container())
-			var/image/lid = image(icon, src, "lid_bottle")
-			overlays += lid
+/obj/item/reagent_containers/glass/bottle/New()
+	if(!icon_state)
+		icon_state = "bottle-[rand(1,4)]"
+	return ..()
+
+/obj/item/reagent_containers/glass/bottle/update_icon()
+	overlays.Cut()
+
+	if(reagents.total_volume && (icon_state == "bottle-1" || icon_state == "bottle-2" || icon_state == "bottle-3" || icon_state == "bottle-4"))
+		var/image/filling = image('icons/obj/reagentfillings.dmi', src, "[icon_state]10")
+
+		var/percent = round((reagents.total_volume / volume) * 100)
+		switch(percent)
+			if(0 to 9)
+				filling.icon_state = "[icon_state]--10"
+			if(10 to 24)
+				filling.icon_state = "[icon_state]-10"
+			if(25 to 49)
+				filling.icon_state = "[icon_state]-25"
+			if(50 to 74)
+				filling.icon_state = "[icon_state]-50"
+			if(75 to 79)
+				filling.icon_state = "[icon_state]-75"
+			if(80 to 90)
+				filling.icon_state = "[icon_state]-80"
+			if(91 to INFINITY)
+				filling.icon_state = "[icon_state]-100"
+
+		filling.color = reagents.get_color()
+		overlays += filling
+
+	if (!is_open_container())
+		var/image/lid = image(icon, src, "lid_bottle")
+		overlays += lid
 
 
 /obj/item/reagent_containers/glass/bottle/inaprovaline
@@ -357,7 +364,7 @@
 	update_icon()
 
 /obj/item/reagent_containers/glass/bottle/synaptizine_virus_food
-	name = "virus rations"
+	name = "virus rations bottle"
 	icon_state = "bottle-1"
 
 /obj/item/reagent_containers/glass/bottle/synaptizine_virus_food/New()
@@ -366,7 +373,7 @@
 	update_icon()
 
 /obj/item/reagent_containers/glass/bottle/uranium_virus_food
-	name = "virus rations"
+	name = "uranium virus food bottle"
 	icon_state = "bottle-1"
 
 /obj/item/reagent_containers/glass/bottle/uranium_virus_food/New()
@@ -375,9 +382,18 @@
 	update_icon()
 
 // Bottles with diseases
+/obj/item/reagent_containers/glass/bottle/virus_flu
+	icon_state = "bottle-3"
+	spawned_disease = /datum/disease/advance/flu
+
+/obj/item/reagent_containers/glass/bottle/virus_cold
+	icon_state = "bottle-3"
+	spawned_disease = /datum/disease/advance/cold
+
+// Random ones
 /obj/item/reagent_containers/glass/bottle/virus_random
 	spawned_disease = /datum/disease/advance/random
-	var/max_symptoms = 4
+	var/max_symptoms = 3
 	var/max_severity = 2
 
 /obj/item/reagent_containers/glass/bottle/virus_random/SpawnDisease()
