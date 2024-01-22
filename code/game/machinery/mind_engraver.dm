@@ -137,6 +137,12 @@
 	var/T = Clamp(total_component_rating_of_type(/obj/item/stock_parts/manipulator), 1, 12)
 	imprint_time = initial(imprint_time) / (T * 0.5)
 
+/obj/machinery/mind_engraver/on_update_icon()
+	if(!occupant)
+		icon_state = "engraver_0"
+	else
+		icon_state = "engraver_1"
+
 /obj/machinery/mind_engraver/proc/SetOccupant(mob/living/carbon/human/H)
 	occupant = H
 	update_icon()
@@ -220,6 +226,7 @@
 	imprint_end = world.time + imprint_time
 	visible_message(SPAN_NOTICE("\The [src] chimes as it begins its operation!"))
 	playsound(src, 'sound/machines/synth_yes.ogg', 50, TRUE, 7)
+	return TRUE
 
 /obj/machinery/mind_engraver/proc/StopImprint()
 	currently_imprinting = FALSE
@@ -230,7 +237,8 @@
 	if(!nanochip || !occupant)
 		return
 
-	nanochip.stored_data.ApplyEffect(occupant)
+	if(nanochip.stored_data)
+		nanochip.stored_data.ApplyEffect(occupant)
 
 	GoOut()
 	visible_message(SPAN_NOTICE("\The [src] produces a signal as it finishes its operation!"))

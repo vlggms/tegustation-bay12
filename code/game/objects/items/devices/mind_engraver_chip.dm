@@ -44,7 +44,7 @@
 	for(var/decl/hierarchy/skill/S in GLOB.skills)
 		if(!(S.type in skills))
 			continue
-		func_text += "  - Improves knowledge in the field of [S.name] to the [S.levels[skills[S.type]]] level"
+		func_text += "  - Improves knowledge in the field of [S.name] to the [S.levels[skills[S.type]]] level<br>"
 	return func_text
 
 /datum/engraver_data/skill/ApplyEffect(mob/living/carbon/human/target)

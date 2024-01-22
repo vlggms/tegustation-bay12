@@ -23,7 +23,7 @@
 
 /obj/machinery/computer/mind_engraver_control/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/mind_engraver_chip))
-		to_chat(user, SPAN_WARNING("\The [I] must be inserted in the min engraver, not the console!"))
+		to_chat(user, SPAN_WARNING("\The [I] must be inserted in the mind engraver, not the console!"))
 		return TRUE
 	if(istype(I, /obj/item/device/multitool))
 		var/obj/item/device/multitool/M = I
@@ -33,6 +33,10 @@
 		linked_engraver = buffer
 		to_chat(user, SPAN_NOTICE("You link [src] with the machine in [I]'s buffer."))
 	return ..()
+
+/obj/machinery/computer/mind_engraver_control/interface_interact(user)
+	interact(user)
+	return TRUE
 
 /obj/machinery/computer/mind_engraver_control/interact(mob/living/user)
 	//If the computer is being hacked or is emagged, display the reboot message.
@@ -54,14 +58,16 @@
 		else if(istype(linked_engraver.nanochip))
 			dat += "<A href='?src=\ref[src];start=1'>Begin Imprinting Process</A><br>"
 
-	if(!istype(linked_engraver.nanochip) || !linked_engraver.nanochip.stored_data)
+	if(!istype(linked_engraver.nanochip))
 		dat += "<b>Nanochip missing!</b><br>"
+	else if(!linked_engraver.nanochip.stored_data)
+		dat += "<b>Nanochip data missing!</b><br>"
 	else
 		dat += "Currently installed nanochip:<br>"
 		dat += "Type: [linked_engraver.nanochip.stored_data.chip_type]<br>"
 		dat += "Function: [linked_engraver.nanochip.stored_data.PrintFunction()]<br>"
 
-	var/datum/browser/popup = new(user, "message", "Message Monitoring Console", 480, 600)
+	var/datum/browser/popup = new(user, "mind_engraver", "Mind Engraver Control Console", 480, 600)
 	popup.set_content(JOINTEXT(dat))
 	popup.open()
 	return
