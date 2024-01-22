@@ -22,6 +22,11 @@
 	var/mob/living/carbon/human/user = G.assailant
 	var/mob/living/carbon/human/target = G.affecting
 
+	if(user.incapacitated(INCAPACITATION_ALL))
+		user.visible_message(SPAN_WARNING("[user] lets go of \his grab!"))
+		qdel(G)
+		return
+
 	target.Stun(3)
 
 	switch(user.a_intent)

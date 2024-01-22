@@ -16,13 +16,20 @@
 	same_tile = 0
 	can_throw = 1
 	force_danger = 1
-	breakability = 3
+	breakability = 4
 
 	icon_state = "reinforce1"
 
-	break_chance_table = list(5, 20, 40, 80, 100)
-/datum/grab/normal/aggressive/process_effect(var/obj/item/grab/G)
+	break_chance_table = list(25, 30, 35, 40, 45, 50, 55)
+
+/datum/grab/normal/aggressive/process_effect(obj/item/grab/G)
 	var/mob/living/carbon/human/affecting = G.affecting
+	var/mob/living/carbon/human/assailant = G.assailant
+
+	if(assailant.incapacitated(INCAPACITATION_ALL))
+		affecting.visible_message(SPAN_WARNING("[assailant] lets go of \his grab!"))
+		qdel(G)
+		return
 
 	if(G.target_zone in list(BP_L_HAND, BP_R_HAND))
 		affecting.drop_l_hand()
@@ -32,7 +39,7 @@
 	if(affecting.lying)
 		affecting.Weaken(4)
 
-/datum/grab/normal/aggressive/can_upgrade(var/obj/item/grab/G)
+/datum/grab/normal/aggressive/can_upgrade(obj/item/grab/G)
 	if(!(G.target_zone in list(BP_CHEST, BP_HEAD)))
 		to_chat(G.assailant, "<span class='warning'>You need to be grabbing their torso or head for this!</span>")
 		return FALSE
