@@ -958,6 +958,104 @@ var/list/floor_decals = list()
 	icon_state = "delivery"
 	alpha = 229
 
+/obj/effect/turf_decal/bot
+	icon_state = "bot"
+
+/obj/effect/turf_decal/bot/red
+	color = COLOR_RED_GRAY
+
+/obj/effect/turf_decal/bot/yellow
+	color = "#cfcf55"
+
+/obj/effect/turf_decal/bot/right
+	icon_state = "bot_right"
+
+/obj/effect/turf_decal/bot/right/red
+	color = COLOR_RED_GRAY
+
+/obj/effect/turf_decal/bot/right/yellow
+	color = "#cfcf55"
+
+/obj/effect/turf_decal/bot/left
+	icon_state = "bot_left"
+
+/obj/effect/turf_decal/bot/left/red
+	color = COLOR_RED_GRAY
+
+/obj/effect/turf_decal/bot/left/yellow
+	color = "#cfcf55"
+
+/obj/effect/turf_decal/box_corners
+	icon_state = "box_corners"
+
+/obj/effect/turf_decal/box_corners/red
+	color = COLOR_RED_GRAY
+
+/obj/effect/turf_decal/box_corners/yellow
+	color = "#cfcf55"
+
+/obj/effect/turf_decal/box
+	icon_state = "box"
+
+/obj/effect/turf_decal/box/red
+	color = COLOR_RED_GRAY
+
+/obj/effect/turf_decal/box/yellow
+	color = "#cfcf55"
+
+/obj/effect/turf_decal/box/arrows
+	icon_state = "arrows"
+
+/obj/effect/turf_decal/box/arrows/red
+	color = COLOR_RED_GRAY
+
+/obj/effect/turf_decal/box/arrows/yellow
+	color = "#cfcf55"
+
+/obj/effect/floor_decal/numbers/zerotoone
+	name = "number marking"
+	icon_state = "number_0-1"
+
+/obj/effect/turf_decal/loadingarea_sharp
+	icon_state = "loadingarea_sharp"
+
+/obj/effect/turf_decal/loadingarea_sharp/red
+	color = COLOR_RED_GRAY
+
+/obj/effect/turf_decal/loadingarea_sharp/yellow
+	color = "#cfcf55"
+
+/obj/effect/turf_decal/delivery_sharp
+	icon_state = "delivery_sharp"
+
+/obj/effect/turf_decal/delivery_sharp/red
+	color = COLOR_RED_GRAY
+
+/obj/effect/turf_decal/delivery_sharp/yellow
+	color = "#cfcf55"
+
+/obj/effect/turf_decal/caution
+	icon_state = "caution"
+
+/obj/effect/turf_decal/caution/red
+	color = COLOR_RED_GRAY
+
+/obj/effect/turf_decal/caution/yellow
+	color = "#cfcf55"
+
+/obj/effect/turf_decal/stand_clear
+	icon_state = "stand_clear"
+
+/obj/effect/turf_decal/stand_clear/red
+	color = COLOR_RED_GRAY
+
+/obj/effect/turf_decal/stand_clear/yellow
+	color = "#cfcf55"
+
+/obj/effect/floor_decal/numbers/twotonine
+	name = "number marking"
+	icon_state = "number_2-9"
+
 /obj/effect/floor_decal/industrial/hatch/yellow
 	color = "#cfcf55"
 
