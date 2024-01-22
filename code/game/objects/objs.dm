@@ -188,3 +188,7 @@
 
 /obj/get_mass()
 	return min(2**(w_class-1), 100)
+
+/obj/proc/mob_breakout(mob/living/escapee)
+	set waitfor = FALSE
+	return FALSE

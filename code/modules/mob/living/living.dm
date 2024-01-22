@@ -664,9 +664,9 @@ default behaviour is:
 		return TRUE
 
 	//Breaking out of a structure?
-	if(istype(loc, /obj/structure))
-		var/obj/structure/C = loc
-		if(C.mob_breakout(src))
+	if(istype(loc, /obj))
+		var/obj/O = loc
+		if(O.mob_breakout(src))
 			return TRUE
 
 /mob/living/proc/escape_inventory(obj/item/holder/H)

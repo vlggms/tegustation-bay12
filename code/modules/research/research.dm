@@ -197,6 +197,12 @@ research holder datum.
 	id = TECH_ESOTERIC
 	level = 0
 
+/datum/tech/dominion
+	name = "Dominion Technology"
+	desc = "Mostly forgotten and lost technology used during Terran Dominion's prime era, containing powerful designs and tools."
+	id = TECH_DOMINION
+	level = 0
+
 /obj/item/disk/tech_disk
 	name = "fabricator data disk"
 	desc = "A disk for storing fabricator learning data for backup."
@@ -206,7 +212,6 @@ research holder datum.
 	w_class = ITEM_SIZE_SMALL
 	matter = list(MATERIAL_PLASTIC = 30, MATERIAL_STEEL = 30, MATERIAL_GLASS = 10)
 	var/datum/tech/stored
-
 
 /obj/item/disk/design_disk
 	name = "component design disk"

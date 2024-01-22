@@ -667,6 +667,13 @@
 	build_path = /obj/item/stock_parts/circuitboard/disperser
 	sort_string = "KCAAG"
 
+/datum/design/circuit/shipmap
+	name = "ship holomap"
+	id = "shipmap"
+	req_tech = list(TECH_ENGINEERING = 1)
+	build_path = /obj/item/stock_parts/circuitboard/shipmap
+	sort_string = "LAAAA"
+
 /datum/design/circuit/tcom
 	req_tech = list(TECH_DATA = 4, TECH_ENGINEERING = 4)
 
@@ -904,9 +911,26 @@
 	build_path = /obj/item/stock_parts/circuitboard/radio_beacon
 	sort_string = "XAAAI"
 
-/datum/design/circuit/shipmap
-	name = "ship holomap"
-	id = "shipmap"
-	req_tech = list(TECH_ENGINEERING = 1)
-	build_path = /obj/item/stock_parts/circuitboard/shipmap
-	sort_string = "SAAAT"
+/datum/design/circuit/dominion/AssembleDesignName()
+	if(build_path)
+		var/obj/item/stock_parts/circuitboard/C = build_path
+		if(initial(C.board_type) == "machine")
+			name = "<span style='color: [COLOR_ORANGE]'>\[Dominion Machine Circuit\]</span> - [item_name]"
+		else if(initial(C.board_type) == "computer")
+			name = "<span style='color: [COLOR_ORANGE]'>\[Dominion Computer Circuit\]</span> - [item_name]"
+		else
+			name = "<span style='color: [COLOR_ORANGE]'>\[Dominion Circuit\]</span> - [item_name]"
+
+/datum/design/circuit/mind_engraver
+	name = "mind engraver"
+	id = "mind_engraver"
+	req_tech = list(TECH_ENGINEERING = 8, TECH_DATA = 6, TECH_DOMINION = 5)
+	build_path = /obj/item/stock_parts/circuitboard/mind_engraver
+	sort_string = "YAAAA"
+
+/datum/design/circuit/mind_engraver_console
+	name = "mind engraver console"
+	id = "mind_engraver_console"
+	req_tech = list(TECH_ENGINEERING = 8, TECH_DATA = 6, TECH_DOMINION = 5)
+	build_path = /obj/item/stock_parts/circuitboard/mind_engraver_console
+	sort_string = "YAAAB"

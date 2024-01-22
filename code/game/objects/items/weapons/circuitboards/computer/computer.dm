@@ -114,3 +114,13 @@
 /obj/item/stock_parts/circuitboard/pandemic
 	name = T_BOARD("PanD.E.M.I.C 2200 console")
 	build_path = /obj/machinery/computer/pandemic
+
+/obj/item/stock_parts/circuitboard/aiupload
+	name = T_BOARD("AI upload console")
+	build_path = /obj/machinery/computer/upload/ai
+	origin_tech = list(TECH_DATA = 4)
+
+/obj/item/stock_parts/circuitboard/mind_engraver_console
+	name = T_BOARD("mind engraver console")
+	build_path = /obj/machinery/computer/mind_engraver_control
+	origin_tech = list(TECH_ENGINEERING = 7, TECH_DATA = 5, TECH_DOMINION = 2)
