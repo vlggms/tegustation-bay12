@@ -402,14 +402,13 @@
 	if(level_max[UPGRADE_TOTAL] <= up_count) // Too many levels, can't do it
 		return FALSE
 
-	//if(upgrade_type && spell_levels[upgrade_type] && level_max[upgrade_type])
 	if(upgrade_type && spell_levels[upgrade_type] >= level_max[upgrade_type])
 		return FALSE
 
 	return TRUE
 
-/datum/spell/proc/ImproveSpell(upgrade_type)
-	if(!CanImprove(upgrade_type))
+/datum/spell/proc/ImproveSpell(upgrade_type, ignore_limit = FALSE)
+	if(!CanImprove(upgrade_type) && !ignore_limit)
 		return FALSE
 
 	spell_levels[upgrade_type]++

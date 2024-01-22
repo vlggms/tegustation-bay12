@@ -58,4 +58,8 @@
 
 	flame_power += 20
 	flame_color = flame_power >= 60 ? COLOR_PURPLE : COLOR_RED
+	// This is generally only available with spell steal
+	if(flame_power >= 80)
+		flame_distance += 1
+
 	return "The [src] spell is now [flame_power >= 60 ? "much " : ""]more powerful."

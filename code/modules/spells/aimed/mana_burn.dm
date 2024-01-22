@@ -38,7 +38,7 @@
 /datum/spell/aimed/mana_burn/fire_projectile(mob/living/user, mob/living/target)
 	. = ..()
 	var/datum/mana/M = GetManaDatum(target)
-	if(!istype(M) || M.mana_level <= 5)
+	if(!istype(M) || M.mana_level <= min_mana_burnt)
 		to_chat(user, SPAN_WARNING("\The [target] did not possess enough mana to experience the burn."))
 		return
 

@@ -12,7 +12,8 @@
 	invocation = "Furtum!"
 	invocation_type = INVOKE_SHOUT
 
-	level_max = list(UPGRADE_TOTAL = 3, UPGRADE_SPEED = 2, UPGRADE_STEAL_DURATION = 2)
+	level_max = list(UPGRADE_TOTAL = 4, UPGRADE_SPEED = 2, UPGRADE_POWER = 2, UPGRADE_STEAL_DURATION = 2)
+	upgrade_cost = list(UPGRADE_SPEED = 5, UPGRADE_POWER = 10, UPGRADE_STEAL_DURATION = 5)
 
 	range = 5
 
@@ -68,8 +69,9 @@
 	// Do the upgrades!
 	for(var/up_type in S.spell_levels)
 		if(target.mind.last_used_spell.spell_levels[up_type])
-			for(var/i = 1 to target.mind.last_used_spell.spell_levels[up_type])
-				S.ImproveSpell(up_type)
+			// Stolen spells will be upgraded to the same level as that of the original + our own power upgrade level
+			for(var/i = 1 to target.mind.last_used_spell.spell_levels[up_type] + spell_levels[UPGRADE_POWER])
+				S.ImproveSpell(up_type, TRUE)
 	// To prevent shenanigans with "Consume Magic"
 	S.total_points_used = 0
 	user.add_spell(S)
@@ -83,6 +85,9 @@
 
 	if(upgrade_type == UPGRADE_STEAL_DURATION)
 		return ImproveSpellStealDuration()
+
+/datum/spell/aimed/spell_steal/ImproveSpellPower()
+	return "The stolen spells are now stronger."
 
 /datum/spell/aimed/spell_steal/proc/ImproveSpellStealDuration()
 	stolen_spell_duration += 30 SECONDS

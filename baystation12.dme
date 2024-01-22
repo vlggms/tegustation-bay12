@@ -3156,6 +3156,7 @@
 #include "code\modules\spells\aimed\flamethrower.dm"
 #include "code\modules\spells\aimed\healing.dm"
 #include "code\modules\spells\aimed\mana_burn.dm"
+#include "code\modules\spells\aimed\mana_drain.dm"
 #include "code\modules\spells\aimed\onrush.dm"
 #include "code\modules\spells\aimed\passage.dm"
 #include "code\modules\spells\aimed\restore_limbs.dm"
