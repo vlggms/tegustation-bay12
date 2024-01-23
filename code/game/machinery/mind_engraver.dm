@@ -140,8 +140,10 @@
 /obj/machinery/mind_engraver/on_update_icon()
 	if(!occupant)
 		icon_state = "engraver_0"
+		density = FALSE
 	else
 		icon_state = "engraver_1"
+		density = TRUE
 
 /obj/machinery/mind_engraver/proc/SetOccupant(mob/living/carbon/human/H)
 	occupant = H
