@@ -15,13 +15,15 @@
 	var/mob/living/carbon/human/occupant = null
 	var/currently_imprinting = FALSE
 	/// How much time it takes to finish a single process
-	var/imprint_time = 60 SECONDS
+	var/imprint_time = 80 SECONDS
 	/// World time when imprint process is finished
 	var/imprint_end = 0
 	/// If TRUE - prevents the user from leaving, unless resisted out of
 	var/locked = FALSE
 	/// When the next breakout attempt can be done
 	var/breakout_cooldown = 0
+	/// Base chance on every Process() tick to do random damage
+	var/mistake_chance = 4
 
 /obj/machinery/mind_engraver/Destroy()
 	GoOut()
@@ -42,6 +44,18 @@
 		return
 
 	if(world.time < imprint_end)
+		var/obj/item/organ/external/O_head = occupant.get_organ(BP_HEAD)
+		if(prob(mistake_chance) && istype(O_head))
+			var/choice = pick(1, 2, 3)
+			switch(choice)
+				if(1)
+					O_head.take_external_damage(rand(5, 10), 0, DAM_SHARP|DAM_EDGE)
+					to_chat(occupant, SPAN_DANGER("\The [src] misplaces a surgical incision, damaging your skin!"))
+				if(2)
+					occupant.adjustBrainLoss(rand(5, 15))
+					to_chat(occupant, SPAN_DANGER("\The [src]'s laser accidentaly passes over the exposed sections of your head, damaging your brain!"))
+				if(3)
+					occupant.custom_pain(SPAN_WARNING("You feel sudden sharp pain in your head!"), 20, affecting = O_head)
 		return
 
 	FinishImprint()
@@ -57,6 +71,7 @@
 	if(istype(I, /obj/item/mind_engraver_chip))
 		add_fingerprint(user)
 		if(nanochip)
+			to_chat(user, SPAN_WARNING("\The [src] has a nanochip already installed."))
 			return
 		if(!user.unEquip(I, src))
 			return
@@ -137,6 +152,9 @@
 	var/T = Clamp(total_component_rating_of_type(/obj/item/stock_parts/manipulator), 1, 12)
 	imprint_time = initial(imprint_time) / (T * 0.5)
 
+	T = Clamp(total_component_rating_of_type(/obj/item/stock_parts/capacitor), 1, 12)
+	mistake_chance = max(0, 1 + initial(mistake_chance) - (T * 0.25))
+
 /obj/machinery/mind_engraver/on_update_icon()
 	if(!occupant)
 		icon_state = "engraver_0"
@@ -190,6 +208,21 @@
 	if(!occupant)
 		return
 
+	if(locked)
+		return
+
+	if(currently_imprinting)
+		StopImprint()
+		var/obj/item/organ/external/O_head = occupant.get_organ(BP_HEAD)
+		if(O_head)
+			to_chat(occupant, SPAN_DANGER("\The [src]'s tools quickly disengage away from your brain, leaving a terrible tear!"))
+			occupant.adjustBrainLoss(100)
+			occupant.custom_pain(SPAN_WARNING("It feels as if your head burst open!"), 50, affecting = O_head)
+			O_head.take_external_damage(35, 0, DAM_SHARP|DAM_EDGE)
+		if(!(stat & (NOPOWER|BROKEN)))
+			visible_message(SPAN_DANGER("\The [src] blares an alarm as its occupant leaves mid-procedure!"))
+			playsound(src, 'sound/machines/warning-buzzer.ogg', 50, TRUE, 7)
+
 	if(occupant.client)
 		occupant.client.eye = occupant.client.mob
 		occupant.client.perspective = MOB_PERSPECTIVE
@@ -200,7 +233,7 @@
 	if(!occupant)
 		return
 
-	visible_message(SPAN_DANGER("\The [src] blares an alarm as it loses power and forcefuly ejects the occupant!"))
+	visible_message(SPAN_DANGER("\The [src] blares an alarm as it loses power[locked ? "" : " and forcefuly ejects the occupant"]!"))
 	playsound(src, 'sound/machines/warning-buzzer.ogg', 50, TRUE, 7)
 	return GoOut()
 
