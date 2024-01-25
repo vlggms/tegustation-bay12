@@ -772,3 +772,6 @@
 	icon_state = "shuttle"
 	req_access = list(access_cent_general)
 
+// Needed so as to prevent arriving shuttles from deleting the "roof" and spacing the pods underneath.
+/area/space/intrepid_pod_roof
+	base_turf = /turf/simulated/floor/reinforced/airless

@@ -22,3 +22,7 @@
 		/area/intrepid/department/command/obstructionfielddisperser = NO_SCRUBBER|NO_VENT,
 		/area/intrepid/department/engineering/construction = NO_SCRUBBER|NO_VENT,
 	)
+	area_coherency_test_exempted_root_areas = list(
+		/area/space,
+		/area/exoplanet,
+	)

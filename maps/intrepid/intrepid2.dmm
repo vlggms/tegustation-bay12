@@ -8039,6 +8039,9 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/central)
+"vw" = (
+/turf/simulated/floor/shuttle_ceiling,
+/area/space/intrepid_pod_roof)
 "vx" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -10639,6 +10642,9 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/engine_room)
+"Cr" = (
+/turf/simulated/floor/reinforced,
+/area/space/intrepid_pod_roof)
 "Ct" = (
 /obj/structure/sign/warning/nosmoking_burned{
 	pixel_y = 32
@@ -34005,7 +34011,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 qT
 Jj
 LY
@@ -34207,7 +34213,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 qT
 tV
 tV
@@ -34409,7 +34415,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 qT
 tV
 ml
@@ -34611,7 +34617,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 qT
 tV
 ml
@@ -34813,7 +34819,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 qT
 tV
 Sq
@@ -35015,7 +35021,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 qT
 tV
 ml
@@ -35217,7 +35223,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 qT
 tV
 ml
@@ -35419,7 +35425,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 qT
 tV
 ml
@@ -35621,7 +35627,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 qT
 tV
 Lb
@@ -35823,7 +35829,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 qT
 tV
 ml
@@ -36025,7 +36031,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 qT
 tV
 ml
@@ -36227,7 +36233,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 qT
 tV
 ml
@@ -36429,7 +36435,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 qT
 tV
 ml
@@ -36631,7 +36637,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 qT
 tV
 ml
@@ -36833,7 +36839,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 qT
 tV
 ml
@@ -37035,7 +37041,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 NT
 RH
 RH
@@ -37237,7 +37243,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 lZ
 YQ
 Un
@@ -37439,7 +37445,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 Qt
 wJ
 nX
@@ -37641,7 +37647,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 zn
 mf
 Xp
@@ -37843,7 +37849,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 NT
 RH
 RH
@@ -38045,7 +38051,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 qT
 tV
 ml
@@ -38247,7 +38253,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 qT
 tV
 ml
@@ -38449,7 +38455,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 qT
 tV
 ml
@@ -38651,7 +38657,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 qT
 tV
 ml
@@ -38853,7 +38859,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 qT
 tV
 ml
@@ -39055,7 +39061,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 qT
 tV
 ml
@@ -39257,7 +39263,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 qT
 tV
 Lb
@@ -39459,7 +39465,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 qT
 tV
 ml
@@ -39661,7 +39667,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 qT
 tV
 ml
@@ -39863,7 +39869,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 qT
 tV
 ml
@@ -40065,7 +40071,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 qT
 tV
 ml
@@ -40267,7 +40273,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 qT
 tV
 ml
@@ -40466,10 +40472,10 @@ UU
 UU
 UU
 UU
-cj
-cj
-cj
-xQ
+vw
+vw
+vw
+Cr
 qT
 tV
 ml
@@ -40667,11 +40673,11 @@ UU
 UU
 UU
 UU
-cj
-cj
-cj
-cj
-xQ
+vw
+vw
+vw
+vw
+Cr
 hC
 Na
 Na
@@ -40869,11 +40875,11 @@ UU
 UU
 UU
 UU
-cj
-cj
-cj
-cj
-xQ
+vw
+vw
+vw
+vw
+Cr
 ga
 Mi
 wk
@@ -41071,11 +41077,11 @@ UU
 UU
 Kx
 UU
-cj
-cj
-cj
-cj
-xQ
+vw
+vw
+vw
+vw
+Cr
 TX
 NB
 gR
@@ -41274,10 +41280,10 @@ UU
 UU
 UU
 UU
-cj
-cj
-cj
-xQ
+vw
+vw
+vw
+Cr
 ga
 Ez
 bX
@@ -41479,7 +41485,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 hC
 Na
 Na
@@ -41681,7 +41687,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 pB
 Bh
 gp
@@ -41883,7 +41889,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 iD
 NP
 kv
@@ -42085,7 +42091,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 iD
 NP
 DS
@@ -42284,10 +42290,10 @@ UU
 UU
 UU
 UU
-cj
-cj
-cj
-xQ
+vw
+vw
+vw
+Cr
 iD
 NP
 DS
@@ -42485,11 +42491,11 @@ UU
 UU
 UU
 UU
-cj
-cj
-cj
-cj
-xQ
+vw
+vw
+vw
+vw
+Cr
 iD
 NP
 kv
@@ -42687,11 +42693,11 @@ UU
 UU
 UU
 UU
-cj
-cj
-cj
-cj
-xQ
+vw
+vw
+vw
+vw
+Cr
 pB
 sA
 zx
@@ -42889,11 +42895,11 @@ UU
 UU
 UU
 UU
-cj
-cj
-cj
-cj
-xQ
+vw
+vw
+vw
+vw
+Cr
 pB
 tC
 uQ
@@ -43092,10 +43098,10 @@ UU
 UU
 UU
 UU
-cj
-cj
-cj
-xQ
+vw
+vw
+vw
+Cr
 pB
 aF
 vb
@@ -43297,7 +43303,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 lT
 Cf
 qL
@@ -43499,7 +43505,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 lT
 Cf
 ma
@@ -43701,7 +43707,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 lT
 Jx
 Cf
@@ -43903,7 +43909,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 lT
 Cf
 Tq
@@ -44105,7 +44111,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 pB
 XW
 nQ
@@ -44307,7 +44313,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 Tf
 Rj
 Rj
@@ -45115,7 +45121,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 Tf
 Rj
 Rj
@@ -45317,7 +45323,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 Fo
 li
 yv
@@ -45519,7 +45525,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 Fo
 Aq
 WQ
@@ -45721,7 +45727,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 Fo
 yE
 GE
@@ -45923,7 +45929,7 @@ UU
 UU
 UU
 UU
-xQ
+Cr
 qT
 DD
 kc
