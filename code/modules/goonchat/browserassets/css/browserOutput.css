@@ -332,8 +332,8 @@ h1.alert, h2.alert		{color: #a4bad6;}
 
 .danger					{color: #c51e1e;	font-weight: bold;}
 .userdanger				{color: #c51e1e;	font-weight: bold;	font-size: 115%;}
-.warning				{color: #c5771e;	font-style: italic;}
-.bigwarning				{color: #c5771e;	font-style: italic;	font-size: 115%;}
+.warning				{color: #c5371e;	font-style: italic;}
+.bigwarning				{color: #c5371e;	font-style: italic;	font-size: 115%;}
 .subtle					{color: #4343ca;	font-size: 75%;		font-style: italic;}
 .boldannounce			{color: #c51e1e;	font-weight: bold;}
 .rose					{color: #ff5050;}
