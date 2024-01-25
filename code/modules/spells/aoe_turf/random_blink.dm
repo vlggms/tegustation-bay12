@@ -1,15 +1,18 @@
 /datum/spell/aoe_turf/random_blink
 	name = "Random blink"
 	desc = "This spell randomly teleports you a short distance."
-	charge_max = 20
+
 	spell_flags = Z2NOCAST | IGNOREDENSE | IGNORESPACE | NO_SOMATIC
 	invocation = "none"
 	invocation_type = INVOKE_NONE
-	range = 7
+	range = 4
 	inner_radius = 1
 
-	level_max = list(UPGRADE_TOTAL = 4, UPGRADE_SPEED = 4, UPGRADE_POWER = 4)
-	cooldown_min = 5 //4 deciseconds reduction per rank
+	charge_max = 5 SECONDS
+	cooldown_reduc = 1.5 SECONDS
+	cooldown_min = 0.5 SECONDS
+
+	level_max = list(UPGRADE_TOTAL = 4, UPGRADE_SPEED = 3, UPGRADE_POWER = 3)
 	hud_state = "wiz_blink_random"
 	cast_sound = 'sound/magic/blink.ogg'
 
@@ -17,7 +20,7 @@
 	spell_cost = 1
 	mana_cost = 1
 
-/datum/spell/aoe_turf/random_blink/cast(list/targets, mob/user)
+/datum/spell/aoe_turf/random_blink/cast(list/targets, mob/living/user)
 	if(!targets.len)
 		return
 
@@ -37,11 +40,12 @@
 		D.alpha = min(150 + i*15, 255)
 		animate(D, alpha = 0, time = 2 + i*2)
 
+	if(user.incapacitated(INCAPACITATION_STUNNED|INCAPACITATION_RESTRAINED|INCAPACITATION_BUCKLED_FULLY|INCAPACITATION_FORCELYING|INCAPACITATION_KNOCKOUT))
+		charge_counter = -3 SECONDS
+		to_chat(user, SPAN_WARNING("Castin [src] while incapacitated has put it on a higher cooldown!"))
+
 	return
 
 /datum/spell/aoe_turf/random_blink/ImproveSpellPower()
-	if(!..())
-		return 0
-	inner_radius += 1
-
-	return "You've increased the inner range of [src]."
+	range += 1
+	return "You've increased the range of [src]."
