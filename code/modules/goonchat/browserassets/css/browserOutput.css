@@ -331,8 +331,10 @@ h1.alert, h2.alert		{color: #a4bad6;}
 .passive				{color: #660000;}
 
 .danger					{color: #c51e1e;	font-weight: bold;}
-.warning				{color: #c51e1e;	font-style: italic;}
-.subtle					{color: #4343ca; font-size: 75%; font-style: italic;}
+.userdanger				{color: #c51e1e;	font-weight: bold;	font-size: 115%;}
+.warning				{color: #c5771e;	font-style: italic;}
+.bigwarning				{color: #c5771e;	font-style: italic;	font-size: 115%;}
+.subtle					{color: #4343ca;	font-size: 75%;		font-style: italic;}
 .boldannounce			{color: #c51e1e;	font-weight: bold;}
 .rose					{color: #ff5050;}
 .info					{color: #6685f5;}
@@ -340,7 +342,9 @@ h1.alert, h2.alert		{color: #a4bad6;}
 .notice					{color: #6685f5;}
 .mentor                 {color: #e236d8;}
 .alium					{color: #00ff00;}
-.cult					{color: #aa1c1c;}
+.cult					{color: #aa1c1c; font-weight: bold;	font-style: italic;}
+.cultannounce			{color: #aa1c1c; font-style: italic;	font-size: 175%;}
+.mfauna					{color: #c15d2c; font-weight: bold;	font-size: 125%;}
 
 /* Languages */
 .alien					{color: #855d85;}
@@ -363,6 +367,7 @@ h1.alert, h2.alert		{color: #a4bad6;}
 .chinese				{color: #d4a52a;}
 .indian					{color: #634c81;}
 .iberian				{color: #be4ac9;}
+.latin					{color: #c25396;}
 
 .interface				{color: #750e75;}
 
