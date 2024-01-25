@@ -98,7 +98,7 @@
 			return
 		var/decl/hierarchy/skill/S = pick(valid_skills)
 		valid_skills -= S
-		skills[S.type] = rand(SKILL_BASIC, S.default_max)
+		skills[S.type] = rand(SKILL_BASIC, length(S.levels))
 
 // Presets
 /datum/engraver_data/skill/max_combat
