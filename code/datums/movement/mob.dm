@@ -199,6 +199,9 @@
 
 	for(var/obj/item/grab/G in mob.grabbed_by)
 		if(G.assailant != mob && G.stop_move())
+			if(get_dist(G.assailant, mob) > 1 || G.assailant.z != mob.z)
+				qdel(G)
+				continue
 			if(mover == mob)
 				to_chat(mob, "<span class='notice'>You're stuck in a grab!</span>")
 			mob.ProcessGrabs()
