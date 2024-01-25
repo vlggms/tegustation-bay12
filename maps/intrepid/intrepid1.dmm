@@ -1039,7 +1039,7 @@
 	dir = 4
 	},
 /obj/machinery/atm{
-	pixel_y = 27
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
 /area/intrepid/misc/hallway/starboard)

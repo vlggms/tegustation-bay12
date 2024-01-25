@@ -820,8 +820,12 @@
 /turf/simulated/floor,
 /area/intrepid/department/command/obstructionfielddisperser)
 "cj" = (
-/turf/simulated/floor/shuttle_ceiling,
-/area/space)
+/obj/structure/table/standard,
+/obj/machinery/atm{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/civillian/dockbayone)
 "ck" = (
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/starboard)
@@ -4032,6 +4036,13 @@
 /obj/effect/paint_stripe/blue,
 /turf/simulated/floor,
 /area/intrepid/department/civillian/dockbaythree)
+"lc" = (
+/obj/structure/table/standard,
+/obj/machinery/atm{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/civillian/dockbayfive)
 "ld" = (
 /obj/structure/closet/emcloset,
 /obj/structure/railing/mapped,
@@ -7222,6 +7233,13 @@
 /obj/machinery/suit_cycler/command,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/eva)
+"tw" = (
+/obj/structure/table/standard,
+/obj/machinery/atm{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/civillian/dockbayfour)
 "tx" = (
 /obj/structure/cable/orange{
 	d1 = 1;
@@ -8430,6 +8448,13 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/portside)
+"wz" = (
+/obj/structure/table/standard,
+/obj/machinery/atm{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/civillian/dockbaytwo)
 "wA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -13554,6 +13579,13 @@
 	},
 /turf/simulated/wall/r_titanium,
 /area/shuttle/pandora/cockpit)
+"Lh" = (
+/obj/structure/table/standard,
+/obj/machinery/atm{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/civillian/dockbaysix)
 "Li" = (
 /obj/effect/floor_decal/corner/brown/half{
 	dir = 4;
@@ -15373,6 +15405,9 @@
 /area/intrepid/department/command/selfdestruct)
 "Qe" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/machinery/atm{
+	pixel_y = 32
+	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/central)
 "Qf" = (
@@ -17228,6 +17263,13 @@
 /obj/effect/wingrille_spawn/reinforced_phoron/full,
 /turf/simulated/floor,
 /area/intrepid/department/engineering/atmos)
+"Vm" = (
+/obj/structure/table/standard,
+/obj/machinery/atm{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/civillian/dockbaythree)
 "Vn" = (
 /obj/effect/floor_decal/corner/black/diagonal,
 /obj/machinery/button/crematorium{
@@ -34091,7 +34133,7 @@ ZT
 ZT
 ih
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -34293,7 +34335,7 @@ ZT
 ZT
 ZT
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -34495,7 +34537,7 @@ Gh
 oQ
 ZT
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -34697,7 +34739,7 @@ Gh
 oQ
 ZT
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -34899,7 +34941,7 @@ Gh
 ui
 ZT
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -35101,7 +35143,7 @@ Gh
 oQ
 ZT
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -35303,7 +35345,7 @@ Gh
 oQ
 ZT
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -35505,7 +35547,7 @@ ZT
 ZT
 ZT
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -35707,7 +35749,7 @@ ZT
 Wm
 tV
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -35909,7 +35951,7 @@ ml
 ml
 tV
 Vr
-xQ
+Cr
 UU
 UU
 UU
@@ -36111,7 +36153,7 @@ ml
 ml
 tV
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -36313,7 +36355,7 @@ ml
 ml
 tV
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -36515,7 +36557,7 @@ ml
 ml
 tV
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -36644,7 +36686,7 @@ ml
 ml
 ml
 RH
-KJ
+cj
 Pw
 MP
 Yi
@@ -36710,14 +36752,14 @@ gm
 gF
 MS
 NM
-Ha
+tw
 gm
 ml
 ml
 ml
 tV
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -36919,7 +36961,7 @@ ml
 ml
 tV
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -37121,7 +37163,7 @@ gm
 gm
 gm
 nL
-xQ
+Cr
 UU
 UU
 UU
@@ -37323,7 +37365,7 @@ RO
 RO
 NG
 yB
-xQ
+Cr
 UU
 UU
 UU
@@ -37525,7 +37567,7 @@ in
 ji
 xR
 MI
-xQ
+Cr
 UU
 UU
 UU
@@ -37727,7 +37769,7 @@ lo
 sX
 xM
 xA
-xQ
+Cr
 UU
 UU
 UU
@@ -37929,7 +37971,7 @@ gm
 gm
 gm
 nL
-xQ
+Cr
 UU
 UU
 UU
@@ -38131,7 +38173,7 @@ ml
 ml
 tV
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -38333,7 +38375,7 @@ ml
 ml
 tV
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -38535,7 +38577,7 @@ ml
 ml
 tV
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -38737,7 +38779,7 @@ ml
 ml
 tV
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -38939,7 +38981,7 @@ ml
 ml
 tV
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -39141,7 +39183,7 @@ ml
 ml
 tV
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -39343,7 +39385,7 @@ ml
 ml
 tV
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -39545,7 +39587,7 @@ ml
 ml
 tV
 Vr
-xQ
+Cr
 UU
 UU
 UU
@@ -39747,7 +39789,7 @@ ml
 ml
 tV
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -39949,7 +39991,7 @@ ml
 ml
 tV
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -40151,7 +40193,7 @@ ml
 ml
 tV
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -40280,7 +40322,7 @@ ml
 ml
 ml
 Na
-XH
+wz
 PR
 Ip
 Zs
@@ -40346,14 +40388,14 @@ LQ
 Vj
 tt
 Jk
-KU
+lc
 LQ
 ml
 ml
 ml
 tV
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -40555,10 +40597,10 @@ ml
 ml
 tV
 qT
-xQ
-cj
-cj
-cj
+Cr
+vw
+vw
+vw
 UU
 UU
 UU
@@ -40757,11 +40799,11 @@ LQ
 LQ
 LQ
 FF
-xQ
-cj
-cj
-cj
-cj
+Cr
+vw
+vw
+vw
+vw
 UU
 UU
 UU
@@ -40959,11 +41001,11 @@ fi
 fi
 jL
 Nn
-xQ
-cj
-cj
-cj
-cj
+Cr
+vw
+vw
+vw
+vw
 UU
 UU
 UU
@@ -41161,11 +41203,11 @@ kK
 BR
 bZ
 UJ
-xQ
-cj
-cj
-cj
-cj
+Cr
+vw
+vw
+vw
+vw
 UU
 UU
 UU
@@ -41363,10 +41405,10 @@ dZ
 GS
 Jb
 sd
-xQ
-cj
-cj
-cj
+Cr
+vw
+vw
+vw
 UU
 UU
 UU
@@ -41565,7 +41607,7 @@ LQ
 LQ
 LQ
 FF
-xQ
+Cr
 UU
 UU
 UU
@@ -41767,7 +41809,7 @@ xK
 mV
 YB
 YB
-xQ
+Cr
 UU
 UU
 UU
@@ -41969,7 +42011,7 @@ gc
 mV
 xn
 sU
-xQ
+Cr
 UU
 UU
 UU
@@ -42171,7 +42213,7 @@ sj
 Jz
 ZK
 qx
-xQ
+Cr
 UU
 UU
 UU
@@ -42373,10 +42415,10 @@ sj
 Jz
 ZK
 qx
-xQ
-cj
-cj
-cj
+Cr
+vw
+vw
+vw
 UU
 UU
 UU
@@ -42575,11 +42617,11 @@ qJ
 mV
 xn
 sU
-xQ
-cj
-cj
-cj
-cj
+Cr
+vw
+vw
+vw
+vw
 UU
 UU
 UU
@@ -42777,11 +42819,11 @@ UO
 mV
 YB
 YB
-xQ
-cj
-cj
-cj
-cj
+Cr
+vw
+vw
+vw
+vw
 UU
 UU
 UU
@@ -42979,11 +43021,11 @@ vY
 vY
 vY
 qT
-xQ
-cj
-cj
-cj
-cj
+Cr
+vw
+vw
+vw
+vw
 UU
 UU
 UU
@@ -43181,10 +43223,10 @@ ml
 ml
 tV
 Vr
-xQ
-cj
-cj
-cj
+Cr
+vw
+vw
+vw
 UU
 UU
 UU
@@ -43383,7 +43425,7 @@ ml
 ml
 tV
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -43585,7 +43627,7 @@ ml
 ml
 tV
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -43787,7 +43829,7 @@ ml
 ml
 tV
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -43916,7 +43958,7 @@ Tq
 sT
 Jn
 Rj
-kH
+Vm
 Dy
 wj
 Tp
@@ -43982,14 +44024,14 @@ du
 qE
 AX
 YF
-mb
+Lh
 du
 ml
 ml
 ml
 tV
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -44191,7 +44233,7 @@ ml
 ml
 tV
 qT
-xQ
+Cr
 UU
 UU
 UU
@@ -44393,7 +44435,7 @@ du
 du
 du
 Qj
-xQ
+Cr
 UU
 UU
 UU
@@ -44595,7 +44637,7 @@ zm
 zm
 RL
 Hl
-xQ
+Cr
 UU
 UU
 UU
@@ -44797,7 +44839,7 @@ VG
 CC
 ZB
 ag
-xQ
+Cr
 UU
 UU
 UU
@@ -44999,7 +45041,7 @@ il
 FP
 RC
 Iw
-xQ
+Cr
 UU
 UU
 UU
@@ -45201,7 +45243,7 @@ du
 du
 du
 Qj
-xQ
+Cr
 UU
 UU
 UU
@@ -45403,7 +45445,7 @@ Fi
 Fi
 es
 he
-xQ
+Cr
 UU
 UU
 UU
@@ -45605,7 +45647,7 @@ Fi
 Fi
 es
 he
-xQ
+Cr
 UU
 UU
 UU
@@ -45807,7 +45849,7 @@ Fi
 es
 es
 he
-xQ
+Cr
 UU
 UU
 UU
@@ -46009,7 +46051,7 @@ Fi
 es
 he
 he
-xQ
+Cr
 UU
 UU
 UU
