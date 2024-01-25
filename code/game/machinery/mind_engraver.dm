@@ -89,7 +89,10 @@
 	return ..()
 
 /obj/machinery/mind_engraver/AltClick(mob/user)
-	RemoveChip(user)
+	if(CanDefaultInteract(user))
+		RemoveChip(user)
+		return
+	return ..()
 
 /obj/machinery/mind_engraver/relaymove(mob/user)
 	. = ..()
