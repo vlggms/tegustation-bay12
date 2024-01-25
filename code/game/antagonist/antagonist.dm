@@ -79,6 +79,9 @@
 		Think through your actions and make the roleplay immersive! <b>Please remember all \
 		rules aside from those without explicit exceptions apply to antagonists.</b>"
 
+	/// Sound to play when a player becomes an antagonist
+	var/welcome_sound = null
+
 	// Map template that antag needs to load before spawning. Nulled after it's loaded.
 	var/datum/map_template/base_to_load
 

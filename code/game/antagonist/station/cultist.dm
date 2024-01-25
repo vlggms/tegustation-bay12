@@ -30,6 +30,7 @@ GLOBAL_DATUM_INIT(cult, /datum/antagonist/cultist, new)
 	feedback_tag = "cult_objective"
 	antag_indicator = "hudcultist"
 	welcome_text = "You have a tome in your possession; one that will help you start the cult. Use it well and remember - there are others."
+	welcome_sound = 'sound/misc/antag_alerts/cult_alert.ogg'
 	victory_text = "The cult wins! It has succeeded in serving its dark masters!"
 	loss_text = "The staff managed to stop the cult!"
 	victory_feedback_tag = "win - cult win"
