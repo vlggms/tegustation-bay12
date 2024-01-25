@@ -91,17 +91,17 @@
 
 	// Display everything.
 	for(var/job_map in SSjobs.job_lists_by_map_name)
-
+		var/map_name = strip_improper(job_map)
 		var/list/map_data = SSjobs.job_lists_by_map_name[job_map]
-		if(isnull(pref.hiding_maps[job_map]))
-			pref.hiding_maps[job_map] = map_data["default_to_hidden"]
+		if(isnull(pref.hiding_maps[map_name]))
+			pref.hiding_maps[map_name] = map_data["default_to_hidden"]
 
 		. += "<hr><table width = '100%''><tr>"
-		. += "<td width = '50%' align = 'right'><font size = 3><b>[capitalize(job_map)]</b></td>"
-		. += "<td width = '50%' align = 'left''><a href='?src=\ref[src];toggle_map=[job_map]'>[pref.hiding_maps[job_map] ? "Show" : "Hide"]</a></font></td>"
+		. += "<td width = '50%' align = 'right'><font size = 3><b>[capitalize(map_name)]</b></td>"
+		. += "<td width = '50%' align = 'left''><a href='?src=\ref[src];toggle_map=[map_name]'>[pref.hiding_maps[map_name] ? "Show" : "Hide"]</a></font></td>"
 		. += "</tr></table>"
 
-		if(!pref.hiding_maps[job_map])
+		if(!pref.hiding_maps[map_name])
 
 			. += "<hr/>"
 			. += "<table width='100%' cellpadding='1' cellspacing='0'><tr><td width='20%'>" // Table within a table for alignment, also allows you to easily add more columns.
