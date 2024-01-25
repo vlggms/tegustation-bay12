@@ -58,7 +58,8 @@
 
 	// Basic intro text.
 	to_chat(player.current, "<span class='danger'><font size=3>You are a [role_text]!</font></span>")
-	sound_to(player.current, welcome_sound)
+	if(welcome_sound)
+		sound_to(player.current, welcome_sound)
 	if(leader_welcome_text && player == leader)
 		to_chat(player.current, "<span class='antagdesc'>[get_leader_welcome_text(player.current)]</span>")
 	else

@@ -7,6 +7,7 @@ GLOBAL_DATUM_INIT(malf, /datum/antagonist/rogue_ai, new)
 	mob_path = /mob/living/silicon/ai
 	landmark_id = "AI"
 	welcome_text = "You are malfunctioning! You do not have to follow any laws."
+	welcome_sound = 'sound/misc/antag_alerts/malf_alert.ogg'
 	victory_text = "The AI has taken control of all systems."
 	loss_text = "The AI has been shut down!"
 	flags = ANTAG_VOTABLE | ANTAG_OVERRIDE_MOB | ANTAG_OVERRIDE_JOB | ANTAG_CHOOSE_NAME
