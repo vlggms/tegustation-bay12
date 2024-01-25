@@ -27,7 +27,7 @@
 		return TRUE
 	if(istype(I, /obj/item/device/multitool))
 		var/obj/item/device/multitool/M = I
-		var/obj/machinery/mind_engraver/buffer = M.get_buffer(/obj/machinery/quantumpad)
+		var/obj/machinery/mind_engraver/buffer = M.get_buffer(/obj/machinery/mind_engraver)
 		if(!istype(buffer))
 			return TRUE
 		linked_engraver = buffer
