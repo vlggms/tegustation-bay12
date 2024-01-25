@@ -156,12 +156,23 @@
 	mistake_chance = max(0, 1 + initial(mistake_chance) - (T * 0.25))
 
 /obj/machinery/mind_engraver/on_update_icon()
+	overlays.Cut()
+
 	if(!occupant)
 		icon_state = "engraver_0"
 		density = FALSE
+		if(locked)
+			icon_state = "engraver_1"
+			density = TRUE
+		else
+			icon_state = "engraver_0"
+			density = FALSE
 	else
-		icon_state = "engraver_1"
+		icon_state = "engraver_2"
 		density = TRUE
+
+	if(locked)
+		overlays += image(icon, "locked_overlay")
 
 /obj/machinery/mind_engraver/proc/SetOccupant(mob/living/carbon/human/H)
 	occupant = H
@@ -185,6 +196,9 @@
 	if(occupant)
 		to_chat(user, SPAN_WARNING("\The [src] is already occupied."))
 		return
+	if(locked)
+		to_chat(user, SPAN_WARNING("\The [src] is locked."))
+		return
 
 	if(H == user)
 		visible_message(SPAN_NOTICE("\The [user] starts climbing into \the [src]."))
@@ -198,6 +212,9 @@
 			return
 		if(occupant)
 			to_chat(user, SPAN_WARNING("\The [src] is already occupied."))
+			return
+		if(locked)
+			to_chat(user, SPAN_WARNING("\The [src] is locked."))
 			return
 		if(H.buckled)
 			to_chat(user, SPAN_WARNING("Unbuckle the subject before attempting to move them."))
@@ -275,6 +292,7 @@
 	if(nanochip.stored_data)
 		nanochip.stored_data.ApplyEffect(occupant)
 
+	ToggleLock(FALSE)
 	INVOKE_ASYNC(src, .proc/GoOut)
 	visible_message(SPAN_NOTICE("\The [src] produces a signal as it finishes its operation!"))
 	playsound(src, 'sound/machines/ping.ogg', 50, TRUE, 7)
@@ -286,3 +304,4 @@
 		locked = !locked
 	var/sound_path = locked ? 'sound/machines/bolts_down.ogg' : 'sound/machines/bolts_up.ogg'
 	playsound(src, sound_path, 35, TRUE)
+	update_icon()
