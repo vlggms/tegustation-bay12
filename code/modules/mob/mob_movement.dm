@@ -1,6 +1,21 @@
 /mob
 	var/moving           = FALSE
 
+/mob/forceMove(atom/dest)
+	. = ..()
+	GrabsDistanceCheck()
+
+/mob/proc/GrabsDistanceCheck()
+	if(!LAZYLEN(grabbed_by))
+		return
+	for(var/obj/item/grab/G in grabbed_by)
+		var/mob/living/carbon/human/user = G.assailant
+		if(!istype(user))
+			qdel(G)
+			continue
+		if(get_dist(user, src) > 1 || user.z != z)
+			qdel(G)
+
 /mob/proc/SelfMove(var/direction)
 	if(direction == UP || direction == DOWN)
 		if(buckled)

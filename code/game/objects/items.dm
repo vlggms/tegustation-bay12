@@ -537,9 +537,10 @@ var/list/global/slot_flags_enumeration = list(
 
 /obj/item/proc/get_parry_chance(mob/user)
 	. = base_parry_chance
-	if(user)
-		if(base_parry_chance || user.skill_check(SKILL_COMBAT, SKILL_TRAINED))
-			. += 10 * (user.get_skill_value(SKILL_COMBAT) - SKILL_BASIC)
+	if (user.a_intent == I_HELP)
+		. = 0
+	if (.)
+		. += Clamp((user.get_skill_value(SKILL_COMBAT) * 10) - 20, 0, 75)
 
 /obj/item/proc/on_disarm_attempt(mob/target, mob/living/attacker)
 	if(force < 1)

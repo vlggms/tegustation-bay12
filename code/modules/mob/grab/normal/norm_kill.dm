@@ -20,10 +20,16 @@
 
 	icon_state = "kill1"
 
-	break_chance_table = list(5, 20, 40, 80, 100)
+	break_chance_table = list(3, 4, 5, 6, 7)
 
-/datum/grab/normal/kill/process_effect(var/obj/item/grab/G)
+/datum/grab/normal/kill/process_effect(obj/item/grab/G)
 	var/mob/living/carbon/human/affecting = G.affecting
+	var/mob/living/carbon/human/assailant = G.assailant
+
+	if(assailant.incapacitated(INCAPACITATION_ALL))
+		affecting.visible_message(SPAN_WARNING("[assailant] lets go of \his grab!"))
+		qdel(G)
+		return
 
 	affecting.drop_l_hand()
 	affecting.drop_r_hand()
@@ -33,6 +39,6 @@
 
 	affecting.adjustOxyLoss(1)
 
-	affecting.apply_effect(STUTTER, 5) //It will hamper your voice, being choked and all.
-	affecting.Weaken(5)	//Should keep you down unless you get help.
+	affecting.apply_effect(STUTTER, 5) // It will hamper your voice, being choked and all.
+	affecting.Weaken(5) // Should keep you down unless you get help.
 	affecting.losebreath = max(affecting.losebreath + 2, 3)

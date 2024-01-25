@@ -14,12 +14,17 @@
 
 	break_chance_table = list(3, 10, 20, 100)
 
-/datum/grab/nab/kill/upgrade_effect(var/obj/item/grab/G)
+/datum/grab/nab/kill/upgrade_effect(obj/item/grab/G)
 	process_effect(G)
 
-/datum/grab/nab/kill/process_effect(var/obj/item/grab/G)
+/datum/grab/nab/kill/process_effect(obj/item/grab/G)
 	var/mob/living/carbon/human/assailant = G.assailant
 	var/mob/living/carbon/human/affecting = G.affecting
+
+	if(assailant.incapacitated(INCAPACITATION_ALL))
+		affecting.visible_message(SPAN_WARNING("[assailant] lets go of \his grab!"))
+		qdel(G)
+		return
 
 	affecting.Stun(3)
 
