@@ -1,5 +1,6 @@
-#include "obs_shuttle_jobs.dm"
 #include "obs_shuttle_areas.dm"
+#include "obs_shuttle_jobs.dm"
+#include "obs_shuttle_objects.dm"
 
 /datum/map_template/ruin/away_site/obs_shuttle
 	name = "OBS Shuttle"

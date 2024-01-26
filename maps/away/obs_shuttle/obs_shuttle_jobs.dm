@@ -177,6 +177,16 @@
 	gloves = /obj/item/clothing/gloves/latex
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
 
+// Just for quick admin spawns
+/decl/hierarchy/outfit/job/obs/member/equipped
+	name = ("OBS - Job - Equipped Operative")
+	suit = /obj/item/clothing/suit/space/void/merc/obs
+	mask = /obj/item/clothing/mask/gas/syndicate
+	head = /obj/item/clothing/head/helmet/space/void/merc/obs
+	suit_store = /obj/item/tank/oxygen
+
+	r_hand = /obj/item/gun/projectile/automatic/ak47
+
 /obj/effect/submap_landmark/spawnpoint/obs_shuttle
 	name = "OBS Member"
 	movable_flags = MOVABLE_FLAG_EFFECTMOVE

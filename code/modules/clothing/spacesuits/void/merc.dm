@@ -67,3 +67,23 @@
 	helmet = /obj/item/clothing/head/helmet/space/void/merc
 	boots = /obj/item/clothing/shoes/magboots
 	tank = /obj/item/tank/oxygen
+
+// OBS - "Dark Eclipse"
+/obj/item/clothing/head/helmet/space/void/merc/obs
+	name = "dark eclipse voidsuit helmet"
+	desc = "An advanced helmet that clearly took \"inspirations\" from Gorlex Marauders design. This one comes in pure black colors."
+	icon_state = "rig0-syndie-obs"
+	item_state = "syndie_helm_obs"
+	species_restricted = list(SPECIES_HUMAN)
+	camera = null
+
+/obj/item/clothing/suit/space/void/merc/obs
+	name = "dark eclipse voidsuit"
+	desc = "An advanced suit that clearly took \"inspirations\" from Gorlex Marauders design. This one comes in pure black colors"
+	icon_state = "rig-syndie-obs"
+	species_restricted = list(SPECIES_HUMAN)
+
+/obj/item/clothing/suit/space/void/merc/obs/prepared
+	helmet = /obj/item/clothing/head/helmet/space/void/merc/obs
+	boots = /obj/item/clothing/shoes/magboots
+	tank = /obj/item/tank/oxygen
