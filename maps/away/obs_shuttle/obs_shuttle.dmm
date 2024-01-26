@@ -2152,9 +2152,7 @@
 /turf/simulated/floor/plating,
 /area/obs_shuttle/primaryhall)
 "HY" = (
-/obj/machinery/suit_storage_unit/merc{
-	req_access = list("ACCESS_OBS_SHUTTLE")
-	},
+/obj/machinery/suit_storage_unit/obs,
 /turf/simulated/floor/tiled,
 /area/obs_shuttle/cargo)
 "Ia" = (
@@ -2489,9 +2487,7 @@
 /area/obs_shuttle/cargo)
 "Ms" = (
 /obj/machinery/light,
-/obj/machinery/suit_storage_unit/merc{
-	req_access = list("ACCESS_OBS_SHUTTLE")
-	},
+/obj/machinery/suit_storage_unit/obs,
 /turf/simulated/floor/tiled,
 /area/obs_shuttle/cargo)
 "Mw" = (
