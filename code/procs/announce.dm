@@ -1,5 +1,5 @@
 /var/datum/announcement/priority/priority_announcement = new(do_log = 0, new_sound = 'sound/misc/notice2.ogg')
-/var/datum/announcement/priority/command/command_announcement = new(do_log = 0, do_newscast = 1)
+/var/datum/announcement/priority/command/command_announcement = new(do_log = 0, new_sound = 'sound/misc/notice2.ogg', do_newscast = 1)
 /var/datum/announcement/minor/minor_announcement = new(new_sound = 'sound/AI/commandreport.ogg',)
 
 /datum/announcement
@@ -24,7 +24,7 @@
 	log = do_log
 	newscast = do_newscast
 
-/datum/announcement/priority/command/New(var/do_log = 1, var/new_sound = 'sound/misc/announce.ogg', var/do_newscast = 0)
+/datum/announcement/priority/command/New(var/do_log = 1, var/new_sound = 'sound/misc/notice2.ogg', var/do_newscast = 0)
 	..(do_log, new_sound, do_newscast)
 	title = "[GLOB.using_map.boss_name] Update"
 	announcement_type = "[GLOB.using_map.boss_name] Update"
