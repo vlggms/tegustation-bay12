@@ -36,7 +36,7 @@
 	var/msg_line2 = ""
 	var/centcomm_message_cooldown = 0
 	var/announcment_cooldown = 0
-	var/datum/announcement/priority/crew_announcement = new
+	var/datum/announcement/priority/crew_announcement = new(FALSE, 'sound/misc/announce.ogg')
 	var/current_viewing_message_id = 0
 	var/current_viewing_message = null
 
