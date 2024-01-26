@@ -121,8 +121,8 @@
 	icon_state = "intact"
 	},
 /obj/effect/floor_decal/corner/white/full,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/portable_atmospherics/canister/air,
+/obj/effect/floor_decal/industrial/delivery_sharp/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/engineering/atmos)
 "ap" = (
@@ -180,10 +180,10 @@
 /area/intrepid/misc/maint/upper/portside)
 "az" = (
 /obj/machinery/telecomms/processor/preset_one,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/bluegrid,
 /area/tcommsat)
 "aB" = (
@@ -305,7 +305,6 @@
 /turf/simulated/floor,
 /area/intrepid/department/command/obstructionfielddisperser)
 "aW" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
 	dir = 1;
 	id_tag = "pithos_shuttle_pump_out_internal"
@@ -315,6 +314,9 @@
 	id_tag = "pithos_shuttle_sensor";
 	pixel_x = 25;
 	pixel_y = 8
+	},
+/obj/effect/floor_decal/industrial/box_corners/yellow{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/shuttle/pithos/cargo)
@@ -419,10 +421,10 @@
 /area/intrepid/department/command/obstructionfielddisperser)
 "bi" = (
 /obj/structure/closet/firecloset,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/security/starboarddockingbaysecurity)
 "bj" = (
@@ -478,7 +480,6 @@
 /turf/simulated/floor/reinforced/airless,
 /area/intrepid/department/command/obstructionfielddisperser)
 "bp" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
 	id_tag = "pithos_shuttle_pump_out_internal"
 	},
@@ -521,7 +522,7 @@
 /area/intrepid/department/command/obstructionfielddisperser)
 "bv" = (
 /obj/machinery/telecomms/server/presets/common,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/bluegrid,
 /area/tcommsat)
 "bw" = (
@@ -616,10 +617,10 @@
 /area/intrepid/misc/maint/upper/starboard)
 "bF" = (
 /obj/structure/closet/secure_closet/personal/empty,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/security/starboarddockingbaysecurity)
 "bG" = (
@@ -858,12 +859,12 @@
 /area/eva)
 "cn" = (
 /obj/machinery/portable_atmospherics/canister/helium,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/effect/floor_decal/industrial/radiation{
-	dir = 1
-	},
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/effect/floor_decal/industrial/bot/yellow,
+/obj/effect/floor_decal/industrial/radiation{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/engine_room/aux)
@@ -1018,7 +1019,7 @@
 /area/intrepid/department/exploration/hangar/pithos)
 "cO" = (
 /obj/machinery/telecomms/server/presets/security,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/bluegrid,
 /area/tcommsat)
 "cP" = (
@@ -1227,6 +1228,9 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
+/obj/effect/floor_decal/industrial/stand_clear/yellow{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/engineering/engine_room/aux)
 "do" = (
@@ -1328,6 +1332,17 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/exploration/hangar/pithos)
+"dD" = (
+/obj/structure/cable/orange{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/industrial/stand_clear/red{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/engineering/engine_room)
 "dE" = (
 /obj/machinery/field_generator,
 /obj/effect/floor_decal/industrial/warning/fulltile,
@@ -1492,7 +1507,6 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/intrepid/department/civillian/dockbayfive)
 "eb" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/cable/orange{
 	d2 = 4;
 	icon_state = "0-4"
@@ -1505,6 +1519,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/industrial/delivery_sharp/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/engineering/engine_room)
 "ec" = (
@@ -1618,7 +1633,7 @@
 /area/intrepid/department/security/starboarddockingbaysecurity)
 "ew" = (
 /obj/machinery/telecomms/bus/preset_two,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/bluegrid,
 /area/tcommsat)
 "ey" = (
@@ -1776,6 +1791,10 @@
 /obj/machinery/power/apc{
 	pixel_y = -24
 	},
+/obj/effect/floor_decal/industrial/numbers/twotonine{
+	dir = 5
+	},
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbaysix)
 "eS" = (
@@ -1958,11 +1977,11 @@
 /area/intrepid/department/engineering/portthruster)
 "fq" = (
 /obj/structure/closet/secure_closet/personal/empty,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/camera/network/security{
 	c_tag = "Security - Port Dock Locker Room"
 	},
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/security/portdockingbaysecurity)
 "fr" = (
@@ -2043,18 +2062,18 @@
 /area/intrepid/department/engineering/engine_room)
 "fG" = (
 /obj/machinery/telecomms/processor/preset_two,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/bluegrid,
 /area/tcommsat)
 "fI" = (
-/obj/structure/particle_accelerator/particle_emitter/left{
-	dir = 8
-	},
 /obj/effect/floor_decal/industrial/radiation{
 	dir = 8
 	},
 /obj/effect/floor_decal/spline/fancy/black{
 	dir = 10
+	},
+/obj/structure/particle_accelerator/particle_emitter/right{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/engineering/engine_room)
@@ -2352,7 +2371,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/security/starboarddockingbaysecurity)
 "gu" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/cable/orange{
 	d2 = 8;
 	icon_state = "0-8"
@@ -2365,6 +2383,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/industrial/delivery_sharp/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/engineering/engine_room)
 "gv" = (
@@ -2435,7 +2454,7 @@
 /area/intrepid/misc/maint/upper/central)
 "gz" = (
 /obj/machinery/shipsensors/weak,
-/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/effect/floor_decal/industrial/delivery_sharp/red,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/pandora/cockpit)
 "gC" = (
@@ -2596,11 +2615,11 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/computer/fusion/gyrotron{
 	icon_state = "computer";
 	initial_id_tag = "gyro"
 	},
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/engineering/engine_room/aux)
 "hc" = (
@@ -2818,10 +2837,10 @@
 /area/shuttle/pithos/cockpit)
 "hH" = (
 /obj/machinery/telecomms/server/presets/exploration,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/bluegrid,
 /area/tcommsat)
 "hI" = (
@@ -2873,10 +2892,10 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbayone)
 "hO" = (
-/obj/effect/floor_decal/industrial/loading,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 10
 	},
+/obj/effect/floor_decal/industrial/loadingarea_sharp/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/pandora/cargo)
 "hP" = (
@@ -3005,10 +3024,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/civillian/safe_room/port)
 "id" = (
-/obj/machinery/suit_storage_unit/mining/alt{
-	req_access = list()
-	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/cargo/cargostorage)
 "ie" = (
@@ -3083,17 +3099,16 @@
 /area/intrepid/misc/maint/upper/central)
 "ir" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance{
-	name = "Docking Bay 1"
-	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/valve/shutoff/scrubbers,
-/obj/machinery/atmospherics/valve/shutoff/supply,
-/obj/effect/floor_decal/industrial/shutoff,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/airlock/glass/civilian{
+	name = "Docking Bay 1"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/intrepid/department/civillian/dockbayone)
 "is" = (
@@ -3328,6 +3343,9 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
+/obj/effect/floor_decal/industrial/stand_clear/yellow{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/engineering/engine_room/aux)
 "jh" = (
@@ -3348,13 +3366,13 @@
 /obj/machinery/hologram/holopad/longrange{
 	identifier = "Pandora Cargo Compartment"
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/button/blast_door{
 	dir = 4;
 	id_tag = "pandoracargo";
 	name = "Pandora Cargo Blast Door button";
 	pixel_x = -23
 	},
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/pandora/cargo)
 "jl" = (
@@ -3456,7 +3474,7 @@
 /area/intrepid/department/engineering/portthruster)
 "jz" = (
 /obj/machinery/telecomms/bus/preset_four,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/bluegrid,
 /area/tcommsat)
 "jA" = (
@@ -3795,7 +3813,7 @@
 /area/intrepid/department/engineering/atmos)
 "kp" = (
 /obj/machinery/telecomms/server/presets/engineering,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/bluegrid,
 /area/tcommsat)
 "kt" = (
@@ -3816,7 +3834,6 @@
 /area/intrepid/department/cargo/cargostorage)
 "kx" = (
 /obj/structure/closet/secure_closet/personal/empty,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
@@ -3824,6 +3841,7 @@
 	c_tag = "Security - Starboard Dock Locker Room";
 	dir = 1
 	},
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/security/starboarddockingbaysecurity)
 "ky" = (
@@ -3835,10 +3853,12 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/civillian/dockbaysix)
 "kz" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
 	dir = 8;
 	id_tag = "pithos_shuttle_pump"
+	},
+/obj/effect/floor_decal/industrial/box_corners/yellow{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/shuttle/pithos/cargo)
@@ -4066,6 +4086,7 @@
 /obj/effect/floor_decal/spline/fancy/black{
 	dir = 1
 	},
+/obj/effect/floor_decal/industrial/bot/right/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/engineering/engine_room)
 "lg" = (
@@ -4445,6 +4466,12 @@
 /obj/effect/wingrille_spawn/reinforced_phoron/full,
 /turf/simulated/floor,
 /area/intrepid/department/engineering/atmos)
+"lW" = (
+/obj/machinery/door/airlock/glass/civilian{
+	name = "Docking Bay 5"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/intrepid/department/civillian/dockbaysix)
 "lX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -4568,17 +4595,16 @@
 /area/intrepid/misc/maint/superstructure)
 "mm" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance{
-	name = "Docking Bay 3"
-	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/valve/shutoff/supply,
-/obj/machinery/atmospherics/valve/shutoff/scrubbers,
-/obj/effect/floor_decal/industrial/shutoff,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/airlock/glass/civilian{
+	name = "Docking Bay 3"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/intrepid/department/civillian/dockbaythree)
 "mn" = (
@@ -4869,8 +4895,8 @@
 /obj/structure/bed/chair/shuttle{
 	dir = 1
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/shuttle/pithos/cockpit)
 "mV" = (
@@ -4970,7 +4996,6 @@
 /turf/simulated/floor/reinforced/nitrogen,
 /area/intrepid/department/engineering/atmos)
 "nm" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	cycle_to_external_air = 1;
 	dir = 8;
@@ -4982,6 +5007,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
 	id_tag = "pithos_shuttle_pump_out_internal"
 	},
+/obj/effect/floor_decal/industrial/box_corners/yellow,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/shuttle/pithos/cargo)
 "nn" = (
@@ -5221,9 +5247,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbaytwo)
 "nV" = (
-/obj/effect/floor_decal/industrial/loading{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/structure/cable/green{
 	d1 = 4;
@@ -5238,6 +5261,9 @@
 	master_tag = "pithos_shuttle";
 	pixel_x = -25;
 	pixel_y = -24
+	},
+/obj/effect/floor_decal/industrial/loadingarea_sharp/yellow{
+	dir = 4
 	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/pithos/cargo)
@@ -5338,14 +5364,14 @@
 /turf/simulated/floor,
 /area/shuttle/pandora/cargo)
 "os" = (
-/obj/structure/particle_accelerator/particle_emitter/right{
-	dir = 8
-	},
 /obj/effect/floor_decal/industrial/radiation{
 	dir = 8
 	},
 /obj/effect/floor_decal/spline/fancy/black{
 	dir = 9
+	},
+/obj/structure/particle_accelerator/particle_emitter/left{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/engineering/engine_room)
@@ -5477,8 +5503,8 @@
 /area/intrepid/department/engineering/starboardthruster)
 "oP" = (
 /obj/structure/closet/secure_closet/personal/empty,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/security/starboarddockingbaysecurity)
 "oQ" = (
@@ -5488,12 +5514,16 @@
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room)
 "oT" = (
-/obj/machinery/suit_storage_unit/mining{
-	req_access = list()
+/obj/structure/railing/mapped,
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
 	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/techmaint,
-/area/intrepid/department/cargo/cargostorage)
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/stand_clear/red{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/department/exploration/hangar/pandora)
 "oU" = (
 /obj/effect/floor_decal/corner/black/diagonal,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -5525,12 +5555,12 @@
 /area/intrepid/misc/maint/upper/portside)
 "oW" = (
 /obj/machinery/portable_atmospherics/canister/helium,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/effect/floor_decal/industrial/radiation{
-	dir = 1
-	},
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/effect/floor_decal/industrial/bot/yellow,
+/obj/effect/floor_decal/industrial/radiation{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/engine_room/aux)
@@ -5545,6 +5575,9 @@
 	d1 = 2;
 	d2 = 4;
 	icon_state = "2-4"
+	},
+/obj/effect/floor_decal/industrial/caution/red{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/tcommsat)
@@ -5660,7 +5693,7 @@
 /area/eva)
 "po" = (
 /obj/machinery/telecomms/broadcaster/preset_right,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/bluegrid,
 /area/tcommsat)
 "pq" = (
@@ -5799,6 +5832,8 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
+/obj/effect/floor_decal/industrial/numbers/twotonine,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbaythree)
 "pI" = (
@@ -5845,7 +5880,6 @@
 /area/intrepid/department/security/detectives_office)
 "pP" = (
 /obj/structure/bed/chair/shuttle,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/power/terminal{
 	dir = 1;
@@ -5855,6 +5889,7 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/shuttle/pithos/cockpit)
 "pQ" = (
@@ -5947,19 +5982,19 @@
 "qd" = (
 /obj/machinery/portable_atmospherics/canister/hydrogen,
 /obj/structure/railing/mapped,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/camera/emp_proof{
 	c_tag = "R-UST - Engine Room Stern";
 	dir = 8;
 	network = list("Engine")
 	},
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/engine_room/aux)
 "qe" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/air_sensor{
 	id_tag = "pandora_sensor"
 	},
+/obj/effect/floor_decal/industrial/delivery_sharp/red,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/pandora/cockpit)
 "qg" = (
@@ -6310,7 +6345,6 @@
 /turf/simulated/floor/reinforced,
 /area/shuttle/pithos/cargo)
 "rg" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
 	dir = 1;
 	id_tag = "pithos_shuttle_pump_out_internal"
@@ -6414,16 +6448,20 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
+/obj/effect/floor_decal/industrial/numbers/zerotoone{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbayone)
 "ry" = (
 /obj/structure/closet/crate/radiation,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/stack/material/uranium/ten,
 /obj/item/stack/material/uranium/ten,
 /obj/item/stack/material/uranium/ten,
 /obj/item/stack/material/uranium/ten,
 /obj/item/stack/material/uranium/ten,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/engine_room/aux)
 "rz" = (
@@ -6434,12 +6472,12 @@
 "rA" = (
 /obj/machinery/portable_atmospherics/canister/hydrogen,
 /obj/structure/railing/mapped,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/camera/emp_proof{
 	c_tag = "R-UST - Engine Room Fore";
 	dir = 4;
 	network = list("Engine")
 	},
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/engine_room/aux)
 "rB" = (
@@ -6579,8 +6617,8 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/starboard)
 "rS" = (
-/obj/effect/floor_decal/industrial/hatch/red,
 /obj/machinery/the_singularitygen,
+/obj/effect/floor_decal/industrial/delivery_sharp/red,
 /turf/simulated/floor/reinforced,
 /area/intrepid/department/engineering/engine_room)
 "rU" = (
@@ -6784,9 +6822,16 @@
 	},
 /obj/effect/floor_decal/corner/orange/full,
 /obj/machinery/portable_atmospherics/canister/phoron,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/delivery_sharp/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/engineering/atmos)
+"sr" = (
+/obj/machinery/suit_storage_unit/mining/alt{
+	req_access = list()
+	},
+/obj/effect/floor_decal/industrial/delivery_sharp/yellow,
+/turf/simulated/floor/tiled/techmaint,
+/area/intrepid/department/cargo/cargostorage)
 "ss" = (
 /obj/machinery/light/small/red,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -7220,12 +7265,12 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbayfive)
 "tu" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/computer/fusion/fuel_control{
 	dir = 1;
 	icon_state = "computer";
 	initial_id_tag = "fuel"
 	},
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/engine_room/aux)
 "tv" = (
@@ -7815,10 +7860,10 @@
 /area/intrepid/department/security/portdockingbaysecurity)
 "uV" = (
 /obj/structure/closet/secure_closet/personal/empty,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/security/portdockingbaysecurity)
 "uW" = (
@@ -7947,7 +7992,7 @@
 /area/intrepid/department/exploration/hangar/pandora)
 "vk" = (
 /obj/machinery/telecomms/processor/preset_four,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/bluegrid,
 /area/tcommsat)
 "vl" = (
@@ -8119,17 +8164,16 @@
 /area/tcommsat)
 "vG" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance{
-	name = "Docking Bay 4"
-	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/valve/shutoff/supply,
-/obj/machinery/atmospherics/valve/shutoff/scrubbers,
-/obj/effect/floor_decal/industrial/shutoff,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/airlock/glass/civilian{
+	name = "Docking Bay 4"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/intrepid/department/civillian/dockbayfour)
 "vH" = (
@@ -8266,7 +8310,7 @@
 /area/intrepid/department/engineering/engine_room/aux)
 "wa" = (
 /obj/machinery/telecomms/server/presets/supply,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/bluegrid,
 /area/tcommsat)
 "wb" = (
@@ -8287,9 +8331,9 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/pithos/cockpit)
 "wd" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/bed/chair/shuttle,
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/shuttle/pithos/cockpit)
 "we" = (
@@ -8625,12 +8669,12 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/exploration/hangar/pandora)
 "wZ" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/fusion_fuel_injector/mapped{
 	dir = 8;
 	id_tag = null;
 	initial_id_tag = "fuel"
 	},
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/engineering/engine_room/aux)
 "xa" = (
@@ -8727,7 +8771,7 @@
 /area/shuttle/pandora/cargo)
 "xj" = (
 /obj/machinery/shipsensors/weak,
-/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/effect/floor_decal/industrial/delivery_sharp/red,
 /turf/simulated/floor/reinforced,
 /area/shuttle/pithos/cockpit)
 "xk" = (
@@ -8755,17 +8799,16 @@
 /area/intrepid/department/medical/morgue)
 "xo" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance{
-	name = "Docking Bay 2"
-	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/valve/shutoff/supply,
-/obj/machinery/atmospherics/valve/shutoff/scrubbers,
-/obj/effect/floor_decal/industrial/shutoff,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/airlock/glass/civilian{
+	name = "Docking Bay 2"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/intrepid/department/civillian/dockbaytwo)
 "xp" = (
@@ -8965,8 +9008,8 @@
 /area/tcommsat)
 "xZ" = (
 /obj/structure/closet/secure_closet/personal/empty,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/security/portdockingbaysecurity)
 "ya" = (
@@ -9472,11 +9515,11 @@
 /area/intrepid/misc/maint/upper/central)
 "zu" = (
 /obj/machinery/light,
-/obj/effect/floor_decal/industrial/hatch/red,
 /obj/machinery/power/port_gen/pacman/super,
 /obj/structure/cable{
 	icon_state = "0-1"
 	},
+/obj/effect/floor_decal/industrial/delivery_sharp/red,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/engine_room/aux)
 "zv" = (
@@ -9585,11 +9628,11 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/computer/fusion/core_control{
 	icon_state = "computer";
 	initial_id_tag = "rustcore"
 	},
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/engineering/engine_room/aux)
 "zQ" = (
@@ -10299,7 +10342,6 @@
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/security/firing_range)
 "Bz" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light/spot{
 	dir = 1
 	},
@@ -10313,6 +10355,10 @@
 /obj/machinery/power/apc{
 	pixel_y = -24
 	},
+/obj/effect/floor_decal/industrial/numbers/twotonine{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbayfour)
 "BB" = (
@@ -10334,7 +10380,6 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/central)
 "BD" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/power/fusion_core/mapped{
 	initial_id_tag = "rustcore"
 	},
@@ -10346,6 +10391,7 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
+/obj/effect/floor_decal/industrial/delivery_sharp/red,
 /turf/simulated/floor/reinforced/airless,
 /area/intrepid/department/engineering/engine_room/aux)
 "BE" = (
@@ -10478,7 +10524,7 @@
 /area/intrepid/department/security/starboarddockingbaysecurity)
 "BX" = (
 /obj/machinery/telecomms/bus/preset_one,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/bluegrid,
 /area/tcommsat)
 "BY" = (
@@ -10526,7 +10572,6 @@
 /turf/simulated/floor,
 /area/shuttle/pandora/cargo)
 "Cd" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/bed/chair/shuttle,
 /obj/machinery/power/apc/super/critical{
 	dir = 8;
@@ -10542,6 +10587,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/shuttle/pithos/cockpit)
 "Ce" = (
@@ -10768,10 +10814,10 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/civillian/dockbayone)
 "CI" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/bed/chair/shuttle{
 	dir = 1
 	},
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/shuttle/pithos/cockpit)
 "CJ" = (
@@ -10805,7 +10851,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/engineering/portthruster)
 "CN" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/cable/orange{
 	d1 = 1;
 	d2 = 8;
@@ -10941,6 +10986,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbaythree)
+"Dd" = (
+/obj/machinery/computer/shuttle_control/lift/intrepidcargo,
+/obj/effect/floor_decal/industrial/bot/right/red,
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/cargo/cargostorage)
 "De" = (
 /obj/structure/sign/terragov,
 /turf/simulated/wall/r_wall/hull,
@@ -11154,8 +11205,8 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/power/terminal,
+/obj/effect/floor_decal/industrial/delivery_sharp/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/misc/maint/superstructure)
 "DO" = (
@@ -11198,8 +11249,8 @@
 	tag_south = 8;
 	tag_west = 1
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/portable_atmospherics/canister/hydrogen,
+/obj/effect/floor_decal/industrial/delivery_sharp/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/engineering/atmos)
 "DX" = (
@@ -11398,7 +11449,7 @@
 /area/intrepid/department/civillian/dockbaytwo)
 "EC" = (
 /obj/machinery/ntnet_relay,
-/obj/effect/floor_decal/industrial/outline/orange,
+/obj/effect/floor_decal/industrial/delivery_sharp/yellow,
 /turf/simulated/floor/bluegrid,
 /area/tcommsat)
 "ED" = (
@@ -11512,7 +11563,7 @@
 	tag_south = 2
 	},
 /obj/machinery/portable_atmospherics/canister/sleeping_agent,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/delivery_sharp/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/engineering/atmos)
 "EQ" = (
@@ -11625,17 +11676,16 @@
 /area/intrepid/department/exploration/hangar/pandora)
 "Fj" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance{
-	name = "Docking Bay 5"
-	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/effect/floor_decal/industrial/shutoff,
-/obj/machinery/atmospherics/valve/shutoff/scrubbers,
-/obj/machinery/atmospherics/valve/shutoff/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/airlock/glass/civilian{
+	name = "Docking Bay 5"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/intrepid/department/civillian/dockbayfive)
 "Fk" = (
@@ -11778,7 +11828,7 @@
 /area/intrepid/department/civillian/dockbayfive)
 "FG" = (
 /obj/machinery/telecomms/server/presets/command,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/bluegrid,
 /area/tcommsat)
 "FJ" = (
@@ -11843,7 +11893,7 @@
 /area/intrepid/department/civillian/dockbaysix)
 "FQ" = (
 /obj/machinery/telecomms/receiver/preset_right,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/bluegrid,
 /area/tcommsat)
 "FT" = (
@@ -11876,7 +11926,7 @@
 /area/intrepid/misc/maint/upper/central)
 "FX" = (
 /obj/machinery/telecomms/server/presets/service,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/bluegrid,
 /area/tcommsat)
 "Ga" = (
@@ -12560,7 +12610,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/security/starboarddockingbaysecurity)
 "HY" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/box_corners/yellow{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/shuttle/pithos/cargo)
 "HZ" = (
@@ -13085,12 +13137,12 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/civillian/archive)
 "JE" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/sign/warning/compressed_gas{
 	pixel_y = 32
 	},
 /obj/structure/railing/mapped,
 /obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/pandora/cargo)
 "JG" = (
@@ -13297,11 +13349,11 @@
 /turf/simulated/floor,
 /area/intrepid/department/engineering/atmos)
 "Ke" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/shuttle_landmark/lift/starboard_top,
 /obj/machinery/computer/shuttle_control/lift/starboard{
 	use_power = 0
 	},
+/obj/effect/floor_decal/industrial/bot/right/yellow,
 /turf/simulated/floor/tiled/monotile,
 /area/turbolift/starboard/lift)
 "Kf" = (
@@ -14268,7 +14320,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/civillian/dockbaythree)
 "Nc" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/power/emitter/gyrotron/anchored{
 	dir = 1;
 	id_tag = null;
@@ -14279,6 +14330,7 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
+/obj/effect/floor_decal/industrial/delivery_sharp/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/engineering/engine_room/aux)
 "Nd" = (
@@ -14461,11 +14513,11 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/exploration/hangar/pandora)
 "Nv" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/bed/chair/shuttle{
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/shuttle/pithos/cockpit)
 "Nw" = (
@@ -14555,7 +14607,7 @@
 /area/intrepid/department/exploration/hangar/pandora)
 "NK" = (
 /obj/machinery/telecomms/hub/preset,
-/obj/effect/floor_decal/industrial/outline/orange,
+/obj/effect/floor_decal/industrial/delivery_sharp/yellow,
 /turf/simulated/floor/bluegrid,
 /area/tcommsat)
 "NL" = (
@@ -14640,17 +14692,16 @@
 /area/tcommsat)
 "NZ" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance{
-	name = "Docking Bay 6"
-	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/valve/shutoff/supply,
-/obj/machinery/atmospherics/valve/shutoff/scrubbers,
-/obj/effect/floor_decal/industrial/shutoff,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/airlock/glass/civilian{
+	name = "Docking Bay 6"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/intrepid/department/civillian/dockbaysix)
 "Ob" = (
@@ -14676,6 +14727,10 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
+/obj/effect/floor_decal/industrial/numbers/twotonine{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbaytwo)
 "Od" = (
@@ -14716,6 +14771,17 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/department/exploration/hangar/pithos)
+"Oj" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/stand_clear/red{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/engineering/engine_room)
 "Ok" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
@@ -14803,8 +14869,8 @@
 /obj/structure/bed/chair/shuttle{
 	dir = 1
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/shuttle/pithos/cockpit)
 "Ou" = (
@@ -14827,8 +14893,8 @@
 	tag_north = 1;
 	tag_south = 2
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/obj/effect/floor_decal/industrial/delivery_sharp/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/engineering/atmos)
 "Ox" = (
@@ -15031,7 +15097,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/civillian/dockbayfive)
 "OX" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/effect/floor_decal/industrial/delivery_sharp/red,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/pandora/cockpit)
 "Pb" = (
@@ -15387,13 +15453,13 @@
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/civillian/safe_room/port)
 "PZ" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/railing/mapped,
 /obj/machinery/light{
 	dir = 1
 	},
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /obj/machinery/atmospherics/portables_connector,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/pandora/cargo)
 "Qb" = (
@@ -15800,10 +15866,10 @@
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/department/civillian/dockbaythree)
 "Rk" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/atmospherics/unary/outlet_injector{
 	icon_state = "map_injector"
 	},
+/obj/effect/floor_decal/industrial/delivery_sharp/red,
 /turf/simulated/floor/reinforced,
 /area/shuttle/pithos/cockpit)
 "Rl" = (
@@ -15868,7 +15934,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/eva)
 "Rv" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/effect/floor_decal/industrial/delivery_sharp/red,
 /turf/simulated/floor/reinforced,
 /area/shuttle/pithos/cockpit)
 "Rx" = (
@@ -16014,7 +16080,7 @@
 /area/intrepid/department/civillian/dockbayfour)
 "RP" = (
 /obj/machinery/bluespacerelay,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/bluegrid,
 /area/tcommsat)
 "RQ" = (
@@ -16228,7 +16294,7 @@
 /area/intrepid/misc/maint/superstructure)
 "St" = (
 /obj/machinery/telecomms/bus/preset_three,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/bluegrid,
 /area/tcommsat)
 "Su" = (
@@ -16665,7 +16731,7 @@
 	},
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/effect/floor_decal/corner/blue/full,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/delivery_sharp/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/engineering/atmos)
 "Tv" = (
@@ -16703,10 +16769,10 @@
 /area/intrepid/department/command/commandquarters/psiadvisor)
 "TD" = (
 /obj/structure/closet/firecloset,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/security/portdockingbaysecurity)
 "TG" = (
@@ -16770,9 +16836,19 @@
 /area/intrepid/department/command/obstructionfielddisperser)
 "TO" = (
 /obj/machinery/telecomms/server/presets/science,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/bluegrid,
 /area/tcommsat)
+"TQ" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
+	dir = 8;
+	id_tag = "pithos_shuttle_pump"
+	},
+/obj/effect/floor_decal/industrial/box_corners/yellow{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/shuttle/pithos/cargo)
 "TR" = (
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled,
@@ -17093,7 +17169,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/effect/floor_decal/industrial/delivery_sharp/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/pandora/cargo)
 "UM" = (
@@ -17121,7 +17197,10 @@
 /turf/simulated/floor/tiled/white/monotile,
 /area/intrepid/department/medical/morgue)
 "UP" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/suit_storage_unit/mining{
+	req_access = list()
+	},
+/obj/effect/floor_decal/industrial/delivery_sharp/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/cargo/cargostorage)
 "US" = (
@@ -17204,6 +17283,10 @@
 /obj/machinery/power/apc{
 	pixel_y = -24
 	},
+/obj/effect/floor_decal/industrial/numbers/twotonine{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbayfive)
 "Vf" = (
@@ -17349,7 +17432,7 @@
 	},
 /obj/machinery/portable_atmospherics/canister/nitrogen,
 /obj/effect/floor_decal/corner/red/full,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/delivery_sharp/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/engineering/atmos)
 "Vw" = (
@@ -17435,7 +17518,7 @@
 /area/intrepid/department/civillian/dockbaysix)
 "VH" = (
 /obj/machinery/telecomms/server/presets/medical,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/bluegrid,
 /area/tcommsat)
 "VI" = (
@@ -17974,7 +18057,6 @@
 /turf/simulated/wall/r_wall/hull,
 /area/intrepid/misc/maint/superstructure)
 "Xm" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light/spot,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/shuttle/pithos/cargo)
@@ -18098,12 +18180,12 @@
 /turf/simulated/floor,
 /area/intrepid/department/engineering/engine_room/aux)
 "XF" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/fusion_fuel_injector/mapped{
 	dir = 4;
 	id_tag = null;
 	initial_id_tag = "fuel"
 	},
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/engineering/engine_room/aux)
 "XG" = (
@@ -18129,9 +18211,6 @@
 /turf/simulated/floor/reinforced/phoron,
 /area/intrepid/department/engineering/atmos)
 "XL" = (
-/obj/effect/floor_decal/industrial/loading{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
@@ -18143,6 +18222,9 @@
 	id_tag = "pithos_shuttle_sensor_external";
 	pixel_x = -24;
 	pixel_y = 21
+	},
+/obj/effect/floor_decal/industrial/loadingarea_sharp/yellow{
+	dir = 4
 	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/pithos/cargo)
@@ -18290,7 +18372,6 @@
 /turf/space,
 /area/space)
 "Yf" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/cable/orange{
 	d2 = 8;
 	icon_state = "0-8"
@@ -18298,6 +18379,7 @@
 /obj/machinery/power/smes/buildable/preset/torch/substation_full{
 	RCon_tag = "Deck Two Solar Plating"
 	},
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/misc/maint/superstructure)
 "Yg" = (
@@ -18377,11 +18459,11 @@
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/engineering/atmos)
 "Yo" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/shuttle_landmark/lift/port_top,
 /obj/machinery/computer/shuttle_control/lift/port{
 	pixel_y = 1
 	},
+/obj/effect/floor_decal/industrial/bot/right/yellow,
 /turf/simulated/floor/tiled/monotile,
 /area/turbolift/port/lift)
 "Yp" = (
@@ -18509,7 +18591,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/civillian/dockbaysix)
 "YG" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
 	},
@@ -18519,11 +18600,12 @@
 	dir = 8;
 	icon_state = "railing0-1"
 	},
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/pandora/cargo)
 "YH" = (
 /obj/machinery/telecomms/processor/preset_three,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/bluegrid,
 /area/tcommsat)
 "YI" = (
@@ -18800,6 +18882,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/engineering/atmos)
+"Zr" = (
+/obj/effect/floor_decal/industrial/box_corners/yellow,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/shuttle/pithos/cargo)
 "Zs" = (
 /obj/machinery/vending/weeb{
 	dir = 1
@@ -33726,7 +33812,7 @@ hQ
 Op
 GV
 rQ
-ZY
+dD
 Eh
 GV
 En
@@ -34332,7 +34418,7 @@ XT
 ZT
 WX
 Rr
-Hr
+Oj
 us
 WX
 ZT
@@ -41941,8 +42027,8 @@ NP
 kv
 kv
 vy
-UP
-UP
+id
+id
 kv
 kv
 RU
@@ -42141,9 +42227,9 @@ Cr
 iD
 NP
 DS
-UP
+sr
 vy
-UP
+id
 id
 ou
 EF
@@ -42345,8 +42431,8 @@ NP
 DS
 UP
 vy
-UP
-oT
+id
+id
 dV
 pq
 pq
@@ -42547,8 +42633,8 @@ NP
 kv
 kv
 vy
-UP
-UP
+id
+id
 dV
 Fd
 pq
@@ -42751,7 +42837,7 @@ rV
 Tn
 tp
 nQ
-dV
+Dd
 pq
 pq
 ZI
@@ -43825,7 +43911,7 @@ Uh
 du
 uR
 AX
-YF
+lW
 mb
 du
 ml
@@ -45591,11 +45677,11 @@ uz
 lP
 BL
 gY
-kz
+TQ
 kz
 pk
 xm
-kz
+TQ
 kz
 gY
 BL
@@ -46000,7 +46086,7 @@ nm
 ye
 iH
 aW
-HY
+Zr
 gY
 lJ
 lJ
@@ -46448,7 +46534,7 @@ vm
 sb
 Lu
 vu
-Zi
+oT
 Ap
 Ap
 Ap
@@ -47256,7 +47342,7 @@ vm
 sb
 Lu
 vu
-Zi
+oT
 Ap
 Ap
 Ap
