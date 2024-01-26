@@ -968,7 +968,7 @@ var/list/floor_decals = list()
 
 /obj/effect/floor_decal/industrial/bot/yellow
 	name = "bot yellow"
-	color = "#FFCD00"
+	color = "#ffcd00"
 
 /obj/effect/floor_decal/industrial/bot/right
 	name = "bot right"
@@ -980,7 +980,7 @@ var/list/floor_decals = list()
 
 /obj/effect/floor_decal/industrial/bot/right/yellow
 	name = "bot right yellow"
-	color = "#FFCD00"
+	color = "#ffcd00"
 
 /obj/effect/floor_decal/industrial/bot/left
 	name = "bot left"
@@ -992,7 +992,7 @@ var/list/floor_decals = list()
 
 /obj/effect/floor_decal/industrial/bot/left/yellow
 	name = "bot left yellow"
-	color = "#FFCD00"
+	color = "#ffcd00"
 
 /obj/effect/floor_decal/industrial/box_corners
 	name = "box corner"
@@ -1004,7 +1004,7 @@ var/list/floor_decals = list()
 
 /obj/effect/floor_decal/industrial/box_corners/yellow
 	name = "box corner yellow"
-	color = "#FFCD00"
+	color = "#ffcd00"
 
 /obj/effect/floor_decal/industrial/box
 	name = "box"
@@ -1016,7 +1016,7 @@ var/list/floor_decals = list()
 
 /obj/effect/floor_decal/industrial/box/yellow
 	name = "box yellow"
-	color = "#FFCD00"
+	color = "#ffcd00"
 
 /obj/effect/floor_decal/industrial/box/arrows
 	name = "arrow"
@@ -1028,7 +1028,7 @@ var/list/floor_decals = list()
 
 /obj/effect/floor_decal/industrial/box/arrows/yellow
 	name = "arrow yellow"
-	color = "#FFCD00"
+	color = "#ffcd00"
 
 /obj/effect/floor_decal/industrial/numbers/zerotoone
 	name = "number marking"
@@ -1048,7 +1048,7 @@ var/list/floor_decals = list()
 
 /obj/effect/floor_decal/industrial/loadingarea_sharp/yellow
 	name = "yellow loading area marker"
-	color = "#FFCD00"
+	color = "#ffcd00"
 
 /obj/effect/floor_decal/industrial/delivery_sharp
 	name = "delivery area marker"
@@ -1060,7 +1060,7 @@ var/list/floor_decals = list()
 
 /obj/effect/floor_decal/industrial/delivery_sharp/yellow
 	name = " yellow delivery area marker"
-	color = "#FFCD00"
+	color = "#ffcd00"
 
 /obj/effect/floor_decal/industrial/caution
 	name = "caution marker"
@@ -1072,7 +1072,7 @@ var/list/floor_decals = list()
 
 /obj/effect/floor_decal/industrial/caution/yellow
 	name = "yellow caution marker"
-	color = "#FFCD00"
+	color = "#ffcd00"
 
 /obj/effect/floor_decal/industrial/stand_clear
 	name = "clearance marker"
@@ -1084,7 +1084,7 @@ var/list/floor_decals = list()
 
 /obj/effect/floor_decal/industrial/stand_clear/yellow
 	name = "yellow clearance marker"
-	color = "#FFCD00"
+	color = "#ffcd00"
 
 /obj/effect/floor_decal/industrial/hatch/yellow
 	color = "#cfcf55"
