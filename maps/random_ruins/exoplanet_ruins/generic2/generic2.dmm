@@ -1,0 +1,410 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aj" = (
+/obj/item/frame/apc,
+/turf/simulated/floor,
+/area/map_template/generic2)
+"lm" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/random/trash,
+/turf/simulated/floor,
+/area/map_template/generic2)
+"sS" = (
+/obj/effect/landmark/clear,
+/obj/item/material/shard,
+/turf/template_noop,
+/area/template_noop)
+"xT" = (
+/turf/template_noop,
+/area/template_noop)
+"Bd" = (
+/obj/item/material/shard,
+/obj/item/material/shard,
+/turf/simulated/floor,
+/area/map_template/generic2)
+"GW" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/map_template/generic2)
+"HG" = (
+/turf/simulated/floor,
+/area/map_template/generic2)
+"Ic" = (
+/obj/effect/landmark/clear,
+/turf/template_noop,
+/area/map_template/generic2)
+"In" = (
+/obj/structure/door_assembly,
+/obj/item/airlock_electronics,
+/turf/simulated/floor/tiled,
+/area/map_template/generic2)
+"JB" = (
+/turf/simulated/wall/concrete,
+/area/map_template/generic2)
+"LF" = (
+/obj/random/trash,
+/turf/simulated/floor,
+/area/map_template/generic2)
+"OK" = (
+/obj/structure/wall_frame/standard,
+/turf/simulated/floor,
+/area/map_template/generic2)
+"QF" = (
+/obj/structure/wall_frame/standard,
+/obj/item/material/shard,
+/turf/simulated/floor,
+/area/map_template/generic2)
+"QG" = (
+/obj/item/material/shard,
+/turf/simulated/floor,
+/area/map_template/generic2)
+"TX" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/map_template/generic2)
+"Uv" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/material/shard,
+/turf/simulated/floor,
+/area/map_template/generic2)
+"UK" = (
+/obj/structure/door_assembly,
+/obj/item/airlock_electronics,
+/turf/simulated/floor,
+/area/map_template/generic2)
+"Vg" = (
+/turf/simulated/floor/tiled,
+/area/map_template/generic2)
+"Ze" = (
+/obj/structure/wall_frame/standard,
+/obj/item/material/shard,
+/obj/item/material/shard,
+/turf/simulated/floor,
+/area/map_template/generic2)
+"ZM" = (
+/obj/effect/landmark/clear,
+/turf/template_noop,
+/area/template_noop)
+
+(1,1,1) = {"
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+"}
+(2,1,1) = {"
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+"}
+(3,1,1) = {"
+xT
+xT
+xT
+JB
+JB
+JB
+JB
+JB
+JB
+JB
+JB
+JB
+JB
+xT
+xT
+"}
+(4,1,1) = {"
+xT
+xT
+ZM
+JB
+HG
+QG
+HG
+JB
+HG
+HG
+GW
+HG
+JB
+xT
+xT
+"}
+(5,1,1) = {"
+xT
+xT
+ZM
+OK
+QG
+TX
+HG
+JB
+HG
+LF
+TX
+GW
+JB
+xT
+xT
+"}
+(6,1,1) = {"
+xT
+ZM
+ZM
+QF
+GW
+GW
+lm
+UK
+HG
+Uv
+GW
+GW
+UK
+ZM
+xT
+"}
+(7,1,1) = {"
+xT
+ZM
+ZM
+JB
+Vg
+GW
+HG
+JB
+TX
+Bd
+QG
+LF
+JB
+ZM
+xT
+"}
+(8,1,1) = {"
+xT
+JB
+JB
+JB
+JB
+UK
+JB
+JB
+JB
+QF
+OK
+JB
+JB
+xT
+xT
+"}
+(9,1,1) = {"
+xT
+JB
+HG
+HG
+HG
+GW
+Vg
+JB
+ZM
+ZM
+ZM
+ZM
+ZM
+xT
+xT
+"}
+(10,1,1) = {"
+xT
+JB
+Vg
+TX
+HG
+GW
+HG
+Ze
+ZM
+ZM
+xT
+ZM
+xT
+xT
+xT
+"}
+(11,1,1) = {"
+xT
+JB
+TX
+HG
+Ic
+LF
+Uv
+QF
+ZM
+xT
+xT
+xT
+xT
+xT
+xT
+"}
+(12,1,1) = {"
+xT
+JB
+HG
+Ic
+Ic
+TX
+HG
+OK
+ZM
+xT
+xT
+xT
+xT
+xT
+xT
+"}
+(13,1,1) = {"
+xT
+JB
+HG
+HG
+Ic
+Ic
+HG
+JB
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+"}
+(14,1,1) = {"
+xT
+JB
+GW
+Ic
+Ic
+HG
+HG
+OK
+sS
+xT
+xT
+xT
+xT
+xT
+xT
+"}
+(15,1,1) = {"
+ZM
+JB
+HG
+Ic
+Ic
+HG
+QG
+Ze
+sS
+ZM
+xT
+xT
+xT
+xT
+xT
+"}
+(16,1,1) = {"
+ZM
+In
+GW
+HG
+HG
+TX
+Vg
+QF
+ZM
+xT
+xT
+xT
+xT
+xT
+xT
+"}
+(17,1,1) = {"
+ZM
+JB
+aj
+LF
+TX
+TX
+HG
+JB
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+"}
+(18,1,1) = {"
+xT
+JB
+JB
+JB
+JB
+JB
+JB
+JB
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+"}
+(19,1,1) = {"
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+"}

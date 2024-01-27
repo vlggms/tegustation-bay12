@@ -1,0 +1,3238 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ab" = (
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 9;
+	icon_state = "intact"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory/breakroom)
+"ao" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"aH" = (
+/obj/structure/closet/crate,
+/obj/item/stack/material/steel/fifty,
+/obj/item/stack/material/steel/fifty,
+/obj/item/stack/cable_coil{
+	amount = 2
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"aZ" = (
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_x = 0;
+	pixel_y = 24
+	},
+/obj/structure/table/steel_reinforced,
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2";
+	pixel_y = 0
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory/breakroom)
+"bs" = (
+/obj/structure/table/steel_reinforced,
+/obj/effect/floor_decal/techfloor{
+	dir = 1;
+	icon_state = "techfloor_edges"
+	},
+/obj/machinery/alarm{
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"bz" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/obj/structure/railing/mapped,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"bC" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1;
+	icon_state = "warning"
+	},
+/obj/machinery/computer/modular/preset/engineering,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"bM" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4;
+	icon_state = "techfloor_edges"
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/closet/crate,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory/breakroom)
+"cf" = (
+/obj/machinery/door/airlock/engineering,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled,
+/area/map_template/factory/office)
+"cy" = (
+/obj/machinery/conveyor/east{
+	id = "AutoFac1"
+	},
+/obj/item/stack/material/steel,
+/obj/item/stack/cable_coil{
+	amount = 2
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/factory)
+"cz" = (
+/obj/effect/floor_decal/techfloor,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory/office)
+"cC" = (
+/obj/structure/table/steel_reinforced,
+/obj/random/clipboard,
+/obj/item/paper,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/factory/entrance)
+"cQ" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4;
+	icon_state = "intact"
+	},
+/obj/effect/paint/black,
+/turf/simulated/wall/titanium,
+/area/map_template/factory/breakroom)
+"do" = (
+/obj/structure/closet/firecloset,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/techfloor{
+	dir = 8;
+	icon_state = "techfloor_edges"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory/entrance)
+"dx" = (
+/turf/simulated/floor/tiled/old_tile,
+/area/map_template/factory/office)
+"dA" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"dO" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"ec" = (
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 5;
+	icon_state = "intact"
+	},
+/obj/effect/floor_decal/techfloor{
+	dir = 9;
+	icon_state = "techfloor_edges"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory/breakroom)
+"ej" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"eN" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"fh" = (
+/obj/effect/floor_decal/techfloor,
+/obj/structure/closet/crate,
+/obj/item/stack/material/glass/fifty,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"fs" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1;
+	icon_state = "techfloor_edges"
+	},
+/obj/structure/sign/warning/caution{
+	pixel_y = 28
+	},
+/obj/machinery/conveyor_switch/oneway{
+	id = "AutoFac1"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"ga" = (
+/obj/effect/floor_decal/techfloor,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory/office)
+"gf" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8;
+	icon_state = "techfloor_edges"
+	},
+/obj/structure/closet/crate,
+/obj/item/stack/material/steel/fifty,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"gq" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1;
+	icon_state = "techfloor_edges"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory/office)
+"gN" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1;
+	icon_state = "techfloor_edges"
+	},
+/obj/structure/closet/crate,
+/obj/item/stack/material/aluminium/fifty,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"gP" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"gS" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/closet/crate,
+/obj/random/contraband,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"ij" = (
+/obj/machinery/alarm{
+	pixel_y = 24
+	},
+/obj/structure/bed/chair/padded/teal,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/map_template/factory/entrance)
+"ix" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 9;
+	icon_state = "techfloor_edges"
+	},
+/obj/structure/flora/pottedplant/large,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory/office)
+"iA" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4;
+	icon_state = "techfloor_edges"
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"iO" = (
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor,
+/area/map_template/factory/breakroom)
+"iU" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"iX" = (
+/obj/effect/floor_decal/techfloor,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"jK" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/area/template_noop)
+"jM" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"jX" = (
+/obj/machinery/conveyor/east{
+	id = "AutoFac1"
+	},
+/obj/random/contraband,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/factory)
+"jZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/factory/entrance)
+"kH" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 10;
+	icon_state = "techfloor_edges"
+	},
+/obj/random/vendor{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory/office)
+"kL" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/map_template/factory/office)
+"lm" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/bed/chair/comfy/brown{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/map_template/factory/entrance)
+"lz" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"lM" = (
+/obj/effect/floor_decal/techfloor,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory/office)
+"lQ" = (
+/obj/effect/floor_decal/techfloor,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"lX" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"ms" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1;
+	icon_state = "techfloor_edges"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory/office)
+"mT" = (
+/obj/machinery/door/blast/shutters{
+	id_tag = "AutoFac2"
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor,
+/area/map_template/factory)
+"mU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/item/stack/material/tritium,
+/turf/simulated/floor,
+/area/map_template/factory/breakroom)
+"nb" = (
+/obj/effect/floor_decal/techfloor,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory/office)
+"ne" = (
+/obj/machinery/conveyor/east{
+	id = "AutoFac1"
+	},
+/obj/structure/plasticflaps,
+/obj/item/stack/material/steel,
+/obj/item/stack/cable_coil{
+	amount = 2
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/factory)
+"ni" = (
+/obj/machinery/airlock_sensor/airlock_interior{
+	frequency = 1380;
+	id_tag = "factory_sensor_interior";
+	pixel_x = -8;
+	pixel_y = -20
+	},
+/obj/machinery/access_button/airlock_interior{
+	frequency = 1380;
+	master_tag = "factory";
+	pixel_x = 3;
+	pixel_y = -20
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/industrial/warning/corner,
+/turf/simulated/floor/wood,
+/area/map_template/factory/entrance)
+"nu" = (
+/obj/effect/floor_decal/techfloor/orange,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"nz" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/item/organ/external/arm/right,
+/obj/effect/decal/cleanable/blood,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"nB" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile,
+/area/map_template/factory/office)
+"nH" = (
+/obj/structure/vending_refill,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"nL" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/industrial/warning/dust/corner{
+	dir = 1
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"ob" = (
+/obj/machinery/button/blast_door{
+	id_tag = "AutoFac3"
+	},
+/obj/effect/paint/black,
+/turf/simulated/wall/titanium,
+/area/map_template/factory)
+"oi" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4;
+	icon_state = "techfloor_edges"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"oZ" = (
+/obj/machinery/door/airlock/engineering,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled,
+/area/map_template/factory/office)
+"pk" = (
+/obj/machinery/conveyor/east{
+	id = "AutoFac2"
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/factory)
+"pp" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/factory/entrance)
+"py" = (
+/obj/machinery/conveyor/east{
+	id = "AutoFac2"
+	},
+/obj/random/contraband,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/factory)
+"pG" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"pQ" = (
+/obj/machinery/atmospherics/binary/pump/on{
+	dir = 4;
+	target_pressure = 200
+	},
+/obj/effect/floor_decal/techfloor{
+	dir = 10;
+	icon_state = "techfloor_edges"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory/breakroom)
+"pT" = (
+/obj/structure/closet,
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/item/clothing/accessory/corptie/nanotrasen,
+/obj/item/clothing/under/rank/ntwork/nanotrasen,
+/obj/item/clothing/head/hardhat/orange,
+/obj/random/tool,
+/turf/simulated/floor/tiled/old_tile,
+/area/map_template/factory/office)
+"qp" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8;
+	icon_state = "techfloor_edges"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"qB" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1;
+	icon_state = "techfloor_edges"
+	},
+/obj/structure/table/steel_reinforced,
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_x = 0;
+	pixel_y = 24
+	},
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2";
+	pixel_y = 0
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/item/wirecutters,
+/obj/item/storage/toolbox/mechanical,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"qC" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile,
+/area/map_template/factory/office)
+"qS" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8;
+	icon_state = "techfloor_edges"
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"qY" = (
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -22
+	},
+/obj/structure/table/steel_reinforced,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/map_template/factory/office)
+"rl" = (
+/obj/machinery/conveyor/east{
+	id = "AutoFac2"
+	},
+/obj/structure/plasticflaps,
+/obj/item/stack/material/steel,
+/obj/item/stack/cable_coil{
+	amount = 2
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/factory)
+"rr" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 9
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/area/template_noop)
+"rD" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1;
+	icon_state = "techfloor_edges"
+	},
+/obj/structure/sign/warning/caution{
+	pixel_y = 28
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"rG" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4;
+	icon_state = "intact"
+	},
+/obj/effect/floor_decal/techfloor{
+	dir = 6;
+	icon_state = "techfloor_edges"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory/breakroom)
+"rN" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/factory/entrance)
+"rT" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/industrial/warning/dust/corner{
+	dir = 1
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"rW" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"sk" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 10;
+	icon_state = "techfloor_edges"
+	},
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"so" = (
+/obj/structure/filingcabinet/chestdrawer,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1;
+	icon_state = "spline_fancy"
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/factory/entrance)
+"sZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor,
+/area/map_template/factory/breakroom)
+"tk" = (
+/obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor,
+/area/map_template/factory)
+"tM" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 6;
+	icon_state = "techfloor_edges"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"tX" = (
+/obj/machinery/door/airlock/external{
+	frequency = 1380;
+	id_tag = "factory_interior_door"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled,
+/area/map_template/factory/entrance)
+"ub" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 6;
+	icon_state = "techfloor_edges"
+	},
+/obj/structure/closet/crate,
+/obj/item/stack/material/plastic/fifty,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"uc" = (
+/obj/effect/paint/black,
+/turf/simulated/wall/titanium,
+/area/map_template/factory/breakroom)
+"ud" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/map_template/factory/office)
+"uk" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1;
+	icon_state = "techfloor_edges"
+	},
+/obj/structure/table/steel_reinforced,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"ul" = (
+/obj/machinery/conveyor/east{
+	id = "AutoFac1"
+	},
+/obj/structure/plasticflaps,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/factory)
+"uG" = (
+/turf/simulated/floor/exoplanet/lava,
+/area/map_template/factory)
+"uY" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/wood,
+/area/map_template/factory/entrance)
+"vu" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4;
+	icon_state = "techfloor_edges"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"vC" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4;
+	icon_state = "techfloor_edges"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"vF" = (
+/obj/machinery/conveyor/east{
+	id = "AutoFac2"
+	},
+/obj/structure/plasticflaps,
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/factory)
+"wg" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"wn" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+	dir = 1;
+	id_tag = "factory_pump";
+	power_rating = 25000
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/map_template/factory/entrance)
+"wq" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+	id_tag = "factory_pump_out_internal";
+	power_rating = 25000
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/industrial/warning/dust/corner,
+/turf/simulated/floor/tiled,
+/area/map_template/factory/entrance)
+"wr" = (
+/obj/machinery/atmospherics/binary/pump/on{
+	dir = 8;
+	target_pressure = 303.96
+	},
+/obj/effect/floor_decal/techfloor{
+	dir = 8;
+	icon_state = "techfloor_edges"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory/breakroom)
+"ws" = (
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/structure/catwalk,
+/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/area/template_noop)
+"wx" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1;
+	icon_state = "techfloor_edges"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"wI" = (
+/obj/machinery/fabricator/hacked{
+	name = "industrial autolathe"
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/factory)
+"wU" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4;
+	icon_state = "techfloor_edges"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"xn" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/structure/table/steel_reinforced,
+/turf/simulated/floor/tiled/old_tile,
+/area/map_template/factory/office)
+"xq" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/railing/mapped,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"xI" = (
+/obj/structure/grille,
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"xK" = (
+/obj/machinery/computer/modular/preset/engineering,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory/breakroom)
+"xQ" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1;
+	icon_state = "techfloor_edges"
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory/office)
+"xT" = (
+/turf/template_noop,
+/area/template_noop)
+"xV" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/techfloor{
+	dir = 4;
+	icon_state = "techfloor_edges"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"yF" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 5;
+	icon_state = "techfloor_edges"
+	},
+/obj/structure/table/steel_reinforced,
+/obj/random/clipboard,
+/obj/item/paper,
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"yH" = (
+/obj/machinery/door/blast/shutters{
+	id_tag = "AutoFac3"
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"yN" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 9;
+	icon_state = "techfloor_edges"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"yO" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"za" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"zg" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 8
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/area/template_noop)
+"zA" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1;
+	icon_state = "techfloor_edges"
+	},
+/obj/structure/sign/warning/caution{
+	pixel_y = 28
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"zI" = (
+/obj/machinery/door/blast/shutters{
+	id_tag = "AutoFac1"
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor,
+/area/map_template/factory)
+"zW" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/techfloor{
+	dir = 4;
+	icon_state = "techfloor_edges"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"AM" = (
+/obj/machinery/atmospherics/pipe/manifold4w/visible/cyan,
+/obj/effect/floor_decal/techfloor{
+	dir = 1;
+	icon_state = "techfloor_edges"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory/breakroom)
+"Ba" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/techfloor{
+	dir = 1;
+	icon_state = "techfloor_edges"
+	},
+/obj/structure/table/rack,
+/obj/random/contraband,
+/obj/random/contraband,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"Bd" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor,
+/area/map_template/factory/entrance)
+"BQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"Cc" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/area/template_noop)
+"Cd" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/map_template/factory/office)
+"Cn" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1;
+	icon_state = "spline_fancy"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/map_template/factory/entrance)
+"Cu" = (
+/obj/effect/floor_decal/techfloor,
+/obj/machinery/portable_atmospherics/canister/air/airlock,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"CD" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/access_button/airlock_exterior{
+	frequency = 1380;
+	master_tag = "factory";
+	pixel_x = 5;
+	pixel_y = 20
+	},
+/obj/machinery/airlock_sensor/airlock_exterior{
+	frequency = 1380;
+	id_tag = "factory_sensor_external";
+	pixel_x = -6;
+	pixel_y = 20
+	},
+/obj/effect/floor_decal/industrial/warning/dust/corner{
+	dir = 4
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"CM" = (
+/obj/machinery/alarm{
+	pixel_y = 24
+	},
+/obj/structure/table/steel_reinforced,
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/item/wrench,
+/obj/random/tool,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory/breakroom)
+"Dv" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/decal/cleanable/blood,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/railing/mapped,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"Ef" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"En" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 4
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"EE" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/railing/mapped{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"EX" = (
+/obj/machinery/button/blast_door{
+	id_tag = "AutoFac2"
+	},
+/obj/effect/paint/black,
+/turf/simulated/wall/titanium,
+/area/map_template/factory)
+"Fa" = (
+/obj/structure/flora/pottedplant/large,
+/turf/simulated/floor/tiled/old_tile,
+/area/map_template/factory/office)
+"Fo" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8;
+	icon_state = "techfloor_edges"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"Ft" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/door/airlock/engineering,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"Fu" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1;
+	icon_state = "warning"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"Fy" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 10;
+	icon_state = "techfloor_edges"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"FG" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1;
+	icon_state = "techfloor_edges"
+	},
+/obj/structure/sign/warning/caution{
+	pixel_y = 28
+	},
+/obj/machinery/conveyor_switch/oneway{
+	id = "AutoFac2"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"FU" = (
+/obj/structure/closet/emcloset,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/techfloor{
+	dir = 8;
+	icon_state = "techfloor_edges"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory/entrance)
+"Gs" = (
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 9;
+	icon_state = "intact"
+	},
+/obj/effect/floor_decal/techfloor{
+	dir = 5;
+	icon_state = "techfloor_edges"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory/breakroom)
+"Gt" = (
+/obj/structure/catwalk,
+/obj/machinery/power/smes/buildable/max_cap_in_out,
+/obj/structure/cable,
+/turf/simulated/floor,
+/area/map_template/factory/breakroom)
+"He" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9;
+	pixel_y = 0
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/map_template/factory/entrance)
+"Hk" = (
+/obj/effect/floor_decal/techfloor,
+/obj/structure/vending_refill,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"HG" = (
+/obj/machinery/vending/coffee,
+/turf/simulated/floor/wood,
+/area/map_template/factory/entrance)
+"Ic" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"In" = (
+/obj/effect/floor_decal/techfloor,
+/obj/machinery/light,
+/obj/structure/vending_refill,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"Io" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/techfloor{
+	dir = 1;
+	icon_state = "techfloor_edges"
+	},
+/obj/structure/table/rack,
+/obj/random/contraband,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"Is" = (
+/obj/machinery/atmospherics/unary/tank/air,
+/obj/effect/floor_decal/industrial/outline/blue,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory/breakroom)
+"ID" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/map_template/factory/entrance)
+"Ja" = (
+/obj/structure/catwalk,
+/obj/machinery/power/port_gen/pacman,
+/obj/structure/cable,
+/turf/simulated/floor,
+/area/map_template/factory/breakroom)
+"Jp" = (
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"JB" = (
+/obj/machinery/door/airlock/engineering,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled/old_tile,
+/area/map_template/factory/office)
+"Kh" = (
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"KF" = (
+/obj/structure/closet/crate,
+/obj/item/stack/material/titanium/ten,
+/obj/item/stack/material/titanium/ten,
+/obj/item/stack/material/aluminium/fifty,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"KH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"KP" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8;
+	icon_state = "techfloor_edges"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"LF" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"LR" = (
+/obj/effect/floor_decal/industrial/loadingarea_sharp{
+	dir = 1
+	},
+/obj/effect/floor_decal/techfloor,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"Mw" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 5;
+	icon_state = "techfloor_edges"
+	},
+/obj/structure/closet/firecloset,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory/office)
+"MA" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/techfloor{
+	dir = 1;
+	icon_state = "techfloor_edges"
+	},
+/obj/structure/table/rack,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/random/contraband,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"Nr" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"Oj" = (
+/obj/machinery/button/blast_door{
+	id_tag = "AutoFac1"
+	},
+/obj/effect/paint/black,
+/turf/simulated/wall/titanium,
+/area/map_template/factory)
+"Oq" = (
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/portable_atmospherics/canister/air,
+/obj/effect/floor_decal/industrial/outline/blue,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory/breakroom)
+"Ov" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+	dir = 1;
+	id_tag = "factory_pump";
+	power_rating = 25000
+	},
+/obj/machinery/airlock_sensor{
+	frequency = 1380;
+	id_tag = "factory_sensor_chamber";
+	pixel_x = 9;
+	pixel_y = 22
+	},
+/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
+	cycle_to_external_air = 1;
+	frequency = 1380;
+	id_tag = "factory";
+	pixel_y = 28;
+	tag_airpump = "factory_pump";
+	tag_chamber_sensor = "factory_sensor_chamber";
+	tag_exterior_door = "factory_exterior_door";
+	tag_exterior_sensor = "factory_sensor_external";
+	tag_interior_door = "factory_interior_door";
+	tag_interior_sensor = "factory_sensor_interior"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/industrial/warning/dust/corner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/map_template/factory/entrance)
+"Oz" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4;
+	icon_state = "techfloor_edges"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"OF" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/map_template/factory/entrance)
+"OK" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/map_template/factory/entrance)
+"Pm" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/map_template/factory/entrance)
+"PK" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8;
+	icon_state = "techfloor_edges"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"PS" = (
+/obj/machinery/door/airlock/external/glass/bolted,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor,
+/area/map_template/factory)
+"QF" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/map_template/factory/entrance)
+"QG" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/wood,
+/area/map_template/factory/entrance)
+"QM" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1;
+	icon_state = "techfloor_edges"
+	},
+/obj/structure/table/steel_reinforced,
+/obj/item/stack/material/rods/fifty,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"QY" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/obj/effect/paint/black,
+/turf/simulated/wall/titanium,
+/area/map_template/factory/entrance)
+"Re" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/industrial/warning/dust/corner{
+	dir = 4
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"Rn" = (
+/obj/machinery/conveyor/east{
+	id = "AutoFac1"
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/factory)
+"RB" = (
+/obj/effect/floor_decal/techfloor/orange,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"RP" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 5;
+	icon_state = "techfloor_edges"
+	},
+/obj/structure/table/steel_reinforced,
+/obj/machinery/alarm{
+	pixel_y = 24
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/item/stack/cable_coil,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"Sd" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/external_air{
+	id_tag = "factory_pump_out_internal";
+	power_rating = 25000
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/industrial/warning/dust,
+/turf/simulated/floor/tiled,
+/area/map_template/factory/entrance)
+"Sl" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 8
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"Sq" = (
+/obj/effect/floor_decal/techfloor,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory/office)
+"Ss" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1;
+	icon_state = "spline_fancy"
+	},
+/obj/structure/filingcabinet{
+	pixel_x = 10
+	},
+/obj/structure/filingcabinet,
+/obj/structure/filingcabinet{
+	pixel_x = -10
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/factory/entrance)
+"Sx" = (
+/obj/structure/catwalk,
+/turf/simulated/floor,
+/area/map_template/factory/breakroom)
+"SD" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 6
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/area/template_noop)
+"SJ" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/structure/table/steel_reinforced,
+/turf/simulated/floor/tiled/old_tile,
+/area/map_template/factory/office)
+"SR" = (
+/obj/machinery/power/apc{
+	dir = 2;
+	name = "south bump";
+	pixel_y = -24
+	},
+/obj/structure/table/steel_reinforced,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/structure/cable,
+/turf/simulated/floor/tiled,
+/area/map_template/factory/office)
+"ST" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1;
+	icon_state = "techfloor_edges"
+	},
+/obj/structure/table/steel_reinforced,
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"Ta" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/map_template/factory/entrance)
+"Tj" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9;
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"Tl" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"Tr" = (
+/obj/effect/floor_decal/techfloor,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"TG" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 6
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/wood,
+/area/map_template/factory/entrance)
+"Uv" = (
+/obj/effect/paint/black,
+/turf/simulated/wall/titanium,
+/area/map_template/factory/entrance)
+"Ux" = (
+/obj/structure/catwalk,
+/obj/machinery/power/terminal{
+	dir = 1;
+	icon_state = "term"
+	},
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2";
+	pixel_y = 0
+	},
+/turf/simulated/floor,
+/area/map_template/factory/breakroom)
+"UA" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/map_template/factory)
+"UJ" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/area/template_noop)
+"UK" = (
+/turf/simulated/floor/wood,
+/area/map_template/factory/entrance)
+"UU" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 10
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/area/template_noop)
+"Vg" = (
+/obj/effect/paint/black,
+/turf/simulated/wall/titanium,
+/area/map_template/factory)
+"VI" = (
+/obj/effect/floor_decal/techfloor,
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4;
+	icon_state = "intact"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory/breakroom)
+"VL" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/industrial/hatch/orange,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
+	id_tag = "factory_pump_out_external"
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/map_template/factory/entrance)
+"VY" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/industrial/hatch/orange,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/map_template/factory/breakroom)
+"Wi" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"Wm" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 8
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"Wq" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 6;
+	icon_state = "techfloor_edges"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory/office)
+"WU" = (
+/obj/machinery/door/blast/shutters{
+	id_tag = "AutoFac3"
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"Xd" = (
+/obj/machinery/door/airlock/external{
+	frequency = 1380;
+	id_tag = "factory_exterior_door";
+	locked = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled,
+/area/map_template/factory/entrance)
+"XY" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 5
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/exoplanet/concrete/reinforced/road,
+/area/template_noop)
+"Yx" = (
+/obj/effect/paint/black,
+/turf/simulated/wall/titanium,
+/area/map_template/factory/office)
+"YL" = (
+/obj/structure/catwalk,
+/obj/machinery/meter,
+/obj/item/stack/material/tritium,
+/obj/machinery/atmospherics/pipe/simple/visible/universal{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/map_template/factory/breakroom)
+"YW" = (
+/obj/structure/flora/pottedplant/large,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/map_template/factory/entrance)
+"Zd" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 4
+	},
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"Ze" = (
+/obj/machinery/portable_atmospherics/canister/air/airlock,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/map_template/factory/entrance)
+"Zt" = (
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_x = 0;
+	pixel_y = 24
+	},
+/obj/structure/bed/chair/padded/teal,
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2";
+	pixel_y = 0
+	},
+/turf/simulated/floor/wood,
+/area/map_template/factory/entrance)
+"Zz" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 5;
+	icon_state = "techfloor_edges"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/map_template/factory)
+"ZM" = (
+/obj/effect/landmark/clear,
+/turf/template_noop,
+/area/template_noop)
+"ZO" = (
+/obj/machinery/conveyor/east{
+	id = "AutoFac2"
+	},
+/obj/item/stack/material/steel,
+/obj/item/stack/cable_coil{
+	amount = 2
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/map_template/factory)
+"ZX" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 6
+	},
+/obj/effect/paint/black,
+/turf/simulated/wall/titanium,
+/area/map_template/factory/entrance)
+
+(1,1,1) = {"
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+"}
+(2,1,1) = {"
+xI
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+xI
+"}
+(3,1,1) = {"
+xI
+LF
+LF
+LF
+LF
+LF
+LF
+Ic
+Ic
+Ic
+Ic
+LF
+LF
+LF
+Ic
+Ic
+Ic
+LF
+LF
+LF
+LF
+LF
+LF
+ZM
+ZM
+ZM
+ZM
+xI
+"}
+(4,1,1) = {"
+xI
+LF
+uc
+uc
+uc
+uc
+uc
+Yx
+Yx
+Yx
+Yx
+Yx
+Yx
+Yx
+Yx
+Uv
+Bd
+Bd
+Uv
+Uv
+Uv
+Uv
+LF
+ZM
+ZM
+ZM
+ZM
+xI
+"}
+(5,1,1) = {"
+xI
+Ic
+uc
+aZ
+Gt
+Ux
+Ja
+Yx
+ix
+kH
+Yx
+pT
+kL
+pT
+Yx
+Zt
+OK
+QG
+Ss
+rN
+jZ
+Uv
+Ic
+ZM
+ZM
+ZM
+ZM
+xI
+"}
+(6,1,1) = {"
+xI
+Ic
+uc
+CM
+iO
+mU
+sZ
+cf
+gq
+nb
+Yx
+pT
+dx
+pT
+Yx
+ij
+QF
+UK
+Cn
+lm
+Ta
+Uv
+Ic
+LF
+LF
+LF
+ZM
+xI
+"}
+(7,1,1) = {"
+xI
+Ic
+uc
+xK
+Sx
+YL
+YL
+Yx
+ms
+lM
+Yx
+pT
+nB
+pT
+Yx
+YW
+OF
+UK
+so
+pp
+cC
+Uv
+Bd
+Bd
+Uv
+LF
+ZM
+xI
+"}
+(8,1,1) = {"
+xI
+Ic
+uc
+Oq
+ec
+wr
+pQ
+Yx
+ms
+cz
+JB
+ud
+qC
+Cd
+JB
+uY
+He
+UK
+UK
+Pm
+ni
+ZX
+Ov
+wq
+QY
+CD
+ZM
+xI
+"}
+(9,1,1) = {"
+xI
+LF
+uc
+Is
+AM
+ab
+VI
+Yx
+xQ
+lM
+Yx
+Fa
+SJ
+xn
+Yx
+HG
+UK
+Pm
+Pm
+Pm
+TG
+tX
+wn
+Sd
+Xd
+BQ
+ZM
+xI
+"}
+(10,1,1) = {"
+xI
+LF
+uc
+Is
+Gs
+bM
+rG
+Yx
+ms
+Sq
+Yx
+Vg
+Vg
+Vg
+Vg
+Vg
+FU
+do
+Uv
+ID
+Ze
+Uv
+Bd
+Bd
+Uv
+nL
+ZM
+xI
+"}
+(11,1,1) = {"
+xI
+LF
+uc
+uc
+uc
+uc
+cQ
+Yx
+ms
+ga
+qY
+Vg
+yN
+gf
+sk
+Vg
+Uv
+Uv
+Uv
+Uv
+Uv
+Uv
+VL
+Wi
+Wi
+lX
+ZM
+xI
+"}
+(12,1,1) = {"
+xI
+LF
+Ic
+Ic
+Ic
+LF
+VY
+Yx
+Mw
+Wq
+SR
+Vg
+gN
+aH
+Hk
+Vg
+Ic
+LF
+LF
+LF
+Ic
+Ic
+LF
+ZM
+ZM
+ZM
+ZM
+xI
+"}
+(13,1,1) = {"
+xI
+LF
+LF
+LF
+Ic
+LF
+LF
+Yx
+Yx
+oZ
+Yx
+Vg
+wx
+nH
+lQ
+Vg
+LF
+LF
+Ic
+Ic
+LF
+LF
+LF
+ZM
+xI
+xI
+xI
+xI
+"}
+(14,1,1) = {"
+xI
+ZM
+ZM
+LF
+LF
+LF
+LF
+Vg
+bs
+lz
+nu
+yH
+Ef
+eN
+fh
+Vg
+LF
+LF
+LF
+LF
+Ic
+LF
+LF
+ZM
+xI
+xT
+xT
+xT
+"}
+(15,1,1) = {"
+xI
+ZM
+ZM
+LF
+LF
+Ic
+LF
+Vg
+Ba
+jM
+nu
+yH
+wg
+eN
+Tr
+Vg
+LF
+LF
+LF
+LF
+LF
+Ic
+LF
+ZM
+xI
+xT
+xT
+xT
+"}
+(16,1,1) = {"
+xI
+ZM
+ZM
+LF
+LF
+LF
+LF
+Vg
+MA
+Nr
+RB
+WU
+dA
+KF
+In
+Vg
+LF
+LF
+Ic
+LF
+Ic
+LF
+LF
+ZM
+xI
+xT
+xT
+xT
+"}
+(17,1,1) = {"
+xI
+ZM
+ZM
+LF
+Ic
+LF
+LF
+Vg
+Io
+pG
+nu
+yH
+yO
+eN
+Cu
+Vg
+LF
+LF
+LF
+LF
+LF
+LF
+LF
+ZM
+xI
+xT
+xT
+xT
+"}
+(18,1,1) = {"
+xI
+ZM
+ZM
+LF
+LF
+LF
+Ic
+Vg
+Vg
+Ft
+Vg
+ob
+Zz
+vC
+ub
+Vg
+Ic
+Ic
+LF
+LF
+LF
+LF
+LF
+ZM
+xI
+xT
+xT
+xT
+"}
+(19,1,1) = {"
+xI
+ZM
+ZM
+LF
+LF
+Ic
+LF
+Vg
+xV
+wU
+zW
+Vg
+Vg
+Vg
+Vg
+Vg
+En
+En
+En
+En
+Zd
+En
+Re
+ZM
+xI
+xT
+xT
+xT
+"}
+(20,1,1) = {"
+xI
+ZM
+ZM
+LF
+LF
+LF
+LF
+Vg
+yN
+PK
+KP
+qS
+KP
+Fo
+Fy
+Oj
+rr
+zg
+zg
+zg
+zg
+UU
+za
+ZM
+xI
+xT
+xT
+xT
+"}
+(21,1,1) = {"
+xI
+ZM
+ZM
+LF
+Vg
+Vg
+Vg
+Vg
+rD
+pG
+rW
+Jp
+ao
+Jp
+LR
+mT
+Cc
+jK
+jK
+jK
+jK
+ws
+za
+ZM
+xI
+xT
+xT
+xT
+"}
+(22,1,1) = {"
+xI
+ZM
+ZM
+LF
+Vg
+uG
+uG
+PS
+Fu
+ej
+Rn
+Tl
+cy
+UA
+LR
+zI
+Cc
+jK
+jK
+jK
+jK
+ws
+za
+ZM
+xI
+xT
+xT
+xT
+"}
+(23,1,1) = {"
+xI
+ZM
+ZM
+LF
+Vg
+uG
+uG
+tk
+bC
+xq
+ne
+bz
+ul
+iU
+LR
+zI
+Cc
+jK
+jK
+jK
+jK
+ws
+za
+ZM
+xI
+xT
+xT
+xT
+"}
+(24,1,1) = {"
+xI
+ZM
+ZM
+LF
+Vg
+Vg
+Vg
+Vg
+fs
+Dv
+wI
+bz
+wI
+iU
+LR
+zI
+Cc
+jK
+jK
+jK
+jK
+ws
+za
+ZM
+xI
+xT
+xT
+xT
+"}
+(25,1,1) = {"
+xI
+ZM
+ZM
+LF
+LF
+LF
+LF
+Vg
+ST
+nz
+jX
+dO
+jX
+UA
+LR
+mT
+Cc
+jK
+jK
+jK
+jK
+ws
+za
+ZM
+xI
+xT
+xT
+xT
+"}
+(26,1,1) = {"
+xI
+ZM
+ZM
+LF
+LF
+LF
+LF
+Vg
+uk
+pG
+gS
+Jp
+gS
+Jp
+lQ
+Vg
+XY
+UJ
+UJ
+UJ
+UJ
+SD
+za
+ZM
+xI
+xT
+xT
+xT
+"}
+(27,1,1) = {"
+xI
+ZM
+ZM
+LF
+LF
+LF
+LF
+Vg
+yF
+oi
+Oz
+Oz
+Oz
+vC
+tM
+Vg
+Sl
+Sl
+Sl
+Sl
+Wm
+Sl
+rT
+ZM
+xI
+xT
+xT
+xT
+"}
+(28,1,1) = {"
+xI
+ZM
+ZM
+LF
+LF
+LF
+LF
+Vg
+yN
+qp
+KP
+KP
+KP
+KP
+Fy
+Vg
+En
+En
+En
+En
+Zd
+En
+Re
+ZM
+xI
+xT
+xT
+xT
+"}
+(29,1,1) = {"
+xI
+ZM
+ZM
+LF
+Vg
+Vg
+Vg
+Vg
+zA
+pG
+ao
+eN
+ao
+Jp
+iX
+EX
+rr
+zg
+zg
+zg
+zg
+UU
+za
+ZM
+xI
+xT
+xT
+xT
+"}
+(30,1,1) = {"
+xI
+ZM
+ZM
+LF
+Vg
+uG
+uG
+PS
+Fu
+ej
+pk
+dO
+ZO
+UA
+LR
+mT
+Cc
+jK
+jK
+jK
+jK
+ws
+za
+ZM
+xI
+xT
+xT
+xT
+"}
+(31,1,1) = {"
+xI
+ZM
+ZM
+LF
+Vg
+uG
+uG
+tk
+bC
+xq
+rl
+EE
+vF
+iU
+LR
+mT
+Cc
+jK
+jK
+jK
+jK
+ws
+za
+ZM
+xI
+xT
+xT
+xT
+"}
+(32,1,1) = {"
+xI
+ZM
+ZM
+LF
+Vg
+Vg
+Vg
+Vg
+FG
+xq
+wI
+EE
+wI
+iU
+LR
+mT
+Cc
+jK
+jK
+jK
+jK
+ws
+za
+ZM
+xI
+xT
+xT
+xT
+"}
+(33,1,1) = {"
+xI
+ZM
+ZM
+LF
+LF
+LF
+LF
+Vg
+qB
+Tj
+py
+dO
+py
+UA
+LR
+mT
+Cc
+jK
+jK
+jK
+jK
+ws
+za
+ZM
+xI
+xT
+xT
+xT
+"}
+(34,1,1) = {"
+xI
+ZM
+ZM
+LF
+LF
+LF
+LF
+Vg
+QM
+KH
+gS
+Jp
+gS
+Jp
+LR
+mT
+Cc
+jK
+jK
+jK
+jK
+ws
+za
+ZM
+xI
+xT
+xT
+xT
+"}
+(35,1,1) = {"
+xI
+ZM
+ZM
+LF
+Ic
+Ic
+LF
+Vg
+RP
+vu
+Oz
+iA
+Oz
+Oz
+tM
+Vg
+XY
+UJ
+UJ
+UJ
+UJ
+SD
+gP
+ZM
+xI
+xT
+xT
+xT
+"}
+(36,1,1) = {"
+xI
+ZM
+ZM
+LF
+LF
+Ic
+LF
+Vg
+Vg
+Vg
+Vg
+Vg
+Vg
+Vg
+Vg
+Vg
+Sl
+Wm
+Wm
+Wm
+Sl
+Sl
+rT
+ZM
+xI
+xT
+xT
+xT
+"}
+(37,1,1) = {"
+xI
+ZM
+ZM
+LF
+LF
+LF
+LF
+LF
+LF
+LF
+LF
+LF
+LF
+Ic
+Ic
+LF
+LF
+Kh
+Kh
+Kh
+LF
+Kh
+LF
+ZM
+xI
+xT
+xT
+xT
+"}
+(38,1,1) = {"
+xI
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+xI
+xT
+xT
+xT
+"}
+(39,1,1) = {"
+xI
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+xI
+xT
+xT
+xT
+"}
+(40,1,1) = {"
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xI
+xT
+xT
+xT
+"}

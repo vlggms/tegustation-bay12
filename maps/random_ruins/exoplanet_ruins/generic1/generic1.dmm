@@ -1,0 +1,321 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"lm" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/random/trash,
+/turf/simulated/floor,
+/area/map_template/generic1)
+"xT" = (
+/turf/template_noop,
+/area/template_noop)
+"yy" = (
+/turf/simulated/floor,
+/area/map_template/generic1)
+"zY" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/map_template/generic1)
+"Bd" = (
+/obj/item/material/shard,
+/obj/item/material/shard,
+/turf/simulated/floor,
+/area/map_template/generic1)
+"EL" = (
+/turf/simulated/wall/concrete,
+/area/map_template/generic1)
+"FO" = (
+/obj/item/frame/apc,
+/turf/simulated/floor,
+/area/map_template/generic1)
+"GW" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/map_template/generic1)
+"HG" = (
+/obj/random/contraband,
+/turf/simulated/floor,
+/area/map_template/generic1)
+"Ju" = (
+/obj/structure/wall_frame/standard,
+/turf/simulated/floor,
+/area/map_template/generic1)
+"LF" = (
+/obj/random/trash,
+/turf/simulated/floor,
+/area/map_template/generic1)
+"OG" = (
+/obj/item/material/shard,
+/turf/simulated/floor,
+/area/map_template/generic1)
+"Qa" = (
+/obj/machinery/door/airlock,
+/turf/simulated/floor,
+/area/map_template/generic1)
+"QF" = (
+/obj/structure/wall_frame/standard,
+/obj/item/material/shard,
+/turf/simulated/floor,
+/area/map_template/generic1)
+"Uv" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/material/shard,
+/turf/simulated/floor,
+/area/map_template/generic1)
+"UK" = (
+/obj/structure/door_assembly,
+/obj/item/airlock_electronics,
+/turf/simulated/floor,
+/area/map_template/generic1)
+"Vg" = (
+/turf/simulated/floor/tiled,
+/area/map_template/generic1)
+"VA" = (
+/obj/structure/wall_frame/standard,
+/obj/item/material/shard,
+/obj/item/material/shard,
+/turf/simulated/floor,
+/area/map_template/generic1)
+"ZM" = (
+/obj/effect/landmark/clear,
+/turf/template_noop,
+/area/template_noop)
+
+(1,1,1) = {"
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+"}
+(2,1,1) = {"
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+"}
+(3,1,1) = {"
+xT
+xT
+EL
+EL
+EL
+EL
+EL
+EL
+EL
+EL
+EL
+EL
+xT
+xT
+"}
+(4,1,1) = {"
+xT
+ZM
+EL
+yy
+OG
+yy
+EL
+yy
+yy
+GW
+yy
+EL
+xT
+xT
+"}
+(5,1,1) = {"
+xT
+ZM
+Ju
+OG
+zY
+yy
+EL
+yy
+LF
+zY
+GW
+EL
+ZM
+xT
+"}
+(6,1,1) = {"
+ZM
+ZM
+QF
+GW
+GW
+lm
+UK
+yy
+Uv
+GW
+GW
+Qa
+ZM
+ZM
+"}
+(7,1,1) = {"
+ZM
+ZM
+EL
+Vg
+GW
+yy
+EL
+zY
+Bd
+OG
+LF
+EL
+ZM
+xT
+"}
+(8,1,1) = {"
+xT
+ZM
+EL
+EL
+UK
+EL
+EL
+EL
+QF
+Ju
+EL
+EL
+ZM
+xT
+"}
+(9,1,1) = {"
+xT
+ZM
+EL
+FO
+GW
+Vg
+EL
+ZM
+ZM
+ZM
+ZM
+ZM
+xT
+xT
+"}
+(10,1,1) = {"
+xT
+xT
+EL
+yy
+GW
+HG
+VA
+ZM
+ZM
+xT
+ZM
+xT
+xT
+xT
+"}
+(11,1,1) = {"
+xT
+xT
+EL
+GW
+LF
+Uv
+QF
+ZM
+xT
+xT
+xT
+xT
+xT
+xT
+"}
+(12,1,1) = {"
+xT
+xT
+EL
+yy
+zY
+yy
+EL
+ZM
+xT
+xT
+xT
+xT
+xT
+xT
+"}
+(13,1,1) = {"
+xT
+xT
+EL
+EL
+EL
+EL
+EL
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+"}
+(14,1,1) = {"
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+"}
+(15,1,1) = {"
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+"}
