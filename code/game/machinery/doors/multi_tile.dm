@@ -15,6 +15,7 @@
 	panel_file = 'icons/obj/doors/double/panel.dmi'
 	welded_file = 'icons/obj/doors/double/welded.dmi'
 	emag_file = 'icons/obj/doors/double/emag.dmi'
+	unres_file = 'icons/obj/doors/double/unres.dmi'
 	width = 2
 	appearance_flags = 0
 	opacity = 1

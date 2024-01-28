@@ -95,6 +95,7 @@ var/list/airlock_overlays = list()
 	var/sparks_broken_file = 'icons/obj/doors/station/sparks_broken.dmi'
 	var/welded_file = 'icons/obj/doors/station/welded.dmi'
 	var/emag_file = 'icons/obj/doors/station/emag.dmi'
+	var/unres_file = 'icons/obj/doors/station/unres.dmi'
 
 	uncreated_component_parts = list(
 		/obj/item/stock_parts/radio/receiver,
@@ -1520,19 +1521,19 @@ About the new airlock wires panel:
 /obj/machinery/door/airlock/proc/CheckUnres()
 	if(arePowerSystemsOn() && unres_sides)
 		if(unres_sides & NORTH)
-			var/image/I = image(icon='icons/obj/doors/station/unres.dmi', icon_state="unres_n")
+			var/image/I = image(icon = unres_file, icon_state="unres_n")
 			I.pixel_y = 32
 			overlays += I
 		if(unres_sides & SOUTH)
-			var/image/I = image(icon='icons/obj/doors/station/unres.dmi', icon_state="unres_s")
+			var/image/I = image(icon = unres_file, icon_state="unres_s")
 			I.pixel_y = -32
 			overlays += I
 		if(unres_sides & EAST)
-			var/image/I = image(icon='icons/obj/doors/station/unres.dmi', icon_state="unres_e")
+			var/image/I = image(icon = unres_file, icon_state="unres_e")
 			I.pixel_x = 32
 			overlays += I
 		if(unres_sides & WEST)
-			var/image/I = image(icon='icons/obj/doors/station/unres.dmi', icon_state="unres_w")
+			var/image/I = image(icon = unres_file, icon_state="unres_w")
 			I.pixel_x = -32
 			overlays += I
 
