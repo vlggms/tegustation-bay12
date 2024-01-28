@@ -21,10 +21,6 @@
 		return TRUE
 	return ..()
 
-/obj/structure/proc/mob_breakout(mob/living/escapee)
-	set waitfor = FALSE
-	return FALSE
-
 /obj/structure/Destroy()
 	reset_mobs_offset()
 	var/turf/T = get_turf(src)
