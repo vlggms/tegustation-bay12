@@ -252,7 +252,15 @@
 
 /area/intrepid/department/engineering/monitoring
 	name = "\improper Engineering Monitoring Room"
-	icon_state = "engimonitor"
+	icon_state = "enginemonitoring"
+
+/area/intrepid/department/engineering/lounge
+	name = "\improper Engineering Lounge"
+	icon_state = "engineeringlounge"
+
+/area/intrepid/department/engineering/bluespacedrive
+	name = "\improper Bluespace Drive"
+	icon_state = "bluespacedrive"
 
 /area/intrepid/department/engineering/shieldcontrol
 	name = "\improper Shield Control"
