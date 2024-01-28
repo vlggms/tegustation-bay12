@@ -925,6 +925,13 @@
 	build_path = /obj/item/stock_parts/circuitboard/radio_beacon
 	sort_string = "XAAAI"
 
+/datum/design/circuit/remote_weapon
+	name = "Bluespace rocket launcher"
+	id = "bluespace_rocket_launcher"
+	req_tech = list(TECH_BLUESPACE = 6, TECH_POWER = 8, TECH_COMBAT = 6)
+	build_path = /obj/item/stock_parts/circuitboard/remote_weapon/loadable
+	sort_string = "XAAAG"
+
 /datum/design/circuit/dominion/AssembleDesignName()
 	if(build_path)
 		var/obj/item/stock_parts/circuitboard/C = build_path
