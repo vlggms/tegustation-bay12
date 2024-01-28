@@ -79,11 +79,12 @@
 	//OBJ
 	#define BELOW_DOOR_LAYER            2.18
 	#define OPEN_DOOR_LAYER             2.19
-	#define BELOW_TABLE_LAYER           2.20
-	#define TABLE_LAYER                 2.21
-	#define BELOW_OBJ_LAYER             2.22
-	#define STRUCTURE_LAYER             2.23
-	#define ABOVE_STRUCTURE_LAYER       2.24
+	#define DOOR_HELPER_LAYER           2.20 //keep this above OPEN_DOOR_LAYER
+	#define BELOW_TABLE_LAYER           2.21
+	#define TABLE_LAYER                 2.22
+	#define BELOW_OBJ_LAYER             2.23
+	#define STRUCTURE_LAYER             2.24
+	#define ABOVE_STRUCTURE_LAYER       2.25
 	// OBJ_LAYER                        3
 	#define ABOVE_OBJ_LAYER             3.01
 	#define CLOSED_DOOR_LAYER           3.02

@@ -65,6 +65,10 @@ var/list/airlock_overlays = list()
 	var/door_crush_damage = DOOR_CRUSH_DAMAGE
 	var/obj/item/airlock_brace/brace = null
 
+	/// Direction to the nearest airlock that will be linked for cycling
+	var/cycle_link_dir = 0
+	var/obj/machinery/door/airlock/cycle_link_airlock
+
 	//Airlock 2.0 Aesthetics Properties
 	//The variables below determine what color the airlock and decorative stripes will be -Cakey
 	var/airlock_type = "Standard"
@@ -440,7 +444,7 @@ About the new airlock wires panel:
 *		one wire for controlling door speed.  When active, dor closes at normal rate.  When cut, door does not close manually.  When pulsed, door attempts to close every tick.
 */
 
-/obj/machinery/door/airlock/bumpopen(mob/living/user as mob) //Airlocks now zap you when you 'bump' them open when they're electrified. --NeoFite
+/obj/machinery/door/airlock/bumpopen(mob/living/user) //Airlocks now zap you when you 'bump' them open when they're electrified. --NeoFite
 	if(!issilicon(usr))
 		if(src.isElectrified())
 			if(!src.justzap)
@@ -457,13 +461,16 @@ About the new airlock wires panel:
 				user.adjustHalLoss(20)
 				user.Weaken(5)
 				return
-	..(user)
+	if(cycle_link_airlock)
+		if(allowed(user))
+			if(cycle_link_airlock.operating)
+				cycle_link_airlock.delayed_close_requested = TRUE
+			else
+				addtimer(CALLBACK(cycle_link_airlock, .proc/close), 2)
+	return ..()
 
 /obj/machinery/door/airlock/proc/set_justzap(val)
 	justzap = val
-
-/obj/machinery/door/airlock/bumpopen(mob/living/simple_animal/user as mob)
-	..(user)
 
 /obj/machinery/door/airlock/proc/isElectrified()
 	if(src.electrified_until != 0)
@@ -750,6 +757,7 @@ About the new airlock wires panel:
 	overlays += lights_overlay
 	overlays += sparks_overlay
 	overlays += damage_overlay
+	CheckUnres()
 
 /obj/machinery/door/airlock/do_animate(animation)
 	if(overlays)
@@ -1225,9 +1233,9 @@ About the new airlock wires panel:
 		s.set_up(5, 1, src)
 		s.start()
 
-/obj/machinery/door/airlock/open(var/forced=0)
+/obj/machinery/door/airlock/open(forced = FALSE)
 	if(!can_open(forced))
-		return 0
+		return FALSE
 	use_power_oneoff(360)	//360 W seems much more appropriate for an actuator moving an industrial door capable of crushing people
 
 	//if the door is unpowered then it doesn't make sense to hear the woosh of a pneumatic actuator
@@ -1240,32 +1248,32 @@ About the new airlock wires panel:
 		src.closeOther.close()
 	return ..()
 
-/obj/machinery/door/airlock/can_open(var/forced=0)
+/obj/machinery/door/airlock/can_open(forced = FALSE)
 	if(brace)
-		return 0
+		return FALSE
 
 	if(!forced)
 		if(!arePowerSystemsOn() || isWireCut(AIRLOCK_WIRE_OPEN_DOOR))
-			return 0
+			return FALSE
 
 	if(locked || welded)
-		return 0
+		return FALSE
 	return ..()
 
 /obj/machinery/door/airlock/can_close(var/forced=0)
 	if(locked || welded)
-		return 0
+		return FALSE
 
 	if(!forced)
 		//despite the name, this wire is for general door control.
 		if(!arePowerSystemsOn() || isWireCut(AIRLOCK_WIRE_OPEN_DOOR))
-			return	0
+			return FALSE
 
 	return ..()
 
-/obj/machinery/door/airlock/close(var/forced=0)
+/obj/machinery/door/airlock/close(forced = FALSE)
 	if(!can_close(forced))
-		return 0
+		return FALSE
 
 	if(safe)
 		for(var/turf/turf in locs)
@@ -1293,43 +1301,45 @@ About the new airlock wires panel:
 	else
 		playsound(src.loc, close_sound_unpowered, 100, 1)
 
-	..()
+	return ..()
 
-/obj/machinery/door/airlock/proc/lock(var/forced=0)
+/obj/machinery/door/airlock/proc/lock(forced = FALSE)
 	if(locked)
-		return 0
+		return FALSE
 
-	if (operating && !forced) return 0
+	if(operating && !forced)
+		return FALSE
 
-	if (lock_cut_state == BOLTS_CUT) return 0 //what bolts?
+	if(lock_cut_state == BOLTS_CUT)
+		return FALSE //what bolts?
 
-	src.locked = 1
+	locked = TRUE
 	playsound(src, bolts_dropping, 30, 0, -6)
 	audible_message("You hear a click from the bottom of the door.", hearing_distance = 1)
 	update_icon()
-	return 1
+	return TRUE
 
-/obj/machinery/door/airlock/proc/unlock(var/forced=0)
-	if(!src.locked)
+/obj/machinery/door/airlock/proc/unlock(forced = FALSE)
+	if(!locked)
 		return
 
 	if (!forced)
 		if(operating || !src.arePowerSystemsOn() || isWireCut(AIRLOCK_WIRE_DOOR_BOLTS))
 			return
 
-	src.locked = 0
+	src.locked = FALSE
 	playsound(src, bolts_rising, 30, 0, -6)
 	audible_message("You hear a click from the bottom of the door.", hearing_distance = 1)
 	update_icon()
-	return 1
+	return TRUE
 
-/obj/machinery/door/airlock/proc/toggle_lock(var/forced = 0)
+/obj/machinery/door/airlock/proc/toggle_lock(forced = FALSE)
 	return locked ? unlock() : lock()
 
 /obj/machinery/door/airlock/allowed(mob/M)
 	if(locked)
-		return 0
-	return ..(M)
+		return FALSE
+	return ..()
 
 /obj/machinery/door/airlock/New(var/newloc, var/obj/structure/door_assembly/assembly=null)
 	..()
@@ -1399,9 +1409,18 @@ About the new airlock wires panel:
 			window_color = window_material.icon_colour
 	. = ..()
 
+/obj/machinery/door/airlock/LateInitialize()
+	. = ..()
+	if(cycle_link_dir)
+		CycleLinkAirlock()
+
 /obj/machinery/door/airlock/Destroy()
 	if(brace)
 		qdel(brace)
+	if(cycle_link_airlock)
+		if(cycle_link_airlock.cycle_link_airlock == src)
+			cycle_link_airlock.cycle_link_airlock = null
+		cycle_link_airlock = null
 	return ..()
 
 /obj/machinery/door/airlock/create_electronics(var/electronics_type = /obj/item/airlock_electronics)
@@ -1474,6 +1493,48 @@ About the new airlock wires panel:
 	else
 		window_color = GLASS_COLOR
 	update_icon()
+
+/obj/machinery/door/airlock/proc/CycleLinkAirlock()
+	if(cycle_link_airlock)
+		cycle_link_airlock.cycle_link_airlock = null
+		cycle_link_airlock = null
+	if(!cycle_link_dir)
+		return
+	var/limit = world.view
+	var/turf/T = get_turf(src)
+	var/obj/machinery/door/airlock/found_door
+	do
+		T = get_step(T, cycle_link_dir)
+		found_door = locate() in T
+		if(found_door && found_door.cycle_link_dir != get_dir(found_door, src))
+			found_door = null
+		limit--
+	while(!found_door && limit)
+	if(!found_door)
+		log_warning("[src] at [get_log_info_line(src)] failed to find a valid airlock to cyclelink with!")
+		return
+	found_door.cycle_link_airlock = src
+	cycle_link_airlock = found_door
+
+// Unrestricted sides. This overlay indicates which directions the player can access even without an ID
+/obj/machinery/door/airlock/proc/CheckUnres()
+	if(arePowerSystemsOn() && unres_sides)
+		if(unres_sides & NORTH)
+			var/image/I = image(icon='icons/obj/doors/station/unres.dmi', icon_state="unres_n")
+			I.pixel_y = 32
+			overlays += I
+		if(unres_sides & SOUTH)
+			var/image/I = image(icon='icons/obj/doors/station/unres.dmi', icon_state="unres_s")
+			I.pixel_y = -32
+			overlays += I
+		if(unres_sides & EAST)
+			var/image/I = image(icon='icons/obj/doors/station/unres.dmi', icon_state="unres_e")
+			I.pixel_x = 32
+			overlays += I
+		if(unres_sides & WEST)
+			var/image/I = image(icon='icons/obj/doors/station/unres.dmi', icon_state="unres_w")
+			I.pixel_x = -32
+			overlays += I
 
 // Public access
 

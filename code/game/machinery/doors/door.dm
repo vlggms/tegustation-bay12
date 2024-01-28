@@ -38,6 +38,12 @@
 
 	var/autoset_access = TRUE // Determines whether the door will automatically set its access from the areas surrounding it. Can be used for mapping.
 
+	/// TRUE means the door will automatically close the next time it's opened.
+	var/delayed_close_requested = FALSE
+
+	/// Unrestricted sides. A bitflag for which direction (if any) can open the door with no access
+	var/unres_sides = 0
+
 	// Multi-tile doors
 	dir = SOUTH
 	/// Width of the door in tiles.
@@ -416,7 +422,7 @@
 	return
 
 
-/obj/machinery/door/proc/open(var/forced = 0)
+/obj/machinery/door/proc/open(forced = FALSE)
 	set waitfor = FALSE
 	if(!can_open(forced))
 		return
@@ -440,19 +446,22 @@
 		set_fillers_opacity(0)
 	operating = 0
 
-	if(autoclose)
+	if(delayed_close_requested)
+		delayed_close_requested = FALSE
+		addtimer(CALLBACK(src, .proc/close), 1)
+	else if(autoclose)
 		close_door_at = next_close_time()
 
-	return 1
+	return TRUE
 
 /obj/machinery/door/proc/next_close_time()
 	return world.time + (normalspeed ? 150 : 5)
 
-/obj/machinery/door/proc/close(var/forced = 0)
+/obj/machinery/door/proc/close(forced = FALSE)
 	set waitfor = FALSE
 	if(!can_close(forced))
 		return
-	operating = 1
+	operating = TRUE
 
 	close_door_at = 0
 	do_animate("closing")
@@ -470,7 +479,9 @@
 			set_fillers_opacity(1)
 	operating = 0
 
-	//I shall not add a check every x ticks if a door has closed over some fire.
+	delayed_close_requested = FALSE
+
+	// I shall not add a check every x ticks if a door has closed over some fire.
 	var/obj/hotspot/fire = locate() in loc
 	if(fire)
 		qdel(fire)
@@ -486,9 +497,15 @@
 	return 1
 
 /obj/machinery/door/allowed(mob/M)
+	if(unrestricted_side(M))
+		return TRUE
 	if(!requiresID())
 		return ..(null) //don't care who they are or what they have, act as if they're NOTHING
-	return ..(M)
+	return ..()
+
+/// Allows for specific side of airlocks to be unrestrected (IE, can exit maint freely, but need access to enter)
+/obj/machinery/door/proc/unrestricted_side(mob/M)
+	return get_dir(src, M) & unres_sides
 
 /obj/machinery/door/update_nearby_tiles(need_rebuild)
 	. = ..()
