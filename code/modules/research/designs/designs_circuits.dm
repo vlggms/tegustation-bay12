@@ -942,14 +942,14 @@
 		else
 			name = "<span style='color: [COLOR_ORANGE]'>\[Dominion Circuit\]</span> - [item_name]"
 
-/datum/design/circuit/mind_engraver
+/datum/design/circuit/dominion/mind_engraver
 	name = "mind engraver"
 	id = "mind_engraver"
 	req_tech = list(TECH_ENGINEERING = 8, TECH_DATA = 6, TECH_DOMINION = 5)
 	build_path = /obj/item/stock_parts/circuitboard/mind_engraver
 	sort_string = "YAAAA"
 
-/datum/design/circuit/mind_engraver_console
+/datum/design/circuit/dominion/mind_engraver_console
 	name = "mind engraver console"
 	id = "mind_engraver_console"
 	req_tech = list(TECH_ENGINEERING = 8, TECH_DATA = 6, TECH_DOMINION = 5)
