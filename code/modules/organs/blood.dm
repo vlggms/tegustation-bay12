@@ -91,11 +91,13 @@
 	return bled
 #undef BLOOD_SPRAY_DISTANCE
 
-/mob/living/carbon/human/proc/remove_blood(var/amt)
+/mob/living/carbon/human/proc/remove_blood(amt)
+	if(!vessel)
+		return FALSE
 	if(!should_have_organ(BP_HEART)) //TODO: Make drips come from the reagents instead.
-		return 0
+		return FALSE
 	if(!amt)
-		return 0
+		return FALSE
 
 	amt *= ((src.mob_size/MOB_MEDIUM) ** 0.5)
 
