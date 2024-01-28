@@ -1,0 +1,380 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"c" = (
+/obj/effect/gibspawner/human,
+/obj/item/clothing/head/helmet/space/emergency,
+/turf/simulated/floor/exoplanet/flesh,
+/area/template_noop)
+"h" = (
+/obj/random/ammo,
+/turf/simulated/floor/asteroid,
+/area/template_noop)
+"m" = (
+/obj/effect/gibspawner/human,
+/turf/simulated/floor/exoplanet/flesh,
+/area/template_noop)
+"n" = (
+/obj/effect/gibspawner/human,
+/mob/living/simple_animal/hostile/infestation/meatchip,
+/obj/random/contraband,
+/turf/simulated/floor/exoplanet/flesh,
+/area/template_noop)
+"p" = (
+/mob/living/simple_animal/hostile/infestation/meatchip,
+/mob/living/simple_animal/hostile/infestation/meatchip,
+/turf/simulated/floor/exoplanet/flesh,
+/area/template_noop)
+"t" = (
+/mob/living/simple_animal/hostile/infestation/aggregate,
+/turf/simulated/floor/exoplanet/flesh,
+/area/template_noop)
+"v" = (
+/obj/random/handgun,
+/turf/simulated/floor/exoplanet/flesh,
+/area/template_noop)
+"x" = (
+/obj/effect/decal/remains,
+/turf/simulated/floor/asteroid,
+/area/template_noop)
+"y" = (
+/mob/living/simple_animal/hostile/infestation/meatchip,
+/obj/random/raider/biggun,
+/turf/simulated/floor/exoplanet/flesh,
+/area/template_noop)
+"A" = (
+/obj/random/ore,
+/turf/simulated/floor/asteroid,
+/area/template_noop)
+"D" = (
+/turf/simulated/floor/asteroid,
+/area/template_noop)
+"E" = (
+/obj/item/pickaxe{
+	pixel_x = 5;
+	pixel_y = 3
+	},
+/turf/simulated/floor/asteroid,
+/area/template_noop)
+"H" = (
+/mob/living/simple_animal/hostile/infestation/meatchip,
+/turf/simulated/floor/exoplanet/flesh,
+/area/template_noop)
+"J" = (
+/obj/effect/decal/remains,
+/turf/simulated/floor/exoplanet/flesh,
+/area/template_noop)
+"M" = (
+/obj/structure/ore_box,
+/turf/simulated/floor/asteroid,
+/area/template_noop)
+"P" = (
+/obj/effect/decal/remains,
+/obj/random/raider/hardsuit,
+/turf/simulated/floor/exoplanet/flesh,
+/area/template_noop)
+"T" = (
+/obj/item/shovel,
+/turf/simulated/floor/asteroid,
+/area/template_noop)
+"W" = (
+/turf/simulated/mineral,
+/area/template_noop)
+"X" = (
+/obj/effect/gibspawner/human,
+/obj/item/clothing/suit/space/emergency,
+/turf/simulated/floor/exoplanet/flesh,
+/area/template_noop)
+"Y" = (
+/turf/simulated/floor/exoplanet/flesh,
+/area/template_noop)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+W
+a
+a
+a
+W
+W
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+a
+a
+W
+W
+W
+y
+W
+a
+W
+M
+x
+W
+W
+W
+W
+"}
+(3,1,1) = {"
+a
+a
+W
+Y
+Y
+m
+Y
+W
+W
+W
+h
+E
+W
+W
+A
+D
+"}
+(4,1,1) = {"
+a
+a
+W
+m
+Y
+J
+Y
+W
+H
+x
+T
+x
+A
+D
+D
+x
+"}
+(5,1,1) = {"
+a
+W
+W
+Y
+Y
+H
+Y
+Y
+Y
+W
+W
+W
+W
+W
+W
+W
+"}
+(6,1,1) = {"
+W
+Y
+n
+Y
+Y
+Y
+Y
+J
+Y
+Y
+J
+W
+a
+a
+a
+a
+"}
+(7,1,1) = {"
+a
+W
+Y
+Y
+J
+Y
+H
+Y
+Y
+X
+H
+W
+a
+a
+a
+a
+"}
+(8,1,1) = {"
+a
+W
+Y
+Y
+m
+Y
+Y
+Y
+m
+Y
+Y
+W
+a
+a
+a
+a
+"}
+(9,1,1) = {"
+W
+Y
+Y
+H
+Y
+Y
+Y
+c
+Y
+Y
+Y
+W
+a
+a
+a
+a
+"}
+(10,1,1) = {"
+a
+W
+J
+Y
+Y
+t
+Y
+Y
+Y
+p
+Y
+W
+W
+a
+a
+a
+"}
+(11,1,1) = {"
+a
+W
+Y
+Y
+H
+Y
+Y
+Y
+H
+Y
+Y
+Y
+Y
+W
+a
+a
+"}
+(12,1,1) = {"
+a
+W
+m
+H
+Y
+Y
+Y
+Y
+J
+v
+J
+W
+W
+a
+a
+a
+"}
+(13,1,1) = {"
+a
+W
+P
+Y
+Y
+Y
+m
+Y
+Y
+Y
+m
+W
+a
+a
+a
+a
+"}
+(14,1,1) = {"
+a
+W
+Y
+Y
+Y
+Y
+Y
+Y
+m
+H
+W
+a
+a
+a
+a
+a
+"}
+(15,1,1) = {"
+a
+W
+Y
+W
+W
+W
+W
+W
+W
+W
+a
+a
+a
+a
+a
+a
+"}
+(16,1,1) = {"
+a
+a
+W
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
