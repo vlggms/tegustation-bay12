@@ -1645,7 +1645,6 @@
 /turf/simulated/floor/tiled/monotile,
 /area/eva)
 "ek" = (
-/obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
@@ -1653,6 +1652,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/portside)
 "em" = (
@@ -1930,8 +1930,8 @@
 /obj/machinery/door/airlock/glass/civilian{
 	name = "Portside Bow Maintenance Shaft"
 	},
-/obj/machinery/atmospherics/valve/shutoff/scrubbers,
-/obj/machinery/atmospherics/valve/shutoff/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/portside)
 "eY" = (
@@ -4507,8 +4507,8 @@
 /obj/machinery/door/airlock/glass/civilian{
 	name = "Starboard Bow Maintenance Shaft"
 	},
-/obj/machinery/atmospherics/valve/shutoff/supply,
-/obj/machinery/atmospherics/valve/shutoff/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/starboard)
 "ll" = (
@@ -12096,9 +12096,8 @@
 "Dp" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/multi_tile/mining,
-/obj/machinery/atmospherics/valve/shutoff/scrubbers,
-/obj/machinery/atmospherics/valve/shutoff/supply,
-/obj/effect/floor_decal/industrial/shutoff,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/cargo/cargostorage)
 "Dr" = (
@@ -14325,13 +14324,13 @@
 /area/intrepid/department/engineering/monitoring)
 "Jg" = (
 /obj/machinery/door/airlock/maintenance,
-/obj/machinery/atmospherics/valve/shutoff/scrubbers,
-/obj/machinery/atmospherics/valve/shutoff/supply,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor,
 /area/intrepid/department/medical/morgue)
 "Jh" = (
@@ -34021,7 +34020,7 @@ LY
 pR
 Ui
 lk
-IF
+ax
 IF
 IF
 IF
