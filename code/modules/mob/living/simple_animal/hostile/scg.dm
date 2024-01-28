@@ -89,6 +89,7 @@
 	if(!.)
 		return
 	ranged = FALSE
+	projectiletype = null
 	natural_weapon = /obj/item/material/hatchet/machete/unbreakable
 
 	visible_message(SPAN_WARNING("\The [src] discards their rifle and pulls out a machette!"))

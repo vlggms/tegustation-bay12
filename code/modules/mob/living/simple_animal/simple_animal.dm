@@ -73,7 +73,8 @@
 	var/attack_sound = null				// Sound to play when I attack
 	var/attack_armor_pen = 0			// How much armor pen this attack has.
 
-	var/melee_attack_delay = 2			// If set, the mob will do a windup animation and can miss if the target moves out of the way.
+	// If set, the mob will do a windup animation and can miss if the target moves out of the way.
+	var/melee_attack_delay = null
 	var/ranged_attack_delay = null
 	var/special_attack_delay = null
 
@@ -366,6 +367,8 @@
 	if(. & MOVEMENT_HANDLED)
 		if(movement_shake_radius)
 			for(var/mob/living/L in range(movement_shake_radius, src))
+				if(L == src)
+					continue
 				shake_camera(L, 1, 1)
 		if(turn_sound && dir != old_dir)
 			playsound(src, turn_sound, 50, 1)
