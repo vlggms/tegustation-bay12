@@ -189,5 +189,14 @@
 		holder.IMove(get_step_away(holder, A))
 		holder.face_atom(A)
 
+/datum/ai_holder/simple_animal/humanoid/hostile/threaten
+	threaten = TRUE
+	threaten_timeout = 3 MINUTES
+	threaten_delay = 8 SECONDS
+
 /datum/ai_holder/simple_animal/humanoid/hostile/violent
 	mauling = TRUE
+
+/datum/ai_holder/simple_animal/humanoid/hostile/violent/threaten
+	threaten = TRUE
+	threaten_timeout = 6 MINUTES

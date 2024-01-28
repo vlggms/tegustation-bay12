@@ -60,6 +60,7 @@
 		if(I_DISARM)
 			M.visible_message(SPAN_NOTICE("[M] [response_disarm] \the [src]."))
 			M.do_attack_animation(src)
+			DisarmEffect(M)
 
 		if(I_HURT)
 			var/dealt_damage = harm_intent_damage
@@ -132,7 +133,7 @@
 			if (ai_holder)
 				ai_holder.react_to_attack(user)
 
-/mob/living/simple_animal/hit_with_weapon(obj/item/O, mob/living/user, var/effective_force, var/hit_zone)
+/mob/living/simple_animal/hit_with_weapon(obj/item/O, mob/living/user, effective_force, hit_zone)
 
 	visible_message(SPAN_DANGER("\The [src] has been attacked with \the [O] by [user]!"))
 
@@ -167,3 +168,6 @@
 		attacker.apply_damage(rand(return_damage_min, return_damage_max), damage_type, hand_hurtie, used_weapon = description)
 		if(rand(25))
 			to_chat(attacker, SPAN_WARNING("Your attack has no obvious effect on \the [src]'s [description]!"))
+
+/mob/living/simple_animal/proc/DisarmEffect(mob/living/carbon/human/attacker)
+	return

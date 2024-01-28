@@ -9,6 +9,9 @@
 	/// time when this mob is allowed to call for help
 	var/next_sent_help_request  = 0
 
+	/// Cooldown to the next request
+	var/next_sent_help_request_delay = 10 SECONDS
+
 	/// time when the mob can receive a help request from another mob
 	var/next_received_help_request  = 0
 
@@ -46,28 +49,47 @@
 	else // We're the 'founder' (first and/or only member) of this faction.
 		faction_friends |= holder
 
+/datum/ai_holder/proc/ShouldRequestHelp()
+	if(holder.health >= holder.maxHealth * 0.6)
+		return FALSE
+	if(!length(faction_friends))
+		return FALSE
+	return TRUE
+
 // Requests help in combat from other mobs possessing ai_holders.
 /datum/ai_holder/proc/request_help()
 	ai_log("request_help() : Entering.", AI_LOG_DEBUG)
 	if (!cooperative || world.time < next_sent_help_request  || world.time < next_received_help_request)
 		return
 
+	if(ShouldRequestHelp())
+		return
+
 	ai_log("request_help() : Asking for help.", AI_LOG_INFO)
-	next_sent_help_request  = world.time + 10 SECONDS
+	next_sent_help_request  = world.time + next_sent_help_request_delay
 
-	for (var/mob/living/L in faction_friends)
-		if (L == holder) // Lets not call ourselves.
-			continue
-		if (holder.z != L.z) // On seperate z-level.
-			continue
-		if (get_dist(L, holder) > call_distance) // Too far to 'hear' the call for help.
-			continue
+	if(holder.say_list)
+		holder.ISay(pick(holder.say_list.speak))
+		PlayMobSound(holder.say_list.speak_sounds)
 
-		if (holder.IIsAlly(L) && L.ai_holder)
-			ai_log("request_help() : Asking [L] (AI) for help.", AI_LOG_INFO)
-			L.ai_holder.help_requested(holder)
+	for(var/mob/living/L in GetFriendsInCallRange())
+		ai_log("request_help() : Asking [L] (AI) for help.", AI_LOG_INFO)
+		L.ai_holder.help_requested(holder)
 
 	ai_log("request_help() : Exiting.", AI_LOG_DEBUG)
+
+/datum/ai_holder/proc/GetFriendsInCallRange()
+	. = list()
+	for (var/mob/living/L in faction_friends)
+		if(L == holder) // Lets not call ourselves.
+			continue
+		if(holder.z != L.z) // On seperate z-level.
+			continue
+		if(get_dist(L, holder) > call_distance) // Too far to 'hear' the call for help.
+			continue
+		if(!holder.IIsAlly(L) || !L.ai_holder)
+			continue
+		. += L
 
 // What allies receive when someone else is calling for help.
 /datum/ai_holder/proc/help_requested(mob/living/friend)

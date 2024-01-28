@@ -32,6 +32,8 @@
 	var/list/say_stand_down = list()	// When the threatened thing goes away.
 	var/list/say_escalate = list()		// When the threatened thing doesn't go away.
 
+	var/list/say_help = list()			// When we are requesting help
+
 	// Lists belows are ASSOCIATIVE lists! Sound = Chance. If null is in there - it will not play sound when prompted
 	var/list/speak_sounds = list()		// Sounds that can be played when anything from speak list is said
 	var/list/emote_hear_sounds = list()	// Sounds that can be played when anything from emote_hear is performed
