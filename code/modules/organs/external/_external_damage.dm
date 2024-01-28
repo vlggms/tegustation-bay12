@@ -3,8 +3,8 @@
 ****************************************************/
 
 /obj/item/organ/external/proc/is_damageable(var/additional_damage = 0)
-	//Continued damage to vital organs can kill you, and robot organs don't count towards total damage so no need to cap them.
-	return (BP_IS_ROBOTIC(src) || brute_dam + burn_dam + additional_damage < max_damage * 4)
+	// Continued damage to vital organs can kill you, and robot organs don't count towards total damage so no need to cap them.
+	return (BP_IS_ROBOTIC(src) || brute_dam + burn_dam + additional_damage < max_damage * config.organ_health_multiplier * 4)
 
 /obj/item/organ/external/take_general_damage(var/amount, var/silent = FALSE)
 	take_external_damage(amount)
@@ -47,9 +47,9 @@
 		owner.updatehealth() //droplimb will call updatehealth() again if it does end up being called
 		if(!is_stump() && (limb_flags & ORGAN_FLAG_CAN_AMPUTATE) && config.limbs_can_break)
 			var/total_damage = brute_dam + burn_dam + brute + burn + spillover
-			var/threshold = max_damage * config.organ_health_multiplier * 1.5
+			var/threshold = max_damage * config.organ_health_multiplier * 4
 			if(total_damage > threshold)
-				if(attempt_dismemberment(pure_brute, burn, sharp, edge, used_weapon, spillover, total_damage > threshold*6))
+				if(attempt_dismemberment(pure_brute, burn, sharp, edge, used_weapon, spillover, total_damage >= threshold))
 					return
 
 	//blunt damage is gud at fracturing
