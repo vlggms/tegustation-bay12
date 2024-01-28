@@ -52,6 +52,10 @@
 	threaten_sound = 'sound/weapons/TargetOn.ogg'
 	stand_down_sound = 'sound/weapons/TargetOff.ogg'
 
+/mob/living/simple_animal/hostile/scg_explorer/death()
+	. = ..()
+	check_delete()
+
 // This one starts with laser rifle. When out of "ammo" - discards it and uses machette
 /mob/living/simple_animal/hostile/scg_explorer/armed
 	desc = "An SCG explorer armed with basic laser rifle."

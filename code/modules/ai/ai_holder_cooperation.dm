@@ -69,7 +69,7 @@
 	next_sent_help_request  = world.time + next_sent_help_request_delay
 
 	if(holder.say_list)
-		holder.ISay(pick(holder.say_list.speak))
+		holder.ISay(pick(holder.say_list.say_help))
 		PlayMobSound(holder.say_list.speak_sounds)
 
 	for(var/mob/living/L in GetFriendsInCallRange())
