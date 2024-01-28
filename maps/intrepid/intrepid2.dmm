@@ -3059,6 +3059,9 @@
 	c_tag = "AI Chamber - Sillicon Maintenance";
 	network = list("Command")
 	},
+/obj/machinery/computer/cryopod/robot{
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/techfloor{
 	initial_gas = null
 	},
@@ -14225,11 +14228,6 @@
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
-	},
-/obj/machinery/camera/motion{
-	c_tag = "AI Chamber - Silicon Upload";
-	network = list("Command");
-	dir = 8
 	},
 /turf/simulated/floor/tiled/dark/airless,
 /area/intrepid/department/command/AI/AICore)
