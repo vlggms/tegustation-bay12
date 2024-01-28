@@ -1980,11 +1980,12 @@
 /turf/simulated/floor/tiled/monotile,
 /area/eva)
 "fe" = (
-/obj/machinery/door/airlock/glass/civilian{
-	name = "Docking Bay 5"
+/obj/structure/table/standard,
+/obj/machinery/newscaster{
+	pixel_y = 32
 	},
-/turf/simulated/floor/tiled/techmaint,
-/area/intrepid/department/civillian/dockbaysix)
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/civillian/dockbayone)
 "ff" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable/orange{
@@ -3058,10 +3059,6 @@
 	c_tag = "AI Chamber - Sillicon Maintenance";
 	network = list("Command")
 	},
-/obj/machinery/alarm/nobreach{
-	dir = 8;
-	pixel_x = 24
-	},
 /turf/simulated/floor/tiled/techfloor{
 	initial_gas = null
 	},
@@ -3530,6 +3527,9 @@
 /area/intrepid/misc/maint/upper/portside)
 "iK" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/machinery/newscaster{
+	pixel_y = 32
+	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/central)
 "iL" = (
@@ -4595,17 +4595,12 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/engineering/lockerroom)
 "lt" = (
-/obj/machinery/computer/modular{
-	dir = 4
+/obj/structure/table/standard,
+/obj/machinery/newscaster{
+	pixel_x = -32
 	},
-/obj/machinery/alarm/nobreach{
-	dir = 4;
-	pixel_x = -24
-	},
-/turf/simulated/floor/tiled/techfloor/grid{
-	initial_gas = null
-	},
-/area/intrepid/department/command/AI/AIFoyer)
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/engineering/lounge)
 "lv" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -5768,10 +5763,6 @@
 "nY" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/toolbox/mechanical,
-/obj/machinery/alarm/nobreach{
-	dir = 1;
-	pixel_y = -24
-	},
 /turf/simulated/floor/tiled/techfloor/grid{
 	initial_gas = null
 	},
@@ -6482,29 +6473,12 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/central)
 "pY" = (
-/obj/structure/railing/mapped{
-	dir = 8;
-	icon_state = "railing0-1"
+/obj/structure/table/standard,
+/obj/machinery/newscaster{
+	pixel_y = 32
 	},
-/obj/structure/railing/mapped{
-	dir = 4;
-	icon_state = "railing0-1"
-	},
-/obj/structure/railing/mapped,
-/obj/structure/railing/mapped{
-	dir = 1;
-	icon_state = "railing0-1"
-	},
-/obj/structure/flora/pottedplant/unusual{
-	pixel_y = 7
-	},
-/obj/machinery/alarm/nobreach{
-	pixel_y = 24
-	},
-/turf/simulated/floor/tiled/techfloor/grid{
-	initial_gas = null
-	},
-/area/intrepid/department/command/AI/AIFoyer)
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/civillian/dockbaytwo)
 "pZ" = (
 /obj/structure/railing/mapped{
 	dir = 8;
@@ -6629,6 +6603,9 @@
 /obj/machinery/camera/network/engineering{
 	c_tag = "Engineering - Engineering Monitoring";
 	dir = 4
+	},
+/obj/machinery/newscaster{
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/monitoring)
@@ -7767,6 +7744,9 @@
 /obj/machinery/camera/network/engineering{
 	c_tag = "Engineering - Engineering Lounge"
 	},
+/obj/machinery/newscaster{
+	pixel_y = 32
+	},
 /turf/simulated/floor,
 /area/intrepid/department/engineering/lounge)
 "sW" = (
@@ -7889,7 +7869,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/pandora/cargo)
 "th" = (
-/obj/machinery/computer/gravity_control_computer{
+/obj/machinery/computer/modular/preset/engineering{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -14835,6 +14815,9 @@
 	pixel_x = 17
 	},
 /obj/item/storage/box/psiimp,
+/obj/machinery/newscaster{
+	pixel_y = 32
+	},
 /turf/simulated/floor/wood,
 /area/intrepid/department/command/commandquarters/psiadvisor)
 "Kw" = (
@@ -15351,10 +15334,6 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
-	},
-/obj/machinery/alarm/nobreach{
-	dir = 4;
-	pixel_x = -24
 	},
 /turf/simulated/floor/tiled/dark/airless,
 /area/intrepid/department/command/AI/AICore)
@@ -19449,30 +19428,12 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/central)
 "VJ" = (
-/obj/structure/railing/mapped{
-	dir = 8;
-	icon_state = "railing0-1"
+/obj/structure/table/standard,
+/obj/machinery/newscaster{
+	pixel_y = 32
 	},
-/obj/structure/railing/mapped{
-	dir = 4;
-	icon_state = "railing0-1"
-	},
-/obj/structure/railing/mapped,
-/obj/structure/railing/mapped{
-	dir = 1;
-	icon_state = "railing0-1"
-	},
-/obj/structure/flora/pottedplant/unusual{
-	pixel_y = 7
-	},
-/obj/machinery/alarm/nobreach{
-	dir = 8;
-	pixel_x = 24
-	},
-/turf/simulated/floor/tiled/techfloor/grid{
-	initial_gas = null
-	},
-/area/intrepid/department/command/AI/AIFoyer)
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/civillian/dockbaythree)
 "VK" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/machinery/alarm{
@@ -20662,6 +20623,7 @@
 /obj/machinery/alarm{
 	pixel_y = 24
 	},
+/obj/item/device/paicard,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/monitoring)
 "YI" = (
@@ -38695,7 +38657,7 @@ ml
 ml
 ml
 RH
-KJ
+fe
 Pw
 MP
 Yi
@@ -42331,7 +42293,7 @@ ml
 ml
 ml
 Na
-XH
+pY
 PR
 Ip
 Yr
@@ -45013,7 +44975,7 @@ It
 Rc
 YK
 Xd
-Pz
+lt
 qf
 iv
 YK
@@ -45967,7 +45929,7 @@ Cf
 Cf
 Aw
 Rj
-kH
+VJ
 Dy
 wj
 Qi
@@ -46032,7 +45994,7 @@ Uh
 du
 uR
 AX
-fe
+YF
 mb
 du
 ml
@@ -48418,7 +48380,7 @@ Pk
 qC
 qC
 Ef
-lt
+rH
 lF
 rH
 Ef
@@ -48430,7 +48392,7 @@ qC
 Ef
 rH
 lF
-lt
+rH
 Ef
 qC
 qC
@@ -50234,7 +50196,7 @@ Nx
 jI
 Up
 qC
-pY
+Ef
 oJ
 kB
 Tu
@@ -50843,7 +50805,7 @@ qC
 IG
 rx
 Gr
-VJ
+Ef
 Ov
 Ov
 Ov

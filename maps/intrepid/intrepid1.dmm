@@ -651,6 +651,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/atmospherics/binary/pump{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/engineering/atmos)
 "aIe" = (
@@ -1226,6 +1229,9 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark/monotile,
@@ -3671,6 +3677,16 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/security/wing)
+"cKl" = (
+/obj/machinery/atmospherics/portables_connector,
+/obj/effect/floor_decal/industrial/box_corners/yellow{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/box_corners/yellow{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/intrepid/department/engineering/atmos)
 "cKs" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance{
@@ -4074,6 +4090,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/security/wing)
@@ -6094,6 +6113,7 @@
 /obj/effect/floor_decal/corner/research/border{
 	dir = 1
 	},
+/obj/item/device/paicard,
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/research/hallway)
 "esJ" = (
@@ -8789,6 +8809,9 @@
 	},
 /obj/effect/floor_decal/corner/orange/mono,
 /obj/machinery/light,
+/obj/machinery/atmospherics/binary/pump{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/engineering/atmos)
 "gzs" = (
@@ -9742,6 +9765,7 @@
 	dir = 1
 	},
 /obj/structure/table/standard,
+/obj/item/device/paicard,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/bridge)
 "hjQ" = (
@@ -11123,6 +11147,7 @@
 	d2 = 6;
 	icon_state = "5-6"
 	},
+/obj/effect/mapping_helpers/airlock/unres,
 /turf/simulated/floor/tiled/white/monotile,
 /area/intrepid/department/medical/treatment)
 "imp" = (
@@ -11863,6 +11888,7 @@
 /obj/effect/floor_decal/corner/research/border{
 	dir = 1
 	},
+/obj/item/device/paicard,
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/rd)
 "iOW" = (
@@ -11933,6 +11959,12 @@
 /area/intrepid/department/command/bridge)
 "iQf" = (
 /obj/machinery/atmospherics/portables_connector,
+/obj/effect/floor_decal/industrial/box_corners/yellow{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/box_corners/yellow{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/intrepid/department/engineering/atmos)
 "iQt" = (
@@ -12340,6 +12372,9 @@
 "jlX" = (
 /obj/structure/filingcabinet/chestdrawer,
 /obj/machinery/light/dystopian,
+/obj/machinery/newscaster{
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/command/commandquarters/tgs)
 "jmJ" = (
@@ -13209,6 +13244,9 @@
 	c_tag = "Research - Xenobiology Laboratory";
 	dir = 8
 	},
+/obj/machinery/newscaster{
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/xenobiolab)
 "jTi" = (
@@ -13313,6 +13351,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/intrepid/misc/hallway/starboard)
+"jXT" = (
+/obj/machinery/newscaster{
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled,
+/area/intrepid/department/engineering/atmos)
 "jYC" = (
 /obj/effect/floor_decal/corner/blue/mono,
 /obj/machinery/door/window/brigdoor/northright,
@@ -13683,6 +13727,10 @@
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 10
 	},
+/obj/structure/closet/firecloset/chief{
+	anchored = 1
+	},
+/obj/effect/floor_decal/industrial/bot/red,
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/engineering/atmos)
 "knK" = (
@@ -15177,6 +15225,9 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/newscaster{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/treatment)
@@ -17250,9 +17301,6 @@
 /obj/effect/catwalk_plated/dark,
 /obj/machinery/atmospherics/pipe/simple/visible/fuel,
 /obj/structure/disposalpipe/segment,
-/obj/structure/sign/directions/engineering{
-	pixel_x = 32
-	},
 /obj/structure/cable/orange{
 	d1 = 1;
 	d2 = 8;
@@ -18085,10 +18133,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/visible/fuel,
 /obj/structure/disposalpipe/segment,
-/obj/structure/sign/directions/engineering{
-	dir = 1;
-	pixel_x = 32
-	},
 /obj/effect/catwalk_plated/dark,
 /turf/simulated/floor,
 /area/intrepid/department/engineering/drone_fabrication)
@@ -19311,6 +19355,12 @@
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
+"oeb" = (
+/obj/machinery/newscaster{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/exploration/storage)
 "oeq" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -20734,6 +20784,9 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/security/wing)
 "pbc" = (
@@ -21422,6 +21475,10 @@
 	c_tag = "Engineering - Atmospherics Stern";
 	dir = 1
 	},
+/obj/structure/closet/firecloset/chief{
+	anchored = 1
+	},
+/obj/effect/floor_decal/industrial/bot/red,
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/engineering/atmos)
 "pFR" = (
@@ -22546,6 +22603,9 @@
 	pixel_y = 23
 	},
 /obj/machinery/uniform_vendor,
+/obj/machinery/newscaster{
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/command/commandquarters/tgs)
 "qpZ" = (
@@ -24089,6 +24149,9 @@
 /obj/effect/floor_decal/corner/research/mono,
 /obj/machinery/photocopier,
 /obj/structure/table/standard,
+/obj/machinery/newscaster{
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/research/fabricator)
 "rvN" = (
@@ -24375,6 +24438,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/intrepid/department/cargo/cargobay)
+"rIb" = (
+/obj/machinery/newscaster{
+	pixel_x = 32
+	},
+/turf/simulated/floor/carpet/orange,
+/area/intrepid/department/exploration/storage)
 "rIx" = (
 /obj/effect/floor_decal/corner/research{
 	dir = 8
@@ -25130,6 +25199,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/item/device/paicard,
 /turf/simulated/floor/wood/walnut,
 /area/intrepid/department/civillian/mess)
 "sgL" = (
@@ -25213,6 +25283,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark/monotile,
@@ -25438,6 +25511,9 @@
 	sensor_tag = "tox_sensor"
 	},
 /obj/effect/floor_decal/corner/purple/mono,
+/obj/machinery/atmospherics/binary/pump{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/engineering/atmos)
 "sqS" = (
@@ -27288,6 +27364,17 @@
 /obj/effect/floor_decal/industrial/delivery_sharp/yellow,
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/misc/maint/aft)
+"tBE" = (
+/obj/machinery/atmospherics/portables_connector,
+/obj/effect/floor_decal/industrial/box/arrows/red,
+/obj/effect/floor_decal/industrial/box_corners/yellow{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/box_corners/yellow{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/intrepid/department/engineering/atmos)
 "tCg" = (
 /obj/structure/railing/mapped{
 	dir = 1;
@@ -27599,6 +27686,10 @@
 "tMC" = (
 /obj/machinery/atmospherics/pipe/simple/visible/supply{
 	dir = 10
+	},
+/obj/machinery/newscaster{
+	pixel_x = -32;
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
 /area/intrepid/department/engineering/atmos)
@@ -30499,6 +30590,10 @@
 /obj/item/device/robotanalyzer,
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/research/xenoarchlab)
+"vLa" = (
+/obj/machinery/newscaster,
+/turf/simulated/wall/ebony,
+/area/intrepid/department/civillian/bar)
 "vLh" = (
 /obj/structure/table/standard,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -32025,6 +32120,17 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
+"wSp" = (
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 1
+	},
+/obj/structure/closet/secure_closet/medical_intrepid,
+/obj/effect/floor_decal/industrial/bot/yellow,
+/obj/machinery/newscaster{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/white,
+/area/intrepid/department/medical/equipment)
 "wSC" = (
 /obj/structure/disposalpipe/segment/bent{
 	dir = 8
@@ -49205,7 +49311,7 @@ fRQ
 fRQ
 aZY
 rmu
-orz
+vLa
 pNA
 qRb
 qRb
@@ -54516,7 +54622,7 @@ dQZ
 qwl
 jLN
 nTt
-sal
+wSp
 sCj
 mGY
 nTt
@@ -61158,7 +61264,7 @@ nlc
 pRf
 vte
 bWI
-qkQ
+tBE
 sqO
 vxW
 wDc
@@ -61562,7 +61668,7 @@ nlc
 uka
 fDp
 bWI
-qkQ
+cKl
 gyt
 nlc
 wDc
@@ -61966,7 +62072,7 @@ nlc
 sgq
 rrx
 uqS
-qkQ
+cKl
 aHc
 nlc
 bWl
@@ -62394,7 +62500,7 @@ cnE
 sPq
 yfM
 hzT
-vaq
+rIb
 gKv
 vFH
 sCT
@@ -62591,7 +62697,7 @@ xgP
 fdc
 tti
 tvB
-sPq
+oeb
 pFR
 sPq
 yfM
@@ -62775,7 +62881,7 @@ mXH
 kfK
 osX
 qDm
-qkQ
+jXT
 uff
 iVp
 iuw
