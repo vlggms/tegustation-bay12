@@ -1,3 +1,19 @@
+#ifndef PSI_IMPLANT_AUTOMATIC
+#define PSI_IMPLANT_AUTOMATIC "Security Level Derived"
+#endif
+#ifndef PSI_IMPLANT_SHOCK
+#define PSI_IMPLANT_SHOCK     "Issue Neural Shock"
+#endif
+#ifndef PSI_IMPLANT_WARN
+#define PSI_IMPLANT_WARN      "Issue Reprimand"
+#endif
+#ifndef PSI_IMPLANT_LOG
+#define PSI_IMPLANT_LOG       "Log Incident"
+#endif
+#ifndef PSI_IMPLANT_DISABLED
+#define PSI_IMPLANT_DISABLED  "Disabled"
+#endif
+
 /datum/map/intrepid // setting the map to use this list
 	security_state = /decl/security_state/default/intrepid
 
@@ -164,3 +180,9 @@
 		heads of staff. Any violations of these orders can be punished by death. This is not a drill.",\
 		"Attention! Delta security level reached!")
 	notify_station()
+
+#undef PSI_IMPLANT_AUTOMATIC
+#undef PSI_IMPLANT_SHOCK
+#undef PSI_IMPLANT_WARN
+#undef PSI_IMPLANT_LOG
+#undef PSI_IMPLANT_DISABLED
