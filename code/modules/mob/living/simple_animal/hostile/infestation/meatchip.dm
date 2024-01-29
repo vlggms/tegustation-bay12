@@ -37,3 +37,8 @@
 	default_pixel_y = rand(-6, 6)
 	pixel_x = default_pixel_x
 	pixel_y = default_pixel_y
+
+/mob/living/simple_animal/hostile/infestation/meatchip/proc/TimedDeath()
+	if(QDELETED(src) || stat == DEAD)
+		return
+	death()
