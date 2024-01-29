@@ -1179,6 +1179,14 @@
 /obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/cargo/cargobay)
+"aYq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 17
+	},
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/misc/hallway/center)
 "aYv" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -2490,8 +2498,8 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/obj/machinery/power/solar/improved,
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
+/obj/machinery/power/solar,
 /turf/simulated/floor/airless,
 /area/space)
 "bVs" = (
@@ -2577,6 +2585,14 @@
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/portside)
+"bXQ" = (
+/obj/effect/floor_decal/industrial/box_corners/yellow,
+/obj/effect/floor_decal/industrial/box_corners/yellow{
+	dir = 8
+	},
+/obj/machinery/pipedispenser,
+/turf/simulated/floor/tiled/monotile,
+/area/intrepid/department/engineering/atmos)
 "bXR" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
@@ -2618,7 +2634,7 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor/airless,
 /area/space)
 "bYg" = (
@@ -2761,7 +2777,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor/airless,
 /area/space)
 "caJ" = (
@@ -4008,7 +4024,7 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor/airless,
 /area/space)
 "cZl" = (
@@ -4641,7 +4657,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor/airless,
 /area/space)
 "dwD" = (
@@ -5333,6 +5349,10 @@
 /obj/structure/railing/mapped{
 	dir = 1;
 	icon_state = "railing0-1"
+	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -22
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/bridge)
@@ -6402,7 +6422,7 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor/airless,
 /area/space)
 "eEN" = (
@@ -8179,7 +8199,7 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor/airless,
 /area/space)
 "fVm" = (
@@ -8409,6 +8429,10 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 17
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/center)
@@ -8770,6 +8794,15 @@
 /obj/effect/wingrille_spawn/reinforced_phoron/full,
 /turf/simulated/floor,
 /area/intrepid/department/engineering/primarythruster)
+"gvh" = (
+/obj/machinery/atmospherics/valve{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	pixel_y = 15
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/shuttle/research/xenofloralab)
 "gvM" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
@@ -9525,7 +9558,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor/airless,
 /area/space)
 "hbr" = (
@@ -9736,6 +9769,21 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/turbolift/marine/lift)
+"hhk" = (
+/obj/effect/floor_decal/corner/blue/diagonal,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 17
+	},
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/department/command/computerlab)
 "hhI" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled,
@@ -10393,7 +10441,7 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor/airless,
 /area/space)
 "hGR" = (
@@ -11496,7 +11544,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor/airless,
 /area/space)
 "iBb" = (
@@ -14292,7 +14340,7 @@
 	icon_state = "0-2";
 	pixel_y = 0
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor/airless,
 /area/space)
 "kKf" = (
@@ -15569,6 +15617,16 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor,
 /area/intrepid/misc/hallway/portside)
+"lAa" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 17
+	},
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/department/command/meetingroom)
 "lAg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -15774,7 +15832,7 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor/airless,
 /area/space)
 "lJg" = (
@@ -16232,6 +16290,20 @@
 /area/crew_quarters/sleep/bunk)
 "mbW" = (
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/obj/machinery/atmospherics/unary/vent_pump/tank{
+	dir = 8;
+	external_pressure_bound = 0;
+	external_pressure_bound_default = 0;
+	icon_state = "map_vent_in";
+	id_tag = "co2_out";
+	initialize_directions = 1;
+	internal_pressure_bound = 4000;
+	internal_pressure_bound_default = 4000;
+	pressure_checks = 2;
+	pressure_checks_default = 2;
+	pump_direction = 0;
+	use_power = 1
+	},
 /turf/simulated/floor/reinforced/carbon_dioxide,
 /area/intrepid/department/engineering/atmos)
 "mda" = (
@@ -17146,6 +17218,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/center)
 "mDn" = (
+/obj/machinery/atmospherics/unary/outlet_injector{
+	frequency = 1441;
+	icon_state = "map_injector";
+	id = "co2_in";
+	use_power = 1
+	},
 /turf/simulated/floor/reinforced/carbon_dioxide,
 /area/intrepid/department/engineering/atmos)
 "mDy" = (
@@ -18919,7 +18997,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor/airless,
 /area/space)
 "nJv" = (
@@ -19105,6 +19183,10 @@
 /obj/structure/table/glass,
 /obj/structure/reagent_dispensers/virus_food{
 	pixel_y = -32
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -17
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/virology)
@@ -21018,7 +21100,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor/airless,
 /area/space)
 "pjQ" = (
@@ -22655,6 +22737,10 @@
 "qpZ" = (
 /obj/effect/floor_decal/corner/research/mono,
 /obj/machinery/papershredder,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -17
+	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/research/fabricator)
 "qqc" = (
@@ -23008,7 +23094,7 @@
 	icon_state = "0-2";
 	pixel_y = 0
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor/airless,
 /area/space)
 "qBC" = (
@@ -23698,7 +23784,7 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor/airless,
 /area/space)
 "raL" = (
@@ -23795,7 +23881,7 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor/airless,
 /area/space)
 "rgz" = (
@@ -25979,6 +26065,10 @@
 	c_tag = "Exploration - Marine Lounge";
 	dir = 8
 	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 17
+	},
 /turf/simulated/floor/carpet/orange,
 /area/intrepid/department/exploration/storage)
 "sDx" = (
@@ -26078,6 +26168,10 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/orange,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -22
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/exploration/storage)
 "sGK" = (
@@ -26355,6 +26449,10 @@
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -17
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/engineering/drone_fabrication)
@@ -27345,6 +27443,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/misc/hallway/starboard)
+"txy" = (
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -22
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/shuttle/research/xenoarchlab)
 "txz" = (
 /obj/structure/railing/mapped{
 	dir = 8
@@ -27455,6 +27560,10 @@
 	dir = 1
 	},
 /obj/structure/table/standard,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -17
+	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/xenobiolab)
 "tDY" = (
@@ -29485,7 +29594,7 @@
 /obj/structure/cable{
 	icon_state = "0-1"
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor/airless,
 /area/space)
 "uWI" = (
@@ -30066,11 +30175,10 @@
 	name = "air mixer";
 	tag_east = 1;
 	tag_east_con = 0.21;
-	tag_north_con = null;
-	tag_south = 2;
+	tag_north_con = 0.79;
 	tag_south_con = null;
-	tag_west = 1;
-	tag_west_con = 0.79
+	tag_north = 1;
+	tag_west = 2
 	},
 /turf/simulated/floor/tiled,
 /area/intrepid/department/engineering/atmos)
@@ -30127,6 +30235,10 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/disposalpipe/trunk{
 	dir = 8
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 17
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/bridgeofficer)
@@ -30723,7 +30835,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor/airless,
 /area/space)
 "vMp" = (
@@ -31849,7 +31961,7 @@
 	icon_state = "0-2";
 	pixel_y = 0
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor/airless,
 /area/space)
 "wHQ" = (
@@ -32699,7 +32811,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor/airless,
 /area/space)
 "xjh" = (
@@ -33629,7 +33741,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor/airless,
 /area/space)
 "xXS" = (
@@ -33844,7 +33956,7 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor/airless,
 /area/space)
 "yhN" = (
@@ -33943,7 +34055,7 @@
 /obj/structure/cable{
 	icon_state = "0-1"
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor/airless,
 /area/space)
 
@@ -48411,7 +48523,7 @@ uFi
 crW
 eic
 eic
-eic
+txy
 uFi
 sWT
 uFi
@@ -51852,7 +51964,7 @@ sWb
 wny
 kiP
 wny
-qjC
+gvh
 qjC
 cHI
 wny
@@ -55648,7 +55760,7 @@ bpM
 vMK
 wJL
 igM
-per
+hhk
 oMy
 pXK
 per
@@ -57277,7 +57389,7 @@ iqA
 ooj
 obQ
 qaQ
-ihe
+lAa
 bRD
 gFj
 sRF
@@ -58082,7 +58194,7 @@ qfF
 iue
 meg
 glU
-fBv
+aYq
 hwk
 bAx
 fBv
@@ -60704,7 +60816,7 @@ oqJ
 moP
 hEB
 nJG
-lQp
+bXQ
 txc
 piK
 bcp

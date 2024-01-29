@@ -95,11 +95,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/exploration/hangar/pandora)
 "am" = (
-/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
-/obj/machinery/atmospherics/portables_connector{
-	dir = 4
-	},
 /obj/effect/floor_decal/corner/black/mono,
+/obj/machinery/atmospherics/binary/pump/high_power{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/exploration/hangar/pandora)
 "an" = (
@@ -305,7 +305,7 @@
 /obj/machinery/conveyor/northwest/ccw{
 	id = "ofd"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/reinforced,
 /area/intrepid/department/command/obstructionfielddisperser)
 "aU" = (
 /obj/structure/railing/mapped,
@@ -315,7 +315,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/reinforced,
 /area/intrepid/department/command/obstructionfielddisperser)
 "aV" = (
 /obj/machinery/computer/ship/navigation,
@@ -344,7 +344,7 @@
 	dir = 8;
 	id = "ion"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/reinforced,
 /area/intrepid/department/command/obstructionfielddisperser)
 "aY" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -354,7 +354,7 @@
 	dir = 8;
 	pixel_x = 32
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/reinforced,
 /area/intrepid/department/command/obstructionfielddisperser)
 "aZ" = (
 /obj/machinery/alarm{
@@ -404,7 +404,7 @@
 "be" = (
 /obj/structure/railing/mapped,
 /obj/effect/floor_decal/industrial/warning,
-/turf/simulated/floor,
+/turf/simulated/floor/reinforced,
 /area/intrepid/department/command/obstructionfielddisperser)
 "bf" = (
 /obj/machinery/computer/ship/disperser{
@@ -572,7 +572,7 @@
 	dir = 8;
 	id = "bomb"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/reinforced,
 /area/intrepid/department/command/obstructionfielddisperser)
 "bA" = (
 /obj/structure/railing/mapped{
@@ -602,7 +602,7 @@
 	dir = 8;
 	id = "bomb"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/reinforced,
 /area/intrepid/department/command/obstructionfielddisperser)
 "bC" = (
 /obj/structure/ship_munition/disperser_charge/mining,
@@ -611,7 +611,7 @@
 	dir = 8;
 	id = "mine"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/reinforced,
 /area/intrepid/department/command/obstructionfielddisperser)
 "bD" = (
 /obj/structure/table/standard,
@@ -686,7 +686,7 @@
 /obj/machinery/conveyor/southwest{
 	id = "ofd"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/reinforced,
 /area/intrepid/department/command/obstructionfielddisperser)
 "bK" = (
 /obj/structure/cable/green{
@@ -712,7 +712,7 @@
 	pixel_y = 0
 	},
 /obj/effect/floor_decal/solarpanel,
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor,
 /area/space)
 "bO" = (
@@ -1844,7 +1844,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor,
 /area/space)
 "eN" = (
@@ -2056,12 +2056,13 @@
 /turf/simulated/floor,
 /area/intrepid/department/command/obstructionfielddisperser)
 "fl" = (
-/obj/structure/grille,
-/obj/structure/railing/mapped{
-	dir = 4;
-	icon_state = "railing0-1"
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
 	},
-/turf/simulated/floor,
+/obj/effect/floor_decal/corner/black/mono,
+/obj/effect/floor_decal/industrial/bot/red,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/exploration/hangar/pandora)
 "fm" = (
 /obj/structure/bed/chair/office/comfy{
@@ -2345,6 +2346,10 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -22
+	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/central)
 "fS" = (
@@ -2456,7 +2461,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/solarpanel,
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor,
 /area/space)
 "gi" = (
@@ -3354,7 +3359,7 @@
 	dir = 8;
 	id = "mine"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/reinforced,
 /area/intrepid/department/command/obstructionfielddisperser)
 "il" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
@@ -3471,6 +3476,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/tcommsat)
+"iC" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/exploration/hangar/pandora)
 "iD" = (
 /obj/effect/wallframe_spawn/reinforced_phoron/hull,
 /obj/machinery/door/blast/shutters{
@@ -4418,6 +4430,24 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /turf/simulated/floor/tiled/steel_grid,
 /area/intrepid/department/civillian/dockbayone)
+"kY" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/orange{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/machinery/alarm{
+	pixel_y = 23
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper/central)
 "kZ" = (
 /obj/structure/cable/orange{
 	d1 = 4;
@@ -4903,9 +4933,6 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/firealarm{
-	pixel_y = 15
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
@@ -5218,7 +5245,8 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/engineering{
-	name = "OFD Munitions Access"
+	name = "OFD Munitions Access";
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/intrepid/department/command/obstructionfielddisperser)
@@ -5889,7 +5917,7 @@
 	id_tag = "ofdloading";
 	name = "OFD Loading blast door button";
 	pixel_x = -25;
-	req_access = list("ACCESS_BRIDGE")
+	req_access = list(list("ACCESS_INTREPID_HELM"))
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/central)
@@ -5947,7 +5975,7 @@
 	dir = 8;
 	id = "fire"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/reinforced,
 /area/intrepid/department/command/obstructionfielddisperser)
 "oJ" = (
 /obj/effect/floor_decal/spline/fancy/black,
@@ -6216,6 +6244,15 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/tcommsat)
+"pp" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/intrepid/department/exploration/hangar/pandora)
 "pq" = (
 /turf/simulated/open,
 /area/intrepid/department/cargo/cargostorage)
@@ -6682,7 +6719,7 @@
 	dir = 1
 	},
 /obj/machinery/light,
-/turf/simulated/floor,
+/turf/simulated/floor/reinforced,
 /area/intrepid/department/command/obstructionfielddisperser)
 "qx" = (
 /obj/machinery/door/blast/regular{
@@ -7173,7 +7210,7 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor/airless,
 /area/space)
 "rF" = (
@@ -7363,11 +7400,13 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/central)
 "sa" = (
-/obj/machinery/portable_atmospherics/powered/scrubber/huge,
-/obj/machinery/atmospherics/portables_connector{
+/obj/effect/floor_decal/corner/red/mono,
+/obj/machinery/atmospherics/binary/pump/high_power{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/red/mono,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/exploration/hangar/pandora)
 "sb" = (
@@ -7455,9 +7494,8 @@
 /turf/simulated/floor/bluegrid/airless,
 /area/intrepid/department/command/AI/AIFoyer)
 "sl" = (
-/obj/effect/floor_decal/corner/research/mono,
-/obj/machinery/light/small,
-/turf/simulated/floor/tiled/dark/monotile,
+/obj/effect/wallframe_spawn/reinforced,
+/turf/simulated/floor,
 /area/intrepid/department/exploration/hangar/pandora)
 "sm" = (
 /obj/structure/closet/medical_wall{
@@ -7635,7 +7673,7 @@
 	dir = 8;
 	pixel_x = 32
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/reinforced,
 /area/intrepid/department/command/obstructionfielddisperser)
 "sF" = (
 /obj/structure/catwalk,
@@ -7826,7 +7864,7 @@
 	icon_state = "0-2";
 	pixel_y = 0
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor,
 /area/space)
 "ta" = (
@@ -8063,7 +8101,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor,
 /area/space)
 "tB" = (
@@ -8455,7 +8493,7 @@
 	id = "bomb"
 	},
 /obj/structure/railing/mapped,
-/turf/simulated/floor,
+/turf/simulated/floor/reinforced,
 /area/intrepid/department/command/obstructionfielddisperser)
 "uy" = (
 /obj/structure/catwalk,
@@ -8522,7 +8560,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/reinforced,
 /area/intrepid/department/command/obstructionfielddisperser)
 "uG" = (
 /turf/simulated/floor/tiled/dark,
@@ -9592,7 +9630,7 @@
 	icon_state = "0-2";
 	pixel_y = 0
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor,
 /area/space)
 "xc" = (
@@ -9796,6 +9834,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/lounge)
+"xE" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/intrepid/department/exploration/hangar/pandora)
 "xH" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -10055,7 +10102,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/solarpanel,
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /obj/structure/cable{
 	d1 = 2;
 	d2 = 4;
@@ -10108,7 +10155,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/reinforced,
 /area/intrepid/department/command/obstructionfielddisperser)
 "yB" = (
 /obj/machinery/door/blast/regular{
@@ -10300,7 +10347,7 @@
 /area/intrepid/misc/maint/superstructure)
 "yW" = (
 /obj/structure/railing/mapped,
-/turf/simulated/floor,
+/turf/simulated/floor/reinforced,
 /area/intrepid/department/command/obstructionfielddisperser)
 "yX" = (
 /obj/machinery/telecomms/bus/preset_three,
@@ -11562,7 +11609,7 @@
 	dir = 8;
 	id = "ion"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/reinforced,
 /area/intrepid/department/command/obstructionfielddisperser)
 "BT" = (
 /obj/machinery/atmospherics/unary/tank/carbon_dioxide{
@@ -11596,14 +11643,12 @@
 /turf/simulated/floor/greengrid,
 /area/tcommsat)
 "BY" = (
-/obj/effect/floor_decal/corner/brown/half{
-	dir = 8;
-	icon_state = "bordercolorhalf"
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/universal{
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
-/obj/machinery/meter,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/exploration/hangar/pandora)
 "BZ" = (
@@ -11805,7 +11850,7 @@
 /obj/structure/sign/warning/nosmoking_burned{
 	pixel_y = 32
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/reinforced,
 /area/intrepid/department/command/obstructionfielddisperser)
 "Cu" = (
 /obj/effect/floor_decal/spline/fancy/black/corner{
@@ -11888,7 +11933,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -11936,7 +11981,7 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/shuttle/pithos/cockpit)
 "CJ" = (
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /obj/structure/cable{
 	d2 = 4;
 	icon_state = "0-4"
@@ -12090,7 +12135,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/solarpanel,
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor,
 /area/space)
 "Db" = (
@@ -12109,11 +12154,13 @@
 /turf/simulated/floor,
 /area/intrepid/department/engineering/portthruster)
 "Dk" = (
-/obj/machinery/atmospherics/portables_connector{
-	dir = 4
-	},
-/obj/machinery/portable_atmospherics/powered/pump/filled,
 /obj/effect/floor_decal/corner/white/mono,
+/obj/machinery/atmospherics/binary/pump/high_power{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/exploration/hangar/pandora)
 "Dl" = (
@@ -12141,7 +12188,7 @@
 /obj/machinery/conveyor/northwest{
 	id = "ofd"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/reinforced,
 /area/intrepid/department/command/obstructionfielddisperser)
 "Ds" = (
 /obj/structure/catwalk,
@@ -12286,7 +12333,7 @@
 "DM" = (
 /obj/structure/cable,
 /obj/effect/floor_decal/solarpanel,
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor,
 /area/space)
 "DN" = (
@@ -12729,12 +12776,8 @@
 /turf/simulated/floor/airless,
 /area/intrepid/department/command/AI/AICore)
 "EQ" = (
-/obj/effect/floor_decal/corner/white/mono,
-/obj/machinery/atmospherics/binary/pump/high_power{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark/monotile,
-/area/intrepid/department/exploration/hangar/pandora)
+/turf/simulated/floor/reinforced,
+/area/intrepid/department/command/obstructionfielddisperser)
 "ER" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -13045,9 +13088,12 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/superstructure)
 "FM" = (
-/obj/effect/floor_decal/corner/research/mono,
-/obj/machinery/light/small{
-	dir = 1
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1;
+	icon_state = "warningcorner"
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/exploration/hangar/pandora)
@@ -13307,7 +13353,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor,
 /area/space)
 "Gu" = (
@@ -13441,6 +13487,24 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/engineering/lockerroom)
+"GM" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/orange{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/machinery/firealarm{
+	pixel_y = 15
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper/central)
 "GN" = (
 /obj/structure/table/standard,
 /obj/item/modular_computer/laptop/preset/custom_loadout/cheap,
@@ -13504,11 +13568,15 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/central)
 "GU" = (
-/obj/effect/floor_decal/corner/red/mono,
-/obj/machinery/atmospherics/binary/pump/high_power{
+/obj/machinery/atmospherics/pipe/simple/visible/universal{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/dark/monotile,
+/obj/machinery/meter,
+/obj/machinery/door/firedoor{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning/fulltile,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/exploration/hangar/pandora)
 "GV" = (
 /obj/structure/cable/orange{
@@ -13967,10 +14035,16 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/pandora/cargo)
 "Ig" = (
-/obj/effect/floor_decal/corner/black/mono,
-/obj/machinery/atmospherics/binary/pump/high_power{
-	dir = 8
+/obj/machinery/portable_atmospherics/powered/scrubber/huge,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
 	},
+/obj/effect/floor_decal/corner/red/mono,
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -23
+	},
+/obj/effect/floor_decal/industrial/bot/red,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/exploration/hangar/pandora)
 "Ih" = (
@@ -14445,7 +14519,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor,
 /area/space)
 "Js" = (
@@ -14462,6 +14536,18 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/engineering/portthruster)
+"Ju" = (
+/obj/structure/cable/orange{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -17
+	},
+/turf/simulated/floor,
+/area/intrepid/misc/maint/upper/central)
 "Jv" = (
 /obj/machinery/r_n_d/server/robotics,
 /obj/effect/floor_decal/industrial/outline/red,
@@ -15133,7 +15219,7 @@
 /obj/machinery/conveyor/southwest/ccw{
 	id = "ofd"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/reinforced,
 /area/intrepid/department/command/obstructionfielddisperser)
 "Lo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -15171,7 +15257,7 @@
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/solarpanel,
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor,
 /area/space)
 "Ls" = (
@@ -15389,7 +15475,7 @@
 	id = "fire"
 	},
 /obj/structure/railing/mapped,
-/turf/simulated/floor,
+/turf/simulated/floor/reinforced,
 /area/intrepid/department/command/obstructionfielddisperser)
 "LT" = (
 /obj/structure/closet/emcloset,
@@ -15678,6 +15764,19 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/engineering/lounge)
+"MN" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
+	},
+/obj/machinery/portable_atmospherics/powered/pump/filled,
+/obj/effect/floor_decal/corner/white/mono,
+/obj/effect/floor_decal/industrial/bot/red,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -17
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/intrepid/department/exploration/hangar/pandora)
 "MO" = (
 /obj/structure/sign/warning/radioactive{
 	pixel_y = 25
@@ -15761,7 +15860,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/floor_decal/solarpanel,
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor,
 /area/space)
 "MV" = (
@@ -16081,6 +16180,15 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/intrepid/department/civillian/dockbaytwo)
+"NC" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark/monotile,
+/area/intrepid/department/exploration/hangar/pandora)
 "NE" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -16144,7 +16252,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/solarpanel,
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor,
 /area/space)
 "NM" = (
@@ -16821,7 +16929,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/solarpanel,
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
@@ -17238,7 +17346,7 @@
 /obj/structure/sign/warning/nosmoking_burned{
 	pixel_y = -32
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/reinforced,
 /area/intrepid/department/command/obstructionfielddisperser)
 "Qt" = (
 /obj/machinery/door/airlock/external/glass/bolted,
@@ -17337,9 +17445,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
-	},
-/obj/machinery/alarm{
-	pixel_y = 23
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor,
@@ -18396,6 +18501,10 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -17
+	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/exploration/hangar/pandora)
 "Te" = (
@@ -18444,7 +18553,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/reinforced,
 /area/intrepid/department/command/obstructionfielddisperser)
 "Tk" = (
 /obj/effect/wallframe_spawn/reinforced,
@@ -18671,7 +18780,7 @@
 	id = "mine"
 	},
 /obj/structure/railing/mapped,
-/turf/simulated/floor,
+/turf/simulated/floor/reinforced,
 /area/intrepid/department/command/obstructionfielddisperser)
 "TO" = (
 /obj/structure/cable/green{
@@ -19806,7 +19915,7 @@
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/solarpanel,
-/obj/machinery/power/solar/improved,
+/obj/machinery/power/solar,
 /turf/simulated/floor,
 /area/space)
 "WE" = (
@@ -19867,7 +19976,7 @@
 	dir = 8;
 	id = "fire"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/reinforced,
 /area/intrepid/department/command/obstructionfielddisperser)
 "WJ" = (
 /turf/simulated/wall/prepainted,
@@ -20684,6 +20793,13 @@
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/space)
+"YJ" = (
+/obj/machinery/light/small,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/intrepid/department/exploration/hangar/pandora)
 "YK" = (
 /obj/effect/paint_stripe/yellow,
 /turf/simulated/wall/r_wall/prepainted,
@@ -42149,7 +42265,7 @@ rR
 JA
 IA
 of
-of
+Ju
 of
 jU
 oi
@@ -42197,7 +42313,7 @@ of
 of
 of
 of
-of
+Ju
 of
 IA
 Yk
@@ -43586,9 +43702,9 @@ HJ
 Ct
 aT
 Dr
-EI
+EQ
 ci
-EI
+EQ
 Ln
 bJ
 Qr
@@ -43781,7 +43897,7 @@ ml
 ml
 ml
 Nx
-gH
+kY
 eH
 Qx
 HJ
@@ -43790,7 +43906,7 @@ by
 aX
 yW
 bh
-EI
+EQ
 oG
 bC
 uF
@@ -43983,7 +44099,7 @@ Lb
 Lb
 Lb
 Nx
-gH
+GM
 eH
 Qx
 HJ
@@ -43992,7 +44108,7 @@ bB
 BS
 yW
 bh
-EI
+EQ
 LS
 TN
 yA
@@ -44194,7 +44310,7 @@ by
 aX
 yW
 bh
-EI
+EQ
 oG
 bC
 qw
@@ -44396,7 +44512,7 @@ ux
 BS
 yW
 bh
-EI
+EQ
 WI
 ik
 yA
@@ -44598,7 +44714,7 @@ by
 aX
 yW
 bh
-EI
+EQ
 oG
 bC
 aY
@@ -46835,11 +46951,11 @@ Ec
 HM
 zl
 ve
+yw
+MN
+Ig
 fl
-fl
-fl
-fl
-fl
+Hx
 mG
 Ga
 Lf
@@ -47037,11 +47153,11 @@ fH
 Xt
 Xx
 ve
-yw
+iC
 Dk
 sa
 am
-Hx
+YJ
 mG
 KL
 xB
@@ -47239,10 +47355,10 @@ Ks
 Ks
 Ks
 ve
-FM
-EQ
+sl
 GU
-Ig
+GU
+GU
 sl
 mG
 mG
@@ -47441,11 +47557,11 @@ Sd
 UT
 JS
 kE
-TJ
+xE
+NC
+pp
 BY
-BY
-BY
-TJ
+FM
 QQ
 jJ
 Vb
