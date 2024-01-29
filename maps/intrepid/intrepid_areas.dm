@@ -299,6 +299,7 @@
 	name = "\improper Atmospherics"
 	icon_state = "atmos"
 	sound_env = LARGE_ENCLOSED
+	req_access = list(access_atmospherics)
 
 /area/intrepid/department/engineering/engine_room
 	name = "\improper Engine Room"
