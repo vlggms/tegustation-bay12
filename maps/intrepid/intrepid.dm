@@ -10,6 +10,7 @@
 	#include "intrepid_procs.dm"
 	#include "intrepid_radio.dm"
 	#include "intrepid_ranks.dm"
+	#include "intrepid_security_state.dm"
 	#include "intrepid_setup.dm"
 	#include "intrepid_shuttles.dm"
 	#include "intrepid_unit_testing.dm"
