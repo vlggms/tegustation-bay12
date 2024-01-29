@@ -96,3 +96,4 @@
 	if(!throw_target)
 		throw_target = pick(getcircle(get_turf(src), 3))
 	M.throw_at(get_turf(throw_target), 3, 6)
+	addtimer(CALLBACK(M, /mob/living/simple_animal/hostile/infestation/meatchip/proc/TimedDeath), 15 SECONDS)
