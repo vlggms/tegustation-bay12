@@ -25,8 +25,8 @@
 	var/heat_proof = 0 // For glass airlocks/opacity firedoors
 	var/air_properties_vary_with_direction = 0
 	var/maxhealth = 400
-	/// At this amount of health the door will be considered broken, but will not be destroyed/deconstructed \
-		By default it is at 20% of max health
+	/// At this amount of health the door will be considered broken, but will not be destroyed/deconstructed
+	/// By default it is at 20% of max health
 	var/broken_health
 	var/health
 	var/destroy_hits = 10 //How many strong hits it takes to destroy the door
