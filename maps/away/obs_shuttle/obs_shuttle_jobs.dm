@@ -72,7 +72,7 @@
 		)
 
 	forced_culture = list(
-		//TAG_FACTION = FACTION_TERRASENATE_OBS,
+		TAG_FACTION = FACTION_TERRASENATE_OBS,
 		)
 
 /datum/job/submap/obs/pilot
