@@ -95,5 +95,5 @@
 	var/mob/living/simple_animal/hostile/infestation/meatchip/M = new(get_turf(src))
 	if(!throw_target)
 		throw_target = pick(getcircle(get_turf(src), 3))
-	M.throw_at(get_turf(throw_target), 3, 6)
+	M.throw_at(get_turf(throw_target), 3, 1, src)
 	addtimer(CALLBACK(M, /mob/living/simple_animal/hostile/infestation/meatchip/proc/TimedDeath), 15 SECONDS)
