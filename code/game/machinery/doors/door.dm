@@ -24,7 +24,10 @@
 	var/normalspeed = 1
 	var/heat_proof = 0 // For glass airlocks/opacity firedoors
 	var/air_properties_vary_with_direction = 0
-	var/maxhealth = 300
+	var/maxhealth = 400
+	/// At this amount of health the door will be considered broken, but will not be destroyed/deconstructed
+	/// By default it is at 20% of max health
+	var/broken_health
 	var/health
 	var/destroy_hits = 10 //How many strong hits it takes to destroy the door
 	var/min_force = 10 //minimum amount of force needed to damage the door with a melee weapon
@@ -85,6 +88,8 @@
 		set_extension(src, /datum/extension/turf_hand, turf_hand_priority)
 
 	health = maxhealth
+	if(!broken_health)
+		broken_health = round(maxhealth * 0.2)
 	update_connections(1)
 	update_icon()
 
@@ -176,8 +181,8 @@
 			do_animate("deny")
 	return
 
-/obj/machinery/door/bullet_act(var/obj/item/projectile/Proj)
-	..()
+/obj/machinery/door/bullet_act(obj/item/projectile/Proj)
+	. = ..()
 
 	var/damage = Proj.get_structure_damage()
 
@@ -195,14 +200,12 @@
 			qdel(src)
 
 	if(damage)
-		//cap projectile damage so that there's still a minimum number of hits required to break the door
-		take_damage(min(damage, 100))
+		take_damage(damage)
 
 
 
 /obj/machinery/door/hitby(AM as mob|obj, var/datum/thrownthing/TT)
-
-	..()
+	. = ..()
 	visible_message("<span class='danger'>[src.name] was hit by [AM].</span>")
 	var/tforce = 0
 	if(ismob(AM))
@@ -280,12 +283,14 @@
 		repairing = null
 		return
 
-	if (check_force(I, user))
+	if(check_force(I, user))
 		return
 
-	if(src.operating > 0 || isrobot(user))	return //borgs can't attack doors open because it conflicts with their AI-like interaction with them.
+	if(src.operating > 0 || isrobot(user))
+		return //borgs can't attack doors open because it conflicts with their AI-like interaction with them.
 
-	if(src.operating) return
+	if(src.operating)
+		return
 
 	if(src.allowed(user) && operable())
 		if(src.density)
@@ -299,7 +304,7 @@
 	update_icon()
 	return
 
-/obj/machinery/door/emag_act(var/remaining_charges)
+/obj/machinery/door/emag_act(remaining_charges)
 	if(density && operable())
 		do_animate("emag")
 		sleep(6)
@@ -325,16 +330,18 @@
 		take_damage(I.force)
 	return TRUE
 
-/obj/machinery/door/proc/take_damage(var/damage)
-	var/initialhealth = src.health
-	src.health = max(0, src.health - damage)
-	if(src.health <= 0 && initialhealth > 0)
-		src.set_broken(TRUE)
-	else if(src.health < src.maxhealth / 4 && initialhealth >= src.maxhealth / 4)
+/obj/machinery/door/proc/take_damage(damage)
+	var/initialhealth = health
+	health = max(0, health - damage)
+	if(health <= 0)
+		return deconstruct()
+	else if(health <= broken_health && initialhealth > 0)
+		set_broken(TRUE)
+	else if(health < broken_health * 0.25 && initialhealth >= broken_health * 0.25)
 		visible_message("\The [src] looks like it's about to break!" )
-	else if(src.health < src.maxhealth / 2 && initialhealth >= src.maxhealth / 2)
+	else if(health < broken_health * 0.5 && initialhealth >= broken_health * 0.5)
 		visible_message("\The [src] looks seriously damaged!" )
-	else if(src.health < src.maxhealth * 3/4 && initialhealth >= src.maxhealth * 3/4)
+	else if(health < broken_health * 0.75 && initialhealth >= broken_health * 0.75)
 		visible_message("\The [src] shows signs of damage!" )
 	update_icon()
 	return
@@ -342,13 +349,13 @@
 
 /obj/machinery/door/examine(mob/user)
 	. = ..()
-	if(src.health <= 0)
+	if(health <= broken_health)
 		to_chat(user, "\The [src] is broken!")
-	else if(src.health < src.maxhealth / 4)
+	else if(health < broken_health / 4)
 		to_chat(user, "\The [src] looks like it's about to break!")
-	else if(src.health < src.maxhealth / 2)
+	else if(health < broken_health / 2)
 		to_chat(user, "\The [src] looks seriously damaged!")
-	else if(src.health < src.maxhealth * 3/4)
+	else if(health < broken_health * 3/4)
 		to_chat(user, "\The [src] shows signs of damage!")
 
 	if (emagged && ishuman(user) && user.skill_check(SKILL_COMPUTER, SKILL_TRAINED))
@@ -536,7 +543,8 @@
 		. *= 2
 	. = round(.)
 
-/obj/machinery/door/proc/deconstruct(mob/user, var/moved = FALSE)
+/obj/machinery/door/proc/deconstruct(mob/user, moved = FALSE)
+	QDEL_NULL(src)
 	return null
 
 /obj/machinery/door/morgue
