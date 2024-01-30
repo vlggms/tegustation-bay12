@@ -5,6 +5,11 @@
 	anchored = FALSE
 	density = TRUE
 	w_class = ITEM_SIZE_NO_CONTAINER
+
+	health_max = 50
+	health_min_damage = 8
+	damage_hitsound = 'sound/weapons/smash.ogg'
+
 	var/state = 0
 	var/base_icon_state = ""
 	var/base_name = "Airlock"
@@ -24,6 +29,11 @@
 /obj/structure/door_assembly/Initialize()
 	. = ..()
 	update_state()
+
+/obj/structure/door_assembly/handle_death_change(new_death_state)
+	if(new_death_state)
+		visible_message(SPAN_DANGER("[src] falls apart!"))
+		qdel(src)
 
 /obj/structure/door_assembly/door_assembly_hatch
 	icon = 'icons/obj/doors/hatch/door.dmi'
