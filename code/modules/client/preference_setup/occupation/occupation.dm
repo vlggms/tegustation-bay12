@@ -167,7 +167,7 @@
 					bad_message = "<b>\[SPECIES RESTRICTED]</b>"
 				else if (job.is_job_whitelisted(user.client))
 					bad_message = "<b>\[WHITELISTED]</b>"
-				else if(!S.check_background(job, user.client.prefs))
+				else if(job.CheckBackground(user.client.prefs) != TRUE)
 					bad_message = "<b>\[BACKGROUND RESTRICTED]</b>"
 
 				var/current_level = JOB_LEVEL_NEVER

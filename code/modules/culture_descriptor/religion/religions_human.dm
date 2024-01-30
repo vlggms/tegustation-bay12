@@ -61,3 +61,9 @@
 /decl/cultural_info/religion/taoist
 	name = RELIGION_TAOISM
 	description = "A traditional Chinese religion that emphasizes living in harmony with the Tao. Someone who practices Taoism is called a Taoist."
+
+/decl/cultural_info/religion/reborn_christian
+	name = RELIGION_REBORN_CHRISTIANITY
+	description = "A new-age belief heavily influenced by recovered medieval texts of the Earth's Catholic church. \
+		A follower of Reborn Christian Church is generally called \"Renatus\" or simply \"Reborn\"\
+		Recognized as a cult by Terran Government."

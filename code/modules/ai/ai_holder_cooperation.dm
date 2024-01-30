@@ -68,7 +68,7 @@
 	ai_log("request_help() : Asking for help.", AI_LOG_INFO)
 	next_sent_help_request  = world.time + next_sent_help_request_delay
 
-	if(holder.say_list && LAZYLEN(holder.say_list.say_help))
+	if(holder.say_list)
 		holder.ISay(pick(holder.say_list.say_help))
 		PlayMobSound(holder.say_list.speak_sounds)
 

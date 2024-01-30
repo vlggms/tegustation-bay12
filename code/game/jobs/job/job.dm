@@ -58,6 +58,14 @@
 
 	var/required_language
 
+	/// Associated list of forced culture types to override preferences.
+	var/list/forced_culture = list()
+
+	/// Disallowed culture types. If the character has any of these - they are unable to join as that role.
+	var/list/culture_blacklist = list()
+	/// Required culture types, if any.
+	var/list/culture_whitelist = list()
+
 /datum/job/New()
 
 	if(prob(100-availablity_chance))	//Close positions, blah blah.
@@ -208,42 +216,47 @@
 /datum/job/proc/has_alt_title(var/mob/H, var/supplied_title, var/desired_title)
 	return (supplied_title == desired_title) || (H.mind && H.mind.role_alt_title == desired_title)
 
-/datum/job/proc/is_restricted(var/datum/preferences/prefs, var/feedback)
+/datum/job/proc/is_restricted(datum/preferences/prefs, feedback)
 	var/datum/species/S
 
 	if (!is_species_whitelist_allowed(prefs.client, use_species_whitelist))
 		S = all_species[use_species_whitelist]
-		to_chat(feedback, "<span class='boldannounce'>\An [S] species whitelist is required for [title].</span>")
+		to_chat(feedback, SPAN_USERDANGER("\An [S] species whitelist is required for [title]."))
 		return TRUE
 
 	if(is_job_whitelisted(prefs.client))
-		to_chat(feedback, "<span class='boldannounce'>\An [require_whitelist] whitelist is required for [title].</span>")
+		to_chat(feedback, SPAN_USERDANGER("\An [require_whitelist] whitelist is required for [title]."))
 		return TRUE
 
 	if(!isnull(allowed_branches) && (!prefs.branches[title] || !is_branch_allowed(prefs.branches[title])))
-		to_chat(feedback, "<span class='boldannounce'>Wrong branch of service for [title]. Valid branches are: [get_branches()].</span>")
+		to_chat(feedback, SPAN_USERDANGER("Wrong branch of service for [title]. Valid branches are: [get_branches()]."))
 		return TRUE
 
 	if(!isnull(allowed_ranks) && (!prefs.ranks[title] || !is_rank_allowed(prefs.branches[title], prefs.ranks[title])))
-		to_chat(feedback, "<span class='boldannounce'>Wrong rank for [title]. Valid ranks in [prefs.branches[title]] are: [get_ranks(prefs.branches[title])].</span>")
+		to_chat(feedback, SPAN_USERDANGER("Wrong rank for [title]. Valid ranks in [prefs.branches[title]] are: [get_ranks(prefs.branches[title])]."))
 		return TRUE
 
 	S = all_species[prefs.species]
 	if(!is_species_allowed(S))
-		to_chat(feedback, "<span class='boldannounce'>Restricted species, [S], for [title].</span>")
+		to_chat(feedback, SPAN_USERDANGER("Restricted species, [S], for [title]."))
 		return TRUE
 
 	if(LAZYACCESS(minimum_character_age, S.get_bodytype()) && (prefs.age < minimum_character_age[S.get_bodytype()]))
-		to_chat(feedback, "<span class='boldannounce'>Not old enough. Minimum character age is [minimum_character_age[S.get_bodytype()]].</span>")
+		to_chat(feedback, SPAN_USERDANGER("Not old enough. Minimum character age is [minimum_character_age[S.get_bodytype()]]."))
 		return TRUE
 
 	if(!S.check_background(src, prefs))
-		to_chat(feedback, "<span class='boldannounce'>Incompatible background for [title].</span>")
+		to_chat(feedback, SPAN_USERDANGER("Your species background choices do not allow it."))
+		return TRUE
+
+	var/background_result = CheckBackground(prefs)
+	if(background_result != TRUE)
+		to_chat(feedback, SPAN_USERDANGER("[background_result]"))
 		return TRUE
 
 	return FALSE
 
-/datum/job/proc/get_join_link(var/client/caller, var/href_string, var/show_invalid_jobs)
+/datum/job/proc/get_join_link(client/caller, href_string, show_invalid_jobs)
 	if(is_available(caller))
 		if(is_restricted(caller.prefs))
 			if(show_invalid_jobs)
@@ -253,7 +266,7 @@
 	return ""
 
 // Only players with the job assigned and AFK for less than 10 minutes count as active
-/datum/job/proc/check_is_active(var/mob/M)
+/datum/job/proc/check_is_active(mob/M)
 	return (M.mind && M.client && M.mind.assigned_role == title && M.client.inactivity <= 10 * 60 * 10)
 
 /datum/job/proc/get_active_count()
@@ -263,7 +276,22 @@
 			active++
 	return active
 
-/datum/job/proc/is_species_allowed(var/datum/species/S)
+/datum/job/proc/CheckBackground(datum/preferences/prefs)
+	// The character MUST have any of these
+	if(LAZYLEN(culture_whitelist))
+		for(var/tag in prefs.cultural_info)
+			if(!(prefs.cultural_info[tag] in culture_whitelist))
+				return "Must have the following background: [english_list(culture_whitelist, "N/A", " or ")]."
+
+	// The character must NOT have any of these
+	if(LAZYLEN(culture_blacklist))
+		for(var/tag in prefs.cultural_info)
+			if(prefs.cultural_info[tag] in culture_blacklist)
+				return "Must not have the following background: [english_list(culture_blacklist, "N/A", " or ")]."
+
+	return TRUE
+
+/datum/job/proc/is_species_allowed(datum/species/S)
 	if(GLOB.using_map.is_species_job_restricted(S, src))
 		return FALSE
 	// We also make sure that there is at least one valid branch-rank combo for the species.
@@ -405,7 +433,7 @@
 		if(!is_species_allowed(S))
 			reasons["Your species choice does not allow it."] = TRUE
 		if(!S.check_background(src, caller.prefs))
-			reasons["Your background choices do not allow it."] = TRUE
+			reasons["Your species background choices do not allow it."] = TRUE
 	if(LAZYLEN(reasons))
 		. = reasons
 
