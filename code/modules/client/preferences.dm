@@ -231,7 +231,8 @@ datum/preferences
 
 	if(be_random_name)
 		var/decl/cultural_info/culture = SSculture.get_culture(cultural_info[TAG_CULTURE])
-		if(culture) real_name = culture.get_random_name(gender)
+		if(culture)
+			real_name = culture.get_random_name(gender)
 
 	character.fully_replace_character_name(real_name)
 

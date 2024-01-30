@@ -237,7 +237,7 @@
 	if(!character)
 		return 0
 
-	character = SSjobs.equip_rank(character, job.title, 1)					//equips the human
+	character = SSjobs.equip_rank(character, job.title, 1) //equips the human
 	SScustomitems.equip_custom_items(character)
 
 	// AIs don't need a spawnpoint, they must spawn at an empty core
@@ -371,7 +371,7 @@
 	popup.set_content(jointext(dat, null))
 	popup.open(0)
 
-/mob/new_player/proc/create_character(var/turf/spawn_turf)
+/mob/new_player/proc/create_character(turf/spawn_turf)
 	spawning = 1
 	close_spawn_windows()
 
@@ -381,10 +381,11 @@
 	if(client.prefs.species)
 		chosen_species = all_species[client.prefs.species]
 
+	var/datum/job/job = SSjobs.get_by_title(mind.assigned_role)
+	if(!job)
+		job = SSjobs.get_by_title(GLOB.using_map.default_assistant_title)
+
 	if(!spawn_turf)
-		var/datum/job/job = SSjobs.get_by_title(mind.assigned_role)
-		if(!job)
-			job = SSjobs.get_by_title(GLOB.using_map.default_assistant_title)
 		var/datum/spawnpoint/spawnpoint = job.get_spawnpoint(client, client.prefs.ranks[job.title])
 		spawn_turf = pick(spawnpoint.turfs)
 
@@ -395,7 +396,8 @@
 		new_character = new(spawn_turf, chosen_species.name)
 		if(chosen_species.has_organ[BP_POSIBRAIN] && client && client.prefs.is_shackled)
 			var/obj/item/organ/internal/posibrain/B = new_character.internal_organs_by_name[BP_POSIBRAIN]
-			if(B)	B.shackle(client.prefs.get_lawset())
+			if(B)
+				B.shackle(client.prefs.get_lawset())
 
 	if(!new_character)
 		new_character = new(spawn_turf)
@@ -403,6 +405,14 @@
 	new_character.lastarea = get_area(spawn_turf)
 
 	client.prefs.copy_to(new_character)
+
+	// Job enforced background
+	if(job && LAZYLEN(job.forced_culture))
+		for(var/token in job.forced_culture)
+			if(job.forced_culture[token] == new_character.cultural_info[token])
+				continue
+			new_character.set_cultural_value(token, job.forced_culture[token], defer_language_update = TRUE)
+			to_chat(new_character, SPAN_NOTICE("Your [lowertext(ALL_CULTURAL_TAGS[token])] were changed to <b>[job.forced_culture[token]]</b> by your role!"))
 
 	sound_to(src, sound(null, repeat = 0, wait = 0, volume = 85, channel = GLOB.lobby_sound_channel))// MAD JAMS cant last forever yo
 
@@ -426,7 +436,7 @@
 	new_character.update_eyes()
 	new_character.regenerate_icons()
 
-	new_character.key = key		//Manually transfer the key to log them in
+	new_character.key = key //Manually transfer the key to log them in
 	return new_character
 
 /mob/new_player/proc/ViewManifest()

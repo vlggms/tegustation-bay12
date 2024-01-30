@@ -51,6 +51,30 @@
 	)
 	skill_points = 20
 
+	culture_blacklist = list(
+		// Sol cultures,
+		CULTURE_HUMAN_VENUSIAN,
+		CULTURE_HUMAN_VENUSLOW,
+		CULTURE_HUMAN_EARTH,
+		CULTURE_HUMAN_LUNAPOOR,
+		CULTURE_HUMAN_LUNARICH,
+		CULTURE_HUMAN_MARTIAN,
+		CULTURE_HUMAN_MARSTUN,
+		CULTURE_HUMAN_PLUTO,
+		CULTURE_HUMAN_BELTER,
+		// Sol home planets,
+		HOME_SYSTEM_VENUS,
+		HOME_SYSTEM_EARTH,
+		HOME_SYSTEM_LUNA,
+		HOME_SYSTEM_MARS,
+		HOME_SYSTEM_PLUTO,
+		HOME_SYSTEM_CERES,
+		)
+
+	forced_culture = list(
+		//TAG_FACTION = FACTION_TERRASENATE_OBS,
+		)
+
 /datum/job/submap/obs/pilot
 	title = "OBS Pilot"
 	total_positions = 1
