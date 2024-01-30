@@ -10,7 +10,7 @@
 	var/next_sent_help_request  = 0
 
 	/// Cooldown to the next request
-	var/next_sent_help_request_delay = 10 SECONDS
+	var/next_sent_help_request_delay = 30 SECONDS
 
 	/// time when the mob can receive a help request from another mob
 	var/next_received_help_request  = 0
@@ -62,7 +62,7 @@
 	if (!cooperative || world.time < next_sent_help_request  || world.time < next_received_help_request)
 		return
 
-	if(ShouldRequestHelp())
+	if(!ShouldRequestHelp())
 		return
 
 	ai_log("request_help() : Asking for help.", AI_LOG_INFO)
