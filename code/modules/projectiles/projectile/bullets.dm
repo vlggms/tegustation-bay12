@@ -131,7 +131,8 @@
 
 /obj/item/projectile/bullet/pistol/flame/attack_mob(mob/living/target_mob, distance, miss_modifier)
 	. = ..()
-	target_mob.adjust_fire_stacks(1)
+	if(target_mob.fire_stacks < 5)
+		target_mob.adjust_fire_stacks(1)
 	target_mob.IgniteMob()
 
 /obj/item/projectile/bullet/pistol/holdout
@@ -214,7 +215,8 @@
 
 /obj/item/projectile/bullet/shotgun/flame/attack_mob(mob/living/target_mob, distance, miss_modifier)
 	. = ..()
-	target_mob.adjust_fire_stacks(1)
+	if(target_mob.fire_stacks < 5)
+		target_mob.adjust_fire_stacks(3)
 	target_mob.IgniteMob()
 
 /obj/item/projectile/bullet/shotgun/beanbag		//because beanbags are not bullets
@@ -252,7 +254,8 @@
 
 /obj/item/projectile/bullet/rifle/flame/attack_mob(mob/living/target_mob, distance, miss_modifier)
 	. = ..()
-	target_mob.adjust_fire_stacks(1)
+	if(target_mob.fire_stacks < 5)
+		target_mob.adjust_fire_stacks(1)
 	target_mob.IgniteMob()
 
 /obj/item/projectile/bullet/rifle/military
@@ -267,7 +270,8 @@
 
 /obj/item/projectile/bullet/rifle/military/flame/attack_mob(mob/living/target_mob, distance, miss_modifier)
 	. = ..()
-	target_mob.adjust_fire_stacks(1)
+	if(target_mob.fire_stacks < 5)
+		target_mob.adjust_fire_stacks(1)
 	target_mob.IgniteMob()
 
 /obj/item/projectile/bullet/rifle/t12
@@ -289,7 +293,8 @@
 
 /obj/item/projectile/bullet/rifle/ak47/flame/attack_mob(mob/living/target_mob, distance, miss_modifier)
 	. = ..()
-	target_mob.adjust_fire_stacks(1)
+	if(target_mob.fire_stacks < 5)
+		target_mob.adjust_fire_stacks(1)
 	target_mob.IgniteMob()
 
 /obj/item/projectile/bullet/rifle/m16
