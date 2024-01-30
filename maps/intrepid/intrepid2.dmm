@@ -2323,8 +2323,8 @@
 	},
 /obj/machinery/access_button/airlock_interior{
 	id_tag = "ai_airlock";
-	pixel_y = -23;
-	pixel_x = -25
+	pixel_x = -25;
+	pixel_y = -23
 	},
 /turf/simulated/floor/tiled/techmaint{
 	initial_gas = null
@@ -4321,8 +4321,8 @@
 /obj/effect/floor_decal/industrial/delivery_sharp/yellow,
 /obj/machinery/camera/motion{
 	c_tag = "AI Chamber - Core Antechamber";
-	network = list("Command");
-	dir = 1
+	dir = 1;
+	network = list("Command")
 	},
 /turf/simulated/floor/bluegrid/airless,
 /area/intrepid/department/command/AI/AIFoyer)
@@ -4365,8 +4365,8 @@
 /area/shuttle/pandora/cargo)
 "kO" = (
 /obj/machinery/door/airlock/glass/medical{
-	name = "Psionic Testing Laboratory";
-	dir = 4
+	dir = 4;
+	name = "Psionic Testing Laboratory"
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/intrepid/department/command/commandquarters/psiadvisor)
@@ -4406,10 +4406,10 @@
 /area/intrepid/department/exploration/hangar/pithos)
 "kV" = (
 /obj/machinery/button/blast_door{
+	dir = 4;
 	id_tag = "superstructmaint";
 	name = "Superstructure Maintaince Shaft Electrical Compartment Blast Door button";
-	req_access = list("ACCESS_CONSTRUCTION");
-	dir = 4
+	req_access = list("ACCESS_CONSTRUCTION")
 	},
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/misc/maint/superstructure)
@@ -5215,9 +5215,9 @@
 	icon_state = "2-8"
 	},
 /obj/machinery/access_button/airlock_exterior{
+	id_tag = "ai_airlock";
 	pixel_x = 23;
-	pixel_y = 9;
-	id_tag = "ai_airlock"
+	pixel_y = 9
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/central)
@@ -5245,8 +5245,8 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/engineering{
-	name = "OFD Munitions Access";
-	dir = 4
+	dir = 4;
+	name = "OFD Munitions Access"
 	},
 /turf/simulated/floor,
 /area/intrepid/department/command/obstructionfielddisperser)
@@ -5326,8 +5326,8 @@
 	},
 /obj/item/aiModule/reset,
 /obj/item/aiModule/solgov_aggressive{
-	pixel_y = -3;
-	pixel_x = -3
+	pixel_x = -3;
+	pixel_y = -3
 	},
 /obj/machinery/flasher{
 	pixel_y = 24
@@ -5615,11 +5615,13 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/manifold/visible/fuel,
 /obj/structure/cable/orange{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/fuel{
+	dir = 9
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/central)
@@ -8945,18 +8947,18 @@
 	pixel_y = -28
 	},
 /obj/machinery/button/blast_door{
+	dir = 1;
 	id_tag = "aichamber";
 	name = "AI Core Shielding button";
 	pixel_x = -6;
-	pixel_y = -30;
-	dir = 1
+	pixel_y = -30
 	},
 /obj/machinery/button/blast_door{
+	dir = 1;
 	id_tag = "aifoyer";
 	name = "AI Foyer Window Shielding button";
 	pixel_x = 6;
-	pixel_y = -30;
-	dir = 1
+	pixel_y = -30
 	},
 /turf/simulated/floor/greengrid/airless,
 /area/intrepid/department/command/AI/AICore)
@@ -9162,8 +9164,8 @@
 	},
 /obj/machinery/access_button/airlock_interior{
 	id_tag = "ai_airlock";
-	pixel_y = 23;
-	pixel_x = -25
+	pixel_x = -25;
+	pixel_y = 23
 	},
 /turf/simulated/floor/tiled/techmaint{
 	initial_gas = null
@@ -11944,8 +11946,8 @@
 "CE" = (
 /obj/machinery/airlock_sensor{
 	id_tag = "ai_airlock_sensor";
-	pixel_y = -24;
-	pixel_x = 25
+	pixel_x = 25;
+	pixel_y = -24
 	},
 /obj/structure/cable/orange{
 	d1 = 1;
@@ -11953,8 +11955,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "ai_airlock_pump";
-	dir = 1
+	dir = 1;
+	id_tag = "ai_airlock_pump"
 	},
 /turf/simulated/floor/reinforced,
 /area/intrepid/department/command/AI/AIFoyer)
@@ -13628,8 +13630,8 @@
 	},
 /obj/machinery/camera/motion{
 	c_tag = "AI Chamber - AI Core Portside";
-	network = list("Command");
-	dir = 8
+	dir = 8;
+	network = list("Command")
 	},
 /turf/simulated/floor/tiled/dark/airless,
 /area/intrepid/department/command/AI/AICore)
@@ -13751,8 +13753,8 @@
 	},
 /obj/machinery/camera/motion{
 	c_tag = "AI Chamber - Core Foyer Portside";
-	network = list("Command");
-	dir = 1
+	dir = 1;
+	network = list("Command")
 	},
 /turf/simulated/floor/tiled/techfloor/grid{
 	initial_gas = null
@@ -15087,11 +15089,11 @@
 /area/intrepid/department/security/portdockingbaysecurity)
 "KQ" = (
 /obj/machinery/button/blast_door{
-	pixel_x = -24;
 	dir = 4;
-	pixel_y = 32;
 	id_tag = "aispace";
-	name = "AI Viewport Blast Door button"
+	name = "AI Viewport Blast Door button";
+	pixel_x = -24;
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/techfloor{
 	initial_gas = null
@@ -17747,8 +17749,8 @@
 	},
 /obj/machinery/camera/motion{
 	c_tag = "AI Chamber - AI Core Starboard";
-	network = list("Command");
-	dir = 4
+	dir = 4;
+	network = list("Command")
 	},
 /turf/simulated/floor/tiled/dark/airless,
 /area/intrepid/department/command/AI/AICore)
@@ -19204,20 +19206,20 @@
 	network = list("Command")
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
+	dir = 4;
 	id_tag = "ai_airlock";
+	pixel_x = -24;
 	tag_airpump = "ai_airlock_pump";
 	tag_chamber_sensor = "ai_airlock_sensor";
 	tag_exterior_door = "ai_airlock_outer";
 	tag_exterior_sensor = "ai_airlock_exterior_sensor";
 	tag_interior_door = "ai_airlock_inner";
-	tag_interior_sensor = "ai_airlock_interior_sensor";
-	dir = 4;
-	pixel_x = -24
+	tag_interior_sensor = "ai_airlock_interior_sensor"
 	},
 /obj/machinery/light/small,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "ai_airlock_pump";
-	dir = 1
+	dir = 1;
+	id_tag = "ai_airlock_pump"
 	},
 /turf/simulated/floor/reinforced,
 /area/intrepid/department/command/AI/AIFoyer)
@@ -19717,11 +19719,11 @@
 /area/intrepid/department/medical/morgue)
 "Wc" = (
 /obj/machinery/button/blast_door{
-	pixel_x = -24;
 	dir = 4;
-	pixel_y = -32;
 	id_tag = "aispace";
-	name = "AI Viewport Blast Door button"
+	name = "AI Viewport Blast Door button";
+	pixel_x = -24;
+	pixel_y = -32
 	},
 /obj/structure/cable/orange{
 	d1 = 4;
@@ -19778,8 +19780,8 @@
 	pixel_x = 14
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
-	id_tag = "ai_airlock_pump";
-	dir = 1
+	dir = 1;
+	id_tag = "ai_airlock_pump"
 	},
 /turf/simulated/floor/reinforced,
 /area/intrepid/department/command/AI/AIFoyer)

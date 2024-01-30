@@ -1286,6 +1286,12 @@
 	icon_state = "6-8"
 	},
 /obj/machinery/door/airlock/maintenance,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
 "baA" = (
@@ -4809,12 +4815,12 @@
 /area/shuttle/escape_pod2/station)
 "dBz" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
+	dir = 1;
 	frequency = 1441;
 	icon_state = "map_injector";
 	id = "n2o_in";
 	pixel_y = 0;
-	use_power = 1;
-	dir = 1
+	use_power = 1
 	},
 /turf/simulated/floor/reinforced/n20,
 /area/intrepid/department/engineering/atmos)
@@ -19890,8 +19896,8 @@
 	dir = 9
 	},
 /obj/structure/sign/poster/safety_moth_random{
-	pixel_y = -32;
-	pixel_x = -32
+	pixel_x = -32;
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled,
 /area/intrepid/department/engineering/atmos)
@@ -30175,9 +30181,9 @@
 	name = "air mixer";
 	tag_east = 1;
 	tag_east_con = 0.21;
+	tag_north = 1;
 	tag_north_con = 0.79;
 	tag_south_con = null;
-	tag_north = 1;
 	tag_west = 2
 	},
 /turf/simulated/floor/tiled,
@@ -30347,8 +30353,8 @@
 	},
 /obj/structure/catwalk,
 /obj/structure/sign/warning/nosmoking_2{
-	pixel_y = 32;
-	pixel_x = -32
+	pixel_x = -32;
+	pixel_y = 32
 	},
 /obj/structure/cable/green{
 	d1 = 4;
