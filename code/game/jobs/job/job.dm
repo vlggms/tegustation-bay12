@@ -68,7 +68,7 @@
 
 	/// Disallowed culture types. If the character has any of these - they are unable to join as that role.
 	var/list/culture_blacklist = list()
-	/// Required culture types, if any.
+	/// Required culture types, if any. Associated list by tag type!
 	var/list/culture_whitelist = list()
 
 /datum/job/New()
@@ -291,9 +291,9 @@
 /datum/job/proc/CheckBackground(datum/preferences/prefs)
 	// The character MUST have any of these
 	if(LAZYLEN(culture_whitelist))
-		for(var/tag in prefs.cultural_info)
-			if(!(prefs.cultural_info[tag] in culture_whitelist))
-				return "Must have the following background: [english_list(culture_whitelist, "N/A", " or ")]."
+		for(var/tag in culture_whitelist)
+			if(!(prefs.cultural_info[tag] in culture_whitelist[tag]))
+				return "Must have the following background: [english_list(culture_whitelist[tag], "N/A", " or ")]."
 
 	// The character must NOT have any of these
 	if(LAZYLEN(culture_blacklist))

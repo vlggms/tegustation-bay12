@@ -55,8 +55,32 @@
 /datum/job
 	allowed_branches = list(
 		/datum/mil_branch/civilian
-	)
+		)
 	allowed_ranks = list(
 		/datum/mil_rank/civ/civ
-	)
+		)
 	required_language = LANGUAGE_HUMAN_ENGLISH
+
+	culture_whitelist = list(
+		TAG_FACTION = list(
+			FACTION_TERRAGOV,
+			FACTION_TERRASENATE_UP,
+			FACTION_TERRASENATE_PCOH,
+			FACTION_TERRASENATE_TCG,
+			FACTION_TERRASENATE_TDC,
+			FACTION_TERRASENATE_ERC,
+			),
+		)
+
+/datum/job/submap
+	branch = /datum/mil_branch/civilian
+	rank =   /datum/mil_rank/civ/civ
+	allowed_branches = list(
+		/datum/mil_branch/civilian
+		)
+	allowed_ranks = list(
+		/datum/mil_rank/civ/civ
+		)
+	required_language = null
+
+	culture_whitelist = list()

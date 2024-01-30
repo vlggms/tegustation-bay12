@@ -22,6 +22,7 @@
 	allowed_ranks = list(
 		/datum/mil_rank/civ/civ
 	)
+	culture_whitelist = list()
 
 /datum/job/assistant/get_description_blurb()
 	return "You are the Passenger. \
@@ -60,6 +61,7 @@
 	max_skill = list(   SKILL_PILOT       = SKILL_MAX)
 	skill_points = 24
 	required_language = null
+	culture_whitelist = list()
 
 /********
 Synthetic
@@ -73,6 +75,7 @@ Synthetic
 	allowed_ranks = list(
 		/datum/mil_rank/civ/synthetic
 	)
+	culture_whitelist = list()
 
 /datum/job/ai
 	minimal_player_age = 7
@@ -80,3 +83,4 @@ Synthetic
 	allowed_ranks = list(
 		/datum/mil_rank/civ/synthetic
 	)
+	culture_whitelist = list()

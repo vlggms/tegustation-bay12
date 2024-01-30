@@ -44,6 +44,24 @@
 							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/shields_monitor)
 
+	culture_whitelist = list(
+		TAG_FACTION = list(
+			FACTION_TERRAGOV,
+			FACTION_TERRASENATE_UP,
+			FACTION_TERRASENATE_PCOH,
+			FACTION_TERRASENATE_TCG,
+			FACTION_TERRASENATE_TDC,
+			FACTION_TERRASENATE_ERC,
+			FACTION_SOL_CENTRAL,
+			FACTION_ISC,
+			FACTION_NANOTRASEN,
+			FACTION_CYBERSUN,
+			FACTION_FREETRADE,
+			FACTION_DAIS,
+			FACTION_OTHER,
+			),
+		)
+
 /datum/job/senior_engineer/get_description_blurb()
 	return "You are the Senior Engineer. You are a veteran SNCO. \
 			<br><hr><br>\
@@ -108,6 +126,24 @@
 							 /datum/computer_file/program/rcon_console,
 							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/shields_monitor)
+
+	culture_whitelist = list(
+		TAG_FACTION = list(
+			FACTION_TERRAGOV,
+			FACTION_TERRASENATE_UP,
+			FACTION_TERRASENATE_PCOH,
+			FACTION_TERRASENATE_TCG,
+			FACTION_TERRASENATE_TDC,
+			FACTION_TERRASENATE_ERC,
+			FACTION_SOL_CENTRAL,
+			FACTION_ISC,
+			FACTION_NANOTRASEN,
+			FACTION_CYBERSUN,
+			FACTION_FREETRADE,
+			FACTION_DAIS,
+			FACTION_OTHER,
+			),
+		)
 
 /datum/job/engineer/get_description_blurb()
 	return "You are an Engineer. \
@@ -218,6 +254,24 @@
 	)
 
 	minimal_access = list()
+
+	culture_whitelist = list(
+		TAG_FACTION = list(
+			FACTION_TERRAGOV,
+			FACTION_TERRASENATE_UP,
+			FACTION_TERRASENATE_PCOH,
+			FACTION_TERRASENATE_TCG,
+			FACTION_TERRASENATE_TDC,
+			FACTION_TERRASENATE_ERC,
+			FACTION_SOL_CENTRAL,
+			FACTION_ISC,
+			FACTION_NANOTRASEN,
+			FACTION_CYBERSUN,
+			FACTION_FREETRADE,
+			FACTION_DAIS,
+			FACTION_OTHER,
+			),
+		)
 
 /datum/job/roboticist/get_description_blurb()
 	return "You are the Roboticist. \

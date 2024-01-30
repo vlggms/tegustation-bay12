@@ -41,6 +41,23 @@
 	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
 							 /datum/computer_file/program/camera_monitor)
 
+	culture_whitelist = list(
+		TAG_FACTION = list(
+			FACTION_TERRAGOV,
+			FACTION_TERRASENATE_UP,
+			FACTION_TERRASENATE_PCOH,
+			FACTION_TERRASENATE_TCG,
+			FACTION_TERRASENATE_TDC,
+			FACTION_TERRASENATE_ERC,
+			FACTION_SOL_CENTRAL,
+			FACTION_ISC,
+			FACTION_NANOTRASEN,
+			FACTION_CYBERSUN,
+			FACTION_FREETRADE,
+			FACTION_OTHER,
+			),
+		)
+
 /datum/job/doctor
 	title = "Medical Technician"
 	total_positions = 3
@@ -81,6 +98,23 @@
 	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
 							 /datum/computer_file/program/camera_monitor)
 	skill_points = 22
+
+	culture_whitelist = list(
+		TAG_FACTION = list(
+			FACTION_TERRAGOV,
+			FACTION_TERRASENATE_UP,
+			FACTION_TERRASENATE_PCOH,
+			FACTION_TERRASENATE_TCG,
+			FACTION_TERRASENATE_TDC,
+			FACTION_TERRASENATE_ERC,
+			FACTION_SOL_CENTRAL,
+			FACTION_ISC,
+			FACTION_NANOTRASEN,
+			FACTION_CYBERSUN,
+			FACTION_FREETRADE,
+			FACTION_OTHER,
+			),
+		)
 
 /datum/job/medical_trainee
 	title = "Trainee Medical Technician"
@@ -172,6 +206,23 @@
 
 	minimal_access = list()
 
+	culture_whitelist = list(
+		TAG_FACTION = list(
+			FACTION_TERRAGOV,
+			FACTION_TERRASENATE_UP,
+			FACTION_TERRASENATE_PCOH,
+			FACTION_TERRASENATE_TCG,
+			FACTION_TERRASENATE_TDC,
+			FACTION_TERRASENATE_ERC,
+			FACTION_SOL_CENTRAL,
+			FACTION_ISC,
+			FACTION_NANOTRASEN,
+			FACTION_CYBERSUN,
+			FACTION_FREETRADE,
+			FACTION_OTHER,
+			),
+		)
+
 /datum/job/chemist/get_description_blurb()
 	return "You are the Pharmacist. \
 			<br><hr><br>\
@@ -216,6 +267,23 @@
 		/datum/computer_file/program/suit_sensors,
 		/datum/computer_file/program/camera_monitor
 	)
+
+	culture_whitelist = list(
+		TAG_FACTION = list(
+			FACTION_TERRAGOV,
+			FACTION_TERRASENATE_UP,
+			FACTION_TERRASENATE_PCOH,
+			FACTION_TERRASENATE_TCG,
+			FACTION_TERRASENATE_TDC,
+			FACTION_TERRASENATE_ERC,
+			FACTION_SOL_CENTRAL,
+			FACTION_ISC,
+			FACTION_NANOTRASEN,
+			FACTION_CYBERSUN,
+			FACTION_FREETRADE,
+			FACTION_OTHER,
+			),
+		)
 
 /datum/job/psychiatrist/get_description_blurb()
 	return "You are the Counselor. \
