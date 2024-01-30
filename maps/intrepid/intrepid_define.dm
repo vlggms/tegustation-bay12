@@ -78,13 +78,13 @@
 			HOME_SYSTEM_OTHER
 		),
 		TAG_FACTION = list(
-			FACTION_TERRAGOV, // Just a part of TerraGov with no particular ideology
-			FACTION_TERRASENATE_UP, // Factions of the senate start here
+			FACTION_TERRAGOV, // Just a part of TerraGov with no particular ideology,
+			FACTION_TERRASENATE_UP, // Factions of the senate start here,
 			FACTION_TERRASENATE_PCOH,
 			FACTION_TERRASENATE_TCG,
 			FACTION_TERRASENATE_TDC,
 			FACTION_TERRASENATE_ERC,
-			FACTION_SOL_CENTRAL, // Other factions
+			FACTION_SOL_CENTRAL, // Other factions,
 			FACTION_ISC,
 			FACTION_NANOTRASEN,
 			FACTION_CYBERSUN,
@@ -129,7 +129,8 @@
 			RELIGION_THELEMA,
 			RELIGION_SPIRITUALISM,
 			RELIGION_SHINTO,
-			RELIGION_TAOISM
+			RELIGION_TAOISM,
+			RELIGION_REBORN_CHRISTIANITY,
 		)
 	)
 
