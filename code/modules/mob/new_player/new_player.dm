@@ -409,6 +409,8 @@
 	// Job enforced background
 	if(job && LAZYLEN(job.forced_culture))
 		for(var/token in job.forced_culture)
+			if(job.forced_culture[token] == new_character.cultural_info[token])
+				continue
 			new_character.set_cultural_value(token, job.forced_culture[token], defer_language_update = TRUE)
 			to_chat(new_character, SPAN_NOTICE("Your [lowertext(ALL_CULTURAL_TAGS[token])] were changed to <b>[job.forced_culture[token]]</b> by your role!"))
 

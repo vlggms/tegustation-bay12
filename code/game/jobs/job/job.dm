@@ -246,7 +246,7 @@
 		return TRUE
 
 	if(!S.check_background(src, prefs))
-		to_chat(feedback, SPAN_USERDANGER("Your species background choices do not allow it."))
+		to_chat(feedback, SPAN_USERDANGER("Incompatible species background for [title]."))
 		return TRUE
 
 	var/background_result = CheckBackground(prefs)
