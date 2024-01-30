@@ -175,7 +175,6 @@ var/list/airlock_overlays = list()
 	name = "Glass Airlock"
 	icon_state = "preview_glass"
 	hitsound = 'sound/effects/Glasshit.ogg'
-	maxhealth = 300
 	explosion_resistance = 5
 	opacity = 0
 	glass = 1
@@ -279,7 +278,6 @@ var/list/airlock_overlays = list()
 	opacity = 0
 
 /obj/machinery/door/airlock/external/glass
-	maxhealth = 300
 	explosion_resistance = 5
 	opacity = 0
 	glass = 1
@@ -346,6 +344,7 @@ var/list/airlock_overlays = list()
 	name = "Secure Airlock"
 	icon = 'icons/obj/doors/secure/door.dmi'
 	fill_file = 'icons/obj/doors/secure/fill_steel.dmi'
+	maxhealth = 2000
 	explosion_resistance = 20
 	secured_wires = 1
 	assembly_type = /obj/structure/door_assembly/door_assembly_highsecurity
@@ -384,6 +383,7 @@ var/list/airlock_overlays = list()
 	name = "Vault"
 	icon = 'icons/obj/doors/vault/door.dmi'
 	fill_file = 'icons/obj/doors/vault/fill_steel.dmi'
+	maxhealth = 2000
 	explosion_resistance = 20
 	opacity = 1
 	secured_wires = 1
@@ -733,7 +733,7 @@ About the new airlock wires panel:
 
 		if(stat & BROKEN)
 			damage_overlay = sparks_broken_file
-		else if(health < maxhealth * 3/4)
+		else if(health < broken_health * 0.75)
 			damage_overlay = sparks_damaged_file
 
 	if(welded)
@@ -1180,7 +1180,7 @@ About the new airlock wires panel:
 		..()
 	return
 
-/obj/machinery/door/airlock/deconstruct(mob/user, var/moved = FALSE)
+/obj/machinery/door/airlock/deconstruct(mob/user, moved = FALSE)
 	var/obj/structure/door_assembly/da = new assembly_type(src.loc)
 	if (istype(da, /obj/structure/door_assembly/multi_tile))
 		da.set_dir(src.dir)
@@ -1216,8 +1216,8 @@ About the new airlock wires panel:
 		electronics = null
 
 	qdel(src)
-
 	return da
+
 /obj/machinery/door/airlock/phoron/attackby(C as obj, mob/user as mob)
 	if(C)
 		ignite(is_hot(C))
@@ -1342,11 +1342,11 @@ About the new airlock wires panel:
 		return FALSE
 	return ..()
 
-/obj/machinery/door/airlock/New(var/newloc, var/obj/structure/door_assembly/assembly=null)
-	..()
+/obj/machinery/door/airlock/New(newloc, obj/structure/door_assembly/assembly=null)
+	. = ..()
 
 	//if assembly is given, create the new door from the assembly
-	if (assembly && istype(assembly))
+	if(assembly && istype(assembly))
 		assembly_type = assembly.type
 
 		electronics = assembly.electronics
