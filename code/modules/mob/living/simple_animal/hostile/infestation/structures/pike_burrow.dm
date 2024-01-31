@@ -58,11 +58,11 @@
 
 	var/mob/living/chosen_target = get_atom_closest_to_atom(src, nearby_targets)
 	var/turf/T = get_turf(chosen_target)
-	var/obj/effect/temp_visual/decoy/D = new(T, 0, T, 6)
+	var/obj/effect/temp_visual/decoy/D = new(T, 0, T, attack_delay + 1)
 	D.transform = matrix()*1.5
 	D.alpha = 125
-	animate(D, transform = matrix(), color = COLOR_RED, alpha = 0, time = 5)
-	addtimer(CALLBACK(src, .proc/SpikeTurf, T), 5)
+	animate(D, transform = matrix(), color = COLOR_RED, alpha = 0, time = attack_delay)
+	addtimer(CALLBACK(src, .proc/SpikeTurf, T), attack_delay)
 
 	return TRUE
 
