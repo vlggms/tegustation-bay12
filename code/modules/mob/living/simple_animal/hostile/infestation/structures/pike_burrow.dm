@@ -20,7 +20,7 @@
 /obj/infestation_structure/pike_burrow/Initialize()
 	. = ..()
 	START_PROCESSING(SSobj, src)
-	for(var/turf/simulated/floor/T in dview(1, src))
+	for(var/turf/simulated/floor/T in dview(1, get_turf(src)))
 		if(istype(T, /turf/simulated/floor/exoplanet))
 			T.ChangeTurf(/turf/simulated/floor/exoplanet/flesh)
 			continue
@@ -47,7 +47,7 @@
 
 /obj/infestation_structure/pike_burrow/proc/PerformAttack()
 	var/list/nearby_targets = list()
-	for(var/mob/living/L in dview(7, src))
+	for(var/mob/living/L in dview(7, get_turf(src)))
 		if(L.stat)
 			continue
 		if(L.faction == faction)
@@ -92,7 +92,7 @@
 	. = ..()
 	playsound(src, 'sound/effects/spike_attack.ogg', 75, TRUE, 4)
 	for(var/mob/living/L in get_turf(src))
-		if(L.stat)
+		if(L.stat == DEAD)
 			continue
 		L.visible_message(
 			SPAN_DANGER("\The [L] is pierced by \the [src]!"),
