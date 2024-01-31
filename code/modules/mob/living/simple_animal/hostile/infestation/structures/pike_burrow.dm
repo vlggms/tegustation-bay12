@@ -21,6 +21,7 @@
 
 /obj/infestation_structure/pike_burrow/Initialize()
 	. = ..()
+	PerformAttack()
 	for(var/turf/simulated/floor/T in dview(1, get_turf(src)))
 		if(istype(T, /turf/simulated/floor/exoplanet))
 			T.ChangeTurf(/turf/simulated/floor/exoplanet/flesh)
