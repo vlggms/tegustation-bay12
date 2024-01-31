@@ -14,7 +14,7 @@
 	health_max = 200
 	health_min_damage = 10
 
-	var/attack_cooldown
+	var/attack_cooldown = 0
 	var/attack_cooldown_time = 1.5 SECONDS
 
 /obj/infestation_structure/pike_burrow/Initialize()
@@ -31,7 +31,6 @@
 	return ..()
 
 /obj/infestation_structure/pike_burrow/Process()
-	. = ..()
 	if(world.time < attack_cooldown)
 		return
 
@@ -46,6 +45,7 @@
 		QDEL_NULL(src)
 
 /obj/infestation_structure/pike_burrow/proc/PerformAttack()
+	attack_cooldown = world.time + attack_cooldown_time
 	var/list/nearby_targets = list()
 	for(var/mob/living/L in dview(7, get_turf(src)))
 		if(L.stat)
