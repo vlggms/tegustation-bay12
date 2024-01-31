@@ -14,27 +14,18 @@
 	health_max = 200
 	health_min_damage = 10
 
-	var/attack_cooldown = 0
-	var/attack_cooldown_time = 1.5 SECONDS
+	// How much time it takes between "warning" and actually spawning the spike
+	var/attack_delay = 4
+	var/attack_cooldown_time = 1.3 SECONDS
+	var/attack_damage = 50
 
 /obj/infestation_structure/pike_burrow/Initialize()
 	. = ..()
-	START_PROCESSING(SSobj, src)
 	for(var/turf/simulated/floor/T in dview(1, get_turf(src)))
 		if(istype(T, /turf/simulated/floor/exoplanet))
 			T.ChangeTurf(/turf/simulated/floor/exoplanet/flesh)
 			continue
 		T.set_flooring(decls_repository.get_decl(/decl/flooring/flesh/infested))
-
-/obj/infestation_structure/pike_burrow/Destroy()
-	STOP_PROCESSING(SSobj, src)
-	return ..()
-
-/obj/infestation_structure/pike_burrow/Process()
-	if(world.time < attack_cooldown)
-		return
-
-	PerformAttack()
 
 /obj/infestation_structure/pike_burrow/handle_death_change(new_death_state)
 	. = ..()
@@ -45,7 +36,9 @@
 		QDEL_NULL(src)
 
 /obj/infestation_structure/pike_burrow/proc/PerformAttack()
-	attack_cooldown = world.time + attack_cooldown_time
+	if(QDELETED(src))
+		return
+
 	var/list/nearby_targets = list()
 	for(var/mob/living/L in dview(7, get_turf(src)))
 		if(L.stat)
@@ -57,6 +50,8 @@
 			nearby_targets = list(L)
 			break
 		nearby_targets += L
+
+	addtimer(CALLBACK(src, .proc/PerformAttack), attack_cooldown_time)
 
 	if(!LAZYLEN(nearby_targets))
 		return FALSE
@@ -75,7 +70,7 @@
 	if(QDELETED(src))
 		return FALSE
 
-	new /obj/effect/temp_visual/infestation_spike(T, pick(GLOB.alldirs))
+	new /obj/effect/temp_visual/infestation_spike(T, pick(GLOB.alldirs), attack_damage)
 
 
 // The spike itself
@@ -86,9 +81,7 @@
 	duration = 8
 	layer = ABOVE_HUMAN_LAYER
 
-	var/damage = 50
-
-/obj/effect/temp_visual/infestation_spike/Initialize()
+/obj/effect/temp_visual/infestation_spike/Initialize(mapload, set_dir, damage = 50)
 	. = ..()
 	playsound(src, 'sound/effects/spike_attack.ogg', 75, TRUE, 4)
 	for(var/mob/living/L in get_turf(src))
