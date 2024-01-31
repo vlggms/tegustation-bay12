@@ -6,14 +6,22 @@
 	invocation_type = INVOKE_SHOUT
 	invocation = "Herald! Bless me with your anger!"
 	show_message = " erupts fire from their hands"
-	school = "Divine"
 	hand_duration = 100
 	spell_delay = 30
 	range = 4
 
+	categories = list(SPELL_CATEGORY_FIRE)
+
 	hud_state = "wiz_immolate"
 
-/datum/spell/hand/duration/sunwrath/cast_hand(var/atom/A, var/mob/user)
+	spell_cost = 5
+	mana_cost = 30
+
+/datum/spell/hand/duration/sunwrath/cast_hand(atom/A, mob/user)
+	. = ..()
+	if(!.)
+		return
+
 	var/turf/T = get_turf(user)
 	var/list/turfs = getline(T,A) - T
 	for(var/t in turfs)
@@ -24,10 +32,10 @@
 	return 1
 
 /obj/effect/fake_fire/sunwrath
-	firelevel = 2
+	firelevel = 5
 	last_temperature = 0
-	pressure = 3000
+	pressure = 5000
 
 /obj/effect/fake_fire/sunwrath/Process() //Override, so we burn mobs only
 	for(var/mob/living/L in loc)
-		L.FireBurn(firelevel,last_temperature,pressure)
+		L.FireBurn(firelevel, last_temperature, pressure)

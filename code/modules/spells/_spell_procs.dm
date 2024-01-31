@@ -1,13 +1,17 @@
 /datum/mind
-	var/list/learned_spells
+	var/list/learned_spells = list()
+	var/datum/spell/last_used_spell = null
 
 /mob/Stat()
 	. = ..()
 	if(. && ability_master && ability_master.spell_objects)
 		for(var/obj/screen/ability/spell/screen in ability_master.spell_objects)
 			var/datum/spell/S = screen.spell
+			if(!istype(S))
+				ability_master.remove_ability(screen)
+				continue
 			if((!S.connected_button) || !statpanel(S.panel))
-				continue //Not showing the noclothes spell
+				continue // Not showing the noclothes spell
 			switch(S.charge_type)
 				if(SPELL_RECHARGE)
 					statpanel(S.panel,"[S.charge_counter/10.0]/[S.charge_max/10]",S.connected_button)
@@ -27,20 +31,20 @@
 				var/datum/spell/S = screen.spell
 				mind.learned_spells |= S
 
-/proc/restore_spells(var/mob/H)
+/proc/restore_spells(mob/H)
 	if(H.mind && H.mind.learned_spells)
 		var/list/spells = list()
 		for(var/datum/spell/spell_to_remove in H.mind.learned_spells) //remove all the spells from other people.
 			if(istype(spell_to_remove.holder,/mob))
 				var/mob/M = spell_to_remove.holder
 				spells += spell_to_remove
-				M.remove_spell(spell_to_remove)
+				M.remove_spell(spell_to_remove, FALSE)
 
 		for(var/datum/spell/spell_to_add in spells)
 			H.add_spell(spell_to_add)
 	H.ability_master.update_abilities(0,H)
 
-/mob/proc/add_spell(var/datum/spell/spell_to_add, var/spell_base = "wiz_spell_ready")
+/mob/proc/add_spell(datum/spell/spell_to_add, spell_base = "wiz_spell_ready")
 	if(!ability_master)
 		ability_master = new()
 	spell_to_add.holder = src
@@ -51,18 +55,20 @@
 	ability_master.add_spell(spell_to_add, spell_base)
 	return 1
 
-/mob/proc/remove_spell(var/datum/spell/spell_to_remove)
+/mob/proc/remove_spell(datum/spell/spell_to_remove, should_delete = TRUE)
 	if(!spell_to_remove || !istype(spell_to_remove))
 		return
 
 	if(mind)
 		mind.learned_spells -= spell_to_remove
-	if (ability_master)
+	if(ability_master)
 		ability_master.remove_ability(ability_master.get_ability_by_spell(spell_to_remove))
+	if(should_delete)
+		QDEL_NULL(spell_to_remove)
 	return 1
 
-/mob/proc/silence_spells(var/amount = 0)
-	if(amount < 0)
+/mob/proc/silence_spells(amount = 0)
+	if(!amount)
 		return
 
 	if(!ability_master)

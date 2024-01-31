@@ -1,14 +1,15 @@
 /datum/spell/targeted/exhude_pleasantness
 	name = "Exhude Pleasantness"
 	desc = "A simple spell used to make friends with people. Be warned, this spell only has a subtle effect."
-	feedback = "AP"
-	school = "Illusion"
 	spell_flags = INCLUDEUSER
 	range = 5
 	max_targets = 0
 	charge_max = 100
 	var/list/possible_messages = list("seems pretty trustworthy!", "makes you feel appreciated.", "looks pretty cool.", "feels like the only decent person here!", "makes you feel safe.")
 	hud_state = "friendly"
+
+	spell_cost = 1
+	mana_cost = 1
 
 /datum/spell/targeted/exhude_pleasantness/cast(var/list/targets, var/mob/user)
 	for(var/m in targets)

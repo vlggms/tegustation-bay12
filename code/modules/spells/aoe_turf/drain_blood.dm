@@ -1,8 +1,6 @@
 /datum/spell/aoe_turf/drain_blood
 	name = "Drain Blood"
 	desc = "this spell allows the caster to borrow blood from those around them. Sharing is caring!"
-	feedback = "DB"
-	school = "transmutation"
 	charge_max = 600
 	invocation = "whispers something darkly"
 	invocation_type = INVOKE_EMOTE
@@ -13,6 +11,9 @@
 	number_of_channels = 3
 	cast_sound = 'sound/effects/squelch2.ogg'
 	hud_state = "const_rune"
+
+	spell_cost = 3
+	mana_cost = 20
 
 /datum/spell/aoe_turf/drain_blood/cast(var/list/targets, var/mob/user)
 	for(var/t in targets)

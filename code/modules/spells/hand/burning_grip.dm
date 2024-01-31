@@ -1,8 +1,6 @@
 /datum/spell/hand/burning_grip
 	name = "Burning Grip"
 	desc = "Cause someone to drop a held object by causing it to heat up intensly."
-	school = "transmutation"
-	feedback = "bg"
 	range = 5
 	spell_flags = 0
 	invocation_type = INVOKE_NONE
@@ -12,14 +10,21 @@
 	cast_sound = 'sound/magic/fireball.ogg'
 	compatible_targets = list(/mob/living/carbon/human)
 
-/datum/spell/hand/burning_grip/valid_target(var/mob/living/L, var/mob/user)
+	spell_cost = 1
+	mana_cost = 5
+
+/datum/spell/hand/burning_grip/valid_target(mob/living/L, mob/user)
 	if(!..())
 		return 0
 	if(!L.l_hand && !L.r_hand)
 		return 0
 	return 1
 
-/datum/spell/hand/burning_grip/cast_hand(var/mob/living/carbon/human/H, var/mob/user)
+/datum/spell/hand/burning_grip/cast_hand(mob/living/carbon/human/H, mob/user)
+	. = ..()
+	if(!.)
+		return
+
 	var/list/targets = list()
 	if(H.l_hand)
 		targets += BP_L_HAND
@@ -37,6 +42,3 @@
 		else
 			E.take_external_damage(burn=6, used_weapon = "hot iron")
 			to_chat(H, "<span class='warning'>You look down to notice that your [E] is burned.</span>")
-
-/datum/spell/hand/burning_grip/tower
-	charge_max = 3

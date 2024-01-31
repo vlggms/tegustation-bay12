@@ -941,7 +941,7 @@ var/list/admin_verbs_mentors = list(
 	if(!check_rights(R_FUN))
 		return
 
-	var/datum/spell/S = input("Choose the spell to give to that guy", "ABRAKADABRA") as null|anything in spells
+	var/datum/spell/S = input("Choose the spell to give to that guy", "ABRAKADABRA") as null|anything in GLOB.spells_by_categories
 	if(!S)
 		return
 	T.add_spell(new S)

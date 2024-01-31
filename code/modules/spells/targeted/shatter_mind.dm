@@ -1,8 +1,6 @@
 /datum/spell/targeted/shatter
 	name = "Shatter Mind"
-	desc = "this spell allows the caster to literally break an enemy's mind. Permanently."
-	feedback = "SM"
-	school = "illusion"
+	desc = "this spell allows the caster to literally break an enemy's mind."
 	charge_max = 300
 	spell_flags = 0
 	invocation_type = INVOKE_NONE
@@ -14,6 +12,9 @@
 	number_of_channels = 0
 
 	hud_state = "wiz_statue"
+
+	spell_cost = 1
+	mana_cost = 5
 
 /datum/spell/targeted/shatter/cast(var/list/targets, var/mob/user)
 	var/mob/living/carbon/human/H = targets[1]

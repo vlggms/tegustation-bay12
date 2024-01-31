@@ -139,6 +139,21 @@
 	drift = generator("circle", 0.4, NORMAL_RAND)
 	velocity = generator("circle", 0, 3, NORMAL_RAND)
 
+/particles/magic_orb
+	width = 500
+	height = 500
+	count = 2000
+	spawning = 20
+	lifespan = 1 SECONDS
+	fade = 1 SECONDS
+	position = generator("circle", 16, 20, NORMAL_RAND)
+	velocity = generator("circle", 0, 3, NORMAL_RAND)
+	friction = 0.3
+	gradient = list(0, COLOR_DIAMOND, 0.75, COLOR_BLUE_LIGHT)
+	color_change = 0.1
+	color = 0
+	drift = generator("circle", 0.1, NORMAL_RAND)
+
 //Spawner object
 //Maybe we could pool them in and out
 /obj/particle_emitter

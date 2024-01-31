@@ -170,6 +170,7 @@
 	#include "../away/ascent_caulship/_ascent_caulship.dm"
 	#include "../away/translocated_gateway/translocated_gateway.dm"
 	#include "../away/bunker/bunker.dm"
+	//#include "../away/wizard_den/wizard_den.dm"
 
 	#define using_map_DATUM /datum/map/torch
 

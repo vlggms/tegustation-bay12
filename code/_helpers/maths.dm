@@ -13,6 +13,8 @@
 /// Value or the nearest multiple of divisor in either direction
 #define Roundm(value, divisor) round((value), (divisor))
 
+#define ATAN2(x, y) ( !(x) && !(y) ? 0 : (y) >= 0 ? arccos((x) / sqrt((x)*(x) + (y)*(y))) : -arccos((x) / sqrt((x)*(x) + (y)*(y))) )
+
 // min is inclusive, max is exclusive
 /proc/Wrap(val, min, max)
 	var/d = max - min

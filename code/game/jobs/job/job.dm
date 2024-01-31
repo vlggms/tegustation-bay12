@@ -53,6 +53,11 @@
 	var/psi_latency_chance = 2            // Chance of an additional psi latency, if any.
 	var/give_psionic_implant_on_join = FALSE // If psionic, will be implanted for control.
 
+	/// Chance to start with increased mana pool
+	var/higher_mana_chance = 2
+	/// Chance to start with increased spell points
+	var/higher_spell_points_chance = 2
+
 	var/use_species_whitelist // If set, restricts the job to players with the given species whitelist. This does NOT restrict characters joining as the job to the species itself.
 	var/require_whitelist // If set to a string, requires a separate whitelist entry to use the job equal to the given string. Note: If not-null the check happens, so please don't set unless you want the whitelist.
 
@@ -108,6 +113,13 @@
 				affected.implants += imp
 				imp.part = affected
 			to_chat(H, SPAN_DANGER("As a registered psionic, you are fitted with a psi-dampening control implant. Using psi-power while the implant is active will result in neural shocks and your violation being reported."))
+
+	if(prob(higher_mana_chance))
+		H.mind.mana.mana_level_max *= 2
+		H.mind.mana.mana_level = H.mind.mana.mana_level_max
+		H.mind.mana.mana_recharge_speed *= 2
+	if(prob(higher_spell_points_chance))
+		H.mind.mana.spell_points += pickweight(1 = 30, 2 = 12, 3 = 4, 4 = 1)
 
 	var/decl/hierarchy/outfit/outfit = get_outfit(H, alt_title, branch, grade)
 	if(outfit) . = outfit.equip(H, title, alt_title)
