@@ -48,7 +48,7 @@
 
 	say_help = list("Need help!", "I require assistance!")
 
-	speak_sounds = list('sound/effects/radio_chatter.ogg' = 100)
+	speak_sounds = list('sound/effects/walkietalkie.ogg' = 100)
 	threaten_sound = 'sound/weapons/TargetOn.ogg'
 	stand_down_sound = 'sound/weapons/TargetOff.ogg'
 
