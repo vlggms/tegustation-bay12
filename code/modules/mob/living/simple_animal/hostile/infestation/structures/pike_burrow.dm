@@ -100,3 +100,5 @@
 			)
 		var/affecting = pick(BP_HEAD, BP_CHEST, BP_L_ARM, BP_R_ARM, BP_L_LEG, BP_R_LEG)
 		L.apply_damage(damage, BRUTE, affecting, DAM_SHARP | DAM_EDGE, null, 25)
+		for(var/i = 1 to rand(1, 3))
+			new /obj/effect/temp_visual/bloodsplatter(get_turf(L), pick(GLOB.alldirs))

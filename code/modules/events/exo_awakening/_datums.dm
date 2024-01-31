@@ -7,6 +7,20 @@
 	var/spawn_near_chance = 20 ///chance a mob spawns near a player
 	var/delay_time = 600 ///Amount of time between the event starting and mobs beginning spawns
 
+/datum/mob_list/major/infestation
+	mobs = list(
+				list(/mob/living/simple_animal/hostile/infestation/broodling, 35),
+				list(/mob/living/simple_animal/hostile/infestation/floatfly, 25),
+				list(/mob/living/simple_animal/hostile/infestation/spitter, 20),
+				list(/mob/living/simple_animal/hostile/infestation/eviscerator, 15),
+				list(/mob/living/simple_animal/hostile/infestation/assembler, 10),
+				list(/mob/living/simple_animal/hostile/infestation/rhino, 5)
+			)
+	arrival_message = "A giant creature wails somewhere in space as the planet starts to shake violently. Something is burrowing from the ground..."
+	arrival_sound   = 'sound/simple_mob/abominable_infestation/leviathan/wail1-long.ogg'
+	limit = 35
+	spawn_near_chance = 20
+
 /datum/mob_list/major/meat
 	mobs = list(
 				list(/mob/living/simple_animal/hostile/meat/abomination, 10),
@@ -46,6 +60,20 @@
 	arrival_sound   = 'sound/effects/wind/wind_3_1.ogg'
 	limit = 45
 	length = 50
+	spawn_near_chance = 10
+
+/datum/mob_list/moderate/infestation
+	mobs = list(
+				list(/mob/living/simple_animal/hostile/infestation/broodling, 50),
+				list(/mob/living/simple_animal/hostile/infestation/floatfly, 25),
+				list(/mob/living/simple_animal/hostile/infestation/larva, 25),
+				list(/mob/living/simple_animal/hostile/infestation/spitter, 15),
+				list(/mob/living/simple_animal/hostile/infestation/eviscerator, 5),
+				list(/mob/living/simple_animal/hostile/infestation/assembler, 2)
+			)
+	arrival_message = "A giant creature wails somewhere in space as something begins to burrow from the ground..."
+	arrival_sound   = 'sound/simple_mob/abominable_infestation/leviathan/wail1.ogg'
+	limit = 15
 	spawn_near_chance = 10
 
 /datum/mob_list/moderate/spiders

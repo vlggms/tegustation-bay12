@@ -29,7 +29,7 @@
 	var/regeneration_speed = 0.005
 	/// How much health should we have before throwing a new meatchip
 	var/spawn_health = 0
-	/// How much percents of max HP is reduced from damage_to_spawn on each new meatchip spawn
+	/// How much percents of max HP is reduced from spawn_health on each new meatchip spawn
 	var/spawn_health_reduction = 0.03
 
 /obj/item/natural_weapon/bite/aggregate
