@@ -43,7 +43,7 @@
 	say_stand_down = list("Great.")
 	say_escalate = list("You had your chance!", "That's it!")
 
-	speak_sounds = list('sound/effects/radio_chatter.ogg' = 100)
+	speak_sounds = list('sound/effects/walkietalkie.ogg' = 100)
 	threaten_sound = 'sound/weapons/TargetOn.ogg'
 	stand_down_sound = 'sound/weapons/TargetOff.ogg'
 
