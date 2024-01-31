@@ -13,8 +13,8 @@
 	natural_weapon = /obj/item/natural_weapon/claws/meatchip
 	melee_attack_delay = 0
 
-	health = 30
-	maxHealth = 30
+	health = 20
+	maxHealth = 20
 
 	meat_type = /obj/item/reagent_containers/food/snacks/abominationmeat
 	meat_amount = 1

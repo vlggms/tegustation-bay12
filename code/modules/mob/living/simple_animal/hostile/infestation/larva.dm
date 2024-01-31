@@ -30,6 +30,7 @@
 
 	transformation_types = list(
 		/mob/living/simple_animal/hostile/infestation/broodling = 30 SECONDS,
+		/mob/living/simple_animal/hostile/infestation/floatfly = 40 SECONDS,
 		/mob/living/simple_animal/hostile/infestation/spitter = 45 SECONDS,
 		/mob/living/simple_animal/hostile/infestation/eviscerator = 60 SECONDS,
 		/mob/living/simple_animal/hostile/infestation/assembler = 75 SECONDS,
