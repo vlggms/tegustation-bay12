@@ -500,15 +500,15 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
 "aAa" = (
-/obj/machinery/door/airlock/command{
-	name = "Terran Senator's Office"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/command/senator{
+	name = "Terran Senator's Office"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/command/commandquarters/tgs)
@@ -1371,13 +1371,21 @@
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/department/command/bridge)
 "bcJ" = (
-/obj/item/gun/projectile/automatic/t12,
 /obj/structure/closet/secure_closet/guncabinet{
-	name = "rifle cabinet"
+	health_min_damage = 40;
+	name = "rifle cabinet";
+	req_access = list("ACCESS_HEAD_OF_SECURITY")
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
+/obj/item/ammo_magazine/t12,
+/obj/item/ammo_magazine/t12,
+/obj/item/ammo_magazine/t12,
+/obj/item/ammo_magazine/t12,
+/obj/item/ammo_magazine/t12,
+/obj/item/ammo_magazine/t12,
+/obj/item/gun/projectile/automatic/t12,
 /turf/simulated/floor/carpet/red,
 /area/intrepid/department/command/commandquarters/cos)
 "bcY" = (
@@ -2519,7 +2527,7 @@
 	name = "Senator Quarters Window Blast Door button";
 	pixel_x = -25
 	},
-/obj/item/reagent_containers/food/drinks/glass2/coffeecup/STC,
+/obj/item/reagent_containers/food/drinks/glass2/coffeecup/terragov,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/command/commandquarters/tgs)
 "bVS" = (
@@ -4458,14 +4466,17 @@
 /turf/simulated/wall/r_wall/prepainted,
 /area/intrepid/misc/maint/internalstarboard)
 "dnJ" = (
-/obj/item/gun/projectile/revolver,
-/obj/item/ammo_magazine/speedloader/magnum,
 /obj/structure/closet/secure_closet/guncabinet{
-	name = "revolver cabinet"
+	health_min_damage = 40;
+	name = "revolver cabinet";
+	req_access = list("ACCESS_CAPTAIN")
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
+/obj/item/ammo_magazine/speedloader/heavy,
+/obj/item/ammo_magazine/speedloader/heavy,
+/obj/item/gun/projectile/revolver/military/heavy,
 /turf/simulated/floor/carpet/blue,
 /area/intrepid/department/command/commandquarters/co)
 "doc" = (
@@ -6644,11 +6655,18 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/internalportside)
 "eNb" = (
-/obj/structure/undies_wardrobe,
 /obj/structure/sign/double/terragovflag/right{
 	dir = 8;
 	pixel_x = 30
 	},
+/obj/structure/closet/secure_closet/guncabinet{
+	health_min_damage = 40;
+	name = "revolver cabinet";
+	req_access = list("ACCESS_INTREPID_REPRESENTATIVE")
+	},
+/obj/item/ammo_magazine/speedloader/magnum,
+/obj/item/ammo_magazine/speedloader/magnum,
+/obj/item/gun/projectile/revolver/military,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/command/commandquarters/tgs)
 "eOb" = (
@@ -11988,11 +12006,6 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 8
 	},
-/obj/structure/sign/directions{
-	dir = 8;
-	name = "\improper Senator's Office";
-	pixel_y = -32
-	},
 /obj/structure/sign/directions/janitor{
 	dir = 1;
 	pixel_y = -39
@@ -12000,6 +12013,10 @@
 /obj/structure/sign/directions/evac{
 	dir = 4;
 	pixel_y = -24
+	},
+/obj/structure/sign/directions/senator{
+	dir = 8;
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled,
 /area/intrepid/misc/hallway/portside)
@@ -12431,10 +12448,17 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/starboard)
 "jkJ" = (
-/obj/structure/table/standard,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
+/obj/structure/closet/secure_closet/guncabinet{
+	health_min_damage = 40;
+	name = "revolver cabinet";
+	req_access = list("ACCESS_HEAD_OF_PERSONNEL")
+	},
+/obj/item/ammo_magazine/speedloader/small,
+/obj/item/ammo_magazine/speedloader/small,
+/obj/item/gun/projectile/revolver/holdout,
 /turf/simulated/floor/carpet/blue2,
 /area/intrepid/department/command/commandquarters/xo)
 "jlI" = (
@@ -24320,11 +24344,11 @@
 /turf/simulated/wall/prepainted,
 /area/intrepid/department/civillian/janitor)
 "rwE" = (
-/obj/machinery/door/airlock/command{
-	name = "Terran Senator's Quarters"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/airlock/command/senator{
+	name = "Terran Senator's Quarters"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/command/commandquarters/tgs)
 "rxw" = (
