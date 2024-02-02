@@ -6,6 +6,9 @@
 	/// How far away calls for help will go for.
 	var/call_distance = 10
 
+	/// Percentage of max health below which we will call for help
+	var/help_request_min_health = 0.6
+
 	/// time when this mob is allowed to call for help
 	var/next_sent_help_request  = 0
 
@@ -50,7 +53,7 @@
 		faction_friends |= holder
 
 /datum/ai_holder/proc/ShouldRequestHelp()
-	if(holder.health >= holder.maxHealth * 0.6)
+	if(holder.health >= holder.maxHealth * help_request_min_health)
 		return FALSE
 	if(!length(faction_friends))
 		return FALSE
