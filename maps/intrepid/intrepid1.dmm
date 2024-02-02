@@ -1385,6 +1385,7 @@
 /obj/item/ammo_magazine/t12,
 /obj/item/ammo_magazine/t12,
 /obj/item/ammo_magazine/t12,
+/obj/item/storage/belt/holster/security/tactical,
 /obj/item/gun/projectile/automatic/t12,
 /turf/simulated/floor/carpet/red,
 /area/intrepid/department/command/commandquarters/cos)
@@ -4476,6 +4477,7 @@
 	},
 /obj/item/ammo_magazine/speedloader/heavy,
 /obj/item/ammo_magazine/speedloader/heavy,
+/obj/item/storage/belt/holster/security,
 /obj/item/gun/projectile/revolver/military/heavy,
 /turf/simulated/floor/carpet/blue,
 /area/intrepid/department/command/commandquarters/co)
@@ -6666,6 +6668,7 @@
 	},
 /obj/item/ammo_magazine/speedloader/magnum,
 /obj/item/ammo_magazine/speedloader/magnum,
+/obj/item/storage/belt/holster/security,
 /obj/item/gun/projectile/revolver/military,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/command/commandquarters/tgs)
@@ -7232,8 +7235,8 @@
 /obj/structure/sign/terragov{
 	pixel_y = 32
 	},
-/obj/machinery/suit_cycler/security/alt,
 /obj/effect/floor_decal/industrial/bot/yellow,
+/obj/machinery/suit_storage_unit/security/alt,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/security/armory_tactical)
 "fiH" = (
@@ -12458,6 +12461,7 @@
 	},
 /obj/item/ammo_magazine/speedloader/small,
 /obj/item/ammo_magazine/speedloader/small,
+/obj/item/storage/belt/holster/security,
 /obj/item/gun/projectile/revolver/holdout,
 /turf/simulated/floor/carpet/blue2,
 /area/intrepid/department/command/commandquarters/xo)
