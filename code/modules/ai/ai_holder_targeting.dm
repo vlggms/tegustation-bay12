@@ -261,6 +261,10 @@
 /datum/ai_holder/proc/on_attacked(atom/movable/AM)
 	last_conflict_time = world.time
 	add_attacker(AM)
+	// Attacking one is like attacking the entire faction
+	if(cooperative)
+		for(var/mob/living/L in GetFriendsInCallRange())
+			L.ai_holder.add_attacker(AM)
 
 /// Checks to see if an atom attacked us lately
 /datum/ai_holder/proc/check_attacker(atom/movable/A)

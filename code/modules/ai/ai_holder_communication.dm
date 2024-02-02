@@ -33,8 +33,9 @@
 		last_threaten_time = world.time
 
 		// All our friends nearby will also count as if they threatened the target
-		for(var/mob/living/L in GetFriendsInCallRange())
-			L.ai_holder.last_threaten_time = world.time
+		if(cooperative)
+			for(var/mob/living/L in GetFriendsInCallRange())
+				L.ai_holder.last_threaten_time = world.time
 
 		if (holder.say_list)
 			holder.ISay(pick(holder.say_list.say_threaten))
@@ -50,8 +51,9 @@
 			if (should_escalate)
 				threatening = FALSE
 				set_stance(STANCE_APPROACH)
-				for(var/mob/living/L in GetFriendsInCallRange())
-					L.ai_holder.set_stance(STANCE_APPROACH)
+				if(cooperative)
+					for(var/mob/living/L in GetFriendsInCallRange())
+						L.ai_holder.last_conflict_time = world.time
 				if (holder.say_list)
 					holder.ISay(pick(holder.say_list.say_escalate))
 					PlayMobSound(holder.say_list.speak_sounds)
