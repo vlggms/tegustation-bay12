@@ -84,6 +84,9 @@
 	emote_message_3p_target = "USER salutes TARGET."
 	emote_message_3p = "USER salutes."
 	check_restraints = TRUE
+	emote_sound = list(
+		'sound/misc/salute.ogg'
+	)
 
 /decl/emote/visible/flap
 	key = "flap"

@@ -199,3 +199,5 @@
 
 	///Allows a datum to intercept all click calls this mob is the source of
 	var/datum/click_intercept
+
+	var/emotes_cooldown = 0
