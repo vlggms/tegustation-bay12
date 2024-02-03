@@ -29,8 +29,8 @@
 
 // Handy defines to lookup the pixel offsets for holomap
 // Currently set to 0, left here in case of need for per map offsets
-#define HOLOMAP_PIXEL_OFFSET_X (0)
-#define HOLOMAP_PIXEL_OFFSET_Y (0)
+#define HOLOMAP_PIXEL_OFFSET_X (10)
+#define HOLOMAP_PIXEL_OFFSET_Y (10)
 
 #define HOLOMAP_LEGEND_X 96
 #define HOLOMAP_LEGEND_Y 156

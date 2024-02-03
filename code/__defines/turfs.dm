@@ -20,3 +20,11 @@
 #define SMOOTH_BLACKLIST 3 //Smooth with all but a blacklist of subtypes
 
 #define RANGE_TURFS(CENTER, RADIUS) block(locate(max(CENTER.x-(RADIUS), 1), max(CENTER.y-(RADIUS),1), CENTER.z), locate(min(CENTER.x+(RADIUS), world.maxx), min(CENTER.y+(RADIUS), world.maxy), CENTER.z))
+
+// Here are a few macros to help with people always forgetting to round the coordinates somewhere, and forgetting that not everything automatically rounds decimals.
+/// Helper macro for the x coordinate of the turf at the center of the world. Handles rounding.
+#define WORLD_CENTER_X CEILING((1 + world.maxx) / 2, 1)
+/// Helper macro for the y coordinate of the turf at the center of the world. Handles rounding.
+#define WORLD_CENTER_Y CEILING((1 + world.maxy) / 2, 1)
+/// Helper macro for getting the center turf on a given z-level. Handles rounding.
+#define WORLD_CENTER_TURF(Z) locate(WORLD_CENTER_X, WORLD_CENTER_Y, Z)
