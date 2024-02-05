@@ -1,29 +1,27 @@
-// As in - target faction is the protectorate of ours
-#define FACTION_STATE_PROTECTORATE 4
-#define FACTION_STATE_ALLY 3
-#define FACTION_STATE_FRIEND 2
-#define FACTION_STATE_WELCOMING 1
-#define FACTION_STATE_NEUTRAL 0
-#define FACTION_STATE_ANIMOSITY -1
-#define FACTION_STATE_RIVAL -2
-#define FACTION_STATE_ENEMY -3
-#define FACTION_STATE_WAR -4
-
 /datum/trade_faction
 	var/name = "Tegu Station Developers"
 	var/desc = "A bunch of people that decided it is upon them to modify this universe as they see fit."
 	/// Associative list Faction = State
-	var/relationship = list()
+	var/list/relationship = list()
+	/// List of factions who we will not trade with
+	var/list/embargo = list()
+	/// Associative list Faction = Additional markup; This is additional markup! Bad relations will have their own
+	var/list/trade_markup = list()
+	/// Access level required to set faction on supply program to this
+	var/access_required = null
 
 /datum/trade_faction/New()
 	. = ..()
 	// Factions that aren't set in relationship list of the datum are set to neutral.
 	for(var/datum/trade_faction/TF in SSsupply.factions)
-		if(TF.name in relationship)
-			continue
 		if(TF.name == name)
+			// Technically not, but this will be how we declare same faction relations for now
+			relationship[TF.name] = FACTION_STATE_PROTECTORATE
 			continue
-		relationship[TF.name] = FACTION_STATE_NEUTRAL
+		if(!(TF.name in relationship))
+			relationship[TF.name] = FACTION_STATE_NEUTRAL
+		// This ensures that relations are always mirrored between two datums
+		SSsupply.SetFactionRelations(name, TF.name, relationship[TF.name])
 
 /datum/trade_faction/proc/ModifyRelationsWith(target = null, change = FACTION_STATE_NEUTRAL)
 	if(istype(target, /datum/trade_faction))
@@ -40,11 +38,11 @@
 
 /datum/trade_faction/terragov
 	name = FACTION_TERRAGOV
-	desc = "A part of the Terran Government, a large authoritarian republic that rivals SolGov."
+	desc = "A part of the Terran Government, a large militaristic republic that rivals SolGov."
 	relationship = list(
 		FACTION_INDEPENDENT = FACTION_STATE_ANIMOSITY,
 		FACTION_SOL_CENTRAL = FACTION_STATE_RIVAL,
-		FACTION_ISC = FACTION_STATE_ENEMY,
+		FACTION_ISC = FACTION_STATE_RIVAL,
 		FACTION_NANOTRASEN = FACTION_STATE_ANIMOSITY,
 		FACTION_CYBERSUN = FACTION_STATE_ANIMOSITY,
 		)
@@ -55,7 +53,7 @@
 	relationship = list(
 		FACTION_INDEPENDENT = FACTION_STATE_ANIMOSITY,
 		FACTION_TERRAGOV = FACTION_STATE_RIVAL,
-		FACTION_ISC = FACTION_STATE_ENEMY,
+		FACTION_ISC = FACTION_STATE_RIVAL,
 		FACTION_NANOTRASEN = FACTION_STATE_WELCOMING,
 		)
 
@@ -63,8 +61,8 @@
 	name = FACTION_ISC
 	desc = "A part of the Independent Space Confederation, a military union of independent states opposing both SolGov and TerraGov."
 	relationship = list(
-		FACTION_TERRAGOV = FACTION_STATE_ENEMY,
-		FACTION_SOL_CENTRAL = FACTION_STATE_ENEMY,
+		FACTION_TERRAGOV = FACTION_STATE_RIVAL,
+		FACTION_SOL_CENTRAL = FACTION_STATE_RIVAL,
 		FACTION_NANOTRASEN = FACTION_STATE_ALLY,
 		FACTION_CYBERSUN = FACTION_STATE_ALLY,
 		)

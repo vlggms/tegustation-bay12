@@ -314,6 +314,9 @@
 	max_icon_state = "puck-max"
 	default_type = MATERIAL_DEUTERIUM
 
+/obj/item/stack/material/deuterium/ten
+	amount = 10
+
 /obj/item/stack/material/deuterium/fifty
 	amount = 50
 

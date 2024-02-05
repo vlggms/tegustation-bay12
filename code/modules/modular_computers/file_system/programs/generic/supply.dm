@@ -1,21 +1,23 @@
-#define GOODS_SCREEN 1
-#define OFFER_SCREEN 2
-#define CART_SCREEN 3
-#define ORDER_SCREEN 4
-#define LOG_SCREEN 5
-#define LOG_SHIPPING 1
-#define LOG_EXPORT 2
-#define LOG_OFFER 3
-#define LOG_ORDER 4
+#define SETTINGS_SCREEN "settings"
+#define GOODS_SCREEN "goods"
+#define OFFER_SCREEN "offers"
+#define CART_SCREEN "cart"
+#define ORDER_SCREEN "orders"
+#define SAVED_SCREEN "saved"
+#define LOG_SCREEN "logs"
+#define LOG_SHIPPING "Shipping"
+#define LOG_EXPORT "Export"
+#define LOG_OFFER "Offer"
+#define LOG_ORDER "Order"
 #define PRG_MAIN TRUE
 #define PRG_TREE FALSE
-#define TRADESCREEN list(GOODS_SCREEN, OFFER_SCREEN, CART_SCREEN, ORDERS_SCREEN)
+#define TRADESCREEN list(GOODS_SCREEN, OFFER_SCREEN, CART_SCREEN, ORDERS_SCREEN, SAVED_SCREEN)
 #define LOG_SCREEN_LIST list(LOG_SHIPPING, LOG_EXPORT, LOG_OFFER, LOG_ORDER)
 
 /datum/computer_file/program/supply
 	filename = "supply"
 	filedesc = "Supply Management"
-	nanomodule_path = /datum/nano_module/program/supply
+	//nanomodule_path = /datum/nano_module/program/supply
 	ui_header = null // Set when enabled by an admin user.
 	program_icon_state = "supply"
 	program_key_state = "rd_key"
@@ -25,6 +27,12 @@
 	available_on_ntnet = FALSE
 	requires_ntnet = TRUE
 	category = PROG_SUPPLY
+	usage_flags = PROGRAM_CONSOLE
+
+	var/program_type = "master"	// master, slave, ordering
+
+	// Our associated trade faction
+	var/faction = FACTION_INDEPENDENT
 
 	var/prg_screen = PRG_TREE
 	var/trade_screen = GOODS_SCREEN
@@ -33,24 +41,56 @@
 	var/obj/machinery/trade_beacon/sending/sending
 	var/obj/machinery/trade_beacon/receiving/receiving
 	var/datum/money_account/account
-	var/datum/trade_station/station
+
+	var/list/shopping_list = list() // list(trade_station = list(category = list(path, path, ...)))
+	var/list/saved_shopping_lists = list()
+	var/saved_cart_id = 0
+	var/saved_cart_page = 1
+	var/saved_cart_page_max
+
+	var/datum/trading_station/station
 	var/chosen_category
 
-	var/list/shopping_list = list()	// list(trade_station = list(path, path, ...))
+	var/cart_station_index
+	var/cart_category_index
+
+	var/current_order
+	var/current_order_page = 1
+	var/order_page_max
+	// For preventing order spam
+	var/orders_locked = FALSE
+
+	var/current_log_page = 1
+	var/log_page_max
+
+/datum/computer_file/program/supply/New()
+	. = ..()
+	var/atom/atom_holder = computer.holder
+	if(!istype(atom_holder))
+		return
+
+	var/atom/stored_loc = atom_holder.loc
+	if(istype(stored_loc) && (stored_loc.z in GLOB.using_map.station_levels))
+		faction = GLOB.using_map.trade_faction
+
+/datum/computer_file/program/supply/proc/SetChosenCategory(value)
+	if(isnum(value))
+		value = station.inventory[value]
+	chosen_category = value
 
 /datum/computer_file/program/supply/proc/OpenShopList()
 	var/list/category_list = list()
 	var/list/inventory_list = list()
 
 	// Add the station to shopping list if it isn't here already
-	LAZYDISTINCTADD(shoppinglist, station)
+	LAZYDISTINCTADD(shopping_list, station)
 
 	// If nothing has been added under this station, create an empty list
-	if(!islist(shoppinglist[station]))
-		shoppinglist[station] = list()
+	if(!islist(shopping_list[station]))
+		shopping_list[station] = list()
 
 	// Make the category list point to the current station's category list
-	category_list = shoppinglist[station]
+	category_list = shopping_list[station]
 	// Add the category to the shopping list if it doesn't already exist
 	LAZYDISTINCTADD(category_list, chosen_category)
 
@@ -63,51 +103,51 @@
 
 	return inventory_list // Return a reference to the current category's list of items
 
-/datum/computer_file/program/trade/proc/SanitizeShopList()
+/datum/computer_file/program/supply/proc/SanitizeShopList()
 	var/list/category_list = list()
 
-	for(var/station in shoppinglist)
-		category_list = shoppinglist[station]
+	for(var/station in shopping_list)
+		category_list = shopping_list[station]
 		for(var/category in category_list)
 			if(!LAZYLEN(category_list[category]))
 				category_list -= category
 		if(!LAZYLEN(category_list))
-			shoppinglist -= station
+			shopping_list -= station
 			cart_station_index = null
 
-	if(!LAZYLEN(shoppinglist))
+	if(!LAZYLEN(shopping_list))
 		cart_category_index = null
 		cart_station_index = null
 
-/datum/computer_file/program/trade/proc/AddToShopList(path, amount, limit)
+/datum/computer_file/program/supply/proc/AddToShopList(path, amount, limit)
 	if(!path)
 		return
-	var/list/inventory_list = open_shop_list()		// Get reference to inventory list
+	var/list/inventory_list = OpenShopList()		// Get reference to inventory list
 	LAZYDISTINCTADD(inventory_list, path)
 	LAZYAPLUS(inventory_list, path, amount)
 
 	if(inventory_list[path] > limit)
 		LAZYSET(inventory_list, path, limit)
 
-/datum/computer_file/program/trade/proc/RemoveFromShopList(path, amount)
-	var/list/inventory_list = open_shop_list()		// Get reference to inventory list
+/datum/computer_file/program/supply/proc/RemoveFromShopList(path, amount)
+	var/list/inventory_list = OpenShopList()		// Get reference to inventory list
 	if(inventory_list.Find(path))					// If path exists, subtract from amount
 		inventory_list[path] -= amount					// Not using LAZYAMINUS() because we only want to sanitize the whole list if the path is removed
 		if(inventory_list[path] < 1)				// If amount is less than 1, remove from list
 			inventory_list -= path
 			SanitizeShopList()					// Don't need to sanitize every time, just when we're removing a path from the list
 
-/datum/computer_file/program/trade/proc/ResetShopList()
-	shoppinglist = list()
+/datum/computer_file/program/supply/proc/ResetShopList()
+	shopping_list = list()
 	cart_category_index = null
 	cart_station_index = null
 
-/datum/computer_file/program/trade/proc/SaveShopList(name, list/shop_list = null)
+/datum/computer_file/program/supply/proc/SaveShopList(name, list/shop_list = null)
 	// Need to open and copy every list within the list since copying the list just makes a list of references
 	var/list/list_to_copy
 
 	if(!shop_list)
-		list_to_copy = shoppinglist
+		list_to_copy = shopping_list
 	else if(islist(shop_list))
 		list_to_copy = shop_list
 
@@ -126,7 +166,7 @@
 	LAZYDISTINCTADD(saved_shopping_lists, list_name)
 	LAZYSET(saved_shopping_lists, list_name, list_to_save)
 
-/datum/computer_file/program/trade/proc/LoadShopList(name)
+/datum/computer_file/program/supply/proc/LoadShopList(name)
 	if(!saved_shopping_lists.Find(name))
 		return
 
@@ -144,13 +184,16 @@
 
 	return list_to_load.Copy()
 
-/datum/computer_file/program/trade/proc/DeleteShopList(name)
+/datum/computer_file/program/supply/proc/DeleteShopList(name)
 	if(!saved_shopping_lists.Find(name))
 		return
 
 	saved_shopping_lists -= name
 
-/datum/computer_file/program/trade/Topic(href, href_list)
+/datum/computer_file/program/supply/proc/UnlockOrdering()
+	orders_locked = FALSE
+
+/datum/computer_file/program/supply/Topic(href, href_list)
 	. = ..()
 	if(.)
 		return
@@ -170,12 +213,13 @@
 
 	if(href_list["PRG_goods_category"])
 		if(!chosen_category || !(chosen_category in station.inventory))
-			set_chosen_category()
-		set_chosen_category((text2num(href_list["PRG_goods_category"]) <= length(station.inventory)) ? station.inventory[text2num(href_list["PRG_goods_category"])] : "")
+			SetChosenCategory()
+		SetChosenCategory(href_list["PRG_goods_category"])
 		return TRUE
 
 	if(href_list["PRG_account"])
-		var/acc_num = input("Enter account number", "Account linking", computer?.card_slot?.stored_card?.associated_account_number) as num|null
+		var/obj/item/stock_parts/computer/card_slot/card_slot = computer.get_component(PART_CARD)
+		var/acc_num = input("Enter account number", "Account linking", card_slot?.stored_card?.associated_account_number) as num|null
 		if(!acc_num)
 			return
 
@@ -183,7 +227,7 @@
 		if(!acc_pin)
 			return
 
-		var/card_check = computer?.card_slot?.stored_card?.associated_account_number == acc_num
+		var/card_check = card_slot?.stored_card?.associated_account_number == acc_num
 		var/datum/money_account/A = attempt_account_access(acc_num, acc_pin, card_check ? 2 : 1, TRUE)
 		if(!A)
 			to_chat(usr, SPAN_WARNING("Unable to link account: access denied."))
@@ -198,16 +242,16 @@
 		return TRUE
 
 	if(href_list["PRG_station"])
-		var/datum/trade_station/S = SStrade.get_discovered_station_by_uid(href_list["PRG_station"])
+		var/datum/trading_station/S = SSsupply.GetVisibleStationByUid(href_list["PRG_station"])
 		if(!S)
 			return
-		set_chosen_category()
+		SetChosenCategory()
 		station = S
 		return TRUE
 
 	// Cart buttons
 	if(href_list["PRG_cart_reset"])
-		reset_shop_list()
+		ResetShopList()
 		return TRUE
 
 	if(href_list["PRG_cart_add"] || href_list["PRG_cart_add_input"])
@@ -227,11 +271,11 @@
 		var/path = LAZYACCESS(category, ind)
 		if(!path)
 			return
-		var/good_amount = station.get_good_amount(chosen_category, ind)
+		var/good_amount = station.GetGoodAmount(chosen_category, ind)
 		if(!good_amount)
 			return
 
-		add_to_shop_list(path, count2buy, good_amount)
+		AddToShopList(path, count2buy, good_amount)
 		return TRUE
 
 	if(href_list["PRG_cart_remove"])
@@ -245,7 +289,7 @@
 		if(!path)
 			return
 
-		remove_from_shop_list(path, 1)
+		RemoveFromShopList(path, 1)
 		return TRUE
 
 	if(href_list["PRG_cart_category"])
@@ -259,7 +303,7 @@
 
 	if(href_list["PRG_cart_save"])
 		var/name = sanitizeName(input("Would you like to name the saved cart? (Not required)", "Save Cart"), MAX_NAME_LEN)
-		save_shop_list(name)
+		SaveShopList(name)
 		return TRUE
 
 	if(href_list["PRG_cart_load"])
@@ -267,7 +311,7 @@
 		if(!name)
 			to_chat(usr, SPAN_WARNING("ERROR: Invalid cart."))
 			return
-		shoppinglist = load_shop_list(name)
+		shopping_list = LoadShopList(name)
 		trade_screen = CART_SCREEN
 		return TRUE
 
@@ -276,19 +320,19 @@
 		if(!name)
 			to_chat(usr, SPAN_WARNING("ERROR: Invalid cart."))
 			return
-		shoppinglist = load_shop_list(name)
+		shopping_list = LoadShopList(name)
 		trade_screen = CART_SCREEN
 		return TRUE
 
 	if(href_list["PRG_cart_delete"])
 		var/name = saved_shopping_lists[text2num(href_list["PRG_cart_delete"])]
-		delete_shop_list(name)
+		DeleteShopList(name)
 		return TRUE
 
 	// Order requests
 	if(href_list["PRG_reason"])
 		var/reason = sanitizeName(input("Enter reason(s) for order", "Request Reason", ""), MAX_NAME_LEN)
-		var/list/order = SStrade.order_queue[current_order]
+		var/list/order = SSsupply.order_queue[current_order]
 		order["reason"] = reason
 		return TRUE
 
@@ -297,12 +341,12 @@
 			to_chat(usr, SPAN_WARNING("ERROR: You cannot place an order at this time. Please wait 10 seconds."))
 			return
 		var/reason = sanitizeName(input("Enter reason(s) for order", "Request Reason", ""), MAX_NAME_LEN)
-		current_order = SStrade.build_order(account, reason, shoppinglist)
-		shoppinglist = list()
+		current_order = SSsupply.BuildOrder(account, reason, shopping_list)
+		shopping_list = list()
 		trade_screen = ORDER_SCREEN
-		if(account != department_accounts[DEPARTMENT_GUILD])
+		if(account != department_accounts["Supply"])
 			orders_locked = TRUE
-			addtimer(CALLBACK(src, .proc/unlock_ordering), 10 SECONDS, TIMER_STOPPABLE)
+			addtimer(CALLBACK(src, .proc/UnlockOrdering), 10 SECONDS, TIMER_STOPPABLE)
 		return TRUE
 
 	if(href_list["PRG_view_order"])
@@ -310,68 +354,68 @@
 		return TRUE
 
 	if(href_list["PRG_remove_order"])
-		SStrade.order_queue.Remove(href_list["PRG_remove_order"])
+		SSsupply.order_queue.Remove(href_list["PRG_remove_order"])
 		if(current_order == href_list["PRG_remove_order"])
 			current_order = null
 		return TRUE
 
 	if(href_list["PRG_save_order"])
 		var/order_id = href_list["PRG_save_order"]
-		if(!order_id || !SStrade.order_queue.Find(order_id))
+		if(!order_id || !SSsupply.order_queue.Find(order_id))
 			to_chat(usr, SPAN_WARNING("ERROR: Order does not exist."))
 			return
 		var/name = sanitizeName(input("Would you like to name the saved cart? (Not required)", "Save Cart"), MAX_NAME_LEN)
-		var/list/order_data = SStrade.order_queue[order_id]
-		save_shop_list(name, order_data["contents"])
+		var/list/order_data = SSsupply.order_queue[order_id]
+		SaveShopList(name, order_data["contents"])
 		return TRUE
 
 	// Logs
 	if(href_list["PRG_print"] || href_list["PRG_print_internal"])
-		var/log_id = href_list["PRG_print"] || href_list["PRG_print_internal"]
-		if(computer?.printer)
-			var/list/log_data = SStrade.get_log_data_by_id(log_id)
+		if(!computer.get_component(PART_PRINTER))
+			to_chat(usr, SPAN_WARNING("Unable to print invoice: no printer component installed."))
+			return TRUE
 
-			if(!log_data.len)
-				to_chat(usr, SPAN_WARNING("Unable to print invoice: no log with id \"[log_id]\" found."))
+		var/log_id = href_list["PRG_print"] || href_list["PRG_print_internal"]
+		var/list/log_data = SSsupply.GetLogDataById(log_id)
+		if(!log_data.len)
+			to_chat(usr, SPAN_WARNING("Unable to print invoice: no log with id \"[log_id]\" found."))
+			return
+
+		var/id_data = splittext(log_id, "-")
+		var/log_type = id_data[2]
+
+		switch(log_type)
+			if("S")
+				log_type = "Shipping"
+			if("E")
+				log_type = "Export"
+			if("SO")
+				log_type = "Special Offer"
+			if("O")
+				log_type = "Order"
+			else
 				return
 
-			var/id_data = splittext(log_id, "-")
-			var/log_type = id_data[2]
+		var/title
+		title = "[lowertext(log_type)] invoice - #[log_id]"
+		title += href_list["PRG_print_internal"] ? " (internal)" : null
 
-			switch(log_type)
-				if("S")
-					log_type = "Shipping"
-				if("E")
-					log_type = "Export"
-				if("SO")
-					log_type = "Special Offer"
-				if("O")
-					log_type = "Order"
-				else
-					return
+		var/text
+		text += "<h3>[log_type] Invoice - #[log_id]</h3>"
+		text += "<hr><font size = \"2\">"
+		text += href_list["PRG_print_internal"] ? "FOR INTERNAL USE ONLY<br><br>" : null
+		text += log_type != "Shipping" && log_type ? "Recipient: [log_data["ordering_acct"]]<br>" : "Recipient: \[field\]<br>"
+		text += log_type == "Shipping" ? "Package Name: \[field\]<br>" : null
+		text += "Contents:<br>"
+		text += "<ul>"
+		text += log_data["contents"]
+		text += "</ul>"
+		text += href_list["PRG_print_internal"] ? "Order Cost: [log_data["total_paid"]]<br>" : null
+		text += log_type == "Shipping" ? "Total Credits Paid: \[field\]<br>" : "Total Credits Paid: [log_data["total_paid"]]<br>"
+		text += "</font>"
+		text += log_type == "Shipping" ? "<hr><h5>Stamp below to confirm receipt of goods:</h5>" : null
 
-			var/title
-			title = "[lowertext(log_type)] invoice - #[log_id]"
-			title += href_list["PRG_print_internal"] ? " (internal)" : null
-
-			var/text
-			text += "<h3>[log_type] Invoice - #[log_id]</h3>"
-			text += "<hr><font size = \"2\">"
-			text += href_list["PRG_print_internal"] ? "FOR INTERNAL USE ONLY<br><br>" : null
-			text += log_type != "Shipping" && log_type ? "Recipient: [log_data["ordering_acct"]]<br>" : "Recipient: \[field\]<br>"
-			text += log_type == "Shipping" ? "Package Name: \[field\]<br>" : null
-			text += "Contents:<br>"
-			text += "<ul>"
-			text += log_data["contents"]
-			text += "</ul>"
-			text += href_list["PRG_print_internal"] ? "Order Cost: [log_data["total_paid"]]<br>" : null
-			text += log_type == "Shipping" ? "Total Credits Paid: \[field\]<br>" : "Total Credits Paid: [log_data["total_paid"]]<br>"
-			text += "</font>"
-			text += log_type == "Shipping" ? "<hr><h5>Stamp below to confirm receipt of goods:</h5>" : null
-
-			computer.printer.print_text(text, title)
-		else
-			to_chat(usr, SPAN_WARNING("Unable to print invoice: no printer component installed."))
+		computer.print_paper(text, title)
 		return TRUE
 
 	// Page navigation
@@ -456,9 +500,9 @@
 	if(program_type != "ordering")
 		if(href_list["PRG_receiving"])
 			var/list/beacons_by_id = list()
-			for(var/obj/machinery/trade_beacon/receiving/beacon in SStrade.beacons_receiving)
+			for(var/obj/machinery/trade_beacon/receiving/beacon in SSsupply.beacons_receiving)
 				if(get_area(beacon) == get_area(computer) || program_type == "master")
-					var/beacon_id = beacon.get_id()
+					var/beacon_id = beacon.GetId()
 					beacons_by_id.Insert(beacon_id, beacon_id)
 					beacons_by_id[beacon_id] = beacon
 			if(beacons_by_id.len == 1)
@@ -470,9 +514,9 @@
 
 		if(href_list["PRG_sending"])
 			var/list/beacons_by_id = list()
-			for(var/obj/machinery/trade_beacon/sending/beacon in SStrade.beacons_sending)
+			for(var/obj/machinery/trade_beacon/sending/beacon in SSsupply.beacons_sending)
 				if(get_area(beacon) == get_area(computer) || program_type == "master")
-					var/beacon_id = beacon.get_id()
+					var/beacon_id = beacon.GetId()
 					beacons_by_id.Insert(beacon_id, beacon_id)
 					beacons_by_id[beacon_id] = beacon
 			if(beacons_by_id.len == 1)
@@ -482,37 +526,16 @@
 				sending = beacons_by_id[id]
 			return TRUE
 
-		if(account)
-			if(href_list["PRG_offer_fulfill"])
-				if(get_area(sending) != get_area(computer) && program_type != "master")
-					to_chat(usr, SPAN_WARNING("ERROR: Sending beacon is too far from \the [computer]."))
-					return
-				var/datum/trade_station/S = LAZYACCESS(SStrade.discovered_stations, text2num(href_list["PRG_offer_fulfill"]))
-				if(!S)
-					return
-				var/atom/movable/path = text2path(href_list["PRG_offer_fulfill_path"])
-				var/is_slaved = (program_type == "slave") ? TRUE : FALSE
-				SStrade.fulfill_offer(sending, account, station, path, is_slaved)
-				return TRUE
-
-			if(href_list["PRG_offer_fulfill_all"])
-				if(get_area(sending) != get_area(computer) && program_type != "master")
-					to_chat(usr, SPAN_WARNING("ERROR: Sending beacon is too far from \the [computer]."))
-					return
-				var/is_slaved = (program_type == "slave") ? TRUE : FALSE
-				SStrade.fulfill_all_offers(sending, account, is_slaved)
-				return TRUE
-
 		if(receiving)
 			if(href_list["PRG_receive"])
 				if(!account)
-					to_chat(usr, SPAN_WARNING("ERROR: no account linked."))
+					to_chat(usr, SPAN_WARNING("ERROR: No account linked."))
 					return
 				if(get_area(receiving) != get_area(computer) && program_type != "master")
 					to_chat(usr, SPAN_WARNING("ERROR: Receiving beacon is too far from \the [computer]."))
 					return
-				SStrade.buy(receiving, account, shoppinglist)
-				reset_shop_list()
+				SSsupply.Buy(receiving, account, shopping_list)
+				ResetShopList()
 				return TRUE
 
 		if(sending)
@@ -520,416 +543,162 @@
 				if(get_area(sending) != get_area(computer) && program_type != "master")
 					to_chat(usr, SPAN_WARNING("ERROR: Sending beacon is too far from \the [computer]."))
 					return
-				SStrade.export(sending)
+				SSsupply.Export(sending)
 				return TRUE
 
 		if(href_list["PRG_approve_order"])
 			if(!account)
 				return
 			var/order = href_list["PRG_approve_order"]
-			var/list/order_data = SStrade.order_queue[order]
+			var/list/order_data = SSsupply.order_queue[order]
 			var/order_cost = order_data["cost"]
 			var/requestor_cost = order_data["cost"] + order_data["fee"]
 			var/datum/money_account/requesting_account = order_data["requesting_acct"]
 
 			if(account.money < order_cost)
-				to_chat(usr, SPAN_WARNING("ERROR: Not enough funds in account ([account.get_name()] #[account.account_number])."))
+				to_chat(usr, SPAN_WARNING("ERROR: Not enough funds in account ([account.owner_name] #[account.account_number])."))
 				return
 			if(requesting_account.money < requestor_cost)
-				to_chat(usr, SPAN_WARNING("ERROR: Not enough funds in requesting account ([requesting_account.get_name()] #[requesting_account.account_number])."))
+				to_chat(usr, SPAN_WARNING("ERROR: Not enough funds in requesting account ([requesting_account.owner_name] #[requesting_account.account_number])."))
 				return
 
-			SStrade.purchase_order(receiving, order)
-			SStrade.order_queue.Remove(order)
+			SSsupply.PurchaseOrder(receiving, order)
+			SSsupply.order_queue.Remove(order)
 			if(current_order == order)
 				current_order = null
 			return TRUE
 
-
-/datum/nano_module/program/supply
-	name = "Supply Program"
-
-/datum/nano_module/program/supply/nano_ui_interact(mob/user, ui_key = "main", datum/nanoui/ui = null, force_open = NANOUI_FOCUS, state = GLOB.default_state)
-	var/list/data = nano_ui_data()
-
-	ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)
-	if(!ui)
-		ui = new(user, src, ui_key, "supply.tmpl", name, 910, 800, state = state)
-
-		// template keys starting with _ are not appended to the UI automatically and have to be called manually
-		ui.add_template("_goods", "supply_goods.tmpl")
-		ui.add_template("_offers", "supply_offers.tmpl")
-		ui.add_template("_cart", "supply_cart.tmpl")
-		ui.add_template("_orders", "supply_orders.tmpl")
-		ui.add_template("_saved", "supply_saved.tmpl")
-		ui.add_template("_logs", "supply_log.tmpl")
-
-		ui.set_auto_update(1)
-		ui.set_initial_data(data)
-		ui.open()
-
-/datum/nano_module/program/supply/nano_ui_data()
+// This should be a nano-ui module in near future; This is mostly for testing purposes and setting the groundworks
+/datum/computer_file/program/supply/Topic(href, href_list)
 	. = ..()
-	var/datum/computer_file/program/supply/PRG = program
-	if(!istype(PRG))
+	if(.)
+		ui_interact(usr)
+
+/datum/computer_file/program/supply/ui_interact(mob/user, ui_key = "main", datum/nanoui/ui = null, force_open = 1)
+	. = ..()
+	if(!.)
 		return
 
-	var/is_all_access = FALSE		// Used for log and order access
-	var/account
+	var/dat
 
-	.["prg_type"] = PRG.program_type
+	dat += trade_screen == SETTINGS_SCREEN ? "<b><u>Settings</u></b>" :"<A href='?src=\ref[src];PRG_trade_screen=[SETTINGS_SCREEN]'>Settings</A>"
+	dat += " | "
+	dat += trade_screen == GOODS_SCREEN ? "<b><u>Traders</u></b>" :"<A href='?src=\ref[src];PRG_trade_screen=[GOODS_SCREEN]'>Traders</A>"
+	dat += " | "
+	dat += trade_screen == CART_SCREEN ? "<b><u>Cart</u></b>" :"<A href='?src=\ref[src];PRG_trade_screen=[CART_SCREEN]'>Cart</A>"
 
-	.["prg_screen"] = PRG.prg_screen
-	.["tradescreen"] = PRG.trade_screen
-	.["log_screen"] = PRG.log_screen
+	dat += "<hr>"
 
-	.["receiving_index"] =  SStrade.beacons_receiving.Find(PRG.receiving)
-	.["sending_index"] = SStrade.beacons_sending.Find(PRG.sending)
+	if(trade_screen == SETTINGS_SCREEN)
+		if(faction)
+			dat += "Associated Faction: [faction]<br>"
+		dat += "<A href='?src=\ref[src];PRG_faction=1'>Link Faction</A><br><br>"
 
-	if(PRG.station)
-		.["station_name"] = PRG.station.name
-		.["station_desc"] = PRG.station.desc
-		.["station_id"] = PRG.station.uid
-		.["station_index"] = SStrade.discovered_stations.Find(PRG.station)
-		.["station_favor"] = PRG.station.favor
-		.["station_favor_needed"] = max(PRG.station.hidden_inv_threshold, PRG.station.recommendation_threshold)
-		.["station_recommendations_needed"] = PRG.station.recommendations_needed
-		.["offer_time"] = time2text((PRG.station.update_time - (world.time - PRG.station.update_timer_start)), "mm:ss")
+		if(account)
+			dat += "Current Account: [account.owner_name]<br>"
+		dat += "<A href='?src=\ref[src];PRG_account=1'>Link Account</A><br><br>"
 
-	if(PRG.sending)
-		.["export_time_max"] = round(PRG.sending.export_cooldown / (1 SECOND))
-		.["export_time_start"] = PRG.sending.export_timer_start
-		.["export_time_elapsed"] = PRG.sending.export_timer_start ? round((world.time - PRG.sending.export_timer_start) / (1 SECOND)) : 0
-		.["export_ready"] = PRG.sending.export_timer_start ? FALSE : TRUE
+		if(receiving)
+			var/area/A = get_area(receiving)
+			dat += "Receiving Beacon: [A.name]<br>"
+		dat += "<A href='?src=\ref[src];PRG_receiving=1'>Set Receiving Beacon</A><br><br>"
 
-	if(PRG.account)
-		account = "[PRG.account.get_name()] #[PRG.account.account_number]"
-		.["account"] = account
-		.["balance"] = PRG.account.money
-		var/dept_id = PRG.account.department_id
-		if(dept_id)
-			is_all_access = (dept_id == DEPARTMENT_GUILD) ? TRUE : FALSE
+		if(sending)
+			var/area/A = get_area(sending)
+			dat += "Sending Beacon: [A.name]<br>"
+		dat += "<A href='?src=\ref[src];PRG_sending=1'>Set Sending Beacon</A>"
 
-	.["is_all_access"] = is_all_access
+	if(trade_screen == GOODS_SCREEN)
+		for(var/i = 1 to length(SSsupply.visible_trading_stations))
+			var/datum/trading_station/TS = SSsupply.visible_trading_stations[i]
+			var/datum/trade_faction/TF = SSsupply.GetFaction(TS.faction)
+			var/faction_relations = TF.relationship[faction]
+			var/faction_color = TradeRelationsColor(faction_relations)
+			if(TS == station)
+				dat += "<b><u>[TS.name]<b></u>"
+			else
+				dat += "<A href='?src=\ref[src];PRG_station=[TS.uid]'><span style='color: [faction_color]'>[TS.name]</span></A>"
 
-	if(!QDELETED(PRG.receiving))
-		.["receiving"] = PRG.receiving.get_id()
+			if(i != length(SSsupply.visible_trading_stations))
+				dat += " | "
 
-	if(!QDELETED(PRG.sending))
-		.["sending"] = PRG.sending.get_id()
+		dat += "<hr>"
 
-	if(PRG.prg_screen == PRG_TREE)
-		var/list/line_list = list()
-		var/list/trade_tree = list()
+		if(station)
+			var/datum/trade_faction/TF = SSsupply.GetFaction(station.faction)
+			var/faction_relations = TF.relationship[faction]
+			var/faction_color = TradeRelationsColor(faction_relations)
+			dat += "<b>[station.name] <span style='color: [faction_color]'>([station.faction])</span></b><br>"
+			dat += "[station.desc]<br>"
+			dat += "Favor: [station.favor]/[station.unlock_favor]<br>"
 
-		for(var/station in SStrade.all_stations)
-			var/datum/trade_station/TS = station
-			var/is_discovered = (locate(TS) in SStrade.discovered_stations) ? TRUE : FALSE
-			var/ts_tree_x = round(TS.tree_x*100)
-			var/ts_tree_y = round(TS.tree_y*100)
-			var/list/trade_tree_data = list(
-				"id" =				"[TS.uid]",
-				"name" =			"[TS.name]",
-				"description" =		"[TS.desc]",
-				"is_discovered" =	"[is_discovered]",
-				"x" =				ts_tree_x,
-				"y" =				ts_tree_y,
-				"icon" =			"[TS.overmap_object.icon_stages[2 - is_discovered]]"
-			)
-			LAZYADD(trade_tree, list(trade_tree_data))
+			dat += "<hr>"
 
-			if(LAZYLEN(TS.stations_recommended))
-				for(var/id in TS.stations_recommended)
-					if(!istext(id))
-						break
-					var/datum/trade_station/RS = SStrade.get_station_by_uid(id)
-					if(RS)
-						var/rs_tree_x = round(RS.tree_x*100)
-						var/rs_tree_y = round(RS.tree_y*100)
-						var/line_x = (min(rs_tree_x, ts_tree_x))
-						var/line_y = (min(rs_tree_y, ts_tree_y))
-						var/width = (abs(rs_tree_x - ts_tree_x))
-						var/height = (abs(rs_tree_y - ts_tree_y))
+			if(faction in TF.embargo)
+				dat += "<b>Economic Embargo has been issued by [station.faction] officials.<br>"
+				dat += "Access to [station.name] is denied until further notice.</b>"
+			else
+				if(!chosen_category || !(chosen_category in station.inventory))
+					SetChosenCategory()
+				for(var/i = 1 to length(station.inventory))
+					var/cat = station.inventory[i]
+					if(cat == chosen_category)
+						dat += "<b><u>[cat]</b></u>"
+					else
+						dat += "<A href='?src=\ref[src];PRG_goods_category=[cat]'>[cat]</A>"
 
-						var/istop = FALSE
-						if(RS.tree_y > TS.tree_y)
-							istop = TRUE
-						var/isright = FALSE
-						if(RS.tree_x < TS.tree_x)
-							isright = TRUE
+					if(i != length(station.inventory))
+						dat += " | "
 
-						var/list/line_data = list(
-							"line_x" =           line_x,
-							"line_y" =           line_y,
-							"width" =            width,
-							"height" =           height,
-							"istop" =            istop,
-							"isright" =          isright,
-						)
-						LAZYADD(line_list, list(line_data))
+				dat += "<hr>"
 
-		.["trade_tree"] = trade_tree
-		.["tree_lines"] = line_list
-
-	if(PRG.prg_screen == PRG_MAIN)
-		if(!PRG.station)
-			return
-
-		if(PRG.trade_screen == GOODS_SCREEN)
-			if(!PRG.chosen_category || !(PRG.chosen_category in PRG.station.inventory))
-				PRG.set_chosen_category()
-			.["current_category"] = PRG.chosen_category ? PRG.station.inventory.Find(PRG.chosen_category) : null
-			.["goods"] = list()
-			.["categories"] = list()
-			.["total"] = SStrade.collect_price_for_list(PRG.shoppinglist)
-			for(var/i in PRG.station.inventory)
-				if(istext(i))
-					.["categories"] += list(list("name" = i, "index" = PRG.station.inventory.Find(i)))
-			if(PRG.chosen_category)
-				var/list/assort = PRG.station.inventory[PRG.chosen_category]
+				var/list/assort = station.inventory[chosen_category]
 				if(islist(assort))
 					for(var/path in assort)
 						if(!ispath(path, /atom/movable))
 							continue
-						var/atom/movable/AM = path
-
 						var/index = assort.Find(path)
+						var/amount = station.GetGoodAmount(chosen_category, index)
 
-						var/amount = PRG.station.get_good_amount(PRG.chosen_category, index)
-
+						var/atom/movable/AM = path
 						var/pathname = initial(AM.name)
 
 						var/list/good_packet = assort[path]
 						if(islist(good_packet))
 							pathname = good_packet["name"] ? good_packet["name"] : pathname
-						var/price = SStrade.get_import_cost(path, PRG.station)
 
-						var/list/shop_list_station = PRG.shoppinglist[PRG.station]
-						var/count = 0
-						if(shop_list_station)
-							var/list/shop_list_category = list()
-							if(shop_list_station.Find(PRG.chosen_category))
-								shop_list_category = shop_list_station[PRG.chosen_category]
-								if(shop_list_category.Find(path))
-									count = shop_list_category[path]
+						var/basic_price = SSsupply.GetBasicImportCost(path, station)
+						var/price = SSsupply.GetImportCost(path, station, faction)
+						var/faction_markup_percent = round(price / basic_price, 0.01) * 100 - 100
 
-						.["goods"] += list(list(
-							"name" = pathname,
-							"price" = price,
-							"count" = count ? count : 0,
-							"amount_available" = amount,
-							"index" = index,
-						))
-			if(!recursiveLen(.["goods"]))
-				.["goods"] = null
+						dat += "[pathname]: [price] [GLOB.using_map.local_currency_name_short][price == basic_price ? "" : (price > basic_price ? " (+[faction_markup_percent]%)" : " (-[faction_markup_percent]%)")], x[amount] in stock. <A href='?src=\ref[src];PRG_cart_add=[index]'>Add 1</A> <A href='?src=\ref[src];PRG_cart_add_input=[index]'>Add...</A><br>"
 
-		if(PRG.trade_screen == OFFER_SCREEN)
-			.["offers"] = list()
-			for(var/offer_path in PRG.station.special_offers)
-				var/path = offer_path
-				var/list/offer_content = PRG.station.special_offers[offer_path]
-				var/list/offer = list(
-					"station" = PRG.station.name,
-					"name" = offer_content["name"],
-					"amount" = offer_content["amount"],
-					"price" = offer_content["price"],
-					"index" = SStrade.discovered_stations.Find(PRG.station),
-					"path" = path,
-				)
-				if(PRG.sending)
-					offer["available"] = length(SStrade.assess_offer(PRG.sending, offer_path, offer_content["attachments"], offer_content["attach_count"]))
-				.["offers"] += list(offer)
+	if(trade_screen == CART_SCREEN)
+		dat += "<A href='?src=\ref[src];PRG_receive=1'>Purchase</A> | "
+		dat += "<A href='?src=\ref[src];PRG_cart_reset=1'>Clear cart</A><br>"
 
-			if(!recursiveLen(.["offers"]))
-				.["offers"] = null
+		dat += "<hr>"
 
-		if(PRG.trade_screen == CART_SCREEN)
-			.["current_cart_station"] = PRG.cart_station_index
-			.["current_cart_category"] = PRG.cart_category_index
-			.["cart_stations"] = list()
-			.["cart_categories"] = list()
-			.["cart_goods"] = list()
-			.["total"] = SStrade.collect_price_for_list(PRG.shoppinglist)
-			for(var/datum/trade_station/TS in PRG.shoppinglist)
-				.["cart_stations"] += list(list("name" = TS.name, "index" = PRG.shoppinglist.Find(TS)))
-			if(PRG.cart_station_index)
-				PRG.station = PRG.shoppinglist[PRG.cart_station_index]
-				var/list/categories = PRG.shoppinglist[PRG.station]
-				for(var/category in categories)
-					.["cart_categories"] += list(list("name" = category, "index" = categories.Find(category)))
-				if(PRG.cart_category_index)
-					PRG.chosen_category = categories[PRG.cart_category_index]
-					var/list/goods = categories[PRG.chosen_category]
-					for(var/path in goods)
-						if(!ispath(path, /atom/movable))
-							continue
-						var/atom/movable/AM = path
+		for(var/datum/trading_station/TS in shopping_list)
+			dat += "[TS.name]:<br>"
+			for(var/cat in shopping_list[TS])
+				dat += "- [cat]:<br>"
+				for(var/path in shopping_list[TS][cat])
+					var/atom/movable/AM = path
+					var/good_name = initial(AM.name)
+					var/list/good_packet = TS.inventory[cat][path]
+					if(islist(good_packet))
+						good_name = good_packet["name"] ? good_packet["name"] : good_name
+					dat += "- - [good_name] x[shopping_list[TS][cat][path]]<br>"
+				dat += "<br>"
+			dat += "<br>"
 
-						var/list/inventory = PRG.station.inventory[PRG.chosen_category]
-						var/index = inventory.Find(path)
-						var/amount = PRG.station.get_good_amount(PRG.chosen_category, index)
+	var/datum/browser/popup = new(user, "supply_prg", "Trade Network")
+	popup.set_content(dat)
+	popup.open()
+	onclose(user, "supply_prg")
 
-						var/pathname = initial(AM.name)
-
-						var/list/good_packet = goods[path]
-						if(islist(good_packet))
-							pathname = good_packet["name"] ? good_packet["name"] : pathname
-						var/price = SStrade.get_import_cost(path, PRG.station)
-
-						var/count = goods[path]
-
-						.["cart_goods"] += list(list(
-							"name" = pathname,
-							"price" = price,
-							"count" = count ? count : 0,
-							"amount_available" = amount,
-							"index" = index,
-						))
-			if(!recursiveLen(.["cart_goods"]))
-				.["cart_goods"] = null
-
-		if(PRG.trade_screen == ORDER_SCREEN)
-			if(!SStrade.order_queue.Find(PRG.current_order))		// If the order was removed from the queue by someone else (guild/lonestar or hacker),
-				PRG.current_order = null							// clear the current order. Else we get a window of undefined values
-
-			var/list/current_orders = list()
-
-			.["current_order"] = PRG.current_order
-			.["order_page"] = PRG.current_order_page
-
-			for(var/order in SStrade.order_queue)
-				var/list/order_data = SStrade.order_queue[order]
-				var/datum/money_account/requesting_account =  order_data["requesting_acct"]
-
-				// Check if the request is the one we want to view
-				if(order == PRG.current_order)
-					.["requesting_acct"] = "[requesting_account.get_name()] #[requesting_account.account_number]"
-					.["reason"] = order_data["reason"]
-					.["order_cost"] = order_data["cost"]
-					.["handling_fee"] = order_data["fee"]
-					.["order_contents"] = order_data["viewable_contents"]
-
-				// Store values for the request list
-				current_orders += list(list(
-					"id" = order,
-					"requesting_acct" = "[requesting_account.get_name()] #[requesting_account.account_number]",
-					"reason" = order_data["reason"],
-					"order_cost" = order_data["cost"],
-					"handling_fee" = order_data["fee"],
-					"order_contents" = order_data["viewable_contents"]
-				))
-
-			// If not the master account, only show the requests from the linked account
-			if(!is_all_access)
-				for(var/request in current_orders)
-					var/list/request_data = request
-					if(request_data["requesting_acct"] != account)
-						current_orders -= list(request)
-
-			// Page building logic
-			var/orders_per_page = 10
-			var/orders_to_display = orders_per_page
-			PRG.order_page_max = round(current_orders.len / orders_per_page, 1)
-			var/page_remainder = current_orders.len % orders_per_page
-			if(current_orders.len < orders_per_page * PRG.current_order_page)
-				orders_to_display = page_remainder
-			if(page_remainder < orders_per_page / 2)
-				++PRG.order_page_max
-
-			.["page_max"] = PRG.order_page_max ? PRG.order_page_max : 1
-
-			var/list/page_of_orders = list()
-
-			if(orders_to_display)
-				for(var/i in 1 to orders_to_display)
-					page_of_orders += list(current_orders[i + (orders_per_page * (PRG.current_order_page - 1))])
-
-			.["order_data"] = page_of_orders
-
-			if(!recursiveLen(.["order_data"]))
-				.["order_data"] = null
-
-		if(PRG.trade_screen == SAVED_SCREEN)
-			var/list/saved_carts = list()
-
-			.["cart_page"] = PRG.saved_cart_page
-
-			for(var/list_name in PRG.saved_shopping_lists)
-				saved_carts += list(list(
-					"name" = list_name,
-					"index" = PRG.saved_shopping_lists.Find(list_name)
-				))
-
-			// Page building logic
-			var/carts_per_page = 10
-			var/carts_to_display = carts_per_page
-			PRG.saved_cart_page_max = round(saved_carts.len / carts_per_page, 1)
-			var/page_remainder = saved_carts.len % carts_per_page
-			if(saved_carts.len < carts_per_page * PRG.saved_cart_page)
-				carts_to_display = page_remainder
-			if(page_remainder < carts_per_page / 2)
-				++PRG.saved_cart_page_max
-
-			.["page_max"] = PRG.saved_cart_page_max ? PRG.saved_cart_page_max : 1
-
-			var/list/page_of_carts = list()
-
-			if(carts_to_display)
-				for(var/i in 1 to carts_to_display)
-					page_of_carts += list(saved_carts[i + (carts_per_page * (PRG.saved_cart_page - 1))])
-
-			.["saved_carts"] = page_of_carts
-
-		if(PRG.trade_screen == LOG_SCREEN)
-			var/list/current_log = list()
-
-			if(PRG.account)
-				.["account"] = "[PRG.account.get_name()] #[PRG.account.account_number]"
-				var/dept_id = PRG.account.department_id
-				if(dept_id)
-					is_all_access = (dept_id == DEPARTMENT_GUILD) ? TRUE : FALSE
-
-			.["log_page"] = PRG.current_log_page
-
-			switch(PRG.log_screen)
-				if(LOG_SHIPPING)
-					current_log = SStrade.shipping_log
-				if(LOG_EXPORT)
-					current_log = SStrade.export_log
-				if(LOG_OFFER)
-					current_log = SStrade.offer_log
-				if(LOG_ORDER)
-					current_log = SStrade.order_log
-				else
-					current_log = list()
-
-			if(!is_all_access)
-				var/list/sanitized_log = list()
-				for(var/log_entry in current_log)
-					var/list/log_data = log_entry
-					if(log_data["ordering_acct"] == PRG.account.get_name())
-						sanitized_log |= list(log_data)
-				current_log = sanitized_log
-
-			var/logs_per_page = 10
-			var/logs_to_display = logs_per_page
-			PRG.log_page_max = round(current_log.len / logs_per_page, 1)
-			var/page_remainder = current_log.len % logs_per_page
-			if(current_log.len < logs_per_page * PRG.current_log_page)
-				logs_to_display = page_remainder
-			if(page_remainder < logs_per_page / 2)
-				++PRG.log_page_max
-
-			.["page_max"] = PRG.log_page_max ? PRG.log_page_max : 1
-
-			var/list/page_of_logs = list()
-
-			if(logs_to_display)
-				for(var/i in 1 to logs_to_display)
-					page_of_logs += list(current_log[i + (logs_per_page * (PRG.current_log_page - 1))])
-
-			.["current_log_data"] = page_of_logs
-
+#undef SETTINGS_SCREEN
 #undef GOODS_SCREEN
 #undef OFFER_SCREEN
 #undef CART_SCREEN

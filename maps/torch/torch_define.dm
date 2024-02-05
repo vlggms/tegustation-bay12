@@ -54,3 +54,5 @@
 	min_offmap_players = 12
 
 	id_hud_icons = 'maps/torch/icons/assignment_hud.dmi'
+
+	trade_faction = FACTION_SOL_CENTRAL
