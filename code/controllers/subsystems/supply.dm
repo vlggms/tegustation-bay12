@@ -48,6 +48,8 @@ SUBSYSTEM_DEF(supply)
 	. = ..()
 
 /datum/controller/subsystem/supply/proc/GetFaction(fac)
+	if(!(fac in factions))
+		return null
 	return factions[fac]
 
 /// Sets equal relations between two factions
@@ -336,7 +338,7 @@ SUBSYSTEM_DEF(supply)
 	account.withdraw(price_for_all, "Purchase", "Trade Network")
 	return TRUE
 
-/datum/controller/subsystem/supply/proc/Export(obj/machinery/trade_beacon/sending/senderBeacon)
+/datum/controller/subsystem/supply/proc/Export(obj/machinery/trade_beacon/sending/senderBeacon, datum/money_account/moneyAccount)
 	if(QDELETED(senderBeacon))
 		return
 
@@ -356,7 +358,7 @@ SUBSYSTEM_DEF(supply)
 			continue
 
 		// We go backwards, so it'll be innermost objects sold first
-		for(var/atom/movable/item in reverselist(contents_incl_self))
+		for(var/atom/movable/item in reverseRange(contents_incl_self))
 			var/item_price = get_value(item)
 			var/export_value = item_price
 
@@ -374,12 +376,11 @@ SUBSYSTEM_DEF(supply)
 			break
 
 	senderBeacon.StartExport()
-	var/datum/money_account/supply_account = department_accounts["Supply"]
-	supply_account.deposit(cost, "Export", "Trade Network")
+	moneyAccount.deposit(cost, "Export", "Trade Network")
 
 	if(invoice_contents_info)	// If no info, then nothing was exported
-		CreateLogEntry("Export", supply_account.owner_name, invoice_contents_info, cost, FALSE, get_turf(senderBeacon))
-
+		CreateLogEntry("Export", moneyAccount.owner_name, invoice_contents_info, cost, FALSE, get_turf(senderBeacon))
+	return TRUE
 
 // Logging
 

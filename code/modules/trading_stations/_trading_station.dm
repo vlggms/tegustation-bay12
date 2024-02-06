@@ -43,6 +43,11 @@
 	var/list/forced_overmap_zone // list(list(minx, maxx), list(miny, maxy))
 	var/overmap_opacity = 0
 
+	/// If not empty - only factions in this list can trade with it
+	var/list/whitelist_factions = list()
+	/// Factions in this list cannot trade with this station
+	var/list/blacklist_factions = list()
+
 /datum/trading_station/New(init_on_new)
 	. = ..()
 	if(init_on_new)

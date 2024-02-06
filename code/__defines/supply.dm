@@ -1,5 +1,6 @@
 // Data packets - inventories and offers
 #define GOODS_DATA(nam, randList, price) list("name" = nam, "amount_range" = randList, "price" = price)
+#define GOODS_DEFAULT GOODS_DATA(null, null, null)
 #define CUSTOM_GOODS_NAME(nam) GOODS_DATA(nam, null, null)
 #define CUSTOM_GOODS_AMOUNT_RANGE(randList) GOODS_DATA(null, randList, null)
 #define CUSTOM_GOODS_PRICE(price) GOODS_DATA(null, null, price)
@@ -8,10 +9,14 @@
 #define TRADE_CAT_WEAPONS "Weapons"
 #define TRADE_CAT_AMMO "Ammunition"
 #define TRADE_CAT_ARMOR "Armor"
+#define TRADE_CAT_CLOTHING "Clothing"
+#define TRADE_CAT_VOIDSUIT "Void Suits"
 #define TRADE_CAT_TOOLS "Tools"
 #define TRADE_CAT_RESEARCH "Research"
 #define TRADE_CAT_COMPONENTS "Stock Parts & Components"
 #define TRADE_CAT_MATERIALS "Materials"
+#define TRADE_CAT_RIG "RIG"
+#define TRADE_CAT_RIG_MODULES "RIG Modules"
 
 // As in - faction is a part of us
 #define FACTION_STATE_PROTECTORATE 4

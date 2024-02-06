@@ -1160,29 +1160,6 @@ var/global/floorIsLava = 0
 	A.activation_method = act_met
 	A.effect.effect_type = ef_type
 
-/datum/admins/proc/spawn_supplypack(decl/hierarchy/supply_pack/SP in subtypesof(/decl/hierarchy/supply_pack))
-	set category = "Debug"
-	set desc = "(datum path) Spawn supply pack"
-	set name = "Spawn"
-
-	if(!check_rights(R_SPAWN))
-		return
-
-	var/obj/A = new SP.containertype(get_turf(usr))
-	A.SetName(SP.containername)
-
-	if(SP.access)
-		if(!islist(SP.access))
-			A.req_access = list(SP.access)
-		else if(islist(SP.access))
-			var/list/L = SP.access // access var is a plain var, we need a list
-			A.req_access = L.Copy()
-
-	SP.spawn_contents(A)
-
-	log_and_message_admins("spawned [SP.name] supply pack at ([usr.x],[usr.y],[usr.z])")
-	SSstatistics.add_field_details("admin_verb","SP") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-
 /datum/admins/proc/show_traitor_panel(var/mob/M in SSmobs.mob_list)
 	set category = "Admin"
 	set desc = "Edit mobs's memory and role"

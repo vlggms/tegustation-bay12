@@ -1,6 +1,6 @@
 /obj/machinery/trade_beacon
-	icon = 'icons/obj/device.dmi'
-	icon_state = "syndbeacon"
+	icon = 'icons/obj/machines/trade_beacon.dmi'
+	icon_state = "beacon"
 	anchored = TRUE
 	density = TRUE
 
@@ -36,6 +36,8 @@
 		if(A.anchored)
 			continue
 		if(A == src)
+			continue
+		if(A.invisibility)
 			continue
 		objects += A
 	return objects

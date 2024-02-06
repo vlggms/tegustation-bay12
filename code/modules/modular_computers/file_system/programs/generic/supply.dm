@@ -65,7 +65,7 @@
 
 /datum/computer_file/program/supply/New()
 	. = ..()
-	var/atom/atom_holder = computer.holder
+	var/atom/atom_holder = holder
 	if(!istype(atom_holder))
 		return
 
@@ -198,6 +198,12 @@
 	if(.)
 		return
 
+	if(get_dist(usr, holder.loc) > 1)
+		return FALSE
+
+	if(href_list["PRG_update"])
+		return TRUE
+
 	if(href_list["PRG_prg_screen"])
 		prg_screen = !prg_screen
 		return TRUE
@@ -215,6 +221,41 @@
 		if(!chosen_category || !(chosen_category in station.inventory))
 			SetChosenCategory()
 		SetChosenCategory(href_list["PRG_goods_category"])
+		return TRUE
+
+	if(href_list["PRG_faction"])
+		var/obj/item/stock_parts/computer/card_slot/card_slot = computer.get_component(PART_CARD)
+		if(!istype(card_slot))
+			to_chat(usr, SPAN_WARNING("Card slot is not installed."))
+			return
+
+		var/obj/item/card/id/id = card_slot.stored_card
+		if(!istype(id))
+			to_chat(usr, SPAN_WARNING("Please insert ID card."))
+			return
+
+		var/list/valid_factions = list()
+		for(var/datum/trade_faction/TF in SSsupply.factions)
+			if(!TF.access_required)
+				continue
+			if(!(TF.access_required in id.access))
+				continue
+			valid_factions += TF.name
+
+		if(!LAZYLEN(valid_factions))
+			to_chat(usr, SPAN_WARNING("Unable to find any relevant access levels."))
+			return
+
+		var/faction_chosen = input("Select a faction to link", "Faction linking") as null|anything in (list("-- Cancel --") + valid_factions)
+		var/datum/trade_faction/TF = SSsupply.GetFaction(faction_chosen)
+		if(!istype(TF))
+			return
+
+		faction = faction_chosen
+		return TRUE
+
+	if(href_list["PRG_faction_unlink"])
+		faction = FACTION_INDEPENDENT
 		return TRUE
 
 	if(href_list["PRG_account"])
@@ -258,6 +299,12 @@
 		if(!account)
 			to_chat(usr, SPAN_WARNING("ERROR: No account linked."))
 			return
+		if(LAZYLEN(station.whitelist_factions) && !(faction in station.whitelist_factions))
+			to_chat(usr, SPAN_WARNING("ERROR: Trading is forbidden for your associated faction."))
+			return
+		if(LAZYLEN(station.blacklist_factions) && (faction in station.blacklist_factions))
+			to_chat(usr, SPAN_WARNING("ERROR: Trading is forbidden for your associated faction."))
+			return
 		var/ind
 		var/count2buy = 1
 		if(href_list["PRG_cart_add_input"])
@@ -273,6 +320,17 @@
 			return
 		var/good_amount = station.GetGoodAmount(chosen_category, ind)
 		if(!good_amount)
+			return
+
+		// Double check for input
+		if(!account)
+			to_chat(usr, SPAN_WARNING("ERROR: No account linked."))
+			return
+		if(LAZYLEN(station.whitelist_factions) && !(faction in station.whitelist_factions))
+			to_chat(usr, SPAN_WARNING("ERROR: Trading is forbidden for your associated faction."))
+			return
+		if(LAZYLEN(station.blacklist_factions) && (faction in station.blacklist_factions))
+			to_chat(usr, SPAN_WARNING("ERROR: Trading is forbidden for your associated faction."))
 			return
 
 		AddToShopList(path, count2buy, good_amount)
@@ -543,7 +601,7 @@
 				if(get_area(sending) != get_area(computer) && program_type != "master")
 					to_chat(usr, SPAN_WARNING("ERROR: Sending beacon is too far from \the [computer]."))
 					return
-				SSsupply.Export(sending)
+				SSsupply.Export(sending, account)
 				return TRUE
 
 		if(href_list["PRG_approve_order"])
@@ -585,6 +643,8 @@
 	dat += " | "
 	dat += trade_screen == GOODS_SCREEN ? "<b><u>Traders</u></b>" :"<A href='?src=\ref[src];PRG_trade_screen=[GOODS_SCREEN]'>Traders</A>"
 	dat += " | "
+	dat += trade_screen == OFFER_SCREEN ? "<b><u>Export</u></b>" :"<A href='?src=\ref[src];PRG_trade_screen=[OFFER_SCREEN]'>Export</A>"
+	dat += " | "
 	dat += trade_screen == CART_SCREEN ? "<b><u>Cart</u></b>" :"<A href='?src=\ref[src];PRG_trade_screen=[CART_SCREEN]'>Cart</A>"
 
 	dat += "<hr>"
@@ -592,11 +652,17 @@
 	if(trade_screen == SETTINGS_SCREEN)
 		if(faction)
 			dat += "Associated Faction: [faction]<br>"
-		dat += "<A href='?src=\ref[src];PRG_faction=1'>Link Faction</A><br><br>"
+			if(faction != FACTION_INDEPENDENT)
+				dat += "<A href='?src=\ref[src];PRG_faction_unlink=1'>Reset Faction</A><br>"
+			dat += "<br>"
+		if(!faction || faction == FACTION_INDEPENDENT)
+			dat += "<A href='?src=\ref[src];PRG_faction=1'>Link Faction</A><br><br>"
 
 		if(account)
 			dat += "Current Account: [account.owner_name]<br>"
-		dat += "<A href='?src=\ref[src];PRG_account=1'>Link Account</A><br><br>"
+			dat += "<a href='?src=\ref[src];PRG_account_unlink=1'>Unlink</A><br><br>"
+		else
+			dat += "<A href='?src=\ref[src];PRG_account=1'>Link Account</A><br><br>"
 
 		if(receiving)
 			var/area/A = get_area(receiving)
@@ -637,6 +703,10 @@
 			if(faction in TF.embargo)
 				dat += "<b>Economic Embargo has been issued by [station.faction] officials.<br>"
 				dat += "Access to [station.name] is denied until further notice.</b>"
+			else if(LAZYLEN(station.whitelist_factions) && !(faction in station.whitelist_factions))
+				dat += "<b>Access to [station.name] is denied to outside parties.</b>"
+			else if(LAZYLEN(station.blacklist_factions) && (faction in station.blacklist_factions))
+				dat += "<b>Access to [station.name] is denied to your associated faction.</b>"
 			else
 				if(!chosen_category || !(chosen_category in station.inventory))
 					SetChosenCategory()
@@ -672,6 +742,32 @@
 						var/faction_markup_percent = round(price / basic_price, 0.01) * 100 - 100
 
 						dat += "[pathname]: [price] [GLOB.using_map.local_currency_name_short][price == basic_price ? "" : (price > basic_price ? " (+[faction_markup_percent]%)" : " (-[faction_markup_percent]%)")], x[amount] in stock. <A href='?src=\ref[src];PRG_cart_add=[index]'>Add 1</A> <A href='?src=\ref[src];PRG_cart_add_input=[index]'>Add...</A><br>"
+
+	if(trade_screen == OFFER_SCREEN)
+		if(!sending)
+			dat += "<b>Sending beacon is missing!</b>"
+		else
+			dat += "<A href='?src=\ref[src];PRG_update=1'>Update</A>"
+			dat += "<A href='?src=\ref[src];PRG_export=1'>Export</A>"
+			dat += "<hr>"
+			var/total_cost = 0
+			for(var/atom/movable/AM in sending.GetObjects())
+				if(ishuman(AM))
+					continue
+				var/list/contents_incl_self = AM.GetAllContents(3, TRUE)
+				if(is_path_in_list(/mob/living/carbon/human, contents_incl_self))
+					continue
+				var/cost = 0
+				dat += "- [AM.name] ([get_value(AM)] [GLOB.using_map.local_currency_name_short])<br>"
+				cost += get_value(AM)
+				for(var/atom/movable/item in reverselist(contents_incl_self))
+					dat += "- - [item.name] ([get_value(item)] [GLOB.using_map.local_currency_name_short])<br>"
+					cost += get_value(item)
+				total_cost += cost
+			if(total_cost)
+				dat += "<b>Total export cost: [total_cost] [GLOB.using_map.local_currency_name_short]</b>"
+			else
+				dat += "<b>There is no items within sending beacon's range!</b>"
 
 	if(trade_screen == CART_SCREEN)
 		dat += "<A href='?src=\ref[src];PRG_receive=1'>Purchase</A> | "
