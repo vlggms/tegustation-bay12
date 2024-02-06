@@ -58,14 +58,14 @@
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	icon_state = "6-9";
 	d1 = 6;
-	d2 = 9
+	d2 = 9;
+	icon_state = "6-9"
 	},
 /obj/structure/cable{
-	icon_state = "5-10";
 	d1 = 5;
-	d2 = 10
+	d2 = 10;
+	icon_state = "5-10"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -6398,8 +6398,8 @@
 /area/centcom/specops)
 "aDq" = (
 /obj/structure/cable/cyan{
-	icon_state = "0-8";
-	d2 = 8
+	d2 = 8;
+	icon_state = "0-8"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -7151,9 +7151,9 @@
 /area/space)
 "aOs" = (
 /obj/structure/cable{
-	icon_state = "32-9";
 	d1 = 32;
-	d2 = 9
+	d2 = 9;
+	icon_state = "32-9"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -7645,16 +7645,16 @@
 /area/shuttle/merchant/home)
 "aWR" = (
 /obj/structure/cable/cyan{
-	icon_state = "32-2";
 	d1 = 32;
-	d2 = 2
+	d2 = 2;
+	icon_state = "32-2"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "aZw" = (
 /obj/structure/cable/white{
-	icon_state = "0-4";
-	d2 = 4
+	d2 = 4;
+	icon_state = "0-4"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -7681,8 +7681,8 @@
 /area/holodeck/source_cafe)
 "bit" = (
 /obj/structure/cable/orange{
-	icon_state = "0-2";
-	d2 = 2
+	d2 = 2;
+	icon_state = "0-2"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -7701,9 +7701,9 @@
 /area/holodeck/source_plaza)
 "bnZ" = (
 /obj/structure/cable/pink{
-	icon_state = "32-6";
 	d1 = 32;
-	d2 = 6
+	d2 = 6;
+	icon_state = "32-6"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -7775,9 +7775,9 @@
 /area/centcom/specops)
 "bzn" = (
 /obj/structure/cable/orange{
-	icon_state = "32-8";
 	d1 = 32;
-	d2 = 8
+	d2 = 8;
+	icon_state = "32-8"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -7819,9 +7819,9 @@
 /area/space)
 "bWj" = (
 /obj/structure/cable/green{
-	icon_state = "32-8";
 	d1 = 32;
-	d2 = 8
+	d2 = 8;
+	icon_state = "32-8"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -7842,15 +7842,15 @@
 /area/space)
 "chK" = (
 /obj/structure/cable/white{
-	icon_state = "0-5";
-	d2 = 5
+	d2 = 5;
+	icon_state = "0-5"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "chQ" = (
 /obj/structure/cable{
-	icon_state = "32-1";
-	d1 = 32
+	d1 = 32;
+	icon_state = "32-1"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -7902,9 +7902,9 @@
 /area/space)
 "cpR" = (
 /obj/structure/cable/cyan{
-	icon_state = "32-10";
 	d1 = 32;
-	d2 = 10
+	d2 = 10;
+	icon_state = "32-10"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -7918,9 +7918,9 @@
 /area/holodeck/source_volleyball)
 "cry" = (
 /obj/structure/cable/pink{
-	icon_state = "32-5";
 	d1 = 32;
-	d2 = 5
+	d2 = 5;
+	icon_state = "32-5"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -7936,8 +7936,8 @@
 /area/space)
 "cvh" = (
 /obj/structure/cable/white{
-	icon_state = "0-8";
-	d2 = 8
+	d2 = 8;
+	icon_state = "0-8"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -7959,39 +7959,39 @@
 /area/centcom/evac)
 "cAe" = (
 /obj/structure/cable/cyan{
-	icon_state = "1-8";
 	d1 = 1;
-	d2 = 8
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "2-8";
 	d1 = 2;
-	d2 = 8
+	d2 = 8;
+	icon_state = "2-8"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "5-6";
 	d1 = 5;
-	d2 = 6
+	d2 = 6;
+	icon_state = "5-6"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "5-8";
 	d1 = 5;
-	d2 = 8
+	d2 = 8;
+	icon_state = "5-8"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "6-8";
 	d1 = 6;
-	d2 = 8
+	d2 = 8;
+	icon_state = "6-8"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "8-10";
 	d1 = 8;
-	d2 = 10
+	d2 = 10;
+	icon_state = "8-10"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "8-9";
 	d1 = 8;
-	d2 = 9
+	d2 = 9;
+	icon_state = "8-9"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -8001,92 +8001,92 @@
 /area/shuttle/merchant/home)
 "cEw" = (
 /obj/structure/cable/yellow{
-	icon_state = "1-8";
 	d1 = 1;
-	d2 = 8
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "2-8";
 	d1 = 2;
-	d2 = 8
+	d2 = 8;
+	icon_state = "2-8"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "6-8";
 	d1 = 6;
-	d2 = 8
+	d2 = 8;
+	icon_state = "6-8"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "5-8";
 	d1 = 5;
-	d2 = 8
+	d2 = 8;
+	icon_state = "5-8"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "5-6";
 	d1 = 5;
-	d2 = 6
+	d2 = 6;
+	icon_state = "5-6"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "8-9";
 	d1 = 8;
-	d2 = 9
+	d2 = 9;
+	icon_state = "8-9"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "8-10";
 	d1 = 8;
-	d2 = 10
+	d2 = 10;
+	icon_state = "8-10"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "cGw" = (
 /obj/structure/cable/pink{
-	icon_state = "1-8";
 	d1 = 1;
-	d2 = 8
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /obj/structure/cable/pink{
-	icon_state = "2-8";
 	d1 = 2;
-	d2 = 8
+	d2 = 8;
+	icon_state = "2-8"
 	},
 /obj/structure/cable/pink{
-	icon_state = "5-6";
 	d1 = 5;
-	d2 = 6
+	d2 = 6;
+	icon_state = "5-6"
 	},
 /obj/structure/cable/pink{
-	icon_state = "5-8";
 	d1 = 5;
-	d2 = 8
+	d2 = 8;
+	icon_state = "5-8"
 	},
 /obj/structure/cable/pink{
-	icon_state = "6-8";
 	d1 = 6;
-	d2 = 8
+	d2 = 8;
+	icon_state = "6-8"
 	},
 /obj/structure/cable/pink{
-	icon_state = "8-10";
 	d1 = 8;
-	d2 = 10
+	d2 = 10;
+	icon_state = "8-10"
 	},
 /obj/structure/cable/pink{
-	icon_state = "8-9";
 	d1 = 8;
-	d2 = 9
+	d2 = 9;
+	icon_state = "8-9"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "cGS" = (
 /obj/structure/cable/pink{
-	icon_state = "32-2";
 	d1 = 32;
-	d2 = 2
+	d2 = 2;
+	icon_state = "32-2"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "cIa" = (
 /obj/structure/cable/orange{
-	icon_state = "0-4";
-	d2 = 4
+	d2 = 4;
+	icon_state = "0-4"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -8117,48 +8117,48 @@
 /area/holodeck/source_cafe)
 "cNG" = (
 /obj/structure/cable/green{
-	icon_state = "32-6";
 	d1 = 32;
-	d2 = 6
+	d2 = 6;
+	icon_state = "32-6"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "cNO" = (
 /obj/structure/cable/pink{
-	icon_state = "1-2";
 	d1 = 1;
-	d2 = 2
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /obj/structure/cable/pink{
-	icon_state = "4-8";
 	d1 = 4;
-	d2 = 8
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /obj/structure/cable/pink{
-	icon_state = "5-10";
 	d1 = 5;
-	d2 = 10
+	d2 = 10;
+	icon_state = "5-10"
 	},
 /obj/structure/cable/pink{
-	icon_state = "6-9";
 	d1 = 6;
-	d2 = 9
+	d2 = 9;
+	icon_state = "6-9"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "cRE" = (
 /obj/structure/cable/white{
-	icon_state = "32-9";
 	d1 = 32;
-	d2 = 9
+	d2 = 9;
+	icon_state = "32-9"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "cYb" = (
 /obj/structure/cable/orange{
-	icon_state = "32-9";
 	d1 = 32;
-	d2 = 9
+	d2 = 9;
+	icon_state = "32-9"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -8168,8 +8168,8 @@
 /area/holodeck/source_volleyball)
 "dld" = (
 /obj/structure/cable/cyan{
-	icon_state = "0-6";
-	d2 = 6
+	d2 = 6;
+	icon_state = "0-6"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -8184,94 +8184,94 @@
 /area/acting/stage)
 "dtq" = (
 /obj/structure/cable{
-	icon_state = "32-2";
+	d1 = 32;
 	d2 = 2;
-	d1 = 32
+	icon_state = "32-2"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "duh" = (
 /obj/structure/cable/orange{
-	icon_state = "1-2";
 	d1 = 1;
-	d2 = 2
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /obj/structure/cable/orange{
-	icon_state = "6-9";
 	d1 = 6;
-	d2 = 9
+	d2 = 9;
+	icon_state = "6-9"
 	},
 /obj/structure/cable/orange{
-	icon_state = "5-10";
 	d1 = 5;
-	d2 = 10
+	d2 = 10;
+	icon_state = "5-10"
 	},
 /obj/structure/cable/orange{
-	icon_state = "4-8";
 	d1 = 4;
-	d2 = 8
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "dui" = (
 /obj/structure/cable/white{
-	icon_state = "32-2";
 	d1 = 32;
-	d2 = 2
+	d2 = 2;
+	icon_state = "32-2"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "dvV" = (
 /obj/structure/cable/cyan{
-	icon_state = "32-5";
 	d1 = 32;
-	d2 = 5
+	d2 = 5;
+	icon_state = "32-5"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "dwE" = (
 /obj/structure/cable/green{
-	icon_state = "5-6";
 	d1 = 5;
-	d2 = 6
+	d2 = 6;
+	icon_state = "5-6"
 	},
 /obj/structure/cable/green{
-	icon_state = "6-8";
 	d1 = 6;
-	d2 = 8
+	d2 = 8;
+	icon_state = "6-8"
 	},
 /obj/structure/cable/green{
-	icon_state = "5-8";
 	d1 = 5;
-	d2 = 8
+	d2 = 8;
+	icon_state = "5-8"
 	},
 /obj/structure/cable/green{
-	icon_state = "2-8";
 	d1 = 2;
-	d2 = 8
+	d2 = 8;
+	icon_state = "2-8"
 	},
 /obj/structure/cable/green{
-	icon_state = "1-8";
 	d1 = 1;
-	d2 = 8
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /obj/structure/cable/green{
-	icon_state = "8-10";
 	d1 = 8;
-	d2 = 10
+	d2 = 10;
+	icon_state = "8-10"
 	},
 /obj/structure/cable/green{
-	icon_state = "8-9";
 	d1 = 8;
-	d2 = 9
+	d2 = 9;
+	icon_state = "8-9"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "dya" = (
 /obj/structure/cable/orange{
-	icon_state = "32-2";
 	d1 = 32;
-	d2 = 2
+	d2 = 2;
+	icon_state = "32-2"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -8288,39 +8288,39 @@
 /area/holodeck/source_plaza)
 "dAW" = (
 /obj/structure/cable/cyan{
-	icon_state = "2-10";
 	d1 = 2;
-	d2 = 10
+	d2 = 10;
+	icon_state = "2-10"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "2-4";
 	d1 = 2;
-	d2 = 4
+	d2 = 4;
+	icon_state = "2-4"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "2-5";
 	d1 = 2;
-	d2 = 5
+	d2 = 5;
+	icon_state = "2-5"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "2-6";
 	d1 = 2;
-	d2 = 6
+	d2 = 6;
+	icon_state = "2-6"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "2-8";
 	d1 = 2;
-	d2 = 8
+	d2 = 8;
+	icon_state = "2-8"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "2-9";
 	d1 = 2;
-	d2 = 9
+	d2 = 9;
+	icon_state = "2-9"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "5-9";
 	d1 = 5;
-	d2 = 9
+	d2 = 9;
+	icon_state = "5-9"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -8333,9 +8333,9 @@
 /area/holodeck/source_plaza)
 "dCa" = (
 /obj/structure/cable/green{
-	icon_state = "32-2";
 	d1 = 32;
-	d2 = 2
+	d2 = 2;
+	icon_state = "32-2"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -8345,44 +8345,44 @@
 /area/holodeck/source_cafe)
 "dEW" = (
 /obj/structure/cable/yellow{
-	icon_state = "0-2";
-	d2 = 2
+	d2 = 2;
+	icon_state = "0-2"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "dHp" = (
 /obj/structure/cable/cyan{
-	icon_state = "1-10";
-	d2 = 10
+	d2 = 10;
+	icon_state = "1-10"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "1-4";
 	d1 = 1;
-	d2 = 4
+	d2 = 4;
+	icon_state = "1-4"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "1-5";
-	d2 = 5
+	d2 = 5;
+	icon_state = "1-5"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "1-6";
 	d1 = 1;
-	d2 = 6
+	d2 = 6;
+	icon_state = "1-6"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "1-8";
 	d1 = 1;
-	d2 = 8
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "1-9";
 	d1 = 1;
-	d2 = 9
+	d2 = 9;
+	icon_state = "1-9"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "6-10";
 	d1 = 6;
-	d2 = 10
+	d2 = 10;
+	icon_state = "6-10"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -8416,9 +8416,9 @@
 /area/holodeck/source_cafe)
 "dYC" = (
 /obj/structure/cable/yellow{
-	icon_state = "16-0";
 	d1 = 16;
-	d2 = 0
+	d2 = 0;
+	icon_state = "16-0"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -8446,24 +8446,24 @@
 /area/holodeck/source_cafe)
 "eqf" = (
 /obj/structure/cable/yellow{
-	icon_state = "1-2";
 	d1 = 1;
-	d2 = 2
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "4-8";
 	d1 = 4;
-	d2 = 8
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "5-10";
 	d1 = 5;
-	d2 = 10
+	d2 = 10;
+	icon_state = "5-10"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "6-9";
 	d1 = 6;
-	d2 = 9
+	d2 = 9;
+	icon_state = "6-9"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -8489,9 +8489,9 @@
 /area/centcom/holding)
 "exA" = (
 /obj/structure/cable/white{
-	icon_state = "32-6";
 	d1 = 32;
-	d2 = 6
+	d2 = 6;
+	icon_state = "32-6"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -8507,17 +8507,17 @@
 /area/holodeck/source_cafe)
 "eFI" = (
 /obj/structure/cable{
-	icon_state = "32-4";
 	d1 = 32;
-	d2 = 4
+	d2 = 4;
+	icon_state = "32-4"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "eLD" = (
 /obj/structure/cable/yellow{
-	icon_state = "32-4";
 	d1 = 32;
-	d2 = 4
+	d2 = 4;
+	icon_state = "32-4"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -8627,106 +8627,106 @@
 /area/holodeck/source_plaza)
 "fLw" = (
 /obj/structure/cable/white{
-	icon_state = "32-1";
-	d1 = 32
+	d1 = 32;
+	icon_state = "32-1"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "fOH" = (
 /obj/structure/cable/yellow{
-	icon_state = "2-4";
 	d1 = 2;
-	d2 = 4
+	d2 = 4;
+	icon_state = "2-4"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "2-5";
 	d1 = 2;
-	d2 = 5
+	d2 = 5;
+	icon_state = "2-5"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "2-8";
 	d1 = 2;
-	d2 = 8
+	d2 = 8;
+	icon_state = "2-8"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "2-9";
 	d1 = 2;
-	d2 = 9
+	d2 = 9;
+	icon_state = "2-9"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "2-6";
 	d1 = 2;
-	d2 = 6
+	d2 = 6;
+	icon_state = "2-6"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "2-10";
 	d1 = 2;
-	d2 = 10
+	d2 = 10;
+	icon_state = "2-10"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "5-9";
 	d1 = 5;
-	d2 = 9
+	d2 = 9;
+	icon_state = "5-9"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "fPh" = (
 /obj/structure/cable/yellow{
-	icon_state = "0-9";
-	d2 = 9
+	d2 = 9;
+	icon_state = "0-9"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "fUP" = (
 /obj/structure/cable/white{
-	icon_state = "1-8";
 	d1 = 1;
-	d2 = 8
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /obj/structure/cable/white{
-	icon_state = "2-8";
 	d1 = 2;
-	d2 = 8
+	d2 = 8;
+	icon_state = "2-8"
 	},
 /obj/structure/cable/white{
-	icon_state = "5-6";
 	d1 = 5;
-	d2 = 6
+	d2 = 6;
+	icon_state = "5-6"
 	},
 /obj/structure/cable/white{
-	icon_state = "5-8";
 	d1 = 5;
-	d2 = 8
+	d2 = 8;
+	icon_state = "5-8"
 	},
 /obj/structure/cable/white{
-	icon_state = "6-8";
 	d1 = 6;
-	d2 = 8
+	d2 = 8;
+	icon_state = "6-8"
 	},
 /obj/structure/cable/white{
-	icon_state = "8-10";
 	d1 = 8;
-	d2 = 10
+	d2 = 10;
+	icon_state = "8-10"
 	},
 /obj/structure/cable/white{
-	icon_state = "8-9";
 	d1 = 8;
-	d2 = 9
+	d2 = 9;
+	icon_state = "8-9"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "fVO" = (
 /obj/structure/cable/cyan{
-	icon_state = "16-0";
 	d1 = 16;
-	d2 = 0
+	d2 = 0;
+	icon_state = "16-0"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "gdN" = (
 /obj/structure/cable/green{
-	icon_state = "0-2";
-	d2 = 2
+	d2 = 2;
+	icon_state = "0-2"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -8735,9 +8735,9 @@
 /area/holodeck/source_volleyball)
 "gnD" = (
 /obj/structure/cable/cyan{
-	icon_state = "32-8";
 	d1 = 32;
-	d2 = 8
+	d2 = 8;
+	icon_state = "32-8"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -8746,8 +8746,8 @@
 /area/holodeck/source_temple)
 "gqU" = (
 /obj/structure/cable/orange{
-	icon_state = "0-8";
-	d2 = 8
+	d2 = 8;
+	icon_state = "0-8"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -8769,8 +8769,8 @@
 /area/holodeck/source_temple)
 "gtC" = (
 /obj/structure/cable/cyan{
-	icon_state = "0-9";
-	d2 = 9
+	d2 = 9;
+	icon_state = "0-9"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -8782,8 +8782,8 @@
 /area/centcom/evac)
 "gIp" = (
 /obj/structure/cable/cyan{
-	icon_state = "0-2";
-	d2 = 2
+	d2 = 2;
+	icon_state = "0-2"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -8797,47 +8797,47 @@
 /area/tdome/tdomeobserve)
 "gMd" = (
 /obj/structure/cable/yellow{
-	icon_state = "32-5";
 	d1 = 32;
-	d2 = 5
+	d2 = 5;
+	icon_state = "32-5"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "had" = (
 /obj/structure/cable/white{
-	icon_state = "1-6";
 	d1 = 1;
-	d2 = 6
+	d2 = 6;
+	icon_state = "1-6"
 	},
 /obj/structure/cable/white{
-	icon_state = "1-4";
 	d1 = 1;
-	d2 = 4
+	d2 = 4;
+	icon_state = "1-4"
 	},
 /obj/structure/cable/white{
-	icon_state = "1-5";
 	d1 = 1;
-	d2 = 5
+	d2 = 5;
+	icon_state = "1-5"
 	},
 /obj/structure/cable/white{
-	icon_state = "1-10";
 	d1 = 1;
-	d2 = 10
+	d2 = 10;
+	icon_state = "1-10"
 	},
 /obj/structure/cable/white{
-	icon_state = "1-9";
 	d1 = 1;
-	d2 = 9
+	d2 = 9;
+	icon_state = "1-9"
 	},
 /obj/structure/cable/white{
-	icon_state = "1-8";
 	d1 = 1;
-	d2 = 8
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /obj/structure/cable/white{
-	icon_state = "6-10";
 	d1 = 6;
-	d2 = 10
+	d2 = 10;
+	icon_state = "6-10"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -8852,9 +8852,9 @@
 /area/centcom/evac)
 "his" = (
 /obj/structure/cable/cyan{
-	icon_state = "32-6";
 	d1 = 32;
-	d2 = 6
+	d2 = 6;
+	icon_state = "32-6"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -8863,17 +8863,17 @@
 /area/acting/stage)
 "hkS" = (
 /obj/structure/cable/white{
-	icon_state = "32-5";
 	d1 = 32;
-	d2 = 5
+	d2 = 5;
+	icon_state = "32-5"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "hmT" = (
 /obj/structure/cable{
-	icon_state = "32-6";
 	d1 = 32;
-	d2 = 6
+	d2 = 6;
+	icon_state = "32-6"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -8885,8 +8885,8 @@
 /area/tdome)
 "huq" = (
 /obj/structure/cable/green{
-	icon_state = "0-5";
-	d2 = 5
+	d2 = 5;
+	icon_state = "0-5"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -8905,8 +8905,8 @@
 /area/acting/backstage)
 "hXU" = (
 /obj/structure/cable/yellow{
-	icon_state = "0-8";
-	d2 = 8
+	d2 = 8;
+	icon_state = "0-8"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -8920,8 +8920,8 @@
 /area/holodeck/source_plaza)
 "ieg" = (
 /obj/structure/cable/green{
-	icon_state = "0-10";
-	d2 = 10
+	d2 = 10;
+	icon_state = "0-10"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -8945,47 +8945,47 @@
 /area/syndicate_elite_squad)
 "izv" = (
 /obj/structure/cable/yellow{
-	icon_state = "32-10";
 	d1 = 32;
-	d2 = 10
+	d2 = 10;
+	icon_state = "32-10"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "izw" = (
 /obj/structure/cable/cyan{
-	icon_state = "1-4";
 	d1 = 1;
-	d2 = 4
+	d2 = 4;
+	icon_state = "1-4"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "2-4";
 	d1 = 2;
-	d2 = 4
+	d2 = 4;
+	icon_state = "2-4"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "4-10";
 	d1 = 4;
-	d2 = 10
+	d2 = 10;
+	icon_state = "4-10"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "4-5";
 	d1 = 4;
-	d2 = 5
+	d2 = 5;
+	icon_state = "4-5"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "4-6";
 	d1 = 4;
-	d2 = 6
+	d2 = 6;
+	icon_state = "4-6"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "4-9";
 	d1 = 4;
-	d2 = 9
+	d2 = 9;
+	icon_state = "4-9"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "9-10";
 	d1 = 9;
-	d2 = 10
+	d2 = 10;
+	icon_state = "9-10"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -9018,29 +9018,29 @@
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
-	icon_state = "5-9";
 	d1 = 5;
-	d2 = 9
+	d2 = 9;
+	icon_state = "5-9"
 	},
 /obj/structure/cable{
-	icon_state = "2-9";
 	d1 = 2;
-	d2 = 9
+	d2 = 9;
+	icon_state = "2-9"
 	},
 /obj/structure/cable{
-	icon_state = "2-5";
 	d1 = 2;
-	d2 = 5
+	d2 = 5;
+	icon_state = "2-5"
 	},
 /obj/structure/cable{
-	icon_state = "2-10";
 	d1 = 2;
-	d2 = 10
+	d2 = 10;
+	icon_state = "2-10"
 	},
 /obj/structure/cable{
-	icon_state = "2-6";
 	d1 = 2;
-	d2 = 6
+	d2 = 6;
+	icon_state = "2-6"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -9063,8 +9063,8 @@
 /area/holodeck/source_temple)
 "iKg" = (
 /obj/structure/cable/white{
-	icon_state = "0-6";
-	d2 = 6
+	d2 = 6;
+	icon_state = "0-6"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -9087,17 +9087,17 @@
 /area/space)
 "jbj" = (
 /obj/structure/cable/pink{
-	icon_state = "32-10";
 	d1 = 32;
-	d2 = 10
+	d2 = 10;
+	icon_state = "32-10"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "jdH" = (
 /obj/structure/cable{
-	icon_state = "16-0";
 	d1 = 16;
-	d2 = 0
+	d2 = 0;
+	icon_state = "16-0"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -9192,8 +9192,8 @@
 /area/holodeck/source_cafe)
 "jLN" = (
 /obj/structure/cable/pink{
-	icon_state = "0-2";
-	d2 = 2
+	d2 = 2;
+	icon_state = "0-2"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -9214,39 +9214,39 @@
 /area/holodeck/source_volleyball)
 "kcI" = (
 /obj/structure/cable/yellow{
-	icon_state = "1-4";
 	d1 = 1;
-	d2 = 4
+	d2 = 4;
+	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "2-4";
 	d1 = 2;
-	d2 = 4
+	d2 = 4;
+	icon_state = "2-4"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "9-10";
 	d1 = 9;
-	d2 = 10
+	d2 = 10;
+	icon_state = "9-10"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "4-9";
 	d1 = 4;
-	d2 = 9
+	d2 = 9;
+	icon_state = "4-9"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "4-10";
 	d1 = 4;
-	d2 = 10
+	d2 = 10;
+	icon_state = "4-10"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "4-6";
 	d1 = 4;
-	d2 = 6
+	d2 = 6;
+	icon_state = "4-6"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "4-5";
 	d1 = 4;
-	d2 = 5
+	d2 = 5;
+	icon_state = "4-5"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -9272,39 +9272,39 @@
 /area/holodeck/source_cafe)
 "krl" = (
 /obj/structure/cable/pink{
-	icon_state = "1-4";
 	d1 = 1;
-	d2 = 4
+	d2 = 4;
+	icon_state = "1-4"
 	},
 /obj/structure/cable/pink{
-	icon_state = "2-4";
 	d1 = 2;
-	d2 = 4
+	d2 = 4;
+	icon_state = "2-4"
 	},
 /obj/structure/cable/pink{
-	icon_state = "4-10";
 	d1 = 4;
-	d2 = 10
+	d2 = 10;
+	icon_state = "4-10"
 	},
 /obj/structure/cable/pink{
-	icon_state = "4-5";
 	d1 = 4;
-	d2 = 5
+	d2 = 5;
+	icon_state = "4-5"
 	},
 /obj/structure/cable/pink{
-	icon_state = "4-6";
 	d1 = 4;
-	d2 = 6
+	d2 = 6;
+	icon_state = "4-6"
 	},
 /obj/structure/cable/pink{
-	icon_state = "4-9";
 	d1 = 4;
-	d2 = 9
+	d2 = 9;
+	icon_state = "4-9"
 	},
 /obj/structure/cable/pink{
-	icon_state = "9-10";
 	d1 = 9;
-	d2 = 10
+	d2 = 10;
+	icon_state = "9-10"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -9329,9 +9329,9 @@
 /area/centcom/specops)
 "kDJ" = (
 /obj/structure/cable/green{
-	icon_state = "32-9";
 	d1 = 32;
-	d2 = 9
+	d2 = 9;
+	icon_state = "32-9"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -9342,16 +9342,12 @@
 /area/syndicate_elite_squad)
 "kME" = (
 /obj/structure/cable{
-	icon_state = "32-5";
 	d1 = 32;
-	d2 = 5
+	d2 = 5;
+	icon_state = "32-5"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
-"kSr" = (
-/obj/effect/shuttle_landmark/supply/centcom,
-/turf/simulated/floor/plating,
-/area/shuttle/cargodrone)
 "kXW" = (
 /obj/structure/cable/white,
 /turf/unsimulated/floor/plating,
@@ -9414,47 +9410,47 @@
 /area/centcom/evac)
 "lfc" = (
 /obj/structure/cable/orange{
-	icon_state = "8-9";
 	d1 = 8;
-	d2 = 9
+	d2 = 9;
+	icon_state = "8-9"
 	},
 /obj/structure/cable/orange{
-	icon_state = "8-10";
 	d1 = 8;
-	d2 = 10
+	d2 = 10;
+	icon_state = "8-10"
 	},
 /obj/structure/cable/orange{
-	icon_state = "2-8";
 	d1 = 2;
-	d2 = 8
+	d2 = 8;
+	icon_state = "2-8"
 	},
 /obj/structure/cable/orange{
-	icon_state = "1-8";
 	d1 = 1;
-	d2 = 8
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /obj/structure/cable/orange{
-	icon_state = "6-8";
 	d1 = 6;
-	d2 = 8
+	d2 = 8;
+	icon_state = "6-8"
 	},
 /obj/structure/cable/orange{
-	icon_state = "5-8";
 	d1 = 5;
-	d2 = 8
+	d2 = 8;
+	icon_state = "5-8"
 	},
 /obj/structure/cable/orange{
-	icon_state = "5-6";
 	d1 = 5;
-	d2 = 6
+	d2 = 6;
+	icon_state = "5-6"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "lfe" = (
 /obj/structure/cable/white{
-	icon_state = "32-8";
 	d1 = 32;
-	d2 = 8
+	d2 = 8;
+	icon_state = "32-8"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -9465,9 +9461,9 @@
 /area/holodeck/source_plaza)
 "lnN" = (
 /obj/structure/cable{
-	icon_state = "32-10";
 	d1 = 32;
-	d2 = 10
+	d2 = 10;
+	icon_state = "32-10"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -9477,9 +9473,9 @@
 /area/centcom/evac)
 "ltA" = (
 /obj/structure/cable{
-	icon_state = "1-8";
 	d1 = 1;
-	d2 = 8
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /obj/structure/cable{
 	d1 = 2;
@@ -9487,29 +9483,29 @@
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
-	icon_state = "5-6";
 	d1 = 5;
-	d2 = 6
+	d2 = 6;
+	icon_state = "5-6"
 	},
 /obj/structure/cable{
-	icon_state = "6-8";
 	d1 = 6;
-	d2 = 8
+	d2 = 8;
+	icon_state = "6-8"
 	},
 /obj/structure/cable{
-	icon_state = "8-9";
 	d1 = 8;
-	d2 = 9
+	d2 = 9;
+	icon_state = "8-9"
 	},
 /obj/structure/cable{
-	icon_state = "8-10";
 	d1 = 8;
-	d2 = 10
+	d2 = 10;
+	icon_state = "8-10"
 	},
 /obj/structure/cable{
-	icon_state = "5-8";
 	d1 = 5;
-	d2 = 8
+	d2 = 8;
+	icon_state = "5-8"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -9522,62 +9518,62 @@
 /area/holodeck/source_temple)
 "lye" = (
 /obj/structure/cable/pink{
-	icon_state = "32-8";
 	d1 = 32;
-	d2 = 8
+	d2 = 8;
+	icon_state = "32-8"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "lCK" = (
 /obj/structure/cable/yellow{
-	icon_state = "1-10";
 	d1 = 1;
-	d2 = 10
+	d2 = 10;
+	icon_state = "1-10"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "1-4";
 	d1 = 1;
-	d2 = 4
+	d2 = 4;
+	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "1-5";
 	d1 = 1;
-	d2 = 5
+	d2 = 5;
+	icon_state = "1-5"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "1-6";
 	d1 = 1;
-	d2 = 6
+	d2 = 6;
+	icon_state = "1-6"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "1-8";
 	d1 = 1;
-	d2 = 8
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "6-10";
 	d1 = 6;
-	d2 = 10
+	d2 = 10;
+	icon_state = "6-10"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "1-9";
 	d1 = 1;
-	d2 = 9
+	d2 = 9;
+	icon_state = "1-9"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "lDT" = (
 /obj/structure/cable/green{
-	icon_state = "32-10";
 	d1 = 32;
-	d2 = 10
+	d2 = 10;
+	icon_state = "32-10"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "lEp" = (
 /obj/structure/cable/orange{
-	icon_state = "0-10";
-	d2 = 10
+	d2 = 10;
+	icon_state = "0-10"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -9591,24 +9587,24 @@
 /area/holodeck/source_temple)
 "lJR" = (
 /obj/structure/cable/white{
-	icon_state = "1-2";
 	d1 = 1;
-	d2 = 2
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /obj/structure/cable/white{
-	icon_state = "4-8";
 	d1 = 4;
-	d2 = 8
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /obj/structure/cable/white{
-	icon_state = "5-10";
 	d1 = 5;
-	d2 = 10
+	d2 = 10;
+	icon_state = "5-10"
 	},
 /obj/structure/cable/white{
-	icon_state = "6-9";
 	d1 = 6;
-	d2 = 9
+	d2 = 9;
+	icon_state = "6-9"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -9641,8 +9637,8 @@
 /area/centcom)
 "lSp" = (
 /obj/structure/cable{
-	icon_state = "0-6";
-	d2 = 6
+	d2 = 6;
+	icon_state = "0-6"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -9662,9 +9658,9 @@
 /area/holodeck/source_plaza)
 "maC" = (
 /obj/structure/cable/cyan{
-	icon_state = "32-4";
 	d1 = 32;
-	d2 = 4
+	d2 = 4;
+	icon_state = "32-4"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -9728,9 +9724,9 @@
 /area/space)
 "mFE" = (
 /obj/structure/cable/cyan{
-	icon_state = "32-9";
 	d1 = 32;
-	d2 = 9
+	d2 = 9;
+	icon_state = "32-9"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -9740,8 +9736,8 @@
 /area/space)
 "mHR" = (
 /obj/structure/cable/yellow{
-	icon_state = "0-10";
-	d2 = 10
+	d2 = 10;
+	icon_state = "0-10"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -9787,39 +9783,39 @@
 /area/tdome/tdome1)
 "mWC" = (
 /obj/structure/cable/green{
-	icon_state = "2-5";
 	d1 = 2;
-	d2 = 5
+	d2 = 5;
+	icon_state = "2-5"
 	},
 /obj/structure/cable/green{
-	icon_state = "2-9";
 	d1 = 2;
-	d2 = 9
+	d2 = 9;
+	icon_state = "2-9"
 	},
 /obj/structure/cable/green{
-	icon_state = "5-9";
 	d1 = 5;
-	d2 = 9
+	d2 = 9;
+	icon_state = "5-9"
 	},
 /obj/structure/cable/green{
-	icon_state = "2-10";
 	d1 = 2;
-	d2 = 10
+	d2 = 10;
+	icon_state = "2-10"
 	},
 /obj/structure/cable/green{
-	icon_state = "2-4";
 	d1 = 2;
-	d2 = 4
+	d2 = 4;
+	icon_state = "2-4"
 	},
 /obj/structure/cable/green{
-	icon_state = "2-6";
 	d1 = 2;
-	d2 = 6
+	d2 = 6;
+	icon_state = "2-6"
 	},
 /obj/structure/cable/green{
-	icon_state = "2-8";
 	d1 = 2;
-	d2 = 8
+	d2 = 8;
+	icon_state = "2-8"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -9859,8 +9855,8 @@
 /area/centcom/evac)
 "nGZ" = (
 /obj/structure/cable/green{
-	icon_state = "0-9";
-	d2 = 9
+	d2 = 9;
+	icon_state = "0-9"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -9915,47 +9911,47 @@
 /area/holodeck/source_plaza)
 "nLe" = (
 /obj/structure/cable/yellow{
-	icon_state = "32-6";
 	d1 = 32;
-	d2 = 6
+	d2 = 6;
+	icon_state = "32-6"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "nOF" = (
 /obj/structure/cable/orange{
-	icon_state = "1-10";
 	d1 = 1;
-	d2 = 10
+	d2 = 10;
+	icon_state = "1-10"
 	},
 /obj/structure/cable/orange{
-	icon_state = "1-4";
 	d1 = 1;
-	d2 = 4
+	d2 = 4;
+	icon_state = "1-4"
 	},
 /obj/structure/cable/orange{
-	icon_state = "1-8";
 	d1 = 1;
-	d2 = 8
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /obj/structure/cable/orange{
-	icon_state = "1-6";
 	d1 = 1;
-	d2 = 6
+	d2 = 6;
+	icon_state = "1-6"
 	},
 /obj/structure/cable/orange{
-	icon_state = "1-5";
 	d1 = 1;
-	d2 = 5
+	d2 = 5;
+	icon_state = "1-5"
 	},
 /obj/structure/cable/orange{
-	icon_state = "1-9";
 	d1 = 1;
-	d2 = 9
+	d2 = 9;
+	icon_state = "1-9"
 	},
 /obj/structure/cable/orange{
-	icon_state = "6-10";
 	d1 = 6;
-	d2 = 10
+	d2 = 10;
+	icon_state = "6-10"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -9980,53 +9976,53 @@
 /area/holodeck/source_volleyball)
 "ogS" = (
 /obj/structure/cable/green{
-	icon_state = "0-4";
-	d2 = 4
+	d2 = 4;
+	icon_state = "0-4"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "ohw" = (
 /obj/structure/cable{
-	icon_state = "0-5";
-	d2 = 5
+	d2 = 5;
+	icon_state = "0-5"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "ojL" = (
 /obj/structure/cable/orange{
-	icon_state = "4-5";
 	d1 = 4;
-	d2 = 5
+	d2 = 5;
+	icon_state = "4-5"
 	},
 /obj/structure/cable/orange{
-	icon_state = "4-6";
 	d1 = 4;
-	d2 = 6
+	d2 = 6;
+	icon_state = "4-6"
 	},
 /obj/structure/cable/orange{
-	icon_state = "2-4";
 	d1 = 2;
-	d2 = 4
+	d2 = 4;
+	icon_state = "2-4"
 	},
 /obj/structure/cable/orange{
-	icon_state = "1-4";
 	d1 = 1;
-	d2 = 4
+	d2 = 4;
+	icon_state = "1-4"
 	},
 /obj/structure/cable/orange{
-	icon_state = "4-10";
 	d1 = 4;
-	d2 = 10
+	d2 = 10;
+	icon_state = "4-10"
 	},
 /obj/structure/cable/orange{
-	icon_state = "4-9";
 	d1 = 4;
-	d2 = 9
+	d2 = 9;
+	icon_state = "4-9"
 	},
 /obj/structure/cable/orange{
-	icon_state = "9-10";
 	d1 = 9;
-	d2 = 10
+	d2 = 10;
+	icon_state = "9-10"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -10087,8 +10083,8 @@
 /area/centcom)
 "oBx" = (
 /obj/structure/cable/yellow{
-	icon_state = "32-1";
-	d1 = 32
+	d1 = 32;
+	icon_state = "32-1"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -10107,46 +10103,46 @@
 /area/space)
 "oRl" = (
 /obj/structure/cable/green{
-	icon_state = "9-10";
 	d1 = 9;
-	d2 = 10
+	d2 = 10;
+	icon_state = "9-10"
 	},
 /obj/structure/cable/green{
-	icon_state = "4-10";
 	d1 = 4;
-	d2 = 10
+	d2 = 10;
+	icon_state = "4-10"
 	},
 /obj/structure/cable/green{
-	icon_state = "4-9";
 	d1 = 4;
-	d2 = 9
+	d2 = 9;
+	icon_state = "4-9"
 	},
 /obj/structure/cable/green{
-	icon_state = "4-5";
 	d1 = 4;
-	d2 = 5
+	d2 = 5;
+	icon_state = "4-5"
 	},
 /obj/structure/cable/green{
-	icon_state = "4-6";
 	d1 = 4;
-	d2 = 6
+	d2 = 6;
+	icon_state = "4-6"
 	},
 /obj/structure/cable/green{
-	icon_state = "2-4";
 	d1 = 2;
-	d2 = 4
+	d2 = 4;
+	icon_state = "2-4"
 	},
 /obj/structure/cable/green{
-	icon_state = "1-4";
 	d1 = 1;
-	d2 = 4
+	d2 = 4;
+	icon_state = "1-4"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "oRO" = (
 /obj/structure/cable/white{
-	icon_state = "0-9";
-	d2 = 9
+	d2 = 9;
+	icon_state = "0-9"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -10163,31 +10159,31 @@
 /area/centcom/evac)
 "pdH" = (
 /obj/structure/cable/cyan{
-	icon_state = "1-2";
-	d2 = 2
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "4-8";
 	d1 = 4;
-	d2 = 8
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "5-10";
 	d1 = 5;
-	d2 = 10
+	d2 = 10;
+	icon_state = "5-10"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "6-9";
 	d1 = 6;
-	d2 = 9
+	d2 = 9;
+	icon_state = "6-9"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "peg" = (
 /obj/structure/cable/green{
-	icon_state = "16-0";
 	d1 = 16;
-	d2 = 0
+	d2 = 0;
+	icon_state = "16-0"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -10229,8 +10225,8 @@
 /area/holodeck/source_cafe)
 "pEA" = (
 /obj/structure/cable/pink{
-	icon_state = "32-1";
-	d1 = 32
+	d1 = 32;
+	icon_state = "32-1"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -10244,14 +10240,14 @@
 /area/space)
 "pKZ" = (
 /obj/structure/cable{
-	icon_state = "1-6";
 	d1 = 1;
-	d2 = 6
+	d2 = 6;
+	icon_state = "1-6"
 	},
 /obj/structure/cable{
-	icon_state = "1-8";
 	d1 = 1;
-	d2 = 8
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /obj/structure/cable{
 	d1 = 1;
@@ -10259,31 +10255,31 @@
 	icon_state = "1-4"
 	},
 /obj/structure/cable{
-	icon_state = "6-10";
 	d1 = 6;
-	d2 = 10
+	d2 = 10;
+	icon_state = "6-10"
 	},
 /obj/structure/cable{
-	icon_state = "1-9";
 	d1 = 1;
-	d2 = 9
+	d2 = 9;
+	icon_state = "1-9"
 	},
 /obj/structure/cable{
-	icon_state = "1-5";
 	d1 = 1;
-	d2 = 5
+	d2 = 5;
+	icon_state = "1-5"
 	},
 /obj/structure/cable{
-	icon_state = "1-10";
 	d1 = 1;
-	d2 = 10
+	d2 = 10;
+	icon_state = "1-10"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "pPO" = (
 /obj/structure/cable/white{
-	icon_state = "0-2";
-	d2 = 2
+	d2 = 2;
+	icon_state = "0-2"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -10299,8 +10295,8 @@
 /area/tdome/tdome2)
 "pTH" = (
 /obj/structure/cable/cyan{
-	icon_state = "32-1";
-	d1 = 32
+	d1 = 32;
+	icon_state = "32-1"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -10317,46 +10313,46 @@
 /area/holodeck/source_cafe)
 "pXb" = (
 /obj/structure/cable/cyan{
-	icon_state = "0-10";
-	d2 = 10
+	d2 = 10;
+	icon_state = "0-10"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "pXx" = (
 /obj/structure/cable/pink{
-	icon_state = "1-10";
 	d1 = 1;
-	d2 = 10
+	d2 = 10;
+	icon_state = "1-10"
 	},
 /obj/structure/cable/pink{
-	icon_state = "1-4";
 	d1 = 1;
-	d2 = 4
+	d2 = 4;
+	icon_state = "1-4"
 	},
 /obj/structure/cable/pink{
-	icon_state = "1-5";
 	d1 = 1;
-	d2 = 5
+	d2 = 5;
+	icon_state = "1-5"
 	},
 /obj/structure/cable/pink{
-	icon_state = "1-6";
 	d1 = 1;
-	d2 = 6
+	d2 = 6;
+	icon_state = "1-6"
 	},
 /obj/structure/cable/pink{
-	icon_state = "1-8";
 	d1 = 1;
-	d2 = 8
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /obj/structure/cable/pink{
-	icon_state = "1-9";
 	d1 = 1;
-	d2 = 9
+	d2 = 9;
+	icon_state = "1-9"
 	},
 /obj/structure/cable/pink{
-	icon_state = "6-10";
 	d1 = 6;
-	d2 = 10
+	d2 = 10;
+	icon_state = "6-10"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -10385,39 +10381,39 @@
 /area/holodeck/source_cafe)
 "qCp" = (
 /obj/structure/cable/orange{
-	icon_state = "2-4";
 	d1 = 2;
-	d2 = 4
+	d2 = 4;
+	icon_state = "2-4"
 	},
 /obj/structure/cable/orange{
-	icon_state = "2-5";
 	d1 = 2;
-	d2 = 5
+	d2 = 5;
+	icon_state = "2-5"
 	},
 /obj/structure/cable/orange{
-	icon_state = "2-6";
 	d1 = 2;
-	d2 = 6
+	d2 = 6;
+	icon_state = "2-6"
 	},
 /obj/structure/cable/orange{
-	icon_state = "2-8";
 	d1 = 2;
-	d2 = 8
+	d2 = 8;
+	icon_state = "2-8"
 	},
 /obj/structure/cable/orange{
-	icon_state = "2-9";
 	d1 = 2;
-	d2 = 9
+	d2 = 9;
+	icon_state = "2-9"
 	},
 /obj/structure/cable/orange{
-	icon_state = "2-10";
 	d1 = 2;
-	d2 = 10
+	d2 = 10;
+	icon_state = "2-10"
 	},
 /obj/structure/cable/orange{
-	icon_state = "5-9";
 	d1 = 5;
-	d2 = 9
+	d2 = 9;
+	icon_state = "5-9"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -10439,39 +10435,39 @@
 /area/holodeck/source_volleyball)
 "qRT" = (
 /obj/structure/cable/pink{
-	icon_state = "2-10";
 	d1 = 2;
-	d2 = 10
+	d2 = 10;
+	icon_state = "2-10"
 	},
 /obj/structure/cable/pink{
-	icon_state = "2-4";
 	d1 = 2;
-	d2 = 4
+	d2 = 4;
+	icon_state = "2-4"
 	},
 /obj/structure/cable/pink{
-	icon_state = "2-5";
 	d1 = 2;
-	d2 = 5
+	d2 = 5;
+	icon_state = "2-5"
 	},
 /obj/structure/cable/pink{
-	icon_state = "2-6";
 	d1 = 2;
-	d2 = 6
+	d2 = 6;
+	icon_state = "2-6"
 	},
 /obj/structure/cable/pink{
-	icon_state = "2-8";
 	d1 = 2;
-	d2 = 8
+	d2 = 8;
+	icon_state = "2-8"
 	},
 /obj/structure/cable/pink{
-	icon_state = "2-9";
 	d1 = 2;
-	d2 = 9
+	d2 = 9;
+	icon_state = "2-9"
 	},
 /obj/structure/cable/pink{
-	icon_state = "5-9";
 	d1 = 5;
-	d2 = 9
+	d2 = 9;
+	icon_state = "5-9"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -10490,9 +10486,9 @@
 /area/holodeck/source_volleyball)
 "rbU" = (
 /obj/structure/cable/orange{
-	icon_state = "32-5";
 	d1 = 32;
-	d2 = 5
+	d2 = 5;
+	icon_state = "32-5"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -10515,8 +10511,8 @@
 /area/holodeck/source_volleyball)
 "ros" = (
 /obj/structure/cable/yellow{
-	icon_state = "0-5";
-	d2 = 5
+	d2 = 5;
+	icon_state = "0-5"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -10529,9 +10525,9 @@
 /area/holodeck/source_cafe)
 "rtZ" = (
 /obj/structure/cable/yellow{
-	icon_state = "32-8";
 	d1 = 32;
-	d2 = 8
+	d2 = 8;
+	icon_state = "32-8"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -10544,16 +10540,16 @@
 /area/centcom/evac)
 "rvt" = (
 /obj/structure/cable/pink{
-	icon_state = "32-9";
 	d1 = 32;
-	d2 = 9
+	d2 = 9;
+	icon_state = "32-9"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "ryM" = (
 /obj/structure/cable/white{
-	icon_state = "0-10";
-	d2 = 10
+	d2 = 10;
+	icon_state = "0-10"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -10562,16 +10558,16 @@
 /area/tdome)
 "rAc" = (
 /obj/structure/cable/pink{
-	icon_state = "0-8";
-	d2 = 8
+	d2 = 8;
+	icon_state = "0-8"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "rFX" = (
 /obj/structure/cable/orange{
-	icon_state = "16-0";
 	d1 = 16;
-	d2 = 0
+	d2 = 0;
+	icon_state = "16-0"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -10612,54 +10608,54 @@
 /area/space)
 "rYB" = (
 /obj/structure/cable/green{
-	icon_state = "32-5";
 	d1 = 32;
-	d2 = 5
+	d2 = 5;
+	icon_state = "32-5"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "rZL" = (
 /obj/structure/cable/white{
-	icon_state = "2-10";
 	d1 = 2;
-	d2 = 10
+	d2 = 10;
+	icon_state = "2-10"
 	},
 /obj/structure/cable/white{
-	icon_state = "2-4";
 	d1 = 2;
-	d2 = 4
+	d2 = 4;
+	icon_state = "2-4"
 	},
 /obj/structure/cable/white{
-	icon_state = "2-5";
 	d1 = 2;
-	d2 = 5
+	d2 = 5;
+	icon_state = "2-5"
 	},
 /obj/structure/cable/white{
-	icon_state = "2-6";
 	d1 = 2;
-	d2 = 6
+	d2 = 6;
+	icon_state = "2-6"
 	},
 /obj/structure/cable/white{
-	icon_state = "2-9";
 	d1 = 2;
-	d2 = 9
+	d2 = 9;
+	icon_state = "2-9"
 	},
 /obj/structure/cable/white{
-	icon_state = "2-8";
 	d1 = 2;
-	d2 = 8
+	d2 = 8;
+	icon_state = "2-8"
 	},
 /obj/structure/cable/white{
-	icon_state = "5-9";
 	d1 = 5;
-	d2 = 9
+	d2 = 9;
+	icon_state = "5-9"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "seV" = (
 /obj/structure/cable/orange{
-	icon_state = "32-1";
-	d1 = 32
+	d1 = 32;
+	icon_state = "32-1"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -10679,15 +10675,15 @@
 /area/holodeck/source_volleyball)
 "smw" = (
 /obj/structure/cable/pink{
-	icon_state = "0-6";
-	d2 = 6
+	d2 = 6;
+	icon_state = "0-6"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "suB" = (
 /obj/structure/cable/pink{
-	icon_state = "0-9";
-	d2 = 9
+	d2 = 9;
+	icon_state = "0-9"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -10709,9 +10705,9 @@
 /area/centcom/evac)
 "sFm" = (
 /obj/structure/cable/orange{
-	icon_state = "32-6";
 	d1 = 32;
-	d2 = 6
+	d2 = 6;
+	icon_state = "32-6"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -10776,8 +10772,8 @@
 /area/holodeck/source_plaza)
 "tvo" = (
 /obj/structure/cable/yellow{
-	icon_state = "0-6";
-	d2 = 6
+	d2 = 6;
+	icon_state = "0-6"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -10797,8 +10793,8 @@
 /area/holodeck/source_temple)
 "tEQ" = (
 /obj/structure/cable/pink{
-	icon_state = "0-5";
-	d2 = 5
+	d2 = 5;
+	icon_state = "0-5"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -10811,9 +10807,9 @@
 /area/holodeck/source_meetinghall)
 "tHi" = (
 /obj/structure/cable/pink{
-	icon_state = "32-4";
 	d1 = 32;
-	d2 = 4
+	d2 = 4;
+	icon_state = "32-4"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -10846,15 +10842,15 @@
 /area/space)
 "unW" = (
 /obj/structure/cable/orange{
-	icon_state = "0-6";
-	d2 = 6
+	d2 = 6;
+	icon_state = "0-6"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "upm" = (
 /obj/structure/cable/pink{
-	icon_state = "0-4";
-	d2 = 4
+	d2 = 4;
+	icon_state = "0-4"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -10866,15 +10862,15 @@
 /area/holodeck/source_temple)
 "urA" = (
 /obj/structure/cable/green{
-	icon_state = "32-1";
-	d1 = 32
+	d1 = 32;
+	icon_state = "32-1"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "urS" = (
 /obj/structure/cable/yellow{
-	icon_state = "0-4";
-	d2 = 4
+	d2 = 4;
+	icon_state = "0-4"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -10947,9 +10943,9 @@
 /area/space)
 "uTX" = (
 /obj/structure/cable/orange{
-	icon_state = "32-4";
 	d1 = 32;
-	d2 = 4
+	d2 = 4;
+	icon_state = "32-4"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -10968,9 +10964,9 @@
 /area/holodeck/source_cafe)
 "veN" = (
 /obj/structure/cable/white{
-	icon_state = "16-0";
 	d1 = 16;
-	d2 = 0
+	d2 = 0;
+	icon_state = "16-0"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -10985,24 +10981,24 @@
 /area/holodeck/source_temple)
 "vlj" = (
 /obj/structure/cable/green{
-	icon_state = "1-2";
 	d1 = 1;
-	d2 = 2
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /obj/structure/cable/green{
-	icon_state = "4-8";
 	d1 = 4;
-	d2 = 8
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
-	icon_state = "5-10";
 	d1 = 5;
-	d2 = 10
+	d2 = 10;
+	icon_state = "5-10"
 	},
 /obj/structure/cable/green{
-	icon_state = "6-9";
 	d1 = 6;
-	d2 = 9
+	d2 = 9;
+	icon_state = "6-9"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -11036,9 +11032,9 @@
 /area/space)
 "vGx" = (
 /obj/structure/cable/green{
-	icon_state = "32-4";
 	d1 = 32;
-	d2 = 4
+	d2 = 4;
+	icon_state = "32-4"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -11065,29 +11061,29 @@
 	icon_state = "2-4"
 	},
 /obj/structure/cable{
-	icon_state = "4-10";
 	d1 = 4;
-	d2 = 10
+	d2 = 10;
+	icon_state = "4-10"
 	},
 /obj/structure/cable{
-	icon_state = "4-9";
 	d1 = 4;
-	d2 = 9
+	d2 = 9;
+	icon_state = "4-9"
 	},
 /obj/structure/cable{
-	icon_state = "9-10";
 	d1 = 9;
-	d2 = 10
+	d2 = 10;
+	icon_state = "9-10"
 	},
 /obj/structure/cable{
-	icon_state = "4-6";
 	d1 = 4;
-	d2 = 6
+	d2 = 6;
+	icon_state = "4-6"
 	},
 /obj/structure/cable{
-	icon_state = "4-5";
 	d1 = 4;
-	d2 = 5
+	d2 = 5;
+	icon_state = "4-5"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -11103,39 +11099,39 @@
 /area/holodeck/source_plaza)
 "weG" = (
 /obj/structure/cable/green{
-	icon_state = "1-10";
 	d1 = 1;
-	d2 = 10
+	d2 = 10;
+	icon_state = "1-10"
 	},
 /obj/structure/cable/green{
-	icon_state = "1-6";
 	d1 = 1;
-	d2 = 6
+	d2 = 6;
+	icon_state = "1-6"
 	},
 /obj/structure/cable/green{
-	icon_state = "6-10";
 	d1 = 6;
-	d2 = 10
+	d2 = 10;
+	icon_state = "6-10"
 	},
 /obj/structure/cable/green{
-	icon_state = "1-5";
 	d1 = 1;
-	d2 = 5
+	d2 = 5;
+	icon_state = "1-5"
 	},
 /obj/structure/cable/green{
-	icon_state = "1-4";
 	d1 = 1;
-	d2 = 4
+	d2 = 4;
+	icon_state = "1-4"
 	},
 /obj/structure/cable/green{
-	icon_state = "1-8";
 	d1 = 1;
-	d2 = 8
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /obj/structure/cable/green{
-	icon_state = "1-9";
 	d1 = 1;
-	d2 = 9
+	d2 = 9;
+	icon_state = "1-9"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -11156,8 +11152,8 @@
 /area/holodeck/source_temple)
 "wly" = (
 /obj/structure/cable/pink{
-	icon_state = "0-10";
-	d2 = 10
+	d2 = 10;
+	icon_state = "0-10"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -11173,17 +11169,17 @@
 /area/tdome/tdomeadmin)
 "wnn" = (
 /obj/structure/cable{
-	icon_state = "32-8";
 	d1 = 32;
-	d2 = 8
+	d2 = 8;
+	icon_state = "32-8"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "wnT" = (
 /obj/structure/cable/pink{
-	icon_state = "16-0";
 	d1 = 16;
-	d2 = 0
+	d2 = 0;
+	icon_state = "16-0"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -11197,8 +11193,8 @@
 /area/shuttle/transport1/centcom)
 "wyU" = (
 /obj/structure/cable{
-	icon_state = "0-10";
-	d2 = 10
+	d2 = 10;
+	icon_state = "0-10"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -11230,9 +11226,9 @@
 /area/space)
 "wKr" = (
 /obj/structure/cable/orange{
-	icon_state = "32-10";
 	d1 = 32;
-	d2 = 10
+	d2 = 10;
+	icon_state = "32-10"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -11243,55 +11239,55 @@
 /area/tdome)
 "xjZ" = (
 /obj/structure/cable/white{
-	icon_state = "32-10";
 	d1 = 32;
-	d2 = 10
+	d2 = 10;
+	icon_state = "32-10"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "xmP" = (
 /obj/structure/cable/yellow{
-	icon_state = "32-9";
 	d1 = 32;
-	d2 = 9
+	d2 = 9;
+	icon_state = "32-9"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "xpH" = (
 /obj/structure/cable/white{
-	icon_state = "1-4";
 	d1 = 1;
-	d2 = 4
+	d2 = 4;
+	icon_state = "1-4"
 	},
 /obj/structure/cable/white{
-	icon_state = "2-4";
 	d1 = 2;
-	d2 = 4
+	d2 = 4;
+	icon_state = "2-4"
 	},
 /obj/structure/cable/white{
-	icon_state = "4-10";
 	d1 = 4;
-	d2 = 10
+	d2 = 10;
+	icon_state = "4-10"
 	},
 /obj/structure/cable/white{
-	icon_state = "4-5";
 	d1 = 4;
-	d2 = 5
+	d2 = 5;
+	icon_state = "4-5"
 	},
 /obj/structure/cable/white{
-	icon_state = "4-6";
 	d1 = 4;
-	d2 = 6
+	d2 = 6;
+	icon_state = "4-6"
 	},
 /obj/structure/cable/white{
-	icon_state = "4-9";
 	d1 = 4;
-	d2 = 9
+	d2 = 9;
+	icon_state = "4-9"
 	},
 /obj/structure/cable/white{
-	icon_state = "9-10";
 	d1 = 9;
-	d2 = 10
+	d2 = 10;
+	icon_state = "9-10"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -11307,15 +11303,15 @@
 /area/holodeck/source_cafe)
 "xDy" = (
 /obj/structure/cable/cyan{
-	icon_state = "0-5";
-	d2 = 5
+	d2 = 5;
+	icon_state = "0-5"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "xFy" = (
 /obj/structure/cable/green{
-	icon_state = "0-8";
-	d2 = 8
+	d2 = 8;
+	icon_state = "0-8"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -11329,24 +11325,24 @@
 /area/holodeck/source_volleyball)
 "xNI" = (
 /obj/structure/cable/cyan{
-	icon_state = "0-4";
-	d2 = 4
+	d2 = 4;
+	icon_state = "0-4"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "xRn" = (
 /obj/structure/cable/white{
-	icon_state = "32-4";
 	d1 = 32;
-	d2 = 4
+	d2 = 4;
+	icon_state = "32-4"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
 "xRS" = (
 /obj/structure/cable/yellow{
-	icon_state = "32-2";
 	d1 = 32;
-	d2 = 2
+	d2 = 2;
+	icon_state = "32-2"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -11384,8 +11380,8 @@
 /area/centcom/evac)
 "yhM" = (
 /obj/structure/cable/green{
-	icon_state = "0-6";
-	d2 = 6
+	d2 = 6;
+	icon_state = "0-6"
 	},
 /turf/unsimulated/floor/plating,
 /area/space)
@@ -19374,7 +19370,7 @@ alx
 alx
 amY
 sMV
-kSr
+eyC
 eyC
 amj
 alx

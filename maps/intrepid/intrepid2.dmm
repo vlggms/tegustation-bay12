@@ -230,6 +230,10 @@
 /area/intrepid/department/security/firing_range)
 "aF" = (
 /obj/effect/decal/cleanable/cobweb,
+/obj/machinery/suit_storage_unit/mining/alt{
+	req_access = list()
+	},
+/obj/effect/floor_decal/industrial/delivery_sharp/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/cargo/cargostorage)
 "aJ" = (
@@ -1433,7 +1437,8 @@
 	dir = 8;
 	pixel_x = -17
 	},
-/turf/simulated/floor/tiled/techfloor,
+/obj/effect/floor_decal/industrial/bot/yellow,
+/turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/cargo/cargostorage)
 "dG" = (
 /obj/structure/table/standard,
@@ -2522,8 +2527,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/structure/table/standard,
-/obj/item/stack/package_wrap/twenty_five,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/cargo/cargostorage)
 "gq" = (
@@ -5169,7 +5173,8 @@
 /area/shuttle/pandora/cargo)
 "mx" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/tiled/techfloor,
+/obj/effect/floor_decal/industrial/bot/yellow,
+/turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/cargo/cargostorage)
 "my" = (
 /obj/machinery/alarm{
@@ -7636,7 +7641,7 @@
 	pixel_y = 32
 	},
 /obj/structure/table/standard,
-/turf/simulated/floor/tiled/techmaint,
+/turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/cargo/cargostorage)
 "sB" = (
 /obj/structure/cable/orange{
@@ -8707,6 +8712,10 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/machinery/suit_storage_unit/mining/alt{
+	req_access = list()
+	},
+/obj/effect/floor_decal/industrial/delivery_sharp/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/cargo/cargostorage)
 "vc" = (
@@ -9232,7 +9241,8 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled/techfloor,
+/obj/effect/floor_decal/industrial/bot/yellow,
+/turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/cargo/cargostorage)
 "wi" = (
 /obj/structure/closet/radiation,
@@ -10549,7 +10559,7 @@
 	dir = 4
 	},
 /obj/structure/table/standard,
-/turf/simulated/floor/tiled/techmaint,
+/turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/cargo/cargostorage)
 "zy" = (
 /obj/structure/table/standard,
@@ -11258,7 +11268,7 @@
 "Bh" = (
 /obj/structure/table/standard,
 /obj/item/hand_labeler,
-/turf/simulated/floor/tiled/techmaint,
+/turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/cargo/cargostorage)
 "Bi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -12380,8 +12390,8 @@
 /turf/simulated/floor/bluegrid/airless,
 /area/intrepid/department/command/AI/AICore)
 "DS" = (
-/obj/structure/table/rack,
-/turf/simulated/floor/tiled/techmaint,
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/cargo/cargostorage)
 "DT" = (
 /obj/effect/paint/red,
@@ -13828,7 +13838,8 @@
 	dir = 4;
 	pixel_x = -23
 	},
-/turf/simulated/floor/tiled/techfloor,
+/obj/effect/floor_decal/industrial/bot/yellow,
+/turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/cargo/cargostorage)
 "HG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -16281,7 +16292,8 @@
 /area/intrepid/department/engineering/engine_room)
 "NP" = (
 /obj/structure/table/standard,
-/turf/simulated/floor/tiled/techmaint,
+/obj/item/stack/package_wrap/twenty_five,
+/turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/cargo/cargostorage)
 "NQ" = (
 /obj/structure/cable/orange{
@@ -19163,10 +19175,13 @@
 /turf/simulated/floor/tiled/white/monotile,
 /area/intrepid/department/medical/morgue)
 "UP" = (
-/obj/machinery/suit_storage_unit/mining/alt{
-	req_access = list()
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
-/obj/effect/floor_decal/industrial/delivery_sharp/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/cargo/cargostorage)
 "US" = (
@@ -19862,10 +19877,14 @@
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/central)
 "Wx" = (
-/obj/machinery/suit_storage_unit/mining{
-	req_access = list()
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
-/obj/effect/floor_decal/industrial/delivery_sharp/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/trade_beacon/sending,
+/obj/effect/floor_decal/industrial/bot/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/cargo/cargostorage)
 "Wy" = (
@@ -44274,9 +44293,9 @@ UU
 Cr
 iD
 NP
-kv
-kv
-vy
+id
+id
+UP
 id
 id
 kv
@@ -44475,10 +44494,10 @@ UU
 UU
 Cr
 iD
-NP
 DS
-UP
-vy
+id
+id
+Wx
 id
 id
 ou
@@ -44677,10 +44696,10 @@ vw
 vw
 Cr
 iD
-NP
 DS
-Wx
-vy
+id
+id
+UP
 id
 id
 dV
@@ -44879,10 +44898,10 @@ vw
 vw
 Cr
 iD
-NP
-kv
-kv
-vy
+DS
+id
+id
+UP
 id
 id
 dV

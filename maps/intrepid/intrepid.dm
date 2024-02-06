@@ -80,8 +80,6 @@
 	#include "structures/closets/supply.dm"
 	#include "structures/closets/exploration.dm"
 
-	#include "supplypacks/marine.dm"
-
 	#include "loadout/_defines.dm"
 	#include "loadout/loadout_accessories.dm"
 	#include "loadout/loadout_eyes.dm"

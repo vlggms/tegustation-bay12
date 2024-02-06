@@ -19682,7 +19682,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/shuttle/ambulance/home)
 "ola" = (
-/obj/effect/shuttle_landmark/supply/station,
+/obj/machinery/trade_beacon/receiving,
 /turf/simulated/floor,
 /area/intrepid/department/cargo/cargobay)
 "olg" = (
