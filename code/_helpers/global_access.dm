@@ -867,6 +867,10 @@
 			return global.vsc;
 		if("wax_recipes")
 			return global.wax_recipes;
+		if("weighted_mundaneevent_locations")
+			return global.weighted_mundaneevent_locations;
+		if("weighted_randomevent_locations")
+			return global.weighted_randomevent_locations;
 		if("whitelist")
 			return global.whitelist;
 		if("wireColours")
@@ -881,7 +885,7 @@
 			return global.z_levels;
 		if("zone_blocked")
 			return global.zone_blocked;
-
+		
 /proc/writeglobal(which, newval)
 	switch(which)
 		if("ANTAG_FREQS")
@@ -1750,6 +1754,10 @@
 			global.vsc=newval;
 		if("wax_recipes")
 			global.wax_recipes=newval;
+		if("weighted_mundaneevent_locations")
+			global.weighted_mundaneevent_locations=newval;
+		if("weighted_randomevent_locations")
+			global.weighted_randomevent_locations=newval;
 		if("whitelist")
 			global.whitelist=newval;
 		if("wireColours")
@@ -1764,7 +1772,7 @@
 			global.z_levels=newval;
 		if("zone_blocked")
 			global.zone_blocked=newval;
-
+		
 /var/list/_all_globals=list(
 	"ANTAG_FREQS",
 	"AWAY_FREQS_ASSIGNED",
