@@ -6327,6 +6327,9 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 4
 	},
+/obj/machinery/atm{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled,
 /area/intrepid/misc/hallway/starboard)
 "eyU" = (
@@ -8801,6 +8804,18 @@
 /obj/effect/wallframe_spawn/no_grille,
 /turf/simulated/floor,
 /area/intrepid/misc/hallway/starboard)
+"guM" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/orange{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atm{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/dark,
+/area/intrepid/misc/hallway/center)
 "guP" = (
 /obj/machinery/door/firedoor{
 	dir = 4
@@ -19393,6 +19408,16 @@
 /obj/effect/floor_decal/industrial/bot,
 /turf/simulated/floor/tiled/monotile,
 /area/shuttle/research/xenofloralab)
+"nZi" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atm{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled,
+/area/intrepid/department/cargo/cargobay)
 "nZE" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 5
@@ -54765,7 +54790,7 @@ uyJ
 mUl
 rHX
 rHX
-rHX
+nZi
 xup
 tZi
 cFz
@@ -57820,7 +57845,7 @@ iKg
 oZr
 uIO
 fNx
-fNx
+guM
 fNx
 kmR
 pDy
