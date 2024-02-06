@@ -681,7 +681,7 @@
 			var/faction_relations = TF.relationship[faction]
 			var/faction_color = TradeRelationsColor(faction_relations)
 			if(TS == station)
-				dat += "<b><u>[TS.name]<b></u>"
+				dat += "<b><u>[TS.name]</b></u>"
 			else
 				dat += "<A href='?src=\ref[src];PRG_station=[TS.uid]'><span style='color: [faction_color]'>[TS.name]</span></A>"
 
