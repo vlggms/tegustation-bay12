@@ -146,3 +146,5 @@
 		/datum/gear/travelvisa,
 		/datum/gear/workvisa,
 		)
+
+	trade_faction = FACTION_TERRAGOV
