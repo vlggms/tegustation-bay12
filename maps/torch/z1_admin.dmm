@@ -2711,10 +2711,6 @@
 	icon_state = "freezerfloor"
 	},
 /area/centcom/living)
-"auX" = (
-/obj/effect/shuttle_landmark/supply/centcom,
-/turf/simulated/floor/plating,
-/area/supply/dock)
 "auY" = (
 /obj/machinery/body_scanconsole{
 	dir = 4
@@ -27300,7 +27296,7 @@ rxE
 auq
 auz
 auz
-auX
+auz
 auz
 auz
 avB

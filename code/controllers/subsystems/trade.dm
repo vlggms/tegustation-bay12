@@ -1,3 +1,4 @@
+// This subsystem is responsible for handling merchant, not station supply
 SUBSYSTEM_DEF(trade)
 	name = "Trade"
 	wait = 1 MINUTE

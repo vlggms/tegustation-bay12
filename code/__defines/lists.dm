@@ -31,6 +31,10 @@
 #define LAZYCLEARLIST(L) if(L) { L.Cut(); L = null; }
 // Reads L or an empty list if L is not a list.  Note: Does NOT assign, L may be an expression.
 #define SANITIZE_LIST(L) ( islist(L) ? L : list() )
+// Adds value to the existing value of a key
+#define LAZYAPLUS(L,K,V) if(!L) { L = list(); } if (!L[K]) { L[K] = 0; } L[K] += V;
+// Subtracts value from the existing value of a key
+#define LAZYAMINUS(L,K,V) if(L && L[K]) { L[K] -= V; if(!LAZYLEN(L[K])) { L -= K } }
 
 // binary search sorted insert
 // IN: Object to be inserted

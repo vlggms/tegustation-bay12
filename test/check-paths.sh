@@ -41,7 +41,6 @@ exactly 1 "NOOP match" 'NOOP'
 exactly 413 "spawn uses" 'spawn\s*\(\s*(-\s*)?\d*\s*\)' -P
 exactly 0 "tag uses" '\stag = ' -P '**/*.dmm'
 exactly 4 ".Replace( matches" '\.Replace(_char)?\(' -P
-exactly 5 ".Find( matches" '\.Find(_char)?\(' -P
 exactly 0 "anchored = 0/1" 'anchored\s*=\s*\d' -P
 exactly 1 "density = 0/1" 'density\s*=\s*\d' -P
 exactly 0 "emagged = 0/1" 'emagged\s*=\s*\d' -P

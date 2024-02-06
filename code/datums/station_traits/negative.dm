@@ -1,14 +1,3 @@
-/datum/station_trait/slow_shuttle
-	name = "Slow Shuttle"
-	trait_type = STATION_TRAIT_NEGATIVE
-	weight = 2
-	show_in_report = TRUE
-	report_message = "Due to distance to our supply station, the supply drone will have a slower flight time to your cargo department."
-	blacklist = list(/datum/station_trait/quick_shuttle)
-
-/datum/station_trait/slow_shuttle/on_round_start()
-	SSsupply.movetime = round(SSsupply.movetime * 1.25)
-
 /datum/station_trait/disabled_lighting
 	name = "Overloaded Lighting"
 	trait_type = STATION_TRAIT_NEGATIVE

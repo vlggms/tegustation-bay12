@@ -1,32 +1,32 @@
-/atom/proc/Value(var/base)
+/atom/proc/Value(base)
 	return base
 
-/obj/Value()
+/obj/Value(base)
 	. = ..()
 	for(var/a in contents)
 		. += get_value(a)
 
-/obj/machinery/Value()
+/obj/machinery/Value(base)
 	. = ..()
 	if(stat & BROKEN)
 		. *= 0.5
 	. = round(.)
 
-/obj/structure/barricade/Value()
+/obj/structure/barricade/Value(base)
 	return material.value
 
-/obj/structure/bed/Value()
+/obj/structure/bed/Value(base)
 	return ..() * material.value
 
-/obj/item/slime_extract/Value(var/base)
+/obj/item/slime_extract/Value(base)
 	return base * Uses
 
-/obj/item/ammo_casing/Value()
+/obj/item/ammo_casing/Value(base)
 	if(!BB)
 		return 1
 	return ..()
 
-/obj/item/reagent_containers/Value()
+/obj/item/reagent_containers/Value(base)
 	. = ..()
 	if(reagents)
 		for(var/a in reagents.reagent_list)
@@ -34,27 +34,27 @@
 			. += reg.Value() * reg.volume
 	. = round(.)
 
-/datum/reagent/proc/Value()
+/datum/reagent/proc/Value(base)
 	return value
 
-/obj/item/stack/Value(var/base)
+/obj/item/stack/Value(base)
 	return base * amount
 
-/obj/item/stack/material/Value()
+/obj/item/stack/material/Value(base)
 	if(!material)
 		return ..()
 	return material.value * amount
 
-/obj/item/ore/Value()
+/obj/item/ore/Value(base)
 	return material ? material.value : 0
 
-/obj/item/material/Value()
+/obj/item/material/Value(base)
 	return material.value * worth_multiplier
 
-/obj/item/spacecash/Value()
+/obj/item/spacecash/Value(base)
 	return worth
 
-/mob/living/carbon/human/Value(var/base)
+/mob/living/carbon/human/Value(base)
 	. = ..()
 	if(species)
 		. *= species.rarity_value

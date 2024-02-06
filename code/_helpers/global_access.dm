@@ -791,8 +791,6 @@
 			return global.string_slot_flags;
 		if("supply_drop")
 			return global.supply_drop;
-		if("supply_methods_")
-			return global.supply_methods_;
 		if("swapmaps_byname")
 			return global.swapmaps_byname;
 		if("swapmaps_compiled_maxx")
@@ -1680,8 +1678,6 @@
 			global.string_slot_flags=newval;
 		if("supply_drop")
 			global.supply_drop=newval;
-		if("supply_methods_")
-			global.supply_methods_=newval;
 		if("swapmaps_byname")
 			global.swapmaps_byname=newval;
 		if("swapmaps_compiled_maxx")
@@ -2173,7 +2169,6 @@
 	"string_part_flags",
 	"string_slot_flags",
 	"supply_drop",
-	"supply_methods_",
 	"swapmaps_byname",
 	"swapmaps_compiled_maxx",
 	"swapmaps_compiled_maxy",

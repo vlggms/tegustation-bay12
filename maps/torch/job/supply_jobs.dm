@@ -42,7 +42,7 @@
 		access_tox, access_research
 	)
 
-	software_on_spawn = list(/datum/computer_file/program/supply,
+	software_on_spawn = list(//datum/computer_file/program/supply,
 							 /datum/computer_file/program/deck_management,
 							 /datum/computer_file/program/reports)
 
@@ -86,7 +86,7 @@
 		access_tox, access_research
 	)
 
-	software_on_spawn = list(/datum/computer_file/program/supply,
+	software_on_spawn = list(//datum/computer_file/program/supply,
 							 /datum/computer_file/program/deck_management,
 							 /datum/computer_file/program/reports)
 
