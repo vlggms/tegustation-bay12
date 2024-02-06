@@ -1282,6 +1282,13 @@
 /obj/effect/paint/hull,
 /turf/simulated/wall/titanium,
 /area/exploration_shuttle/airlock)
+"cx" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1;
+	icon_state = "warning"
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/hangar)
 "cy" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled/monotile,
@@ -2987,7 +2994,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/exploration_shuttle/cargo)
 "gc" = (
-/obj/effect/shuttle_landmark/supply/station,
+/obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/plating,
 /area/quartermaster/hangar)
 "gd" = (
@@ -4971,7 +4978,6 @@
 /turf/simulated/floor/plating,
 /area/quartermaster/hangar)
 "kW" = (
-/obj/effect/floor_decal/industrial/warning/corner,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
@@ -10460,6 +10466,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/exploration_shuttle/cargo)
+"xI" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4;
+	icon_state = "warning"
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/hangar)
 "xJ" = (
 /obj/machinery/shipsensors,
 /turf/simulated/floor/plating,
@@ -11097,6 +11110,12 @@
 "zC" = (
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/petrov/security)
+"zG" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/hangar)
 "zH" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4;
@@ -12660,6 +12679,13 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/shuttle/petrov/analysis)
+"Fq" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5;
+	icon_state = "warning"
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/hangar)
 "Fu" = (
 /obj/structure/bed,
 /turf/simulated/floor/reinforced,
@@ -14437,6 +14463,10 @@
 /obj/effect/paint/silver,
 /turf/simulated/wall/ocp_wall,
 /area/shuttle/petrov/toxins)
+"LH" = (
+/obj/machinery/trade_beacon/sending,
+/turf/simulated/floor/plating,
+/area/quartermaster/hangar)
 "LI" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -14523,6 +14553,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/fifthdeck/aftport)
+"LY" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6;
+	icon_state = "warning"
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/hangar)
 "Mb" = (
 /obj/structure/table/steel,
 /obj/item/modular_computer/laptop/preset/custom_loadout/advanced,
@@ -15678,6 +15715,12 @@
 /obj/effect/paint/silver,
 /turf/simulated/floor/plating,
 /area/shuttle/petrov/equipment)
+"Qs" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/hangar)
 "Qz" = (
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -17588,6 +17631,13 @@
 /obj/machinery/atmospherics/portables_connector,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/phoron)
+"XS" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8;
+	icon_state = "warning"
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/hangar)
 "XT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -18001,6 +18051,10 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/wall/prepainted,
 /area/maintenance/fifthdeck/fore)
+"Zk" = (
+/obj/machinery/trade_beacon/receiving,
+/turf/simulated/floor/plating,
+/area/quartermaster/hangar)
 "Zl" = (
 /obj/item/device/radio/intercom{
 	pixel_y = 26
@@ -37318,16 +37372,16 @@ Ho
 nM
 ih
 kW
-Ho
-Ho
-Ho
-Ho
-Ho
-Ho
-Ho
-Ho
-Ho
-hT
+UH
+UH
+UH
+UH
+UH
+UH
+UH
+UH
+UH
+UH
 oO
 aJ
 mU
@@ -37519,17 +37573,17 @@ sK
 bi
 fS
 ih
-ee
-bi
-bi
-bi
-bi
-bi
-bi
-bi
-bi
-bi
-fS
+UH
+UH
+UH
+UH
+UH
+UH
+UH
+UH
+UH
+UH
+UH
 kX
 aJ
 sl
@@ -37721,17 +37775,17 @@ cj
 cj
 fS
 ih
-ee
-bi
-bi
-bi
-bi
-bi
-bi
-bi
-bi
-bi
-fS
+UH
+zG
+XS
+XS
+XS
+Qs
+zG
+XS
+XS
+XS
+Qs
 aX
 aJ
 Yo
@@ -37923,17 +37977,17 @@ dM
 cj
 fS
 ih
-ee
+UH
+cx
 bi
 bi
 bi
+gc
+cx
 bi
 bi
 bi
-bi
-bi
-bi
-fS
+gc
 aX
 aJ
 mU
@@ -38125,17 +38179,17 @@ dN
 ef
 fS
 ih
-ee
+UH
+cx
 bi
-bi
-bi
+Zk
 bi
 gc
+cx
 bi
+LH
 bi
-bi
-bi
-fS
+gc
 aX
 aJ
 mU
@@ -38327,17 +38381,17 @@ dO
 cj
 fS
 ih
-ee
+UH
+cx
 bi
 bi
 bi
+gc
+cx
 bi
 bi
 bi
-bi
-bi
-bi
-fS
+gc
 aX
 aJ
 CX
@@ -38529,17 +38583,17 @@ cj
 cj
 fS
 ih
-ee
-bi
-bi
-bi
-bi
-bi
-bi
-bi
-bi
-bi
-fS
+UH
+Fq
+xI
+xI
+xI
+LY
+Fq
+xI
+xI
+xI
+LY
 lf
 aJ
 mU
@@ -38731,17 +38785,17 @@ eT
 eT
 fT
 ih
-eH
-eT
-eT
-eT
-eT
-eT
-eT
-eT
-eT
-eT
-fT
+UH
+UH
+UH
+UH
+UH
+UH
+UH
+UH
+UH
+UH
+UH
 lg
 aJ
 px
