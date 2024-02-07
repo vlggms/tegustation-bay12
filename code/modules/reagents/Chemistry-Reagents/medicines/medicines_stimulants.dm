@@ -36,7 +36,7 @@
 	taste_description = "acid"
 	color = "#ff3300"
 	metabolism = REM * 0.15
-	value = 3.9
+	value = 4
 
 /datum/reagent/medicine/stimulant/hyperzine/affect_blood(mob/living/carbon/M, alien, removed)
 	if (alien == IS_DIONA)

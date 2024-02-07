@@ -75,6 +75,9 @@
 
 	return FALSE
 
+/obj/item/contraband/poster/order_black_of_sun
+	poster_type = /decl/poster/illegal/order_black_of_sun
+
 //############################## THE ACTUAL DECALS ###########################
 
 /obj/structure/sign/poster

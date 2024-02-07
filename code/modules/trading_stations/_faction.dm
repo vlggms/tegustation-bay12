@@ -10,19 +10,6 @@
 	/// Access level required to set faction on supply program to this
 	var/access_required = null
 
-/datum/trade_faction/New()
-	. = ..()
-	// Factions that aren't set in relationship list of the datum are set to neutral.
-	for(var/datum/trade_faction/TF in SSsupply.factions)
-		if(TF.name == name)
-			// Technically not, but this will be how we declare same faction relations for now
-			relationship[TF.name] = FACTION_STATE_PROTECTORATE
-			continue
-		if(!(TF.name in relationship))
-			relationship[TF.name] = FACTION_STATE_NEUTRAL
-		// This ensures that relations are always mirrored between two datums
-		SSsupply.SetFactionRelations(name, TF.name, relationship[TF.name])
-
 /datum/trade_faction/proc/ModifyRelationsWith(target = null, change = FACTION_STATE_NEUTRAL)
 	if(istype(target, /datum/trade_faction))
 		var/datum/trade_faction/faction = target
@@ -45,7 +32,10 @@
 		FACTION_ISC = FACTION_STATE_RIVAL,
 		FACTION_NANOTRASEN = FACTION_STATE_ANIMOSITY,
 		FACTION_CYBERSUN = FACTION_STATE_ANIMOSITY,
+		FACTION_REBORN_CHRISTIAN_CHURCH = FACTION_STATE_ENEMY,
+		FACTION_TERRASENATE_OBS = FACTION_STATE_ENEMY,
 		)
+	access_required = access_supplylink_terragov
 
 /datum/trade_faction/solgov
 	name = FACTION_SOL_CENTRAL
@@ -55,7 +45,10 @@
 		FACTION_TERRAGOV = FACTION_STATE_RIVAL,
 		FACTION_ISC = FACTION_STATE_RIVAL,
 		FACTION_NANOTRASEN = FACTION_STATE_WELCOMING,
+		FACTION_REBORN_CHRISTIAN_CHURCH = FACTION_STATE_RIVAL,
+		FACTION_TERRASENATE_OBS = FACTION_STATE_WAR,
 		)
+	access_required = access_supplylink_solgov
 
 /datum/trade_faction/isc
 	name = FACTION_ISC
@@ -65,7 +58,10 @@
 		FACTION_SOL_CENTRAL = FACTION_STATE_RIVAL,
 		FACTION_NANOTRASEN = FACTION_STATE_ALLY,
 		FACTION_CYBERSUN = FACTION_STATE_ALLY,
+		FACTION_REBORN_CHRISTIAN_CHURCH = FACTION_STATE_ALLY,
+		FACTION_TERRASENATE_OBS = FACTION_STATE_ENEMY,
 		)
+	access_required = access_supplylink_isc
 
 // Corpos
 
@@ -77,7 +73,10 @@
 		FACTION_SOL_CENTRAL = FACTION_STATE_WELCOMING,
 		FACTION_ISC = FACTION_STATE_ALLY,
 		FACTION_CYBERSUN = FACTION_STATE_ALLY,
+		FACTION_REBORN_CHRISTIAN_CHURCH = FACTION_STATE_ALLY,
+		FACTION_TERRASENATE_OBS = FACTION_STATE_RIVAL,
 		)
+	access_required = access_supplylink_nanotrasen
 
 /datum/trade_faction/cybersun
 	name = FACTION_CYBERSUN
@@ -87,8 +86,42 @@
 		FACTION_SOL_CENTRAL = FACTION_STATE_WELCOMING,
 		FACTION_ISC = FACTION_STATE_ALLY,
 		FACTION_NANOTRASEN = FACTION_STATE_ALLY,
+		FACTION_REBORN_CHRISTIAN_CHURCH = FACTION_STATE_ALLY,
+		FACTION_TERRASENATE_OBS = FACTION_STATE_ANIMOSITY,
 		)
+	access_required = access_supplylink_cybersun
 
 // Member states of ISC
 
+/datum/trade_faction/reborcn_church
+	name = FACTION_REBORN_CHRISTIAN_CHURCH
+	desc = "A part of the Reborn Christian Church, a fanatical state focused on enforcing the will of Pontifex Maximus."
+	relationship = list(
+		FACTION_INDEPENDENT = FACTION_STATE_ANIMOSITY,
+		FACTION_TERRAGOV = FACTION_STATE_ENEMY,
+		FACTION_SOL_CENTRAL = FACTION_STATE_RIVAL,
+		FACTION_ISC = FACTION_STATE_ALLY,
+		FACTION_NANOTRASEN = FACTION_STATE_ALLY,
+		FACTION_CYBERSUN = FACTION_STATE_ALLY,
+		FACTION_TERRASENATE_OBS = FACTION_STATE_ENEMY,
+		)
+	access_required = access_supplylink_reborn_church
+
 // Purely independent states
+
+// Misc
+
+/datum/trade_faction/obs
+	name = FACTION_TERRASENATE_OBS
+	desc = "A part of the Order of the Black Sun, a xenophobic ultra-nationalist terrorist group."
+	relationship = list(
+		FACTION_INDEPENDENT = FACTION_STATE_RIVAL,
+		FACTION_TERRAGOV = FACTION_STATE_ENEMY,
+		FACTION_SOL_CENTRAL = FACTION_STATE_WAR,
+		FACTION_ISC = FACTION_STATE_ENEMY,
+		FACTION_NANOTRASEN = FACTION_STATE_RIVAL,
+		// OBS trades more with Cybersun,
+		FACTION_CYBERSUN = FACTION_STATE_ANIMOSITY,
+		FACTION_REBORN_CHRISTIAN_CHURCH = FACTION_STATE_ENEMY,
+		)
+	access_required = access_supplylink_obs

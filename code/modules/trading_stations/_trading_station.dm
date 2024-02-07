@@ -12,6 +12,8 @@
 	var/unlock_favor = 5000
 	/// Its parent trade faction. Factions have relations with other factions, but it is usually outside of player's control
 	var/faction = FACTION_INDEPENDENT
+	/// If not empty - faction will be chosen from this list
+	var/list/random_factions = list()
 	/// If TRUE - will always spawn round-start
 	var/spawn_always = FALSE
 	/// Weight of appearing round-start, if spawn_always is FALSE
@@ -97,6 +99,9 @@
 	if(!start_hidden)
 		SSsupply.visible_trading_stations += src
 
+	if(LAZYLEN(random_factions))
+		faction = pick(random_factions)
+
 /datum/trading_station/proc/PlaceOvermap(x, y, z = GLOB.using_map.overmap_z)
 	overmap_location = locate(x, y, z)
 
@@ -108,6 +113,7 @@
 	overmap_object.icon_state = pick(icon_states)
 
 	if(start_hidden)
+		overmap_object.color = "#444444"
 		GLOB.entered_event.register(overmap_location, src, .proc/Discovered)
 
 /datum/trading_station/proc/Discovered(_, obj/effect/overmap/visitable/ship/ship)
@@ -115,6 +121,7 @@
 		return
 
 	SSsupply.visible_trading_stations |= src
+	overmap_object.color = null
 	GLOB.entered_event.unregister(overmap_location, src, .proc/Discovered)
 
 /datum/trading_station/proc/AssembleInventory()
@@ -159,7 +166,7 @@
 			var/list/category = hidden_inventory[category_name]
 			if(istext(category_name) && islist(category))
 				if(!(category_name in inventory))
-					inventory.Add(category_name)
+					inventory[category_name] = list()
 				inventory[category_name] |= category
 				for(var/good_path in category)
 					var/cost = SSsupply.GetImportCost(good_path, src)

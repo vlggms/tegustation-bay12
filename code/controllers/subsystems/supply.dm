@@ -41,6 +41,20 @@ SUBSYSTEM_DEF(supply)
 		var/datum/trade_faction/TF = new faction_type
 		factions[TF.name] = TF
 
+	// Factions that aren't set in relationship list of the datum are set to neutral.
+	for(var/tf in factions)
+		var/datum/trade_faction/TF = factions[tf]
+		for(var/tf2 in factions)
+			var/datum/trade_faction/TF2 = factions[tf]
+			if(TF == TF2)
+				// Technically not, but this will be how we declare same faction relations for now
+				TF.relationship[TF2.name] = FACTION_STATE_PROTECTORATE
+				continue
+			if(!(TF2.name in TF.relationship))
+				TF.relationship[TF2] = FACTION_STATE_NEUTRAL
+			// This ensures that relations are always mirrored between two datums
+			SetFactionRelations(TF, TF2, TF.relationship[TF2])
+
 	InitTradeStations()
 
 /datum/controller/subsystem/supply/Destroy()
@@ -286,9 +300,13 @@ SUBSYSTEM_DEF(supply)
 	if(QDELETED(senderBeacon) || !istype(senderBeacon) || !account || !RecursiveLen(shopList))
 		return FALSE
 
-	var/obj/structure/closet/secure_closet/personal/trade/C
 	var/count_of_all = CollectCountsFrom(shopList)
 	var/price_for_all = CollectPriceForList(shopList)
+
+	if(price_for_all && account.money < price_for_all)
+		return FALSE
+
+	var/obj/structure/closet/secure_closet/personal/trade/C
 	if(isnum(count_of_all) && count_of_all > 1)
 		C = senderBeacon.DropItem(/obj/structure/closet/secure_closet/personal/trade)
 		if(is_order)
@@ -296,8 +314,6 @@ SUBSYSTEM_DEF(supply)
 			C.registered_name = buyer_name
 			C.name = "[initial(C.name)] ([C.registered_name])"
 			C.update_icon()
-	if(price_for_all && account.money < price_for_all)
-		return FALSE
 
 	var/order_contents_info
 	var/invoice_location

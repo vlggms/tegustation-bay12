@@ -16,7 +16,6 @@
 				/datum/reagent/uranium = 20
 				)
 	construction_difficulty = MATERIAL_HARD_DIY
-	sale_price = 2
 	value = 100
 
 /material/gold
@@ -47,7 +46,6 @@
 		"billion_lower" = 3
 		)
 	ore_icon_overlay = "nugget"
-	sale_price = 3
 	value = 40
 
 /material/gold/bronze //placeholder for ashtrays
@@ -57,7 +55,6 @@
 	construction_difficulty = MATERIAL_HARD_DIY
 	ore_smelts_to = null
 	ore_compresses_to = null
-	sale_price = null
 
 /material/copper
 	name = MATERIAL_COPPER
@@ -79,7 +76,7 @@
 	ore_name = "tetrahedrite"
 	ore_scan_icon = "mineral_common"
 	ore_icon_overlay = "shiny"
-	sale_price = 1
+	value = 10
 
 /material/silver
 	name = MATERIAL_SILVER
@@ -102,7 +99,6 @@
 	ore_name = "native silver"
 	ore_scan_icon = "mineral_uncommon"
 	ore_icon_overlay = "shiny"
-	sale_price = 2
 	value = 35
 
 /material/steel
@@ -121,10 +117,9 @@
 				)
 	alloy_materials = list(MATERIAL_HEMATITE = 1875, MATERIAL_GRAPHITE = 1875)
 	alloy_product = TRUE
-	sale_price = 1
 	ore_smelts_to = MATERIAL_STEEL
 	construction_difficulty = MATERIAL_NORMAL_DIY
-	value = 4
+	value = 6
 
 /material/steel/holographic
 	name = "holo" + MATERIAL_STEEL
@@ -134,7 +129,6 @@
 	conductive = 0
 	alloy_materials = null
 	alloy_product = FALSE
-	sale_price = null
 	hidden_from_codex = TRUE
 	value = 0
 
@@ -152,7 +146,7 @@
 	icon_reinf = "reinf_over"
 	icon_colour = "#cccdcc"
 	hitsound = 'sound/weapons/smash.ogg'
-	sale_price = 1
+	value = 3
 
 /material/aluminium/holographic
 	name = "holo" + MATERIAL_ALUMINIUM
@@ -162,7 +156,6 @@
 	conductive = 0
 	alloy_materials = null
 	alloy_product = FALSE
-	sale_price = null
 	hidden_from_codex = TRUE
 
 /material/plasteel
@@ -185,9 +178,8 @@
 	construction_difficulty = MATERIAL_HARD_DIY
 	alloy_materials = list(MATERIAL_STEEL = 2500, MATERIAL_PLATINUM = 1250)
 	alloy_product = TRUE
-	sale_price = 2
 	ore_smelts_to = MATERIAL_PLASTEEL
-	value = 12
+	value = 90
 
 /material/plasteel/titanium
 	name = MATERIAL_TITANIUM
@@ -222,7 +214,7 @@
 	alloy_materials = list(MATERIAL_PLASTEEL = 7500, MATERIAL_OSMIUM = 3750)
 	construction_difficulty = MATERIAL_VERY_HARD_DIY
 	alloy_product = TRUE
-	sale_price = 3
+	value = 120
 
 /material/osmium
 	name = MATERIAL_OSMIUM
@@ -234,7 +226,6 @@
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
 	construction_difficulty = MATERIAL_VERY_HARD_DIY
-	sale_price = 3
 	ore_smelts_to = MATERIAL_OSMIUM
 	value = 30
 
@@ -264,6 +255,7 @@
 	sheet_plural_name = "ingots"
 	is_fusion_fuel = 1
 	construction_difficulty = MATERIAL_HARD_DIY
+	value = 30
 
 /material/mhydrogen
 	name = MATERIAL_HYDROGEN
@@ -283,7 +275,6 @@
 	ore_name = "raw hydrogen"
 	ore_scan_icon = "mineral_rare"
 	ore_icon_overlay = "gems"
-	sale_price = 5
 	value = 100
 
 /material/platinum
@@ -304,7 +295,6 @@
 	ore_name = "raw platinum"
 	ore_scan_icon = "mineral_rare"
 	ore_icon_overlay = "shiny"
-	sale_price = 5
 	value = 80
 
 /material/iron
@@ -321,7 +311,6 @@
 	chem_products = list(
 				/datum/reagent/iron = 20
 				)
-	sale_price = 1
 	value = 5
 
 // Adminspawn only, do not let anyone get this.
@@ -363,6 +352,7 @@
 	stack_type = /obj/item/stack/material/aliumium
 	construction_difficulty = MATERIAL_VERY_HARD_DIY
 	hidden_from_codex = TRUE
+	value = 100
 
 /material/aliumium/New()
 	icon_base = "metal"
@@ -389,7 +379,7 @@
 	ore_scan_icon = "mineral_common"
 	ore_name = "hematite"
 	ore_icon_overlay = "lump"
-	sale_price = 1
+	value = 3
 
 /material/rutile
 	name = MATERIAL_RUTILE
@@ -402,4 +392,4 @@
 	ore_scan_icon = "mineral_uncommon"
 	ore_name = "rutile"
 	ore_icon_overlay = "lump"
-	sale_price = 2
+	value = 20

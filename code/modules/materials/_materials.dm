@@ -119,7 +119,6 @@
 	var/ore_spread_chance
 	var/ore_scan_icon
 	var/ore_icon_overlay
-	var/sale_price
 	var/value = 1
 
 	// Xenoarch behavior.

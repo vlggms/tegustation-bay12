@@ -63,13 +63,12 @@
 	var/current_log_page = 1
 	var/log_page_max
 
-/datum/computer_file/program/supply/New()
+/datum/computer_file/program/supply/OnStoreFile(obj/item/stock_parts/computer/hard_drive/HD)
 	. = ..()
-	var/atom/atom_holder = holder
-	if(!istype(atom_holder))
+	if(!istype(HD))
 		return
 
-	var/atom/stored_loc = atom_holder.loc
+	var/atom/stored_loc = HD.loc
 	if(istype(stored_loc) && (stored_loc.z in GLOB.using_map.station_levels))
 		faction = GLOB.using_map.trade_faction
 
@@ -235,7 +234,8 @@
 			return
 
 		var/list/valid_factions = list()
-		for(var/datum/trade_faction/TF in SSsupply.factions)
+		for(var/fname in SSsupply.factions)
+			var/datum/trade_faction/TF = SSsupply.factions[fname]
 			if(!TF.access_required)
 				continue
 			if(!(TF.access_required in id.access))
@@ -592,7 +592,9 @@
 				if(get_area(receiving) != get_area(computer) && program_type != "master")
 					to_chat(usr, SPAN_WARNING("ERROR: Receiving beacon is too far from \the [computer]."))
 					return
-				SSsupply.Buy(receiving, account, shopping_list)
+				if(!SSsupply.Buy(receiving, account, shopping_list))
+					to_chat(usr, SPAN_WARNING("ERROR: Purchase failed."))
+					return FALSE
 				ResetShopList()
 				return TRUE
 
@@ -646,6 +648,8 @@
 	dat += trade_screen == OFFER_SCREEN ? "<b><u>Export</u></b>" :"<A href='?src=\ref[src];PRG_trade_screen=[OFFER_SCREEN]'>Export</A>"
 	dat += " | "
 	dat += trade_screen == CART_SCREEN ? "<b><u>Cart</u></b>" :"<A href='?src=\ref[src];PRG_trade_screen=[CART_SCREEN]'>Cart</A>"
+	dat += " | "
+	dat += "<A href='?src=\ref[src];PC_exit=1'>Exit</A>"
 
 	dat += "<hr>"
 
@@ -758,11 +762,9 @@
 				if(is_path_in_list(/mob/living/carbon/human, contents_incl_self))
 					continue
 				var/cost = 0
-				dat += "- [AM.name] ([get_value(AM)] [GLOB.using_map.local_currency_name_short])<br>"
-				cost += get_value(AM)
 				for(var/atom/movable/item in reverselist(contents_incl_self))
-					dat += "- - [item.name] ([get_value(item)] [GLOB.using_map.local_currency_name_short])<br>"
 					cost += get_value(item)
+				dat += "- [AM.name] ([cost] [GLOB.using_map.local_currency_name_short])<br>"
 				total_cost += cost
 			if(total_cost)
 				dat += "<b>Total export cost: [total_cost] [GLOB.using_map.local_currency_name_short]</b>"
@@ -789,7 +791,7 @@
 				dat += "<br>"
 			dat += "<br>"
 
-	var/datum/browser/popup = new(user, "supply_prg", "Trade Network")
+	var/datum/browser/popup = new(user, "supply_prg", "Trade Network", 600, 680)
 	popup.set_content(dat)
 	popup.open()
 	onclose(user, "supply_prg")

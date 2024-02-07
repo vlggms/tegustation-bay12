@@ -20,7 +20,7 @@
 		)
 	sheet_singular_name = "brick"
 	sheet_plural_name = "bricks"
-	sale_price = 2
+	value = 80 // Slightly less than uranium
 
 /material/graphite
 	name = MATERIAL_GRAPHITE
@@ -37,7 +37,7 @@
 		/datum/reagent/carbon = 15,
 		/datum/reagent/acetone = 5
 		)
-	sale_price = 1
+	value = 3
 
 /material/quartz
 	name = MATERIAL_QUARTZ
@@ -58,7 +58,7 @@
 	icon_base = "stone"
 	table_icon_base = "stone"
 	icon_reinf = "reinf_stone"
-	sale_price = 2
+	value = 2
 
 /material/pyrite
 	name = MATERIAL_PYRITE
@@ -79,7 +79,7 @@
 	table_icon_base = "stone"
 	icon_reinf = "reinf_stone"
 	ore_compresses_to = MATERIAL_PYRITE
-	sale_price = 2
+	value = 2
 
 /material/spodumene
 	name = MATERIAL_SPODUMENE
@@ -99,7 +99,7 @@
 	icon_base = "stone"
 	table_icon_base = "stone"
 	icon_reinf = "reinf_stone"
-	sale_price = 2
+	value = 2
 
 /material/cinnabar
 	name = MATERIAL_CINNABAR
@@ -119,7 +119,7 @@
 	icon_base = "stone"
 	table_icon_base = "stone"
 	icon_reinf = "reinf_stone"
-	sale_price = 2
+	value = 2
 
 /material/phosphorite
 	name = MATERIAL_PHOSPHORITE
@@ -139,7 +139,7 @@
 	icon_base = "stone"
 	table_icon_base = "stone"
 	icon_reinf = "reinf_stone"
-	sale_price = 2
+	value = 2
 
 /material/rocksalt
 	name = MATERIAL_ROCK_SALT
@@ -159,7 +159,7 @@
 	icon_base = "stone"
 	table_icon_base = "stone"
 	icon_reinf = "reinf_stone"
-	sale_price = 2
+	value = 2
 
 /material/potash
 	name = MATERIAL_POTASH
@@ -179,7 +179,7 @@
 	icon_base = "stone"
 	table_icon_base = "stone"
 	icon_reinf = "reinf_stone"
-	sale_price = 2
+	value = 2
 
 /material/bauxite
 	name = MATERIAL_BAUXITE
@@ -200,7 +200,7 @@
 	icon_reinf = "reinf_stone"
 	ore_smelts_to = MATERIAL_ALUMINIUM
 	ore_compresses_to = MATERIAL_BAUXITE
-	sale_price = 1
+	value = 2
 
 /material/sand
 	name = MATERIAL_SAND
@@ -213,6 +213,7 @@
 	chem_products = list(
 		/datum/reagent/silicon = 20
 		)
+	value = 1
 
 /material/phoron
 	name = MATERIAL_PHORON
@@ -245,8 +246,7 @@
 		)
 	xarch_source_mineral = MATERIAL_PHORON
 	ore_icon_overlay = "gems"
-	sale_price = 5
-	value = 200
+	value = 150
 
 /material/phoron/supermatter
 	name = MATERIAL_SUPERMATTER
@@ -257,7 +257,7 @@
 	stack_type = null
 	luminescence = 3
 	ore_compresses_to = null
-	sale_price = null
+	value = 1000
 
 //Controls phoron and phoron based objects reaction to being in a turf over 200c -- Phoron's flashpoint.
 /material/phoron/combustion_effect(var/turf/T, var/temperature, var/effect_multiplier)

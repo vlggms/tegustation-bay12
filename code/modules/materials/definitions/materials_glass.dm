@@ -9,7 +9,7 @@
 	integrity = 50
 	shard_type = SHARD_SHARD
 	tableslam_noise = 'sound/effects/Glasshit.ogg'
-	hardness = MATERIAL_RIGID + 10	
+	hardness = MATERIAL_RIGID + 10
 	melting_point = T0C + 100
 	weight = 14
 	brute_armor = 1
@@ -20,7 +20,6 @@
 	hitsound = 'sound/effects/Glasshit.ogg'
 	dooropen_noise = 'sound/machines/windowdoor.ogg'
 	conductive = 0
-	sale_price = 1
 	value = 4
 
 /material/glass/proc/is_reinforced()
@@ -46,5 +45,4 @@
 	construction_difficulty = MATERIAL_HARD_DIY
 	alloy_product = TRUE
 	alloy_materials = list(MATERIAL_SAND = 2500, MATERIAL_PLATINUM = 1250)
-	sale_price = 2
 	value = 40

@@ -104,12 +104,30 @@
 		/datum/computer_file/program/wordprocessor
 	)
 
+/obj/machinery/computer/modular/preset/cardslot/command
+	default_software = list(
+		/datum/computer_file/program/comm,
+		/datum/computer_file/program/camera_monitor,
+		/datum/computer_file/program/email_client,
+		/datum/computer_file/program/records,
+		/datum/computer_file/program/docking,
+		/datum/computer_file/program/wordprocessor
+	)
+
+/obj/machinery/computer/modular/preset/cardslot/supply
+	default_software = list(
+		/datum/computer_file/program/email_client,
+		/datum/computer_file/program/records,
+		/datum/computer_file/program/supply,
+		/datum/computer_file/program/docking,
+		/datum/computer_file/program/wordprocessor
+	)
+
 /obj/machinery/computer/modular/preset/civilian
 	default_software = list(
 		/datum/computer_file/program/camera_monitor,
 		/datum/computer_file/program/records,
 		/datum/computer_file/program/email_client,
-		/datum/computer_file/program/supply,
 		/datum/computer_file/program/wordprocessor
 	)
 
@@ -118,7 +136,6 @@
 		/datum/computer_file/program/reports,
 		/datum/computer_file/program/records,
 		/datum/computer_file/program/email_client,
-		/datum/computer_file/program/supply,
 		/datum/computer_file/program/docking
 	)
 

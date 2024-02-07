@@ -6,6 +6,7 @@
 	ore_desc = "Someone messed up..."
 	ore_icon_overlay = "lump"
 	hidden_from_codex = TRUE
+	value = 0.25
 
 /material/cult
 	name = MATERIAL_CULT
@@ -19,6 +20,7 @@
 	conductive = 0
 	construction_difficulty = MATERIAL_NORMAL_DIY
 	hidden_from_codex = TRUE
+	value = 25
 
 /material/cult/place_dismantled_girder(var/turf/target)
 	new /obj/structure/girder/cult(target)
@@ -26,4 +28,4 @@
 /material/cult/reinf
 	name = MATERIAL_REINFORCED_CULT
 	display_name = "runic inscriptions"
-	
+	value = 50

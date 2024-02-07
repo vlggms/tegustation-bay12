@@ -68,6 +68,7 @@
 	F.holder = src
 	stored_files.Add(F)
 	recalculate_size()
+	F.OnStoreFile(src)
 	return 1
 
 // Use this proc to add file to the drive. Returns 1 on success and 0 on failure. Contains necessary sanity checks.

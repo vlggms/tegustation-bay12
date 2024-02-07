@@ -53,6 +53,7 @@
 	var/heating_sound = 'sound/effects/bubbles.ogg'
 
 	var/temperature_multiplier = 1
+	/// How much cash does one unit of it cost
 	var/value = 1
 
 	var/scent //refer to _scent.dm
