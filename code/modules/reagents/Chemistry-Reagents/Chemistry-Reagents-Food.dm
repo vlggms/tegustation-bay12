@@ -8,7 +8,6 @@
 	var/hydration_factor = 0 // Per unit
 	var/injectable = 0
 	color = "#664330"
-	value = 0.1
 
 /datum/reagent/nutriment/mix_data(var/list/newdata, var/newamount)
 
@@ -325,7 +324,7 @@
 	reagent_state = SOLID
 	color = "#ffffff"
 	overdose = REAGENTS_OVERDOSE
-	value = 0.11
+	value = 3
 
 /datum/reagent/blackpepper
 	name = "Black Pepper"
@@ -333,7 +332,7 @@
 	taste_description = "pepper"
 	reagent_state = SOLID
 	color = "#000000"
-	value = 0.1
+	value = 3
 
 /datum/reagent/enzyme
 	name = "Universal Enzyme"
@@ -343,7 +342,7 @@
 	reagent_state = LIQUID
 	color = "#365e30"
 	overdose = REAGENTS_OVERDOSE
-	value = 0.2
+	value = 4
 
 /datum/reagent/frostoil
 	name = "Chilly Oil"
@@ -352,7 +351,7 @@
 	taste_mult = 1.5
 	reagent_state = LIQUID
 	color = "#07aab2"
-	value = 0.2
+	value = 10
 
 /datum/reagent/frostoil/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -375,7 +374,7 @@
 	var/agony_amount = 2
 	var/discomfort_message = "<span class='danger'>Your insides feel uncomfortably hot!</span>"
 	var/slime_temp_adj = 10
-	value = 0.2
+	value = 6
 
 /datum/reagent/capsaicin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)

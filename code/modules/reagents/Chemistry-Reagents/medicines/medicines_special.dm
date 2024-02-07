@@ -7,7 +7,7 @@
 	taste_description = "rush"
 	color = "#c8a5dc"
 	metabolism = REM * 0.5
-	value = 2
+	value = 5
 
 /datum/reagent/medicine/adrenaline/affect_blood(var/mob/living/carbon/human/M, alien, removed)
 	if (alien == IS_DIONA)
@@ -171,7 +171,7 @@
 	taste_description = "sickness"
 	reagent_state = SOLID
 	color = "#669900"
-	value = 5
+	value = 50
 
 /datum/reagent/medicine/rezadone/affect_blood(mob/living/carbon/M, alien, removed)
 	M.adjustCloneLoss(-20 * removed)

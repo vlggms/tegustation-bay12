@@ -8,6 +8,7 @@
 	color = "#91d895"
 	target_organ = BP_LIVER
 	strength = 5
+	value = 5
 
 /datum/reagent/toxin/venom/affect_blood(mob/living/carbon/M, alien, removed)
 	if (prob(volume*2))
@@ -22,6 +23,7 @@
 	reagent_state = LIQUID
 	metabolism = REM * 0.5
 	color = "#792300"
+	value = 8
 
 /datum/reagent/toxin/amatoxin/affect_blood(mob/living/carbon/M, alien, removed)
 	if (alien == IS_DIONA)
@@ -36,6 +38,7 @@
 	reagent_state = LIQUID
 	metabolism = REM * 4 // Extremely quick to act once the amatoxin has left the body
 	color = "#330e00"
+	value = 8
 
 /datum/reagent/toxin/amaspores/affect_blood(mob/living/carbon/M, alien, removed)
 	if (alien == IS_DIONA)
@@ -74,6 +77,7 @@
 	color = "#003333"
 	target_organ = BP_BRAIN // heads up: this doesn't actually get run due to lack of a ..() call in affect_blood. this should be fixed in its own PR
 	strength = 10
+	value = 15
 
 /datum/reagent/toxin/carpotoxin/affect_blood(mob/living/carbon/M, alien, removed)
 	if (alien == IS_DIONA)
@@ -190,7 +194,7 @@
 	color = "#c8a5dc"
 	metabolism = REM * 0.5
 	overdose = REAGENTS_OVERDOSE
-	value = 2.4
+	value = 5
 
 /datum/reagent/lexorin/affect_blood(mob/living/carbon/M, alien, removed)
 	if (alien == IS_DIONA || alien == IS_VOX) // Lexorin focuses on removing oxygen from the blood, it wouldn't make sense that these two races are affected
@@ -241,7 +245,7 @@
 	taste_mult = 1.3
 	reagent_state = LIQUID
 	color = "#801e28"
-	value = 1.2
+	value = 5
 	should_admin_log = TRUE
 
 /datum/reagent/slime_jelly/affect_blood(mob/living/carbon/M, alien, removed)

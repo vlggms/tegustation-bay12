@@ -21,7 +21,7 @@
 	taste_mult = 1.3
 	glass_name = "tomato juice"
 	glass_desc = "Are you sure this is tomato juice?"
-	value = 2
+	value = 3
 
 	chilling_products = list(/datum/reagent/coagulated_blood)
 	chilling_point = 249
@@ -272,7 +272,7 @@
 
 	glass_name = "welder fuel"
 	glass_desc = "Unless you are an industrial tool, this is probably not safe for consumption."
-	value = 6.8
+	value = 5
 	accelerant_quality = 10
 
 /datum/reagent/fuel/touch_turf(var/turf/T)

@@ -61,7 +61,7 @@
 	taste_description = "sickness"
 	color = "#c8a5dc"
 	overdose = REAGENTS_OVERDOSE * 2
-	value = 3.3
+	value = 2
 	target_painkiller_strength = 35
 
 /datum/reagent/medicine/painkiller/paracetamol/overdose(mob/living/carbon/M, alien)
@@ -76,7 +76,7 @@
 	description = "A simple, yet effective painkiller. Don't mix with alcohol."
 	taste_description = "sourness"
 	color = "#cb68fc"
-	value = 3.1
+	value = 4
 	is_opiate = TRUE
 	target_painkiller_strength = 80
 	/// Tramadol and its derivatives process this many units before reaching maximum strength.
@@ -124,6 +124,7 @@
 	metabolism = REM * 0.1
 	target_painkiller_strength = 200
 	effective_dose = 2
+	value = 10
 
 
 
@@ -135,6 +136,7 @@
 	metabolism = REM * 0.1
 	overdose = REAGENTS_OVERDOSE * 0.5
 	target_painkiller_strength = 80
+	value = 6
 
 /datum/reagent/medicine/painkiller/deletrathol/handle_effects(mob/living/carbon/M, alien, removed)
 	M.add_chemical_effect(CE_SLOWDOWN, 1)

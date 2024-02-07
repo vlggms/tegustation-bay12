@@ -113,13 +113,15 @@
 /datum/reagent/adminordrazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.rejuvenate()
 
+// Refer to materials file for values;
+// Generally speaking, one sheet of material produces 20u, so keep that in mind
 /datum/reagent/gold
 	name = "Gold"
 	description = "Gold is a dense, soft, shiny metal and the most malleable and ductile metal known."
 	taste_description = "expensive metal"
 	reagent_state = SOLID
 	color = "#f7c430"
-	value = 7
+	value = 2
 
 /datum/reagent/silver
 	name = "Silver"
@@ -127,7 +129,7 @@
 	taste_description = "expensive yet reasonable metal"
 	reagent_state = SOLID
 	color = "#d0d0d0"
-	value = 4
+	value = 1.75
 
 /datum/reagent/uranium
 	name = "Uranium"
@@ -135,7 +137,7 @@
 	taste_description = "the inside of a reactor"
 	reagent_state = SOLID
 	color = "#b8b8c0"
-	value = 9
+	value = 5
 
 /datum/reagent/uranium/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
 	affect_ingest(M, alien, removed)
@@ -159,6 +161,8 @@
 	glass_name = "holy water"
 	glass_desc = "An ashen-obsidian-water mix, this solution will alter certain sections of the brain's rationality."
 
+	value = 0.5
+
 /datum/reagent/water/holywater/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
 	if(ishuman(M)) // Any location
@@ -180,7 +184,7 @@
 	taste_description = "iron"
 	reagent_state = LIQUID
 	color = "#604030"
-	value = 0.9
+	value = 3
 
 /datum/reagent/surfactant // Foam precursor
 	name = "Azosurfactant"
@@ -188,7 +192,7 @@
 	taste_description = "metal"
 	reagent_state = LIQUID
 	color = "#9e6b38"
-	value = 0.05
+	value = 1.5
 
 /datum/reagent/foaming_agent // Metal foaming agent. This is lithium hydride. Add other recipes (e.g. LiH + H2O -> LiOH + H2) eventually.
 	name = "Foaming agent"
@@ -196,6 +200,7 @@
 	taste_description = "metal"
 	reagent_state = SOLID
 	color = "#664b63"
+	value = 1.5
 
 /datum/reagent/thermite
 	name = "Thermite"
@@ -230,6 +235,7 @@
 	color = "#673910"
 	touch_met = 50
 	accelerant_quality = 20
+	value = 8
 
 /datum/reagent/napalm/touch_turf(var/turf/T)
 	new /obj/effect/decal/cleanable/liquid_fuel(T, volume)
@@ -250,7 +256,7 @@
 	reagent_state = LIQUID
 	color = "#a5f0ee"
 	touch_met = 50
-	value = 0.7
+	value = 1.5
 
 /datum/reagent/space_cleaner/touch_obj(var/obj/O)
 	O.clean_blood()
@@ -303,7 +309,7 @@
 	reagent_state = LIQUID
 	color = "#c8a5dc"
 	touch_met = 5
-	value = 2.2
+	value = 2.5
 
 /datum/reagent/medicine/sterilizine/affect_touch(mob/living/carbon/M, alien, removed)
 	if (M.germ_level < INFECTION_LEVEL_TWO) // rest and antibiotics is required to cure serious infections
@@ -329,7 +335,7 @@
 	taste_description = "motor oil"
 	reagent_state = LIQUID
 	color = "#009ca8"
-	value = 0.6
+	value = 1.5
 	should_admin_log = TRUE
 	var/overlay_icon = "lubed_floor"
 	var/slip_strength = 30
@@ -364,7 +370,7 @@
 	taste_description = "oil"
 	reagent_state = LIQUID
 	color = "#808080"
-	value = 9
+	value = 14
 
 /datum/reagent/nitroglycerin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -378,7 +384,7 @@
 	taste_mult = 1.1
 	reagent_state = LIQUID
 	color = "#c8a5dc"
-	value = 0.8
+	value = 2
 
 /datum/reagent/coolant/touch_turf(var/turf/simulated/T)
 	if(!istype(T))
@@ -449,7 +455,7 @@
 	taste_description = "nothing"
 	reagent_state = LIQUID
 	color = COLOR_GRAY80
-	metabolism = 0.05 // So that low dosages have a chance to build up in the body.
+	metabolism = 0.5 // So that low dosages have a chance to build up in the body.
 
 /datum/reagent/helium/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -475,7 +481,7 @@
 	taste_description = "stale air"
 	reagent_state = LIQUID
 	color = COLOR_GRAY80
-	metabolism = 0.05 // As with helium.
+	metabolism = 0.5 // As with helium.
 
 /datum/reagent/carbon_monoxide/affect_blood(var/mob/living/carbon/human/M, var/alien, var/removed)
 	if(!istype(M) || alien == IS_DIONA)
@@ -522,6 +528,7 @@
 	reagent_state = LIQUID
 	color = "#33270b"
 	overdose = REAGENTS_OVERDOSE
+	value = 4
 
 /datum/reagent/capilliumate/affect_touch(mob/living/carbon/human/M, alien, removed)
 	if (!alien)
@@ -632,6 +639,7 @@
 	reagent_state = LIQUID
 	color = COLOR_GRAY80
 	metabolism = 0.05 // So that low dosages have a chance to build up in the body.
+	value = 0.5
 	var/do_giggle = TRUE
 
 /datum/reagent/nitrous_oxide/xenon
@@ -669,7 +677,7 @@
 	taste_mult = 1.4
 	reagent_state = LIQUID
 	color = COLOR_MAROON
-	value = 4
+	value = 8
 	heating_products = list(/datum/reagent/nutriment/protein, /datum/reagent/laich)
 	heating_point = 120 CELSIUS
 	heating_message = "turns into a fleshy mess."
@@ -728,7 +736,7 @@
 	taste_mult = 5
 	reagent_state = LIQUID
 	color = COLOR_YELLOW
-	value = 50
+	value = 100
 	metabolism = 0.1
 	addiction_types = list(/datum/addiction/gottheit = 600) // Near instant addiction
 
@@ -813,6 +821,7 @@
 	taste_description = "cool air"
 	reagent_state = LIQUID
 	color = COLOR_MANA
+	value = 50
 
 /datum/reagent/concentrated_mana/affect_blood(mob/living/carbon/human/H, alien, removed)
 	if(!ishuman(H))

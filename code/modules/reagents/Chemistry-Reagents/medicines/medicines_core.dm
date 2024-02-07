@@ -28,7 +28,7 @@
 	name = "Bicaridine"
 	description = "Bicaridine is a fast-acting medication to treat physical trauma."
 	color = "#bf0000"
-	value = 4.9
+	value = 5
 
 /datum/reagent/medicine/bicaridine/affect_blood(mob/living/carbon/M, alien, removed)
 	if (alien != IS_DIONA)
@@ -50,7 +50,7 @@
 	name = "Kelotane"
 	description = "Kelotane is a drug used to treat burns."
 	color = "#ffa800"
-	value = 2.9
+	value = 3
 
 /datum/reagent/medicine/kelotane/affect_blood(mob/living/carbon/M, alien, removed)
 	if (alien != IS_DIONA)
@@ -63,7 +63,7 @@
 	description = "Dermaline is the next step in burn medication. Works twice as good as kelotane and enables the body to restore even the direst heat-damaged tissue."
 	color = "#ff8000"
 	overdose = REAGENTS_OVERDOSE * 0.5
-	value = 3.9
+	value = 8
 
 /datum/reagent/medicine/dermaline/affect_blood(mob/living/carbon/M, alien, removed)
 	if (alien != IS_DIONA)
@@ -74,7 +74,7 @@
 	description = "Meraline is an advanced medicine used for treating severe physical trauma. Works twice as good as bicaridine but lacks its painkilling properties."
 	color = "#e6666c"
 	overdose = REAGENTS_OVERDOSE * 0.5
-	value = 3.9
+	value = 8
 
 /datum/reagent/medicine/meraline/affect_blood(mob/living/carbon/M, alien, removed)
 	if (alien != IS_DIONA)
@@ -86,7 +86,7 @@
 	taste_description = "a roll of gauze"
 	color = "#00a000"
 	overdose = 0
-	value = 2.1
+	value = 3
 
 	/// Whether or not this reagent removes drowsiness and hallucinations, and causes an antitox effect.
 	var/remove_generic = TRUE
@@ -121,7 +121,7 @@
 	name = "Dexalin"
 	description = "Dexalin is used in the treatment of oxygen deprivation."
 	color = "#0080ff"
-	value = 2.4
+	value = 3
 
 /datum/reagent/medicine/dexalin/affect_blood(mob/living/carbon/M, alien, removed)
 	if (alien == IS_VOX)
@@ -136,7 +136,7 @@
 	name = "Dexalin Plus"
 	description = "Dexalin Plus is used in the treatment of oxygen deprivation. It is highly effective."
 	color = "#0040ff"
-	value = 3.7
+	value = 5
 	overdose = REAGENTS_OVERDOSE * 0.5
 
 /datum/reagent/medicine/dexalin_plus/affect_blood(mob/living/carbon/M, alien, removed)
@@ -154,7 +154,7 @@
 	taste_description = "grossness"
 	color = "#8040ff"
 	overdose = 0 // Tricordrazine doesn't OD
-	value = 6
+	value = 4
 
 /datum/reagent/medicine/tricordrazine/affect_blood(mob/living/carbon/M, alien, removed)
 	if (alien != IS_DIONA)
@@ -181,7 +181,7 @@
 	description = "Hyronalin is a medicinal drug used to counter the effect of radiation poisoning."
 	color = "#408000"
 	metabolism = REM * 0.25
-	value = 2.3
+	value = 4
 
 /datum/reagent/medicine/hyronalin/affect_blood(mob/living/carbon/M, alien, removed)
 	M.radiation = max(M.radiation - 30 * removed, 0)
@@ -193,7 +193,7 @@
 	description = "Arithrazine is an unstable medication used for the most extreme cases of radiation poisoning."
 	color = "#008000"
 	metabolism = REM * 0.25
-	value = 2.7
+	value = 3
 
 /datum/reagent/medicine/arithrazine/affect_blood(mob/living/carbon/M, alien, removed)
 	M.radiation = max(M.radiation - 70 * removed, 0)
@@ -233,7 +233,7 @@
 	description = "An advanced chemical used to near instantly treat organ failures. Has much more intense side effects."
 	color = "#561ec3"
 	overdose = REAGENTS_OVERDOSE / 3
-	value = 18
+	value = 25
 
 /datum/reagent/medicine/peridaxon_plus/affect_blood(mob/living/carbon/M, alien, removed)
 	if(!ishuman(M))
@@ -261,7 +261,7 @@
 	description = "The holy grail of chemistry. This shouldn't even be possible..."
 	color = "#d821fc"
 	overdose = REAGENTS_OVERDOSE / 5
-	value = 50
+	value = 80
 
 /datum/reagent/medicine/peridaxon_omega/affect_blood(mob/living/carbon/M, alien, removed)
 	if(!ishuman(M))
@@ -289,7 +289,7 @@
 	description = "Alkysine is a drug used to lessen the damage to neurological tissue after a injury. Can aid in healing brain tissue."
 	color = "#ffff66"
 	metabolism = REM * 0.25
-	value = 5.9
+	value = 6
 
 /datum/reagent/medicine/alkysine/affect_blood(mob/living/carbon/M, alien, removed)
 	if (alien == IS_DIONA)
@@ -315,6 +315,7 @@
 	color = "#c10158"
 	overdose = 5
 	metabolism = 1
+	value = 5
 
 /datum/reagent/medicine/nanoblood/affect_blood(var/mob/living/carbon/human/M, alien, removed)
 	if (!M.should_have_organ(BP_HEART)) // We want the var for safety but we can do without the actual blood.
