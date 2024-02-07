@@ -113,7 +113,7 @@
 	overmap_object.icon_state = pick(icon_states)
 
 	if(start_hidden)
-		overmap_object.color = "#cccccc"
+		overmap_object.color = "#444444"
 		GLOB.entered_event.register(overmap_location, src, .proc/Discovered)
 
 /datum/trading_station/proc/Discovered(_, obj/effect/overmap/visitable/ship/ship)
@@ -166,7 +166,7 @@
 			var/list/category = hidden_inventory[category_name]
 			if(istext(category_name) && islist(category))
 				if(!(category_name in inventory))
-					inventory.Add(category_name)
+					inventory[category_name] = list()
 				inventory[category_name] |= category
 				for(var/good_path in category)
 					var/cost = SSsupply.GetImportCost(good_path, src)

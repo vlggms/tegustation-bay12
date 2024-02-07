@@ -41,6 +41,20 @@ SUBSYSTEM_DEF(supply)
 		var/datum/trade_faction/TF = new faction_type
 		factions[TF.name] = TF
 
+	// Factions that aren't set in relationship list of the datum are set to neutral.
+	for(var/tf in factions)
+		var/datum/trade_faction/TF = factions[tf]
+		for(var/tf2 in factions)
+			var/datum/trade_faction/TF2 = factions[tf]
+			if(TF == TF2)
+				// Technically not, but this will be how we declare same faction relations for now
+				TF.relationship[TF2.name] = FACTION_STATE_PROTECTORATE
+				continue
+			if(!(TF2.name in TF.relationship))
+				TF.relationship[TF2] = FACTION_STATE_NEUTRAL
+			// This ensures that relations are always mirrored between two datums
+			SetFactionRelations(TF, TF2, TF.relationship[TF2])
+
 	InitTradeStations()
 
 /datum/controller/subsystem/supply/Destroy()

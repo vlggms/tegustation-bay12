@@ -15,7 +15,7 @@
 #define TRADE_CAT_VOIDSUIT "Void Suits"
 #define TRADE_CAT_TOOLS "Tools"
 #define TRADE_CAT_RESEARCH "Research"
-#define TRADE_CAT_COMPONENTS "Stock Parts & Components"
+#define TRADE_CAT_COMPONENTS "Stock Parts and Components"
 #define TRADE_CAT_MATERIALS "Materials"
 #define TRADE_CAT_RIG "RIG"
 #define TRADE_CAT_RIG_MODULES "RIG Modules"

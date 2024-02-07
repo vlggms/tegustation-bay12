@@ -791,7 +791,7 @@
 				dat += "<br>"
 			dat += "<br>"
 
-	var/datum/browser/popup = new(user, "supply_prg", "Trade Network", 540, 720)
+	var/datum/browser/popup = new(user, "supply_prg", "Trade Network", 600, 680)
 	popup.set_content(dat)
 	popup.open()
 	onclose(user, "supply_prg")

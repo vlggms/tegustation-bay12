@@ -13,7 +13,7 @@
 	markup = 1.2
 	inventory = list(
 		TRADE_CAT_WEAPONS = list(
-			/obj/item/melee/baton = GOODS_DEFAULT,
+			/obj/item/melee/baton/loaded = GOODS_DEFAULT,
 			/obj/item/shield/riot = GOODS_DEFAULT,
 			/obj/item/gun/energy/taser = GOODS_DEFAULT,
 			/obj/item/gun/energy/stunrevolver = GOODS_DEFAULT,
