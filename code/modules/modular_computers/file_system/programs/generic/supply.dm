@@ -646,6 +646,8 @@
 	dat += trade_screen == OFFER_SCREEN ? "<b><u>Export</u></b>" :"<A href='?src=\ref[src];PRG_trade_screen=[OFFER_SCREEN]'>Export</A>"
 	dat += " | "
 	dat += trade_screen == CART_SCREEN ? "<b><u>Cart</u></b>" :"<A href='?src=\ref[src];PRG_trade_screen=[CART_SCREEN]'>Cart</A>"
+	dat += " | "
+	dat += "<A href='?src=\ref[src];PC_exit=1'>Exit</A>"
 
 	dat += "<hr>"
 
@@ -758,11 +760,9 @@
 				if(is_path_in_list(/mob/living/carbon/human, contents_incl_self))
 					continue
 				var/cost = 0
-				dat += "- [AM.name] ([get_value(AM)] [GLOB.using_map.local_currency_name_short])<br>"
-				cost += get_value(AM)
 				for(var/atom/movable/item in reverselist(contents_incl_self))
-					dat += "- - [item.name] ([get_value(item)] [GLOB.using_map.local_currency_name_short])<br>"
 					cost += get_value(item)
+				dat += "- [AM.name] ([cost] [GLOB.using_map.local_currency_name_short])<br>"
 				total_cost += cost
 			if(total_cost)
 				dat += "<b>Total export cost: [total_cost] [GLOB.using_map.local_currency_name_short]</b>"

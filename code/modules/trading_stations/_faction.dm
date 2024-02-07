@@ -46,6 +46,7 @@
 		FACTION_NANOTRASEN = FACTION_STATE_ANIMOSITY,
 		FACTION_CYBERSUN = FACTION_STATE_ANIMOSITY,
 		)
+	access_required = access_supplylink_terragov
 
 /datum/trade_faction/solgov
 	name = FACTION_SOL_CENTRAL
@@ -56,6 +57,7 @@
 		FACTION_ISC = FACTION_STATE_RIVAL,
 		FACTION_NANOTRASEN = FACTION_STATE_WELCOMING,
 		)
+	access_required = access_supplylink_solgov
 
 /datum/trade_faction/isc
 	name = FACTION_ISC
@@ -66,6 +68,7 @@
 		FACTION_NANOTRASEN = FACTION_STATE_ALLY,
 		FACTION_CYBERSUN = FACTION_STATE_ALLY,
 		)
+	access_required = access_supplylink_isc
 
 // Corpos
 
@@ -78,6 +81,7 @@
 		FACTION_ISC = FACTION_STATE_ALLY,
 		FACTION_CYBERSUN = FACTION_STATE_ALLY,
 		)
+	access_required = access_supplylink_nanotrasen
 
 /datum/trade_faction/cybersun
 	name = FACTION_CYBERSUN
@@ -88,6 +92,7 @@
 		FACTION_ISC = FACTION_STATE_ALLY,
 		FACTION_NANOTRASEN = FACTION_STATE_ALLY,
 		)
+	access_required = access_supplylink_cybersun
 
 // Member states of ISC
 

@@ -37,6 +37,8 @@
 			continue
 		if(A == src)
 			continue
+		if(A.loc == src)
+			continue
 		if(A.invisibility)
 			continue
 		objects += A
