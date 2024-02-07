@@ -13,15 +13,15 @@
 /datum/trade_faction/New()
 	. = ..()
 	// Factions that aren't set in relationship list of the datum are set to neutral.
-	for(var/datum/trade_faction/TF in SSsupply.factions)
-		if(TF == src)
+	for(var/TF in SSsupply.factions)
+		if(TF == name)
 			// Technically not, but this will be how we declare same faction relations for now
 			relationship[name] = FACTION_STATE_PROTECTORATE
 			continue
-		if(!(TF.name in relationship))
-			relationship[TF.name] = FACTION_STATE_NEUTRAL
+		if(!(TF in relationship))
+			relationship[TF] = FACTION_STATE_NEUTRAL
 		// This ensures that relations are always mirrored between two datums
-		SSsupply.SetFactionRelations(name, TF.name, relationship[TF.name])
+		SSsupply.SetFactionRelations(name, TF, relationship[TF])
 
 /datum/trade_faction/proc/ModifyRelationsWith(target = null, change = FACTION_STATE_NEUTRAL)
 	if(istype(target, /datum/trade_faction))
