@@ -23,8 +23,11 @@
 #define FACTION_TERRASENATE_OBS "Order of the Black Sun" // Not exactly a faction within senate, but it exists
 // End <
 #define FACTION_ISC            "Independent Space Confederation"
+// Members of ISC >
 #define FACTION_NANOTRASEN     "NanoTrasen"
 #define FACTION_CYBERSUN       "Cybersun Industries"
+#define FACTION_REBORN_CHRISTIAN_CHURCH "Reborn Christian Church"
+// End <
 #define FACTION_FREETRADE      "Free Trade Union"
 #define FACTION_HEPHAESTUS     "Hephaestus Industries"
 #define FACTION_XYNERGY        "Xynergy"

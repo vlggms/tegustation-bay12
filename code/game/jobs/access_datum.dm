@@ -513,3 +513,17 @@
 	desc = "Supply Console - Cybersun Link"
 	region = ACCESS_REGION_SUPPLY
 	access_type = ACCESS_TYPE_NONE
+
+/var/const/access_supplylink_obs = "ACCESS_SUPPLY_LINK_OBS"
+/datum/access/supplylink_obs
+	id = access_supplylink_obs
+	desc = "Supply Console - OBS Link"
+	region = ACCESS_REGION_SUPPLY
+	access_type = ACCESS_TYPE_NONE
+
+/var/const/access_supplylink_reborn_church = "ACCESS_SUPPLY_LINK_REBORN_CHURCH"
+/datum/access/supplylink_reborn_church
+	id = access_supplylink_reborn_church
+	desc = "Supply Console - Reborn Christian Church Link"
+	region = ACCESS_REGION_SUPPLY
+	access_type = ACCESS_TYPE_NONE

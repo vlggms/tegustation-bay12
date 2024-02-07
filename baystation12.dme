@@ -3294,6 +3294,7 @@
 #include "code\modules\trading_stations\trading_station_types\0_always_spawn\medical.dm"
 #include "code\modules\trading_stations\trading_station_types\0_always_spawn\security.dm"
 #include "code\modules\trading_stations\trading_station_types\2_rare\weapons.dm"
+#include "code\modules\trading_stations\trading_station_types\3_very_rare\obs.dm"
 #include "code\modules\trusted-players\procs.dm"
 #include "code\modules\turbolift\_turbolift.dm"
 #include "code\modules\turbolift\turbolift.dm"
