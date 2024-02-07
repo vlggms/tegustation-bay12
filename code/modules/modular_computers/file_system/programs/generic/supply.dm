@@ -63,13 +63,12 @@
 	var/current_log_page = 1
 	var/log_page_max
 
-/datum/computer_file/program/supply/New()
+/datum/computer_file/program/supply/OnStoreFile(obj/item/stock_parts/computer/hard_drive/HD)
 	. = ..()
-	var/atom/atom_holder = holder
-	if(!istype(atom_holder))
+	if(!istype(HD))
 		return
 
-	var/atom/stored_loc = atom_holder.loc
+	var/atom/stored_loc = HD.loc
 	if(istype(stored_loc) && (stored_loc.z in GLOB.using_map.station_levels))
 		faction = GLOB.using_map.trade_faction
 

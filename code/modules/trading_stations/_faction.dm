@@ -14,9 +14,9 @@
 	. = ..()
 	// Factions that aren't set in relationship list of the datum are set to neutral.
 	for(var/datum/trade_faction/TF in SSsupply.factions)
-		if(TF.name == name)
+		if(TF == src)
 			// Technically not, but this will be how we declare same faction relations for now
-			relationship[TF.name] = FACTION_STATE_PROTECTORATE
+			relationship[name] = FACTION_STATE_PROTECTORATE
 			continue
 		if(!(TF.name in relationship))
 			relationship[TF.name] = FACTION_STATE_NEUTRAL
