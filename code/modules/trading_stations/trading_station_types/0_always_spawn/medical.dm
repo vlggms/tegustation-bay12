@@ -22,7 +22,7 @@
 			/obj/item/storage/box/gloves = GOODS_DEFAULT,
 			/obj/item/storage/box/freezer = GOODS_DEFAULT,
 			),
-		TRADE_MEDICAL = list(
+		TRADE_CAT_MEDICAL = list(
 			/obj/item/stack/medical/advanced/bruise_pack = GOODS_DEFAULT,
 			/obj/item/stack/medical/advanced/ointment = GOODS_DEFAULT,
 			/obj/item/reagent_containers/glass/bottle/inaprovaline = GOODS_DEFAULT,
@@ -37,16 +37,16 @@
 			/obj/item/storage/firstaid/o2 = GOODS_DEFAULT,
 			/obj/item/storage/firstaid/adv = GOODS_DEFAULT,
 			),
-		TRADE_CHEMICAL = list(
+		TRADE_CAT_CHEMICAL = list(
 			/obj/item/reagent_containers/glass/bottle/carpotoxin = GOODS_DEFAULT,
 			/obj/item/reagent_containers/glass/bottle/spider_venom = GOODS_DEFAULT,
 			),
 		)
 	hidden_inventory = list(
-		TRADE_EQUIPMENT = list(
+		TRADE_CAT_EQUIPMENT = list(
 			/obj/item/defibrillator/compact = GOODS_DEFAULT,
 			),
-		TRADE_MEDICAL = list(
+		TRADE_CAT_MEDICAL = list(
 			/obj/item/reagent_containers/hypospray/vial = GOODS_DEFAULT,
 			),
 		TRADE_CAT_MEDKIT = list(
