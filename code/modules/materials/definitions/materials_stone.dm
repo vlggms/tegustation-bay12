@@ -21,17 +21,15 @@
 	ore_scan_icon = "mineral_rare"
 	xarch_source_mineral = GAS_NITROGEN
 	ore_icon_overlay = "gems"
-	sale_price = 5
 	sheet_singular_name = "gem"
 	sheet_plural_name = "gems"
-	value = 70
+	value = 250
 
 /material/diamond/crystal
 	name = MATERIAL_CRYSTAL
 	hardness = MATERIAL_VERY_HARD
 	stack_type = null
 	ore_compresses_to = null
-	sale_price = null
 	hidden_from_codex = TRUE
 
 /material/stone
@@ -54,7 +52,6 @@
 	chem_products = list(
 		/datum/reagent/silicon = 20
 		)
-	sale_price = 1
 	value = 4
 
 /material/stone/marble
@@ -68,7 +65,6 @@
 	stack_type = /obj/item/stack/material/marble
 	construction_difficulty = MATERIAL_HARD_DIY
 	chem_products = null
-	sale_price = 4
 	value = 20
 
 /material/stone/concrete

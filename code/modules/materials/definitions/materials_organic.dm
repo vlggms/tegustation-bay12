@@ -16,7 +16,7 @@
 	chem_products = list(
 				/datum/reagent/toxin/plasticide = 20
 				)
-	sale_price = 1
+	value = 3
 	dooropen_noise = 'sound/effects/doorcreaky.ogg'
 
 /material/plastic/holographic
@@ -24,8 +24,8 @@
 	display_name = MATERIAL_PLASTIC
 	stack_type = null
 	shard_type = SHARD_NONE
-	sale_price = null
 	hidden_from_codex = TRUE
+	value = null
 
 /material/cardboard
 	name = MATERIAL_CARDBOARD
