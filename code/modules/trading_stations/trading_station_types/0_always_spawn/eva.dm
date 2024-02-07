@@ -5,13 +5,20 @@
 		)
 	uid = "eva"
 	unlock_favor = 8000
-	faction = FACTION_INDEPENDENT
+	random_factions = list(
+		FACTION_INDEPENDENT,
+		FACTION_ISC,
+		)
 	spawn_always = TRUE
 	markup = 1.2
 	inventory = list(
 		TRADE_CAT_CLOTHING = list(
 			/obj/item/clothing/under/space = GOODS_DEFAULT,
+			),
+		TRADE_CAT_EQUIPMENT = list(
 			/obj/item/clothing/shoes/magboots = GOODS_DEFAULT,
+			),
+		TRADE_CAT_SPACESUIT = list(
 			/obj/item/clothing/suit/space/emergency = GOODS_DEFAULT,
 			/obj/item/clothing/head/helmet/space/emergency = GOODS_DEFAULT,
 			),
@@ -47,7 +54,7 @@
 			),
 		)
 	hidden_inventory = list(
-		TRADE_CAT_CLOTHING = list(
+		TRADE_CAT_SPACESUIT = list(
 			/obj/item/clothing/suit/space/syndicate = GOODS_DEFAULT,
 			/obj/item/clothing/head/helmet/space/syndicate = GOODS_DEFAULT,
 			),
