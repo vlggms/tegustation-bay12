@@ -9714,7 +9714,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/engineering/starboardthruster)
 "heW" = (
-/obj/machinery/computer/modular/preset/civilian{
+/obj/machinery/computer/modular/preset/dock{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -16842,7 +16842,7 @@
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/operatingroom)
 "mrB" = (
-/obj/machinery/computer/modular/preset/dock{
+/obj/machinery/computer/modular/preset/cardslot/supply{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -34034,7 +34034,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/machinery/computer/modular/preset/civilian,
+/obj/machinery/computer/modular/preset/supply_public,
 /turf/simulated/floor/tiled,
 /area/intrepid/misc/hallway/starboard)
 "yiq" = (
