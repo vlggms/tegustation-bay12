@@ -591,7 +591,9 @@
 				if(get_area(receiving) != get_area(computer) && program_type != "master")
 					to_chat(usr, SPAN_WARNING("ERROR: Receiving beacon is too far from \the [computer]."))
 					return
-				SSsupply.Buy(receiving, account, shopping_list)
+				if(!SSsupply.Buy(receiving, account, shopping_list))
+					to_chat(usr, SPAN_WARNING("ERROR: Purchase failed."))
+					return FALSE
 				ResetShopList()
 				return TRUE
 
