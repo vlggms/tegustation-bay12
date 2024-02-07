@@ -234,7 +234,8 @@
 			return
 
 		var/list/valid_factions = list()
-		for(var/datum/trade_faction/TF in SSsupply.factions)
+		for(var/fname in SSsupply.factions)
+			var/datum/trade_faction/TF = SSsupply.factions[fname]
 			if(!TF.access_required)
 				continue
 			if(!(TF.access_required in id.access))
