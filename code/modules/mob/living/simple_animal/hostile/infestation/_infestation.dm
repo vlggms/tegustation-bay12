@@ -67,6 +67,9 @@
 /mob/living/simple_animal/hostile/infestation/movement_delay()
 	. = ..()
 	var/turf/simulated/floor/F = get_turf(src)
+	if(!istype(F))
+		return
+
 	if(istype(F, /turf/simulated/floor/exoplanet/flesh) || istype(F.flooring, /decl/flooring/flesh))
 		. -= flesh_movement_bonus
 
