@@ -59,7 +59,7 @@ SUBSYSTEM_DEF(supply)
 		for(var/tf2 in factions)
 			var/datum/trade_faction/TF2 = factions[tf2]
 			if(!(TF2.name in TF.relationship))
-				SetFactionRelations(TF, TF2, TF.relationship[FACTION_STATE_NEUTRAL])
+				SetFactionRelations(TF, TF2, FACTION_STATE_NEUTRAL)
 
 	InitTradeStations()
 
