@@ -27,7 +27,7 @@
 			/obj/item/stack/medical/advanced/ointment = GOODS_DEFAULT,
 			/obj/item/reagent_containers/glass/bottle/inaprovaline = GOODS_DEFAULT,
 			/obj/item/reagent_containers/glass/bottle/antitoxin = GOODS_DEFAULT,
-			/obj/item/reagent_containers/ivbag/nanoblood = GOODS_DEFAULT,
+			/obj/item/reagent_containers/ivbag/nanoblood = CUSTOM_GOODS_NAME("nanoblood IV bag"),
 			/obj/item/bodybag/rescue = GOODS_DEFAULT,
 			),
 		TRADE_CAT_MEDKIT = list(

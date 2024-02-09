@@ -11,7 +11,7 @@
 	color = "#60a584"
 	metabolism = REM * 0.5
 	overdose = REAGENTS_OVERDOSE
-	value = 2.8
+	value = 3
 	should_admin_log = TRUE
 	addiction_types = list(/datum/addiction/hallucinogens = 4)
 
@@ -38,7 +38,7 @@
 	color = "#efebaa"
 	overdose = REAGENTS_OVERDOSE / 6
 	data = 0
-	value = 2
+	value = 3
 	addiction_types = list(/datum/addiction/nicotine = 10)
 
 /datum/reagent/nicotine/affect_blood(mob/living/carbon/M, alien, removed)
@@ -70,7 +70,7 @@
 	color = "#202040"
 	metabolism = REM * 0.25
 	overdose = REAGENTS_OVERDOSE
-	value = 2.5
+	value = 5
 	addiction_types = list(/datum/addiction/hallucinogens = 4)
 
 /datum/reagent/serotrotium/affect_blood(mob/living/carbon/M, alien, removed)
@@ -93,7 +93,7 @@
 	color = "#b31008"
 	metabolism = REM * 0.25
 	overdose = REAGENTS_OVERDOSE
-	value = 0.6
+	value = 6
 	should_admin_log = TRUE
 	addiction_types = list(/datum/addiction/hallucinogens = 10)
 
@@ -115,7 +115,7 @@
 	color = "#e700e7"
 	overdose = REAGENTS_OVERDOSE
 	metabolism = REM * 0.5
-	value = 0.7
+	value = 7
 
 /datum/reagent/psilocybin/affect_blood(mob/living/carbon/M, alien, removed)
 	if (alien == IS_DIONA)
@@ -166,6 +166,7 @@
 	overdose = 25
 	should_admin_log = TRUE
 	addiction_types = list(/datum/addiction/psionics = 40)
+	value = 50
 
 	// M A X I M U M C H E E S E
 	var/global/list/dose_messages = list(
@@ -236,6 +237,7 @@
 	metabolism = 1
 	overdose = 5
 	addiction_types = list(/datum/addiction/psionics = 100) // You usually only take small amount
+	value = 100
 
 	var/global/list/dose_messages = list(
 		"Your name is called. It is your time.",
@@ -282,12 +284,14 @@
 	reagent_state = LIQUID
 	color = "#d5f29d"
 	addiction_types = list(/datum/addiction/psionics = 4, /datum/addiction/hallucinogens = 2)
+	value = 20 // It is made out of gold and mindbreaker toxin, quite expensive
 
 /datum/reagent/mensvir/affect_blood(mob/living/carbon/M, alien, removed)
+	M.hallucination(5, 25)
+	M.add_chemical_effect(CE_PULSE, 1)
+
 	if(!M.psi) // Sorry, elitist drug
 		return
 
-	M.hallucination(5, 25)
-	M.add_chemical_effect(CE_PULSE, 1)
 	M.add_chemical_effect(CE_THIRDEYE, 1)
 	M.psi.stamina = min(M.psi.max_stamina, M.psi.stamina + 1)

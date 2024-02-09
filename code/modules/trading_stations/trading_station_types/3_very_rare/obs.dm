@@ -17,7 +17,7 @@
 			/obj/item/clothing/glasses/tacgoggles = GOODS_DEFAULT,
 			/obj/item/clothing/glasses/thermal = GOODS_DEFAULT,
 			/obj/item/clothing/glasses/night = GOODS_DEFAULT,
-			/obj/item/contraband/poster/order_black_of_sun = GOODS_DEFAULT,
+			/obj/item/contraband/poster/order_black_of_sun = CUSTOM_GOODS_NAME("OBS poster"),
 			),
 		TRADE_CAT_CLOTHING = list(
 			/obj/item/clothing/gloves/thick/combat = GOODS_DEFAULT,
