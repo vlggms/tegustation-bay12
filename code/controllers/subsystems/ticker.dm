@@ -16,7 +16,7 @@ SUBSYSTEM_DEF(ticker)
 	var/round_progressing = 1       //Whether the lobby clock is ticking down.
 
 	var/list/bad_modes = list()     //Holds modes we tried to start and failed to.
-	var/revotes_allowed = 0         //How many times a game mode revote might be attempted before giving up.
+	var/revotes_allowed = 5         //How many times a game mode revote might be attempted before giving up.
 
 	var/list/round_start_events
 
@@ -33,6 +33,8 @@ SUBSYSTEM_DEF(ticker)
 
 	///Set to TRUE when an admin forcibly ends round.
 	var/forced_end = FALSE
+
+	var/skip_requirement_checks = FALSE
 
 	var/news_report
 
@@ -269,7 +271,11 @@ Helpers
 	SSjobs.divide_occupations(mode_datum) // Gives out jobs to everyone who was not selected to antag.
 
 	var/list/lobby_players = SSticker.lobby_players()
-	if(mode_datum.check_startable(lobby_players))
+	var/result = FALSE
+	if(!skip_requirement_checks)
+		result = mode_datum.check_startable(lobby_players)
+
+	if(result)
 		mode_datum.fail_setup()
 		SSjobs.reset_occupations()
 		bad_modes += mode_datum.config_tag
