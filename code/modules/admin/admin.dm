@@ -1583,3 +1583,15 @@ var/global/floorIsLava = 0
 		qdel(P)
 		faxreply = null
 	return
+
+/datum/admins/proc/ToggleModeRequirementChecks()
+	set category = "Server"
+	set desc = "Toggle the gamemode requirement checks on/off. Toggling off will allow any gamemode to start regardless of readied players."
+	set name = "Toggle Gamemode Requirement Checks"
+
+	if (GAME_STATE > RUNLEVEL_LOBBY)
+		to_chat(usr, SPAN_WARNING("You cannot change the gamemode requirement checks after the game has started!"))
+		return
+
+	SSticker.skip_requirement_checks = !SSticker.skip_requirement_checks
+	log_and_message_admins("toggled the gamemode requirement checks [SSticker.skip_requirement_checks ? "OFF" : "ON"]")
