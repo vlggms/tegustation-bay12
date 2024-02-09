@@ -3,7 +3,7 @@ var/list/explosion_turfs = list()
 var/explosion_in_progress = 0
 
 
-proc/explosion_rec(turf/epicenter, power, shaped)
+/proc/explosion_rec(turf/epicenter, power, shaped)
 	var/loopbreak = 0
 	while(explosion_in_progress)
 		if(loopbreak >= 15) return
@@ -22,6 +22,9 @@ proc/explosion_rec(turf/epicenter, power, shaped)
 	//This steap handles the gathering of turfs which will be ex_act() -ed in the next step. It also ensures each turf gets the maximum possible amount of power dealt to it.
 	for(var/direction in GLOB.cardinal)
 		var/turf/T = get_step(epicenter, direction)
+		if(!istype(T))
+			return
+
 		var/adj_power = power - epicenter.get_explosion_resistance()
 		if(shaped)
 			if (shaped == direction)
