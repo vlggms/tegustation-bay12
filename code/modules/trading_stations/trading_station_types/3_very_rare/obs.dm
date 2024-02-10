@@ -23,8 +23,13 @@
 			/obj/item/clothing/gloves/thick/combat = GOODS_DEFAULT,
 			),
 		TRADE_CAT_WEAPONS = list(
+			/obj/item/gun/projectile/automatic/ak47 = GOODS_DEFAULT,
 			/obj/item/tank/phoron/onetankbomb = GOODS_DEFAULT,
 			/obj/item/grenade/frag = GOODS_DEFAULT,
+			),
+		TRADE_CAT_AMMO = list(
+			/obj/item/ammo_magazine/ak47 = GOODS_DEFAULT,
+			/obj/item/ammo_magazine/ak47/extended = GOODS_DEFAULT,
 			),
 		)
 	hidden_inventory = list(
