@@ -31,6 +31,10 @@
 			toxmob(A)
 		if((istype(A,/obj/machinery/the_singularitygen))||(istype(A,/obj/singularity/)))
 			A:energy += energy
+			// Regardless of energy level - singularity will not lose power after being hit
+			var/obj/singularity/S = A
+			if(istype(S))
+				S.dissipate_track = -10
 		else if(istype(A,/obj/machinery/power/fusion_core))
 			var/obj/machinery/power/fusion_core/collided_core = A
 			if(particle_type && particle_type != "neutron")
@@ -90,8 +94,8 @@
 
 /obj/effect/accelerated_particle/weak
 	movement_range = 8
-	energy = 5
+	energy = 0
 
 /obj/effect/accelerated_particle/strong
 	movement_range = 15
-	energy = 15
+	energy = 20
