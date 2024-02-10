@@ -94,8 +94,8 @@
 
 /obj/effect/accelerated_particle/weak
 	movement_range = 8
-	energy = 5
+	energy = 0
 
 /obj/effect/accelerated_particle/strong
 	movement_range = 15
-	energy = 15
+	energy = 20
