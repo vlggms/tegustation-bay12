@@ -186,3 +186,7 @@
 /obj/effect/landmark/corpse/ascent_alate/armor
 	name = "Ascent Alate - Armor"
 	corpse_outfits = list(/decl/hierarchy/outfit/job/ascent/voidsuit)
+
+/obj/effect/landmark/corpse/scg_explorer
+	name = "Riot Officer"
+	corpse_outfits = list(/decl/hierarchy/outfit/job/scg_explorer)

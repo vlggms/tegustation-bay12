@@ -61,13 +61,7 @@
 	#include "items/memos.dm"
 
 	#include "items/clothing/ec_skillbadges.dm"
-	#include "items/clothing/solgov-accessory.dm"
-	#include "items/clothing/solgov-armor.dm"
-	#include "items/clothing/solgov-feet.dm"
-	#include "items/clothing/solgov-hands.dm"
-	#include "items/clothing/solgov-head.dm"
-	#include "items/clothing/solgov-suit.dm"
-	#include "items/clothing/solgov-under.dm"
+	#include "items/clothing/torch_specific.dm"
 
 	#include "items/weapon/storage/wallets.dm"
 
