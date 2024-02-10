@@ -428,16 +428,29 @@
 	if(world.time < next_contained_check_time)
 		return last_contained_check
 
-	for(var/turf/T in range(6))
-		if(!ContainmentCheck(T))
-			last_contained_check = FALSE
-			// Might as well forget about checking entirely
-			next_contained_check_time = INFINITY
-			return FALSE
+	// Checks if we're contained from all cardinal directions
+	var/check_sum = 0
+	for(var/direction in GLOB.cardinal)
+		var/turf/T = get_turf(src)
+		for(var/i = 1 to 6)
+			T = get_step(T, direction)
+			if(!istype(T))
+				last_contained_check = FALSE
+				next_contained_check_time = world.time + 30 SECONDS
+				return FALSE
 
-	last_contained_check = TRUE
+			if(ContainmentCheck(T))
+				check_sum++
+				break
+
+	if(check_sum >= 4)
+		last_contained_check = TRUE
+		next_contained_check_time = world.time + 10 SECONDS
+		return TRUE
+
+	last_contained_check = FALSE
 	next_contained_check_time = world.time + 30 SECONDS
-	return TRUE
+	return FALSE
 
 /obj/singularity/proc/event()
 	var/numb = pick(1, 2, 3, 4, 5, 6)
