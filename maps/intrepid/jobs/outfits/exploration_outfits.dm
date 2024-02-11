@@ -3,9 +3,9 @@
 
 /decl/hierarchy/outfit/job/intrepid/crew/exploration/New()
 	..()
-	backpack_overrides[/decl/backpack_outfit/backpack]      = /obj/item/storage/backpack/explorer
-	backpack_overrides[/decl/backpack_outfit/satchel]       = /obj/item/storage/backpack/satchel/explorer
-	backpack_overrides[/decl/backpack_outfit/messenger_bag] = /obj/item/storage/backpack/messenger/explorer
+	backpack_overrides[/decl/backpack_outfit/backpack]      = /obj/item/storage/backpack/marine
+	backpack_overrides[/decl/backpack_outfit/satchel]       = /obj/item/storage/backpack/satchel/marine
+	backpack_overrides[/decl/backpack_outfit/messenger_bag] = /obj/item/storage/backpack/messenger/marine
 
 /decl/hierarchy/outfit/job/intrepid/crew/exploration/squad_leader
 	name = OUTFIT_JOB_NAME("Squad Leader")

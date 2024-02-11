@@ -37,20 +37,20 @@ Unique items
 	colour = colors[selectedColor]
 	to_chat(user, "<span class='notice'>Changed color to '[colour].'</span>")
 
-/obj/item/storage/backpack/explorer
+/obj/item/storage/backpack/marine
 	name = "explorer backpack"
 	desc = "A rugged backpack."
-	icon_state = "exppack"
+	icon_state = "marpack"
 
-/obj/item/storage/backpack/satchel/explorer
+/obj/item/storage/backpack/satchel/marine
 	name = "explorer satchel"
 	desc = "A rugged satchel for field work."
-	icon_state = "satchel-exp"
+	icon_state = "satchel-mar"
 
-/obj/item/storage/backpack/messenger/explorer
+/obj/item/storage/backpack/messenger/marine
 	name = "explorer messenger bag"
 	desc = "A rugged backpack worn over one shoulder."
-	icon_state = "courierbagexp"
+	icon_state = "courierbagmar"
 
 // Explo banner capsule access edit
 /obj/item/explo_banner/terragov

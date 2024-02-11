@@ -114,8 +114,8 @@
 		/obj/item/storage/firstaid/light,
 		/obj/item/material/knife/folding/swiss/explorer,
 		/obj/item/device/camera,
-		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/explorer, /obj/item/storage/backpack/satchel/explorer)),
-		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag, /obj/item/storage/backpack/messenger/explorer)),
+		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/marine, /obj/item/storage/backpack/satchel/marine)),
+		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag, /obj/item/storage/backpack/messenger/marine)),
 		new /datum/atom_creator/weighted(list(/obj/item/device/flashlight, /obj/item/device/flashlight/flare, /obj/item/device/flashlight/flare/glowstick/random))
 	)
 
@@ -157,8 +157,8 @@
 		/obj/item/storage/firstaid/light,
 		/obj/item/material/knife/folding/swiss/explorer,
 		/obj/item/device/camera,
-		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/explorer, /obj/item/storage/backpack/satchel/explorer)),
-		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag, /obj/item/storage/backpack/messenger/explorer)),
+		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/marine, /obj/item/storage/backpack/satchel/marine)),
+		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag, /obj/item/storage/backpack/messenger/marine)),
 		new /datum/atom_creator/weighted(list(/obj/item/device/flashlight, /obj/item/device/flashlight/flare, /obj/item/device/flashlight/flare/glowstick/random))
 	)
 
@@ -201,8 +201,8 @@
 		/obj/item/storage/firstaid/light,
 		/obj/item/material/knife/folding/swiss/explorer,
 		/obj/item/device/camera,
-		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/explorer, /obj/item/storage/backpack/satchel/explorer)),
-		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag, /obj/item/storage/backpack/messenger/explorer)),
+		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/marine, /obj/item/storage/backpack/satchel/marine)),
+		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag, /obj/item/storage/backpack/messenger/marine)),
 		new /datum/atom_creator/weighted(list(/obj/item/device/flashlight, /obj/item/device/flashlight/flare, /obj/item/device/flashlight/flare/glowstick/random))
 	)
 
