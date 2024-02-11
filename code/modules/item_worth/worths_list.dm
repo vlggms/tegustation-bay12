@@ -69,7 +69,7 @@ var/list/worths = list(
 					/obj/item/gun/projectile/heavysniper = 26000,
 					/obj/item/gun/projectile/rocket_launcher = 10000,
 					/obj/item/gun/projectile = 1500,
-//MAGNETIC
+//MAGNETIC,
 					/obj/item/gun/magnetic/railgun/automatic/dominion = 480000,
 					/obj/item/gun/magnetic/railgun/automatic = 90000,
 					/obj/item/gun/magnetic/railgun/tcc = 16000,
