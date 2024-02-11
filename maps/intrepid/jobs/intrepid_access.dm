@@ -1,3 +1,7 @@
+// Access overrides
+/datum/access/supplylink_terragov
+	access_type = ACCESS_TYPE_STATION
+
 /************
 * TGLV Intrepid *
 ************/

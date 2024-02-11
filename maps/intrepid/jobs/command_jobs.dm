@@ -74,7 +74,8 @@
 		access_emergency_armory, access_gun, access_seneng, access_senmed,
 		access_marine, access_squad_leader, access_commissary, access_stardust, access_stardust_helm,
 		access_rd, access_terra_fax, access_intrepid_helm,
-		access_radio_comm, access_radio_eng, access_radio_med, access_radio_sec, access_radio_sup, access_radio_serv, access_radio_exp, access_radio_sci
+		access_radio_comm, access_radio_eng, access_radio_med, access_radio_sec, access_radio_sup, access_radio_serv, access_radio_exp, access_radio_sci,
+		access_supplylink_terragov
 	)
 
 	minimal_access = list(

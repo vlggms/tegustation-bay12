@@ -30,7 +30,8 @@
 		access_maint_tunnels, access_bridge, access_emergency_storage, access_tech_storage,  access_cargo,
 		access_cargo_bot, access_qm, access_mailsorting, access_terragov_crew, access_hangar,
 		access_mining, access_mining_office, access_mining_station, access_commissary, access_teleporter, access_eva, access_terra_fax,
-		access_radio_sup, access_radio_exp, access_radio_comm
+		access_radio_sup, access_radio_exp, access_radio_comm,
+		access_supplylink_terragov
 	)
 
 	minimal_access = list()
