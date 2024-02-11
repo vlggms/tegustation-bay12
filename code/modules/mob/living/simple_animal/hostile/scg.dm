@@ -25,7 +25,7 @@
 	say_list_type = /datum/say_list/scg_explorer
 	ai_holder_type = /datum/ai_holder/simple_animal/humanoid/hostile/threaten
 
-	//loot_list = list(/obj/effect/landmark/corpse/scg_explorer = 1)
+	loot_list = list(/obj/effect/landmark/corpse/scg_explorer = 1)
 
 /datum/say_list/scg_explorer
 	speak = list(
@@ -68,13 +68,14 @@
 	projectile_dispersion = 0.5
 
 	needs_reload = TRUE
-	reload_max = 10
+	reload_max = 8
 	reload_time = 2 SECONDS
 	reload_sound = 'sound/weapons/guns/selector.ogg'
 
 	loot_list = list(
 		/obj/item/gun/energy/laser = 1,
 		/obj/item/material/hatchet/machete = 1,
+		/obj/effect/landmark/corpse/scg_explorer,
 		)
 
 	/// Icon state when discarding the rifle
