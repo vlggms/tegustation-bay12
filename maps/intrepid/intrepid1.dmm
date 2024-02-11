@@ -6669,8 +6669,8 @@
 	name = "revolver cabinet";
 	req_access = list("ACCESS_INTREPID_REPRESENTATIVE")
 	},
-/obj/item/ammo_magazine/speedloader/magnum,
-/obj/item/ammo_magazine/speedloader/magnum,
+/obj/item/ammo_magazine/speedloader,
+/obj/item/ammo_magazine/speedloader,
 /obj/item/storage/belt/holster/security,
 /obj/item/gun/projectile/revolver/military,
 /turf/simulated/floor/tiled/techfloor,
