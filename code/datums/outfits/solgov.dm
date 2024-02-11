@@ -1,4 +1,4 @@
-/decl/hierarchy/outfit/job/scg_explorer
+/decl/hierarchy/outfit/scg_explorer
 	name = "SolGov Explorer"
 	uniform = /obj/item/clothing/under/solgov/utility/expeditionary/exploration
 	suit = /obj/item/clothing/suit/space/void/exploration
@@ -11,3 +11,6 @@
 	id_slot = slot_wear_id
 	id_types = list(/obj/item/card/id)
 	id_pda_assignment = "SolGov Explorer"
+
+	pda_slot = slot_belt
+	pda_type = /obj/item/modular_computer/pda

@@ -189,4 +189,4 @@
 
 /obj/effect/landmark/corpse/scg_explorer
 	name = "SCG Explorer"
-	corpse_outfits = list(/decl/hierarchy/outfit/job/scg_explorer)
+	corpse_outfits = list(/decl/hierarchy/outfit/scg_explorer)
