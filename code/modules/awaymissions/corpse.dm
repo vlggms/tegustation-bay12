@@ -188,5 +188,5 @@
 	corpse_outfits = list(/decl/hierarchy/outfit/job/ascent/voidsuit)
 
 /obj/effect/landmark/corpse/scg_explorer
-	name = "Riot Officer"
+	name = "SCG Explorer"
 	corpse_outfits = list(/decl/hierarchy/outfit/job/scg_explorer)
