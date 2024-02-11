@@ -186,8 +186,13 @@
 
 /obj/item/ammo_casing/shell/apds
 	name = "\improper APDS shell casing"
-	desc = "An Armour Piercing Discarding Sabot shell."
+	desc = "An Armour Piercing Discarding Sabot antimaterial shell."
 	projectile_type = /obj/item/projectile/bullet/rifle/shell/apds
+
+/obj/item/ammo_casing/shell/explosive
+	name = "explosive shell casing"
+	desc = "An explosive antimaterial shell."
+	projectile_type = /obj/item/projectile/bullet/rifle/shell/explosive
 
 /obj/item/ammo_casing/rifle/military
 	desc = "A military rifle bullet casing."

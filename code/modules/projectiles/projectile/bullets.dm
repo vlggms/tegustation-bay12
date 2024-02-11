@@ -188,7 +188,7 @@
 
 //4mm. Tiny, very low damage, does not embed, but has very high penetration. Only to be used for the experimental SMG.
 /obj/item/projectile/bullet/flechette
-	fire_sound = 'sound/weapons/gunshot/smg.ogg'
+	fire_sound = 'sound/weapons/gunshot/mp38_1.ogg'
 	damage = 20
 	penetrating = 1
 	armor_penetration = 70
@@ -197,7 +197,7 @@
 
 // Higher damage, less AP
 /obj/item/projectile/bullet/flechette/hp
-	fire_sound = 'sound/weapons/gunshot/smg_alt.ogg'
+	fire_sound = 'sound/weapons/gunshot/mp38_2.ogg'
 	damage = 36
 	armor_penetration = 20
 
@@ -302,20 +302,23 @@
 	damage = 35
 
 /obj/item/projectile/bullet/rifle/shell
-	fire_sound = 'sound/weapons/gunshot/sniper.ogg'
-	damage = 80
+	fire_sound = 'sound/weapons/gunshot/sniper_antimatter.ogg'
+	damage = 120
 	stun = 3
 	weaken = 3
 	penetrating = 3
-	armor_penetration = 70
+	armor_penetration = 50
 	penetration_modifier = 1.2
 	distance_falloff = 0.5
 
 /obj/item/projectile/bullet/rifle/shell/apds
-	damage = 70
-	penetrating = 5
-	armor_penetration = 80
+	fire_sound = 'sound/weapons/gunshot/sniper_heavy.ogg'
+	damage = 80
+	penetrating = 8
+	armor_penetration = 100
 	penetration_modifier = 1.5
+
+/obj/item/projectile/bullet/rifle/shell/explosive
 
 /* Miscellaneous */
 /obj/item/projectile/bullet/gyro

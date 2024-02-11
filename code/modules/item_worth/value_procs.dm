@@ -66,3 +66,11 @@
 	if(!key) // Mindless humans cost less
 		. *= 0.2
 	. = round(.)
+
+/obj/structure/ship_munition/disperser_charge/explosive/Value(base)
+	. = ..()
+	. += devastation_modifier * 10000
+
+/obj/structure/ship_munition/disperser_charge/orbital_bombardment/Value(base)
+	. = ..()
+	. += bomb_number * (devastation_modifier * 2000)

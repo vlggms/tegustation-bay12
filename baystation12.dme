@@ -3294,6 +3294,7 @@
 #include "code\modules\trading_stations\trading_station_types\0_always_spawn\materials.dm"
 #include "code\modules\trading_stations\trading_station_types\0_always_spawn\medical.dm"
 #include "code\modules\trading_stations\trading_station_types\0_always_spawn\security.dm"
+#include "code\modules\trading_stations\trading_station_types\0_always_spawn\terra.dm"
 #include "code\modules\trading_stations\trading_station_types\2_rare\weapons.dm"
 #include "code\modules\trading_stations\trading_station_types\3_very_rare\obs.dm"
 #include "code\modules\trusted-players\procs.dm"
