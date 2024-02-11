@@ -431,6 +431,9 @@
 /turf/simulated/floor/bluespace/Entered(mob/living/L)
 	. = ..()
 
+	if(!istype(flooring, initial_flooring))
+		return
+
 	if(istype(L) && prob(25))
 		L.visible_message(
 			SPAN_WARNING("\The [L] starts flickering in and out of existence as they step onto the bluespace!"),
