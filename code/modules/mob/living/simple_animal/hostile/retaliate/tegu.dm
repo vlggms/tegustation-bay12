@@ -14,6 +14,7 @@
 	health = 80
 	maxHealth = 80
 	movement_cooldown = 4
+	density = FALSE
 	pry_time = 7 SECONDS
 	pry_desc = "biting"
 	ai_holder_type = /datum/ai_holder/simple_animal/retaliate
@@ -22,4 +23,3 @@
 	name = "Atlas"
 	desc = "That's the captain's small, but mighty pet tegu. They may or may not have the blood of several crewmembers on them."
 	gender = MALE
-	ai_holder_type = /datum/ai_holder/simple_animal/retaliate/guard
