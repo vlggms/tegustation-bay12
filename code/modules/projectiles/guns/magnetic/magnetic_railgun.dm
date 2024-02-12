@@ -9,11 +9,12 @@
 	projectile_type = /obj/item/projectile/bullet/magnetic/slug
 	one_hand_penalty = 6
 	power_cost = 300
-	fire_delay = 35
+	fire_delay = 25
 	w_class = ITEM_SIZE_HUGE
 	slot_flags = SLOT_BACK
 	loaded = /obj/item/rcd_ammo/large // ~30 shots
 	bulk = GUN_BULK_RIFLE + 1
+	accuracy = 5
 
 	cell = /obj/item/cell/hyper
 	capacitor = /obj/item/stock_parts/capacitor/adv
@@ -107,6 +108,7 @@
 	fire_delay =  8
 	slowdown_held = 3
 	slowdown_worn = 2
+	accuracy = 0
 
 	slot_flags = SLOT_BACK
 	w_class = ITEM_SIZE_NO_CONTAINER
