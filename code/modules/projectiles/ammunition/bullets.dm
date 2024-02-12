@@ -222,17 +222,19 @@
 	spent_icon = "lcasing-spent"
 	caliber = CALIBER_ANTIMATERIAL
 	projectile_type = /obj/item/projectile/bullet/rifle/shell
-	matter = list(MATERIAL_STEEL = 1250)
+	matter = list(MATERIAL_STEEL = 1250, MATERIAL_DIAMOND = 250)
 
 /obj/item/ammo_casing/shell/apds
 	name = "\improper APDS shell casing"
 	desc = "An Armour Piercing Discarding Sabot antimaterial shell."
 	projectile_type = /obj/item/projectile/bullet/rifle/shell/apds
+	matter = list(MATERIAL_STEEL = 1750, MATERIAL_DIAMOND = 750)
 
 /obj/item/ammo_casing/shell/explosive
 	name = "explosive shell casing"
 	desc = "An explosive antimaterial shell."
 	projectile_type = /obj/item/projectile/bullet/rifle/shell/explosive
+	matter = list(MATERIAL_STEEL = 1500, MATERIAL_PHORON = 1250, MATERIAL_DIAMOND = 250)
 
 // "Military" rifle
 /obj/item/ammo_casing/rifle/military
@@ -275,6 +277,7 @@
 	projectile_type = /obj/item/projectile/bullet/rocket
 	caliber = CALIBER_ROCKET
 	fall_sounds = list()
+	matter = list(MATERIAL_STEEL = 2500, MATERIAL_PHORON = 500)
 
 /obj/item/ammo_casing/rocket/expend()
 	QDEL_NULL(src)
@@ -284,6 +287,7 @@
 	name = "heavy rocket shell"
 	desc = "A high explosive designed to be fired from a launcher."
 	projectile_type = /obj/item/projectile/bullet/rocket/heavy
+	matter = list(MATERIAL_STEEL = 2500, MATERIAL_PHORON = 2500)
 
 // The other stuff
 /obj/item/ammo_casing/cap
@@ -306,6 +310,7 @@
 	desc = "A small bullet casing fitted with a single-use ion pulse generator."
 	projectile_type = /obj/item/projectile/ion/tiny
 	icon_state = "smallcasing_h"
+	matter = list(MATERIAL_STEEL = 130, MATERIAL_URANIUM = 100)
 
 /obj/item/ammo_casing/shotgun/emp
 	name = "haywire slug"

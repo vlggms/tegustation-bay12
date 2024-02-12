@@ -28,6 +28,7 @@
 			/obj/item/ammo_magazine/t18 = GOODS_DEFAULT,
 			/obj/item/ammo_magazine/t12 = GOODS_DEFAULT,
 			/obj/item/ammo_casing/shell = GOODS_DEFAULT,
+			/obj/item/ammo_casing/rocket = GOODS_DEFAULT,
 			),
 		)
 	hidden_inventory = list(
