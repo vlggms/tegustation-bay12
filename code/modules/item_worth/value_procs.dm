@@ -80,3 +80,8 @@
 /obj/structure/ship_munition/disperser_charge/orbital_bombardment/Value(base)
 	. = ..()
 	. += bomb_number * (devastation_modifier * 2000)
+
+/obj/item/organ/Value(base)
+	. = ..()
+	if(damage)
+		. -= round(. * (damage / max_damage))
