@@ -468,7 +468,7 @@
 
 	acc_mod += user.ranged_accuracy_mods()
 	if(zoom)
-		acc_mod += scope_accuracy
+		acc_mod += scoped_accuracy
 	else
 		acc_mod += accuracy
 	P.hitchance_mod = accuracy_power*acc_mod
