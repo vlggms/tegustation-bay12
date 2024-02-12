@@ -1,4 +1,4 @@
-/datum/trading_station/weapons_terra
+/datum/trading_station/terra
 	name_pool = list(
 		"TTB \"Invictus\"" = "Terran Trade Beacon \"Invictus\": Marine Corps equipment, sold exclusively to TerraGov associates.",
 		)
