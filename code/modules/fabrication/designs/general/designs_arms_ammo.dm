@@ -25,10 +25,6 @@
 	name = "ammunition (shotgun, flash)"
 	path = /obj/item/ammo_casing/shotgun/flash
 
-/datum/fabricator_recipe/arms_ammo/hidden/magazine_smg_rubber
-	name = "ammunition (SMG rubber) top mounted"
-	path = /obj/item/ammo_magazine/smg_top/rubber
-
 /datum/fabricator_recipe/arms_ammo/hidden/flamethrower
 	path = /obj/item/flamethrower/full
 
@@ -71,6 +67,10 @@
 /datum/fabricator_recipe/arms_ammo/hidden/magazine_smg
 	name = "ammunition (submachine gun)"
 	path = /obj/item/ammo_magazine/smg
+
+/datum/fabricator_recipe/arms_ammo/hidden/magazine_smg_rubber
+	name = "ammunition (SMG rubber) top mounted"
+	path = /obj/item/ammo_magazine/smg_top/rubber
 
 /datum/fabricator_recipe/arms_ammo/hidden/magazine_uzi
 	name = "ammunition (machine pistol)"

@@ -1,8 +1,8 @@
-/obj/item/projectile/revolver/medium/nullglass
+/obj/item/projectile/bullet/revolver/medium/nullglass
 	name = "nullglass bullet"
 	shrapnel_type = /obj/item/material/shard/nullglass
 
-/obj/item/projectile/revolver/medium/nullglass/on_hit(atom/target, blocked = 0, def_zone = null)
+/obj/item/projectile/bullet/revolver/medium/nullglass/on_hit(atom/target, blocked = 0, def_zone = null)
 	. = ..()
 	var/mob/living/L = target
 	if(L.psi)
@@ -11,7 +11,7 @@
 
 /obj/item/ammo_casing/revolver/medium/nullglass
 	desc = "A revolver bullet casing with a nullglass coating."
-	projectile_type = /obj/item/projectile/revolver/medium/nullglass
+	projectile_type = /obj/item/projectile/bullet/revolver/medium/nullglass
 
 /obj/item/ammo_casing/revolver/medium/nullglass/disrupts_psionics()
 	return src

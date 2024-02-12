@@ -118,7 +118,7 @@
 				if(Bump(M)) //Bump will make sure we don't hit a mob multiple times
 					return
 
-/* short-casing projectiles, like the kind used in pistols or SMGs */
+/* Short-casing projectiles, like the kind used in pistols or SMGs */
 
 /obj/item/projectile/bullet/pistol
 	fire_sound = 'sound/weapons/gunshot/gunshot_pistol.ogg'
@@ -127,7 +127,7 @@
 
 /obj/item/projectile/bullet/pistol/flame
 	name = "incendiary bullet"
-	damage = 5
+	damage = 25
 
 /obj/item/projectile/bullet/pistol/flame/attack_mob(mob/living/target_mob, distance, miss_modifier)
 	. = ..()
@@ -186,22 +186,57 @@
 	distance_falloff = 2.5
 	armor_penetration = 15
 
+/* SMG bullets */
+/obj/item/projectile/bullet/smg
+	fire_sound = "gun_mp38"
+	damage = 25
+	distance_falloff = 3
+	armor_penetration = 10
+
+/obj/item/projectile/bullet/smg/rubber
+	name = "rubber bullet"
+	damage_flags = 0
+	damage = 5
+	agony = 25
+	embed = FALSE
+
+/obj/item/projectile/bullet/smg/flame
+	name = "incendiary bullet"
+	damage = 15
+
+/obj/item/projectile/bullet/smg/flame/attack_mob(mob/living/target_mob, distance, miss_modifier)
+	. = ..()
+	if(target_mob.fire_stacks < 5)
+		target_mob.adjust_fire_stacks(1)
+	target_mob.IgniteMob()
+
+/obj/item/projectile/bullet/smg/small
+	damage = 18
+	penetration_modifier = 1.2
+	distance_falloff = 4
+
+/obj/item/projectile/bullet/smg/small/rubber
+	name = "rubber bullet"
+	damage_flags = 0
+	damage = 5
+	agony = 15
+	embed = FALSE
+
 //4mm. Tiny, very low damage, does not embed, but has very high penetration. Only to be used for the experimental SMG.
-/obj/item/projectile/bullet/flechette
-	fire_sound = 'sound/weapons/gunshot/mp38_1.ogg'
-	damage = 20
+/obj/item/projectile/bullet/smg/flechette
+	fire_sound = 'sound/weapons/gunshot/mp19.ogg'
+	damage = 12
 	penetrating = 1
 	armor_penetration = 70
 	embed = FALSE
 	distance_falloff = 2
 
-// Higher damage, less AP
-/obj/item/projectile/bullet/flechette/hp
-	fire_sound = 'sound/weapons/gunshot/mp38_2.ogg'
-	damage = 36
-	armor_penetration = 20
+// Higher damage, no AP
+/obj/item/projectile/bullet/smg/flechette/hp
+	damage = 30
+	armor_penetration = 0
 
-/* shotgun projectiles */
+/* Shotgun projectiles */
 
 /obj/item/projectile/bullet/shotgun
 	name = "slug"
@@ -276,7 +311,7 @@
 
 /obj/item/projectile/bullet/rifle/t12
 	fire_sound = "gun_t12"
-	damage = 14
+	damage = 18
 	armor_penetration = 85
 
 /obj/item/projectile/bullet/rifle/t18
@@ -341,6 +376,9 @@
 /* Practice */
 
 /obj/item/projectile/bullet/pistol/practice
+	damage = 5
+
+/obj/item/projectile/bullet/smg/small/practice
 	damage = 5
 
 /obj/item/projectile/bullet/rifle/military/practice
