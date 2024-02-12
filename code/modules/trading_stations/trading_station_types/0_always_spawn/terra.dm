@@ -6,7 +6,7 @@
 	unlock_favor = 10000
 	faction = FACTION_TERRAGOV
 	whitelist_factions = list(FACTION_TERRAGOV)
-	spawn_probability = 30
+	spawn_always = TRUE
 	markup = 1.2
 	inventory = list(
 		TRADE_CAT_ARTILLERY = list(
