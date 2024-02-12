@@ -177,13 +177,13 @@
 	mag_type = MAGAZINE
 	caliber = CALIBER_SMG_FLECHETTE
 	matter = list(MATERIAL_STEEL = 2000)
-	ammo_type = /obj/item/projectile/bullet/smg/flechette
+	ammo_type = /obj/item/ammo_casing/smg/flechette
 	max_ammo = 40
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/proto_smg/hp
 	name = "submachine gun magazine (HP)"
-	ammo_type = /obj/item/projectile/bullet/smg/flechette/hp
+	ammo_type = /obj/item/ammo_casing/smg/flechette/hp
 
 /obj/item/ammo_magazine/pistol
 	name = "pistol magazine"

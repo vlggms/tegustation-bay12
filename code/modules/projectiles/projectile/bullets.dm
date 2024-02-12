@@ -118,7 +118,7 @@
 				if(Bump(M)) //Bump will make sure we don't hit a mob multiple times
 					return
 
-/* Short-casing projectiles, like the kind used in pistols or SMGs */
+/* Short-casing projectiles, like the kind used in pistols */
 
 /obj/item/projectile/bullet/pistol
 	fire_sound = 'sound/weapons/gunshot/gunshot_pistol.ogg'
@@ -211,6 +211,7 @@
 	target_mob.IgniteMob()
 
 /obj/item/projectile/bullet/smg/small
+	fire_sound = 'sound/weapons/gunshot/mp5.ogg'
 	damage = 18
 	penetration_modifier = 1.2
 	distance_falloff = 4
