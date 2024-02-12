@@ -354,7 +354,18 @@
 	armor_penetration = 100
 	penetration_modifier = 1.5
 
+/obj/item/projectile/bullet/rifle/shell/apds/get_structure_damage()
+	return damage * 7
+
 /obj/item/projectile/bullet/rifle/shell/explosive
+	penetrating = 0
+	armor_penetration = 30
+
+/obj/item/projectile/bullet/rifle/shell/explosive/on_hit(atom/target, blocked = 0)
+	var/turf/T = get_turf(target)
+	if(isturf(T))
+		explosion(target, 0, 1, 4)
+	return ..()
 
 /* Miscellaneous */
 /obj/item/projectile/bullet/gyro
@@ -364,7 +375,7 @@
 	var/gyro_heavy_impact = 0
 	var/gyro_light_impact = 2
 
-/obj/item/projectile/bullet/gyro/on_hit(var/atom/target, var/blocked = 0)
+/obj/item/projectile/bullet/gyro/on_hit(atom/target, blocked = 0)
 	if(isturf(target))
 		explosion(target, gyro_devastation, gyro_heavy_impact, gyro_light_impact)
 	..()
