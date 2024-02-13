@@ -383,7 +383,10 @@ SUBSYSTEM_DEF(supply)
 				qdel(item)
 				++export_count
 			else if(item != AM)
-				item.forceMove(get_turf(AM))		// Should be the same tile
+				if(!isobj(item) || !ismob(item))
+					qdel(item)
+				else
+					item.forceMove(get_turf(AM))		// Should be the same tile
 
 		// The max is a soft cap
 		if(export_count > 100)
