@@ -30300,7 +30300,9 @@
 /turf/simulated/floor/tiled/white/monotile,
 /area/shuttle/research/xenobiolab)
 "vnC" = (
-/obj/machinery/trade_beacon/receiving,
+/obj/machinery/trade_beacon/receiving{
+	beacon_range = 1
+	},
 /turf/simulated/floor/reinforced,
 /area/intrepid/department/cargo/cargobay)
 "voe" = (
