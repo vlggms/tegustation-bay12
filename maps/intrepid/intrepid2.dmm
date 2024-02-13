@@ -2204,7 +2204,8 @@
 	dir = 8
 	},
 /obj/machinery/power/smes/buildable/preset/torch/engine_main{
-	RCon_tag = "Singularity to Substations"
+	RCon_tag = "Singularity to Substations";
+	is_critical = 1
 	},
 /obj/structure/cable/orange,
 /turf/simulated/floor/tiled/techmaint,
@@ -9354,9 +9355,9 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/engineering{
+	autoset_access = 0;
 	name = "Bluespace Drive Access";
-	req_access = list("ACCESS_ENGINE_EQUIP");
-	autoset_access = 0
+	req_access = list("ACCESS_ENGINE_EQUIP")
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -9597,8 +9598,8 @@
 "wF" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/multi_tile/engineering{
-	name = "Engineering Lounge";
 	autoset_access = 0;
+	name = "Engineering Lounge";
 	req_access = list("ACCESS_ENGINE_EQUIP")
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -10829,9 +10830,9 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/engineering{
+	autoset_access = 0;
 	name = "Engineering Equipment";
-	req_access = list("ACCESS_ENGINE_EQUIP");
-	autoset_access = 0
+	req_access = list("ACCESS_ENGINE_EQUIP")
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/engineering/lockerroom)
@@ -11277,10 +11278,10 @@
 /area/intrepid/misc/maint/upper/central)
 "AK" = (
 /obj/machinery/button/blast_door{
-	pixel_y = -22;
 	dir = 1;
 	id_tag = "cargoexport";
-	name = "Cargo Exports Beacon access button"
+	name = "Cargo Exports Beacon access button";
+	pixel_y = -22
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/upper/starboard)
@@ -12125,8 +12126,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/glass/engineering{
-	name = "Engineering Lounge";
 	autoset_access = 0;
+	name = "Engineering Lounge";
 	req_access = list("ACCESS_ENGINE_EQUIP")
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -14479,8 +14480,8 @@
 	},
 /obj/item/cell/standard,
 /obj/item/cell/standard{
-	pixel_y = 9;
-	pixel_x = -3
+	pixel_x = -3;
+	pixel_y = 9
 	},
 /turf/simulated/floor/bluegrid,
 /area/intrepid/department/command/robocontrol)
@@ -17116,9 +17117,9 @@
 	icon_state = "6-10"
 	},
 /obj/machinery/door/airlock/glass/engineering{
+	autoset_access = 0;
 	name = "Shield Control Access";
-	req_access = list("ACCESS_ENGINE_EQUIP");
-	autoset_access = 0
+	req_access = list("ACCESS_ENGINE_EQUIP")
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/engineering/shieldcontrol)
@@ -20243,9 +20244,9 @@
 /obj/effect/floor_decal/borderfloorblack,
 /obj/machinery/button/blast_door{
 	dir = 8;
-	pixel_x = 22;
 	id_tag = "cargoexport";
-	name = "Cargo Exports Beacon access button"
+	name = "Cargo Exports Beacon access button";
+	pixel_x = 22
 	},
 /obj/machinery/computer/modular/preset/cardslot/supply{
 	dir = 8
