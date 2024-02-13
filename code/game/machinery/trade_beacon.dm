@@ -54,6 +54,8 @@
 			continue
 		if(A.invisibility)
 			continue
+		if(istype(A, /obj/screen))
+			continue
 		objects += A
 	return objects
 

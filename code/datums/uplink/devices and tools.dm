@@ -25,8 +25,9 @@
 
 /datum/uplink_item/item/tools/money
 	name = "Operations Funding"
-	item_cost = 8
+	item_cost = 10
 	path = /obj/item/storage/secure/briefcase/money
+
 /datum/uplink_item/item/tools/money/New()
 	. = ..()
 	desc = "A briefcase with 10,000 untraceable [GLOB.using_map.local_currency_name]. Makes a great bribe if they're willing to take you up on your offer."

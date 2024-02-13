@@ -373,6 +373,9 @@ SUBSYSTEM_DEF(supply)
 
 		// We go backwards, so it'll be innermost objects sold first
 		for(var/atom/movable/item in reverseRange(contents_incl_self))
+			if(istype(item, /obj/screen))
+				continue
+
 			var/item_price = get_value(item)
 			var/export_value = item_price
 
