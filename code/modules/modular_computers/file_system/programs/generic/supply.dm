@@ -763,7 +763,7 @@
 			dat += "<A href='?src=\ref[src];PRG_export=1'>Export</A>"
 			dat += "<hr>"
 			if(sending.export_cooldown > world.time)
-				dat += "<b>Export cooldown: [round(sending.export_cooldown - world.time) / 1 SECONDS] seconds</b>"
+				dat += "<b>Export cooldown: [round((sending.export_cooldown - world.time) / 10)] seconds</b>"
 				dat += "<hr>"
 			var/total_cost = 0
 			for(var/atom/movable/AM in sending.GetObjects())
