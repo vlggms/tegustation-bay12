@@ -6,7 +6,7 @@
 		"ZHTB \"Medicus\"" = "Zeng-Hu Trade Beacon \"Medicus\": Bruise packs, surgery tools, chemicals!",
 		)
 	uid = "medical"
-	unlock_favor = 5000
+	unlock_favor = 3500
 	faction = FACTION_INDEPENDENT // Should be under Zeng Hu, potentially
 	spawn_always = TRUE
 	markup = 1.2
