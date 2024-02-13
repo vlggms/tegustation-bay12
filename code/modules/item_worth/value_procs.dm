@@ -85,3 +85,9 @@
 	. = ..()
 	if(damage)
 		. -= round(. * (damage / max_damage))
+
+/obj/item/spellbook/Value(base)
+	. = ..()
+	. += length(allowed_spells * 1000)
+	if(!isnull(owner))
+		. *= 0.5
