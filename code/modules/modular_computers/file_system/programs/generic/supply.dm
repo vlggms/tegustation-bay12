@@ -813,7 +813,8 @@
 
 		switch(log_screen)
 			if(LOG_SHIPPING)
-				for(var/list/log in reverselist(SSsupply.shipping_log))
+				var/list/L = SSsupply.shipping_log.Copy()
+				for(var/list/log in reverseRange(L))
 					dat += "Time: [log["time"]]<br>"
 					dat += "Account: [log["ordering_acct"]]<br>"
 					dat += "Link: [log["assoc_faction"]]<br>"
@@ -822,7 +823,8 @@
 					dat += "<A href='?src=\ref[src];PRG_print=[log["id"]]'>Print</A>"
 					dat += "<hr>"
 			if(LOG_EXPORT)
-				for(var/list/log in reverselist(SSsupply.export_log))
+				var/list/L = SSsupply.export_log.Copy()
+				for(var/list/log in reverseRange(L))
 					dat += "Time: [log["time"]]<br>"
 					dat += "Account: [log["ordering_acct"]]<br>"
 					dat += "Link: [log["assoc_faction"]]<br>"
