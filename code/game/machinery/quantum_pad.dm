@@ -82,6 +82,18 @@
 		anchored = !anchored
 		return TRUE
 
+	if(istype(I, /obj/item/quantum_keycard))
+		var/obj/item/quantum_keycard/K = I
+		if(K.qpad)
+			to_chat(user, SPAN_NOTICE("You insert [K] into [src]'s card slot, activating it."))
+			physical_attack_hand(user, K.qpad)
+		else
+			to_chat(user, SPAN_NOTICE("You insert [K] into [src]'s card slot, initiating the link procedure."))
+			if(do_after(user, 40, target = src))
+				to_chat(user, SPAN_NOTICE("You complete the link between [K] and [src]."))
+				K.LinkPad(src)
+		return TRUE
+
 	return ..()
 
 /obj/machinery/quantumpad/physical_attack_hand(mob/user, obj/machinery/quantumpad/target_pad = linked_pad)
