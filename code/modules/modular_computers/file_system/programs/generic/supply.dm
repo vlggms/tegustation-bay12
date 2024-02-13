@@ -656,6 +656,7 @@
 	dat += trade_screen == CART_SCREEN ? "<b><u>Cart</u></b>" :"<A href='?src=\ref[src];PRG_trade_screen=[CART_SCREEN]'>Cart</A>"
 	dat += " | "
 	dat += trade_screen == LOG_SCREEN ? "<b><u>Logs</u></b>" :"<A href='?src=\ref[src];PRG_trade_screen=[LOG_SCREEN]'>Logs</A>"
+	dat += " | "
 	dat += "<A href='?src=\ref[src];PC_exit=1'>Exit</A>"
 
 	dat += "<hr>"
@@ -804,9 +805,9 @@
 			dat += "<br>"
 
 	if(trade_screen == LOG_SCREEN)
-		dat += trade_screen == LOG_SHIPPING ? "<b><u>Shipping</u></b>" :"<A href='?src=\ref[src];PRG_log_screen=[LOG_SHIPPING]'>Shipping</A>"
+		dat += log_screen == LOG_SHIPPING ? "<b><u>Shipping</u></b>" :"<A href='?src=\ref[src];PRG_log_screen=[LOG_SHIPPING]'>Shipping</A>"
 		dat += " | "
-		dat += trade_screen == LOG_EXPORT ? "<b><u>Export</u></b>" :"<A href='?src=\ref[src];PRG_log_screen=[LOG_EXPORT]'>Export</A>"
+		dat += log_screen == LOG_EXPORT ? "<b><u>Export</u></b>" :"<A href='?src=\ref[src];PRG_log_screen=[LOG_EXPORT]'>Export</A>"
 
 		dat += "<hr>"
 
