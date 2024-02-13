@@ -242,6 +242,11 @@
 	icon_state = "intrepid_teleporter"
 	name = "improper Teleporter Room"
 
+/area/intrepid/department/command/robocontrol
+	icon_state = "robotics"
+	name = "improper Robotics Control Room"
+	req_access = list(access_rd)
+
 // Engineering
 /area/intrepid/department/engineering
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
@@ -302,13 +307,13 @@
 	req_access = list(access_atmospherics)
 
 /area/intrepid/department/engineering/engine_room
-	name = "\improper Engine Room"
+	name = "\improper Primary Engine Room"
 	icon_state = "engine"
 	sound_env = LARGE_ENCLOSED
 	req_access = list(access_engine, access_engine_equip)
 
 /area/intrepid/department/engineering/engine_room/aux
-	name = "\improper Auxilary Engine Room"
+	name = "\improper Auxiliary Engine Room"
 
 /area/intrepid/department/engineering/storage/primary
 	name = "Primary Tool Storage"

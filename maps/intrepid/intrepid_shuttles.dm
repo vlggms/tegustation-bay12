@@ -62,36 +62,6 @@ INTREPID_ESCAPE_POD(3)
 	waypoint_station = "nav_example_station"
 	waypoint_offsite = "nav_example_offsite"
 
-// Stardust
-/datum/shuttle/autodock/ferry/stardust
-	name = "Stardust"
-	warmup_time = 10
-	dock_target = "stardust_shuttle_airlock"
-	waypoint_station = "nav_stardust_start"
-	waypoint_offsite = "nav_stardust_out"
-	logging_home_tag = "nav_stardust_start"
-	logging_access = access_stardust_helm
-	ceiling_type = /turf/simulated/floor/shuttle_ceiling
-
-/datum/shuttle/autodock/ferry/stardust/New(_name, var/obj/effect/shuttle_landmark/initial_location)
-	shuttle_area = subtypesof(/area/shuttle/research)
-	..()
-
-/obj/effect/shuttle_landmark/stardust/start
-	name = "First Deck"
-	landmark_tag = "nav_stardust_start"
-	docking_controller = "stardust_shuttle_dock_airlock"
-	base_area = /area/intrepid/misc/maint/portside
-	base_turf = /turf/simulated/floor/plating
-
-/obj/effect/shuttle_landmark/stardust/out
-	name = "Space near the ship"
-	landmark_tag = "nav_stardust_out"
-
-/obj/machinery/computer/shuttle_control/research
-	name = "research shuttle control console"
-	shuttle_tag = "Stardust"
-
 // Pandora
 /datum/shuttle/autodock/overmap/exploration_shuttle
 	name = "Pandora"
@@ -144,8 +114,10 @@ INTREPID_ESCAPE_POD(3)
 /datum/shuttle/autodock/ferry/ambulance
 	name = "Caduceus"
 	shuttle_area = /area/shuttle/ambulance/home
+	logging_home_tag = "nav_hangar_ambulance"
+	ceiling_type = /turf/simulated/floor/shuttle_ceiling
 	current_location = "nav_hangar_ambulance"
-	move_time = 60
+	move_time = 30
 	dock_target = "ambulance_shuttle_dock"
 
 /obj/effect/shuttle_landmark/intrepid/hangar/ambulance_shuttle

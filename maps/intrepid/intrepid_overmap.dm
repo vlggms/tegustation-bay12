@@ -8,6 +8,8 @@
 
 	initial_restricted_waypoints = list(
 		"Pandora" = list("nav_hangar_pandora"),
+		"Pithos" = list("nav_hangar_pithos"),
+		"Caduceus" = list("nav_hangar_ambulance"),
 		"Cyclopes" = list("nav_merc_dock"),
 		"Independent Light Corvette" = list("nav_obs_deck1"),
 	)
@@ -60,7 +62,7 @@
 	max_speed = 1/(2 SECONDS)
 	burn_delay = 1 SECONDS
 	vessel_mass = 3000
-	fore_dir = NORTH
+	fore_dir = WEST
 	skill_needed = SKILL_BASIC
 	vessel_size = SHIP_SIZE_SMALL
 
@@ -68,3 +70,7 @@
 	name = "shuttle control console"
 	shuttle_tag = "Pithos"
 	req_access = list(access_expedition_shuttle_helm)
+
+/obj/machinery/computer/shuttle_control/explore/ambulance_shuttle
+	name = "shuttle control console"
+	shuttle_tag = "Caduceus"
