@@ -15,6 +15,7 @@
 			/obj/item/stack/material/plastic/ten = CUSTOM_GOODS_NAME("plastic (x10)"),
 			/obj/item/stack/material/aluminium/ten = CUSTOM_GOODS_NAME("aluminium (x10)"),
 			/obj/item/stack/material/titanium/ten = CUSTOM_GOODS_NAME("titanium (x10)"),
+			/obj/item/stack/material/platinum/ten = CUSTOM_GOODS_NAME("platinum (x10)"),
 			/obj/item/stack/material/phoron/ten = CUSTOM_GOODS_NAME("phoron (x10)"),
 			/obj/item/stack/material/uranium/ten = CUSTOM_GOODS_NAME("uranium (x10)"),
 			/obj/item/stack/material/tritium/ten = CUSTOM_GOODS_NAME("tritium (x10)"),
