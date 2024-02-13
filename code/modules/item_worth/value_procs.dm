@@ -22,9 +22,15 @@
 	return base * Uses
 
 /obj/item/ammo_casing/Value(base)
+	. = ..()
 	if(!BB)
-		return 1
-	return ..()
+		return
+
+	for(var/mat in matter)
+		var/material/material_def = SSmaterials.get_material_by_name(mat)
+		. += material_def.value * (matter[mat] / SHEET_MATERIAL_AMOUNT)
+
+	. = round(., 0.5)
 
 /obj/item/reagent_containers/Value(base)
 	. = ..()
@@ -66,3 +72,16 @@
 	if(!key) // Mindless humans cost less
 		. *= 0.2
 	. = round(.)
+
+/obj/structure/ship_munition/disperser_charge/explosive/Value(base)
+	. = ..()
+	. += devastation_modifier * 10000
+
+/obj/structure/ship_munition/disperser_charge/orbital_bombardment/Value(base)
+	. = ..()
+	. += bomb_number * (devastation_modifier * 2000)
+
+/obj/item/organ/Value(base)
+	. = ..()
+	if(damage)
+		. -= round(. * (damage / max_damage))

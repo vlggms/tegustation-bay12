@@ -9,11 +9,12 @@
 	projectile_type = /obj/item/projectile/bullet/magnetic/slug
 	one_hand_penalty = 6
 	power_cost = 300
-	fire_delay = 35
+	fire_delay = 25
 	w_class = ITEM_SIZE_HUGE
 	slot_flags = SLOT_BACK
 	loaded = /obj/item/rcd_ammo/large // ~30 shots
 	bulk = GUN_BULK_RIFLE + 1
+	accuracy = 5
 
 	cell = /obj/item/cell/hyper
 	capacitor = /obj/item/stock_parts/capacitor/adv
@@ -107,6 +108,7 @@
 	fire_delay =  8
 	slowdown_held = 3
 	slowdown_worn = 2
+	accuracy = 0
 
 	slot_flags = SLOT_BACK
 	w_class = ITEM_SIZE_NO_CONTAINER
@@ -114,7 +116,7 @@
 	firemodes = list(
 		list(mode_name="semiauto", burst=1, fire_delay=null, one_hand_penalty=1, burst_accuracy=null, dispersion=null),
 		list(mode_name="3-round burst", burst=3, fire_delay=null, one_hand_penalty=2, burst_accuracy=list(0,-1,-1),       dispersion=list(0.0, 0.6, 1.0)),
-		list(mode_name="full auto", burst=1, fire_delay=0, burst_delay=1, one_hand_penalty=3, burst_accuracy=list(0,-1,-2), dispersion=list(0.2, 0.8, 1.2), autofire_enabled=1)
+		list(mode_name="full auto", burst=1, fire_delay=0, burst_delay=2, one_hand_penalty=3, burst_accuracy=list(0,-1,-2), dispersion=list(0.2, 0.8, 1.2), autofire_enabled=1)
 		)
 
 /obj/item/gun/magnetic/railgun/automatic/examine(mob/user, distance)
@@ -127,6 +129,26 @@
 	desc = "The Mars Military Industries MI-227 Meteor. Originally a vehicle-mounted turret weapon for heavy anti-vehicular and anti-structural fire, the fact that it was made man-portable is mindboggling in itself."
 	icon = 'icons/obj/guns/railgun_old_heavy.dmi'
 	icon_state = "old_heavy_railgun"
+
+// I felt like we could use some bullshit weapon design
+/obj/item/gun/magnetic/railgun/automatic/dominion
+	name = "\improper ST-410 railgun"
+	desc = "A standard-issue railgun used by shock troopers of the Terran Dominion during third expansion era. The power of that level was never meant to be in the hands of humans..."
+	fire_delay = 2
+	slowdown_held = 1.5
+	slowdown_worn = 0.5
+
+	power_cost = 50
+	cell = /obj/item/cell/hyper
+	capacitor = /obj/item/stock_parts/capacitor/super
+
+	origin_tech = list(TECH_COMBAT = 9, TECH_MATERIAL = 6, TECH_MAGNET = 8, TECH_DOMINION = 5)
+
+	firemodes = list(
+		list(mode_name="semiauto", burst=1, fire_delay=null, one_hand_penalty=2, burst_accuracy=null, dispersion=null),
+		list(mode_name="5-round burst", burst=5, fire_delay=null, one_hand_penalty=4, burst_accuracy=list(0),       dispersion=list(0.0, 0.2, 0.4)),
+		list(mode_name="full auto", burst=1, fire_delay=0, burst_delay=0.2, one_hand_penalty=8, burst_accuracy=list(0), dispersion=list(0.1, 0.2, 0.3), autofire_enabled=1)
+		)
 
 /obj/item/gun/magnetic/railgun/flechette
 	name = "flechette gun"

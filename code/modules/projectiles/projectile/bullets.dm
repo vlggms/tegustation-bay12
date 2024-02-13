@@ -118,7 +118,7 @@
 				if(Bump(M)) //Bump will make sure we don't hit a mob multiple times
 					return
 
-/* short-casing projectiles, like the kind used in pistols or SMGs */
+/* Short-casing projectiles, like the kind used in pistols */
 
 /obj/item/projectile/bullet/pistol
 	fire_sound = 'sound/weapons/gunshot/gunshot_pistol.ogg'
@@ -127,7 +127,7 @@
 
 /obj/item/projectile/bullet/pistol/flame
 	name = "incendiary bullet"
-	damage = 5
+	damage = 25
 
 /obj/item/projectile/bullet/pistol/flame/attack_mob(mob/living/target_mob, distance, miss_modifier)
 	. = ..()
@@ -186,22 +186,58 @@
 	distance_falloff = 2.5
 	armor_penetration = 15
 
+/* SMG bullets */
+/obj/item/projectile/bullet/smg
+	fire_sound = "gun_mp38"
+	damage = 25
+	distance_falloff = 3
+	armor_penetration = 10
+
+/obj/item/projectile/bullet/smg/rubber
+	name = "rubber bullet"
+	damage_flags = 0
+	damage = 5
+	agony = 25
+	embed = FALSE
+
+/obj/item/projectile/bullet/smg/flame
+	name = "incendiary bullet"
+	damage = 15
+
+/obj/item/projectile/bullet/smg/flame/attack_mob(mob/living/target_mob, distance, miss_modifier)
+	. = ..()
+	if(target_mob.fire_stacks < 5)
+		target_mob.adjust_fire_stacks(1)
+	target_mob.IgniteMob()
+
+/obj/item/projectile/bullet/smg/small
+	fire_sound = 'sound/weapons/gunshot/mp5.ogg'
+	damage = 18
+	penetration_modifier = 1.2
+	distance_falloff = 4
+
+/obj/item/projectile/bullet/smg/small/rubber
+	name = "rubber bullet"
+	damage_flags = 0
+	damage = 5
+	agony = 15
+	embed = FALSE
+
 //4mm. Tiny, very low damage, does not embed, but has very high penetration. Only to be used for the experimental SMG.
-/obj/item/projectile/bullet/flechette
-	fire_sound = 'sound/weapons/gunshot/smg.ogg'
-	damage = 20
+/obj/item/projectile/bullet/smg/flechette
+	fire_sound = 'sound/weapons/gunshot/mp19.ogg'
+	damage = 12
 	penetrating = 1
 	armor_penetration = 70
 	embed = FALSE
 	distance_falloff = 2
 
-// Higher damage, less AP
-/obj/item/projectile/bullet/flechette/hp
-	fire_sound = 'sound/weapons/gunshot/smg_alt.ogg'
-	damage = 36
-	armor_penetration = 20
+// Higher damage, no AP
+/obj/item/projectile/bullet/smg/flechette/hp
+	damage = 30
+	armor_penetration = 0
 
-/* shotgun projectiles */
+/* Shotgun projectiles */
 
 /obj/item/projectile/bullet/shotgun
 	name = "slug"
@@ -276,7 +312,7 @@
 
 /obj/item/projectile/bullet/rifle/t12
 	fire_sound = "gun_t12"
-	damage = 14
+	damage = 18
 	armor_penetration = 85
 
 /obj/item/projectile/bullet/rifle/t18
@@ -302,20 +338,34 @@
 	damage = 35
 
 /obj/item/projectile/bullet/rifle/shell
-	fire_sound = 'sound/weapons/gunshot/sniper.ogg'
-	damage = 80
+	fire_sound = 'sound/weapons/gunshot/sniper_antimatter.ogg'
+	damage = 120
 	stun = 3
 	weaken = 3
 	penetrating = 3
-	armor_penetration = 70
+	armor_penetration = 50
 	penetration_modifier = 1.2
 	distance_falloff = 0.5
 
 /obj/item/projectile/bullet/rifle/shell/apds
-	damage = 70
-	penetrating = 5
-	armor_penetration = 80
+	fire_sound = 'sound/weapons/gunshot/sniper_heavy.ogg'
+	damage = 80
+	penetrating = 8
+	armor_penetration = 100
 	penetration_modifier = 1.5
+
+/obj/item/projectile/bullet/rifle/shell/apds/get_structure_damage()
+	return damage * 7
+
+/obj/item/projectile/bullet/rifle/shell/explosive
+	penetrating = 0
+	armor_penetration = 30
+
+/obj/item/projectile/bullet/rifle/shell/explosive/on_hit(atom/target, blocked = 0)
+	var/turf/T = get_turf(target)
+	if(isturf(T))
+		explosion(target, 0, 1, 4)
+	return ..()
 
 /* Miscellaneous */
 /obj/item/projectile/bullet/gyro
@@ -325,7 +375,7 @@
 	var/gyro_heavy_impact = 0
 	var/gyro_light_impact = 2
 
-/obj/item/projectile/bullet/gyro/on_hit(var/atom/target, var/blocked = 0)
+/obj/item/projectile/bullet/gyro/on_hit(atom/target, blocked = 0)
 	if(isturf(target))
 		explosion(target, gyro_devastation, gyro_heavy_impact, gyro_light_impact)
 	..()
@@ -338,6 +388,9 @@
 /* Practice */
 
 /obj/item/projectile/bullet/pistol/practice
+	damage = 5
+
+/obj/item/projectile/bullet/smg/small/practice
 	damage = 5
 
 /obj/item/projectile/bullet/rifle/military/practice

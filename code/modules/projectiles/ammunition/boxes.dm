@@ -118,11 +118,15 @@
 	name = "stick magazine"
 	icon_state = "machine_pistol"
 	mag_type = MAGAZINE
-	ammo_type = /obj/item/ammo_casing/pistol
+	ammo_type = /obj/item/ammo_casing/smg
 	matter = list(MATERIAL_STEEL = 1200)
-	caliber = CALIBER_PISTOL
+	caliber = CALIBER_SMG
 	max_ammo = 16
 	multiple_sprites = 1
+
+/obj/item/ammo_magazine/machine_pistol/rubber
+	labels = list("rubber")
+	ammo_type = /obj/item/projectile/bullet/smg/rubber
 
 /obj/item/ammo_magazine/machine_pistol/empty
 	initial_ammo = 0
@@ -131,9 +135,9 @@
 	name = "top mounted magazine"
 	icon_state = "smg_top"
 	mag_type = MAGAZINE
-	ammo_type = /obj/item/ammo_casing/pistol/small
+	ammo_type = /obj/item/projectile/bullet/smg/small
 	matter = list(MATERIAL_STEEL = 1200)
-	caliber = CALIBER_PISTOL_SMALL
+	caliber = CALIBER_SMG_SMALL
 	max_ammo = 20
 	multiple_sprites = 1
 
@@ -142,25 +146,44 @@
 
 /obj/item/ammo_magazine/smg_top/rubber
 	labels = list("rubber")
-	ammo_type = /obj/item/ammo_casing/pistol/small/rubber
+	ammo_type = /obj/item/ammo_casing/smg/small/rubber
 
 /obj/item/ammo_magazine/smg_top/practice
 	labels = list("practice")
-	ammo_type = /obj/item/ammo_casing/pistol/small/practice
+	ammo_type = /obj/item/ammo_casing/smg/small/practice
 
 /obj/item/ammo_magazine/smg
-	name = "box magazine"
+	name = "smg magazine"
 	icon_state = "smg"
 	origin_tech = list(TECH_COMBAT = 2)
 	mag_type = MAGAZINE
-	caliber = CALIBER_PISTOL
+	caliber = CALIBER_SMG
 	matter = list(MATERIAL_STEEL = 1500)
-	ammo_type = /obj/item/ammo_casing/pistol
+	ammo_type = /obj/item/ammo_casing/smg
 	max_ammo = 20
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/smg/empty
 	initial_ammo = 0
+
+/obj/item/ammo_magazine/smg/flame
+	name = "submachine gun magazine (incendiary)"
+	ammo_type = /obj/item/ammo_casing/smg/flame
+
+/obj/item/ammo_magazine/proto_smg
+	name = "submachine gun magazine"
+	icon_state = CALIBER_SMG_FLECHETTE
+	origin_tech = list(TECH_COMBAT = 4)
+	mag_type = MAGAZINE
+	caliber = CALIBER_SMG_FLECHETTE
+	matter = list(MATERIAL_STEEL = 2000)
+	ammo_type = /obj/item/ammo_casing/smg/flechette
+	max_ammo = 40
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/proto_smg/hp
+	name = "submachine gun magazine (HP)"
+	ammo_type = /obj/item/ammo_casing/smg/flechette/hp
 
 /obj/item/ammo_magazine/pistol
 	name = "pistol magazine"
@@ -272,20 +295,19 @@
 	caliber = CALIBER_PISTOL_SMALL
 	max_ammo = 8
 
-/obj/item/ammo_magazine/proto_smg
-	name = "submachine gun magazine"
-	icon_state = CALIBER_PISTOL_FLECHETTE
-	origin_tech = list(TECH_COMBAT = 4)
-	mag_type = MAGAZINE
-	caliber = CALIBER_PISTOL_FLECHETTE
-	matter = list(MATERIAL_STEEL = 2000)
-	ammo_type = /obj/item/ammo_casing/flechette
-	max_ammo = 40
-	multiple_sprites = 1
+// SMG boxes
+/obj/item/ammo_magazine/box/smg
+	name = "ammunition box"
+	icon_state = "smallpistol"
+	origin_tech = list(TECH_COMBAT = 2)
+	caliber = CALIBER_SMG
+	matter = list(MATERIAL_STEEL = 4500)
+	ammo_type = /obj/item/ammo_casing/smg
+	max_ammo = 60
 
-/obj/item/ammo_magazine/proto_smg/hp
-	name = "submachine gun magazine (HP)"
-	ammo_type = /obj/item/ammo_casing/flechette/hp
+/obj/item/ammo_magazine/box/smg/small
+	caliber = CALIBER_SMG_SMALL
+	ammo_type = /obj/item/ammo_casing/smg/small
 
 /obj/item/ammo_magazine/gyrojet
 	name = "microrocket magazine"

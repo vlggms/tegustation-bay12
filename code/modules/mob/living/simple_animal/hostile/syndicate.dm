@@ -78,7 +78,7 @@
 	icon_state = "syndicateranged"
 	icon_living = "syndicateranged"
 	casingtype = /obj/item/ammo_casing/pistol
-	projectilesound = 'sound/weapons/gunshot/smg.ogg'
+	projectilesound = 'sound/weapons/gunshot/mp5.ogg'
 	projectiletype = /obj/item/projectile/bullet/pistol
 	loot_list = list(
 		/obj/item/gun/projectile/automatic/merc_smg = 1,

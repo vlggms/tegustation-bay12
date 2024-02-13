@@ -131,3 +131,8 @@ GLOBAL_LIST_INIT(t12_sound,\
 	'sound/weapons/gunshot/autorifle-1.ogg',\
 	'sound/weapons/gunshot/autorifle-2.ogg',\
 	'sound/weapons/gunshot/autorifle-3.ogg'))
+
+GLOBAL_LIST_INIT(mp38_sound,\
+	list(\
+	'sound/weapons/gunshot/mp38_1.ogg',
+	'sound/weapons/gunshot/mp38_2.ogg'))

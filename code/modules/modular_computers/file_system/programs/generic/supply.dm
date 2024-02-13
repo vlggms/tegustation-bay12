@@ -65,6 +65,9 @@
 
 /datum/computer_file/program/supply/OnStoreFile(obj/item/stock_parts/computer/hard_drive/HD)
 	. = ..()
+	SSticker.OnRoundstart(CALLBACK(src, .proc/OnRoundStart, HD))
+
+/datum/computer_file/program/supply/proc/OnRoundStart(obj/item/stock_parts/computer/hard_drive/HD)
 	if(!istype(HD))
 		return
 

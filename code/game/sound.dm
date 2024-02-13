@@ -162,6 +162,7 @@ var/const/FALLOFF_SOUNDS = 0.5
 			if ("glasscrack") soundin = pick(GLOB.glasscrack_sound)
 			if ("tray_hit") soundin = pick(GLOB.tray_hit_sound)
 			if ("gun_t12") soundin = pick(GLOB.t12_sound)
+			if ("gun_mp38") soundin = pick(GLOB.mp38_sound)
 	return soundin
 
 /client/verb/stop_sounds()

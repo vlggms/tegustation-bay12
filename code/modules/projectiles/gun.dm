@@ -389,7 +389,7 @@
 		// If your skill in weapons is higher than/equal to (screen_shake + 2) - it won't shake at all.
 		if(screen_shake && !user.skill_check(SKILL_WEAPONS,screen_shake+2))
 			spawn()
-				shake_camera(user, screen_shake+1, screen_shake)
+				shake_camera(user, screen_shake + 1 + (zoom*2), screen_shake)
 
 	if(combustion)
 		var/turf/curloc = get_turf(src)
@@ -467,7 +467,10 @@
 		acc_mod += 2
 
 	acc_mod += user.ranged_accuracy_mods()
-	acc_mod += accuracy
+	if(zoom)
+		acc_mod += scoped_accuracy
+	else
+		acc_mod += accuracy
 	P.hitchance_mod = accuracy_power*acc_mod
 	P.dispersion = disp_mod
 
@@ -566,19 +569,6 @@
 		return
 
 	zoom(user, zoom_offset, view_size)
-	if(zoom)
-		accuracy = scoped_accuracy
-		if(user.skill_check(SKILL_WEAPONS, SKILL_MASTER))
-			accuracy += 2
-		if(screen_shake)
-			screen_shake = round(screen_shake*zoom_amount+1) //screen shake is worse when looking through a scope
-
-//make sure accuracy and screen_shake are reset regardless of how the item is unzoomed.
-/obj/item/gun/zoom()
-	..()
-	if(!zoom)
-		accuracy = initial(accuracy)
-		screen_shake = initial(screen_shake)
 
 /obj/item/gun/examine(mob/user)
 	. = ..()

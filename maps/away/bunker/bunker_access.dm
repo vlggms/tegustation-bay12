@@ -5,18 +5,21 @@
 	id = access_bunker
 	desc = "ISC Bunker"
 	region = ACCESS_REGION_NONE
+	access_type = ACCESS_TYPE_NONE
 
 /var/const/access_bunker_security = "ACCESS_BUNKER_SECURITY"
 /datum/access/bunker_security
 	id = access_bunker_security
 	desc = "ISC Bunker Security"
 	region = ACCESS_REGION_NONE
+	access_type = ACCESS_TYPE_NONE
 
 /var/const/access_bunker_armory = "ACCESS_BUNKER_ARMORY"
 /datum/access/bunker_armory
 	id = access_bunker_armory
 	desc = "ISC Bunker Armory"
 	region = ACCESS_REGION_NONE
+	access_type = ACCESS_TYPE_NONE
 
 /* ID Cards */
 

@@ -9,6 +9,10 @@
 #define CALIBER_REVOLVER_MEDIUM 	".357 Special"
 #define CALIBER_REVOLVER_HEAVY		".454 Casull"
 
+#define CALIBER_SMG				"10mmS"
+#define CALIBER_SMG_SMALL		"7mmS"
+#define CALIBER_SMG_FLECHETTE	"4mmS"
+
 #define CALIBER_RIFLE			"5mmR"
 #define CALIBER_RIFLE_MILITARY	"7mmR"
 #define CALIBER_T12				"10x24mmR"

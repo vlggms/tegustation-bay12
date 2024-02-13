@@ -292,3 +292,21 @@
 	if(!isnum(cost))
 		return
 	wealth -= cost
+
+/// Returns a multiplier to markup based on faction relations
+/datum/trading_station/proc/GetFactionMarkup(datum/trade_faction/buyer_faction)
+	var/datum/trade_faction/seller_faction = SSsupply.GetFaction(faction)
+	if(!istype(seller_faction) || !istype(buyer_faction))
+		return 1.0
+
+	switch(seller_faction.relationship[buyer_faction.name])
+		if(FACTION_STATE_ANIMOSITY)
+			return 1.25
+		if(FACTION_STATE_RIVAL)
+			return 1.5
+		if(FACTION_STATE_ENEMY)
+			return 2.0
+		if(FACTION_STATE_WAR) // Normally that'd be an embargo, but some outlaw traders exist
+			return 3.0
+		else
+			return 1.0

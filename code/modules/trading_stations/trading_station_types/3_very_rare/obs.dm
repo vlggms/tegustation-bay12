@@ -17,14 +17,19 @@
 			/obj/item/clothing/glasses/tacgoggles = GOODS_DEFAULT,
 			/obj/item/clothing/glasses/thermal = GOODS_DEFAULT,
 			/obj/item/clothing/glasses/night = GOODS_DEFAULT,
-			/obj/item/contraband/poster/order_black_of_sun = GOODS_DEFAULT,
+			/obj/item/contraband/poster/order_black_of_sun = CUSTOM_GOODS_NAME("OBS poster"),
 			),
 		TRADE_CAT_CLOTHING = list(
 			/obj/item/clothing/gloves/thick/combat = GOODS_DEFAULT,
 			),
 		TRADE_CAT_WEAPONS = list(
+			/obj/item/gun/projectile/automatic/ak47 = GOODS_DEFAULT,
 			/obj/item/tank/phoron/onetankbomb = GOODS_DEFAULT,
 			/obj/item/grenade/frag = GOODS_DEFAULT,
+			),
+		TRADE_CAT_AMMO = list(
+			/obj/item/ammo_magazine/ak47 = GOODS_DEFAULT,
+			/obj/item/ammo_magazine/ak47/extended = GOODS_DEFAULT,
 			),
 		)
 	hidden_inventory = list(

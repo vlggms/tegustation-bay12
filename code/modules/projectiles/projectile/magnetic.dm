@@ -6,21 +6,22 @@
 	penetrating = 5
 	armor_penetration = 65
 	penetration_modifier = 1.1
-	fire_sound = 'sound/weapons/railgun.ogg'
+	fire_sound = 'sound/weapons/gunshot/railgun.ogg'
 	distance_falloff = 1
 
 /obj/item/projectile/bullet/magnetic/slug
 	name = "slug"
 	icon_state = "gauss_silenced"
-	damage = 75
+	damage = 115
 	armor_penetration = 90
 
-// Used by those "automatic" railguns
+// Used by those "automatic" railguns; The most powerful projectile in the game
 /obj/item/projectile/bullet/magnetic/slug/super
 	name = "anti-tank slug"
 	icon_state = "gauss"
-	damage = 150
+	damage = 250
 	armor_penetration = 90
+	fire_sound = 'sound/weapons/gunshot/railgun_2.ogg'
 
 /obj/item/projectile/bullet/magnetic/flechette
 	name = "flechette"

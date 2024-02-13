@@ -7,10 +7,10 @@
 	w_class = ITEM_SIZE_NORMAL
 	bulk = -1
 	load_method = MAGAZINE
-	caliber = CALIBER_PISTOL_FLECHETTE
+	caliber = CALIBER_SMG_FLECHETTE
 	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 3)
 	slot_flags = SLOT_BELT
-	ammo_type = /obj/item/ammo_casing/flechette
+	ammo_type = /obj/item/ammo_casing/smg/flechette
 	magazine_type = /obj/item/ammo_magazine/proto_smg
 	allowed_magazines = /obj/item/ammo_magazine/proto_smg
 	multi_aim = 1
@@ -32,9 +32,9 @@
 	icon_state = "mpistolen"
 	safety_icon = "safety"
 	item_state = "mpistolen"
-	caliber = CALIBER_PISTOL
+	caliber = CALIBER_SMG
 	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2, TECH_ESOTERIC = 3)
-	ammo_type = /obj/item/ammo_casing/pistol
+	ammo_type = /obj/item/ammo_casing/smg
 	magazine_type = /obj/item/ammo_magazine/machine_pistol
 	allowed_magazines = /obj/item/ammo_magazine/machine_pistol //more damage compared to the wt550, smaller mag size
 	one_hand_penalty = 2
@@ -70,7 +70,7 @@
 	safety_icon = "safety"
 	w_class = ITEM_SIZE_LARGE
 	force = 10
-	caliber = CALIBER_PISTOL
+	caliber = CALIBER_SMG
 	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2, TECH_ESOTERIC = 8)
 	slot_flags = SLOT_BELT|SLOT_BACK
 	magazine_type = /obj/item/ammo_magazine/smg
@@ -143,10 +143,10 @@
 	item_state = "wt550"
 	safety_icon = "safety"
 	w_class = ITEM_SIZE_NORMAL
-	caliber = CALIBER_PISTOL_SMALL
+	caliber = CALIBER_SMG_SMALL
 	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2)
 	slot_flags = SLOT_BELT
-	ammo_type = /obj/item/ammo_casing/pistol/small
+	ammo_type = /obj/item/ammo_casing/smg/small
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/smg_top/rubber
 	allowed_magazines = /obj/item/ammo_magazine/smg_top
