@@ -985,6 +985,7 @@
 #include "code\game\objects\items\devices\paint_sprayer.dm"
 #include "code\game\objects\items\devices\personal_shield.dm"
 #include "code\game\objects\items\devices\powersink.dm"
+#include "code\game\objects\items\devices\quantum_keycard.dm"
 #include "code\game\objects\items\devices\remote_weapon_controller.dm"
 #include "code\game\objects\items\devices\slide_projector.dm"
 #include "code\game\objects\items\devices\spy_bug.dm"

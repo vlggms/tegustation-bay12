@@ -46,3 +46,12 @@
 	materials = list(MATERIAL_GOLD = 3000, MATERIAL_DIAMOND = 1500, MATERIAL_URANIUM = 250, MATERIAL_PLASTIC = 250)
 	build_path = /obj/item/storage/backpack/holding/duffle
 	sort_string = "VAFAB"
+
+/datum/design/item/bluespace/quantum_keycard
+	name = "quantum keycard"
+	desc = "A keycard able to link to a quantum pad's particle signature, allowing other quantum pads to travel there instead of their linked pad."
+	id = "quantum_keycard"
+	req_tech = list(TECH_BLUESPACE = 6, TECH_ENGINEERING = 5, TECH_DATA = 5)
+	materials = list(MATERIAL_PLASTIC = 3000, MATERIAL_DIAMOND = 1000, MATERIAL_URANIUM = 500)
+	build_path = /obj/item/quantum_keycard
+	sort_string = "VAGAA"
