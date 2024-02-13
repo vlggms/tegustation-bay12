@@ -33,7 +33,7 @@
 	name = "sending trade beacon"
 	icon_state = "beacon_sending"
 	var/export_cooldown
-	var/export_cooldown_time = 120 SECONDS
+	var/export_cooldown_time = 90 SECONDS
 
 /obj/machinery/trade_beacon/sending/Initialize()
 	. = ..()

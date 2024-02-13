@@ -215,7 +215,10 @@
 		return TRUE
 
 	if(href_list["PRG_log_screen"])
-		log_screen = input("Select log type", "Log Type", null) as null|anything in LOG_SCREEN_LIST
+		if(!(href_list["PRG_log_screen"] in LOG_SCREEN_LIST))
+			return FALSE
+
+		log_screen = href_list["PRG_log_screen"]
 		current_log_page = 1
 		return TRUE
 
@@ -595,7 +598,7 @@
 				if(get_area(receiving) != get_area(computer) && program_type != "master")
 					to_chat(usr, SPAN_WARNING("ERROR: Receiving beacon is too far from \the [computer]."))
 					return
-				if(!SSsupply.Buy(receiving, account, shopping_list))
+				if(!SSsupply.Buy(receiving, account, shopping_list, FALSE, null, faction))
 					to_chat(usr, SPAN_WARNING("ERROR: Purchase failed."))
 					return FALSE
 				ResetShopList()
@@ -606,7 +609,7 @@
 				if(get_area(sending) != get_area(computer) && program_type != "master")
 					to_chat(usr, SPAN_WARNING("ERROR: Sending beacon is too far from \the [computer]."))
 					return
-				SSsupply.Export(sending, account)
+				SSsupply.Export(sending, account, faction)
 				return TRUE
 
 		if(href_list["PRG_approve_order"])
@@ -625,7 +628,7 @@
 				to_chat(usr, SPAN_WARNING("ERROR: Not enough funds in requesting account ([requesting_account.owner_name] #[requesting_account.account_number])."))
 				return
 
-			SSsupply.PurchaseOrder(receiving, order)
+			SSsupply.PurchaseOrder(receiving, order, faction)
 			SSsupply.order_queue.Remove(order)
 			if(current_order == order)
 				current_order = null
@@ -652,6 +655,7 @@
 	dat += " | "
 	dat += trade_screen == CART_SCREEN ? "<b><u>Cart</u></b>" :"<A href='?src=\ref[src];PRG_trade_screen=[CART_SCREEN]'>Cart</A>"
 	dat += " | "
+	dat += trade_screen == LOG_SCREEN ? "<b><u>Logs</u></b>" :"<A href='?src=\ref[src];PRG_trade_screen=[LOG_SCREEN]'>Logs</A>"
 	dat += "<A href='?src=\ref[src];PC_exit=1'>Exit</A>"
 
 	dat += "<hr>"
@@ -754,9 +758,12 @@
 		if(!sending)
 			dat += "<b>Sending beacon is missing!</b>"
 		else
-			dat += "<A href='?src=\ref[src];PRG_update=1'>Update</A>"
+			dat += "<A href='?src=\ref[src];PRG_update=1'>Update</A> "
 			dat += "<A href='?src=\ref[src];PRG_export=1'>Export</A>"
 			dat += "<hr>"
+			if(sending.export_cooldown > world.time)
+				dat += "<b>Export cooldown: [round(sending.export_cooldown - world.time) / 1 SECONDS] seconds</b>"
+				dat += "<hr>"
 			var/total_cost = 0
 			for(var/atom/movable/AM in sending.GetObjects())
 				if(ishuman(AM))
@@ -767,12 +774,14 @@
 				var/cost = 0
 				for(var/atom/movable/item in reverselist(contents_incl_self))
 					cost += get_value(item)
+				if(!cost)
+					continue
 				dat += "- [AM.name] ([cost] [GLOB.using_map.local_currency_name_short])<br>"
 				total_cost += cost
 			if(total_cost)
 				dat += "<b>Total export cost: [total_cost] [GLOB.using_map.local_currency_name_short]</b>"
 			else
-				dat += "<b>There is no items within sending beacon's range!</b>"
+				dat += "<b>There is no items for export within sending beacon's range!</b>"
 
 	if(trade_screen == CART_SCREEN)
 		dat += "<A href='?src=\ref[src];PRG_receive=1'>Purchase</A> | "
@@ -793,6 +802,34 @@
 					dat += "- - [good_name] x[shopping_list[TS][cat][path]]<br>"
 				dat += "<br>"
 			dat += "<br>"
+
+	if(trade_screen == LOG_SCREEN)
+		dat += trade_screen == LOG_SHIPPING ? "<b><u>Shipping</u></b>" :"<A href='?src=\ref[src];PRG_log_screen=[LOG_SHIPPING]'>Shipping</A>"
+		dat += " | "
+		dat += trade_screen == LOG_EXPORT ? "<b><u>Export</u></b>" :"<A href='?src=\ref[src];PRG_log_screen=[LOG_EXPORT]'>Export</A>"
+
+		dat += "<hr>"
+
+		switch(log_screen)
+			if(LOG_SHIPPING)
+				for(var/list/log in reverseRange(SSsupply.shipping_log))
+				for(var/log in reverseRange(SSsupply.export_log))
+					dat += "Time: [log["time"]]<br>"
+					dat += "Account: [log["ordering_acct"]]<br>"
+					dat += "Link: [log["assoc_faction"]]<br>"
+					dat += "Total invoice: [log["total_paid"]] [GLOB.using_map.local_currency_name_short]<br>"
+					dat += "Articles bought: [log["contents"]]<br>"
+					dat += "<A href='?src=\ref[src];PRG_print=[log["id"]]'>Print</A>"
+					dat += "<hr>"
+			if(LOG_EXPORT)
+				for(var/log in reverseRange(SSsupply.export_log))
+					dat += "Time: [log["time"]]<br>"
+					dat += "Account: [log["ordering_acct"]]<br>"
+					dat += "Link: [log["assoc_faction"]]<br>"
+					dat += "Total invoice: [log["total_paid"]] [GLOB.using_map.local_currency_name_short]<br>"
+					dat += "Articles sold: [log["contents"]]<br>"
+					dat += "<A href='?src=\ref[src];PRG_print=[log["id"]]'>Print</A>"
+					dat += "<hr>"
 
 	var/datum/browser/popup = new(user, "supply_prg", "Trade Network", 600, 680)
 	popup.set_content(dat)
