@@ -19,7 +19,8 @@
 	if(!(gas_id in gas_data.gases))
 		return null
 	var/list/all_gases = decls_repository.get_decls_of_subtype(/decl/xgm_gas)
-	for(var/decl/xgm_gas/gas in all_gases)
+	for(var/type in all_gases)
+		var/decl/xgm_gas/gas = all_gases[type]
 		if(gas_id != gas.id)
 			continue
 		return gas
