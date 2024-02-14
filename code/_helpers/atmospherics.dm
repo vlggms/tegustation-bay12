@@ -18,4 +18,9 @@
 /proc/GetGasDatum(gas_id)
 	if(!(gas_id in gas_data.gases))
 		return null
-	return gas_data.gases[gas_id]
+	var/list/all_gases = decls_repository.get_decls_of_subtype(/decl/xgm_gas)
+	for(var/decl/xgm_gas/gas in all_gases)
+		if(gas_id != gas.id)
+			continue
+		return gas
+	return null

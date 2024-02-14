@@ -404,7 +404,7 @@ SUBSYSTEM_DEF(supply)
 					if(!(item.type in export_counter))
 						export_counter[item.type] = 0
 					if(export_counter[item.type] < 30)
-					export_counter[item.type] += 1
+						export_counter[item.type] += 1
 				//SEND_SIGNAL(src, COMSIG_TRADE_BEACON, item)
 				qdel(item)
 				++export_count
