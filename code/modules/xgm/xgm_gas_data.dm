@@ -51,6 +51,8 @@
 	var/symbol_html = "X"
 	var/symbol = "X"
 
+	/// Cost per mole
+	var/value = 0
 
 /hook/startup/proc/generateGasData()
 	gas_data = new

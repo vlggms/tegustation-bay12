@@ -91,3 +91,29 @@
 	. += length(allowed_spells * 1000)
 	if(!isnull(owner))
 		. *= 0.5
+
+/obj/item/reagent_containers/food/snacks/grown/Value(base)
+	. = ..()
+	. += seed.Value(FALSE)
+
+// Seeds cost less than fully grown plants
+/obj/item/seeds/Value(base)
+	. = ..()
+	. += round(seed.Value(TRUE) * 0.3)
+
+/obj/item/tank/Value(base)
+	. = ..()
+	for(var/gas_id in air_contents.gas)
+		var/decl/xgm_gas/gas = GetGasDatum(gas_id)
+		if(!istype(gas))
+			continue
+		. += gas.value * air_contents.gas[gas_id]
+
+// Mostly for canisters
+/obj/machinery/portable_atmospherics/Value(base)
+	. = ..()
+	for(var/gas_id in air_contents.gas)
+		var/decl/xgm_gas/gas = GetGasDatum(gas_id)
+		if(!istype(gas))
+			continue
+		. += gas.value * air_contents.gas[gas_id]

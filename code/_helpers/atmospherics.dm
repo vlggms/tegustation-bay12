@@ -14,3 +14,8 @@
 /proc/print_atmos_analysis(user, var/list/result)
 	for(var/line in result)
 		to_chat(user, "<span class='notice'>[line]</span>")
+
+/proc/GetGasDatum(gas_id)
+	if(!(gas_id in gas_data.gases))
+		return null
+	return gas_data.gases[gas_id]

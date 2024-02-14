@@ -861,3 +861,45 @@
 		res.overlays += I
 
 	return res
+
+/datum/seed/proc/Value(check_chems = TRUE)
+	. = 5
+	for(var/trait in traits)
+		var/trait_value = get_trait(trait)
+		if(!trait_value)
+			continue
+
+		switch(trait)
+			if(TRAIT_POTENCY)
+				. += trait_value * 0.4
+			if(TRAIT_EXPLOSIVE)
+				. += 15
+			if(TRAIT_HARVEST_REPEAT)
+				. += 15
+			if(TRAIT_PRODUCTION)
+				. += trait_value
+			if(TRAIT_YIELD)
+				. += trait_value
+			if(TRAIT_MATURATION)
+				. -= trait_value
+			if(TRAIT_ENDURANCE)
+				. += trait_value * 0.25
+			if(TRAIT_JUICY)
+				. += trait_value * 5
+			if(TRAIT_STINGS)
+				. += 15
+
+		for(var/gas_id in exude_gasses)
+			var/decl/xgm_gas/gas = GetGasDatum(gas_id)
+			if(!istype(gas))
+				continue
+			. += gas.value * exude_gasses[gas_id]
+
+		if(check_chems)
+			for(var/chem in chems)
+				var/datum/reagent/R = GLOB.chemical_reagents_list[chem]
+				if(!istype(R))
+					continue
+				. += R.value * chems[chem]
+
+	. = round(max(2, .))
