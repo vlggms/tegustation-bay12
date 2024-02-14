@@ -672,6 +672,7 @@
 
 		if(account)
 			dat += "Current Account: [account.owner_name]<br>"
+			dat += "Balance: [account.get_balance()]<br>"
 			dat += "<a href='?src=\ref[src];PRG_account_unlink=1'>Unlink</A><br><br>"
 		else
 			dat += "<A href='?src=\ref[src];PRG_account=1'>Link Account</A><br><br>"
