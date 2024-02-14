@@ -102,12 +102,11 @@
 		spark_system.start()
 
 /obj/item/rcd/afterattack(atom/A, mob/user, proximity)
-	if(!proximity)
-		return
+	var/turf/T = get_turf(A)
+	if(!can_use(user, T))
+		return FALSE
 	if(disabled && !isrobot(user))
-		return 0
-	if(istype(get_area(A), /area/shuttle) || istype(get_area(A), /turf/space/transit))
-		return 0
+		return FALSE
 	work_id++
 	work_mode.do_work(src, A, user)
 
@@ -184,14 +183,17 @@
 	max_stored_matter = 240
 	build_speed_multiplier = 0.75
 
-// Super-fast RCD for memes and admemes. Don't actually spawn this menace.
+// Super-fast ranged RCD for memes and admemes. Don't actually spawn this menace.
 /obj/item/rcd/improved/admin
-	name = "rapid-rapid construction device"
-	desc = "Device that manifests or destroys buildings in an instant. Where did you get this from?"
-	origin_tech = list(TECH_ENGINEERING = 10, TECH_MATERIAL = 8)
+	name = "rapid-rapid bluespace construction device"
+	desc = "Device that manifests or destroys buildings in an instant at any distance. Where did you get this from?"
+	origin_tech = list(TECH_ENGINEERING = 20, TECH_MATERIAL = 18)
 	matter = list(MATERIAL_STEEL = 75000, MATERIAL_SILVER = 15000)
 	max_stored_matter = 480
 	build_speed_multiplier = 0.1
+
+/obj/item/rcd/improved/admin/can_use(mob/user, turf/T)
+	return (user.get_active_hand() == src && !user.incapacitated())
 
 /*** RCD ammo ***/
 /obj/item/rcd_ammo
