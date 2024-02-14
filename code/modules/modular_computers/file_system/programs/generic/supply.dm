@@ -33,6 +33,10 @@
 
 	// Our associated trade faction
 	var/faction = FACTION_INDEPENDENT
+	// Point at world.time when we can set/reset the faction again
+	var/faction_cooldown
+	// How often we can change faction on the console
+	var/faction_cooldown_time = 2 MINUTES
 
 	var/prg_screen = PRG_TREE
 	var/trade_screen = GOODS_SCREEN
@@ -229,6 +233,10 @@
 		return TRUE
 
 	if(href_list["PRG_faction"])
+		if(faction_cooldown > world.time)
+			to_chat(usr, SPAN_WARNING("The option is currently unavailable! Try again later!"))
+			return
+
 		var/obj/item/stock_parts/computer/card_slot/card_slot = computer.get_component(PART_CARD)
 		if(!istype(card_slot))
 			to_chat(usr, SPAN_WARNING("Card slot is not installed."))
@@ -258,9 +266,14 @@
 			return
 
 		faction = faction_chosen
+		faction_cooldown = world.time + faction_cooldown_time
 		return TRUE
 
 	if(href_list["PRG_faction_unlink"])
+		if(faction_cooldown > world.time)
+			to_chat(usr, SPAN_WARNING("The option is currently unavailable! Try again later!"))
+			return
+
 		faction = FACTION_INDEPENDENT
 		return TRUE
 
