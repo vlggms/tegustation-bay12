@@ -4,6 +4,7 @@
 	var/affect_ghosts = 0
 	var/stopper = 1 // stops throwers
 	invisibility = 101 // nope cant see this shit
+	icon = 'icons/misc/mark.dmi'
 	anchored = TRUE
 
 /obj/effect/step_trigger/proc/Trigger(var/atom/movable/A)
@@ -31,6 +32,7 @@
 	var/facedir = 0 // if 1: atom faces the direction of movement
 	var/nostop = 0 // if 1: will only be stopped by teleporters
 	var/list/affecting = list()
+	icon_state = "directional"
 
 /obj/effect/step_trigger/thrower/Trigger(var/atom/movable/AM)
 	if(!AM || !istype(AM) || !AM.simulated)
@@ -108,6 +110,7 @@
 	var/teleport_x_offset = 0
 	var/teleport_y_offset = 0
 	var/teleport_z_offset = 0
+	icon_state = "cordon"
 
 /obj/effect/step_trigger/teleporter/random/Trigger(var/atom/movable/A)
 	var/turf/T = locate(rand(teleport_x, teleport_x_offset), rand(teleport_y, teleport_y_offset), rand(teleport_z, teleport_z_offset))
