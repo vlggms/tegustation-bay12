@@ -162,6 +162,14 @@
 	if(istype(old_location))
 		old_location.shuttle_departed(src)
 	destination.shuttle_arrived(src)
+	// Prevents power usage duplication
+	var/list/retally_areas
+	if(isarea(shuttle_area))
+		retally_areas = list(shuttle_area)
+	else if(islist(shuttle_area))
+		retally_areas = shuttle_area
+	for(var/area/A in retally_areas)
+		A.retally_power()
 	return TRUE
 
 //just moves the shuttle from A to B, if it can be moved
