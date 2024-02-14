@@ -44,6 +44,7 @@
 	req_access = list(access_squad_leader)
 	closet_appearance = /decl/closet_appearance/secure_closet/intrepid/exploration/squad_leader
 	storage_capacity = 60
+	health_min_damage = 40
 
 /obj/structure/closet/secure_closet/squad_leader/WillContain()
 	return list(
@@ -88,6 +89,7 @@
 	req_access = list(access_marine)
 	closet_appearance = /decl/closet_appearance/secure_closet/intrepid/exploration
 	storage_capacity = 60
+	health_min_damage = 40
 
 /obj/structure/closet/secure_closet/marine/WillContain()
 	return list(
@@ -124,6 +126,7 @@
 	req_access = list(access_combat_medic)
 	closet_appearance = /decl/closet_appearance/secure_closet/intrepid/exploration/medic
 	storage_capacity = 60
+	health_min_damage = 40
 
 /obj/structure/closet/secure_closet/combat_medic/WillContain()
 	return list(
@@ -167,6 +170,7 @@
 	req_access = list(access_combat_engineer)
 	closet_appearance = /decl/closet_appearance/secure_closet/intrepid/exploration/engi
 	storage_capacity = 60
+	health_min_damage = 40
 
 /obj/structure/closet/secure_closet/combat_engi/WillContain()
 	return list(
