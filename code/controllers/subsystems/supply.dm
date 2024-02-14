@@ -35,6 +35,15 @@ SUBSYSTEM_DEF(supply)
 	var/order_queue_id = 0
 	var/list/order_queue = list()
 
+	// For exporting
+	var/list/export_modifier = list()
+	var/list/export_counter = list()
+	/// Paths of atoms that are entirely unaffected by export price modifiers
+	var/list/export_modifier_exempt_types = list(
+		/obj/item/stack,
+		/obj/item/reagent_containers,
+		)
+
 /datum/controller/subsystem/supply/Initialize()
 	. = ..()
 	for(var/faction_type in typesof(/datum/trade_faction))
@@ -70,6 +79,9 @@ SUBSYSTEM_DEF(supply)
 /datum/controller/subsystem/supply/fire()
 	for(var/datum/money_account/A in all_money_accounts)
 		A.PayrollTick()
+	for(var/A in export_counter)
+		export_counter[A] = max(0, export_counter[A] -= 10000)
+	ExportCounterCheck()
 
 /datum/controller/subsystem/supply/proc/GetFaction(fac)
 	if(!(fac in factions))
@@ -382,12 +394,16 @@ SUBSYSTEM_DEF(supply)
 			if(istype(item, /obj/screen))
 				continue
 
-			var/item_price = get_value(item)
+			var/item_price = GetExportValue(item)
 			var/export_value = item_price
 
 			if(export_value)
 				invoice_contents_info += "<li>[item.name]</li>"
 				cost += export_value
+				if(!(is_path_in_list(item.type, export_modifier_exempt_types)))
+					if(!(item.type in export_counter))
+						export_counter[item.type] = 0
+					export_counter[item.type] += export_value
 				//SEND_SIGNAL(src, COMSIG_TRADE_BEACON, item)
 				qdel(item)
 				++export_count
@@ -401,11 +417,25 @@ SUBSYSTEM_DEF(supply)
 		if(export_count > 100)
 			break
 
+	ExportCounterCheck()
+
 	moneyAccount.deposit(cost, "Export", "Trade Network")
 
 	if(invoice_contents_info)	// If no info, then nothing was exported
 		CreateLogEntry("Export", moneyAccount.owner_name, used_faction, invoice_contents_info, cost, FALSE, get_turf(senderBeacon))
 	return TRUE
+
+/datum/controller/subsystem/supply/proc/GetExportValue(atom/A)
+	. = get_value(A)
+	if(A.type in export_modifier)
+		. *= export_modifier[A.type]
+
+/datum/controller/subsystem/supply/proc/ExportCounterCheck()
+	for(var/A in export_counter)
+		if(export_counter[A] > 25000)
+			export_modifier[A] = clamp(round(25000 / export_counter[A], 0.01), 0.5, 2.0)
+		else if(A in export_modifier)
+			export_modifier -= A
 
 // Logging
 

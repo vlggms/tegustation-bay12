@@ -787,11 +787,20 @@
 				if(is_path_in_list(/mob/living/carbon/human, contents_incl_self))
 					continue
 				var/cost = 0
+				var/normal_cost = 0
 				for(var/atom/movable/item in reverselist(contents_incl_self))
-					cost += get_value(item)
+					cost += SSsupply.GetExportValue(item)
+					normal_cost += get_value(item)
 				if(!cost)
 					continue
-				dat += "- [AM.name] ([cost] [GLOB.using_map.local_currency_name_short])<br>"
+				dat += "- [AM.name] ([cost] [GLOB.using_map.local_currency_name_short])"
+				if(cost < normal_cost)
+					var/percent_diff = round(cost / normal_cost, 0.01) * 100
+					dat += " <span style='color: [COLOR_RED]'>([percent_diff]%)</span>"
+				else if(cost > normal_cost)
+					var/percent_diff = round(cost / normal_cost, 0.01) * 100
+					dat += " <span style='color: [COLOR_GREEN]'>([percent_diff]%)</span>"
+				dat += "<br>"
 				total_cost += cost
 			if(total_cost)
 				dat += "<b>Total export cost: [total_cost] [GLOB.using_map.local_currency_name_short]</b>"
