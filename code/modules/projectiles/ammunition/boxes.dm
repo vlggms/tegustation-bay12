@@ -126,7 +126,7 @@
 
 /obj/item/ammo_magazine/machine_pistol/rubber
 	labels = list("rubber")
-	ammo_type = /obj/item/projectile/bullet/smg/rubber
+	ammo_type = /obj/item/ammo_casing/smg/rubber
 
 /obj/item/ammo_magazine/machine_pistol/empty
 	initial_ammo = 0
@@ -135,7 +135,7 @@
 	name = "top mounted magazine"
 	icon_state = "smg_top"
 	mag_type = MAGAZINE
-	ammo_type = /obj/item/projectile/bullet/smg/small
+	ammo_type = /obj/item/ammo_casing/smg/small
 	matter = list(MATERIAL_STEEL = 1200)
 	caliber = CALIBER_SMG_SMALL
 	max_ammo = 20
