@@ -10,6 +10,8 @@
 							//1 - require manual login / account number and pin
 							//2 - require card and manual login
 	var/account_type = ACCOUNT_TYPE_PERSONAL
+	/// Associative list of money accounts which we pay into every 30 minutes; account_number = money
+	var/list/payroll_accounts = list()
 
 /datum/money_account/New(var/account_type)
 	account_type = account_type ? account_type : ACCOUNT_TYPE_PERSONAL
@@ -38,6 +40,17 @@
 	var/datum/transaction/T = new(src, to_account, amount, purpose)
 	return T.perform()
 
+// Called by supply subsystem fire() proc every ~30 minutes
+/datum/money_account/proc/PayrollTick()
+	listclearnulls(payroll_accounts)
+	for(var/datum/money_account/A in payroll_accounts)
+		if(!payroll_accounts[A])
+			payroll_accounts[A] = 0
+			continue
+		var/pay = payroll_accounts[A]
+		if(!pay || pay > money)
+			continue
+		transfer(A, pay, "Payroll from [account_name]")
 
 /proc/create_account(var/account_name = "Default account name", var/owner_name, var/starting_funds = 0, var/account_type = ACCOUNT_TYPE_PERSONAL, var/obj/machinery/computer/account_database/source_db)
 

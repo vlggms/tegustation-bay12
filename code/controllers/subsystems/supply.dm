@@ -3,6 +3,8 @@ SUBSYSTEM_DEF(supply)
 	name = "Supply"
 	priority = SS_PRIORITY_SUPPLY
 	flags = SS_NO_FIRE
+	runlevels = RUNLEVEL_GAME|RUNLEVEL_POSTGAME
+	wait = 30 MINUTES
 
 	/// Budget for trading stations with spawn_always at FALSE
 	var/trade_stations_budget = 5
@@ -64,6 +66,10 @@ SUBSYSTEM_DEF(supply)
 /datum/controller/subsystem/supply/Destroy()
 	DeInitTradeStations()
 	. = ..()
+
+/datum/controller/subsystem/supply/fire()
+	for(var/datum/money_account/A in all_money_accounts)
+		A.PayrollTick()
 
 /datum/controller/subsystem/supply/proc/GetFaction(fac)
 	if(!(fac in factions))
