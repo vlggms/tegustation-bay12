@@ -864,7 +864,8 @@
 
 /datum/seed/proc/Value(check_chems = TRUE)
 	. = 5
-	for(var/trait in traits)
+	for(var/trait_text in traits)
+		var/trait = text2num(trait_text)
 		var/trait_value = get_trait(trait)
 		if(!trait_value)
 			continue
