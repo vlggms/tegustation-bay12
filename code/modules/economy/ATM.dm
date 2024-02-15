@@ -186,7 +186,7 @@
 							t += "<input type='submit' value='Transfer funds'><br>"
 							t += "</form>"
 						if(PAYROLLS)
-							t += "<b>Accounts on payroll:</b>"
+							t += "<b>Accounts on payroll:</b><br>"
 							for(var/acc_id in authenticated_account.payroll_accounts)
 								var/datum/money_account/A = get_account(text2num(acc_id))
 								if(!istype(A))
@@ -195,7 +195,7 @@
 								var/paycheck = authenticated_account.payroll_accounts[acc_id]
 								t += "[A.account_name]: <A href='?src=\ref[src];choice=set_payroll&account=[acc_id]'>[paycheck]</A><br>"
 							t += "<br>"
-							t += "<A href='?src=\ref[src];choice=set_payroll'>Add new account</A>"
+							t += "<A href='?src=\ref[src];choice=set_payroll'>Add new account</A><br>"
 						else
 							t += "<b>Account balance:</b> [GLOB.using_map.local_currency_name_short][authenticated_account.money]"
 							t += "<form name='withdrawal' action='?src=\ref[src]' method='get'>"
@@ -439,7 +439,7 @@
 					return
 
 				var/list/payroll = authenticated_account.payroll_accounts
-				var/account_id = href_list["account"]
+				var/account_id = text2num(href_list["account"])
 				if(!account_id)
 					account_id = input("Enter account number", "Account payroll") as num|null
 
