@@ -104,16 +104,12 @@
 /obj/item/tank/Value(base)
 	. = ..()
 	for(var/gas_id in air_contents.gas)
-		var/decl/xgm_gas/gas = GetGasDatum(gas_id)
-		if(!istype(gas))
-			continue
-		. += gas.value * air_contents.gas[gas_id]
+		. += gas_data.value[gas_id] * air_contents.gas[gas_id]
+	. = round(.)
 
 // Mostly for canisters
 /obj/machinery/portable_atmospherics/Value(base)
 	. = ..()
 	for(var/gas_id in air_contents.gas)
-		var/decl/xgm_gas/gas = GetGasDatum(gas_id)
-		if(!istype(gas))
-			continue
-		. += gas.value * air_contents.gas[gas_id]
+		. += gas_data.value[gas_id] * air_contents.gas[gas_id]
+	. = round(.)

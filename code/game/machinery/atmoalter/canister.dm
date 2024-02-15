@@ -174,6 +174,24 @@
 		GAS_CHLORINE = -1
 	)
 
+/obj/machinery/portable_atmospherics/canister/tritium
+	name = "gas canister \[Tritium\]"
+	icon_state = "green"
+	canister_color = "green"
+	can_label = FALSE
+	initial_gases = list(
+		GAS_TRITIUM = -1
+	)
+
+/obj/machinery/portable_atmospherics/canister/deuterium
+	name = "gas canister \[Deuterium\]"
+	icon_state = "green"
+	canister_color = "green"
+	can_label = FALSE
+	initial_gases = list(
+		GAS_DEUTERIUM = -1
+	)
+
 /obj/machinery/portable_atmospherics/canister/air/airlock
 	start_pressure = 3 * ONE_ATMOSPHERE
 
@@ -218,6 +236,14 @@
 /obj/machinery/portable_atmospherics/canister/empty/hydrogen
 	icon_state = "purple"
 	canister_type = /obj/machinery/portable_atmospherics/canister/hydrogen
+
+/obj/machinery/portable_atmospherics/canister/empty/tritium
+	icon_state = "green"
+	canister_type = /obj/machinery/portable_atmospherics/canister/tritium
+
+/obj/machinery/portable_atmospherics/canister/empty/deuterium
+	icon_state = "green"
+	canister_type = /obj/machinery/portable_atmospherics/canister/deuterium
 
 
 

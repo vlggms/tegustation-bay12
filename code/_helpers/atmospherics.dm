@@ -14,14 +14,3 @@
 /proc/print_atmos_analysis(user, var/list/result)
 	for(var/line in result)
 		to_chat(user, "<span class='notice'>[line]</span>")
-
-/proc/GetGasDatum(gas_id)
-	if(!(gas_id in gas_data.gases))
-		return null
-	var/list/all_gases = decls_repository.get_decls_of_subtype(/decl/xgm_gas)
-	for(var/type in all_gases)
-		var/decl/xgm_gas/gas = all_gases[type]
-		if(gas_id != gas.id)
-			continue
-		return gas
-	return null

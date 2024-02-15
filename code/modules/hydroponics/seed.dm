@@ -891,10 +891,7 @@
 				. += 15
 
 		for(var/gas_id in exude_gasses)
-			var/decl/xgm_gas/gas = GetGasDatum(gas_id)
-			if(!istype(gas))
-				continue
-			. += gas.value * exude_gasses[gas_id]
+			. += gas_data.value[gas_id] * exude_gasses[gas_id]
 
 		if(check_chems)
 			for(var/chem in chems)

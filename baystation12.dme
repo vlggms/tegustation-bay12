@@ -3289,6 +3289,7 @@
 #include "code\modules\tgs\includes.dm"
 #include "code\modules\trading_stations\_faction.dm"
 #include "code\modules\trading_stations\_trading_station.dm"
+#include "code\modules\trading_stations\trading_station_types\0_always_spawn\atmos.dm"
 #include "code\modules\trading_stations\trading_station_types\0_always_spawn\engineering.dm"
 #include "code\modules\trading_stations\trading_station_types\0_always_spawn\eva.dm"
 #include "code\modules\trading_stations\trading_station_types\0_always_spawn\materials.dm"
