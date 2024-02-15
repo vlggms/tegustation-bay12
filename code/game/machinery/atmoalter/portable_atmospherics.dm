@@ -3,11 +3,12 @@
 	use_power = POWER_USE_OFF
 	construct_state = /decl/machine_construction/default/panel_closed
 
-	var/datum/gas_mixture/air_contents = new
+	var/datum/gas_mixture/air_contents
 
 	var/obj/machinery/atmospherics/portables_connector/connected_port
 	var/obj/item/tank/holding
 
+	var/initial_temperature = T20C
 	var/volume = 0
 	var/destroyed = 0
 
@@ -22,8 +23,7 @@
 
 /obj/machinery/portable_atmospherics/Initialize()
 	..()
-	air_contents.volume = volume
-	air_contents.temperature = T20C
+	air_contents = new(volume, initial_temperature)
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/machinery/portable_atmospherics/LateInitialize()
