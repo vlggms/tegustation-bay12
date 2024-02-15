@@ -5,6 +5,7 @@
 	cooldown_time = 5 SECONDS
 	time_min_range = 5 SECONDS
 	time_max_range = 20 SECONDS
+	value = 500
 	var/datum/skill_buff/buff_type = /datum/skill_buff/artifact
 	var/decl/hierarchy/skill/buff_skill
 	var/buff_amount = 1
@@ -34,6 +35,11 @@
 		buff_amount = 3
 	else if(prob(1)) // LEGENDARY
 		buff_amount = 4
+
+/datum/artifact_effect/skill_buff/Value()
+	. = ..()
+	. += buff_amount * 10000
+	. += buff_duration * 2
 
 /datum/artifact_effect/skill_buff/proc/BuffMob(mob/living/carbon/human/H)
 	if(ishuman(H))

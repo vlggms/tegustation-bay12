@@ -1,6 +1,7 @@
 /datum/artifact_effect/radiate
 	name = "radiation"
 	possible_effect_types = list(EFFECT_TOUCH, EFFECT_AURA, EFFECT_PULSE)
+	value = 3000
 	var/radiation_strength
 
 /datum/artifact_effect/radiate/getDescription()
@@ -14,6 +15,10 @@
 /datum/artifact_effect/radiate/New()
 	..()
 	radiation_strength = rand(10, 50)
+
+/datum/artifact_effect/radiate/Value()
+	. = ..()
+	. += radiation_strength * 100
 
 /datum/artifact_effect/radiate/DoEffect(mob/living/user)
 	if(istype(user))

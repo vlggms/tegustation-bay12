@@ -18,6 +18,8 @@
 	var/on_time //time artifact should stay on for when toggled
 	var/time_min_range = 50
 	var/time_max_range = 200
+	// Base value of this effect
+	var/value = 0
 
 /datum/artifact_effect/New(atom/artifact)
 	..()
@@ -132,3 +134,6 @@
 		protected += 0.1
 
 	return 1 - protected
+
+/datum/artifact_effect/proc/Value()
+	return value

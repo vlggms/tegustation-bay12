@@ -6,6 +6,7 @@
 		)
 	possible_effect_types = list(EFFECT_TOUCH, EFFECT_PULSE)
 	cooldown_time = 100
+	value = 4000
 
 /datum/artifact_effect/bone_break/getDescription()
 	return "The artifact emits waves of shattering energy."

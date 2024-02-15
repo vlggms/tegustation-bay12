@@ -113,3 +113,13 @@
 	for(var/gas_id in air_contents.gas)
 		. += gas_data.value[gas_id] * air_contents.gas[gas_id]
 	. = round(.)
+
+/obj/machinery/artifact/Value(base)
+	. = ..()
+	if(effect)
+		. += effect.Value()
+
+/obj/item/anobattery/Value(base)
+	. = ..()
+	if(battery_effect)
+		. += round(battery_effect.Value() * 0.25)

@@ -2,6 +2,7 @@
 	name = "hurt"
 	possible_effect_types = list(EFFECT_TOUCH, EFFECT_AURA, EFFECT_PULSE)
 	cooldown_time = 50
+	value = 3000
 
 /datum/artifact_effect/hurt/getDescription()
 	return "The artifact emits waves of harmful energy."

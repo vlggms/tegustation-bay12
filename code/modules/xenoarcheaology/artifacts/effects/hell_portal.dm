@@ -1,6 +1,7 @@
 /datum/artifact_effect/hellportal
 	name = "hellportal"
 	effect_type = EFFECT_PULSE
+	value = 1000
 	var/convert_count //how many turfs are converted to lava each activation
 	var/active_portals_max //how many portals can be spawned at each interval
 	var/maximum_mob_count
@@ -48,6 +49,13 @@
 		GLOB.destroyed_event.unregister(P, src)
 
 	..()
+
+/datum/artifact_effect/hellportal/Value()
+	. = ..()
+	. += convert_count * 1000
+	. += active_portals_max * 2000
+	. += maximum_mob_count * 500
+	. += damage * 100
 
 /datum/artifact_effect/hellportal/DoEffectPulse()
 	if (holder)

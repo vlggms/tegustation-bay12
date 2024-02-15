@@ -2,6 +2,7 @@
 	name = "organ mend"
 	possible_effect_types = list(EFFECT_TOUCH, EFFECT_PULSE)
 	cooldown_time = 100
+	value = 12000
 
 /datum/artifact_effect/organ_mend/getDescription()
 	return "The artifact emits waves that positively affect internal organs."

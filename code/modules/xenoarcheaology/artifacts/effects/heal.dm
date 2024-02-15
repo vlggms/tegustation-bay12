@@ -2,6 +2,7 @@
 	name = "heal"
 	possible_effect_types = list(EFFECT_TOUCH, EFFECT_AURA, EFFECT_PULSE)
 	cooldown_time = 50
+	value = 7000
 
 /datum/artifact_effect/heal/getDescription()
 	return "The artifact emits waves of soothing energy."

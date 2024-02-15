@@ -1,6 +1,7 @@
 /datum/artifact_effect/cellcharge
 	name = "cell charge"
 	possible_effect_types = list(EFFECT_TOUCH, EFFECT_AURA, EFFECT_PULSE)
+	value = 5000
 	var/last_message
 
 /datum/artifact_effect/cellcharge/getDescription()
