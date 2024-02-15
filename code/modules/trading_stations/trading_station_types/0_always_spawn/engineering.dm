@@ -43,4 +43,8 @@
 		TRADE_CAT_TOOLS = list(
 			/obj/item/storage/toolbox/syndicate = GOODS_DEFAULT,
 			),
+		TRADE_CAT_EQUIPMENT = list(
+			/obj/machinery/power/supermatter/shard = GOODS_DEFAULT,
+			/obj/machinery/power/supermatter = GOODS_DEFAULT,
+			),
 		)
