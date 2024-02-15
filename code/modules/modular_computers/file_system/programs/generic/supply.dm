@@ -279,7 +279,17 @@
 
 	if(href_list["PRG_account"])
 		var/obj/item/stock_parts/computer/card_slot/card_slot = computer.get_component(PART_CARD)
-		var/acc_num = input("Enter account number", "Account linking", card_slot?.stored_card?.associated_account_number) as num|null
+		var/obj/item/card/id/ID = card_slot.stored_card
+		if(!istype(ID))
+			ID = usr.GetIdCard()
+		// Account security level is 0 - auto-login from the ID
+		if(istype(ID) && ID.associated_account_number)
+			var/datum/money_account/A = get_account(ID.associated_account_number)
+			if(istype(A) && A.security_level == 0)
+				account = A
+				return TRUE
+
+		var/acc_num = input("Enter account number", "Account linking", ID.associated_account_number) as num|null
 		if(!acc_num)
 			return
 
@@ -287,7 +297,7 @@
 		if(!acc_pin)
 			return
 
-		var/card_check = card_slot?.stored_card?.associated_account_number == acc_num
+		var/card_check = ID.associated_account_number == acc_num
 		var/datum/money_account/A = attempt_account_access(acc_num, acc_pin, card_check ? 2 : 1, TRUE)
 		if(!A)
 			to_chat(usr, SPAN_WARNING("Unable to link account: access denied."))
@@ -318,6 +328,9 @@
 		if(!account)
 			to_chat(usr, SPAN_WARNING("ERROR: No account linked."))
 			return
+		if(account.suspended)
+			to_chat(usr, SPAN_WARNING("ERROR: Linked account is suspended."))
+			return
 		if(LAZYLEN(station.whitelist_factions) && !(faction in station.whitelist_factions))
 			to_chat(usr, SPAN_WARNING("ERROR: Trading is forbidden for your associated faction."))
 			return
@@ -344,6 +357,9 @@
 		// Double check for input
 		if(!account)
 			to_chat(usr, SPAN_WARNING("ERROR: No account linked."))
+			return
+		if(account.suspended)
+			to_chat(usr, SPAN_WARNING("ERROR: Linked account is suspended."))
 			return
 		if(LAZYLEN(station.whitelist_factions) && !(faction in station.whitelist_factions))
 			to_chat(usr, SPAN_WARNING("ERROR: Trading is forbidden for your associated faction."))
@@ -416,6 +432,9 @@
 	if(href_list["PRG_build_order"])
 		if(orders_locked)
 			to_chat(usr, SPAN_WARNING("ERROR: You cannot place an order at this time. Please wait 10 seconds."))
+			return
+		if(account.suspended)
+			to_chat(usr, SPAN_WARNING("ERROR: Linked account is suspended."))
 			return
 		var/reason = sanitizeName(input("Enter reason(s) for order", "Request Reason", ""), MAX_NAME_LEN)
 		current_order = SSsupply.BuildOrder(account, reason, shopping_list)
@@ -608,6 +627,9 @@
 				if(!account)
 					to_chat(usr, SPAN_WARNING("ERROR: No account linked."))
 					return
+				if(account.suspended)
+					to_chat(usr, SPAN_WARNING("ERROR: Linked account is suspended."))
+					return
 				if(get_area(receiving) != get_area(computer) && program_type != "master")
 					to_chat(usr, SPAN_WARNING("ERROR: Receiving beacon is too far from \the [computer]."))
 					return
@@ -621,6 +643,9 @@
 			if(href_list["PRG_export"])
 				if(get_area(sending) != get_area(computer) && program_type != "master")
 					to_chat(usr, SPAN_WARNING("ERROR: Sending beacon is too far from \the [computer]."))
+					return
+				if(account.suspended)
+					to_chat(usr, SPAN_WARNING("ERROR: Linked account is suspended."))
 					return
 				SSsupply.Export(sending, account, faction)
 				return TRUE
@@ -684,7 +709,7 @@
 			dat += "<A href='?src=\ref[src];PRG_faction=1'>Link Faction</A><br><br>"
 
 		if(account)
-			dat += "Current Account: [account.owner_name]<br>"
+			dat += "Current Account: [account.owner_name][account.suspended ? " <span style='color: [COLOR_RED]'>\[SUSPENDED\]</span>" : ""]<br>"
 			dat += "Balance: [account.get_balance()]<br>"
 			dat += "<a href='?src=\ref[src];PRG_account_unlink=1'>Unlink</A><br><br>"
 		else
