@@ -33,10 +33,10 @@
 	/// Associative list of gases for this canister to begin with and the moles to have. A negative value will fill the tank to its starting pressure with the gas.
 	var/list/initial_gases = list()
 	/// A temperature in Kelvin for this canister's air contents to begin with. Use this for pre-chilled gases.
-	var/initial_temperature
+	var/initial_temperature = null
 
 /obj/machinery/portable_atmospherics/canister/Initialize(mapload)
-	. = ..(mapload)
+	. = ..()
 	if(prob(1))
 		desc += " Does not hold GAS." // huhuhu
 	create_initial_gases()
@@ -46,7 +46,7 @@
 	if (initial_gases?.len)
 		for (var/gas_id in initial_gases)
 			air_contents.adjust_gas(gas_id, initial_gases[gas_id] < 0 ? MolesForPressure() : initial_gases[gas_id])
-	if (initial_temperature)
+	if(!isnull(initial_temperature))
 		air_contents.temperature = initial_temperature
 	update_icon()
 
