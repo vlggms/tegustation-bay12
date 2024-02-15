@@ -35,14 +35,11 @@
 	/// A temperature in Kelvin for this canister's air contents to begin with. Use this for pre-chilled gases.
 	var/initial_temperature
 
-/obj/machinery/portable_atmospherics/canister/LateInitialize(mapload)
+/obj/machinery/portable_atmospherics/canister/Initialize(mapload)
 	. = ..(mapload)
-	if (prob(1))
+	if(prob(1))
 		desc += " Does not hold GAS." // huhuhu
-	if (!mapload) // Call gas creation after normal init if we're midround - otherwise, we'll runtime and have no gases
-		addtimer(CALLBACK(src, .proc/create_initial_gases), 0)
-	else
-		create_initial_gases()
+	create_initial_gases()
 
 /// Fills this canister with gas based on its subtype's initial_gases list. Should only happen during initial creation.
 /obj/machinery/portable_atmospherics/canister/proc/create_initial_gases()
