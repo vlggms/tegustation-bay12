@@ -250,11 +250,11 @@ Standard helpers for users interacting with machinery parts.
 	// Installs missing components if possible
 	for(var/a_path in missing_parts())
 		var/obj/item/stock_parts/A = a_path
-		if(!A.base_type)
+		if(!initial(A.base_type))
 			continue
 		var/obj/item/stock_parts/best_part = null
 		for(var/obj/item/stock_parts/B in R)
-			if(!istype(B, A.base_type))
+			if(!istype(B, initial(A.base_type)))
 				continue
 			if(isnull(best_part) || B.rating > best_part.rating)
 				best_part = B
