@@ -321,7 +321,9 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 				being_built = D
 				break
 		if(being_built)
-			linked_lathe.addToQueue(being_built)
+			var/amount_to_print = text2num(href_list["build_amount"])
+			for(var/i = 1 to amount_to_print)
+				linked_lathe.addToQueue(being_built)
 		screen = 3.1
 
 	else if(href_list["imprint"]) //Causes the Circuit Imprinter to build something.
@@ -333,7 +335,9 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 				being_built = D
 				break
 		if(being_built)
-			linked_imprinter.addToQueue(being_built)
+			var/amount_to_print = text2num(href_list["build_amount"])
+			for(var/i = 1 to amount_to_print)
+				linked_imprinter.addToQueue(being_built)
 		screen = 4.1
 
 	else if(href_list["disposeI"])  //Causes the circuit imprinter to dispose of a single reagent (all of it)
@@ -722,15 +726,20 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 					continue
 				var/temp_dat
 				for(var/M in D.materials)
-					temp_dat += ", [D.materials[M]] [CallMaterialName(M)]"
+					temp_dat += ", [D.materials[M]*(linked_imprinter ? linked_imprinter.mat_efficiency : 1)] [CallMaterialName(M)]"
 				for(var/T in D.chemicals)
 					temp_dat += ", [D.chemicals[T]*(linked_imprinter ? linked_imprinter.mat_efficiency : 1)] [CallReagentName(T)]"
 				if(temp_dat)
 					temp_dat = " \[[copytext(temp_dat, 3)]\]"
 				if(linked_lathe.canBuild(D))
-					dat += "<LI><B><A href='?src=\ref[src];build=[D.id]'>[D.name]</A></B>[temp_dat]"
+					dat += "<LI><B><A href='?src=\ref[src];build=[D.id]&build_amount=1'>[D.name]</A></B>"
+					if(linked_lathe.canBuild(D, 5))
+						dat += " <A href='?src=\ref[src];build=[D.id]&build_amount=5'>x5</A>"
+					if(linked_lathe.canBuild(D, 10))
+						dat += " <A href='?src=\ref[src];build=[D.id]&build_amount=10'>x10</A>"
 				else
-					dat += "<LI><B>[D.name]</B>[temp_dat]"
+					dat += "<LI><B>[D.name]</B>"
+				dat += "[temp_dat]"
 			dat += "</UL>"
 
 		if(3.2) //Protolathe Material Storage Sub-menu
@@ -808,7 +817,11 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 				if(temp_dat)
 					temp_dat = " \[[copytext(temp_dat,3)]\]"
 				if(linked_imprinter.canBuild(D))
-					dat += "<LI><B><A href='?src=\ref[src];imprint=[D.id]'>[D.name]</A></B>[temp_dat]"
+					dat += "<LI><B><A href='?src=\ref[src];imprint=[D.id]&build_amount=1'>[D.name]</A></B>[temp_dat]"
+					if(linked_imprinter.canBuild(D, 5))
+						dat += " <A href='?src=\ref[src];imprint=[D.id]&build_amount=5'>x5</A>"
+					if(linked_imprinter.canBuild(D, 10))
+						dat += " <A href='?src=\ref[src];imprint=[D.id]&build_amount=10'>x10</A>"
 				else
 					dat += "<LI><B>[D.name]</B>[temp_dat]"
 			dat += "</UL>"
