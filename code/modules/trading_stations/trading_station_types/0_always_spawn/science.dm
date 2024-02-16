@@ -4,7 +4,7 @@
 		"CTB \"Know-how\"" = "Corporate Trade Beacon \"Know-how\": Learn the secrets of the universe for a small fee!",
 		)
 	uid = "science"
-	unlock_favor = 10000
+	unlock_favor = 5000
 	random_factions = list(
 		FACTION_INDEPENDENT,
 		FACTION_NANOTRASEN,
@@ -17,7 +17,6 @@
 			/obj/item/device/scanner/xenobio = GOODS_DEFAULT,
 			/obj/item/device/scanner/spectrometer = GOODS_DEFAULT,
 			/obj/item/portable_destructive_analyzer = GOODS_DEFAULT,
-			/obj/item/matter_decompiler = GOODS_DEFAULT,
 			/obj/item/aicard = GOODS_DEFAULT,
 			/obj/structure/anomaly_container = GOODS_DEFAULT,
 			),
