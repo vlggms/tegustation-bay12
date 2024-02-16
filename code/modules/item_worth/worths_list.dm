@@ -547,7 +547,7 @@ var/list/worths = list(
 					/obj/item/organ/internal/heart = -2400,
 					/obj/item/organ/internal/brain = -14000,
 					/obj/item/organ/internal = -900,
-					/obj/item/organ = 100,
+					/obj/item/organ = -100,
 //ITEMS,
 					/obj/item/slime_extract/grey = -1000,
 					/obj/item/slime_extract/purple = -2000,
