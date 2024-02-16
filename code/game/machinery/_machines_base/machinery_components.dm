@@ -200,7 +200,7 @@ GLOBAL_LIST_INIT(machine_path_to_circuit_type, cache_circuits_by_build_path())
 	return panel_open
 
 // Installation. Returns number of such components which can be inserted, or 0.
-/obj/machinery/proc/can_add_component(var/obj/item/stock_parts/component, var/mob/user)
+/obj/machinery/proc/can_add_component(obj/item/stock_parts/component, mob/user)
 	if(!istype(component)) // Random items. Only insert if actually needed.
 		var/list/missing = missing_parts()
 		for(var/path in missing)
@@ -247,6 +247,22 @@ Standard helpers for users interacting with machinery parts.
 */
 
 /obj/machinery/proc/part_replacement(mob/user, obj/item/storage/part_replacer/R)
+	// Installs missing components if possible
+	for(var/a_path in missing_parts())
+		var/obj/item/stock_parts/A = a_path
+		if(!A.base_type)
+			continue
+		var/obj/item/stock_parts/best_part = null
+		for(var/obj/item/stock_parts/B in R)
+			if(!istype(B, A.base_type))
+				continue
+			if(isnull(best_part) || B.rating > best_part.rating)
+				best_part = B
+				continue
+			if(!best_part)
+				break
+			part_insertion(user, best_part, R)
+			return TRUE
 	for(var/obj/item/stock_parts/A in component_parts)
 		if(!A.base_type)
 			continue
@@ -267,12 +283,21 @@ Standard helpers for users interacting with machinery parts.
 					replace_part(user, R, A, B)
 					return TRUE
 
-/obj/machinery/proc/part_insertion(mob/user, obj/item/stock_parts/part) // Second argument may actually be an arbitrary item.
-	if(!user.canUnEquip(part) && !isstack(part))
+/obj/machinery/proc/part_insertion(mob/user, obj/item/stock_parts/part, obj/item/storage/part_replacer/R) // Second argument may actually be an arbitrary item.
+	if(!istype(R) && !user.canUnEquip(part) && !isstack(part))
 		return FALSE
+
 	var/number = can_add_component(part, user)
 	if(!number)
 		return istype(part) // If it's not a stock part, we don't block further interactions; presumably the user meant to do something else.
+
+	if(istype(R))
+		R.remove_from_storage(part, src)
+		install_component(part)
+		R.part_replacement_sound()
+		user.visible_message(SPAN_NOTICE("\The [user] installs new parts in \the [src] with [R]!"), SPAN_NOTICE("You install \the [part] in \the [src] with [R]!"))
+		return TRUE
+
 	if(isstack(part))
 		var/obj/item/stack/stack = part
 		install_component(stack.split(number, TRUE))
