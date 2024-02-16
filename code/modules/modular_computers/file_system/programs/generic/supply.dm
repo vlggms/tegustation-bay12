@@ -292,12 +292,18 @@
 		if(!acc_num)
 			return
 
+		// 0 sec level - auto login
+		var/datum/money_account/A = attempt_account_access(acc_num)
+		if(istype(A))
+			account = A
+			return TRUE
+
 		var/acc_pin = input("Enter PIN", "Account linking") as num|null
 		if(!acc_pin)
 			return
 
 		var/card_check = ID.associated_account_number == acc_num
-		var/datum/money_account/A = attempt_account_access(acc_num, acc_pin, card_check ? 2 : 1, TRUE)
+		A = attempt_account_access(acc_num, acc_pin, card_check ? 2 : 1, TRUE)
 		if(!A)
 			to_chat(usr, SPAN_WARNING("Unable to link account: access denied."))
 			return
