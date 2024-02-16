@@ -21,7 +21,7 @@ using metal and glass, it uses glass and reagents (usually sulphuric acid).
 
 	idle_power_usage = 30
 	active_power_usage = 2500
-	
+
 	machine_name = "circuit imprinter"
 	machine_desc = "Creates circuit boards by etching raw sheets of material with sulphuric acid. Part of an R&D network."
 
@@ -146,14 +146,14 @@ using metal and glass, it uses glass and reagents (usually sulphuric acid).
 		return
 	queue.Cut(index, index + 1)
 
-/obj/machinery/r_n_d/circuit_imprinter/proc/canBuild(var/datum/design/D)
+/obj/machinery/r_n_d/circuit_imprinter/proc/canBuild(datum/design/D, amount = 1)
 	for(var/M in D.materials)
-		if(materials[M] <= D.materials[M] * mat_efficiency)
-			return 0
+		if(materials[M] <= D.materials[M] * mat_efficiency * amount)
+			return FALSE
 	for(var/C in D.chemicals)
-		if(!reagents.has_reagent(C, D.chemicals[C] * mat_efficiency))
-			return 0
-	return 1
+		if(!reagents.has_reagent(C, D.chemicals[C] * mat_efficiency * amount))
+			return FALSE
+	return TRUE
 
 /obj/machinery/r_n_d/circuit_imprinter/proc/build(var/datum/design/D)
 	var/power = active_power_usage
