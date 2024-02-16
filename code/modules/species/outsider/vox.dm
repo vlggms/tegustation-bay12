@@ -15,7 +15,7 @@
 		/datum/unarmed_attack/punch,
 		/datum/unarmed_attack/bite/strong
 	)
-	rarity_value = 4
+	rarity_value = 7
 	description = "The Vox are the broken remnants of a once-proud race, now reduced to little more than \
 	scavenging vermin who prey on isolated stations, ships or planets to keep their own ancient arkships \
 	alive. They are four to five feet tall, reptillian, beaked, tailed and quilled; human crews often \

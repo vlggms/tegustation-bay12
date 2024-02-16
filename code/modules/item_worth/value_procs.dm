@@ -83,6 +83,8 @@
 
 /obj/item/organ/Value(base)
 	. = ..()
+	if(istype(species))
+		. *= species.rarity_value
 	if(damage)
 		. -= round(. * (damage / max_damage))
 

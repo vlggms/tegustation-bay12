@@ -26,6 +26,7 @@
 	flash_mod = 1.2
 	blood_volume = 800
 
+	rarity_value = 2
 	health_hud_intensity = 2
 	hunger_factor = DEFAULT_HUNGER_FACTOR * 2
 

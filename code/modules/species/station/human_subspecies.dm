@@ -165,6 +165,7 @@
 	blood_volume =  SPECIES_BLOOD_DEFAULT * 0.85
 	min_age =       18
 	max_age =       45
+	rarity_value = 3
 
 /datum/species/human/mule/handle_post_spawn(var/mob/living/carbon/human/H)
 	if(!H.psi)

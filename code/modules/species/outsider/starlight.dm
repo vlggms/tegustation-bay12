@@ -26,6 +26,7 @@
 	force_cultural_info = list(
 		TAG_CULTURE = CULTURE_STARLIGHT
 	)
+	rarity_value = 8
 
 /datum/species/starlight/handle_death_check(var/mob/living/carbon/human/H)
 	if(H.health == 0)

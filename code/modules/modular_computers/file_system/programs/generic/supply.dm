@@ -283,13 +283,12 @@
 		if(!istype(ID))
 			ID = usr.GetIdCard()
 		// Account security level is 0 - auto-login from the ID
+		var/autofill = null
 		if(istype(ID) && ID.associated_account_number)
 			var/datum/money_account/A = get_account(ID.associated_account_number)
 			if(istype(A) && A.security_level == 0)
-				account = A
-				return TRUE
-
-		var/acc_num = input("Enter account number", "Account linking", ID?.associated_account_number) as num|null
+				autofill = ID.associated_account_number
+		var/acc_num = input("Enter account number", "Account linking", autofill) as num|null
 		if(!acc_num)
 			return
 

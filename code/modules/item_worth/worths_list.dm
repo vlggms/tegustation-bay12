@@ -655,6 +655,7 @@ var/list/worths = list(
 //MOBS,
 					/mob/living/carbon/human = -10000,
 					/mob/living/carbon/slime = 5000,
+					/mob/living/carbon/brain = 0,
 					/mob/living/silicon/robot = 10000,
 					/mob/living/silicon/pai = 1000,
 					/mob/living/silicon/ai = 50000,

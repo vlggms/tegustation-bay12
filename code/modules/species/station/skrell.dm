@@ -32,6 +32,7 @@
 	hazard_high_pressure = HAZARD_HIGH_PRESSURE / 0.84615
 	water_soothe_amount = 5
 
+	rarity_value = 2
 	body_temperature = null // cold-blooded, implemented the same way nabbers do it
 
 	darksight_range = 4
