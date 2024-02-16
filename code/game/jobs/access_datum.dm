@@ -531,6 +531,6 @@
 /var/const/access_supplylink_dominion = "ACCESS_SUPPLY_LINK_TERRAN_DOMINION"
 /datum/access/supplylink_dominion
 	id = access_supplylink_dominion
-	desc = "Supply Console - Reborn Christian Church Link"
+	desc = "Supply Console - Terran Dominion"
 	region = ACCESS_REGION_NONE
 	access_type = ACCESS_TYPE_NONE
