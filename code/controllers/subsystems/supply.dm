@@ -42,8 +42,14 @@ SUBSYSTEM_DEF(supply)
 	var/list/export_counter = list()
 	/// Paths of atoms that are entirely unaffected by export price modifiers
 	var/list/export_modifier_exempt_types = list(
+		/obj/item/ore,
 		/obj/item/stack,
 		/obj/item/reagent_containers,
+		/obj/item/slime_extract,
+		/obj/item/ammo_casing,
+		/obj/machinery/artifact,
+		/obj/machinery/portable_atmospherics/canister,
+		/mob/living/carbon/slime,
 		)
 
 /datum/controller/subsystem/supply/Initialize()
