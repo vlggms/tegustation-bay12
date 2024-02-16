@@ -19,7 +19,8 @@
 	return ..() * material.value
 
 /obj/item/slime_extract/Value(base)
-	return base * Uses
+	. = ..()
+	. *= Uses
 
 /obj/item/ammo_casing/Value(base)
 	. = ..()
@@ -130,3 +131,8 @@
 	. = ..()
 	if(istype(stored_data))
 		. += stored_data.Value()
+
+/mob/living/carbon/slime/Value(base)
+	. = ..()
+	var/atom/core_type = GetCoreType()
+	. += get_value(core_type)
