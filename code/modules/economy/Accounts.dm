@@ -47,8 +47,8 @@
 		var/datum/money_account/A = get_account(text2num(acc_id))
 		if(!istype(A))
 			continue
-		if(!payroll_accounts[A])
-			payroll_accounts[A] = 0
+		if(!isnum(payroll_accounts[acc_id]))
+			payroll_accounts[acc_id] = 0
 			continue
 		var/pay = payroll_accounts[acc_id]
 		if(!pay || pay > money)
