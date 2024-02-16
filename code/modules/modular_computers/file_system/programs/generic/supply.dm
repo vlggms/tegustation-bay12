@@ -289,7 +289,7 @@
 				account = A
 				return TRUE
 
-		var/acc_num = input("Enter account number", "Account linking", ID.associated_account_number) as num|null
+		var/acc_num = input("Enter account number", "Account linking", ID?.associated_account_number) as num|null
 		if(!acc_num)
 			return
 
