@@ -17,6 +17,7 @@
 			/obj/item/storage/firstaid/surgery = GOODS_DEFAULT,
 			/obj/item/clothing/glasses/hud/health = GOODS_DEFAULT,
 			/obj/item/device/scanner/health = GOODS_DEFAULT,
+			/obj/item/stock_parts/computer/scanner/reagent = GOODS_DEFAULT,
 			/obj/item/autopsy_scanner = GOODS_DEFAULT,
 			/obj/item/storage/box/pillbottles = GOODS_DEFAULT,
 			/obj/item/storage/box/syringes = GOODS_DEFAULT,

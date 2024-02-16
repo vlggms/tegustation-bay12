@@ -41,4 +41,7 @@
 			/obj/machinery/portable_atmospherics/canister/tritium = GOODS_DEFAULT,
 			/obj/machinery/portable_atmospherics/canister/deuterium = GOODS_DEFAULT,
 			),
+		TRADE_CAT_MACHINES = list(
+			/obj/machinery/portable_atmospherics/powered/scrubber/huge = GOODS_DEFAULT,
+			),
 		)

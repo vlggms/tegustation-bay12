@@ -123,3 +123,8 @@
 	. = ..()
 	if(battery_effect)
 		. += round(battery_effect.Value() * 0.25)
+
+/obj/item/mind_engraver_chip/Value(base)
+	. = ..()
+	if(istype(stored_data))
+		. += stored_data.Value()

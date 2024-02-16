@@ -36,6 +36,8 @@ SUBSYSTEM_DEF(supply)
 	var/list/order_queue = list()
 
 	// For exporting
+	/// Maximum price of an atom before it becomes affected by an export modifier
+	var/export_maximum = 25000
 	var/list/export_modifier = list()
 	var/list/export_counter = list()
 	/// Paths of atoms that are entirely unaffected by export price modifiers
@@ -80,7 +82,8 @@ SUBSYSTEM_DEF(supply)
 	for(var/datum/money_account/A in all_money_accounts)
 		A.PayrollTick()
 	for(var/A in export_counter)
-		export_counter[A] = max(0, export_counter[A] -= 10)
+		var/reduction = max(export_maximum, export_counter[A] * 0.5)
+		export_counter[A] = max(0, export_counter[A] -= reduction)
 	ExportCounterCheck()
 
 /datum/controller/subsystem/supply/proc/GetFaction(fac)
@@ -403,8 +406,8 @@ SUBSYSTEM_DEF(supply)
 				if(!(is_path_in_list(item.type, export_modifier_exempt_types)))
 					if(!(item.type in export_counter))
 						export_counter[item.type] = 0
-					if(export_counter[item.type] < 30)
-						export_counter[item.type] += 1
+					if(export_counter[item.type] < export_maximum * 2)
+						export_counter[item.type] += round(min(export_value, export_maximum * 0.25))
 				//SEND_SIGNAL(src, COMSIG_TRADE_BEACON, item)
 				qdel(item)
 				++export_count
@@ -433,8 +436,8 @@ SUBSYSTEM_DEF(supply)
 
 /datum/controller/subsystem/supply/proc/ExportCounterCheck()
 	for(var/A in export_counter)
-		if(export_counter[A] > 20)
-			export_modifier[A] = clamp(round(20 / export_counter[A], 0.01), 0.5, 2.0)
+		if(export_counter[A] > export_maximum)
+			export_modifier[A] = clamp(round(export_maximum / export_counter[A], 0.01), 0.5, 2.0)
 		else if(A in export_modifier)
 			export_modifier -= A
 

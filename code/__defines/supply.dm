@@ -26,6 +26,7 @@
 #define TRADE_CAT_CHEMCARTS "Chemical Cartridges"
 #define TRADE_CAT_CANISTERS "Gas Canisters"
 #define TRADE_CAT_MACHINES "Machinery"
+#define TRADE_CAT_ARTIFACT "Artifacts"
 
 // As in - faction is a part of us
 #define FACTION_STATE_PROTECTORATE 4

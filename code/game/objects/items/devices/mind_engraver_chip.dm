@@ -46,6 +46,7 @@
 ///////////
 /datum/engraver_data
 	var/chip_type = "UNKNOWN"
+	var/value = 1500
 
 /datum/engraver_data/proc/PrintFunction()
 	return "UNKNOWN"
@@ -54,6 +55,9 @@
 	if(!istype(target))
 		return FALSE
 	return TRUE
+
+/datum/engraver_data/proc/Value()
+	return value
 
 /* Skills */
 /datum/engraver_data/skill
@@ -88,6 +92,14 @@
 
 	target.skillset.on_levels_change()
 	return TRUE
+
+/datum/engraver_data/skill/Value()
+	. = ..()
+	for(var/decl/hierarchy/skill/S in GLOB.skills)
+		if(!(S.type in skills))
+			continue
+		for(var/i = 1 to skills[S.type])
+			. += S.get_cost(i) * 500
 
 // Random
 /datum/engraver_data/skill/random/New()
@@ -148,6 +160,29 @@
 
 	return TRUE
 
+/datum/engraver_data/language/Value()
+	. = ..()
+	for(var/lang in languages)
+		switch(lang)
+			if(LANGUAGE_CHANGELING_GLOBAL, LANGUAGE_CULT_GLOBAL)
+				. += 22000
+			if(LANGUAGE_BORER_GLOBAL)
+				. += 16000
+			if(LANGUAGE_ROBOT_GLOBAL)
+				. += 12000
+			if(LANGUAGE_DRONE_GLOBAL, LANGUAGE_MANTID_BROADCAST, LANGUAGE_ROOTGLOBAL)
+				. += 10000
+			if(LANGUAGE_CULT, LANGUAGE_MANTID_VOCAL, LANGUAGE_MANTID_NONVOCAL, LANGUAGE_ALIUM)
+				. += 8000
+			if(LANGUAGE_NABBER, LANGUAGE_ADHERENT, LANGUAGE_VOX, LANGUAGE_ROOTLOCAL, LANGUAGE_SKRELLIAN, LANGUAGE_UNATHI_SINTA, LANGUAGE_UNATHI_YEOSA)
+				. += 6000
+			if(LANGUAGE_EAL)
+				. += 4000
+			if(LANGUAGE_PRIMITIVE)
+				. += 2000
+			else
+				. += 1000
+
 // Random
 /datum/engraver_data/language/random/New()
 	. = ..()
@@ -187,6 +222,7 @@
 /* Fluff */
 /datum/engraver_data/memory
 	chip_type = "Memory Imprint"
+	value = 1000
 	var/function_text = "UNKNOWN"
 
 /datum/engraver_data/memory/PrintFunction()
