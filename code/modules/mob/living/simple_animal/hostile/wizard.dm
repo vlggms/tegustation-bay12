@@ -34,6 +34,10 @@
 	mana.mana_recharge_speed = 2
 	mana.spell_points = 0
 
+/mob/living/simple_animal/hostile/wizard/death()
+	. = ..()
+	check_delete()
+
 /mob/living/simple_animal/hostile/wizard/fireball
 	ranged = TRUE
 	ranged_attack_cooldown = DEFAULT_ATTACK_COOLDOWN * 5
