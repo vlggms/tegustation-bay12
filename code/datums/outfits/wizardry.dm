@@ -38,7 +38,7 @@
 	backpack_contents = list()
 
 /decl/hierarchy/outfit/wizard/red/empty
-	name = "Wizard Empty - Blue"
+	name = "Wizard Empty - Red"
 
 	l_ear = null
 	r_pocket = null
