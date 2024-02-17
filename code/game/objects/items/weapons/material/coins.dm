@@ -12,10 +12,16 @@
 	w_class = 1
 	slot_flags = SLOT_EARS
 	var/string_colour
+	// Sound played when used in hand to "flip" it
+	var/flip_sound = 'sound/effects/coin_flip1.ogg'
+	// Sound played on thrown impact
+	var/fall_sound = 'sound/effects/coin_flip2.ogg'
+	// How loud are the sounds produced by it
+	var/sound_volume = 35
 
-/obj/item/material/coin/New()
+/obj/item/material/coin/Initialize()
+	. = ..()
 	icon_state = "coin[rand(1,10)]"
-	..()
 
 /obj/item/material/coin/on_update_icon()
 	..()
@@ -27,7 +33,7 @@
 	else
 		overlays.Cut()
 
-/obj/item/material/coin/attackby(var/obj/item/W, var/mob/user)
+/obj/item/material/coin/attackby(obj/item/W, mob/user)
 	if(isCoil(W) && isnull(string_colour))
 		var/obj/item/stack/cable_coil/CC = W
 		if(CC.use(1))
@@ -42,18 +48,30 @@
 		update_icon()
 	else ..()
 
-/obj/item/material/coin/attack_self(var/mob/user)
+/obj/item/material/coin/attack_self(mob/user)
 	user.visible_message("<span class='notice'>\The [user] has thrown \the [src]. It lands on [rand(1, 2) == 1 ? "tails" : "heads"]!</span>")
+	playsound(user, flip_sound, sound_volume, TRUE)
+
+/obj/item/material/coin/throw_impact(atom/hit_atom, datum/thrownthing/TT)
+	. = ..()
+	var/turf/T = get_turf(hit_atom)
+	if(!istype(T))
+		return
+
+	playsound(T, fall_sound, sound_volume, TRUE)
 
 // Subtypes.
 /obj/item/material/coin/gold
 	default_material = MATERIAL_GOLD
+	sound_volume = 65 // Very shiny
 
 /obj/item/material/coin/silver
 	default_material = MATERIAL_SILVER
+	sound_volume = 50
 
 /obj/item/material/coin/diamond
 	default_material = MATERIAL_DIAMOND
+	sound_volume = 80
 
 /obj/item/material/coin/iron
 	default_material = MATERIAL_IRON
