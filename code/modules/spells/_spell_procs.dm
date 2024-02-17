@@ -46,7 +46,7 @@
 
 /mob/proc/add_spell(datum/spell/spell_to_add, spell_base = "wiz_spell_ready")
 	if(!ability_master)
-		ability_master = new()
+		ability_master = new(null, src)
 	spell_to_add.holder = src
 	if(mind)
 		if(!mind.learned_spells)
