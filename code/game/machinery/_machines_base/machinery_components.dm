@@ -258,11 +258,10 @@ Standard helpers for users interacting with machinery parts.
 				continue
 			if(isnull(best_part) || B.rating > best_part.rating)
 				best_part = B
-				continue
-			if(!best_part)
-				break
-			part_insertion(user, best_part, R)
-			return TRUE
+		if(!best_part)
+			continue
+		part_insertion(user, best_part, R)
+		return TRUE
 	for(var/obj/item/stock_parts/A in component_parts)
 		if(!A.base_type)
 			continue
