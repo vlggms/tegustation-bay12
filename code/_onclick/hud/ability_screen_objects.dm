@@ -326,8 +326,9 @@
 		active_overlay = null
 	return ..()
 
-/obj/screen/movable/ability_master/proc/add_spell(var/datum/spell/spell)
-	if(!spell) return
+/obj/screen/movable/ability_master/proc/add_spell(datum/spell/spell)
+	if(!spell)
+		return
 
 	if(spell.spell_flags & NO_BUTTON) //no button to add if we don't get one
 		return
