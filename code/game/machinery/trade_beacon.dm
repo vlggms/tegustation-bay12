@@ -32,6 +32,7 @@
 /obj/machinery/trade_beacon/sending
 	name = "sending trade beacon"
 	icon_state = "beacon_sending"
+	construct_state = /decl/machine_construction/default/panel_closed
 	var/export_cooldown
 	var/export_cooldown_time = 90 SECONDS
 
@@ -69,6 +70,7 @@
 /* Receiving */
 /obj/machinery/trade_beacon/receiving
 	name = "receiving trade beacon"
+	construct_state = /decl/machine_construction/default/panel_closed
 
 /obj/machinery/trade_beacon/receiving/Initialize()
 	. = ..()
