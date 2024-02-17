@@ -52,7 +52,7 @@
 	if(!.)
 		return
 
-	var/say_text = "ONI SOMA![prob(50 ? "!" : "")]"
+	var/say_text = "ONI SOMA![prob(50) ? "!" : ""]"
 	if(prob(50))
 		say_text = replacetext(say_text," ","`")
 	say(say_text)
