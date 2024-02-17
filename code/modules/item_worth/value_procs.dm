@@ -91,7 +91,7 @@
 
 /obj/item/spellbook/Value(base)
 	. = ..()
-	. += length(allowed_spells * 1000)
+	. += length(allowed_spells) * 1000
 	if(!isnull(owner))
 		. *= 0.5
 
