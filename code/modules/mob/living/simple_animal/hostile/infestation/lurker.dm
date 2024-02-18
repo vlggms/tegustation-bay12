@@ -18,7 +18,7 @@
 
 	special_attack_min_range = 2
 	special_attack_max_range = 6
-	special_attack_cooldown = 4 SECONDS
+	special_attack_cooldown = 2 SECONDS
 
 	health = 400
 	maxHealth = 400
@@ -36,7 +36,7 @@
 
 	var/spike_damage = 35
 	/// Sleep time between each new spike
-	var/spike_delay = 3
+	var/spike_delay = 1.5
 
 /obj/item/natural_weapon/claws/abomination_lurker
 	force = 10
@@ -68,7 +68,7 @@
 	set_AI_busy(TRUE)
 	face_atom(A)
 
-	var/list/attack_line = getline(src, A)
+	var/list/attack_line = getline(get_step(src, get_dir(src, A)), A)
 	for(var/turf/T in attack_line)
 		sleep(spike_delay)
 		SpikeTurf(T)
