@@ -1,4 +1,4 @@
-// Medium damage, Low health, Very high mobility
+// Medium damage, Low health, Very high mobility.
 // Ignores gravity and can "fly", temporarily turning non-dense
 // When attacked, can change its pixel position slightly, making it more difficult to hit
 

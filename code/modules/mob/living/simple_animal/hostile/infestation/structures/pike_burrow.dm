@@ -15,9 +15,9 @@
 	health_min_damage = 10
 
 	// How much time it takes between "warning" and actually spawning the spike
-	var/attack_delay = 4
-	var/attack_cooldown_time = 1.3 SECONDS
-	var/attack_damage = 50
+	var/attack_delay = 5
+	var/attack_cooldown_time = 1.5 SECONDS
+	var/attack_damage = 40
 
 /obj/infestation_structure/pike_burrow/Initialize()
 	. = ..()

@@ -1,4 +1,5 @@
-// The tiny and fast annoying enemies spawned by aggregate
+// The tiny and fast annoying enemies spawned by aggregate.
+// Their hilariously low health means they will most likely die in one tick of fire damage.
 /mob/living/simple_animal/hostile/infestation/meatchip
 	name = "meatchip"
 	desc = "A tiny, digusting creature."

@@ -1,3 +1,8 @@
+// Enormous damage, Very high health, Very low mobility.
+// Spawns small "meat chips" when damaged.
+// Constantly regenerates health.
+// Recommended strategy is using flamethrower and stay AT LEAST 4-5 tiles away from it.
+// DO NOT stop fighting it, as it will inevitably regenerate all health if you leave it alone for too long.
 /mob/living/simple_animal/hostile/infestation/aggregate
 	name = "aggregate"
 	desc = "A repulsive mass of flesh that is constantly regenerating itself."
@@ -8,7 +13,7 @@
 	mob_size = MOB_LARGE
 	default_pixel_x = -8
 	pixel_x = -8
-	movement_cooldown = 7
+	movement_cooldown = 8
 
 	// A giant fuck-off bite attack; Don't come close to this thing
 	natural_weapon = /obj/item/natural_weapon/bite/aggregate

@@ -56,13 +56,13 @@
 		sound_token = null
 		density = FALSE
 		icon_state = "heart"
-		for(var/i = 1 to 10)
+		for(var/i = 1 to 5)
 			if(QDELETED(src))
 				return
-			AbilityEffect(50 + i*10)
-			if(prob(i * 4))
+			AbilityEffect(50 + i*20)
+			if(prob(i * 10))
 				new /obj/effect/gibspawner/human(get_turf(src))
-			sleep(20 - i * 2)
+			sleep(10 - i * 2)
 		for(var/ii = 1 to 5)
 			new /obj/effect/gibspawner/human(get_turf(src))
 		playsound(src, 'sound/simple_mob/abominable_infestation/heart_death.ogg', 125, TRUE, 24, 3, ignore_pressure = TRUE)
