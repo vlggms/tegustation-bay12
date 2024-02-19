@@ -72,3 +72,34 @@
 		else
 			status += "\n\The [station_name()] is undergoing crew transfer!"
 	return status
+
+/// Displays the crew manifest in text form.
+/datum/tgs_chat_command/manifest
+	name = "manifest"
+	help_text = "Displays crew manifest."
+	admin_only = FALSE
+
+/datum/tgs_chat_command/manifest/Run(datum/tgs_chat_user/sender, params)
+	var/list/manifest_data = list()
+	for(var/datum/computer_file/report/crew_record/CR in GLOB.all_crew_records)
+		var/name = CR.get_formal_name()
+		var/rank = CR.get_job()
+		var/datum/job/job = SSjobs.get_by_title(rank)
+		if(job && job.department)
+			if(!manifest_data[job.department])
+				manifest_data[job.department] = list()
+			manifest_data[job.department] += "[rank] [name]"
+		else
+			if(!manifest_data["Unknown"])
+				manifest_data["Unknown"] = list()
+			manifest_data["Unknown"] += "[rank] [name]"
+
+	var/manifest
+	if(LAZYLEN(manifest_data))
+		manifest = "__**Crew Manifest:**__"
+		for(var/dept in manifest_data)
+			manifest += "\n**[dept]:** [english_list(manifest_data[dept])]."
+	else
+		manifest = "Crew Manifest is empty!"
+	return manifest
+
