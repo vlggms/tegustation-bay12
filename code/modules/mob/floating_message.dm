@@ -59,20 +59,21 @@ var/global/list/floating_chat_colors = list()
 
 	for(var/client/C in show_to)
 		if(!C.mob.is_deaf() && C.get_preference_value(/datum/client_preference/floating_messages) == GLOB.PREF_SHOW)
-			if(C.mob.say_understands(null, language))
+			if(C.mob.say_understands(src, language))
 				C.images += understood
 			else
 				C.images += gibberish
 
 /proc/generate_floating_text(atom/movable/holder, message, style, size, duration, show_to)
 	var/image/I = image(null, get_atom_on_turf(holder))
-	I.layer=FLY_LAYER
+	I.plane = HUD_PLANE
+	I.layer = HUD_ABOVE_ITEM_LAYER
 	I.alpha = 0
 	I.maptext_width = CHAT_MESSAGE_WIDTH
 	I.maptext_height = CHAT_MESSAGE_HEIGHT
 	I.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA | KEEP_APART
-	I.plane = EFFECTS_ABOVE_LIGHTING_PLANE
-	I.pixel_w = -round(I.maptext_width/2) + 16
+	I.pixel_w = -round(I.maptext_width/2) + 16 + holder.GetOverheadTextXOffset()
+	I.pixel_z = holder.GetOverheadTextYOffset()
 
 	style = "font-family: 'Small Fonts'; -dm-text-outline: 1px black; font-size: [size]px; line-height: 1.1; [style]"
 	I.maptext = "<center><span style=\"[style]\">[message]</span></center>"

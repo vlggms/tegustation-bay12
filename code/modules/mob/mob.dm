@@ -1298,3 +1298,9 @@
 
 /mob/get_mass()
 	return mob_size
+
+/mob/GetOverheadTextXOffset()
+	return default_pixel_x
+
+/mob/GetOverheadTextYOffset()
+	return default_pixel_y
