@@ -173,13 +173,13 @@
 /obj/machinery/atmospherics/unary/vent_pump/Process()
 	..()
 
-	if (hibernate > world.time)
-		return 1
+	if(hibernate > world.time)
+		return TRUE
 
-	if (!node)
+	if(!node)
 		update_use_power(POWER_USE_OFF)
 	if(!can_pump())
-		return 0
+		return FALSE
 
 	var/datum/gas_mixture/environment = loc.return_air()
 
@@ -193,7 +193,7 @@
 			var/transfer_moles = calculate_transfer_moles(air_contents, environment, pressure_delta)
 			power_draw = pump_gas(src, air_contents, environment, transfer_moles, power_rating)
 		else //external -> internal
-			var/transfer_moles = calculate_transfer_moles(environment, air_contents, pressure_delta, (network)? network.volume : 0)
+			var/transfer_moles = calculate_transfer_moles(environment, air_contents, pressure_delta, network ? network.volume : 0)
 
 			//limit flow rate from turfs
 			transfer_moles = min(transfer_moles, environment.total_moles*air_contents.volume/environment.volume)	//group_multiplier gets divided out here
@@ -206,13 +206,13 @@
 			hibernate = world.time + (rand(100,200))
 
 
-	if (power_draw >= 0)
+	if(power_draw >= 0)
 		last_power_draw = power_draw
 		use_power_oneoff(power_draw)
 		if(network)
 			network.update = 1
 
-	return 1
+	return TRUE
 
 /obj/machinery/atmospherics/unary/vent_pump/proc/get_pressure_delta(datum/gas_mixture/environment)
 	var/pressure_delta = DEFAULT_PRESSURE_DELTA
