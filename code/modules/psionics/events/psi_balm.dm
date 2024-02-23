@@ -6,15 +6,19 @@
 		)
 
 /datum/event/psi/balm/apply_psi_effect(datum/psi_complexus/psi)
+	if(psi.suppressed)
+		return
+
 	var/soothed
-	if(psi.stun > 1)
+	if(psi.stun)
 		psi.stun--
 		soothed = TRUE
 	else if(psi.stamina < psi.max_stamina)
 		psi.stamina = min(psi.max_stamina, psi.stamina + rand(1,3))
 		soothed = TRUE
-	else if(psi.owner.getBrainLoss() > 0)
-		psi.owner.adjustBrainLoss(-1)
+	else if(psi.owner.getBrainLoss())
+		psi.owner.adjustBrainLoss(-4)
 		soothed = TRUE
+
 	if(soothed && prob(10))
 		to_chat(psi.owner, SPAN_NOTICE("<i>[pick(balm_messages)]</i>"))

@@ -59,6 +59,8 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 	var/boss_short    = "Cap'"
 	var/company_name  = "BadMan"
 	var/company_short = "BM"
+	var/psionic_name  = "Cuchulain Foundation"
+	var/psionic_short = "Cuchulain"
 	var/system_name = "Uncharted System"
 
 	var/list/map_admin_faxes = list()

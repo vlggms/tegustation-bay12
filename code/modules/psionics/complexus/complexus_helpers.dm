@@ -72,7 +72,6 @@
 			owner.client.images |= I
 
 /datum/psi_complexus/proc/backblast(value)
-
 	// Can't backblast if you're controlling your power.
 	if(!owner || suppressed)
 		return FALSE
@@ -81,11 +80,12 @@
 	owner.psi.hide_auras()
 
 	sound_to(owner, sound('sound/effects/psi/power_feedback.ogg'))
-	to_chat(owner, "<span class='danger'><font size=3>Wild energistic feedback blasts across your psyche!</font></span>")
+	to_chat(owner, SPAN_USERDANGER("Wild energistic feedback blasts across your psyche!"))
 	stunned(value * 2)
 	set_cooldown(value * 100)
 
-	if(prob(value*10)) owner.emote("scream")
+	if(prob(value*10))
+		owner.emote("scream")
 
 	// Your head asplode.
 	owner.adjustBrainLoss(value)
@@ -96,8 +96,9 @@
 			if(sponge && sponge.damage >= sponge.max_damage)
 				var/obj/item/organ/external/affecting = pop.get_organ(sponge.parent_organ)
 				if(affecting && !affecting.is_stump())
-					affecting.droplimb(0, DROPLIMB_BLUNT)
-					if(sponge) qdel(sponge)
+					affecting.droplimb(FALSE, DROPLIMB_BLUNT)
+					if(sponge)
+						QDEL_NULL(sponge)
 
 /datum/psi_complexus/proc/reset()
 	aura_color = initial(aura_color)
