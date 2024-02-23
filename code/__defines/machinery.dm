@@ -80,8 +80,8 @@
 // These balance how easy or hard it is to create huge pressure gradients with pumps and filters.
 // Lower values means it takes longer to create large pressures differences.
 // Has no effect on pumping gasses from high pressure to low, only from low to high.
-#define ATMOS_PUMP_EFFICIENCY   2.5
-#define ATMOS_FILTER_EFFICIENCY 2.5
+#define ATMOS_PUMP_EFFICIENCY   6
+#define ATMOS_FILTER_EFFICIENCY 6
 
 // Will not bother pumping or filtering if the gas source as fewer than this amount of moles, to help with performance.
 #define MINIMUM_MOLES_TO_PUMP   0.01

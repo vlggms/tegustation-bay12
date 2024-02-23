@@ -25,21 +25,21 @@
 //Moves gas from one gas_mixture to another and returns the amount of power needed (assuming 1 second), or -1 if no gas was pumped.
 //transfer_moles - Limits the amount of moles to transfer. The actual amount of gas moved may also be limited by available_power, if given.
 //available_power - the maximum amount of power that may be used when moving gas. If null then the transfer is not limited by power.
-/proc/pump_gas(var/obj/machinery/M, var/datum/gas_mixture/source, var/datum/gas_mixture/sink, var/transfer_moles = null, var/available_power = null)
+/proc/pump_gas(obj/machinery/M, datum/gas_mixture/source, datum/gas_mixture/sink, transfer_moles = null, available_power = null)
 	if (source.total_moles < MINIMUM_MOLES_TO_PUMP) //if we can't transfer enough gas just stop to avoid further processing
 		return -1
 
-	if (isnull(transfer_moles))
+	if(isnull(transfer_moles))
 		transfer_moles = source.total_moles
 	else
 		transfer_moles = min(source.total_moles, transfer_moles)
 
 	//Calculate the amount of energy required and limit transfer_moles based on available power
 	var/specific_power = calculate_specific_power(source, sink)/ATMOS_PUMP_EFFICIENCY //this has to be calculated before we modify any gas mixtures
-	if (!isnull(available_power) && specific_power > 0)
+	if(!isnull(available_power) && specific_power > 0)
 		transfer_moles = min(transfer_moles, available_power / specific_power)
 
-	if (transfer_moles < MINIMUM_MOLES_TO_PUMP) //if we can't transfer enough gas just stop to avoid further processing
+	if(transfer_moles < MINIMUM_MOLES_TO_PUMP) //if we can't transfer enough gas just stop to avoid further processing
 		return -1
 
 	//Update flow rate meter
@@ -426,8 +426,9 @@
 //Calculates the APPROXIMATE amount of moles that would need to be transferred to change the pressure of sink by pressure_delta
 //If set, sink_volume_mod adjusts the effective output volume used in the calculation. This is useful when the output gas_mixture is
 //part of a pipenetwork, and so it's volume isn't representative of the actual volume since the gas will be shared across the pipenetwork when it processes.
-/proc/calculate_transfer_moles(datum/gas_mixture/source, datum/gas_mixture/sink, var/pressure_delta, var/sink_volume_mod=0)
-	if(source.temperature == 0 || source.total_moles == 0) return 0
+/proc/calculate_transfer_moles(datum/gas_mixture/source, datum/gas_mixture/sink, pressure_delta, sink_volume_mod = 0)
+	if(source.temperature == 0 || source.total_moles == 0)
+		return 0
 
 	var/output_volume = (sink.volume * sink.group_multiplier) + sink_volume_mod
 	var/source_total_moles = source.total_moles * source.group_multiplier
@@ -445,7 +446,8 @@
 
 //Calculates the APPROXIMATE amount of moles that would need to be transferred to bring source and sink to the same pressure
 /proc/calculate_equalize_moles(datum/gas_mixture/source, datum/gas_mixture/sink)
-	if(source.temperature == 0) return 0
+	if(source.temperature == 0)
+		return 0
 
 	//Make the approximation that the sink temperature is unchanged after transferring gas
 	var/source_volume = source.volume * source.group_multiplier
