@@ -1,4 +1,4 @@
-//Psi-boosting item (antag only)
+// Psi-boosting item
 /obj/item/clothing/head/helmet/space/psi_amp
 	name = "cerebro-energetic enhancer"
 	desc = "A matte-black, eyeless cerebro-energetic enhancement helmet. It uses highly sophisticated, and illegal, techniques to drill into your brain and install psi-infected AIs into the fluid cavities between your lobes."
@@ -156,7 +156,7 @@
 
 /obj/item/clothing/head/helmet/space/psi_amp/lesser
 	name = "psionic amplifier"
-	desc = "A crown-of-thorns cerebro-energetic enhancer that interfaces directly with the brain, isolating and strengthening psionic signals. It kind of looks like a tiara having sex with an industrial robot."
+	desc = "A crown-of-thorns cerebro-energetic enhancer that interfaces directly with the brain, isolating and strengthening psionic signals."
 	icon_state = "amp"
 
 	max_boosted_faculties = 2

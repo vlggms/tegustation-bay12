@@ -45,7 +45,10 @@
 					owner.client.images |= thing
 
 			var/image/aura_image = get_aura_image()
-			if(rating >= PSI_RANK_PARAMOUNT) // spooky boosters
+			if(rating >= PSI_RANK_PARAMOUNT * 2)
+				aura_color = "#000000"
+				aura_image.blend_mode = BLEND_SUBTRACT
+			else if(rating >= PSI_RANK_PARAMOUNT)
 				aura_color = "#aaffaa"
 				aura_image.blend_mode = BLEND_SUBTRACT
 			else
@@ -124,7 +127,6 @@
 		ui.update_icon()
 
 /datum/psi_complexus/proc/attempt_regeneration()
-
 	var/heal_general =  FALSE
 	var/heal_poison =   FALSE
 	var/heal_internal = FALSE

@@ -6,6 +6,9 @@
 		)
 
 /datum/event/psi/wail/apply_psi_effect(datum/psi_complexus/psi)
+	if(psi.suppressed)
+		return
+
 	var/annoyed
 	if(prob(1))
 		psi.stunned(1)
@@ -13,5 +16,6 @@
 	else if(psi.stamina > 0)
 		psi.stamina = max(0, psi.stamina - rand(1,3))
 		annoyed = TRUE
+
 	if(annoyed && prob(1))
-		to_chat(psi.owner, "<span class='notice'><i>[pick(whine_messages)]</i></span>")
+		to_chat(psi.owner, SPAN_NOTICE("<i>[pick(whine_messages)]</i>"))

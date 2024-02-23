@@ -8,6 +8,8 @@
 #define ASSIGNMENT_SCIENTIST "Scientist"
 #define ASSIGNMENT_EXPLORATION "Exploration"
 #define ASSIGNMENT_SECURITY "Security"
+#define ASSIGNMENT_MAGIC "Magic"
+#define ASSIGNMENT_PSIONIC "Psionic"
 
 var/global/list/severity_to_string = list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT_LEVEL_MODERATE = "Moderate", EVENT_LEVEL_MAJOR = "Major", EVENT_LEVEL_CATASTROPHE = "Catastrophe", EVENT_LEVEL_EXO = "Exoplanet")
 
@@ -141,7 +143,7 @@ var/global/list/severity_to_string = list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT
 		new /datum/event_meta/no_overmap(EVENT_LEVEL_MUNDANE, "Space Dust",			/datum/event/dust	, 				30, 	list(ASSIGNMENT_ENGINEER = 10)),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Sensor Suit Jamming",			/datum/event/sensor_suit_jamming,	30,		list(ASSIGNMENT_MEDICAL = 20, ASSIGNMENT_AI = 20), 1),
 		//new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Trivial News",					/datum/event/trivial_news, 			200),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Vermin Infestation",			/datum/event/infestation, 			100,	list(ASSIGNMENT_JANITOR = 50)),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Vermin Infestation",			/datum/event/infestation, 			40,		list(ASSIGNMENT_JANITOR = 40)),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Wallrot",						/datum/event/wallrot, 				0,		list(ASSIGNMENT_ENGINEER = 30, ASSIGNMENT_GARDENER = 50)),
 		new /datum/event_meta/no_overmap(EVENT_LEVEL_MUNDANE, "Electrical Storm",	/datum/event/electrical_storm, 		20,		list(ASSIGNMENT_ENGINEER = 20, ASSIGNMENT_JANITOR = 50)),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Toilet Clog",					/datum/event/toilet_clog,			50, 	list(ASSIGNMENT_JANITOR = 50)),
@@ -151,6 +153,8 @@ var/global/list/severity_to_string = list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT
 		//new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Mail Delivery",					/datum/event/mail,					0,		list(ASSIGNMENT_ANY = 5), 1),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Whale Migration",				/datum/event/whale_migration,		10),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Disease Outbreak",				/datum/event/disease_outbreak,		40,		list(ASSIGNMENT_MEDICAL = 20, ASSIGNMENT_SCIENCE = 10)),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Psionic Balm",					/datum/event/psi/balm,				0,		list(ASSIGNMENT_PSIONIC = 5)),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Psionic Wail",					/datum/event/psi/wail,				0,		list(ASSIGNMENT_PSIONIC = 5)),
 	)
 
 /datum/event_container/moderate
@@ -184,7 +188,7 @@ var/global/list/severity_to_string = list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT
 /datum/event_container/major
 	severity = EVENT_LEVEL_MAJOR
 	available_events = list(
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Nothing",							/datum/event/nothing,			200,	list(ASSIGNMENT_ANY = -5)), // So higher pop will run events more often
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Nothing",							/datum/event/nothing,				200,list(ASSIGNMENT_ANY = -5)), // So higher pop will run events more often
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Blob",							/datum/event/blob, 					0,	list(ASSIGNMENT_ENGINEER = 20, ASSIGNMENT_MEDICAL = 10, ASSIGNMENT_SECURITY = 20, ASSIGNMENT_EXPLORATION = 10), 1),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Abominable Infestation",			/datum/event/abominable_infestation,0,	list(ASSIGNMENT_MEDICAL = 10, ASSIGNMENT_SECURITY = 20, ASSIGNMENT_EXPLORATION = 15), 1),
 		new /datum/event_meta/no_overmap(EVENT_LEVEL_MAJOR, "Carp Migration",		/datum/event/carp_migration,		0,	list(ASSIGNMENT_SECURITY = 20, ASSIGNMENT_MEDICAL = 10)),
@@ -193,14 +197,15 @@ var/global/list/severity_to_string = list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT
 		new /datum/event_meta/no_overmap(EVENT_LEVEL_MAJOR, "Electrical Storm",		/datum/event/electrical_storm, 		0,	list(ASSIGNMENT_ENGINEER = 10, ASSIGNMENT_JANITOR = 5)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Drone Revolution",				/datum/event/rogue_maint_drones,	0,	list(ASSIGNMENT_ENGINEER = 10, ASSIGNMENT_MEDICAL = 10, ASSIGNMENT_SECURITY = 20, ASSIGNMENT_EXPLORATION = 15)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Disease Outbreak",				/datum/event/disease_outbreak,		0,	list(ASSIGNMENT_MEDICAL = 20, ASSIGNMENT_SCIENCE = 10)),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Bluespace Drive Instability",		/datum/event/bsd_instability,		0,list(ASSIGNMENT_ENGINEER = 10, ASSIGNMENT_ANY = 5), 1),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Bluespace Drive Instability",		/datum/event/bsd_instability,		0,	list(ASSIGNMENT_ENGINEER = 10, ASSIGNMENT_ANY = 5), 1),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Psionic Spasm",					/datum/event/minispasm,				0,	list(ASSIGNMENT_PSIONIC = 5, ASSIGNMENT_MEDICAL = 3, ASSIGNMENT_SCIENCE = 3, ASSIGNMENT_ANY = 1), 1),
 	)
 
 /datum/event_container/catastrophe
 	severity = EVENT_LEVEL_CATASTROPHE
 	available_events = list(
 		new /datum/event_meta(EVENT_LEVEL_CATASTROPHE, "Nothing",			/datum/event/nothing,			100),
-		new /datum/event_meta(EVENT_LEVEL_CATASTROPHE, "Leviathan",			/datum/event/leviathan_spawn,	0,		list(ASSIGNMENT_COMMAND = 5, ASSIGNMENT_EXPLORATION = 5, ASSIGNMENT_SECURITY = 5, ASSIGNMENT_MEDICAL = 5, ASSIGNMENT_ENGINEER = 5))
+		new /datum/event_meta(EVENT_LEVEL_CATASTROPHE, "Leviathan",			/datum/event/leviathan_spawn,	0,		list(ASSIGNMENT_COMMAND = 5, ASSIGNMENT_EXPLORATION = 5, ASSIGNMENT_SECURITY = 5, ASSIGNMENT_MEDICAL = 5, ASSIGNMENT_ENGINEER = 5), 1)
 	)
 
 /datum/event_container/exo
@@ -221,3 +226,5 @@ var/global/list/severity_to_string = list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT
 #undef ASSIGNMENT_SCIENTIST
 #undef ASSIGNMENT_EXPLORATION
 #undef ASSIGNMENT_SECURITY
+#undef ASSIGNMENT_MAGIC
+#undef ASSIGNMENT_PSIONIC
