@@ -103,8 +103,8 @@
 	},
 /obj/machinery/power/apc{
 	dir = 1;
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/structure/cable/green{
 	d2 = 8;
@@ -387,8 +387,8 @@
 	icon_state = "pipe-c"
 	},
 /obj/machinery/alarm{
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/primarythruster)
@@ -478,8 +478,8 @@
 	},
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 24;
-	name = "intrepid east bump"
+	name = "intrepid east bump";
+	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/sleep/cryo)
@@ -584,8 +584,8 @@
 	dir = 10
 	},
 /obj/machinery/alarm{
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/engineering/portthruster)
@@ -721,8 +721,8 @@
 	},
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 24;
-	name = "intrepid east bump"
+	name = "intrepid east bump";
+	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/cmo)
@@ -833,8 +833,8 @@
 /area/shuttle/ambulance/home)
 "aOl" = (
 /obj/machinery/door/airlock/civilian{
-	name = "Bunk Four";
-	id_tag = "bunk4"
+	id_tag = "bunk4";
+	name = "Bunk Four"
 	},
 /obj/machinery/door/firedoor{
 	dir = 4
@@ -1175,8 +1175,8 @@
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -1849,8 +1849,8 @@
 	},
 /obj/machinery/power/apc{
 	dir = 1;
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/structure/cable/green{
 	d2 = 8;
@@ -2060,8 +2060,8 @@
 	},
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 24;
-	name = "intrepid east bump"
+	name = "intrepid east bump";
+	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/co)
@@ -2111,8 +2111,8 @@
 "bAx" = (
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 24;
-	name = "intrepid east bump"
+	name = "intrepid east bump";
+	pixel_x = 24
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
@@ -2549,8 +2549,8 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/alarm{
 	dir = 4;
-	pixel_x = -24;
-	name = "intrepid west bump"
+	name = "intrepid west bump";
+	pixel_x = -24
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/misc/maint/portside)
@@ -2826,8 +2826,8 @@
 	id = "trash"
 	},
 /obj/machinery/alarm{
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -3153,8 +3153,8 @@
 "ckk" = (
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -3457,8 +3457,8 @@
 	},
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -3468,8 +3468,8 @@
 "cyk" = (
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 24;
-	name = "intrepid east bump"
+	name = "intrepid east bump";
+	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/intrepid/department/exploration/storage)
@@ -4297,8 +4297,8 @@
 "deH" = (
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /obj/structure/cable/orange{
 	d1 = 4;
@@ -4363,8 +4363,8 @@
 /obj/machinery/disposal,
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 24;
-	name = "intrepid east bump"
+	name = "intrepid east bump";
+	pixel_x = 24
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 8
@@ -5020,8 +5020,8 @@
 	},
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 24;
-	name = "intrepid east bump"
+	name = "intrepid east bump";
+	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/security/wing)
@@ -5279,8 +5279,8 @@
 	},
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 24;
-	name = "intrepid east bump"
+	name = "intrepid east bump";
+	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/xo)
@@ -5588,8 +5588,8 @@
 /obj/item/bedsheet/red,
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /obj/machinery/light/small{
 	dir = 4
@@ -5654,8 +5654,8 @@
 /area/intrepid/department/command/bridge)
 "dXn" = (
 /obj/machinery/alarm{
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/machinery/light/dystopian{
 	dir = 8
@@ -6301,8 +6301,8 @@
 	},
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled,
 /area/intrepid/misc/hallway/starboard)
@@ -6394,8 +6394,8 @@
 "eyU" = (
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -7302,8 +7302,8 @@
 "fiD" = (
 /obj/structure/table/standard,
 /obj/machinery/alarm{
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/security/prison)
@@ -8213,9 +8213,9 @@
 	pixel_y = 24
 	},
 /obj/machinery/button/alternate/door/bolts{
-	pixel_y = 34;
 	id_tag = "bunk2";
-	name = "Bunk Two Door Bolt button"
+	name = "Bunk Two Door Bolt button";
+	pixel_y = 34
 	},
 /turf/simulated/floor/carpet/brown,
 /area/crew_quarters/sleep/bunk)
@@ -8320,11 +8320,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/button/blast_door{
+	dir = 1;
 	id_tag = "cryogenicsviewport";
 	name = "Cryogenics Viewport Shutters button";
 	pixel_x = 32;
-	pixel_y = -32;
-	dir = 1
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/crew_quarters/sleep/cryo)
@@ -8797,8 +8797,8 @@
 	},
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/intrepid/department/engineering/portthruster)
@@ -8925,8 +8925,8 @@
 /area/intrepid/misc/hallway/center)
 "guP" = (
 /obj/machinery/door/airlock/civilian{
-	name = "Bunk Two";
-	id_tag = "bunk2"
+	id_tag = "bunk2";
+	name = "Bunk Two"
 	},
 /obj/machinery/door/firedoor{
 	dir = 4
@@ -9081,8 +9081,8 @@
 "gCv" = (
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /obj/machinery/light/dystopian{
 	dir = 8
@@ -9161,8 +9161,8 @@
 /obj/item/bedsheet/purple,
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -9702,8 +9702,8 @@
 /obj/item/bedsheet/hos,
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/command/commandquarters/tgs)
@@ -10121,8 +10121,8 @@
 /area/intrepid/misc/maint/aft)
 "hkO" = (
 /obj/machinery/door/airlock/civilian{
-	name = "Bunk One";
-	id_tag = "bunk1"
+	id_tag = "bunk1";
+	name = "Bunk One"
 	},
 /obj/machinery/door/firedoor{
 	dir = 4
@@ -10311,8 +10311,8 @@
 /obj/effect/floor_decal/industrial/box/yellow,
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo)
@@ -10428,8 +10428,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/power/apc/high{
 	dir = 4;
-	pixel_x = 24;
-	name = "high intrepid east bump"
+	name = "high intrepid east bump";
+	pixel_x = 24
 	},
 /obj/structure/cable/green,
 /obj/structure/disposalpipe/segment,
@@ -10628,8 +10628,8 @@
 	},
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -10670,8 +10670,8 @@
 "hEd" = (
 /obj/machinery/power/apc{
 	dir = 1;
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/structure/cable/green{
 	d2 = 8;
@@ -10746,8 +10746,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 24;
-	name = "intrepid east bump"
+	name = "intrepid east bump";
+	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/civillian/galleybackroom)
@@ -11148,8 +11148,8 @@
 /area/intrepid/department/engineering/storage/primary)
 "iaX" = (
 /obj/machinery/power/apc{
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /obj/structure/cable/green{
 	d2 = 8;
@@ -11225,8 +11225,8 @@
 	},
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 24;
-	name = "intrepid east bump"
+	name = "intrepid east bump";
+	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/medical/operatingroom)
@@ -11430,8 +11430,8 @@
 "ijr" = (
 /obj/machinery/power/apc{
 	dir = 1;
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/structure/cable/green{
 	d2 = 6;
@@ -11773,8 +11773,8 @@
 "iyn" = (
 /obj/machinery/power/apc{
 	dir = 1;
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 1
@@ -11800,8 +11800,8 @@
 /area/shuttle/research/hallway)
 "iyY" = (
 /obj/machinery/power/apc{
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /obj/structure/cable/green,
 /turf/simulated/floor/tiled/techmaint,
@@ -11912,8 +11912,8 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/alarm{
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -11966,8 +11966,8 @@
 "iEe" = (
 /obj/machinery/power/apc{
 	dir = 1;
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -11989,8 +11989,8 @@
 "iEk" = (
 /obj/machinery/alarm{
 	dir = 4;
-	pixel_x = -24;
-	name = "intrepid west bump"
+	name = "intrepid west bump";
+	pixel_x = -24
 	},
 /turf/simulated/floor/wood/walnut,
 /area/intrepid/department/civillian/mess)
@@ -12622,8 +12622,8 @@
 "jbb" = (
 /obj/machinery/power/apc{
 	dir = 1;
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/structure/cable/orange{
 	d2 = 4;
@@ -12725,8 +12725,8 @@
 "jhH" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/machinery/alarm{
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/item/reagent_containers/food/condiment/enzyme,
 /obj/item/reagent_containers/food/condiment/small/saltshaker,
@@ -12948,8 +12948,8 @@
 	},
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 24;
-	name = "intrepid east bump"
+	name = "intrepid east bump";
+	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/rd)
@@ -13391,8 +13391,8 @@
 "jIY" = (
 /obj/machinery/power/apc{
 	dir = 1;
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -13617,8 +13617,8 @@
 /obj/item/toy/figure/janitor,
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 24;
-	name = "intrepid east bump"
+	name = "intrepid east bump";
+	pixel_x = 24
 	},
 /obj/item/storage/box/lights/mixed,
 /obj/item/storage/box/lights/mixed,
@@ -13711,8 +13711,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/alarm{
 	dir = 4;
-	pixel_x = -24;
-	name = "intrepid west bump"
+	name = "intrepid west bump";
+	pixel_x = -24
 	},
 /obj/effect/floor_decal/corner/green/half{
 	dir = 8
@@ -14033,8 +14033,8 @@
 "kgA" = (
 /obj/machinery/power/apc{
 	dir = 1;
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /obj/structure/cable/green{
@@ -14439,12 +14439,8 @@
 /area/intrepid/misc/maint/starboard)
 "kuW" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 8
-	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor,
 /area/intrepid/misc/maint/starboard)
 "kvv" = (
@@ -14555,8 +14551,8 @@
 	},
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 24;
-	name = "intrepid east bump"
+	name = "intrepid east bump";
+	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/cos)
@@ -14829,8 +14825,8 @@
 	},
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/primarythruster)
@@ -14934,8 +14930,8 @@
 /obj/structure/flora/pottedplant/deskferntrim,
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/command/commandquarters/tgs)
@@ -15357,8 +15353,8 @@
 /obj/effect/floor_decal/corner/blue/diagonal,
 /obj/machinery/alarm{
 	dir = 4;
-	pixel_x = -24;
-	name = "intrepid west bump"
+	name = "intrepid west bump";
+	pixel_x = -24
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/bridgeofficer)
@@ -15858,8 +15854,8 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/alarm{
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -16232,8 +16228,8 @@
 "lDg" = (
 /obj/structure/table/standard,
 /obj/machinery/alarm{
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/item/defibrillator/loaded,
 /obj/item/organ/internal/posibrain,
@@ -16272,8 +16268,8 @@
 	},
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 24;
-	name = "intrepid east bump"
+	name = "intrepid east bump";
+	pixel_x = 24
 	},
 /obj/effect/floor_decal/industrial/delivery_sharp/red,
 /turf/simulated/floor/tiled/white,
@@ -16308,8 +16304,8 @@
 /area/shuttle/escape_pod1/station)
 "lIn" = (
 /obj/machinery/power/apc{
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /obj/structure/cable/green{
 	d2 = 8;
@@ -16648,8 +16644,8 @@
 /obj/machinery/suit_storage_unit/security/alt,
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /turf/simulated/floor/reinforced,
 /area/intrepid/department/security/storage)
@@ -16807,8 +16803,8 @@
 /obj/item/storage/toolbox/mechanical,
 /obj/machinery/alarm{
 	dir = 4;
-	pixel_x = -24;
-	name = "intrepid west bump"
+	name = "intrepid west bump";
+	pixel_x = -24
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -17189,8 +17185,8 @@
 /obj/item/bedsheet/orange,
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -17645,8 +17641,8 @@
 /area/intrepid/misc/hallway/starboard)
 "mzb" = (
 /obj/machinery/alarm{
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/starboardthruster)
@@ -17864,8 +17860,8 @@
 	dir = 1
 	},
 /obj/machinery/alarm{
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/research/hallway)
@@ -18107,9 +18103,9 @@
 	pixel_y = 24
 	},
 /obj/machinery/button/alternate/door/bolts{
-	pixel_y = 34;
 	id_tag = "bunk4";
-	name = "Bunk Four Door Bolt button"
+	name = "Bunk Four Door Bolt button";
+	pixel_y = 34
 	},
 /turf/simulated/floor/carpet/brown,
 /area/crew_quarters/sleep/bunk)
@@ -18280,8 +18276,8 @@
 	},
 /obj/machinery/power/apc{
 	dir = 1;
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -18378,8 +18374,8 @@
 "mTw" = (
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 24;
-	name = "intrepid east bump"
+	name = "intrepid east bump";
+	pixel_x = 24
 	},
 /obj/effect/floor_decal/corner/red/half{
 	dir = 4
@@ -18587,16 +18583,16 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/alarm{
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/starboard)
 "mXH" = (
 /obj/machinery/power/apc/high{
 	dir = 4;
-	pixel_x = 24;
-	name = "high intrepid east bump"
+	name = "high intrepid east bump";
+	pixel_x = 24
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -18710,8 +18706,8 @@
 /obj/structure/table/standard,
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/security/prison)
@@ -18737,20 +18733,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/intrepid/department/cargo/cargobay)
-"nff" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/floor,
-/area/intrepid/misc/maint/starboard)
 "nfk" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -18896,8 +18878,8 @@
 	dir = 4
 	},
 /obj/machinery/alarm{
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/structure/cable/orange{
 	d1 = 4;
@@ -18992,8 +18974,8 @@
 "nlh" = (
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /obj/effect/floor_decal/corner/green,
 /turf/simulated/floor/tiled,
@@ -19420,8 +19402,8 @@
 "nBz" = (
 /obj/structure/adherent_bath,
 /obj/machinery/alarm{
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/effect/decal/cleanable/cobweb2,
 /turf/simulated/floor/crystal,
@@ -20577,8 +20559,8 @@
 "ouN" = (
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/engineering/starboardthruster)
@@ -21798,8 +21780,8 @@
 "pjQ" = (
 /obj/machinery/power/apc{
 	dir = 1;
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -21859,8 +21841,8 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 24;
-	name = "intrepid east bump"
+	name = "intrepid east bump";
+	pixel_x = 24
 	},
 /turf/simulated/floor/wood/walnut,
 /area/intrepid/department/civillian/mess)
@@ -22373,8 +22355,8 @@
 	dir = 4
 	},
 /obj/machinery/alarm{
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /turf/simulated/floor/tiled,
 /area/intrepid/misc/hallway/portside)
@@ -22691,8 +22673,8 @@
 	},
 /obj/machinery/alarm{
 	dir = 4;
-	pixel_x = -24;
-	name = "intrepid west bump"
+	name = "intrepid west bump";
+	pixel_x = -24
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/intrepid/department/engineering/atmos)
@@ -22762,8 +22744,8 @@
 "pRe" = (
 /obj/machinery/power/apc{
 	dir = 1;
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -22959,8 +22941,8 @@
 "pZs" = (
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 24;
-	name = "intrepid east bump"
+	name = "intrepid east bump";
+	pixel_x = 24
 	},
 /obj/structure/cable/orange{
 	d1 = 1;
@@ -23631,8 +23613,8 @@
 "qub" = (
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 24;
-	name = "intrepid east bump"
+	name = "intrepid east bump";
+	pixel_x = 24
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -23762,8 +23744,8 @@
 "qzc" = (
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/intrepid/department/security/locker)
@@ -23891,8 +23873,8 @@
 "qDm" = (
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 24;
-	name = "intrepid east bump"
+	name = "intrepid east bump";
+	pixel_x = 24
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/fuel,
 /turf/simulated/floor/tiled,
@@ -24115,8 +24097,8 @@
 	},
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -24125,8 +24107,8 @@
 /area/intrepid/department/engineering/starboardthruster)
 "qMl" = (
 /obj/machinery/alarm{
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/structure/table/woodentable/walnut,
 /obj/structure/flora/pottedplant/deskferntrim{
@@ -24446,8 +24428,8 @@
 	},
 /obj/machinery/alarm{
 	dir = 4;
-	pixel_x = -24;
-	name = "intrepid west bump"
+	name = "intrepid west bump";
+	pixel_x = -24
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -24584,8 +24566,8 @@
 /obj/item/reagent_containers/glass/beaker/large,
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /obj/machinery/light/yellowish{
 	dir = 8
@@ -25093,8 +25075,8 @@
 	},
 /obj/machinery/power/apc{
 	dir = 1;
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/structure/cable/green{
 	d2 = 8;
@@ -25135,8 +25117,8 @@
 /obj/item/bedsheet/blue,
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /obj/machinery/light/small{
 	dir = 4
@@ -25180,8 +25162,8 @@
 /area/intrepid/department/medical/treatment)
 "rzq" = (
 /obj/machinery/alarm{
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/structure/cable/orange{
 	d1 = 4;
@@ -25195,8 +25177,8 @@
 	dir = 9
 	},
 /obj/machinery/power/apc{
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /obj/structure/cable/green{
 	d2 = 4;
@@ -25279,8 +25261,8 @@
 "rCf" = (
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /turf/simulated/floor,
 /area/crew_quarters/sleep/cryo)
@@ -26512,8 +26494,8 @@
 "sqs" = (
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 24;
-	name = "intrepid east bump"
+	name = "intrepid east bump";
+	pixel_x = 24
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 5
@@ -26526,8 +26508,8 @@
 "sqE" = (
 /obj/machinery/power/apc{
 	dir = 1;
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/structure/cable/green{
 	d2 = 8;
@@ -26617,8 +26599,8 @@
 /obj/structure/table/standard,
 /obj/machinery/alarm{
 	dir = 4;
-	pixel_x = -24;
-	name = "intrepid west bump"
+	name = "intrepid west bump";
+	pixel_x = -24
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/computerlab)
@@ -26790,12 +26772,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1
-	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -26805,6 +26781,12 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/intrepid/misc/maint/aft)
@@ -27418,8 +27400,8 @@
 	},
 /obj/machinery/power/apc{
 	dir = 1;
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -27717,8 +27699,8 @@
 	},
 /obj/machinery/power/apc{
 	dir = 1;
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -27849,8 +27831,8 @@
 /obj/machinery/cooker/oven,
 /obj/machinery/power/apc{
 	dir = 1;
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/structure/cable/green{
 	d2 = 4;
@@ -27871,9 +27853,9 @@
 	pixel_y = 24
 	},
 /obj/machinery/button/alternate/door/bolts{
-	pixel_y = 34;
 	id_tag = "bunk3";
-	name = "Bunk Three Door Bolt button"
+	name = "Bunk Three Door Bolt button";
+	pixel_y = 34
 	},
 /turf/simulated/floor/carpet/brown,
 /area/crew_quarters/sleep/bunk)
@@ -27928,8 +27910,8 @@
 "thZ" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/machinery/power/apc{
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /obj/structure/cable/green{
 	d2 = 8;
@@ -28384,8 +28366,8 @@
 	},
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 24;
-	name = "intrepid east bump"
+	name = "intrepid east bump";
+	pixel_x = 24
 	},
 /obj/structure/cable/orange{
 	d1 = 1;
@@ -28452,8 +28434,8 @@
 	dir = 1
 	},
 /obj/machinery/alarm{
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/structure/cable/green{
 	d1 = 5;
@@ -28745,8 +28727,8 @@
 /area/intrepid/misc/maint/internalportside)
 "tIN" = (
 /obj/machinery/power/apc{
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /obj/structure/cable/green,
 /obj/effect/floor_decal/corner/green{
@@ -28923,8 +28905,8 @@
 /area/shuttle/research/xenoarchlab)
 "tNf" = (
 /obj/machinery/power/apc{
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /obj/structure/cable/green,
 /obj/structure/disposalpipe/segment{
@@ -29160,8 +29142,8 @@
 "tUv" = (
 /obj/machinery/power/apc{
 	dir = 1;
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -30391,8 +30373,8 @@
 	},
 /obj/machinery/power/apc{
 	dir = 1;
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -30451,8 +30433,8 @@
 /area/intrepid/department/civillian/hydroponics)
 "uNS" = (
 /obj/machinery/door/airlock/civilian{
-	name = "Bunk Three";
-	id_tag = "bunk3"
+	id_tag = "bunk3";
+	name = "Bunk Three"
 	},
 /obj/machinery/door/firedoor{
 	dir = 4
@@ -30726,8 +30708,8 @@
 	},
 /obj/machinery/alarm{
 	dir = 4;
-	pixel_x = -24;
-	name = "intrepid west bump"
+	name = "intrepid west bump";
+	pixel_x = -24
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/sleep/cryo)
@@ -31155,8 +31137,8 @@
 /obj/structure/table/standard,
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 24;
-	name = "intrepid east bump"
+	name = "intrepid east bump";
+	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/intrepid/department/civillian/computerlab)
@@ -31544,8 +31526,8 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/alarm{
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor,
@@ -32198,8 +32180,8 @@
 	c_tag = "First Deck - Port Wing Center"
 	},
 /obj/machinery/alarm{
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /turf/simulated/floor/tiled,
 /area/intrepid/misc/hallway/portside)
@@ -32227,9 +32209,9 @@
 	pixel_y = 24
 	},
 /obj/machinery/button/alternate/door/bolts{
-	pixel_y = 34;
 	id_tag = "bunk1";
-	name = "Bunk One Door Bolt button"
+	name = "Bunk One Door Bolt button";
+	pixel_y = 34
 	},
 /turf/simulated/floor/carpet/brown,
 /area/crew_quarters/sleep/bunk)
@@ -32940,8 +32922,8 @@
 "wCq" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/alarm{
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 1
@@ -32995,8 +32977,8 @@
 /area/shuttle/research/xenoarchlab)
 "wFi" = (
 /obj/machinery/power/apc{
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /obj/structure/cable/green{
 	d2 = 8;
@@ -33165,8 +33147,8 @@
 "wJR" = (
 /obj/machinery/power/apc/critical{
 	dir = 4;
-	pixel_x = 24;
-	name = "critical intrepid east bump"
+	name = "critical intrepid east bump";
+	pixel_x = 24
 	},
 /obj/structure/cable/green,
 /turf/simulated/floor/tiled/freezer,
@@ -33702,8 +33684,8 @@
 	},
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled,
 /area/intrepid/misc/hallway/starboard)
@@ -33911,8 +33893,8 @@
 	dir = 8
 	},
 /obj/machinery/alarm{
-	pixel_y = 20;
-	name = "intrepid north bump"
+	name = "intrepid north bump";
+	pixel_y = 20
 	},
 /obj/machinery/camera/network/command{
 	c_tag = "Command - Teleporter";
@@ -34361,8 +34343,8 @@
 	},
 /obj/machinery/alarm{
 	dir = 8;
-	pixel_x = 24;
-	name = "intrepid east bump"
+	name = "intrepid east bump";
+	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/dark,
 /area/intrepid/department/command/commandquarters/ce)
@@ -34718,8 +34700,8 @@
 "xMk" = (
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -24;
-	name = "intrepid south bump"
+	name = "intrepid south bump";
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/white,
 /area/intrepid/department/civillian/hydroponics)
@@ -52281,7 +52263,7 @@ hjS
 hjS
 hjS
 hjS
-nff
+hjS
 hjS
 kPD
 kAt
