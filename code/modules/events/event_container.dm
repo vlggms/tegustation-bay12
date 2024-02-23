@@ -198,7 +198,7 @@ var/global/list/severity_to_string = list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Drone Revolution",				/datum/event/rogue_maint_drones,	0,	list(ASSIGNMENT_ENGINEER = 10, ASSIGNMENT_MEDICAL = 10, ASSIGNMENT_SECURITY = 20, ASSIGNMENT_EXPLORATION = 15)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Disease Outbreak",				/datum/event/disease_outbreak,		0,	list(ASSIGNMENT_MEDICAL = 20, ASSIGNMENT_SCIENCE = 10)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Bluespace Drive Instability",		/datum/event/bsd_instability,		0,	list(ASSIGNMENT_ENGINEER = 10, ASSIGNMENT_ANY = 5), 1),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Psionic Spasm",					/datum/event/minispasm,				0,	list(ASSIGNMENT_MEDICAL = 4, ASSIGNMENT_SCIENCE = 4, ASSIGNMENT_ANY = 2), 1),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Psionic Spasm",					/datum/event/minispasm,				0,	list(ASSIGNMENT_PSIONIC = 5, ASSIGNMENT_MEDICAL = 3, ASSIGNMENT_SCIENCE = 3, ASSIGNMENT_ANY = 1), 1),
 	)
 
 /datum/event_container/catastrophe
