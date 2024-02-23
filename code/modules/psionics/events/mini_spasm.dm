@@ -59,4 +59,4 @@
 	victim.psi.update()
 
 	if(prob(33))
-		addtimer(CALLBACK(victim.psi, /datum/psi_complexus/proc/check_latency_trigger, 100, "a psionic scream", redactive = TRUE), rand(5 SECONDS, 30 SECONDS))
+		addtimer(CALLBACK(victim.psi, /datum/psi_complexus/proc/check_latency_trigger, 100, "a psionic scream", TRUE), rand(5 SECONDS, 30 SECONDS))
