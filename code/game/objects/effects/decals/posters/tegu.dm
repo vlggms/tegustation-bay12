@@ -51,6 +51,11 @@
 	name = "TerraGov Emblem"
 	desc = "A poster with the TerraGov's coat of arms on it, symbolizing the \"Last defenders of Humanity\"."
 
+/decl/poster/earth_reclamation_committee
+	icon_state ="tposter13"
+	name = "Earth Reclamation Committee poster"
+	desc = "A poster with an inspiring image of planet Earth and a directive aimed at its viewers to \"Take it back\". Earth Reclamation Committee logotype and few slogans are displayed in tiny text at the bottom of it."
+
 // Illegal posters
 /decl/poster/illegal/independent
 	icon_state ="tposter11"
