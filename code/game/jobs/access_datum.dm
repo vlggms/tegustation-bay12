@@ -483,47 +483,54 @@
 /datum/access/supplylink_solgov
 	id = access_supplylink_solgov
 	desc = "Supply Console - SolGov Link"
-	region = ACCESS_REGION_SUPPLY
+	region = ACCESS_REGION_NONE
 	access_type = ACCESS_TYPE_NONE
 
 /var/const/access_supplylink_terragov = "ACCESS_SUPPLY_LINK_TERRAGOV"
 /datum/access/supplylink_terragov
 	id = access_supplylink_terragov
 	desc = "Supply Console - TerraGov Link"
-	region = ACCESS_REGION_SUPPLY
+	region = ACCESS_REGION_NONE
 	access_type = ACCESS_TYPE_NONE
 
 /var/const/access_supplylink_isc = "ACCESS_SUPPLY_LINK_ISC"
 /datum/access/supplylink_isc
 	id = access_supplylink_isc
 	desc = "Supply Console - ISC Link"
-	region = ACCESS_REGION_SUPPLY
+	region = ACCESS_REGION_NONE
 	access_type = ACCESS_TYPE_NONE
 
 /var/const/access_supplylink_nanotrasen = "ACCESS_SUPPLY_LINK_NANOTRASEN"
 /datum/access/supplylink_nanotrasen
 	id = access_supplylink_nanotrasen
 	desc = "Supply Console - Nanotrasen Link"
-	region = ACCESS_REGION_SUPPLY
+	region = ACCESS_REGION_NONE
 	access_type = ACCESS_TYPE_NONE
 
 /var/const/access_supplylink_cybersun = "ACCESS_SUPPLY_LINK_CYBERSUN"
 /datum/access/supplylink_cybersun
 	id = access_supplylink_cybersun
 	desc = "Supply Console - Cybersun Link"
-	region = ACCESS_REGION_SUPPLY
+	region = ACCESS_REGION_NONE
 	access_type = ACCESS_TYPE_NONE
 
 /var/const/access_supplylink_obs = "ACCESS_SUPPLY_LINK_OBS"
 /datum/access/supplylink_obs
 	id = access_supplylink_obs
 	desc = "Supply Console - OBS Link"
-	region = ACCESS_REGION_SUPPLY
+	region = ACCESS_REGION_NONE
 	access_type = ACCESS_TYPE_NONE
 
 /var/const/access_supplylink_reborn_church = "ACCESS_SUPPLY_LINK_REBORN_CHURCH"
 /datum/access/supplylink_reborn_church
 	id = access_supplylink_reborn_church
 	desc = "Supply Console - Reborn Christian Church Link"
-	region = ACCESS_REGION_SUPPLY
+	region = ACCESS_REGION_NONE
+	access_type = ACCESS_TYPE_NONE
+
+/var/const/access_supplylink_dominion = "ACCESS_SUPPLY_LINK_TERRAN_DOMINION"
+/datum/access/supplylink_dominion
+	id = access_supplylink_dominion
+	desc = "Supply Console - Terran Dominion"
+	region = ACCESS_REGION_NONE
 	access_type = ACCESS_TYPE_NONE

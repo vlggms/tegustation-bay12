@@ -949,7 +949,7 @@ var/list/admin_verbs_mentors = list(
 	log_and_message_admins("gave [key_name(T)] the spell [S].")
 
 // Right click panel
-/datum/admins/proc/DressUpMob(mob/M as mob in GLOB.player_list)
+/datum/admins/proc/DressUpMob(mob/M as mob in GLOB.ghost_mob_list + GLOB.human_mob_list)
 	set category = null
 	set name = "Dressup"
 	set desc = "Changes outfit of a target mob. If it is a ghost - spawns their character first."

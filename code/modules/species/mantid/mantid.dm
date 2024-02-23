@@ -38,7 +38,7 @@
 	min_age =                 1
 	max_age =                20
 	slowdown =               -1
-	rarity_value =            3
+	rarity_value =            4
 	gluttonous =              2
 	body_temperature =        null
 
@@ -147,7 +147,7 @@
 
 	gluttonous =              3
 	slowdown =                2
-	rarity_value =           10
+	rarity_value =           15
 	min_age =                 5
 	max_age =               500
 	blood_volume =         1200

@@ -3,6 +3,7 @@
 	name = "cold"
 	possible_effect_types = list(EFFECT_TOUCH, EFFECT_AURA)
 	cooldown_time = 50
+	value = 4000
 	var/target_temp
 
 /datum/artifact_effect/cold/getDescription()

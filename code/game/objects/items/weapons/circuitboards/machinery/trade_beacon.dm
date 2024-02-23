@@ -1,5 +1,5 @@
 /obj/item/stock_parts/circuitboard/trade_beacon
-	origin_tech = list(TECH_BLUESPACE = 2)
+	origin_tech = list(TECH_BLUESPACE = 4)
 	board_type = "machine"
 	req_components = list(
 		/obj/item/stock_parts/capacitor = 3,

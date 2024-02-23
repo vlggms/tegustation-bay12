@@ -2,6 +2,7 @@
 	name = "sleepy"
 	possible_effect_types = list(EFFECT_TOUCH, EFFECT_AURA, EFFECT_PULSE)
 	cooldown_time = 50
+	value = 3000
 
 /datum/artifact_effect/sleepy/getDescription()
 	return "May induce temporary sense of harmony and peace in its targets."

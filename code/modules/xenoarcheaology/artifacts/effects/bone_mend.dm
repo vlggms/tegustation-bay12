@@ -2,6 +2,7 @@
 	name = "bone mend"
 	possible_effect_types = list(EFFECT_TOUCH, EFFECT_PULSE)
 	cooldown_time = 100
+	value = 8000
 
 /datum/artifact_effect/bone_mend/getDescription()
 	return "The artifact emits waves of mending energy."

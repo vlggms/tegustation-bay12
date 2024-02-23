@@ -3,7 +3,7 @@
 		"TTB \"Invictus\"" = "Terran Trade Beacon \"Invictus\": Marine Corps equipment, sold exclusively to TerraGov associates.",
 		)
 	uid = "terra"
-	unlock_favor = 10000
+	unlock_favor = 12000
 	faction = FACTION_TERRAGOV
 	whitelist_factions = list(FACTION_TERRAGOV)
 	spawn_always = TRUE

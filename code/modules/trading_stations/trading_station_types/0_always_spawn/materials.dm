@@ -4,7 +4,7 @@
 		"FTB \"Steel Deck\"" = "Free Trade Beacon \"Steel Deck\": Best materials around this sector of space!",
 		)
 	uid = "materials"
-	unlock_favor = 2500
+	unlock_favor = 1200
 	faction = FACTION_INDEPENDENT
 	spawn_always = TRUE
 	markup = 1.5
@@ -15,6 +15,7 @@
 			/obj/item/stack/material/plastic/ten = CUSTOM_GOODS_NAME("plastic (x10)"),
 			/obj/item/stack/material/aluminium/ten = CUSTOM_GOODS_NAME("aluminium (x10)"),
 			/obj/item/stack/material/titanium/ten = CUSTOM_GOODS_NAME("titanium (x10)"),
+			/obj/item/stack/material/platinum/ten = CUSTOM_GOODS_NAME("platinum (x10)"),
 			/obj/item/stack/material/phoron/ten = CUSTOM_GOODS_NAME("phoron (x10)"),
 			/obj/item/stack/material/uranium/ten = CUSTOM_GOODS_NAME("uranium (x10)"),
 			/obj/item/stack/material/tritium/ten = CUSTOM_GOODS_NAME("tritium (x10)"),

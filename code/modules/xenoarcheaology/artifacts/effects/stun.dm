@@ -2,6 +2,7 @@
 	name = "stun"
 	possible_effect_types = list(EFFECT_TOUCH, EFFECT_PULSE)
 	cooldown_time = 50
+	value = 5000
 
 /datum/artifact_effect/stun/getDescription()
 	return "Effects include rapid attack on the neural centers of the body."

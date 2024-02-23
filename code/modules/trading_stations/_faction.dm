@@ -120,6 +120,20 @@
 
 // Misc
 
+/datum/trade_faction/dominion
+	name = FACTION_TERRAN_DOMINION
+	desc = "A part of the Terran Dominion, the most powerful human state. Long lost after vanishing from this universe some hundreds of years ago."
+	relationship = list(
+		FACTION_INDEPENDENT = FACTION_STATE_WAR,
+		FACTION_TERRAGOV = FACTION_STATE_WELCOMING,
+		FACTION_SOL_CENTRAL = FACTION_STATE_WELCOMING,
+		FACTION_ISC = FACTION_STATE_WELCOMING,
+		FACTION_NANOTRASEN = FACTION_STATE_RIVAL,
+		FACTION_CYBERSUN = FACTION_STATE_RIVAL,
+		FACTION_REBORN_CHRISTIAN_CHURCH = FACTION_STATE_RIVAL,
+		)
+	access_required = access_supplylink_dominion
+
 /datum/trade_faction/obs
 	name = FACTION_TERRASENATE_OBS
 	desc = "A part of the Order of the Black Sun, a xenophobic ultra-nationalist terrorist group."

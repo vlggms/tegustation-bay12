@@ -2,6 +2,7 @@
 	name = "robotic harm"
 	possible_effect_types = list(EFFECT_TOUCH, EFFECT_AURA, EFFECT_PULSE)
 	cooldown_time = 50
+	value = 4000
 	var/last_message
 
 /datum/artifact_effect/robohurt/getDescription()

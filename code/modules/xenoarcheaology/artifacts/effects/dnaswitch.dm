@@ -2,6 +2,7 @@
 /datum/artifact_effect/dnaswitch
 	name = "dnaswitch"
 	possible_effect_types = list(EFFECT_TOUCH, EFFECT_AURA, EFFECT_PULSE)
+	value = 6000
 	var/severity
 
 /datum/artifact_effect/dnaswitch/getDescription()

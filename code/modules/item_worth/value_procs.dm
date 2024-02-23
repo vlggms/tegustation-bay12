@@ -19,7 +19,8 @@
 	return ..() * material.value
 
 /obj/item/slime_extract/Value(base)
-	return base * Uses
+	. = ..()
+	. *= Uses
 
 /obj/item/ammo_casing/Value(base)
 	. = ..()
@@ -83,5 +84,55 @@
 
 /obj/item/organ/Value(base)
 	. = ..()
+	if(istype(species))
+		. *= species.rarity_value
 	if(damage)
 		. -= round(. * (damage / max_damage))
+
+/obj/item/spellbook/Value(base)
+	. = ..()
+	. += length(allowed_spells) * 1000
+	if(!isnull(owner))
+		. *= 0.5
+
+/obj/item/reagent_containers/food/snacks/grown/Value(base)
+	. = ..()
+	. += seed.Value(FALSE)
+
+// Seeds cost less than fully grown plants
+/obj/item/seeds/Value(base)
+	. = ..()
+	. += round(seed.Value(TRUE) * 0.3)
+
+/obj/item/tank/Value(base)
+	. = ..()
+	for(var/gas_id in air_contents.gas)
+		. += gas_data.value[gas_id] * air_contents.gas[gas_id]
+	. = round(.)
+
+// Mostly for canisters
+/obj/machinery/portable_atmospherics/Value(base)
+	. = ..()
+	for(var/gas_id in air_contents.gas)
+		. += gas_data.value[gas_id] * air_contents.gas[gas_id]
+	. = round(.)
+
+/obj/machinery/artifact/Value(base)
+	. = ..()
+	if(effect)
+		. += effect.Value()
+
+/obj/item/anobattery/Value(base)
+	. = ..()
+	if(battery_effect)
+		. += round(battery_effect.Value() * 0.25)
+
+/obj/item/mind_engraver_chip/Value(base)
+	. = ..()
+	if(istype(stored_data))
+		. += stored_data.Value()
+
+/mob/living/carbon/slime/Value(base)
+	. = ..()
+	var/atom/core_type = GetCoreType()
+	. += get_value(core_type)

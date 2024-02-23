@@ -32,25 +32,18 @@
 	var/update_flag = 0
 	/// Associative list of gases for this canister to begin with and the moles to have. A negative value will fill the tank to its starting pressure with the gas.
 	var/list/initial_gases = list()
-	/// A temperature in Kelvin for this canister's air contents to begin with. Use this for pre-chilled gases.
-	var/initial_temperature
 
-/obj/machinery/portable_atmospherics/canister/LateInitialize(mapload)
-	. = ..(mapload)
-	if (prob(1))
+/obj/machinery/portable_atmospherics/canister/Initialize(mapload)
+	. = ..()
+	if(prob(1))
 		desc += " Does not hold GAS." // huhuhu
-	if (!mapload) // Call gas creation after normal init if we're midround - otherwise, we'll runtime and have no gases
-		addtimer(CALLBACK(src, .proc/create_initial_gases), 0)
-	else
-		create_initial_gases()
+	create_initial_gases()
 
 /// Fills this canister with gas based on its subtype's initial_gases list. Should only happen during initial creation.
 /obj/machinery/portable_atmospherics/canister/proc/create_initial_gases()
-	if (initial_gases?.len)
-		for (var/gas_id in initial_gases)
+	if(LAZYLEN(initial_gases))
+		for(var/gas_id in initial_gases)
 			air_contents.adjust_gas(gas_id, initial_gases[gas_id] < 0 ? MolesForPressure() : initial_gases[gas_id])
-	if (initial_temperature)
-		air_contents.temperature = initial_temperature
 	update_icon()
 
 /obj/machinery/portable_atmospherics/canister/drain_power()
@@ -174,6 +167,24 @@
 		GAS_CHLORINE = -1
 	)
 
+/obj/machinery/portable_atmospherics/canister/tritium
+	name = "gas canister \[Tritium\]"
+	icon_state = "green"
+	canister_color = "green"
+	can_label = FALSE
+	initial_gases = list(
+		GAS_TRITIUM = -1
+	)
+
+/obj/machinery/portable_atmospherics/canister/deuterium
+	name = "gas canister \[Deuterium\]"
+	icon_state = "green"
+	canister_color = "green"
+	can_label = FALSE
+	initial_gases = list(
+		GAS_DEUTERIUM = -1
+	)
+
 /obj/machinery/portable_atmospherics/canister/air/airlock
 	start_pressure = 3 * ONE_ATMOSPHERE
 
@@ -218,6 +229,14 @@
 /obj/machinery/portable_atmospherics/canister/empty/hydrogen
 	icon_state = "purple"
 	canister_type = /obj/machinery/portable_atmospherics/canister/hydrogen
+
+/obj/machinery/portable_atmospherics/canister/empty/tritium
+	icon_state = "green"
+	canister_type = /obj/machinery/portable_atmospherics/canister/tritium
+
+/obj/machinery/portable_atmospherics/canister/empty/deuterium
+	icon_state = "green"
+	canister_type = /obj/machinery/portable_atmospherics/canister/deuterium
 
 
 

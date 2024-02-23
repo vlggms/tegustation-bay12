@@ -2,6 +2,7 @@
 	name = "teleport"
 	possible_effect_types = list(EFFECT_TOUCH, EFFECT_PULSE)
 	cooldown_time = 50
+	value = 7000
 	var/list/teleporting = list() //mobs waiting to be teleported
 
 /datum/artifact_effect/teleport/getDescription()

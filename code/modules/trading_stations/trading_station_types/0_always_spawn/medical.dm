@@ -6,7 +6,7 @@
 		"ZHTB \"Medicus\"" = "Zeng-Hu Trade Beacon \"Medicus\": Bruise packs, surgery tools, chemicals!",
 		)
 	uid = "medical"
-	unlock_favor = 5000
+	unlock_favor = 3500
 	faction = FACTION_INDEPENDENT // Should be under Zeng Hu, potentially
 	spawn_always = TRUE
 	markup = 1.2
@@ -17,6 +17,7 @@
 			/obj/item/storage/firstaid/surgery = GOODS_DEFAULT,
 			/obj/item/clothing/glasses/hud/health = GOODS_DEFAULT,
 			/obj/item/device/scanner/health = GOODS_DEFAULT,
+			/obj/item/stock_parts/computer/scanner/reagent = GOODS_DEFAULT,
 			/obj/item/autopsy_scanner = GOODS_DEFAULT,
 			/obj/item/storage/box/pillbottles = GOODS_DEFAULT,
 			/obj/item/storage/box/syringes = GOODS_DEFAULT,

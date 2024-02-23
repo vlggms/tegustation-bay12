@@ -2,6 +2,7 @@
 	name = "pushback"
 	possible_effect_types = list(EFFECT_TOUCH, EFFECT_PULSE)
 	cooldown_time = 50
+	value = 2000
 	var/throw_range
 	var/damage
 	var/speed = 3
@@ -13,6 +14,11 @@
 	..()
 	throw_range = range + rand(-1, 3)
 	damage = rand(5, 15)
+
+/datum/artifact_effect/pushback/Value()
+	. = ..()
+	. += throw_range * 1500
+	. += damage * 300
 
 /datum/artifact_effect/pushback/DoEffect(mob/toucher)
 	if(holder && istype(toucher, /mob/living))

@@ -274,6 +274,7 @@
 	name = "rocket shell"
 	desc = "An explosive designed to be fired from a launcher."
 	icon_state = "shell_he"
+	w_class = ITEM_SIZE_NORMAL
 	projectile_type = /obj/item/projectile/bullet/rocket
 	caliber = CALIBER_ROCKET
 	fall_sounds = list()

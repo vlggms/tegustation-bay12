@@ -1,6 +1,7 @@
 /datum/artifact_effect/celldrain
 	name = "cell drain"
 	possible_effect_types = list(EFFECT_TOUCH, EFFECT_AURA, EFFECT_PULSE)
+	value = 2000
 	var/last_message
 
 /datum/artifact_effect/celldrain/getDescription()

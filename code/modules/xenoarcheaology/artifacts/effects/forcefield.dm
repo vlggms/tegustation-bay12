@@ -3,6 +3,7 @@
 	effect_type = EFFECT_TOUCH
 	cooldown_time = 50
 	possible_effect_types = list(EFFECT_TOUCH, EFFECT_PULSE)
+	value = 6000
 	var/list/created_field = list()
 	var/field_range = 4
 	var/field_color

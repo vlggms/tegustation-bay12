@@ -9,6 +9,7 @@
 	bone_material = null
 	skin_material = null
 
+	rarity_value = 6
 	unarmed_types = list(/datum/unarmed_attack/claws/strong, /datum/unarmed_attack/bite/sharp)
 	darksight_range = 8
 	darksight_tint = DARKTINT_GOOD

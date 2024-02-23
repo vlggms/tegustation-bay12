@@ -142,7 +142,7 @@
 	cell = /obj/item/cell/hyper
 	capacitor = /obj/item/stock_parts/capacitor/super
 
-	origin_tech = list(TECH_COMBAT = 9, TECH_MATERIAL = 6, TECH_MAGNET = 8, TECH_DOMINION = 5)
+	origin_tech = list(TECH_COMBAT = 10, TECH_MATERIAL = 6, TECH_MAGNET = 8, TECH_DOMINION = 5)
 
 	firemodes = list(
 		list(mode_name="semiauto", burst=1, fire_delay=null, one_hand_penalty=2, burst_accuracy=null, dispersion=null),

@@ -32,6 +32,9 @@
 	var/list/symbol_html = list()
 	var/list/symbol = list()
 
+	//Values
+	var/list/value = list()
+
 /decl/xgm_gas
 	var/id = ""
 	var/name = "Unnamed Gas"
@@ -51,10 +54,12 @@
 	var/symbol_html = "X"
 	var/symbol = "X"
 
+	/// Cost per mole
+	var/value = 0
 
 /hook/startup/proc/generateGasData()
 	gas_data = new
-	for(var/p in (typesof(/decl/xgm_gas) - /decl/xgm_gas))
+	for(var/p in subtypesof(/decl/xgm_gas))
 		var/decl/xgm_gas/gas = new p //avoid initial() because of potential New() actions
 
 		if(gas.id in gas_data.gases)
@@ -80,6 +85,8 @@
 
 		gas_data.breathed_product[gas.id] = gas.breathed_product
 		gas_data.hidden_from_codex[gas.id] = gas.hidden_from_codex
+
+		gas_data.value[gas.id] = gas.value
 
 	return 1
 

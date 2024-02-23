@@ -7,6 +7,9 @@
 	anchored = TRUE
 	construct_state = /decl/machine_construction/default/panel_closed
 
+	idle_power_usage = 500
+	active_power_usage = 90000
+
 	machine_name = "mind engraver"
 	machine_desc = "Mind Engravers are an ultra-tech device that was used by Terran Dominion during its power peak. \
 		Allows to imprint knowledge, skills or new memories into the mind of its occupant."
@@ -277,6 +280,7 @@
 	if(!nanochip || !occupant)
 		return FALSE
 
+	update_use_power(POWER_USE_ACTIVE)
 	currently_imprinting = TRUE
 	imprint_end = world.time + imprint_time
 	visible_message(SPAN_NOTICE("\The [src] chimes as it begins its operation!"))
@@ -285,6 +289,7 @@
 
 /obj/machinery/mind_engraver/proc/StopImprint()
 	currently_imprinting = FALSE
+	update_use_power(POWER_USE_IDLE)
 
 /obj/machinery/mind_engraver/proc/FinishImprint()
 	StopImprint()

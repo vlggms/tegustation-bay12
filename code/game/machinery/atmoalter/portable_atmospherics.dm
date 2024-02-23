@@ -3,25 +3,18 @@
 	use_power = POWER_USE_OFF
 	construct_state = /decl/machine_construction/default/panel_closed
 
-	var/datum/gas_mixture/air_contents = new
+	var/datum/gas_mixture/air_contents
 
 	var/obj/machinery/atmospherics/portables_connector/connected_port
 	var/obj/item/tank/holding
 
+	var/initial_temperature = T20C
 	var/volume = 0
 	var/destroyed = 0
 
 	var/start_pressure = ONE_ATMOSPHERE
 	var/maximum_pressure = 90 * ONE_ATMOSPHERE
 	atom_flags = ATOM_FLAG_NO_TEMP_CHANGE | ATOM_FLAG_CLIMBABLE
-
-/obj/machinery/portable_atmospherics/New()
-	..()
-
-	air_contents.volume = volume
-	air_contents.temperature = T20C
-
-	return 1
 
 /obj/machinery/portable_atmospherics/Destroy()
 	QDEL_NULL(air_contents)
@@ -30,6 +23,7 @@
 
 /obj/machinery/portable_atmospherics/Initialize()
 	..()
+	air_contents = new(volume, initial_temperature)
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/machinery/portable_atmospherics/LateInitialize()
@@ -50,7 +44,7 @@
 		GAS_OXYGEN = O2STANDARD * MolesForPressure(),
 		GAS_NITROGEN = N2STANDARD *  MolesForPressure())
 
-/obj/machinery/portable_atmospherics/proc/MolesForPressure(var/target_pressure = start_pressure)
+/obj/machinery/portable_atmospherics/proc/MolesForPressure(target_pressure = start_pressure)
 	return (target_pressure * air_contents.volume) / (R_IDEAL_GAS_EQUATION * air_contents.temperature)
 
 /obj/machinery/portable_atmospherics/on_update_icon()

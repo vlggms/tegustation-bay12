@@ -7,6 +7,7 @@
 	breathed_product = /datum/reagent/oxygen
 	symbol_html = "O<sub>2</sub>"
 	symbol = "O2"
+	value = 3
 
 
 /decl/xgm_gas/nitrogen
@@ -16,6 +17,7 @@
 	molar_mass = 0.028	// kg/mol
 	symbol_html = "N<sub>2</sub>"
 	symbol = "N2"
+	value = 1.5
 
 /decl/xgm_gas/carbon_dioxide
 	id = GAS_CO2
@@ -24,6 +26,7 @@
 	molar_mass = 0.044	// kg/mol
 	symbol_html = "CO<sub>2</sub>"
 	symbol = "CO2"
+	value = 3
 
 /decl/xgm_gas/methyl_bromide
 	id = GAS_METHYL_BROMIDE
@@ -33,6 +36,7 @@
 	breathed_product = /datum/reagent/toxin/methyl_bromide
 	symbol_html = "CH<sub>3</sub>Br"
 	symbol = "CH3Br"
+	value = 6
 
 /decl/xgm_gas/phoron
 	id = GAS_PHORON
@@ -53,6 +57,7 @@
 	breathed_product = /datum/reagent/toxin/phoron
 	symbol_html = "Ph"
 	symbol = "Ph"
+	value = 8
 
 /decl/xgm_gas/sleeping_agent
 	id = GAS_N2O
@@ -63,6 +68,7 @@
 	breathed_product = /datum/reagent/nitrous_oxide
 	symbol_html = "N<sub>2</sub>O"
 	symbol = "N2O"
+	value = 2
 
 /decl/xgm_gas/methane
 	id = GAS_METHANE
@@ -72,6 +78,7 @@
 	flags = XGM_GAS_FUEL
 	symbol_html = "CH<sub>4</sub>"
 	symbol = "CH4"
+	value = 2
 
 /decl/xgm_gas/alium
 	id = GAS_ALIEN
@@ -79,6 +86,7 @@
 	hidden_from_codex = TRUE
 	symbol_html = "X"
 	symbol = "X"
+	value = 20
 
 /decl/xgm_gas/alium/New()
 	var/num = rand(100,999)
@@ -109,18 +117,21 @@
 	burn_product = GAS_STEAM
 	symbol_html = "H<sub>2</sub>"
 	symbol = "H2"
+	value = 5
 
 /decl/xgm_gas/hydrogen/deuterium
 	id = GAS_DEUTERIUM
 	name = "Deuterium"
 	symbol_html = "D"
 	symbol = "D"
+	value = 12
 
 /decl/xgm_gas/hydrogen/tritium
 	id = GAS_TRITIUM
 	name = "Tritium"
 	symbol_html = "T"
 	symbol = "T"
+	value = 12
 
 /decl/xgm_gas/helium
 	id = GAS_HELIUM
@@ -131,6 +142,7 @@
 	breathed_product = /datum/reagent/helium
 	symbol_html = "He"
 	symbol = "He"
+	value = 5
 
 /decl/xgm_gas/argon
 	id = GAS_ARGON
@@ -139,6 +151,7 @@
 	molar_mass = 0.018	// kg/mol
 	symbol_html = "Ar"
 	symbol = "Ar"
+	value = 15
 
 // If narcosis is ever simulated, krypton has a narcotic potency seven times greater than regular airmix.
 /decl/xgm_gas/krypton
@@ -148,6 +161,7 @@
 	molar_mass = 0.036	// kg/mol
 	symbol_html = "Kr"
 	symbol = "Kr"
+	value = 20
 
 /decl/xgm_gas/neon
 	id = GAS_NEON
@@ -156,6 +170,7 @@
 	molar_mass = 0.01	// kg/mol
 	symbol_html = "Ne"
 	symbol = "Ne"
+	value = 10
 
 /decl/xgm_gas/xenon
 	id = GAS_XENON
@@ -165,6 +180,7 @@
 	breathed_product = /datum/reagent/nitrous_oxide/xenon
 	symbol_html = "Xe"
 	symbol = "Xe"
+	value = 10
 
 /decl/xgm_gas/nitrodioxide
 	id = GAS_NO2
@@ -176,6 +192,7 @@
 	breathed_product = /datum/reagent/toxin
 	symbol_html = "NO<sub>2</sub>"
 	symbol = "NO2"
+	value = 2
 
 /decl/xgm_gas/nitricoxide
 	id = GAS_NO
@@ -186,6 +203,7 @@
 	flags = XGM_GAS_OXIDIZER
 	symbol_html = "NO"
 	symbol = "NO"
+	value = 10
 
 /decl/xgm_gas/chlorine
 	id = GAS_CHLORINE
@@ -198,6 +216,7 @@
 	breathed_product = /datum/reagent/toxin/chlorine
 	symbol_html = "Cl"
 	symbol = "Cl"
+	value = 5
 
 /decl/xgm_gas/vapor
 	id = GAS_STEAM
@@ -211,6 +230,7 @@
 	condensation_point =   308.15 // 35C. Dew point is ~20C but this is better for gameplay considerations.
 	symbol_html = "H<sub>2</sub>O"
 	symbol = "H2O"
+	value = 1
 
 /decl/xgm_gas/sulfurdioxide
 	id = GAS_SULFUR
@@ -220,6 +240,7 @@
 	molar_mass = 0.044	// kg/mol
 	symbol_html = "SO<sub>2</sub>"
 	symbol = "SO2"
+	value = 10
 
 /decl/xgm_gas/ammonia
 	id = GAS_AMMONIA
@@ -230,6 +251,7 @@
 	breathed_product = /datum/reagent/ammonia
 	symbol_html = "NH<sub>3</sub>"
 	symbol = "NH3"
+	value = 1
 
 /decl/xgm_gas/carbon_monoxide
 	id = GAS_CO
@@ -239,3 +261,4 @@
 	breathed_product = /datum/reagent/carbon_monoxide
 	symbol_html = "CO"
 	symbol = "CO"
+	value = 4
