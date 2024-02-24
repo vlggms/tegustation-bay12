@@ -218,7 +218,8 @@
 		info = stars(info,85)
 		user.visible_message("\The [user] crumples \the [src] into a ball!")
 		icon_state = "scrap"
-		throw_range = 5
+		throw_range = 10
+		throw_speed = 3
 		return
 	user.examinate(src)
 
