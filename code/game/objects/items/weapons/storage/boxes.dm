@@ -193,6 +193,8 @@
 	icon_state = "ammo"
 	desc = "A sturdy metal box with several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
 	use_sound = 'sound/effects/closet_open.ogg'
+	pickup_sound = 'sound/items/handling/ammobox_pickup.ogg'
+	throw_impact_sound = 'sound/items/handling/ammobox_drop.ogg'
 
 /obj/item/storage/box/ammo/blanks
 	name = "box of blank shells"

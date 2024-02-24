@@ -919,18 +919,20 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 
 	. = ..()
 	var/volume = GetThrownSoundVolume()
+	var/turf/sound_turf = get_turf(src)
 	//Living mobs handle thrown sounds differently.
 	if(istype(hit_atom, /mob/living))
+		sound_turf = get_turf(hit_atom)
 		if(throwforce > 0)
 			if(mob_throw_hit_sound)
-				playsound(hit_atom, mob_throw_hit_sound, volume, TRUE, -1)
+				playsound(sound_turf, mob_throw_hit_sound, volume, FALSE, -1)
 			else if(hitsound)
-				playsound(hit_atom, hitsound, volume, TRUE, -1)
+				playsound(sound_turf, hitsound, volume, FALSE, -1)
 		else if(throw_impact_sound)
-			playsound(hit_atom, throw_impact_sound, volume, TRUE, -1)
+			playsound(sound_turf, throw_impact_sound, volume, FALSE, -1)
 
 	else if(throw_impact_sound)
-		playsound(src, throw_impact_sound, volume, TRUE, -1)
+		playsound(sound_turf, throw_impact_sound, volume, FALSE, -1)
 
 /obj/item/proc/GetThrownSoundVolume()
 	return min(INITIAL_THROW_IMPACT_SOUND_VOLUME * w_class, 100)
