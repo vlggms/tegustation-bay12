@@ -11,6 +11,9 @@
 	throw_range = 10
 	origin_tech = list(TECH_MAGNET = 1)
 
+	pickup_sound = 'sound/items/handling/component_pickup.ogg'
+	throw_impact_sound = 'sound/items/handling/component_drop.ogg'
+
 	var/secured = 1
 	var/list/attached_overlays = null
 	var/obj/item/device/assembly_holder/holder = null

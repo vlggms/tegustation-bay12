@@ -16,6 +16,8 @@
 	attack_verb = list("pinched", "nipped")
 	sharp = TRUE
 	edge = TRUE
+	throw_impact_sound = 'sound/items/handling/wirecutter_drop.ogg'
+	pickup_sound =  'sound/items/handling/wirecutter_pickup.ogg'
 
 	var/build_from_parts = TRUE
 	var/handle_icon = "cutters_handle"

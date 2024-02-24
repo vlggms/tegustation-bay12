@@ -35,3 +35,8 @@
 #define SMALL_SOFTFLOOR ROOM
 #define ASTEROID CAVE
 #define SPACE UNDERWATER
+
+#define EQUIP_SOUND_VOLUME 30
+#define PICKUP_SOUND_VOLUME 15
+// Multiplied by item's weight class
+#define INITIAL_THROW_IMPACT_SOUND_VOLUME 15

@@ -16,6 +16,8 @@
 	matter = list(MATERIAL_STEEL = 140)
 	center_of_mass = "x=16;y=20"
 	attack_verb = list("attacked", "bashed", "battered", "bludgeoned", "whacked")
+	throw_impact_sound = 'sound/items/handling/crowbar_drop.ogg'
+	pickup_sound =  'sound/items/handling/crowbar_pickup.ogg'
 
 /obj/item/crowbar/red
 	icon_state = "red_crowbar"

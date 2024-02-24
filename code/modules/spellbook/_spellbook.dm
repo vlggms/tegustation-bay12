@@ -16,6 +16,9 @@ GLOBAL_LIST_EMPTY(spells_by_categories)
 	throw_speed = 1
 	throw_range = 3
 	w_class = ITEM_SIZE_NORMAL
+	pickup_sound = 'sound/items/handling/book_pickup.ogg'
+	throw_impact_sound = 'sound/items/handling/book_drop.ogg'
+
 	var/temp = null
 	var/book_flags = 0
 	/// Current owner of the book, none other than them can use it; Can be dispelled to remove that and other locks.

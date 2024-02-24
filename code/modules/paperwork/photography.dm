@@ -110,6 +110,8 @@ var/global/photo_count = 0
 	w_class = ITEM_SIZE_NORMAL //same as book
 	storage_slots = DEFAULT_BOX_STORAGE //yes, that's storage_slots. Photos are w_class 1 so this has as many slots equal to the number of photos you could put in a box
 	can_hold = list(/obj/item/photo)
+	pickup_sound = 'sound/items/handling/book_pickup.ogg'
+	throw_impact_sound = 'sound/items/handling/book_drop.ogg'
 
 /obj/item/storage/photo_album/MouseDrop(obj/over_object as obj)
 

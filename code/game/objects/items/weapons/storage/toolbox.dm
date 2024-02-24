@@ -17,6 +17,8 @@
 	origin_tech = list(TECH_COMBAT = 1)
 	attack_verb = list("robusted")
 	use_sound = 'sound/effects/storage/toolbox.ogg'
+	throw_impact_sound = 'sound/items/handling/toolbox_drop.ogg'
+	pickup_sound =  'sound/items/handling/toolbox_pickup.ogg'
 	matter = list(MATERIAL_STEEL = 5000)
 
 /obj/item/storage/toolbox/emergency

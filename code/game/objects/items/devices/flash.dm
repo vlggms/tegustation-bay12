@@ -10,6 +10,9 @@
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	origin_tech = list(TECH_MAGNET = 2, TECH_COMBAT = 1)
 
+	pickup_sound = 'sound/items/handling/component_pickup.ogg'
+	throw_impact_sound = 'sound/items/handling/component_drop.ogg'
+
 	var/times_used = 0 //Number of times it's been used.
 	var/broken = 0     //Is the flash burnt out?
 	var/last_used = 0 //last world.time it was used.

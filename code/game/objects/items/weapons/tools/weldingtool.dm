@@ -15,6 +15,8 @@
 	w_class = ITEM_SIZE_SMALL
 	matter = list(MATERIAL_STEEL = 70, MATERIAL_GLASS = 30)
 	origin_tech = list(TECH_ENGINEERING = 1)
+	throw_impact_sound = 'sound/items/handling/weldingtool_drop.ogg'
+	pickup_sound =  'sound/items/handling/weldingtool_pickup.ogg'
 
 	var/welding = 0 	//Whether or not the welding tool is off(0), on(1) or currently welding(2)
 	var/status = 1 		//Whether the welder is secured or unsecured (able to attach rods to it to make a flamethrower)

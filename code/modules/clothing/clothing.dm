@@ -1,6 +1,9 @@
 /obj/item/clothing
 	name = "clothing"
 	siemens_coefficient = 0.9
+	pickup_sound = 'sound/items/handling/cloth_pickup.ogg'
+	throw_impact_sound = 'sound/items/handling/cloth_drop.ogg'
+
 	var/flash_protection = FLASH_PROTECTION_NONE	// Sets the item's level of flash protection.
 	var/tint = TINT_NONE							// Sets the item's level of visual impairment tint.
 	var/list/species_restricted = list(
@@ -801,6 +804,8 @@ BLIND     // can't see anything
 	slot_flags = SLOT_ICLOTHING
 	w_class = ITEM_SIZE_NORMAL
 	force = 0
+	equip_sound = 'sound/items/equip/jumpsuit_equip.ogg'
+
 	var/has_sensor = SUIT_HAS_SENSORS //For the crew computer 2 = unable to change mode
 	var/sensor_mode = SUIT_SENSOR_OFF
 		/*

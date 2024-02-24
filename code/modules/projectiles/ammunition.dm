@@ -121,6 +121,8 @@
 
 /obj/item/ammo_magazine/box
 	w_class = ITEM_SIZE_NORMAL
+	pickup_sound = 'sound/items/handling/ammobox_pickup.ogg'
+	throw_impact_sound = 'sound/items/handling/ammobox_drop.ogg'
 
 /obj/item/ammo_magazine/Initialize()
 	. = ..()
