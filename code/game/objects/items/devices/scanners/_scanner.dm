@@ -8,6 +8,10 @@
 	slot_flags = SLOT_BELT
 	item_flags = ITEM_FLAG_NO_BLUDGEON
 	matter = list(MATERIAL_ALUMINIUM = 30,MATERIAL_GLASS = 20)
+
+	pickup_sound = 'sound/items/handling/component_pickup.ogg'
+	throw_impact_sound = 'sound/items/handling/component_drop.ogg'
+
 	var/scan_title
 	var/scan_data
 	//For displaying scans
