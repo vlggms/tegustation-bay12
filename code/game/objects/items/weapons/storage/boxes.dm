@@ -26,6 +26,9 @@
 	item_state = "syringe_kit"
 	max_storage_space = DEFAULT_BOX_STORAGE
 	use_sound = 'sound/effects/storage/box.ogg'
+	pickup_sound = 'sound/items/handling/cardboardbox_pickup.ogg'
+	throw_impact_sound = 'sound/items/handling/cardboardbox_drop.ogg'
+
 	var/foldable = /obj/item/stack/material/cardboard	// BubbleWrap - if set, can be folded (when empty) into a sheet of cardboard
 
 /obj/item/storage/box/large
@@ -190,6 +193,8 @@
 	icon_state = "ammo"
 	desc = "A sturdy metal box with several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
 	use_sound = 'sound/effects/closet_open.ogg'
+	pickup_sound = 'sound/items/handling/ammobox_pickup.ogg'
+	throw_impact_sound = 'sound/items/handling/ammobox_drop.ogg'
 
 /obj/item/storage/box/ammo/blanks
 	name = "box of blank shells"

@@ -18,6 +18,9 @@
 
 	origin_tech = list(TECH_MAGNET = 1, TECH_ENGINEERING = 1)
 
+	pickup_sound = 'sound/items/handling/multitool_pickup.ogg'
+	throw_impact_sound = 'sound/items/handling/multitool_drop.ogg'
+
 	var/buffer_name
 	var/atom/buffer_object
 

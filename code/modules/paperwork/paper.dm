@@ -27,6 +27,8 @@
 	slot_flags = SLOT_HEAD
 	body_parts_covered = HEAD
 	attack_verb = list("bapped")
+	throw_impact_sound = 'sound/items/handling/paper_drop.ogg'
+	pickup_sound =  'sound/items/handling/paper_pickup.ogg'
 
 	var/info		//What's actually written on the paper.
 	var/info_links	//A different version of the paper which includes html links at fields and EOF
@@ -216,6 +218,8 @@
 		info = stars(info,85)
 		user.visible_message("\The [user] crumples \the [src] into a ball!")
 		icon_state = "scrap"
+		throw_range = 10
+		throw_speed = 3
 		return
 	user.examinate(src)
 

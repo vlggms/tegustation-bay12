@@ -13,6 +13,8 @@
 	slot_flags = SLOT_BELT
 	var/overlay_flags
 	attack_verb = list("whipped", "lashed", "disciplined")
+	equip_sound =  'sound/items/equip/toolbelt_equip.ogg'
+	throw_impact_sound = 'sound/items/handling/toolbelt_drop.ogg'
 
 /obj/item/storage/belt/verb/toggle_layer()
 	set name = "Switch Belt Layer"
@@ -131,8 +133,9 @@
 		/obj/item/clothing/gloves,
 		/obj/item/tape_roll,
 		/obj/item/clothing/head/beret,
-		/obj/item/material/knife/folding/
+		/obj/item/material/knife/folding,
 		)
+	pickup_sound =  'sound/items/handling/toolbelt_pickup.ogg'
 
 
 /obj/item/storage/belt/utility/full/New()

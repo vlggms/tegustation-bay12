@@ -10,6 +10,14 @@
 	var/burn_point = null
 	var/burning = null
 	var/hitsound = "swing_hit"
+	/// Sound that is played on throw impact with a living mob
+	var/mob_throw_hit_sound = null
+	/// Sound that is played on throw impact with anything other than a living mob
+	var/throw_impact_sound = null
+	/// Sound that is played whenever the item is equipped in hands
+	var/pickup_sound = null
+	/// Sound that is played whenever the item is equipped in its defined slot
+	var/equip_sound = null
 	var/slot_flags = 0		//This is used to determine on which slots an item can fit.
 	var/no_attack_log = FALSE			//If it's an item we don't want to log attack_logs with, set this to 1
 	pass_flags = PASS_FLAG_TABLE
@@ -325,12 +333,14 @@
 // slot uses the slot_X defines found in setup.dm
 // for items that can be placed in multiple slots
 // note this isn't called during the initial dressing of a player
-/obj/item/proc/equipped(var/mob/user, var/slot)
+/obj/item/proc/equipped(mob/user, slot)
 	hud_layerise()
-	if(user.client)	user.client.screen |= src
-	if(user.pulling == src) user.stop_pulling()
+	if(user.client)
+		user.client.screen |= src
+	if(user.pulling == src)
+		user.stop_pulling()
 
-	//Update two-handing status
+	// Update two-handing status
 	var/mob/M = loc
 	if(!istype(M))
 		return
@@ -338,6 +348,14 @@
 		M.l_hand.update_twohanding()
 	if(M.r_hand)
 		M.r_hand.update_twohanding()
+
+	// Sounds
+	if(equip_sound && ("[slot]" in slot_flags_enumeration))
+		var/req_flags = slot_flags_enumeration["[slot]"]
+		if((req_flags & slot_flags))
+			playsound(src, equip_sound, EQUIP_SOUND_VOLUME, TRUE, ignore_walls = FALSE)
+	else if(slot == slot_l_hand || slot == slot_r_hand)
+		playsound(src, pickup_sound, PICKUP_SOUND_VOLUME, ignore_walls = FALSE)
 
 //Defines which slots correspond to which slot flags
 var/list/global/slot_flags_enumeration = list(
@@ -362,10 +380,13 @@ var/list/global/slot_flags_enumeration = list(
 //Should probably move the bulk of this into mob code some time, as most of it is related to the definition of slots and not item-specific
 //set force to ignore blocking overwear and occupied slots
 /obj/item/proc/mob_can_equip(M as mob, slot, disable_warning = 0, force = 0)
-	if(!slot) return 0
-	if(!M) return 0
+	if(!slot)
+		return FALSE
+	if(!M)
+		return FALSE
 
-	if(!ishuman(M)) return 0
+	if(!ishuman(M))
+		return FALSE
 
 	var/mob/living/carbon/human/H = M
 	var/list/mob_equip = list()
@@ -373,13 +394,13 @@ var/list/global/slot_flags_enumeration = list(
 		mob_equip = H.species.hud.equip_slots
 
 	if(H.species && !(slot in mob_equip))
-		return 0
+		return FALSE
 
 	//First check if the item can be equipped to the desired slot.
 	if("[slot]" in slot_flags_enumeration)
 		var/req_flags = slot_flags_enumeration["[slot]"]
 		if(!(req_flags & slot_flags))
-			return 0
+			return FALSE
 
 	if(!force)
 		//Next check that the slot is free
@@ -891,6 +912,30 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 	if(user)
 		attack_self(user)
 	return TRUE
+
+/obj/item/throw_impact(atom/hit_atom, datum/thrownthing/TT)
+	if(QDELETED(hit_atom))
+		return
+
+	. = ..()
+	var/volume = GetThrownSoundVolume()
+	var/turf/sound_turf = get_turf(src)
+	//Living mobs handle thrown sounds differently.
+	if(istype(hit_atom, /mob/living))
+		sound_turf = get_turf(hit_atom)
+		if(throwforce > 0)
+			if(mob_throw_hit_sound)
+				playsound(sound_turf, mob_throw_hit_sound, volume, FALSE, -1)
+			else if(hitsound)
+				playsound(sound_turf, hitsound, volume, FALSE, -1)
+		else if(throw_impact_sound)
+			playsound(sound_turf, throw_impact_sound, volume, FALSE, -1)
+
+	else if(throw_impact_sound)
+		playsound(sound_turf, throw_impact_sound, volume, FALSE, -1)
+
+/obj/item/proc/GetThrownSoundVolume()
+	return min(INITIAL_THROW_IMPACT_SOUND_VOLUME * w_class, 100)
 
 /obj/item/proc/inherit_custom_item_data(var/datum/custom_item/citem)
 	. = src
