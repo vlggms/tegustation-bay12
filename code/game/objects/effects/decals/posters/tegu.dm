@@ -53,16 +53,16 @@
 
 /decl/poster/earth_reclamation_committee
 	icon_state ="tposter13"
-	name = "Earth Reclamation Committee poster"
+	name = "Earth Reclamation Committee"
 	desc = "A poster with an inspiring image of planet Earth and a directive aimed at its viewers to \"Take it back\". Earth Reclamation Committee logotype and few slogans are displayed in tiny text at the bottom of it."
 
 // Illegal posters
 /decl/poster/illegal/independent
 	icon_state ="tposter11"
-	name = "Independent Space Confederation poster"
+	name = "Independent Space Confederation"
 	desc = "A poster depicting a symbol of Independent Space Confederation, union of independent worlds, be it human or alien. Would be considered illegal both on TerraGov and SolGov territory."
 
 /decl/poster/illegal/order_black_of_sun
 	icon_state ="tposter12"
-	name = "Order of the Black Sun poster"
+	name = "Order of the Black Sun"
 	desc = "A poster with an esoteric symbol and a message urging humanity to remain 'pure', whatever it means. This is certainly illegal in most places..."
