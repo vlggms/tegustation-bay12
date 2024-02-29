@@ -1,14 +1,14 @@
 /datum/job/submap/bearcat_captain
-	title = "Independant Captain"
+	title = "Independent Captain"
 	total_positions = 1
 	outfit_type = /decl/hierarchy/outfit/job/bearcat/captain
-	supervisors = "your bottom line"
+	supervisors = "None"
 	info = "Your ship has suffered a catastrophic amount of damage, leaving it dark and crippled in the depths of \
 	unexplored space. The Captain is dead, leaving you, previously the First Mate in charge. Organize what's left of \
 	your crew, and maybe you'll be able to survive long enough to be rescued."
 
 /datum/job/submap/bearcat_crewman
-	title = "Independant Crewman"
+	title = "Independent Crewman"
 	supervisors = "the Captain"
 	total_positions = 3
 	outfit_type = /decl/hierarchy/outfit/job/bearcat/crew
@@ -26,6 +26,8 @@
 	l_ear = /obj/item/device/radio/headset/map_preset/bearcat
 	r_ear = null
 
+	backpack_contents = list(/obj/item/crowbar/prybar = 1)
+
 /decl/hierarchy/outfit/job/bearcat/crew
 	name = BEARCAT_OUTFIT_JOB_NAME("Crew")
 	id_types = list(/obj/item/card/id/bearcat)
@@ -37,20 +39,10 @@
 	pda_type = /obj/item/modular_computer/pda/captain
 	id_types = list(/obj/item/card/id/bearcat_captain)
 
-/decl/hierarchy/outfit/job/bearcat/captain/post_equip(var/mob/living/carbon/human/H)
-	..()
-	var/obj/item/clothing/uniform = H.w_uniform
-	if(uniform)
-		var/obj/item/clothing/accessory/toggleable/hawaii/random/eyegore = new()
-		if(uniform.can_attach_accessory(eyegore))
-			uniform.attach_accessory(null, eyegore)
-		else
-			qdel(eyegore)
-
 #undef BEARCAT_OUTFIT_JOB_NAME
 
 /obj/effect/submap_landmark/spawnpoint/captain
-	name = "Independant Captain"
+	name = "Independent Captain"
 
 /obj/effect/submap_landmark/spawnpoint/crewman
-	name = "Independant Crewman"
+	name = "Independent Crewman"

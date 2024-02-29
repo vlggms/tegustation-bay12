@@ -1,4 +1,5 @@
 #include "casino_areas.dm"
+#include "casino_objects.dm"
 #include "../mining/mining_areas.dm"
 
 /obj/effect/overmap/visitable/ship/casino
@@ -69,87 +70,3 @@
 	fuel_consumption = 0.5//it's small
 	range = 1
 	defer_initialisation = TRUE
-
-/obj/effect/shuttle_landmark/nav_casino/cutter_hangar
-	name = "Casino Hangar"
-	landmark_tag = "nav_casino_hangar"
-	base_area = /area/casino/casino_hangar
-	base_turf = /turf/simulated/floor/plating
-
-/obj/effect/shuttle_landmark/nav_casino/cutter_transit
-	name = "In transit"
-	landmark_tag = "nav_casino_transit"
-
-/obj/machinery/computer/shuttle_control/explore/casino_cutter
-	name = "cutter control console"
-	shuttle_tag = "Casino Cutter"
-
-/obj/structure/casino/roulette
-	name = "roulette"
-	desc = "Spin the roulette to try your luck."
-	icon = 'maps/away/casino/casino_sprites.dmi'
-	icon_state = "roulette_r"
-	density = FALSE
-	anchored = TRUE
-	var/busy=0
-
-/obj/structure/casino/roulette/attack_hand(mob/user as mob)
-	if (busy)
-		to_chat(user,"<span class='notice'>You cannot spin now! \The [src] is already spinning.</span> ")
-		return
-	visible_message("<span class='notice'>\ [user]  spins the roulette and throws inside little ball.</span>")
-	busy = 1
-	var/n = rand(0,36)
-	var/color = "green"
-	add_fingerprint(user)
-	if ((n>0 && n<11) || (n>18 && n<29))
-		if (n%2)
-			color="red"
-	else
-		color="black"
-	if ( (n>10 && n<19) || (n>28) )
-		if (n%2)
-			color="black"
-	else
-		color="red"
-	spawn(5 SECONDS)
-		visible_message("<span class='notice'>\The [src] stops spinning, the ball landing on [n], [color].</span>")
-		busy=0
-
-/obj/structure/casino/roulette_chart
-	name = "roulette chart"
-	desc = "Roulette chart. Place your bets! "
-	icon = 'maps/away/casino/casino_sprites.dmi'
-	icon_state = "roulette_l"
-	density = FALSE
-	anchored = TRUE
-
-/obj/structure/casino/bj_table
-	name = "blackjack table"
-	desc = "This is a blackjack table. "
-	icon = 'maps/away/casino/casino_sprites.dmi'
-	icon_state = "bj_left"
-	density = FALSE
-	anchored = TRUE
-
-/obj/structure/casino/bj_table/bj_right
-	icon_state = "bj_right"
-
-/obj/structure/casino/oh_bandit
-	name = "one armed bandit"
-	desc = "Turned off slot machine. "
-	icon = 'maps/away/casino/casino_sprites.dmi'
-	icon_state = "slot_machine"
-	density = FALSE
-	anchored = TRUE
-
-/obj/structure/casino/craps
-	name = "craps table"
-	desc = "Craps table: roll dice!"
-	icon = 'maps/away/casino/casino_sprites.dmi'
-	icon_state = "craps_top"
-	density = FALSE
-	anchored = TRUE
-
-/obj/structure/casino/craps/craps_down
-	icon_state = "craps_down"

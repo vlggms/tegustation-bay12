@@ -1473,16 +1473,61 @@ About the new airlock wires panel:
 
 /obj/machinery/door/airlock/autoname
 
-/obj/machinery/door/airlock/autoname/New()
+/obj/machinery/door/airlock/autoname/Initialize()
+	. = ..()
 	var/area/A = get_area(src)
 	name = A.name
-	..()
 
-/obj/machinery/door/airlock/proc/paint_airlock(var/paint_color)
+/obj/machinery/door/airlock/autoname/command
+	door_color = COLOR_COMMAND_BLUE
+
+/obj/machinery/door/airlock/autoname/security
+	door_color = COLOR_NT_RED
+
+/obj/machinery/door/airlock/autoname/security/research
+	door_color = COLOR_WHITE
+	stripe_color = COLOR_NT_RED
+
+/obj/machinery/door/airlock/autoname/engineering
+	name = "Maintenance Hatch"
+	door_color = COLOR_AMBER
+
+/obj/machinery/door/airlock/autoname/medical
+	door_color = COLOR_WHITE
+	stripe_color = COLOR_DEEP_SKY_BLUE
+
+/obj/machinery/door/airlock/autoname/virology
+	door_color = COLOR_WHITE
+	stripe_color = COLOR_GREEN
+
+/obj/machinery/door/airlock/autoname/mining
+	name = "Mining Airlock"
+	door_color = COLOR_PALE_ORANGE
+	stripe_color = COLOR_BEASTY_BROWN
+
+/obj/machinery/door/airlock/autoname/atmos
+	door_color = COLOR_AMBER
+	stripe_color = COLOR_CYAN
+
+/obj/machinery/door/airlock/autoname/research
+	door_color = COLOR_WHITE
+	stripe_color = COLOR_BOTTLE_GREEN
+
+/obj/machinery/door/airlock/autoname/science
+	door_color = COLOR_WHITE
+	stripe_color = COLOR_VIOLET
+
+/obj/machinery/door/airlock/autoname/sol
+	door_color = COLOR_BLUE_GRAY
+
+/obj/machinery/door/airlock/autoname/civilian
+	stripe_color = COLOR_CIVIE_GREEN
+
+/obj/machinery/door/airlock/proc/paint_airlock(paint_color)
 	door_color = paint_color
 	update_icon()
 
-/obj/machinery/door/airlock/proc/stripe_airlock(var/paint_color)
+/obj/machinery/door/airlock/proc/stripe_airlock(paint_color)
 	stripe_color = paint_color
 	update_icon()
 

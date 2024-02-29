@@ -338,7 +338,7 @@
 /turf/simulated/wall/r_wall,
 /area/ship/scrap/gambling)
 "aM" = (
-/obj/machinery/door/airlock/autoname/bearcat,
+/obj/machinery/door/airlock/autoname,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -396,7 +396,7 @@
 /turf/simulated/floor/tiled,
 /area/ship/scrap/cargo/lower)
 "aS" = (
-/obj/machinery/door/airlock/autoname/bearcat,
+/obj/machinery/door/airlock/autoname,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -604,7 +604,7 @@
 /turf/simulated/floor,
 /area/ship/scrap/gambling)
 "bm" = (
-/obj/machinery/door/airlock/autoname/bearcat,
+/obj/machinery/door/airlock/autoname,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -638,7 +638,7 @@
 /turf/simulated/floor,
 /area/ship/scrap/maintenance/lower)
 "bo" = (
-/obj/machinery/door/airlock/autoname/bearcat,
+/obj/machinery/door/airlock/autoname,
 /turf/simulated/floor,
 /area/ship/scrap/cargo/lower)
 "bp" = (
@@ -731,7 +731,7 @@
 /turf/simulated/floor,
 /area/ship/scrap/maintenance/lower)
 "bw" = (
-/obj/machinery/door/airlock/autoname/bearcat,
+/obj/machinery/door/airlock/autoname,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -1185,7 +1185,7 @@
 /turf/simulated/floor,
 /area/ship/scrap/broken2)
 "cq" = (
-/obj/machinery/door/airlock/autoname/bearcat,
+/obj/machinery/door/airlock/autoname,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -1267,7 +1267,7 @@
 /turf/simulated/floor,
 /area/ship/scrap/maintenance/lower)
 "cy" = (
-/obj/machinery/door/airlock/autoname/bearcat,
+/obj/machinery/door/airlock/autoname,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -1401,7 +1401,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/autoname/bearcat,
+/obj/machinery/door/airlock/autoname,
 /turf/simulated/floor,
 /area/ship/scrap/maintenance/lower)
 "cP" = (
@@ -1676,7 +1676,7 @@
 /turf/simulated/floor,
 /area/ship/scrap/broken1)
 "dn" = (
-/obj/machinery/door/airlock/autoname/bearcat,
+/obj/machinery/door/airlock/autoname,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -1724,7 +1724,7 @@
 /turf/simulated/floor/tiled,
 /area/ship/scrap/cargo/lower)
 "ds" = (
-/obj/machinery/door/airlock/autoname/bearcat,
+/obj/machinery/door/airlock/autoname,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -1816,7 +1816,7 @@
 /turf/simulated/floor/tiled,
 /area/ship/scrap/broken1)
 "dA" = (
-/obj/machinery/door/airlock/autoname/bearcat,
+/obj/machinery/door/airlock/autoname,
 /turf/simulated/floor/tiled,
 /area/ship/scrap/cargo/lower)
 "dB" = (
@@ -1827,7 +1827,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/airlock/autoname/bearcat,
+/obj/machinery/door/airlock/autoname,
 /turf/simulated/floor,
 /area/ship/scrap/cargo/lower)
 "dC" = (
@@ -1916,7 +1916,7 @@
 /turf/simulated/floor,
 /area/ship/scrap/maintenance/lower)
 "dL" = (
-/obj/machinery/door/airlock/autoname/bearcat,
+/obj/machinery/door/airlock/autoname,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -2036,7 +2036,7 @@
 /turf/simulated/floor,
 /area/ship/scrap/maintenance/lower)
 "dS" = (
-/obj/machinery/door/airlock/autoname/bearcat,
+/obj/machinery/door/airlock/autoname,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -2085,7 +2085,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/airlock/autoname/bearcat,
+/obj/machinery/door/airlock/autoname,
 /turf/simulated/floor,
 /area/ship/scrap/maintenance/storage)
 "dY" = (
@@ -2284,7 +2284,7 @@
 /turf/simulated/floor,
 /area/ship/scrap/maintenance/techstorage)
 "eq" = (
-/obj/machinery/door/airlock/autoname/bearcat,
+/obj/machinery/door/airlock/autoname,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -2386,7 +2386,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/autoname/bearcat,
+/obj/machinery/door/airlock/autoname,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -2817,7 +2817,7 @@
 /turf/simulated/floor/reinforced/airless,
 /area/ship/scrap/crew/dorms3)
 "EP" = (
-/obj/machinery/door/airlock/autoname/bearcat,
+/obj/machinery/door/airlock/autoname,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
