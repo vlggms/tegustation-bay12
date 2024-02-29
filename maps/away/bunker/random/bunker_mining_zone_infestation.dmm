@@ -16,7 +16,7 @@
 /turf/simulated/floor/exoplanet/flesh,
 /area/template_noop)
 "D" = (
-/obj/effect/hive_heart,
+/obj/infestation_structure/hive_heart,
 /obj/machinery/quantumpad{
 	map_pad_id = "abandoned_bunker_entry";
 	map_pad_link_id = "abandoned_bunker_facility_entry"
@@ -26,6 +26,10 @@
 "G" = (
 /mob/living/simple_animal/hostile/infestation/broodling,
 /obj/effect/gibspawner/human,
+/turf/simulated/floor/exoplanet/flesh,
+/area/template_noop)
+"K" = (
+/obj/infestation_structure/pike_burrow,
 /turf/simulated/floor/exoplanet/flesh,
 /area/template_noop)
 "R" = (
@@ -138,7 +142,7 @@ a
 l
 l
 l
-l
+K
 l
 l
 R
@@ -241,8 +245,8 @@ c
 l
 l
 l
-l
 R
+K
 a
 "}
 (14,1,1) = {"

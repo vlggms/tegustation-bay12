@@ -1,3 +1,6 @@
+// High damage, High health, Medium mobility
+// Temporarily increases movement speed when attacked/targeting someone, which has a big-ish cooldown.
+// Recommended strategy is to wait out the rage period and then kite it with guns or other ranged weapons.
 /mob/living/simple_animal/hostile/infestation/rhino
 	name = "rhino"
 	desc = "A large heavily-armored monster."
@@ -11,8 +14,8 @@
 
 	natural_weapon = /obj/item/natural_weapon/hooves/rhino
 
-	health = 850
-	maxHealth = 850
+	health = 750
+	maxHealth = 750
 	resistance = 12
 	maxbodytemp = 1200 // Can survive harsh environments
 
@@ -33,7 +36,7 @@
 	var/enraged = FALSE
 	var/enraged_end_time
 	var/enraged_cooldown
-	var/enraged_cooldown_time = 20 SECONDS
+	var/enraged_cooldown_time = 30 SECONDS
 	var/enraged_movement_sound = 'sound/simple_mob/abominable_infestation/rhino/step_angry.ogg'
 
 /obj/item/natural_weapon/hooves/rhino

@@ -11,8 +11,8 @@
 
 	natural_weapon = /obj/item/natural_weapon/assembler
 
-	health = 200
-	maxHealth = 200
+	health = 250
+	maxHealth = 250
 
 	movement_cooldown = 4
 

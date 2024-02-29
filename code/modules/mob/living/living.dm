@@ -962,3 +962,6 @@ default behaviour is:
 		play_sound = TRUE
 	if(play_sound)
 		playsound(get_turf(src), 'sound/magic/blind.ogg', 50, TRUE)
+
+/mob/living/proc/GetBloodColor()
+	return COLOR_BLOOD_HUMAN

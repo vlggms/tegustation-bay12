@@ -1849,6 +1849,11 @@
 
 				new /obj/effect/temp_visual/bloodsplatter(loc, hit_dir, species.blood_color)
 
+/mob/living/carbon/human/GetBloodColor()
+	if(istype(species))
+		return species.get_blood_colour(src)
+	return COLOR_BLOOD_HUMAN
+
 /mob/living/carbon/human/proc/dream()
 	dream_timer = null
 	if (!sleeping)

@@ -27,7 +27,7 @@
 				"viruses" = null,
 				"species" = species.name,
 				"blood_DNA" = dna.unique_enzymes,
-				"blood_colour" = species.get_blood_colour(src),
+				"blood_colour" = GetBloodColor(),
 				"blood_type" = dna.b_type,
 				"trace_chem" = null
 			)
@@ -217,7 +217,7 @@
 		temp_chem[R.type] = R.volume
 	data["trace_chem"] = temp_chem
 	data["dose_chem"] = chem_doses.Copy()
-	data["blood_colour"] = species.get_blood_colour(src)
+	data["blood_colour"] = GetBloodColor()
 	return data
 
 proc/blood_splatter(var/target,var/datum/reagent/blood/source,var/large,var/spray_dir)

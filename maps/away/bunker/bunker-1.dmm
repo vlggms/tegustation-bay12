@@ -97,6 +97,7 @@
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 5
 	},
+/obj/item/wrench,
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker)
 "dg" = (
@@ -484,6 +485,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker)
+"pv" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/abandoned_bunker/bunker/quantum_facility)
 "pK" = (
 /obj/structure/reagent_dispensers/water_cooler/ascent,
 /turf/simulated/floor/ascent,
@@ -1087,6 +1097,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/abandoned_bunker/bunker)
+"Da" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/port_gen/pacman/super,
+/turf/simulated/floor/tiled/dark,
+/area/abandoned_bunker/bunker/quantum_facility)
 "Dc" = (
 /turf/simulated/floor/tiled,
 /area/abandoned_bunker/bunker/canteen)
@@ -1212,6 +1229,12 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
+/area/abandoned_bunker/bunker/quantum_facility)
+"GL" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/dark,
 /area/abandoned_bunker/bunker/quantum_facility)
 "Hc" = (
 /obj/machinery/light,
@@ -1431,6 +1454,15 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/abandoned_bunker/bunker/security)
+"MY" = (
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/abandoned_bunker/bunker/quantum_facility)
 "Nf" = (
 /obj/structure/cable/cyan{
 	icon_state = "1-4"
@@ -8560,10 +8592,10 @@ PL
 (67,1,1) = {"
 PL
 PL
-PL
-PL
-PL
-PL
+vX
+vX
+vX
+vX
 vX
 du
 zo
@@ -8662,10 +8694,10 @@ PL
 (68,1,1) = {"
 PL
 PL
-PL
-PL
-PL
-PL
+vX
+Da
+Da
+Da
 vX
 Wl
 XI
@@ -8763,11 +8795,11 @@ PL
 "}
 (69,1,1) = {"
 PL
-PL
-PL
-PL
-PL
-PL
+vX
+vX
+pv
+GL
+GL
 vX
 Wl
 XI
@@ -8865,11 +8897,11 @@ PL
 "}
 (70,1,1) = {"
 PL
-PL
 vX
-vX
-vX
-vX
+Wl
+MY
+MY
+MY
 vX
 Wl
 XI
@@ -8967,8 +8999,8 @@ PL
 "}
 (71,1,1) = {"
 PL
-PL
 vX
+Wl
 Au
 Au
 Au
@@ -9069,8 +9101,8 @@ PL
 "}
 (72,1,1) = {"
 PL
-PL
 vX
+Wl
 fg
 fg
 fg
@@ -9171,7 +9203,7 @@ PL
 "}
 (73,1,1) = {"
 PL
-PL
+vX
 vX
 gP
 se
