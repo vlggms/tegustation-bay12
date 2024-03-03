@@ -19711,14 +19711,24 @@
 /area/intrepid/misc/maint/portside)
 "nLp" = (
 /obj/structure/table/standard,
-/obj/item/book/manual/nuclear,
-/obj/item/disk/nuclear,
+/obj/item/disk/nuclear{
+	pixel_x = 10;
+	pixel_y = 8
+	},
 /obj/item/paper{
 	icon_state = "paper_words";
 	info = "The Intrepid has a unique self destruct system, on the top deck you will find the vault which contains the nuclear activation cylinders. To activate the nuclear self-destruct mechanism, these cylinders must be installed at specific locations around the ship. There are three receptacles on each wing within the exterior maintaince tunnels, locked behind an airlock brace. After installing the cylinders, you may detonate the vessel.";
-	name = "Self-Destructinator 1000 Operation Guide"
+	name = "Self-Destructinator 1000 Operation Guide";
+	pixel_x = -6;
+	pixel_y = 10
 	},
-/obj/item/card/id/captains_spare,
+/obj/item/card/id/captains_spare{
+	pixel_x = 8
+	},
+/obj/item/folder/envelope/consul_orders{
+	pixel_x = -6;
+	pixel_y = -6
+	},
 /turf/simulated/floor/carpet/blue,
 /area/intrepid/department/command/commandquarters/co)
 "nMd" = (

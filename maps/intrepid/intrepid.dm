@@ -51,6 +51,7 @@
 	#include "items/encryption_keys.dm"
 	#include "items/headsets.dm"
 	#include "items/items.dm"
+	#include "items/manuals.dm"
 
 	#include "items/clothing/terragov-accessory.dm"
 	#include "items/clothing/terragov-armor.dm"
