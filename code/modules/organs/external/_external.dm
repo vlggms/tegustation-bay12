@@ -83,6 +83,8 @@ r/****************************************************
 	var/sever_artery_threshold
 	/// Minimum amount of damage required to have a chance to sever tendons upon receiving new wound
 	var/sever_tendon_threshold
+	/// Minimum amount of damage required for robotic limb to be considered malfunctioning (causes dropping items and such)
+	var/malfunction_threshold = 20
 
 /obj/item/organ/external/proc/get_fingerprint()
 
@@ -494,8 +496,10 @@ This function completely restores a damaged organ to perfect condition.
 	if((type in list(BURN, LASER)) && (damage > 5 || damage + burn_dam >= 15) && !BP_IS_ROBOTIC(src))
 		var/fluid_loss_severity
 		switch(type)
-			if(BURN)  fluid_loss_severity = FLUIDLOSS_WIDE_BURN
-			if(LASER) fluid_loss_severity = FLUIDLOSS_CONC_BURN
+			if(BURN)
+				fluid_loss_severity = FLUIDLOSS_WIDE_BURN
+			if(LASER)
+				fluid_loss_severity = FLUIDLOSS_CONC_BURN
 		var/fluid_loss = (damage/(owner.maxHealth - config.health_threshold_dead)) * SPECIES_BLOOD_DEFAULT * fluid_loss_severity
 		owner.remove_blood(fluid_loss)
 
@@ -1118,12 +1122,10 @@ obj/item/organ/external/proc/remove_clamps()
 	return 0
 
 /obj/item/organ/external/robotize(company, skip_prosthetics = 0, keep_organs = 0)
-
 	if(BP_IS_ROBOTIC(src))
 		return
 
 	..()
-
 
 	if(company)
 		var/datum/robolimb/R = all_robolimbs[company]
@@ -1132,11 +1134,9 @@ obj/item/organ/external/proc/remove_clamps()
 		 (R.applies_to_part.len && !(organ_tag in R.applies_to_part)))
 			R = basic_robolimb
 		else
-			model = company
-			force_icon = R.icon
-			name = "robotic [initial(name)]"
-			desc = "[R.desc] It looks like it was produced by [R.company]."
+			ApplyModel(R)
 
+	name = "robotic [initial(name)]"
 	dislocated = -1
 	remove_splint()
 	update_icon(1)
@@ -1168,6 +1168,13 @@ obj/item/organ/external/proc/remove_clamps()
 
 	return 1
 
+/obj/item/organ/external/proc/ApplyModel(datum/robolimb/R)
+	model = R.company
+	force_icon = R.icon
+	desc = "[R.desc] It looks like it was produced by [R.company]."
+	malfunction_threshold = R.limb_malfunction_threshold
+	return TRUE
+
 /obj/item/organ/external/proc/get_damage()	//returns total damage
 	return (brute_dam+burn_dam)	//could use max_damage?
 
@@ -1181,7 +1188,7 @@ obj/item/organ/external/proc/remove_clamps()
 	return ..() && !is_stump() && !(status & ORGAN_TENDON_CUT) && (!can_feel_pain() || get_pain() < pain_disability_threshold) && brute_ratio < 1 && burn_ratio < 1
 
 /obj/item/organ/external/proc/is_malfunctioning()
-	return (BP_IS_ROBOTIC(src) && (brute_dam + burn_dam) >= 10 && prob(brute_dam + burn_dam))
+	return (BP_IS_ROBOTIC(src) && (brute_dam + burn_dam) >= malfunction_threshold && prob((brute_dam + burn_dam) - malfunction_threshold))
 
 /obj/item/organ/external/proc/embed(var/obj/item/W, var/silent = 0, var/supplied_message, var/datum/wound/supplied_wound)
 	if(!owner || loc != owner)

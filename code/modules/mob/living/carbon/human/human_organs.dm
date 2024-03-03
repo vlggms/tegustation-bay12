@@ -106,7 +106,8 @@
 		else if (E.is_dislocated())
 			stance_damage += 0.5
 
-		if(E) limb_pain = E.can_feel_pain()
+		if(E)
+			limb_pain = E.can_feel_pain()
 
 	// Canes and crutches help you stand (if the latter is ever added)
 	// One cane mitigates a broken leg+foot, or a missing foot.
@@ -195,9 +196,9 @@
 					to_chat(src, SPAN_WARNING("You lose your balance as [affected.name] [pick("malfunctions", "freezes","shudders")]!"))
 			else
 				return
-	Weaken(4)
+	Weaken(1)
 
-/mob/living/carbon/human/proc/grasp_damage_disarm(var/obj/item/organ/external/affected)
+/mob/living/carbon/human/proc/grasp_damage_disarm(obj/item/organ/external/affected)
 	var/disarm_slot
 	switch(affected.body_part)
 		if(HAND_LEFT, ARM_LEFT)
@@ -217,14 +218,13 @@
 		return
 
 	if(BP_IS_ROBOTIC(affected))
-		visible_message("<B>\The [src]</B> drops what they were holding, \his [affected.name] malfunctioning!")
+		visible_message(SPAN_WARNING("<b>\The [src]</b> drops what they were holding, \his [affected.name] malfunctioning!"))
 
 		var/datum/effect/effect/system/spark_spread/spark_system = new /datum/effect/effect/system/spark_spread()
 		spark_system.set_up(5, 0, src)
 		spark_system.attach(src)
 		spark_system.start()
-		spawn(10)
-			qdel(spark_system)
+		QDEL_IN(spark_system, 10)
 
 	else
 		var/grasp_name = affected.name
@@ -236,13 +236,13 @@
 			var/emote_scream = pick("screams in pain", "lets out a sharp cry", "cries out")
 			var/emote_scream_alt = pick("scream in pain", "let out a sharp cry", "cry out")
 			visible_message(
-				"<B>\The [src]</B> [emote_scream] and drops what they were holding in their [grasp_name]!",
+				SPAN_WARNING("<b>\The [src]</b> [emote_scream] and drops what they were holding in their [grasp_name]!"),
 				null,
-				"You hear someone [emote_scream_alt]!"
+				SPAN_WARNING("You hear someone [emote_scream_alt]!"),
 			)
 			custom_pain("The sharp pain in your [affected.name] forces you to drop [thing]!", 30)
 		else
-			visible_message("<B>\The [src]</B> drops what they were holding in their [grasp_name]!")
+			visible_message(SPAN_WARNING("<b>\The [src]</b> drops what they were holding in their [grasp_name]!"))
 
 /mob/living/carbon/human/proc/sync_organ_dna()
 	var/list/all_bits = internal_organs|organs
