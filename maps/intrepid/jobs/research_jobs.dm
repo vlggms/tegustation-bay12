@@ -41,24 +41,6 @@
 	skill_points = 20
 	possible_goals = list(/datum/goal/achievement/notslimefodder)
 
-	culture_whitelist = list(
-		TAG_FACTION = list(
-			FACTION_TERRAGOV,
-			FACTION_TERRASENATE_UP,
-			FACTION_TERRASENATE_PCOH,
-			FACTION_TERRASENATE_TCG,
-			FACTION_TERRASENATE_TDC,
-			FACTION_TERRASENATE_ERC,
-			FACTION_SOL_CENTRAL,
-			FACTION_ISC,
-			FACTION_NANOTRASEN,
-			FACTION_CYBERSUN,
-			FACTION_FREETRADE,
-			FACTION_DAIS,
-			FACTION_OTHER,
-			),
-		)
-
 /datum/job/scientist
 	title = "Scientist"
 	total_positions = 6
@@ -106,24 +88,6 @@
 	minimal_access = list()
 	skill_points = 20
 	possible_goals = list(/datum/goal/achievement/notslimefodder)
-
-	culture_whitelist = list(
-		TAG_FACTION = list(
-			FACTION_TERRAGOV,
-			FACTION_TERRASENATE_UP,
-			FACTION_TERRASENATE_PCOH,
-			FACTION_TERRASENATE_TCG,
-			FACTION_TERRASENATE_TDC,
-			FACTION_TERRASENATE_ERC,
-			FACTION_SOL_CENTRAL,
-			FACTION_ISC,
-			FACTION_NANOTRASEN,
-			FACTION_CYBERSUN,
-			FACTION_FREETRADE,
-			FACTION_DAIS,
-			FACTION_OTHER,
-			),
-		)
 
 /datum/job/scientist_assistant
 	title = "Research Assistant"

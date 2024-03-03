@@ -3454,7 +3454,6 @@
 #include "maps\example\example_define.dm"
 #include "maps\intrepid\intrepid.dm"
 #include "maps\intrepid\intrepid_define.dm"
-#include "maps\intrepid\machinery\airlock.dm"
 #include "maps\random_rooms\_random_room.dm"
 #include "maps\random_ruins\exoplanet_ruins\exoplanet_ruins.dm"
 #include "maps\random_ruins\exoplanet_ruins\abandoned_church\abandoned_church.dm"

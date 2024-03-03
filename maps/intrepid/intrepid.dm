@@ -60,6 +60,7 @@
 	#include "items/clothing/terragov-under.dm"
 
 	//#include "machinery/apc_shuttle.dm"
+	#include "machinery/airlock.dm"
 	#include "machinery/drone_fab.dm"
 	#include "machinery/faxmachine.dm"
 	#include "machinery/keycard_auth.dm"

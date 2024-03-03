@@ -1,6 +1,6 @@
 /datum/job/captain
 	title = "Commanding Officer"
-	supervisors = "the Terran Government and the Terran Constitution"
+	supervisors = "the Military Consul and the Terran Senate"
 	minimal_player_age = 14
 	economic_power = 16
 	minimum_character_age = list(SPECIES_HUMAN = 40)
@@ -24,17 +24,28 @@
 							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/reports)
 
+	culture_whitelist = list(
+		TAG_FACTION = list(
+			FACTION_TERRAGOV,
+			FACTION_TERRASENATE_UP,
+			FACTION_TERRASENATE_PCOH,
+			FACTION_TERRASENATE_TCG,
+			FACTION_TERRASENATE_TDC,
+			FACTION_TERRASENATE_ERC,
+			),
+		)
+
 /datum/job/captain/get_description_blurb()
 	return "You are the Commanding Officer. You are the top dog. \
 			<br><hr><br>\
 			You are an experienced professional officer in control of an entire ship, \
 			and ultimately responsible for all that happens onboard. Your job is to make sure \
-			[GLOB.using_map.full_name] fulfils its space exploration mission. \
+			[GLOB.using_map.full_name] fulfils the mission issued to you by the senate. \
 			Delegate to your Executive Officer and your department heads to effectively manage the ship, \
 			and listen to and trust their expertise."
 
-/datum/job/captain/post_equip_rank(var/mob/person, var/alt_title)
-	var/sound/announce_sound = (GAME_STATE <= RUNLEVEL_SETUP)? null : sound('sound/misc/boatswain.ogg', volume=20)
+/datum/job/captain/post_equip_rank(mob/person, alt_title)
+	var/sound/announce_sound = (GAME_STATE <= RUNLEVEL_SETUP)? null : sound('sound/misc/boatswain.ogg', volume = 20)
 	captain_announcement.Announce("All hands, [alt_title || title] [person.real_name] on deck!", new_sound = announce_sound)
 	..()
 
@@ -99,6 +110,17 @@
 							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/reports)
 
+	culture_whitelist = list(
+		TAG_FACTION = list(
+			FACTION_TERRAGOV,
+			FACTION_TERRASENATE_UP,
+			FACTION_TERRASENATE_PCOH,
+			FACTION_TERRASENATE_TCG,
+			FACTION_TERRASENATE_TDC,
+			FACTION_TERRASENATE_ERC,
+			),
+		)
+
 /datum/job/hop/get_description_blurb()
 	return "You are the Executive Officer. You are an experienced senior officer, second in command of the ship \
 			and right hand of the Commanding Officer.\
@@ -152,6 +174,17 @@
 							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/reports)
 
+	culture_whitelist = list(
+		TAG_FACTION = list(
+			FACTION_TERRAGOV,
+			FACTION_TERRASENATE_UP,
+			FACTION_TERRASENATE_PCOH,
+			FACTION_TERRASENATE_TCG,
+			FACTION_TERRASENATE_TDC,
+			FACTION_TERRASENATE_ERC,
+			),
+		)
+
 /datum/job/rd/get_description_blurb()
 	return "You are the Chief Science Officer. \
 			<br><hr><br>\
@@ -199,6 +232,17 @@
 							 /datum/computer_file/program/suit_sensors,
 							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/reports)
+
+	culture_whitelist = list(
+		TAG_FACTION = list(
+			FACTION_TERRAGOV,
+			FACTION_TERRASENATE_UP,
+			FACTION_TERRASENATE_PCOH,
+			FACTION_TERRASENATE_TCG,
+			FACTION_TERRASENATE_TDC,
+			FACTION_TERRASENATE_ERC,
+			),
+		)
 
 /datum/job/cmo/get_description_blurb()
 	return "You are the Chief Medical Officer. \
@@ -268,6 +312,17 @@
 							 /datum/computer_file/program/shields_monitor,
 							 /datum/computer_file/program/reports)
 
+	culture_whitelist = list(
+		TAG_FACTION = list(
+			FACTION_TERRAGOV,
+			FACTION_TERRASENATE_UP,
+			FACTION_TERRASENATE_PCOH,
+			FACTION_TERRASENATE_TCG,
+			FACTION_TERRASENATE_TDC,
+			FACTION_TERRASENATE_ERC,
+			),
+		)
+
 /datum/job/chief_engineer/get_description_blurb()
 	return "You are the Chief Engineer. \
 			<br><hr><br>\
@@ -320,6 +375,17 @@
 							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/reports)
 
+	culture_whitelist = list(
+		TAG_FACTION = list(
+			FACTION_TERRAGOV,
+			FACTION_TERRASENATE_UP,
+			FACTION_TERRASENATE_PCOH,
+			FACTION_TERRASENATE_TCG,
+			FACTION_TERRASENATE_TDC,
+			FACTION_TERRASENATE_ERC,
+			),
+		)
+
 /datum/job/hos/get_description_blurb()
 	return "You are the Chief of Security. \
 			<br><hr><br>\
@@ -357,6 +423,16 @@
 	)
 
 	software_on_spawn = list(/datum/computer_file/program/reports)
+
+	culture_whitelist = list(
+		TAG_FACTION = list(
+			FACTION_TERRASENATE_UP,
+			FACTION_TERRASENATE_PCOH,
+			FACTION_TERRASENATE_TCG,
+			FACTION_TERRASENATE_TDC,
+			FACTION_TERRASENATE_ERC,
+			),
+		)
 
 /datum/job/representative/get_description_blurb()
 	return "You are the Terran Senator. \
@@ -419,6 +495,17 @@
 							 /datum/computer_file/program/reports,
 							 /datum/computer_file/program/deck_management)
 
+	culture_whitelist = list(
+		TAG_FACTION = list(
+			FACTION_TERRAGOV,
+			FACTION_TERRASENATE_UP,
+			FACTION_TERRASENATE_PCOH,
+			FACTION_TERRASENATE_TCG,
+			FACTION_TERRASENATE_TDC,
+			FACTION_TERRASENATE_ERC,
+			),
+		)
+
 /datum/job/bridgeofficer/get_description_blurb()
 	return "You are a Bridge Officer. \
 			<br><hr><br>\
@@ -459,6 +546,17 @@
 		/datum/computer_file/program/comm,
 		/datum/computer_file/program/records
 	)
+
+	culture_whitelist = list(
+		TAG_FACTION = list(
+			FACTION_TERRAGOV,
+			FACTION_TERRASENATE_UP,
+			FACTION_TERRASENATE_PCOH,
+			FACTION_TERRASENATE_TCG,
+			FACTION_TERRASENATE_TDC,
+			FACTION_TERRASENATE_ERC,
+			),
+		)
 
 /datum/job/psiadvisor/equip(mob/living/carbon/human/H)
 	psi_faculties = list("[PSI_REDACTION]" = PSI_RANK_OPERANT, "[PSI_COERCION]" = PSI_RANK_OPERANT, "[PSI_PSYCHOKINESIS]" = PSI_RANK_OPERANT, "[PSI_ENERGISTICS]" = PSI_RANK_OPERANT)

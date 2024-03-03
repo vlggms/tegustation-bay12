@@ -37,6 +37,17 @@
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
 							 /datum/computer_file/program/camera_monitor)
 
+	culture_whitelist = list(
+		TAG_FACTION = list(
+			FACTION_TERRAGOV,
+			FACTION_TERRASENATE_UP,
+			FACTION_TERRASENATE_PCOH,
+			FACTION_TERRASENATE_TCG,
+			FACTION_TERRASENATE_TDC,
+			FACTION_TERRASENATE_ERC,
+			),
+		)
+
 /datum/job/detective
 	title = "Detective"
 	total_positions = 1
@@ -85,6 +96,17 @@
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
 							 /datum/computer_file/program/camera_monitor)
 
+	culture_whitelist = list(
+		TAG_FACTION = list(
+			FACTION_TERRAGOV,
+			FACTION_TERRASENATE_UP,
+			FACTION_TERRASENATE_PCOH,
+			FACTION_TERRASENATE_TCG,
+			FACTION_TERRASENATE_TDC,
+			FACTION_TERRASENATE_ERC,
+			),
+		)
+
 /datum/job/officer
 	title = "Security Officer"
 	total_positions = 4
@@ -126,3 +148,14 @@
 
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
 							 /datum/computer_file/program/camera_monitor)
+
+	culture_whitelist = list(
+		TAG_FACTION = list(
+			FACTION_TERRAGOV,
+			FACTION_TERRASENATE_UP,
+			FACTION_TERRASENATE_PCOH,
+			FACTION_TERRASENATE_TCG,
+			FACTION_TERRASENATE_TDC,
+			FACTION_TERRASENATE_ERC,
+			),
+		)

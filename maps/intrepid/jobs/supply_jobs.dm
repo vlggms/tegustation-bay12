@@ -5,6 +5,7 @@
 
 	total_positions = 1
 	spawn_positions = 1
+	selection_color = COLOR_BROWN
 	supervisors = "the Executive Officer"
 	economic_power = 8
 	minimal_player_age = 0
@@ -40,6 +41,17 @@
 							 /datum/computer_file/program/deck_management,
 							 /datum/computer_file/program/reports)
 
+	culture_whitelist = list(
+		TAG_FACTION = list(
+			FACTION_TERRAGOV,
+			FACTION_TERRASENATE_UP,
+			FACTION_TERRASENATE_PCOH,
+			FACTION_TERRASENATE_TCG,
+			FACTION_TERRASENATE_TDC,
+			FACTION_TERRASENATE_ERC,
+			),
+		)
+
 /datum/job/cargo_tech
 	title = "Deck Technician"
 	department = "Supply"
@@ -47,6 +59,7 @@
 
 	total_positions = 3
 	spawn_positions = 3
+	selection_color = COLOR_BROWN
 	supervisors = "the Deck Chief and the Executive Officer"
 	minimum_character_age = list(SPECIES_HUMAN = 18)
 	outfit_type = /decl/hierarchy/outfit/job/intrepid/crew/supply/tech
@@ -83,8 +96,10 @@
 	title = "Prospector"
 	department = "Supply"
 	department_flag = SUP
+
 	total_positions = 2
 	spawn_positions = 2
+	selection_color = COLOR_BROWN
 	supervisors = "the Deck Chief and the Executive Officer"
 	economic_power = 7
 	minimum_character_age = list(SPECIES_HUMAN = 18)

@@ -43,6 +43,17 @@
 	software_on_spawn = list(/datum/computer_file/program/deck_management,
 							 /datum/computer_file/program/reports)
 
+	culture_whitelist = list(
+		TAG_FACTION = list(
+			FACTION_TERRAGOV,
+			FACTION_TERRASENATE_UP,
+			FACTION_TERRASENATE_PCOH,
+			FACTION_TERRASENATE_TCG,
+			FACTION_TERRASENATE_TDC,
+			FACTION_TERRASENATE_ERC,
+			),
+		)
+
 /datum/job/squad_leader/get_description_blurb()
 	return "You are the Marine Corps Squad Leader. \
 			<br><hr><br>\
@@ -83,6 +94,17 @@
 		access_terragov_crew, access_expedition_shuttle_helm, access_hangar,
 		access_stardust, access_research, access_radio_exp
 	)
+
+	culture_whitelist = list(
+		TAG_FACTION = list(
+			FACTION_TERRAGOV,
+			FACTION_TERRASENATE_UP,
+			FACTION_TERRASENATE_PCOH,
+			FACTION_TERRASENATE_TCG,
+			FACTION_TERRASENATE_TDC,
+			FACTION_TERRASENATE_ERC,
+			),
+		)
 
 /datum/job/marine_medic/get_description_blurb()
 	return "You are a Combat Medic of Marine Corps. \
@@ -129,6 +151,17 @@
 		access_stardust, access_research, access_radio_exp
 	)
 
+	culture_whitelist = list(
+		TAG_FACTION = list(
+			FACTION_TERRAGOV,
+			FACTION_TERRASENATE_UP,
+			FACTION_TERRASENATE_PCOH,
+			FACTION_TERRASENATE_TCG,
+			FACTION_TERRASENATE_TDC,
+			FACTION_TERRASENATE_ERC,
+			),
+		)
+
 /datum/job/marine_engineer/get_description_blurb()
 	return "You are a Combat Engineer of Marine Corps. \
 			<br><hr><br>\
@@ -168,6 +201,17 @@
 		access_terragov_crew, access_expedition_shuttle_helm, access_hangar,
 		access_stardust, access_research, access_radio_exp
 	)
+
+	culture_whitelist = list(
+		TAG_FACTION = list(
+			FACTION_TERRAGOV,
+			FACTION_TERRASENATE_UP,
+			FACTION_TERRASENATE_PCOH,
+			FACTION_TERRASENATE_TCG,
+			FACTION_TERRASENATE_TDC,
+			FACTION_TERRASENATE_ERC,
+			),
+		)
 
 /datum/job/marine/get_description_blurb()
 	return "You are a Marine. \
