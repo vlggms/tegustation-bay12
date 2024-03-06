@@ -108,6 +108,7 @@
 /mob/living/simple_animal/hostile/random_monster/Destroy()
 	for(var/datum/D in abilities)
 		qdel(D)
+	abilities = null
 	return ..()
 
 
