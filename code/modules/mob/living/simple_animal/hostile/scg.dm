@@ -18,6 +18,8 @@
 	natural_weapon = /obj/item/natural_weapon/punch
 	min_gas = list()
 	max_gas = list()
+	minbodytemp = 0
+	maxbodytemp = 3000
 	unsuitable_atmos_damage = 0
 	faction = "scg"
 	status_flags = CANPUSH
