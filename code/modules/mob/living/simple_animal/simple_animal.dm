@@ -46,7 +46,6 @@
 	var/max_co2 = 5					// CO2 max
 	var/min_n2 = 0					// N2 min
 	var/max_n2 = 0					// N2 max
-	var/unsuitable_atoms_damage = 2	// This damage is taken when atmos doesn't fit all the requirements above
 
 	//Attack ranged settings
 	var/projectiletype				// The projectiles I shoot
