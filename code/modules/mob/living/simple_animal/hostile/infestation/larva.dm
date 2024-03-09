@@ -71,6 +71,7 @@
 	color = "#c87d44"
 	transformation_types = list(
 		/mob/living/simple_animal/hostile/infestation/broodling = 60 SECONDS,
+		/mob/living/simple_animal/hostile/infestation/floatfly = 75 SECONDS,
 		/mob/living/simple_animal/hostile/infestation/eviscerator = 90 SECONDS,
 		/mob/living/simple_animal/hostile/infestation/assembler = 120 SECONDS,
 		)
@@ -95,10 +96,17 @@
 	retaliate = TRUE
 	can_flee = FALSE
 
+/datum/ai_holder/simple_animal/infestation/larva/implanter/can_attack(atom/movable/the_target, vision_required = TRUE)
+	var/mob/living/simple_animal/hostile/infestation/larva/implant/implanter/L = holder
+	if(L.transformation_time != null)
+		return FALSE
+
+	return ..()
+
 /datum/ai_holder/simple_animal/infestation/larva/implanter/list_targets()
 	var/mob/living/simple_animal/hostile/infestation/larva/implant/implanter/L = holder
 	if(L.transformation_time != null) // Already implanted once
-		return
+		return list()
 
 	var/list/humans = list()
 	for(var/mob/living/carbon/human/H in view(vision_range, holder))
@@ -115,6 +123,9 @@
 		return
 	if(on_fire)
 		return
+	if(transformation_time != null)
+		return
+
 	var/mob/living/carbon/human/H = A
 	var/list/valid_organs = list()
 	for(var/obj/item/organ/external/O in H.organs)
