@@ -1,0 +1,896 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"bf" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/structure/table/standard,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/trash/plate,
+/obj/item/trash/plate,
+/obj/item/trash/plate,
+/obj/random/drinkbottle,
+/turf/simulated/floor/tiled/white,
+/area/map_template/scary_house_1)
+"bO" = (
+/obj/structure/table/woodentable/walnut,
+/obj/random/contraband,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/accessory/corptie/nanotrasen,
+/turf/simulated/floor/carpet/brown,
+/area/map_template/scary_house_1)
+"cI" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/map_template/scary_house_1)
+"dg" = (
+/obj/structure/bed/chair/wood/maple{
+	dir = 8
+	},
+/turf/simulated/floor/wood/maple,
+/area/map_template/scary_house_1)
+"ea" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/effect/landmark/clear,
+/turf/template_noop,
+/area/template_noop)
+"ez" = (
+/obj/machinery/power/port_gen/pacman,
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor,
+/area/map_template/scary_house_2)
+"fr" = (
+/obj/effect/wallframe_spawn/no_grille,
+/obj/effect/paint/black,
+/obj/structure/curtain,
+/obj/structure/barricade,
+/turf/simulated/floor,
+/area/map_template/scary_house_1)
+"hq" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/table/woodentable/maple,
+/obj/item/modular_computer/laptop/preset/custom_loadout/standard,
+/turf/simulated/floor,
+/area/map_template/scary_house_1)
+"hs" = (
+/obj/machinery/door/unpowered/simple/wood,
+/turf/simulated/floor,
+/area/map_template/scary_house_1)
+"iu" = (
+/obj/structure/hygiene/shower,
+/obj/structure/curtain/open/shower,
+/turf/simulated/floor/tiled/white,
+/area/map_template/scary_house_1)
+"iU" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/machinery/cooker/oven,
+/turf/simulated/floor/tiled/white,
+/area/map_template/scary_house_1)
+"iV" = (
+/obj/structure/flora/pottedplant/dead,
+/turf/simulated/floor/wood/maple,
+/area/map_template/scary_house_1)
+"jk" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/random/clothing,
+/turf/simulated/floor,
+/area/map_template/scary_house_1)
+"kF" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor,
+/area/map_template/scary_house_2)
+"mE" = (
+/obj/structure/hygiene/toilet,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/item/lipstick/random,
+/turf/simulated/floor/tiled/white,
+/area/map_template/scary_house_1)
+"ou" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/trash/plate,
+/turf/simulated/floor/tiled/white,
+/area/map_template/scary_house_1)
+"pj" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/simulated/floor,
+/area/map_template/scary_house_2)
+"pK" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/effect/landmark/corpse/scientist,
+/turf/simulated/floor,
+/area/map_template/scary_house_2)
+"rK" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/wood/maple,
+/area/map_template/scary_house_1)
+"rP" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/unpowered/simple/wood,
+/turf/simulated/floor,
+/area/map_template/scary_house_1)
+"rS" = (
+/obj/random/trash,
+/turf/simulated/floor,
+/area/map_template/scary_house_1)
+"so" = (
+/obj/structure/hygiene/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/white,
+/area/map_template/scary_house_1)
+"sr" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/white,
+/area/map_template/scary_house_1)
+"sC" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/item/clothing/accessory/toggleable/hawaii/random,
+/turf/simulated/floor/carpet/brown,
+/area/map_template/scary_house_1)
+"tl" = (
+/turf/simulated/floor/carpet/brown,
+/area/map_template/scary_house_1)
+"tr" = (
+/obj/effect/landmark/clear,
+/turf/template_noop,
+/area/template_noop)
+"tK" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/structure/table/standard,
+/obj/item/material/knife/kitchen/cleaver/bronze,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/white,
+/area/map_template/scary_house_1)
+"uf" = (
+/turf/simulated/wall/concrete,
+/area/map_template/scary_house_2)
+"ux" = (
+/obj/random/trash,
+/turf/simulated/floor/carpet/brown,
+/area/map_template/scary_house_1)
+"uY" = (
+/obj/machinery/door/unpowered/simple/wood,
+/turf/simulated/floor/tiled/white,
+/area/map_template/scary_house_1)
+"vm" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/brown,
+/area/map_template/scary_house_1)
+"xc" = (
+/turf/simulated/floor/wood/maple,
+/area/map_template/scary_house_1)
+"xT" = (
+/turf/template_noop,
+/area/template_noop)
+"yD" = (
+/obj/structure/table/woodentable/maple,
+/obj/item/paper,
+/turf/simulated/floor,
+/area/map_template/scary_house_1)
+"zT" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet/brown,
+/area/map_template/scary_house_1)
+"Be" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/map_template/scary_house_1)
+"Bn" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/maple,
+/area/map_template/scary_house_1)
+"BR" = (
+/obj/structure/bed/padded,
+/obj/item/bedsheet,
+/turf/simulated/floor/carpet/brown,
+/area/map_template/scary_house_1)
+"Dz" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood/maple,
+/area/map_template/scary_house_1)
+"DD" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/map_template/scary_house_1)
+"EJ" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/turf/simulated/floor/tiled/white,
+/area/map_template/scary_house_1)
+"EU" = (
+/obj/effect/wallframe_spawn/no_grille,
+/obj/effect/paint/black,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/curtain,
+/obj/structure/barricade,
+/turf/simulated/floor,
+/area/map_template/scary_house_1)
+"FD" = (
+/obj/effect/floor_decal/corner/black/diagonal,
+/obj/structure/closet/secure_closet/freezer/fridge,
+/turf/simulated/floor/tiled/white,
+/area/map_template/scary_house_1)
+"FQ" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/trash/plate,
+/turf/simulated/floor,
+/area/map_template/scary_house_1)
+"Ge" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/effect/landmark/clear,
+/obj/random/obstruction,
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"HO" = (
+/obj/structure/bookcase,
+/turf/simulated/floor/wood/maple,
+/area/map_template/scary_house_1)
+"IM" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor,
+/area/map_template/scary_house_1)
+"Jw" = (
+/obj/effect/landmark/clear,
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"JV" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/door/unpowered/simple/wood,
+/obj/structure/barricade,
+/turf/simulated/floor,
+/area/map_template/scary_house_2)
+"KG" = (
+/obj/structure/cable{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/effect/landmark/corpse/scientist,
+/turf/simulated/floor,
+/area/map_template/scary_house_2)
+"Lk" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/maple,
+/area/map_template/scary_house_1)
+"LV" = (
+/obj/structure/table/woodentable/maple,
+/obj/item/trash/plate,
+/turf/simulated/floor/wood/maple,
+/area/map_template/scary_house_1)
+"Mi" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/landmark/clear,
+/turf/template_noop,
+/area/template_noop)
+"OA" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/effect/landmark/clear,
+/turf/template_noop,
+/area/template_noop)
+"OL" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/white,
+/area/map_template/scary_house_1)
+"Pm" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/effect/gibspawner/human,
+/turf/simulated/floor,
+/area/map_template/scary_house_2)
+"Rl" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/landmark/clear,
+/turf/simulated/floor/exoplanet/concrete,
+/area/template_noop)
+"Rt" = (
+/obj/structure/table/woodentable/walnut,
+/obj/random/clothing,
+/turf/simulated/floor/carpet/brown,
+/area/map_template/scary_house_1)
+"RK" = (
+/obj/structure/bed/chair/armchair,
+/turf/simulated/floor,
+/area/map_template/scary_house_1)
+"RS" = (
+/obj/random/trash,
+/turf/simulated/floor/wood/maple,
+/area/map_template/scary_house_1)
+"SI" = (
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/power/apc/derelict{
+	dir = 1
+	},
+/turf/simulated/floor/wood/maple,
+/area/map_template/scary_house_1)
+"XG" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/carpet/brown,
+/area/map_template/scary_house_1)
+"Yi" = (
+/turf/simulated/floor,
+/area/map_template/scary_house_1)
+"ZM" = (
+/turf/simulated/wall/concrete,
+/area/map_template/scary_house_1)
+
+(1,1,1) = {"
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+"}
+(2,1,1) = {"
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+uf
+uf
+uf
+uf
+xT
+"}
+(3,1,1) = {"
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+uf
+ez
+pK
+uf
+xT
+"}
+(4,1,1) = {"
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+uf
+pj
+Pm
+uf
+xT
+"}
+(5,1,1) = {"
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+uf
+KG
+kF
+uf
+xT
+"}
+(6,1,1) = {"
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+uf
+uf
+JV
+uf
+xT
+"}
+(7,1,1) = {"
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+ea
+Mi
+Ge
+xT
+xT
+"}
+(8,1,1) = {"
+xT
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+ZM
+Jw
+xT
+xT
+xT
+xT
+ea
+OA
+tr
+tr
+xT
+xT
+"}
+(9,1,1) = {"
+tr
+ZM
+FD
+EJ
+rS
+ZM
+BR
+Rt
+bO
+ZM
+Jw
+tr
+xT
+ea
+Mi
+OA
+xT
+tr
+Jw
+xT
+xT
+"}
+(10,1,1) = {"
+tr
+fr
+iU
+sr
+ou
+ZM
+sC
+vm
+Be
+EU
+Rl
+Rl
+Mi
+OA
+xT
+xT
+tr
+Jw
+tr
+xT
+xT
+"}
+(11,1,1) = {"
+tr
+fr
+tK
+DD
+EJ
+ZM
+RK
+XG
+ux
+fr
+Jw
+tr
+xT
+xT
+xT
+tr
+tr
+tr
+xT
+xT
+xT
+"}
+(12,1,1) = {"
+tr
+ZM
+bf
+sr
+cI
+ZM
+jk
+zT
+tl
+ZM
+Jw
+tr
+xT
+xT
+xT
+Jw
+tr
+xT
+xT
+xT
+xT
+"}
+(13,1,1) = {"
+xT
+ZM
+ZM
+hs
+ZM
+ZM
+ZM
+rP
+ZM
+ZM
+Jw
+Jw
+tr
+xT
+xT
+tr
+xT
+xT
+xT
+xT
+xT
+"}
+(14,1,1) = {"
+xT
+ZM
+HO
+xc
+xc
+Lk
+xc
+Dz
+Lk
+ZM
+Jw
+Jw
+Jw
+Jw
+Jw
+tr
+xT
+xT
+xT
+xT
+xT
+"}
+(15,1,1) = {"
+xT
+ZM
+SI
+Bn
+IM
+Bn
+rK
+FQ
+Lk
+hs
+Jw
+Jw
+tr
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+"}
+(16,1,1) = {"
+xT
+ZM
+ZM
+uY
+ZM
+LV
+Lk
+Lk
+Yi
+ZM
+Jw
+tr
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+"}
+(17,1,1) = {"
+xT
+ZM
+iu
+OL
+ZM
+hq
+DD
+RS
+xc
+fr
+Jw
+tr
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+"}
+(18,1,1) = {"
+xT
+ZM
+mE
+so
+ZM
+yD
+dg
+Lk
+iV
+ZM
+Jw
+tr
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+"}
+(19,1,1) = {"
+xT
+ZM
+ZM
+ZM
+ZM
+ZM
+fr
+fr
+ZM
+ZM
+Jw
+tr
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+"}
+(20,1,1) = {"
+xT
+xT
+xT
+xT
+xT
+tr
+tr
+tr
+tr
+tr
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+"}
+(21,1,1) = {"
+xT
+xT
+xT
+xT
+xT
+xT
+tr
+tr
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+xT
+"}
