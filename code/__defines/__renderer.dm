@@ -79,28 +79,28 @@
 	//OBJ
 	#define BELOW_DOOR_LAYER            2.18
 	#define OPEN_DOOR_LAYER             2.19
-	#define DOOR_HELPER_LAYER           2.20 //keep this above OPEN_DOOR_LAYER
-	#define BELOW_TABLE_LAYER           2.21
-	#define TABLE_LAYER                 2.22
-	#define BELOW_OBJ_LAYER             2.23
-	#define STRUCTURE_LAYER             2.24
-	#define ABOVE_STRUCTURE_LAYER       2.25
+	#define BELOW_TABLE_LAYER           2.20
+	#define TABLE_LAYER                 2.21
+	#define BELOW_OBJ_LAYER             2.22
+	#define STRUCTURE_LAYER             2.23
+	#define ABOVE_STRUCTURE_LAYER       2.24
 	// OBJ_LAYER                        3
 	#define ABOVE_OBJ_LAYER             3.01
 	#define CLOSED_DOOR_LAYER           3.02
-	#define ABOVE_DOOR_LAYER            3.03
-	#define SIDE_WINDOW_LAYER           3.04
-	#define FULL_WINDOW_LAYER           3.05
-	#define ABOVE_WINDOW_LAYER          3.06
-	#define HOLOMAP_OVERLAY_LAYER       3.061
+	#define DOOR_HELPER_LAYER           3.03 //keep this above CLOSED_DOOR_LAYER
+	#define ABOVE_DOOR_LAYER            3.04
+	#define SIDE_WINDOW_LAYER           3.05
+	#define FULL_WINDOW_LAYER           3.06
+	#define ABOVE_WINDOW_LAYER          3.07
+	#define HOLOMAP_OVERLAY_LAYER       3.071
 	//LYING MOB AND HUMAN
-	#define LYING_MOB_LAYER             3.07
-	#define LYING_HUMAN_LAYER           3.08
-	#define BASE_ABOVE_OBJ_LAYER        3.09
+	#define LYING_MOB_LAYER             3.08
+	#define LYING_HUMAN_LAYER           3.09
+	#define BASE_ABOVE_OBJ_LAYER        3.10
 	//HUMAN
-	#define BASE_HUMAN_LAYER            3.10
+	#define BASE_HUMAN_LAYER            3.11
 	//MOB
-	#define MECH_UNDER_LAYER            3.11
+	#define MECH_UNDER_LAYER            3.12
 	// MOB_LAYER                        4
 	#define MECH_BASE_LAYER             4.01
 	#define MECH_INTERMEDIATE_LAYER     4.02

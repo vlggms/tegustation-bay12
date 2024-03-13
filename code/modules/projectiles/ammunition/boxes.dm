@@ -349,7 +349,7 @@
 	ammo_type = /obj/item/ammo_casing/rifle/flame
 
 /obj/item/ammo_magazine/mil_rifle
-	name = "assault rifle magazine"
+	name = "bullpup rifle magazine"
 	icon_state = "bullup"
 	origin_tech = list(TECH_COMBAT = 2)
 	mag_type = MAGAZINE

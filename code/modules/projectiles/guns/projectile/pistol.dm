@@ -23,7 +23,7 @@
 			return
 		else
 			overlays += image(icon, "ammo_ok")
-	
+
 /obj/item/gun/projectile/pistol/military
 	name = "military pistol"
 	desc = "The Hephaestus Industries P20 - a mass produced kinetic sidearm in widespread service with the SCGDF."
@@ -38,12 +38,12 @@
 	ammo_indicator = TRUE
 
 /obj/item/gun/projectile/pistol/military/alt
-	desc = "The HelTek Optimus, best known as the standard-issue sidearm for the ICCG Navy."
+	desc = "The HelTek Optimus, best known as the standard-issue sidearm for the Terran Navy."
 	icon = 'icons/obj/guns/military_pistol2.dmi'
 	icon_state = "military-alt"
 	safety_icon = "safety"
-	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 2, TECH_ESOTERIC = 8)
-	fire_delay = 8
+	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 3, TECH_ESOTERIC = 2)
+	fire_delay = 5
 
 /obj/item/gun/projectile/pistol/sec
 	name = "pistol"

@@ -78,6 +78,9 @@
 /obj/item/contraband/poster/order_black_of_sun
 	poster_type = /decl/poster/illegal/order_black_of_sun
 
+/obj/item/contraband/poster/earth_reclamation_committee
+	poster_type = /decl/poster/earth_reclamation_committee
+
 //############################## THE ACTUAL DECALS ###########################
 
 /obj/structure/sign/poster

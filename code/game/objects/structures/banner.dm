@@ -32,3 +32,9 @@
 	name = "\improper SCG exoplanet banner"
 	desc = "A rugged metal frame with a banner of Sol Central Government on it. Resistant to radiation bleaching."
 	icon_state = "steel_sol"
+
+/obj/structure/banner/exploration/terragov
+	name = "\improper TG exoplanet banner"
+	desc = "A rugged metal frame with a banner of Terran Government on it. Resistant to radiation bleaching."
+	icon_state = "steel_terra"
+	flick_state = "deploy_terra"

@@ -40,6 +40,10 @@
 	name = "ammunition (speedloader, medium)"
 	path = /obj/item/ammo_magazine/speedloader/medium
 
+/datum/fabricator_recipe/arms_ammo/hidden/speedloader_heavy
+	name = "ammunition (speedloader, heavy)"
+	path = /obj/item/ammo_magazine/speedloader/heavy
+
 /datum/fabricator_recipe/arms_ammo/hidden/magazine_pistol
 	name = "ammunition (pistol)"
 	path = /obj/item/ammo_magazine/pistol
@@ -87,6 +91,18 @@
 /datum/fabricator_recipe/arms_ammo/hidden/magazine_carbine
 	name = "ammunition (military rifle)"
 	path = /obj/item/ammo_magazine/mil_rifle
+
+/datum/fabricator_recipe/arms_ammo/hidden/magazine_ak47
+	name = "ammunition (AK-47 rifle)"
+	path = /obj/item/ammo_magazine/ak47
+
+/datum/fabricator_recipe/arms_ammo/hidden/magazine_t18
+	name = "ammunition (T18 rifle)"
+	path = /obj/item/ammo_magazine/t18
+
+/datum/fabricator_recipe/arms_ammo/hidden/magazine_t12
+	name = "ammunition (T12 rifle)"
+	path = /obj/item/ammo_magazine/t12
 
 /datum/fabricator_recipe/arms_ammo/hidden/shotgun
 	name = "ammunition (slug, shotgun)"

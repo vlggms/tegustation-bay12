@@ -414,6 +414,14 @@
 	name = "\improper Medbay"
 	icon_state = "med"
 
+/obj/structure/sign/directions/marine
+	name = "\improper Marine Corps Wing"
+	icon_state = "direction_marine"
+
+/obj/structure/sign/directions/senator
+	name = "\improper Senator's Office"
+	icon_state = "direction_senator"
+
 /obj/structure/sign/deck/bridge
 	name = "\improper Bridge Deck"
 	icon_state = "deck-b"

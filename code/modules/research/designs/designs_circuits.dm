@@ -925,6 +925,13 @@
 	build_path = /obj/item/stock_parts/circuitboard/radio_beacon
 	sort_string = "XAAAI"
 
+/datum/design/circuit/remote_weapon
+	name = "Bluespace rocket launcher"
+	id = "bluespace_rocket_launcher"
+	req_tech = list(TECH_BLUESPACE = 6, TECH_POWER = 8, TECH_COMBAT = 6)
+	build_path = /obj/item/stock_parts/circuitboard/remote_weapon/loadable
+	sort_string = "XAAAG"
+
 /datum/design/circuit/dominion/AssembleDesignName()
 	if(build_path)
 		var/obj/item/stock_parts/circuitboard/C = build_path
@@ -935,14 +942,14 @@
 		else
 			name = "<span style='color: [COLOR_ORANGE]'>\[Dominion Circuit\]</span> - [item_name]"
 
-/datum/design/circuit/mind_engraver
+/datum/design/circuit/dominion/mind_engraver
 	name = "mind engraver"
 	id = "mind_engraver"
 	req_tech = list(TECH_ENGINEERING = 8, TECH_DATA = 6, TECH_DOMINION = 5)
 	build_path = /obj/item/stock_parts/circuitboard/mind_engraver
 	sort_string = "YAAAA"
 
-/datum/design/circuit/mind_engraver_console
+/datum/design/circuit/dominion/mind_engraver_console
 	name = "mind engraver console"
 	id = "mind_engraver_console"
 	req_tech = list(TECH_ENGINEERING = 8, TECH_DATA = 6, TECH_DOMINION = 5)

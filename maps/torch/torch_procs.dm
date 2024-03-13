@@ -70,7 +70,12 @@
 		data += " [offship_players > 1 ? "<b>[offship_players] off-ship players</b>" : "<b>one off-ship player</b>"]"
 		data += " and <b>[ghosts] ghosts</b>.<br>"
 	else
-		desc += "There were <b>no survivors</b>, <b>[offship_players] off-ship players</b>, (<b>[ghosts] ghosts</b>)."
+		desc += "There were <b>no survivors</b>, <b>[offship_players] off-ship players</b>, (<b>[ghosts] ghosts</b>).<br>"
+
+	for(var/line in SSstatistics.get_field(STAT_FLAGS_PLANTED))
+		if(!islist(line))
+			continue
+		desc += "[line["planet"]] was claimed for \the [line["gov"]] by [line["user"]]!<br>"
 
 	return desc
 

@@ -1,15 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"aa" = (
-/obj/effect/shuttle_landmark/escape_pod/transit/pod15,
-/turf/space/transit/north,
-/area/space)
 "ct" = (
 /obj/effect/shuttle_landmark/ninja/internim,
 /turf/space/bluespace,
-/area/space)
-"cX" = (
-/obj/effect/shuttle_landmark/escape_pod/transit/pod16,
-/turf/space/transit/north,
 /area/space)
 "dj" = (
 /obj/effect/shuttle_landmark/transit/scavver_gantry/two,
@@ -17,10 +9,6 @@
 /area/space)
 "dK" = (
 /turf/space/transit/north,
-/area/space)
-"eB" = (
-/obj/effect/shuttle_landmark/escape_pod/out/pod8,
-/turf/space,
 /area/space)
 "eV" = (
 /obj/effect/step_trigger/thrower{
@@ -39,32 +27,12 @@
 /obj/effect/shuttle_landmark/transit/merc,
 /turf/space,
 /area/space)
-"gT" = (
-/obj/effect/shuttle_landmark/escape_pod/transit/pod11,
-/turf/space/transit/east,
-/area/space)
-"hh" = (
-/obj/effect/shuttle_landmark/escape_pod/transit/pod12,
-/turf/space/transit/north,
-/area/space)
 "hV" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
 	name = "thrower_leftnostop"
 	},
 /turf/space/transit/east,
-/area/space)
-"ka" = (
-/obj/effect/shuttle_landmark/escape_pod/out/pod13,
-/turf/space,
-/area/space)
-"lg" = (
-/obj/effect/shuttle_landmark/escape_pod/transit/pod7,
-/turf/space/transit/north,
-/area/space)
-"mv" = (
-/obj/effect/shuttle_landmark/escape_pod/out/pod15,
-/turf/space,
 /area/space)
 "nN" = (
 /obj/effect/step_trigger/thrower{
@@ -74,10 +42,6 @@
 	tiles = 0
 	},
 /turf/space/bluespace,
-/area/space)
-"oX" = (
-/obj/effect/shuttle_landmark/escape_pod/out/pod10,
-/turf/space,
 /area/space)
 "pB" = (
 /obj/effect/step_trigger/thrower{
@@ -89,10 +53,6 @@
 	tiles = 0
 	},
 /turf/space,
-/area/space)
-"pD" = (
-/obj/effect/shuttle_landmark/escape_pod/transit/pod8,
-/turf/space/transit/north,
 /area/space)
 "qg" = (
 /obj/effect/step_trigger/thrower{
@@ -113,10 +73,6 @@
 /obj/effect/shuttle_landmark/transit/rawl,
 /turf/space,
 /area/space)
-"rD" = (
-/obj/effect/shuttle_landmark/escape_pod/transit/pod17,
-/turf/space/transit/north,
-/area/space)
 "sI" = (
 /obj/effect/step_trigger/thrower{
 	direction = 1;
@@ -124,10 +80,6 @@
 	nostop = 0;
 	tiles = 0
 	},
-/turf/space/transit/north,
-/area/space)
-"vK" = (
-/obj/effect/shuttle_landmark/escape_pod/transit/pod13,
 /turf/space/transit/north,
 /area/space)
 "vV" = (
@@ -155,8 +107,23 @@
 /turf/space,
 /area/space)
 "yk" = (
-/obj/effect/shuttle_landmark/transit/torch/aquila,
-/turf/space/transit/north,
+/obj/effect/step_trigger/thrower{
+	affect_ghosts = 1;
+	direction = 2;
+	name = "thrower_throwdown";
+	tiles = 0
+	},
+/obj/effect/step_trigger/teleporter/random{
+	affect_ghosts = 1;
+	name = "escapeshuttle_leave";
+	teleport_x = 25;
+	teleport_x_offset = 245;
+	teleport_y = 25;
+	teleport_y_offset = 245;
+	teleport_z = 6;
+	teleport_z_offset = 6
+	},
+/turf/space,
 /area/space)
 "yK" = (
 /obj/effect/shuttle_landmark/skipjack/internim,
@@ -166,14 +133,6 @@
 /turf/space{
 	icon_state = "black"
 	},
-/area/space)
-"zC" = (
-/obj/effect/shuttle_landmark/transit/torch/exploration_shuttle,
-/turf/space/transit/north,
-/area/space)
-"zK" = (
-/obj/effect/shuttle_landmark/escape_pod/out/pod7,
-/turf/space,
 /area/space)
 "zU" = (
 /obj/effect/step_trigger/teleporter/random{
@@ -190,18 +149,6 @@
 	icon_state = "black"
 	},
 /area/space)
-"Bg" = (
-/obj/effect/shuttle_landmark/escape_pod/out/pod12,
-/turf/space,
-/area/space)
-"BG" = (
-/obj/effect/shuttle_landmark/escape_pod/out/pod17,
-/turf/space,
-/area/space)
-"BJ" = (
-/obj/effect/shuttle_landmark/escape_pod/out/pod9,
-/turf/space,
-/area/space)
 "DN" = (
 /obj/effect/step_trigger/teleporter/random{
 	affect_ghosts = 1;
@@ -213,10 +160,6 @@
 	teleport_z = 6;
 	teleport_z_offset = 6
 	},
-/turf/space,
-/area/space)
-"DW" = (
-/obj/effect/shuttle_landmark/escape_pod/out/pod11,
 /turf/space,
 /area/space)
 "EK" = (
@@ -247,10 +190,6 @@
 "Gm" = (
 /obj/effect/shuttle_landmark/ert/internim,
 /turf/space/bluespace,
-/area/space)
-"Gy" = (
-/obj/effect/shuttle_landmark/escape_pod/transit/pod10,
-/turf/space/transit/east,
 /area/space)
 "GN" = (
 /obj/effect/step_trigger/teleporter/random{
@@ -300,10 +239,6 @@
 	},
 /turf/space/bluespace,
 /area/space)
-"Pr" = (
-/obj/effect/shuttle_landmark/escape_pod/out/pod6,
-/turf/space,
-/area/space)
 "RR" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
@@ -313,19 +248,11 @@
 	},
 /turf/space/transit/north,
 /area/space)
-"RU" = (
-/obj/effect/shuttle_landmark/escape_pod/transit/pod9,
-/turf/space/transit/north,
-/area/space)
 "Uc" = (
 /turf/space/bluespace,
 /area/space)
 "Vj" = (
 /turf/space,
-/area/space)
-"VK" = (
-/obj/effect/shuttle_landmark/transit/torch/guppy,
-/turf/space/transit/north,
 /area/space)
 "VO" = (
 /obj/effect/step_trigger/thrower{
@@ -335,14 +262,6 @@
 	tiles = 0
 	},
 /turf/space/bluespace,
-/area/space)
-"WO" = (
-/obj/effect/shuttle_landmark/escape_pod/transit/pod6,
-/turf/space/transit/north,
-/area/space)
-"XQ" = (
-/obj/effect/shuttle_landmark/escape_pod/out/pod16,
-/turf/space,
 /area/space)
 "Zi" = (
 /obj/effect/step_trigger/thrower{
@@ -1175,7 +1094,7 @@ dK
 dK
 dK
 qg
-WO
+dK
 dK
 dK
 dK
@@ -1203,7 +1122,7 @@ dK
 dK
 dK
 dK
-pD
+dK
 sI
 dK
 dK
@@ -1544,7 +1463,6 @@ Vj
 Vj
 Vj
 Vj
-DW
 Vj
 Vj
 Vj
@@ -1556,7 +1474,8 @@ Vj
 Vj
 Vj
 Vj
-oX
+Vj
+Vj
 Vj
 Vj
 Vj
@@ -1619,15 +1538,15 @@ zU
 KK
 hV
 KK
-gT
-KK
-hV
-KK
 KK
 KK
 hV
 KK
-Gy
+KK
+KK
+hV
+KK
+KK
 KK
 hV
 KK
@@ -2593,7 +2512,7 @@ dK
 dK
 dK
 qg
-hh
+dK
 dK
 dK
 dK
@@ -2613,7 +2532,7 @@ sI
 dK
 dK
 dK
-aa
+dK
 sI
 dK
 dK
@@ -3401,7 +3320,7 @@ dK
 dK
 dK
 qg
-vK
+dK
 dK
 dK
 dK
@@ -3421,7 +3340,7 @@ sI
 dK
 dK
 dK
-cX
+dK
 sI
 dK
 dK
@@ -4229,7 +4148,7 @@ sI
 dK
 dK
 dK
-rD
+dK
 sI
 dK
 dK
@@ -5619,7 +5538,7 @@ dK
 dK
 dK
 qg
-lg
+dK
 dK
 dK
 dK
@@ -5647,7 +5566,7 @@ dK
 dK
 dK
 dK
-RU
+dK
 sI
 dK
 dK
@@ -5777,7 +5696,6 @@ Vj
 Vj
 Vj
 Vj
-Pr
 Vj
 Vj
 Vj
@@ -5806,7 +5724,8 @@ Vj
 Vj
 Vj
 Vj
-eB
+Vj
+Vj
 Vj
 Vj
 Vj
@@ -5865,7 +5784,7 @@ dK
 dK
 dK
 dK
-VK
+dK
 dK
 dK
 dK
@@ -8201,7 +8120,6 @@ Vj
 Vj
 Vj
 Vj
-zK
 Vj
 Vj
 Vj
@@ -8230,7 +8148,8 @@ Vj
 Vj
 Vj
 Vj
-BJ
+Vj
+Vj
 Vj
 Vj
 Vj
@@ -9264,7 +9183,7 @@ dK
 dK
 dK
 dK
-zC
+dK
 dK
 dK
 dK
@@ -10428,7 +10347,6 @@ Vj
 Vj
 Vj
 Vj
-Bg
 Vj
 Vj
 Vj
@@ -10448,7 +10366,8 @@ Vj
 Vj
 Vj
 Vj
-mv
+Vj
+Vj
 Vj
 Vj
 Vj
@@ -12044,7 +11963,6 @@ Vj
 Vj
 Vj
 Vj
-ka
 Vj
 Vj
 Vj
@@ -12064,7 +11982,8 @@ Vj
 Vj
 Vj
 Vj
-XQ
+Vj
+Vj
 Vj
 Vj
 Vj
@@ -13680,7 +13599,7 @@ Vj
 Vj
 Vj
 Vj
-BG
+Vj
 Vj
 Vj
 Vj
@@ -15369,7 +15288,7 @@ dK
 dK
 dK
 dK
-yk
+dK
 dK
 dK
 dK
@@ -27884,25 +27803,25 @@ DN
 DN
 DN
 Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
+yk
+yk
+yk
+yk
+yk
+yk
+yk
+yk
+yk
+yk
+yk
+yk
+yk
+yk
+yk
+yk
+yk
+yk
+yk
 Vj
 Vj
 Vj
@@ -28086,6 +28005,7 @@ Vj
 Vj
 DN
 Vj
+yk
 Vj
 Vj
 Vj
@@ -28103,8 +28023,7 @@ Vj
 Vj
 Vj
 Vj
-Vj
-Vj
+yk
 Vj
 Vj
 Vj
@@ -28288,6 +28207,7 @@ Vj
 Vj
 DN
 Vj
+yk
 Vj
 Vj
 Vj
@@ -28305,8 +28225,7 @@ Vj
 Vj
 Vj
 Vj
-Vj
-Vj
+yk
 Vj
 Vj
 Vj
@@ -28490,6 +28409,7 @@ Vj
 Vj
 DN
 Vj
+yk
 Vj
 Vj
 Vj
@@ -28507,8 +28427,7 @@ Vj
 Vj
 Vj
 Vj
-Vj
-Vj
+yk
 Vj
 Vj
 Vj
@@ -28692,6 +28611,7 @@ Vj
 Vj
 DN
 Vj
+yk
 Vj
 Vj
 Vj
@@ -28709,8 +28629,7 @@ Vj
 Vj
 Vj
 Vj
-Vj
-Vj
+yk
 Vj
 Vj
 Vj
@@ -28894,6 +28813,7 @@ Vj
 Vj
 DN
 Vj
+yk
 Vj
 Vj
 Vj
@@ -28911,8 +28831,7 @@ Vj
 Vj
 Vj
 Vj
-Vj
-Vj
+yk
 Vj
 Vj
 Vj
@@ -29096,6 +29015,7 @@ Vj
 Vj
 DN
 Vj
+yk
 Vj
 Vj
 Vj
@@ -29113,8 +29033,7 @@ Vj
 Vj
 Vj
 Vj
-Vj
-Vj
+yk
 Vj
 Vj
 Vj
@@ -29298,6 +29217,7 @@ Vj
 Vj
 DN
 Vj
+yk
 Vj
 Vj
 Vj
@@ -29315,8 +29235,7 @@ Vj
 Vj
 Vj
 Vj
-Vj
-Vj
+yk
 Vj
 Vj
 Vj
@@ -29500,6 +29419,7 @@ Vj
 Vj
 DN
 Vj
+yk
 Vj
 Vj
 Vj
@@ -29517,8 +29437,7 @@ Vj
 Vj
 Vj
 Vj
-Vj
-Vj
+yk
 Vj
 Vj
 Vj
@@ -29702,6 +29621,7 @@ Vj
 Vj
 DN
 Vj
+yk
 Vj
 Vj
 Vj
@@ -29719,8 +29639,7 @@ Vj
 Vj
 Vj
 Vj
-Vj
-Vj
+yk
 Vj
 Vj
 Vj
@@ -29904,6 +29823,7 @@ Vj
 Vj
 DN
 Vj
+yk
 Vj
 Vj
 Vj
@@ -29921,8 +29841,7 @@ Vj
 Vj
 Vj
 Vj
-Vj
-Vj
+yk
 Vj
 Vj
 Vj
@@ -30106,6 +30025,7 @@ Vj
 Vj
 DN
 Vj
+yk
 Vj
 Vj
 Vj
@@ -30123,8 +30043,7 @@ Vj
 Vj
 Vj
 Vj
-Vj
-Vj
+yk
 Vj
 Vj
 Vj
@@ -30308,6 +30227,7 @@ Vj
 Vj
 DN
 Vj
+yk
 Vj
 Vj
 Vj
@@ -30325,8 +30245,7 @@ Vj
 Vj
 Vj
 Vj
-Vj
-Vj
+yk
 Vj
 Vj
 Vj
@@ -30510,6 +30429,7 @@ Vj
 Vj
 DN
 Vj
+yk
 Vj
 Vj
 Vj
@@ -30527,8 +30447,7 @@ Vj
 Vj
 Vj
 Vj
-Vj
-Vj
+yk
 Vj
 Vj
 Vj
@@ -30712,6 +30631,7 @@ Vj
 Vj
 DN
 Vj
+yk
 Vj
 Vj
 Vj
@@ -30729,8 +30649,7 @@ Vj
 Vj
 Vj
 Vj
-Vj
-Vj
+yk
 Vj
 Vj
 Vj
@@ -30914,6 +30833,7 @@ Vj
 Vj
 DN
 Vj
+yk
 Vj
 Vj
 Vj
@@ -30931,8 +30851,7 @@ Vj
 Vj
 Vj
 Vj
-Vj
-Vj
+yk
 Vj
 Vj
 Vj
@@ -31116,6 +31035,7 @@ Vj
 Vj
 DN
 Vj
+yk
 Vj
 Vj
 Vj
@@ -31133,8 +31053,7 @@ Vj
 Vj
 Vj
 Vj
-Vj
-Vj
+yk
 Vj
 Vj
 Vj
@@ -31318,6 +31237,7 @@ Vj
 Vj
 DN
 Vj
+yk
 Vj
 Vj
 Vj
@@ -31335,8 +31255,7 @@ Vj
 Vj
 Vj
 Vj
-Vj
-Vj
+yk
 Vj
 Vj
 Vj
@@ -31520,6 +31439,7 @@ Vj
 Vj
 DN
 Vj
+yk
 Vj
 Vj
 Vj
@@ -31537,8 +31457,7 @@ Vj
 Vj
 Vj
 Vj
-Vj
-Vj
+yk
 Vj
 Vj
 Vj
@@ -31722,6 +31641,7 @@ Vj
 Vj
 DN
 Vj
+yk
 Vj
 Vj
 Vj
@@ -31739,8 +31659,7 @@ Vj
 Vj
 Vj
 Vj
-Vj
-Vj
+yk
 Vj
 Vj
 Vj
@@ -31924,6 +31843,7 @@ Vj
 Vj
 DN
 Vj
+yk
 Vj
 Vj
 Vj
@@ -31941,8 +31861,7 @@ Vj
 Vj
 Vj
 Vj
-Vj
-Vj
+yk
 Vj
 Vj
 Vj
@@ -32126,25 +32045,25 @@ Vj
 Vj
 DN
 Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
-Vj
+yk
+yk
+yk
+yk
+yk
+yk
+yk
+yk
+yk
+yk
+yk
+yk
+yk
+yk
+yk
+yk
+yk
+yk
+yk
 Vj
 Vj
 Vj

@@ -72,7 +72,14 @@
 			user_human = character
 			if(job.branch && mil_branches)
 				user_human.char_branch = mil_branches.get_branch(job.branch)
-				user_human.char_rank =   mil_branches.get_rank(job.branch, job.rank)
+				if(job.rank)
+					user_human.char_rank = mil_branches.get_rank(job.branch, job.rank)
+
+			// Mimics default job behavior
+			if(!user_human.char_branch && mil_branches)
+				user_human.char_branch = mil_branches.get_branch(user_human.client.prefs.branches[job.title])
+			if(!user_human.char_rank && mil_branches)
+				user_human.char_rank = mil_branches.get_rank(user_human.client.prefs.branches[job.title], user_human.client.prefs.ranks[job.title])
 
 			// We need to make sure to use the abstract instance here; it's not the same as the one we were passed.
 			character.skillset.obtain_from_client(SSjobs.get_by_path(job.type), character.client)
@@ -110,7 +117,8 @@
 		SSticker.mode.handle_offsite_latejoin(character)
 		GLOB.universe.OnPlayerLatejoin(character)
 		log_and_message_admins("has joined the round as offsite role [character.mind.assigned_role].", character)
-		if(character.cannot_stand()) equip_wheelchair(character)
+		if(character.cannot_stand())
+			equip_wheelchair(character)
 		job.post_equip_rank(character, job.title)
 		qdel(joining)
 

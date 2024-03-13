@@ -4,7 +4,8 @@
 		GLOB.using_map.grid_check_announcement()
 
 	for(var/obj/machinery/power/smes/buildable/S in SSmachines.machinery)
-		S.energy_fail(rand(15 * severity,30 * severity))
+		if(!S.is_critical)
+			S.energy_fail(rand(15 * severity,30 * severity))
 
 
 	for(var/obj/machinery/power/apc/C in SSmachines.machinery)

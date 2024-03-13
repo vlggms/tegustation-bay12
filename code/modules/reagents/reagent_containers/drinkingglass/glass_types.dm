@@ -149,6 +149,12 @@
 	icon_state = "coffeecup_heart"
 	base_name = "heart cup"
 
+/obj/item/reagent_containers/food/drinks/glass2/coffeecup/terragov
+	name = "\improper TG coffee cup"
+	desc = "A blue coffee cup emblazoned with the crest of the Terran Government."
+	icon_state = "coffeecup_TG"
+	base_name = "\improper TG cup"
+
 /obj/item/reagent_containers/food/drinks/glass2/coffeecup/SCG
 	name = "\improper SCG coffee cup"
 	desc = "A blue coffee cup emblazoned with the crest of the Sol Central Government."

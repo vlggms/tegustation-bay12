@@ -39,7 +39,7 @@
 	                    SKILL_CHEMISTRY = SKILL_MAX)
 
 	var/info = "You have survived a terrible disaster. Make the best of things that you can."
-	/// Forced name of a rank. If null - will operate normally with a choice
+	/// Forced name of a rank.
 	var/rank
 	/// Forced name of a branch. If null - will operate normally with a choice
 	var/branch

@@ -36,17 +36,6 @@
 	reluctant to harpoon their own project."
 	economic_power = 1.2
 	subversive_potential = 35
-
-/decl/cultural_info/faction/terragov
-	name = FACTION_TERRAGOV
-	description = "The Terran Government, commonly referred to as TerraGov or TG, is the second most powerful human government in the universe. \
-	As opposed to SolGov, TerraGov's ideals are those of progressing humanity at any cost, especially at the cost of alien civilizations. \
-	Terran Government prohibits any political parties that oppose the Terran Constitution, and as such there is only so many factions within the senate \
-	and each would rephrase 'progress of humanity' as they see fit, ranging from a more peaceful approach of co-existence with non-hostile alien \
-	civilizations to much more extreme sides of eternal war with everyone who isn't a part of TerraGov. Despite this, the senate is considered a stable \
-	entity due to every faction being somewhat restricted by the constitution."
-	subversive_potential = 25
-
 /decl/cultural_info/faction/isc
 	name = FACTION_ISC
 	description = "The Independent Space Confederation, commonly referred to as ISC, is the third most powerful human union in the universe. \

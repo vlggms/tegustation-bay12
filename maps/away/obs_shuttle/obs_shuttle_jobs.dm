@@ -11,7 +11,7 @@
 	blacklisted_species = null
 	is_semi_antagonist = TRUE
 
-	branch = /datum/mil_branch/obs
+	branch = null
 	rank = null
 	allowed_branches = list(/datum/mil_branch/obs)
 	allowed_ranks = list(
@@ -72,7 +72,7 @@
 		)
 
 	forced_culture = list(
-		//TAG_FACTION = FACTION_TERRASENATE_OBS,
+		TAG_FACTION = FACTION_TERRASENATE_OBS,
 		)
 
 /datum/job/submap/obs/pilot
@@ -126,7 +126,6 @@
 	about medicine, general science and engineering. Your main goal is developing a weapon of mass destruction and assissting \
 	the group in the process."
 	outfit_type = /decl/hierarchy/outfit/job/obs/member/scientist
-
 
 	allowed_ranks = list(
 		/datum/mil_rank/obs/inquisitor,

@@ -11,7 +11,7 @@
 	icon_state = "terranservice"
 
 /obj/item/clothing/suit/storage/terran/service/navy/command
-	name = "indie command coat"
+	name = "TerraGov command coat"
 	desc = "An Terran Navy service command coat. White and undecorated."
 	icon_state = "terranservice_comm"
 

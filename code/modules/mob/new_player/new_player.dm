@@ -412,7 +412,7 @@
 			if(job.forced_culture[token] == new_character.cultural_info[token])
 				continue
 			new_character.set_cultural_value(token, job.forced_culture[token], defer_language_update = TRUE)
-			to_chat(new_character, SPAN_NOTICE("Your [lowertext(ALL_CULTURAL_TAGS[token])] were changed to <b>[job.forced_culture[token]]</b> by your role!"))
+			to_chat(client, SPAN_NOTICE("Your [lowertext(ALL_CULTURAL_TAGS[token])] were changed to <b>[job.forced_culture[token]]</b> by your role!"))
 
 	sound_to(src, sound(null, repeat = 0, wait = 0, volume = 85, channel = GLOB.lobby_sound_channel))// MAD JAMS cant last forever yo
 

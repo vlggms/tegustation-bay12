@@ -1,9 +1,9 @@
 #define DEFAULT_SEED "glowshroom"
 #define VINE_GROWTH_STAGES 5
 
-/proc/spacevine_infestation(potency_min=70, potency_max=100, maturation_min=2, maturation_max=8)
+/proc/spacevine_infestation(potency_min=70, potency_max=100, maturation_min=2, maturation_max=6, area/area_type = /area/hallway)
 	spawn() //to stop the secrets panel hanging
-		var/turf/T = pick_subarea_turf(/area/hallway, list(/proc/is_station_turf, /proc/not_turf_contains_dense_objects))
+		var/turf/T = pick_subarea_turf(area_type, list(/proc/is_station_turf, /proc/not_turf_contains_dense_objects))
 		if(T)
 			var/datum/seed/seed = SSplants.create_random_seed(1)
 			seed.set_trait(TRAIT_SPREAD,2)             // So it will function properly as vines.

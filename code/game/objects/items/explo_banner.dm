@@ -20,7 +20,7 @@
 	if(!allowed(user))
 		to_chat(user, "<span class='warning'>\The [src] does not recognize your authority!</span>")
 		return
-	var/obj/effect/overmap/visitable/sector/exoplanet/P = map_sectors["[z]"]
+	var/obj/effect/overmap/visitable/sector/exoplanet/P = map_sectors["[user.z]"]
 	if(!istype(P))
 		to_chat(user, "<span class='warning'>\The [src] must be deployed on a planet!</span>")
 		return
@@ -34,12 +34,26 @@
 	if(!user.unEquip(src))
 		return
 
-	var/obj/structure/banner/exploration/E = new(T)
+	var/obj/structure/banner/exploration/E = new banner_type(T)
 	var/dudename = ID.registered_name
 	if(istype(ID.military_rank))
 		dudename = "[ID.military_rank.name] [dudename]"
 	E.planted_information = "Planted on [stationdate2text()] by [dudename], [user.get_assignment()] of \the [claim_government]."
 	T.visible_message("<span class='notice'>[user] successfully claims this world for \the [claim_government]!</span>")
 	playsound(T, 'sound/effects/banner_deploy.ogg', 35, 1)
-	SSstatistics.add_field(STAT_FLAGS_PLANTED, list("gov" = claim_government, "user" = user, "planet" = P.name))
+	P.claim = claim_government
+	SSstatistics.add_field(STAT_FLAGS_PLANTED, list("gov" = claim_government, "user" = user.real_name, "planet" = P.name))
 	qdel(src)
+
+/* Various subtypes */
+/obj/item/explo_banner/terragov
+	name = "\improper TerraGov banner capsule"
+	desc = "TerraGov banner packed in a rapid deployment capsule. Used for staking claims on new worlds in the name of Terran Government."
+	claim_government = "Terran Government"
+	banner_type = /obj/structure/banner/exploration/terragov
+
+/obj/item/explo_banner/solgov
+	name = "\improper SCG banner capsule"
+	desc = "SCG banner packed in a rapid deployment capsule. Used for staking claims on new worlds in the name of Sol Central Government."
+	claim_government = "Sol Central Government"
+	banner_type = /obj/structure/banner/exploration/solgov

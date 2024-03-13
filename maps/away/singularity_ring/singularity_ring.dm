@@ -23,14 +23,14 @@
 		/area/singularity_ring/outer = NO_SCRUBBER|NO_VENT,
 	)
 
-/obj/effect/shuttle_landmark/nav_transgateway/nav1
+/obj/effect/shuttle_landmark/singularity_ring/nav1
 	name = "Singularity Ring Navpoint #1"
 	landmark_tag = "nav_singuring_1"
 
-/obj/effect/shuttle_landmark/nav_transgateway/nav2
+/obj/effect/shuttle_landmark/singularity_ring/nav2
 	name = "Singularity Ring Navpoint #2"
 	landmark_tag = "nav_singuring_2"
 
-/obj/effect/shuttle_landmark/nav_transgateway/nav3
+/obj/effect/shuttle_landmark/singularity_ring/nav3
 	name = "Singularity Ring Navpoint #3"
 	landmark_tag = "nav_singuring_3"

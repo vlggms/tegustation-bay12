@@ -1,4 +1,4 @@
-#define SOLAR_MAX_DIST 40
+#define SOLAR_MAX_DIST 80
 
 var/solar_gen_rate = 1500
 var/list/solars_list = list()
@@ -41,9 +41,9 @@ var/list/solars_list = list()
 //set the control of the panel to a given computer if closer than SOLAR_MAX_DIST
 /obj/machinery/power/solar/proc/set_control(var/obj/machinery/power/solar_control/SC)
 	if(SC && (get_dist(src, SC) > SOLAR_MAX_DIST))
-		return 0
+		return FALSE
 	control = SC
-	return 1
+	return TRUE
 
 //set the control of the panel to null and removes it from the control list of the previous control computer if needed
 /obj/machinery/power/solar/proc/unset_control()
@@ -329,18 +329,31 @@ var/list/solars_list = list()
 //search for unconnected panels and trackers in the computer powernet and connect them
 /obj/machinery/power/solar_control/proc/search_for_connected()
 	if(powernet)
+		var/failed_panels = FALSE
+		var/failed_tracker = FALSE
 		for(var/obj/machinery/power/M in powernet.nodes)
 			if(istype(M, /obj/machinery/power/solar))
 				var/obj/machinery/power/solar/S = M
 				if(!S.control) //i.e unconnected
-					if(S.set_control(src))
-						connected_panels |= S
+					if(!S.set_control(src))
+						failed_panels = TRUE
+						continue
+					connected_panels |= S
 			else if(istype(M, /obj/machinery/power/tracker))
 				if(!connected_tracker) //if there's already a tracker connected to the computer don't add another
 					var/obj/machinery/power/tracker/T = M
 					if(!T.control) //i.e unconnected
-						if(T.set_control(src))
-							connected_tracker = T
+						if(!T.set_control(src))
+							failed_tracker = TRUE
+							continue
+						connected_tracker = T
+		if(failed_panels)
+			to_chat(usr, SPAN_WARNING("\The [src] located panels that were too far away and failed to connect!"))
+		if(failed_tracker)
+			to_chat(usr, SPAN_WARNING("\The [src] located tracker that was too far away and failed to connect!"))
+		return
+
+	to_chat(usr, SPAN_WARNING("\The [src] is not connected to a powernet!"))
 
 //called by the sun controller, update the facing angle (either manually or via tracking) and rotates the panels accordingly
 /obj/machinery/power/solar_control/proc/update()
