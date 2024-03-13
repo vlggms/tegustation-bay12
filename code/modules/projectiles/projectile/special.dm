@@ -198,3 +198,21 @@
 		to_chat(target, SPAN_WARNING("You feel a wave of heat wash over you!"))
 		L.adjust_fire_stacks(rand(5,8))
 		L.IgniteMob()
+
+// Pseudo-spell projectiles used by simple mobs
+/obj/item/projectile/fireball
+	name = "fireball"
+	icon = 'icons/obj/projectiles.dmi'
+	icon_state = "fireball"
+	speed = 2
+	damage = 50
+	damage_type = BURN
+	damage_flags = 0
+
+/obj/item/projectile/fireball/on_impact(atom/target, blocked = 0)
+	if(QDELETED(src))
+		return
+	var/turf/T = get_turf(target)
+	if(T)
+		explosion(T, -1, 0, 3)
+	return ..()

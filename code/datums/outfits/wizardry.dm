@@ -8,7 +8,7 @@
 	back = /obj/item/storage/backpack
 	backpack_contents = list(/obj/item/storage/box = 1)
 	hierarchy_type = /decl/hierarchy/outfit/wizard
-	flags = OUTFIT_HAS_BACKPACK|OUTFIT_RESET_EQUIPMENT
+	flags = OUTFIT_RESET_EQUIPMENT
 
 /decl/hierarchy/outfit/wizard/blue
 	name = "Wizard - Blue"
@@ -25,3 +25,24 @@
 	head = /obj/item/clothing/head/wizard/marisa
 	suit = /obj/item/clothing/suit/wizrobe/marisa
 	shoes = /obj/item/clothing/shoes/sandal/marisa
+
+// Outfits without special equipment
+/decl/hierarchy/outfit/wizard/blue/empty
+	name = "Wizard Empty - Blue"
+
+	l_ear = null
+	r_pocket = null
+	l_hand = null
+	r_hand = null
+	back = null
+	backpack_contents = list()
+
+/decl/hierarchy/outfit/wizard/red/empty
+	name = "Wizard Empty - Red"
+
+	l_ear = null
+	r_pocket = null
+	l_hand = null
+	r_hand = null
+	back = null
+	backpack_contents = list()

@@ -190,3 +190,11 @@
 /obj/effect/landmark/corpse/scg_explorer
 	name = "SCG Explorer"
 	corpse_outfits = list(/decl/hierarchy/outfit/scg_explorer)
+
+/obj/effect/landmark/corpse/wizard_blue
+	name = "Wizard - Blue"
+	corpse_outfits = list(/decl/hierarchy/outfit/wizard/blue/empty)
+
+/obj/effect/landmark/corpse/wizard_red
+	name = "Wizard - Red"
+	corpse_outfits = list(/decl/hierarchy/outfit/wizard/red/empty)
