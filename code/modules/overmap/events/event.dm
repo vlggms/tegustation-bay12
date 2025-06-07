@@ -12,7 +12,7 @@
 /decl/overmap_event_handler/proc/create_events(var/z_level, var/overmap_size, var/number_of_events)
 	// Acquire the list of not-yet utilized overmap turfs on this Z-level
 	var/list/candidate_turfs = block(locate(OVERMAP_EDGE, OVERMAP_EDGE, z_level),locate(overmap_size - OVERMAP_EDGE, overmap_size - OVERMAP_EDGE,z_level))
-	candidate_turfs = where(candidate_turfs, /proc/can_not_locate, /obj/effect/overmap/visitable)
+	candidate_turfs = where(candidate_turfs, GLOBAL_PROC_REF(can_not_locate), /obj/effect/overmap/visitable)
 
 	for(var/i = 1 to number_of_events)
 		if(!candidate_turfs.len)
@@ -336,7 +336,7 @@
 /obj/effect/overmap/event/leviathan/proc/SpawnHives(amount = hive_spawn_count)
 	hive_cooldown = world.time + hive_cooldown_time
 	var/list/candidate_turfs = block(locate(OVERMAP_EDGE, OVERMAP_EDGE, GLOB.using_map.overmap_z), locate(GLOB.using_map.overmap_size - OVERMAP_EDGE, GLOB.using_map.overmap_size - OVERMAP_EDGE, GLOB.using_map.overmap_z))
-	candidate_turfs = where(candidate_turfs, /proc/can_not_locate, /obj/effect/overmap)
+	candidate_turfs = where(candidate_turfs, GLOBAL_PROC_REF(can_not_locate), /obj/effect/overmap)
 	for(var/i = 1 to amount)
 		if(!LAZYLEN(candidate_turfs))
 			break

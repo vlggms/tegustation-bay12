@@ -16,7 +16,7 @@
 
 	// Add to player list if missing
 	if (!list_find(GLOB.player_list, src))
-		ADD_SORTED(GLOB.player_list, src, /proc/cmp_mob_key)
+		ADD_SORTED(GLOB.player_list, src, GLOBAL_PROC_REF(cmp_mob_key))
 
 	new_player_panel()
 

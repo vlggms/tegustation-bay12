@@ -71,7 +71,7 @@
 	switch(catastrophe_type)
 		if(CATASTROPHE_INFESTATION)
 			new /obj/infestation_structure/hive_heart(loc)
-			var/turf/T = pick_turf_in_range(loc, 3, list(/proc/not_turf_contains_dense_objects))
+			var/turf/T = pick_turf_in_range(loc, 3, list(GLOBAL_PROC_REF(not_turf_contains_dense_objects)))
 			new /obj/infestation_structure/pike_burrow(T)
 
 	return ..()

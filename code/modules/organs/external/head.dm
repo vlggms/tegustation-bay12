@@ -151,7 +151,7 @@
 					var/icon/I = icon(M.icon, M.icon_state)
 					I.Blend(HI, ICON_AND)
 					I.Blend(color, ICON_MULTIPLY)
-					ADD_SORTED(sorted_hair_markings, list(list(M.draw_order, I)), /proc/cmp_marking_order)
+					ADD_SORTED(sorted_hair_markings, list(list(M.draw_order, I)), GLOBAL_PROC_REF(cmp_marking_order))
 			for (var/entry in sorted_hair_markings)
 				HI.Blend(entry[2], ICON_OVERLAY)
 			res.overlays |= HI
@@ -190,7 +190,7 @@
 					rgb[1] / 255, rgb[2] / 255, rgb[3] / 255, 0
 				)
 			icon_cache_key += "[M.name][color]"
-			ADD_SORTED(sorted_head_markings, list(list(M.draw_order, I)), /proc/cmp_marking_order)
+			ADD_SORTED(sorted_head_markings, list(list(M.draw_order, I)), GLOBAL_PROC_REF(cmp_marking_order))
 	for (var/entry in sorted_head_markings)
 		res.overlays |= entry[2]
 

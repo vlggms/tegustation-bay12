@@ -20,7 +20,7 @@
 
 /datum/event/leviathan_spawn/start()
 	var/list/candidate_turfs = block(locate(OVERMAP_EDGE, OVERMAP_EDGE, GLOB.using_map.overmap_z), locate(GLOB.using_map.overmap_size - OVERMAP_EDGE, GLOB.using_map.overmap_size - OVERMAP_EDGE, GLOB.using_map.overmap_z))
-	candidate_turfs = where(candidate_turfs, /proc/can_not_locate, /obj/effect/overmap/visitable)
+	candidate_turfs = where(candidate_turfs, GLOBAL_PROC_REF(can_not_locate), /obj/effect/overmap/visitable)
 	var/turf/T = pick(candidate_turfs)
 	new /obj/effect/temp_visual/ftl(T)
 	new /obj/effect/overmap/event/leviathan(T)

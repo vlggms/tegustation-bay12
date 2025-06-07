@@ -28,7 +28,7 @@
 	// Spawn black holes
 	for(var/i = 1 to black_hole_count)
 		var/turf/TT = pick_area_turf_in_single_z_level(
-			list(/proc/is_not_space_area),
+			list(GLOBAL_PROC_REF(is_not_space_area)),
 			z_level = pick(affecting_z),
 			)
 		var/obj/effect/bhole/safe/B = new(TT)
