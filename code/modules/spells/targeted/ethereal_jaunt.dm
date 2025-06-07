@@ -54,7 +54,7 @@
 			jaunt_disappear(animation, target)
 			jaunt_steam(mobloc)
 			target.forceMove(jaunt_holder)
-			addtimer(CALLBACK(src, .proc/start_reappear, target), duration)
+			addtimer(CALLBACK(src, PROC_REF(start_reappear), target), duration)
 
 /datum/spell/targeted/ethereal_jaunt/proc/start_reappear(mob/living/user)
 	var/mob_loc = jaunt_holder.last_valid_turf
@@ -62,7 +62,7 @@
 	jaunt_steam(mob_loc)
 	jaunt_reappear(animation, user)
 	animation.forceMove(mob_loc)
-	addtimer(CALLBACK(src, .proc/reappear, mob_loc, user), reappear_duration)
+	addtimer(CALLBACK(src, PROC_REF(reappear), mob_loc, user), reappear_duration)
 
 /datum/spell/targeted/ethereal_jaunt/proc/reappear(var/mob_loc, mob/living/user)
 	if(!user.forceMove(mob_loc))
@@ -126,7 +126,7 @@
 	else
 		to_chat(user, "<span class='warning'>Some strange aura is blocking the way!</span>")
 	canmove = 0
-	addtimer(CALLBACK(src, .proc/allow_move), 2)
+	addtimer(CALLBACK(src, PROC_REF(allow_move)), 2)
 
 /obj/effect/dummy/spell_jaunt/proc/allow_move()
 	canmove = TRUE

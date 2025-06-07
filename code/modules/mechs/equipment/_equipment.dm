@@ -23,25 +23,25 @@
 /obj/item/mech_equipment/afterattack(var/atom/target, var/mob/living/user, var/inrange, var/params)
 	if(require_adjacent)
 		if(!inrange)
-			return 0	
+			return 0
 	if (owner && loc == owner && ((user in owner.pilots) || user == owner))
 		if(target in owner.contents)
 			return 0
 
 		if(!(owner.get_cell()?.check_charge(active_power_use * CELLRATE)))
 			to_chat(user, SPAN_WARNING("The power indicator flashes briefly as you attempt to use \the [src]"))
-			return 0	
+			return 0
 		return 1
-	else 
+	else
 		return 0
 
 /obj/item/mech_equipment/attack_self(var/mob/user)
 	if (owner && loc == owner && ((user in owner.pilots) || user == owner))
 		if(!(owner.get_cell()?.check_charge(active_power_use * CELLRATE)))
 			to_chat(user, SPAN_WARNING("The power indicator flashes briefly as you attempt to use \the [src]"))
-			return 0	
+			return 0
 		return 1
-	else 
+	else
 		return 0
 
 /obj/item/mech_equipment/examine(mob/user, distance)
@@ -100,7 +100,7 @@
 
 /obj/item/mech_equipment/mounted_system/proc/forget_holding()
 	if(holding) //It'd be strange for this to be called with this var unset
-		GLOB.destroyed_event.unregister(holding, src, .proc/forget_holding)
+		GLOB.destroyed_event.unregister(holding, src, PROC_REF(forget_holding))
 		holding = null
 		qdel(src)
 
@@ -108,21 +108,21 @@
 	. = ..()
 	if(holding_type)
 		holding = new holding_type(src)
-		GLOB.destroyed_event.register(holding, src, .proc/forget_holding)
+		GLOB.destroyed_event.register(holding, src, PROC_REF(forget_holding))
 	if(holding)
 		if(!icon_state)
 			icon = holding.icon
 			icon_state = holding.icon_state
 		SetName(holding.name)
 		desc = "[holding.desc] This one is suitable for installation on an exosuit."
-		
+
 
 /obj/item/mech_equipment/mounted_system/Destroy()
-	GLOB.destroyed_event.unregister(holding, src, .proc/forget_holding)
+	GLOB.destroyed_event.unregister(holding, src, PROC_REF(forget_holding))
 	if(holding)
 		QDEL_NULL(holding)
 	. = ..()
-	
+
 
 /obj/item/mech_equipment/mounted_system/get_effective_obj()
 	return (holding ? holding : src)

@@ -108,7 +108,7 @@
 	if(fire_at_connected_levels)
 		sound_z = GetConnectedZlevels(sound_z)
 	sound_to_playing_players_on_level('sound/effects/orbital_bombardment.ogg', 50, ignore_pressure = TRUE, zlevel = sound_z)
-	addtimer(CALLBACK(GLOBAL_PROC, .proc/bombard_z, bomb_number, 0.3, max(0,strength * range * devastation_modifier), strength * range * heavy_modifier, strength * range * light_modifier, FALSE, fire_at_connected_levels, target.z), 10 SECONDS)
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(bombard_z), bomb_number, 0.3, max(0,strength * range * devastation_modifier), strength * range * heavy_modifier, strength * range * light_modifier, FALSE, fire_at_connected_levels, target.z), 10 SECONDS)
 
 /obj/structure/ship_munition/disperser_charge/orbital_bombardment/high
 	name = "OB7-DOOM charge"

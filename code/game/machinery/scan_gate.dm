@@ -96,7 +96,7 @@
 	deltimer(scanline_timer)
 	add_overlay(type)
 	if(duration)
-		scanline_timer = addtimer(CALLBACK(src, .proc/SetScanline, "passive"), duration, TIMER_STOPPABLE)
+		scanline_timer = addtimer(CALLBACK(src, PROC_REF(SetScanline), "passive"), duration, TIMER_STOPPABLE)
 
 /obj/machinery/scanner_gate/proc/PerformScan(mob/living/M)
 	var/beep = FALSE

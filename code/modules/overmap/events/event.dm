@@ -12,7 +12,7 @@
 /decl/overmap_event_handler/proc/create_events(var/z_level, var/overmap_size, var/number_of_events)
 	// Acquire the list of not-yet utilized overmap turfs on this Z-level
 	var/list/candidate_turfs = block(locate(OVERMAP_EDGE, OVERMAP_EDGE, z_level),locate(overmap_size - OVERMAP_EDGE, overmap_size - OVERMAP_EDGE,z_level))
-	candidate_turfs = where(candidate_turfs, /proc/can_not_locate, /obj/effect/overmap/visitable)
+	candidate_turfs = where(candidate_turfs, GLOBAL_PROC_REF(can_not_locate), /obj/effect/overmap/visitable)
 
 	for(var/i = 1 to number_of_events)
 		if(!candidate_turfs.len)
@@ -305,13 +305,13 @@
 	wail_cooldown = world.time + wail_cooldown_time_lower
 	START_PROCESSING(SSobj, src)
 	// You have a total of 25 minutes to kill it, before it completely overruns the sector
-	addtimer(CALLBACK(src, .proc/WarnApocalypse), 20 MINUTES)
+	addtimer(CALLBACK(src, PROC_REF(WarnApocalypse)), 20 MINUTES)
 
 /obj/effect/overmap/event/leviathan/Process()
 	if(world.time >= hive_cooldown)
-		INVOKE_ASYNC(src, .proc/SpawnHives)
+		INVOKE_ASYNC(src, PROC_REF(SpawnHives))
 	if(world.time > wail_cooldown)
-		INVOKE_ASYNC(src, .proc/Wail)
+		INVOKE_ASYNC(src, PROC_REF(Wail))
 
 /obj/effect/overmap/event/leviathan/Destroy()
 	STOP_PROCESSING(SSobj, src)
@@ -336,7 +336,7 @@
 /obj/effect/overmap/event/leviathan/proc/SpawnHives(amount = hive_spawn_count)
 	hive_cooldown = world.time + hive_cooldown_time
 	var/list/candidate_turfs = block(locate(OVERMAP_EDGE, OVERMAP_EDGE, GLOB.using_map.overmap_z), locate(GLOB.using_map.overmap_size - OVERMAP_EDGE, GLOB.using_map.overmap_size - OVERMAP_EDGE, GLOB.using_map.overmap_z))
-	candidate_turfs = where(candidate_turfs, /proc/can_not_locate, /obj/effect/overmap)
+	candidate_turfs = where(candidate_turfs, GLOBAL_PROC_REF(can_not_locate), /obj/effect/overmap)
 	for(var/i = 1 to amount)
 		if(!LAZYLEN(candidate_turfs))
 			break
@@ -385,7 +385,7 @@
 		zlevels = affected_z,
 		)
 
-	addtimer(CALLBACK(src, .proc/StartApocalypse), 5 MINUTES)
+	addtimer(CALLBACK(src, PROC_REF(StartApocalypse)), 5 MINUTES)
 
 /obj/effect/overmap/event/leviathan/proc/StartApocalypse()
 	if(QDELETED(src))

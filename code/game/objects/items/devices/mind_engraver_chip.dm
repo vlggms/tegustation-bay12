@@ -324,6 +324,6 @@
 		var/list/chosen_list = after_thoughts[chosen_type]
 		var/message_delay = rand(30 SECONDS, 80 SECONDS)
 		for(var/i = 1 to length(chosen_list))
-			addtimer(CALLBACK(GLOBAL_PROC, /proc/to_chat, target, SPAN_SUBTLE(chosen_list[i])), (rand(90 SECONDS, 300 SECONDS) + (i * message_delay)))
+			addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), target, SPAN_SUBTLE(chosen_list[i])), (rand(90 SECONDS, 300 SECONDS) + (i * message_delay)))
 
 	return TRUE

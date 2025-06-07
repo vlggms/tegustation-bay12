@@ -29,7 +29,7 @@
 	var/mistake_chance = 4
 
 /obj/machinery/mind_engraver/Destroy()
-	INVOKE_ASYNC(src, .proc/GoOut)
+	INVOKE_ASYNC(src, PROC_REF(GoOut))
 	RemoveChip()
 	return ..()
 
@@ -102,7 +102,7 @@
 	if(locked)
 		to_chat(user, SPAN_WARNING("\The [src] is currently locked and will not let you out!"))
 		return
-	INVOKE_ASYNC(src, .proc/GoOut)
+	INVOKE_ASYNC(src, PROC_REF(GoOut))
 
 /obj/machinery/mind_engraver/mob_breakout(mob/living/escapee)
 	. = ..()
@@ -120,7 +120,7 @@
 			return FALSE
 
 		if(!locked)
-			INVOKE_ASYNC(src, .proc/GoOut)
+			INVOKE_ASYNC(src, PROC_REF(GoOut))
 			return FALSE
 
 		playsound(src, 'sound/effects/glassbash.ogg', i * 30, 1)
@@ -128,7 +128,7 @@
 		add_fingerprint(escapee)
 
 	ToggleLock(FALSE)
-	INVOKE_ASYNC(src, .proc/GoOut)
+	INVOKE_ASYNC(src, PROC_REF(GoOut))
 	to_chat(escapee, SPAN_NOTICE("You successfully break out!"))
 	visible_message(SPAN_DANGER("\The [escapee] successfully broke out of \the [src]!"))
 	return TRUE
@@ -258,7 +258,7 @@
 
 	visible_message(SPAN_DANGER("\The [src] blares an alarm as it loses power[locked ? "" : " and forcefuly ejects the occupant"]!"))
 	playsound(src, 'sound/machines/warning-buzzer.ogg', 50, TRUE, 7)
-	return INVOKE_ASYNC(src, .proc/GoOut)
+	return INVOKE_ASYNC(src, PROC_REF(GoOut))
 
 /obj/machinery/mind_engraver/proc/RemoveChip(mob/user)
 	if(!nanochip)
@@ -301,7 +301,7 @@
 		nanochip.stored_data.ApplyEffect(occupant)
 
 	ToggleLock(FALSE)
-	INVOKE_ASYNC(src, .proc/GoOut)
+	INVOKE_ASYNC(src, PROC_REF(GoOut))
 	visible_message(SPAN_NOTICE("\The [src] produces a signal as it finishes its operation!"))
 	playsound(src, 'sound/machines/ping.ogg', 50, TRUE, 7)
 

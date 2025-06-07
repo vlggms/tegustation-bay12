@@ -105,4 +105,3 @@
 
 /proc/cmp_advdisease_resistance_asc(datum/disease/advance/A, datum/disease/advance/B)
 	return A.TotalResistance() - B.TotalResistance()
-

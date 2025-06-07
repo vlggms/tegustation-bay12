@@ -45,7 +45,7 @@
 	if(target == selected_hardpoint)
 		clear_selected_hardpoint()
 
-	GLOB.destroyed_event.unregister(module_to_forget, src, .proc/forget_module)
+	GLOB.destroyed_event.unregister(module_to_forget, src, PROC_REF(forget_module))
 
 	var/obj/screen/exosuit/hardpoint/H = hardpoint_hud_elements[target]
 	H.holding = null
@@ -78,7 +78,7 @@
 			if(!found)
 				return FALSE
 	else
-		return FALSE	
+		return FALSE
 
 	if(user)
 		var/delay = 30 * user.skill_delay_mult(SKILL_DEVICES)
@@ -95,7 +95,7 @@
 				playsound(user.loc, 'sound/items/Screwdriver.ogg', 100, 1)
 			else return FALSE
 
-	GLOB.destroyed_event.register(system, src, .proc/forget_module)
+	GLOB.destroyed_event.register(system, src, PROC_REF(forget_module))
 
 	system.forceMove(src)
 	hardpoints[system_hardpoint] = system
@@ -137,7 +137,7 @@
 	system.forceMove(get_turf(src))
 	system.screen_loc = null
 	system.layer = initial(system.layer)
-	GLOB.destroyed_event.unregister(system, src, .proc/forget_module)
+	GLOB.destroyed_event.unregister(system, src, PROC_REF(forget_module))
 
 	var/obj/screen/exosuit/hardpoint/H = hardpoint_hud_elements[system_hardpoint]
 	H.holding = null

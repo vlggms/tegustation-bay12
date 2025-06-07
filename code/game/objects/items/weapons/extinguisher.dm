@@ -142,9 +142,9 @@
 		var/direction = get_dir(target,src)
 
 		if(user.buckled && isobj(user.buckled))
-			addtimer(CALLBACK(src, .proc/propel_object, user.buckled, user, direction), 0)
+			addtimer(CALLBACK(src, PROC_REF(propel_object), user.buckled, user, direction), 0)
 
-		addtimer(CALLBACK(src, .proc/do_spray, target), 0)
+		addtimer(CALLBACK(src, PROC_REF(do_spray), target), 0)
 
 		if(!user.check_space_footing())
 			step(user, direction)

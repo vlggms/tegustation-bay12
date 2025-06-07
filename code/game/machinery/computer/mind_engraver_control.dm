@@ -97,7 +97,7 @@
 		return
 
 	linked_engraver = ME
-	RegisterSignal(ME, COMSIG_PARENT_QDELETING, .proc/OnLinkDestroyed)
+	RegisterSignal(ME, COMSIG_PARENT_QDELETING, PROC_REF(OnLinkDestroyed))
 
 /obj/machinery/computer/mind_engraver_control/proc/OnLinkDestroyed()
 	SIGNAL_HANDLER

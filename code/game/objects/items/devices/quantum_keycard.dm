@@ -36,7 +36,7 @@
 
 	qpad = pad
 	update_icon()
-	RegisterSignal(pad, COMSIG_PARENT_QDELETING, .proc/PadDeleted)
+	RegisterSignal(pad, COMSIG_PARENT_QDELETING, PROC_REF(PadDeleted))
 
 /obj/item/quantum_keycard/proc/UnlinkPad()
 	UnregisterSignal(qpad, COMSIG_PARENT_QDELETING)

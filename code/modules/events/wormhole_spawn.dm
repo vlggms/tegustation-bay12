@@ -14,7 +14,7 @@
 
 /datum/event/wormhole_spawn/start()
 	var/list/candidate_turfs = block(locate(OVERMAP_EDGE, OVERMAP_EDGE, GLOB.using_map.overmap_z), locate(GLOB.using_map.overmap_size - OVERMAP_EDGE, GLOB.using_map.overmap_size - OVERMAP_EDGE, GLOB.using_map.overmap_z))
-	candidate_turfs = where(candidate_turfs, /proc/can_not_locate, /obj/effect/overmap)
+	candidate_turfs = where(candidate_turfs, GLOBAL_PROC_REF(can_not_locate), /obj/effect/overmap)
 	for(var/i = 1 to wormhole_count)
 		var/turf/T = pick(candidate_turfs)
 		new /obj/effect/temp_visual/ftl(T)

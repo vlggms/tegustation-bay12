@@ -14,7 +14,7 @@
 		kill()
 		return
 	for(var/ar in allowed_areas)
-		var/turf/PT = get_subarea_turfs(ar, list(/proc/is_station_turf, /proc/not_turf_contains_dense_objects))
+		var/turf/PT = get_subarea_turfs(ar, list(GLOBAL_PROC_REF(is_station_turf), GLOBAL_PROC_REF(not_turf_contains_dense_objects)))
 		possible_turfs += PT
 	var/turf/T = null
 	if(possible_turfs.len)

@@ -10,7 +10,7 @@
 /datum/gestalt_vote/New(var/obj/structure/diona_gestalt/_owner, var/mob/_caller)
 	owner = _owner
 	caller =_caller
-	addtimer(CALLBACK(src, .proc/timed_out), vote_time)
+	addtimer(CALLBACK(src, PROC_REF(timed_out)), vote_time)
 
 /datum/gestalt_vote/proc/timed_out()
 	if(owner && !passed)

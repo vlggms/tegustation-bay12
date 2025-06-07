@@ -61,22 +61,22 @@
 /decl/vv_set_handler/opacity_hander
 	handled_type = /atom
 	handled_vars = list("opacity" = /atom/proc/set_opacity)
-	predicates = list(/proc/is_num_predicate)
+	predicates = list(GLOBAL_PROC_REF(is_num_predicate))
 
 /decl/vv_set_handler/dir_hander
 	handled_type = /atom
 	handled_vars = list("dir" = /atom/proc/set_dir)
-	predicates = list(/proc/is_dir_predicate)
+	predicates = list(GLOBAL_PROC_REF(is_dir_predicate))
 
 /decl/vv_set_handler/ghost_appearance_handler
 	handled_type = /mob/observer/ghost
 	handled_vars = list("appearance" = /mob/observer/ghost/proc/set_appearance)
-	predicates = list(/proc/is_atom_predicate)
+	predicates = list(GLOBAL_PROC_REF(is_atom_predicate))
 
 /decl/vv_set_handler/virtual_ability_handler
 	handled_type = /mob/observer/virtual
 	handled_vars = list("abilities")
-	predicates = list(/proc/is_num_predicate)
+	predicates = list(GLOBAL_PROC_REF(is_num_predicate))
 
 /decl/vv_set_handler/virtual_ability_handler/handle_set_var(var/mob/observer/virtual/virtual, variable, var_value, client)
 	..()
@@ -85,22 +85,22 @@
 /decl/vv_set_handler/mob_see_invisible_handler
 	handled_type = /mob
 	handled_vars = list("see_invisible" = /mob/proc/set_see_invisible)
-	predicates = list(/proc/is_num_predicate)
+	predicates = list(GLOBAL_PROC_REF(is_num_predicate))
 
 /decl/vv_set_handler/mob_sight_handler
 	handled_type = /mob
 	handled_vars = list("sight" = /mob/proc/set_sight)
-	predicates = list(/proc/is_num_predicate)
+	predicates = list(GLOBAL_PROC_REF(is_num_predicate))
 
 /decl/vv_set_handler/mob_see_in_dark_handler
 	handled_type = /mob
 	handled_vars = list("see_in_dark" = /mob/proc/set_see_in_dark)
-	predicates = list(/proc/is_num_predicate)
+	predicates = list(GLOBAL_PROC_REF(is_num_predicate))
 
 /decl/vv_set_handler/mob_stat_handler
 	handled_type = /mob
 	handled_vars = list("set_stat" = /mob/proc/set_stat)
-	predicates = list(/proc/is_num_predicate)
+	predicates = list(GLOBAL_PROC_REF(is_num_predicate))
 
 /decl/vv_set_handler/icon_state_handler
 	handled_type = /atom
@@ -109,12 +109,12 @@
 /decl/vv_set_handler/invisibility_handler
 	handled_type = /atom
 	handled_vars = list("invisibility" = /atom/proc/set_invisibility)
-	predicates = list(/proc/is_num_predicate)
+	predicates = list(GLOBAL_PROC_REF(is_num_predicate))
 
 /decl/vv_set_handler/name_handler
 	handled_type = /atom
 	handled_vars = list("name" = /atom/proc/SetName)
-	predicates = list(/proc/is_text_predicate)
+	predicates = list(GLOBAL_PROC_REF(is_text_predicate))
 
 /decl/vv_set_handler/light_handler
 	handled_type = /atom
@@ -136,4 +136,4 @@
 /decl/vv_set_handler/holopad_id_handler
 	handled_type = /obj/machinery/hologram/holopad
 	handled_vars = list("holopad_id" = /obj/machinery/hologram/holopad/proc/ChangeID)
-	predicates = list(/proc/is_text_predicate)
+	predicates = list(GLOBAL_PROC_REF(is_text_predicate))

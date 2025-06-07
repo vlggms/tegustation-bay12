@@ -88,7 +88,7 @@
 	fire_cooldown = world.time + fire_cooldown_time
 	visible_message(SPAN_DANGER("\The [src] fired a rocket!"))
 	playsound(src, 'sound/weapons/gunship_rocket.ogg', 200, TRUE, 4, ignore_pressure = TRUE)
-	addtimer(CALLBACK(src, .proc/FireCharge, target), attack_delay)
+	addtimer(CALLBACK(src, PROC_REF(FireCharge), target), attack_delay)
 
 /obj/machinery/remote_weapon/explosive/proc/FireCharge(turf/target)
 	target.visible_message(SPAN_DANGER("A rocket is rapidly approaching your position!"))

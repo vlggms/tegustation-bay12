@@ -197,7 +197,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 		H.resist()
 		return
 
-	addtimer(CALLBACK(src, .proc/handle_action, H), 15)
+	addtimer(CALLBACK(src, PROC_REF(handle_action), H), 15)
 
 /datum/species/zombie/proc/handle_action(mob/living/carbon/human/H)
 	var/dist = 128
@@ -383,7 +383,7 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 	new /obj/effect/decal/cleanable/vomit(T)
 	playsound(T, 'sound/effects/splat.ogg', 20, 1)
 
-	addtimer(CALLBACK(src, .proc/transform_zombie, chosen_species), 20)
+	addtimer(CALLBACK(src, PROC_REF(transform_zombie), chosen_species), 20)
 
 /mob/living/carbon/human/proc/transform_zombie(chosen_species = SPECIES_ZOMBIE)
 	make_jittery(300)

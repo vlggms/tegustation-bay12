@@ -69,7 +69,7 @@
 
 /datum/computer_file/program/supply/OnStoreFile(obj/item/stock_parts/computer/hard_drive/HD)
 	. = ..()
-	SSticker.OnRoundstart(CALLBACK(src, .proc/OnRoundStart, HD))
+	SSticker.OnRoundstart(CALLBACK(src, PROC_REF(OnRoundStart), HD))
 
 /datum/computer_file/program/supply/proc/OnRoundStart(obj/item/stock_parts/computer/hard_drive/HD)
 	if(!istype(HD))
@@ -447,7 +447,7 @@
 		trade_screen = ORDER_SCREEN
 		if(account != department_accounts["Supply"])
 			orders_locked = TRUE
-			addtimer(CALLBACK(src, .proc/UnlockOrdering), 10 SECONDS, TIMER_STOPPABLE)
+			addtimer(CALLBACK(src, PROC_REF(UnlockOrdering)), 10 SECONDS, TIMER_STOPPABLE)
 		return TRUE
 
 	if(href_list["PRG_view_order"])

@@ -882,9 +882,9 @@ Ccomp's first proc.
 	// We are using this instead of getting random areas due to large probability bias with large amount of areas
 	// on zlevels. With this, every turf is more or less equally screwed.
 	if(connected)
-		available_turfs = get_turfs_in_zlevels(GetConnectedZlevels(zlevel), list(/proc/is_not_space_area))
+		available_turfs = get_turfs_in_zlevels(GetConnectedZlevels(zlevel), list(GLOBAL_PROC_REF(is_not_space_area)))
 	else
-		available_turfs = get_turfs_in_zlevel(zlevel, list(/proc/is_not_space_area))
+		available_turfs = get_turfs_in_zlevel(zlevel, list(GLOBAL_PROC_REF(is_not_space_area)))
 
 	while(booms > 0)
 		if(random_range)

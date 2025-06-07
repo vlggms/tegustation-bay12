@@ -115,7 +115,7 @@
 		stat |= EMPED
 		disconnect_computers()
 		var/emp_time = rand(15 SECONDS, 30 SECONDS) / severity
-		addtimer(CALLBACK(src, .proc/emp_act_end), emp_time, TIMER_UNIQUE | TIMER_OVERRIDE)
+		addtimer(CALLBACK(src, PROC_REF(emp_act_end)), emp_time, TIMER_UNIQUE | TIMER_OVERRIDE)
 
 
 /obj/machinery/tele_beacon/proc/emp_act_end()
@@ -324,7 +324,7 @@
 	switch (index)
 		if (TELEBEACON_WIRE_POWER)
 			tele_beacon.set_power_cut()
-			addtimer(CALLBACK(src, .proc/ResetPulsed), rand(15 SECONDS, 45 SECONDS), TELEBEACON_WIRE_POWER)
+			addtimer(CALLBACK(src, PROC_REF(ResetPulsed)), rand(15 SECONDS, 45 SECONDS), TELEBEACON_WIRE_POWER)
 		if (TELEBEACON_WIRE_RELAY)
 			tele_beacon.disconnect_computers()
 		if (TELEBEACON_WIRE_SIGNALLER)

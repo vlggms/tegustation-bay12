@@ -164,7 +164,7 @@
 
 	playsound(get_turf(src), 'sound/weapons/flash.ogg', 25, TRUE)
 	teleporting = TRUE
-	addtimer(CALLBACK(src, .proc/DoTeleport, user, target_pad), teleport_delay)
+	addtimer(CALLBACK(src, PROC_REF(DoTeleport), user, target_pad), teleport_delay)
 
 /obj/machinery/quantumpad/proc/DoTeleport(mob/user, obj/machinery/quantumpad/target_pad = linked_pad)
 	if(!src || QDELETED(src))
