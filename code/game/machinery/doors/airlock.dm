@@ -451,7 +451,7 @@ About the new airlock wires panel:
 			if(!src.justzap)
 				if(src.shock(user, 100))
 					src.justzap = TRUE
-					addtimer(CALLBACK(src, .proc/set_justzap, FALSE), 1 SECOND)
+					addtimer(CALLBACK(src, PROC_REF(set_justzap), FALSE), 1 SECOND)
 					return
 			else
 				return
@@ -467,7 +467,7 @@ About the new airlock wires panel:
 			if(cycle_link_airlock.operating)
 				cycle_link_airlock.delayed_close_requested = TRUE
 			else
-				addtimer(CALLBACK(cycle_link_airlock, .proc/close), 2)
+				addtimer(CALLBACK(cycle_link_airlock, PROC_REF(close)), 2)
 	return ..()
 
 /obj/machinery/door/airlock/proc/set_justzap(val)

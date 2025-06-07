@@ -117,7 +117,7 @@
 	if(start_hidden)
 		overmap_object.name = "unidentified trade beacon"
 		overmap_object.color = "#444444"
-		GLOB.entered_event.register(overmap_location, src, .proc/Discovered)
+		GLOB.entered_event.register(overmap_location, src, PROC_REF(Discovered))
 
 /datum/trading_station/proc/Discovered(_, obj/effect/overmap/visitable/ship/ship)
 	if(!istype(ship) || !ship.base)
@@ -129,7 +129,7 @@
 	for(var/obj/machinery/computer/ship/helm/H in SSmachines.machinery)
 		H.visible_message(SPAN_NOTICE("\The [H] pings as <b>[overmap_object.name]</b> is discovered!"))
 		playsound(H, 'sound/machines/sensors/contact_generic.ogg', 50, TRUE, 3)
-	GLOB.entered_event.unregister(overmap_location, src, .proc/Discovered)
+	GLOB.entered_event.unregister(overmap_location, src, PROC_REF(Discovered))
 
 /datum/trading_station/proc/AssembleInventory()
 	for(var/list/category_name in inventory)
@@ -204,7 +204,7 @@
 	else
 		initialized = TRUE
 	update_time = rand(6, 8) MINUTES
-	addtimer(CALLBACK(src, .proc/UpdateTick), update_time, TIMER_STOPPABLE)
+	addtimer(CALLBACK(src, PROC_REF(UpdateTick)), update_time, TIMER_STOPPABLE)
 	update_timer_start = world.time
 
 // The station will restock based on base_income + wealth, then check unlockables.

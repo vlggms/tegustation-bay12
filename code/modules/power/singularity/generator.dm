@@ -23,7 +23,7 @@
 		animation.pixel_y = -32
 		animation.layer = SINGULARITY_EFFECT_LAYER
 		flick('icons/effects/singularity_effect.dmi', animation)
-		addtimer(CALLBACK(src, .proc/spawn_contained, T), 6 SECOND)
+		addtimer(CALLBACK(src, PROC_REF(spawn_contained), T), 6 SECOND)
 		QDEL_IN(animation, 7 SECOND)
 
 /obj/machinery/the_singularitygen/proc/spawn_contained(turf/T)

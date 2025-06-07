@@ -101,6 +101,7 @@ LINEN BINS
 	icon_state = "linenbin-full"
 	anchored = TRUE
 	var/amount = 20
+	var/max_amount = 20
 	var/list/sheets = list()
 	var/obj/item/hidden = null
 
@@ -118,14 +119,19 @@ LINEN BINS
 
 
 /obj/structure/bedsheetbin/on_update_icon()
-	switch(amount)
-		if(0)				icon_state = "linenbin-empty"
-		if(1 to amount / 2)	icon_state = "linenbin-half"
-		else				icon_state = "linenbin-full"
+	if(!amount)
+		icon_state = "linenbin-empty"
+	else if(amount >= max_amount)
+		icon_state = "linenbin-full"
+	else
+		icon_state = "linenbin-half"
 
 
 /obj/structure/bedsheetbin/attackby(obj/item/I as obj, mob/user as mob)
 	if(istype(I, /obj/item/bedsheet))
+		if(amount >= max_amount)
+			to_chat(user, SPAN_NOTICE("There is not enough space!"))
+			return
 		if(!user.unEquip(I, src))
 			return
 		sheets.Add(I)

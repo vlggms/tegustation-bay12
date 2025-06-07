@@ -111,7 +111,7 @@
 		para = FALSE
 	been_hit = list()
 	SpinAnimation(1.8 SECONDS, 1, para)
-	addtimer(CALLBACK(src, .proc/DoDash, dir_to_target, 0), 1.5 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(DoDash), dir_to_target, 0), 1.5 SECONDS)
 	playsound(src, 'sound/simple_mob/abnormality/all_around_helper/rise.ogg', 100, 1)
 
 /mob/living/simple_animal/hostile/megafauna/all_around_helper/proc/DoDash(move_dir, times_ran)
@@ -172,4 +172,4 @@
 				L.gib()
 				continue
 			been_hit |= L
-	addtimer(CALLBACK(src, .proc/DoDash, move_dir, (times_ran + 1)), dash_speed)
+	addtimer(CALLBACK(src, PROC_REF(DoDash), move_dir, (times_ran + 1)), dash_speed)

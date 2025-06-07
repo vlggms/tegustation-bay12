@@ -392,7 +392,7 @@
 		'html/images/fleetlogo.png',
 		'html/images/sfplogo.png'
 		)
-	addtimer(CALLBACK(src, .proc/after_send_resources), 1 SECOND)
+	addtimer(CALLBACK(src, PROC_REF(after_send_resources)), 1 SECOND)
 
 
 /client/proc/after_send_resources()

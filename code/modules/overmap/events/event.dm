@@ -305,13 +305,13 @@
 	wail_cooldown = world.time + wail_cooldown_time_lower
 	START_PROCESSING(SSobj, src)
 	// You have a total of 25 minutes to kill it, before it completely overruns the sector
-	addtimer(CALLBACK(src, .proc/WarnApocalypse), 20 MINUTES)
+	addtimer(CALLBACK(src, PROC_REF(WarnApocalypse)), 20 MINUTES)
 
 /obj/effect/overmap/event/leviathan/Process()
 	if(world.time >= hive_cooldown)
-		INVOKE_ASYNC(src, .proc/SpawnHives)
+		INVOKE_ASYNC(src, PROC_REF(SpawnHives))
 	if(world.time > wail_cooldown)
-		INVOKE_ASYNC(src, .proc/Wail)
+		INVOKE_ASYNC(src, PROC_REF(Wail))
 
 /obj/effect/overmap/event/leviathan/Destroy()
 	STOP_PROCESSING(SSobj, src)
@@ -385,7 +385,7 @@
 		zlevels = affected_z,
 		)
 
-	addtimer(CALLBACK(src, .proc/StartApocalypse), 5 MINUTES)
+	addtimer(CALLBACK(src, PROC_REF(StartApocalypse)), 5 MINUTES)
 
 /obj/effect/overmap/event/leviathan/proc/StartApocalypse()
 	if(QDELETED(src))

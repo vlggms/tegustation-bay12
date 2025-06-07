@@ -110,7 +110,7 @@
 
 /obj/effect/fusion_em_field/Initialize()
 	. = ..()
-	addtimer(CALLBACK(src, .proc/update_light_colors), 10 SECONDS, TIMER_LOOP)
+	addtimer(CALLBACK(src, PROC_REF(update_light_colors)), 10 SECONDS, TIMER_LOOP)
 
 /obj/effect/fusion_em_field/proc/update_light_colors()
 	var/use_range
@@ -277,7 +277,7 @@
 		animate(filters[1], time = 0, loop = 1, radius = 0, flags=ANIMATION_PARALLEL)
 		animate(time = 2 SECONDS, radius = _radius)
 		animating_ripple = TRUE
-		addtimer(CALLBACK(src, .proc/ResetRipple), 2 SECONDS, TIMER_CLIENT_TIME)
+		addtimer(CALLBACK(src, PROC_REF(ResetRipple)), 2 SECONDS, TIMER_CLIENT_TIME)
 
 /obj/effect/fusion_em_field/proc/ResetRipple()
 	animating_ripple = FALSE

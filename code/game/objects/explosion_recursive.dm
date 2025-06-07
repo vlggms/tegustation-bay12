@@ -65,7 +65,7 @@ var/explosion_in_progress = 0
 			if(AM && AM.simulated && !T.protects_atom(AM))
 				AM.ex_act(severity)
 				if(!QDELETED(AM) && !AM.anchored)
-					addtimer(CALLBACK(AM, /atom/movable/.proc/throw_at, throw_target, 9/severity, 9/severity), 0)
+					addtimer(CALLBACK(AM, TYPE_PROC_REF(/atom/movable, throw_at), throw_target, 9/severity, 9/severity), 0)
 
 	explosion_turfs.Cut()
 	explosion_in_progress = 0

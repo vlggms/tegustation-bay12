@@ -1280,7 +1280,7 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 	else
 		T.maptext = "<span style=\"[style]\">[text] </span>"
 
-	addtimer(CALLBACK(GLOBAL_PROC, .proc/fade_blurb, C, T, fade_time), duration)
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(fade_blurb), C, T, fade_time), duration)
 
 /proc/fade_blurb(client/C, obj/T, fade_time = 5)
 	animate(T, alpha = 0, time = fade_time)

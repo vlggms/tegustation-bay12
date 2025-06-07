@@ -100,7 +100,7 @@
 	if(drive_integrity <= 0)
 		playsound(loc, 'sound/machines/BSD_explosion.ogg', 100, FALSE, 24, 3, ignore_pressure = TRUE)
 		visible_message(SPAN_DANGER(FONT_LARGE("\The [src] begins emitting an ear-splitting, horrible shrill! Get back!")))
-		addtimer(CALLBACK(src, .proc/explode), 5 SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(explode)), 5 SECONDS)
 
 /obj/machinery/bluespacedrive/proc/explode()
 	visible_message(SPAN_DANGER(FONT_LARGE("\The [src]'s containment field is wracked by a series of horrendous distortions, buckling and twisting like a living thing before bursting in a flash of light!")))

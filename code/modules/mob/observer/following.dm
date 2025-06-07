@@ -16,8 +16,8 @@
 /mob/observer/proc/start_following(var/atom/a)
 	stop_following()
 	following = a
-	RegisterSignal(a, COMSIG_PARENT_QDELETING, .proc/stop_following)
-	GLOB.moved_event.register(a, src, .proc/keep_following)
+	RegisterSignal(a, COMSIG_PARENT_QDELETING, PROC_REF(stop_following))
+	GLOB.moved_event.register(a, src, PROC_REF(keep_following))
 	GLOB.dir_set_event.register(a, src, /atom/proc/recursive_dir_set)
 	keep_following(new_loc = get_turf(following))
 

@@ -26,7 +26,7 @@
 			machine.update_power_channel(cached_channel)
 			machine.power_change()
 		return
-	
+
 
 
 	var/surplus = terminal.surplus()
@@ -40,7 +40,7 @@
 		terminal.draw_power(usage)
 		if(surplus >= usage)
 			return // had enough power and good to go.
-		else 
+		else
 			// Try and use other (local) sources of power to make up for the deficit.
 			var/deficit = machine.use_power_oneoff(usage - surplus)
 			if(deficit > 0)
@@ -73,15 +73,15 @@
 		unset_terminal(machine, terminal)
 	terminal = new_terminal
 	terminal.master = src
-	GLOB.destroyed_event.register(terminal, src, .proc/unset_terminal)
+	GLOB.destroyed_event.register(terminal, src, PROC_REF(unset_terminal))
 
-	set_extension(src, /datum/extension/event_registration/shuttle_stationary, GLOB.moved_event, machine, .proc/machine_moved, get_area(src))
+	set_extension(src, /datum/extension/event_registration/shuttle_stationary, GLOB.moved_event, machine, PROC_REF(machine_moved), get_area(src))
 	set_status(machine, PART_STAT_CONNECTED)
 	start_processing(machine)
 
 /obj/item/stock_parts/power/terminal/proc/machine_moved(var/obj/machinery/machine, var/turf/old_loc, var/turf/new_loc)
 	if(!terminal)
-		GLOB.moved_event.unregister(machine, src, .proc/machine_moved)
+		GLOB.moved_event.unregister(machine, src, PROC_REF(machine_moved))
 		return
 	if(istype(new_loc) && (terminal.loc == get_step(new_loc, terminal_dir)))
 		return     // This location is fine
