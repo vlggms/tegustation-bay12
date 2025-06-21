@@ -48,6 +48,8 @@
 		var/mob/M = target
 		if(istype(M.mind))
 			return M.mind.mana
+		if("mana" in M.vars)
+			return M:mana
 	// Certain items may store mana
 	if(istype(target, /obj/item))
 		var/obj/item/I = target

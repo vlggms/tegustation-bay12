@@ -250,8 +250,8 @@
 	eyeobj.release(src)
 
 /mob/observer/eye/freelook/wizard_eye/Destroy()
-	if(istype(eyeobj.owner, /mob/living))
+	if(istype(eyeobj) && istype(eyeobj.owner, /mob/living))
 		var/mob/living/L = eyeobj.owner
 		L.release_eye()
-	qdel(eyeobj)
+	QDEL_NULL(eyeobj)
 	return ..()

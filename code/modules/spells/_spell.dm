@@ -331,7 +331,8 @@
 
 		if(isliving(user))
 			var/mob/living/L = user
-			if(!istype(L.mind.mana) || L.mind.mana.mana_level < mana_cost)
+			var/datum/mana/M = GetManaDatum(L)
+			if(!istype(M) || M.mana_level < mana_cost)
 				to_chat(L, SPAN_WARNING("You do not have enough mana!"))
 				return FALSE
 
@@ -366,11 +367,11 @@
 		return FALSE
 	return TRUE
 
-/datum/spell/proc/TakeMana(mob/user = user, amount = mana_cost)
-	if(!user.mind)
+/datum/spell/proc/TakeMana(mob/living/user = user, amount = mana_cost)
+	var/datum/mana/M = GetManaDatum(user)
+	if(!istype(M))
 		return FALSE
-	var/mob/living/L = user
-	return L.mind.mana.UseMana(L, amount, FALSE)
+	return M.UseMana(user, amount, FALSE)
 
 /datum/spell/proc/invocation(mob/user = usr, var/list/targets) //spelling the spell out and setting it on recharge/reducing charges amount
 

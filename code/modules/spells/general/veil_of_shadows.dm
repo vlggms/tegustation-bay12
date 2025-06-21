@@ -35,6 +35,8 @@
 
 /datum/spell/veil_of_shadows/proc/cancel_veil()
 	var/mob/living/carbon/human/H = holder
+	if(!istype(H))
+		return
 	H.RemoveMovementHandler(/datum/movement_handler/mob/incorporeal)
 	deltimer(timer_id)
 	timer_id = null
